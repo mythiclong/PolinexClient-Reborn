@@ -1,4 +1,4 @@
-# Polinex-Reconstruction 当前交接
+# PolinexClient-Reborn 当前交接
 
 > 更新：2026-11-15 09:01 UTC（America/Chicago 03:01）。原版行为事实源 `.analysis/cracked.jar` SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`。原版文件没有随公开快照发布。
 
@@ -41,5 +41,5 @@
 ## 交接
 
 - 私有代码快照分支：`codex/handoff-progress-2026-11-15`（`60d587f`，明确 WIP）。
-- 本仓库：[Polinex-Reconstruction](https://github.com/mythiclong/Polinex-Reconstruction)。
+- 本仓库：[PolinexClient-Reborn](https://github.com/mythiclong/PolinexClient-Reborn)。
 - 原始 jar、JNI 载荷、运行目录和未去标识化桌面信息不随公开仓库发布。
