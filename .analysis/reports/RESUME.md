@@ -1,11 +1,11 @@
 # Polinex-Reborn 当前交接
 
-> 更新：2026-11-15 08:29 UTC（America/Chicago 02:29）。原版行为事实源 `.analysis/cracked.jar` SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`。原版文件没有随公开快照发布。
+> 更新：2026-11-15 09:01 UTC（America/Chicago 03:01）。原版行为事实源 `.analysis/cracked.jar` SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`。原版文件没有随公开快照发布。
 
 ## 基线与仓库状态
 
 - R1851–R1871 证据产生时 HEAD=`32f4664fc008b9ac76859c48e45d8e3a63bec083`；当时工作树有源码改动。证据记录中的源文件哈希描述当时实际内容，证据入库提交另行记录。
-- 本仓库是独立的社区交接快照，来源于 2026-11-15 的私有 WIP 源码状态；源码与历史证据均明确为未完成。
+- 本仓库是独立的社区交接快照，来源于 2026-11-15 的私有 WIP 源码状态，源码快照提交 45e463c；源码与历史证据均明确为未完成。
 - 其他未跟踪调查工具、运行目录和未提交调试探针仍保留在原工作区，未纳入快照；没有清理或覆盖。
 - 最新 `python -B .analysis/stats.py` 退出码 0：1602 Java 文件、1,159,472 行、PXDyn 622 处、PX-FIX 7075；stub/artifact throw 0；native 声明 220。只作源码库存索引。
 - “OpenPolinex 每小时进度” heartbeat 已 ACTIVE；不要重复创建。
