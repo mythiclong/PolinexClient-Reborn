@@ -1,0 +1,13 @@
+package me.octo.client;
+
+import org.jetbrains.annotations.NotNull;
+
+public final class IllllIlIIIIllIllllIIIIIlIlllllllIIIIIlIIllIIllIlIllIlllllIIlllIlIlllIlllIlIlIlIIlIIII {
+   @NotNull
+   public static IllllIlIIIIllIllllIIIIIlIlllllllIIIIIlIIllIIllIlIllIlllllIIlllIlIlllIlllIlIlIlIIlIIII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl = new IllllIlIIIIllIllllIIIIIlIlllllllIIIIIlIIllIIllIlIllIlllllIIlllIlIlllIlllIlIlIlIIlIIII();
+   public static boolean lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII;
+   public static boolean IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl;
+
+   private IllllIlIIIIllIllllIIIIIlIlllllllIIIIIlIIllIIllIlIllIlllllIIlllIlIlllIlllIlIlIlIIlIIII() {
+   }
+}

@@ -1,0 +1,14 @@
+package me.octo.client;
+
+import kotlin.jvm.JvmField;
+import org.jetbrains.annotations.NotNull;
+
+public final class llIlIlIllllIIIIIllllIlIIIlIlIlIIllIlIIllIIlIIIIlIIlIIIIllIIlllIIIIIIIIllIllIlllIIlIlI {
+   @NotNull
+   public static llIlIlIllllIIIIIllllIlIIIlIlIlIIllIlIIllIIlIIIIlIIlIIIIllIIlllIIIIIIIIllIllIlllIIlIlI IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl = new llIlIlIllllIIIIIllllIlIIIlIlIlIIllIlIIllIIlIIIIlIIlIIIIllIIlllIIIIIIIIllIllIlllIIlIlI();
+   @JvmField
+   public static boolean lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII;
+
+   private llIlIlIllllIIIIIllllIlIIIlIlIlIIllIlIIllIIlIIIIlIIlIIIIllIIlllIIIIIIIIllIllIlllIIlIlI() {
+   }
+}

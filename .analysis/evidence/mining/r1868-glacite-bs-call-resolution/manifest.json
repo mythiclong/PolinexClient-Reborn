@@ -1,0 +1,45 @@
+{
+  "experiment_id": "R1868",
+  "slice_id": "GLACITE-BS-EXACT-OWNER-DESCRIPTORS",
+  "status": "STATIC_AUDIT",
+  "started_utc": "2026-11-15T06:33:43.619152+00:00",
+  "repository_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_sha256": {
+    "notice_helper": "b18a172653cbca8df3397b543846975dd3c3e5e16802ff06bd5912742c1b4767",
+    "pathfinder_helper": "a5bd094058c24e48b525a455fdf20091f38bd8c4f99908e0f32352ab6d4dfaec"
+  },
+  "commands": {
+    "notice_helper": {
+      "command": [
+        "${JAVA_HOME}\\bin\\javap.exe",
+        "-classpath",
+        "<REPO_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-s",
+        "-c",
+        "me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI"
+      ],
+      "exit_code": 0,
+      "output": ".analysis\\evidence\\mining\\r1868-glacite-bs-call-resolution\\notice_helper-original-full.javap.txt",
+      "output_sha256": "c54363ae7ae8133cd3fe4a02a7bcef124413356c61a87d6b1fd13744ec7b3a81",
+      "bytes": 199429
+    },
+    "pathfinder_helper": {
+      "command": [
+        "${JAVA_HOME}\\bin\\javap.exe",
+        "-classpath",
+        "<REPO_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-s",
+        "-c",
+        "me.octo.client.utils.player.pathfinder.IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI"
+      ],
+      "exit_code": 0,
+      "output": ".analysis\\evidence\\mining\\r1868-glacite-bs-call-resolution\\pathfinder_helper-original-full.javap.txt",
+      "output_sha256": "b6da30f8195b96490642eada5c5fe32009482d1bc6648351f7da6cb8201d4ebf",
+      "bytes": 160636
+    }
+  },
+  "finished_utc": "2026-11-15T06:33:44.493449+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "slice_id": "GLACITE-COMMISSION-BS-RESTORE",
+  "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "preimage_sha256": "617c0793c87c12cea2c66da22bdaef2e769a7cb90987d262cea6844ac1edef57",
+  "postimage_sha256": "e7b6fac6b29036e40c59141b53bd444ca9d6241885e116a984b2f0dec0d41ccd",
+  "candidate_method_sha256": "0b8a6b8d53f86775b9d4ed972c6932d6e2c86dd47e0f7230d68d5a7fbc9bce4d",
+  "method": "bs()V",
+  "original_method_evidence": "..\\.analysis\\evidence\\mining\\r1863-glacite-method-audit\\original-bs.javap.txt",
+  "candidate_basis": "CFR failed; Procyon decompiled exact original owner after removing 43 identity exception-handler edges and proving/folding the same helper d()I constant guard to 0 (40 guard branches); removed unreachable blocks only.",
+  "normalized_method_opcodes": "866 -> 707",
+  "full_method_lines": 194,
+  "written_utc": "2026-11-15T06:12:33.089372+00:00"
+}

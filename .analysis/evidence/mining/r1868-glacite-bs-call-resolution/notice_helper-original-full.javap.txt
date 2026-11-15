@@ -1,0 +1,4172 @@
+Compiled from "IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java"
+public final class me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI extends me.octo.client.utils.lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll {
+  public static me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+    descriptor: Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+
+  private static java.util.Map<java.lang.String, java.lang.String> IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll;
+    descriptor: Ljava/util/Map;
+
+  private static kotlin.text.Regex lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;
+    descriptor: Lkotlin/text/Regex;
+
+  private static kotlin.text.Regex IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII;
+    descriptor: Lkotlin/text/Regex;
+
+  private static kotlin.jvm.functions.Function1<java.lang.String, java.lang.String> llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI;
+    descriptor: Lkotlin/jvm/functions/Function1;
+
+  private static net.kyori.adventure.text.minimessage.MiniMessage lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
+    descriptor: Lnet/kyori/adventure/text/minimessage/MiniMessage;
+
+  private static net.kyori.adventure.text.serializer.gson.GsonComponentSerializer lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI;
+    descriptor: Lnet/kyori/adventure/text/serializer/gson/GsonComponentSerializer;
+
+  private static com.google.gson.Gson lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl;
+    descriptor: Lcom/google/gson/Gson;
+
+  private static java.util.regex.Pattern lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll;
+    descriptor: Ljava/util/regex/Pattern;
+
+  private static boolean IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl;
+    descriptor: Z
+
+  private static java.lang.String[] c;
+    descriptor: [Ljava/lang/String;
+
+  private static java.lang.String[] d;
+    descriptor: [Ljava/lang/String;
+
+  private me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI();
+    descriptor: ()V
+    Code:
+         0: aload_0
+         1: invokespecial #57                 // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll."<init>":()V
+         4: return
+
+  private final void a(kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+    Code:
+         0: aload_0
+         1: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+         4: invokevirtual #71                 // Method net/minecraft/client/Minecraft.isSameThread:()Z
+         7: ifeq          22
+        10: aload_1
+        11: invokeinterface #77,  1           // InterfaceMethod kotlin/jvm/functions/Function0.invoke:()Ljava/lang/Object;
+        16: pop
+        17: return
+        18: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        21: athrow
+        22: aload_0
+        23: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        26: aload_1
+        27: invokedynamic #96,  0             // InvokeDynamic #0:run:(Lkotlin/jvm/functions/Function0;)Ljava/lang/Runnable;
+        32: invokevirtual #100                // Method net/minecraft/client/Minecraft.execute:(Ljava/lang/Runnable;)V
+        35: return
+      Exception table:
+         from    to  target type
+             0    18    18   Class com/google/gson/JsonParseException
+
+  public static final kotlin.jvm.functions.Function1<java.lang.String, java.lang.String> g();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+    Code:
+         0: getstatic     #105                // Field llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI:Lkotlin/jvm/functions/Function1;
+         3: areturn
+
+  public static void h();
+    descriptor: ()V
+    Code:
+         0: return
+
+  private final void a(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokedynamic #119,  0            // InvokeDynamic #1:invoke:(Ljava/lang/String;)Lkotlin/jvm/functions/Function0;
+         7: invokespecial #121                // Method a:(Lkotlin/jvm/functions/Function0;)V
+        10: return
+
+  public static final void polinex$sendChatRaw(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)V
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: aload_0
+         4: sipush        2798
+         7: sipush        -28134
+        10: pop2
+        11: ldc           #130                // String message
+        13: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: astore_1
+        17: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        20: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        23: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        26: dup
+        27: ifnull        65
+        30: getfield      #148                // Field net/minecraft/client/player/LocalPlayer.connection:Lnet/minecraft/client/multiplayer/ClientPacketListener;
+        33: dup
+        34: aload_1
+        35: ifnull        56
+        38: goto          45
+        41: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        44: athrow
+        45: ifnull        65
+        48: goto          55
+        51: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        54: athrow
+        55: aload_0
+        56: invokevirtual #158                // Method java/lang/Object.toString:()Ljava/lang/String;
+        59: invokevirtual #161                // Method net/minecraft/client/multiplayer/ClientPacketListener.sendChat:(Ljava/lang/String;)V
+        62: goto          66
+        65: pop
+        66: return
+      Exception table:
+         from    to  target type
+            17    38    41   Class com/google/gson/JsonParseException
+            30    48    51   Class com/google/gson/JsonParseException
+
+  public static final void b(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2694
+         4: sipush        -32095
+         7: pop2
+         8: ldc           #163                // String command
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        16: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        19: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        22: dup
+        23: ifnull        51
+        26: getfield      #148                // Field net/minecraft/client/player/LocalPlayer.connection:Lnet/minecraft/client/multiplayer/ClientPacketListener;
+        29: dup
+        30: ifnull        51
+        33: goto          40
+        36: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        39: athrow
+        40: aload_0
+        41: invokevirtual #166                // Method net/minecraft/client/multiplayer/ClientPacketListener.sendCommand:(Ljava/lang/String;)V
+        44: goto          52
+        47: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        50: athrow
+        51: pop
+        52: return
+      Exception table:
+         from    to  target type
+             0    33    36   Class com/google/gson/JsonParseException
+            26    47    47   Class com/google/gson/JsonParseException
+
+  public static final void c(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2712
+         4: sipush        24037
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2724
+        16: sipush        2095
+        19: pop2
+        20: ldc           #168                // String <bold><gradient:#55AAFF:#0066FF>[Polinex]</gradient></bold> <dark_gray>? <white>
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2722
+        42: sipush        -32368
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void d(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2735
+        16: sipush        -7383
+        19: pop2
+        20: ldc           #196                // String <dark_gray><bold>[Polinex]</bold> ?
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2786
+        42: sipush        22749
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void a(java.lang.String, net.minecraft.network.chat.MutableComponent);
+    descriptor: (Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: aload_1
+        14: sipush        2764
+        17: sipush        -20756
+        20: pop2
+        21: ldc           #199                // String append
+        23: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        26: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        29: aload_0
+        30: aload_1
+        31: invokedynamic #206,  0            // InvokeDynamic #3:invoke:(Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;)Lkotlin/jvm/functions/Function0;
+        36: invokespecial #121                // Method a:(Lkotlin/jvm/functions/Function0;)V
+        39: return
+
+  public static final void a(java.lang.String...);
+    descriptor: ([Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2776
+         4: sipush        25844
+         7: pop2
+         8: ldc           #209                // String messages
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: iconst_0
+        14: istore_2
+        15: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+        18: aload_0
+        19: arraylength
+        20: istore_3
+        21: astore_1
+        22: iload_2
+        23: iload_3
+        24: if_icmpge     44
+        27: aload_0
+        28: iload_2
+        29: aaload
+        30: astore        4
+        32: aload         4
+        34: invokestatic  #211                // Method c:(Ljava/lang/String;)V
+        37: iinc          2, 1
+        40: aload_1
+        41: ifnonnull     22
+        44: return
+
+  public static final void e(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2733
+        16: sipush        -10493
+        19: pop2
+        20: ldc           #214                // String <bold><gradient:#55AAFF:#0066FF>[Polinex Script]</gradient></bold> <dark_gray>? <white>
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2786
+        42: sipush        22749
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void f(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2805
+        16: sipush        8791
+        19: pop2
+        20: ldc           #217                // String <bold><red>[Cerberus]</red></bold> <dark_gray>? <red>
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2786
+        42: sipush        22749
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void g(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+        16: sipush        2783
+        19: sipush        31654
+        22: pop2
+        23: ldc           #219                // String <bold><yellow>[PNX DEBUG]</yellow></bold> <dark_gray>? <white>
+        25: astore_2
+        26: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        29: aload_2
+        30: aload_0
+        31: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        36: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        41: dup
+        42: sipush        2786
+        45: sipush        22749
+        48: pop2
+        49: ldc           #188                // String deserialize(...)
+        51: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        54: astore_3
+        55: astore_1
+        56: getstatic     #223                // Field me/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll.IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Lme/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        59: invokevirtual #225                // Method me/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()Ljava/lang/String;
+        62: aload_1
+        63: ifnull        111
+        66: sipush        2775
+        69: sipush        24071
+        72: pop2
+        73: ldc           #227                // String vdev-private
+        75: invokestatic  #231                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+        78: ifne          122
+        81: goto          88
+        84: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        87: athrow
+        88: aload_0
+        89: sipush        2738
+        92: sipush        21127
+        95: pop2
+        96: ldc           #237                // String [PNX DEBUG] ?
+        98: swap
+        99: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       104: goto          111
+       107: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       110: athrow
+       111: getstatic     #243                // Field java/lang/System.out:Ljava/io/PrintStream;
+       114: swap
+       115: invokevirtual #248                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+       118: aload_1
+       119: ifnonnull     136
+       122: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       125: aload_3
+       126: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+       129: goto          136
+       132: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       135: athrow
+       136: return
+      Exception table:
+         from    to  target type
+            56    81    84   Class com/google/gson/JsonParseException
+            66   104   107   Class com/google/gson/JsonParseException
+           111   129   132   Class com/google/gson/JsonParseException
+
+  public static final void b(java.lang.String...);
+    descriptor: ([Ljava/lang/String;)V
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: aload_0
+         4: sipush        2795
+         7: sipush        -32712
+        10: pop2
+        11: ldc           #209                // String messages
+        13: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: iconst_0
+        17: istore_2
+        18: aload_0
+        19: arraylength
+        20: istore_3
+        21: astore_1
+        22: iload_2
+        23: iload_3
+        24: if_icmpge     164
+        27: aload_0
+        28: iload_2
+        29: aaload
+        30: astore        4
+        32: sipush        2768
+        35: sipush        -5598
+        38: pop2
+        39: ldc           #219                // String <bold><yellow>[PNX DEBUG]</yellow></bold> <dark_gray>? <white>
+        41: astore        5
+        43: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        46: aload         5
+        48: aload         4
+        50: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        55: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        60: dup
+        61: sipush        2786
+        64: sipush        22749
+        67: pop2
+        68: ldc           #188                // String deserialize(...)
+        70: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        73: astore        6
+        75: getstatic     #223                // Field me/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll.IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Lme/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        78: invokevirtual #225                // Method me/octo/client/lIIlIlIIllIllllIIIllIIIIIlIIlIllIllllIIlllIIIIIlIlIlllIlIIIlllIlIIlIlllllIIlIIIIIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()Ljava/lang/String;
+        81: aload_1
+        82: ifnull        131
+        85: sipush        2806
+        88: sipush        25150
+        91: pop2
+        92: ldc           #227                // String vdev-private
+        94: invokestatic  #231                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+        97: ifne          142
+       100: goto          107
+       103: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       106: athrow
+       107: aload         4
+       109: sipush        2749
+       112: sipush        20544
+       115: pop2
+       116: ldc           #237                // String [PNX DEBUG] ?
+       118: swap
+       119: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       124: goto          131
+       127: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       130: athrow
+       131: getstatic     #243                // Field java/lang/System.out:Ljava/io/PrintStream;
+       134: swap
+       135: invokevirtual #248                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+       138: aload_1
+       139: ifnonnull     157
+       142: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       145: aload         6
+       147: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+       150: goto          157
+       153: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       156: athrow
+       157: iinc          2, 1
+       160: aload_1
+       161: ifnonnull     22
+       164: return
+      Exception table:
+         from    to  target type
+            75   100   103   Class com/google/gson/JsonParseException
+            85   124   127   Class com/google/gson/JsonParseException
+           131   150   153   Class com/google/gson/JsonParseException
+
+  public static final void h(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2748
+        16: sipush        10979
+        19: pop2
+        20: ldc           #251                // String <bold><red>[ERROR]</red></bold> <dark_gray>? <red>
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2786
+        42: sipush        22749
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void i(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2757
+        16: sipush        -9202
+        19: pop2
+        20: ldc           #254                // String <bold><green>[SUCCESS]</green></bold> <dark_gray>? <green>
+        22: astore_1
+        23: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        26: aload_1
+        27: aload_0
+        28: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        33: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        38: dup
+        39: sipush        2786
+        42: sipush        22749
+        45: pop2
+        46: ldc           #188                // String deserialize(...)
+        48: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        51: astore_2
+        52: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        55: aload_2
+        56: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        59: return
+
+  public static final void j(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2730
+        16: sipush        -9493
+        19: pop2
+        20: ldc_w         #257                // String <bold><gold>[WARNING]</gold></bold> <dark_gray>? <yellow>
+        23: astore_1
+        24: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        27: aload_1
+        28: aload_0
+        29: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        34: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        39: dup
+        40: sipush        2786
+        43: sipush        22749
+        46: pop2
+        47: ldc           #188                // String deserialize(...)
+        49: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        52: astore_2
+        53: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        56: aload_2
+        57: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        60: return
+
+  public static final void k(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: sipush        2703
+        16: sipush        -11887
+        19: pop2
+        20: ldc_w         #260                // String <bold><aqua>[INFO]</aqua></bold> <dark_gray>? <white>
+        23: astore_1
+        24: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        27: aload_1
+        28: aload_0
+        29: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        34: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        39: dup
+        40: sipush        2786
+        43: sipush        22749
+        46: pop2
+        47: ldc           #188                // String deserialize(...)
+        49: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        52: astore_2
+        53: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        56: aload_2
+        57: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        60: return
+
+  public static final void l(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        16: aload_0
+        17: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        22: dup
+        23: sipush        2786
+        26: sipush        22749
+        29: pop2
+        30: ldc           #188                // String deserialize(...)
+        32: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        35: astore_1
+        36: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        39: aload_1
+        40: invokespecial #194                // Method a:(Lnet/kyori/adventure/text/Component;)V
+        43: return
+
+  public static final net.minecraft.network.chat.Component m(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
+    Code:
+         0: aload_0
+         1: sipush        2798
+         4: sipush        -28134
+         7: pop2
+         8: ldc           #130                // String message
+        10: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        13: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        16: aload_0
+        17: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        22: dup
+        23: sipush        2786
+        26: sipush        22749
+        29: pop2
+        30: ldc           #188                // String deserialize(...)
+        32: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        35: astore_1
+        36: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        39: aload_1
+        40: invokespecial #266                // Method b:(Lnet/kyori/adventure/text/Component;)Lnet/minecraft/network/chat/Component;
+        43: areturn
+
+  private final void a(net.kyori.adventure.text.Component);
+    descriptor: (Lnet/kyori/adventure/text/Component;)V
+    Code:
+         0: getstatic     #271                // Field me/octo/client/IIllIIIIIlIIIllIIllIIIlIIIIIllIIIIIIlllllIIllIIIlllIllIIlIIlIIlllIIIllIlIlllllIIIIlII.lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl:Lme/octo/client/IIllIIIIIlIIIllIIllIIIlIIIIIllIIIIIIlllllIIllIIIlllIllIIlIIlIIlllIIIllIlIlllllIIIIlII;
+         3: invokevirtual #274                // Method me/octo/client/IIllIIIIIlIIIllIIllIIIlIIIIIllIIIIIIlllllIIllIIIlllIllIIlIIlIIlllIIIllIlIlllllIIIIlII.aA:()Z
+         6: ifeq          14
+         9: return
+        10: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        13: athrow
+        14: aload_0
+        15: aload_1
+        16: invokedynamic #281,  0            // InvokeDynamic #4:invoke:(Lnet/kyori/adventure/text/Component;)Lkotlin/jvm/functions/Function0;
+        21: invokespecial #121                // Method a:(Lkotlin/jvm/functions/Function0;)V
+        24: return
+      Exception table:
+         from    to  target type
+             0    10    10   Class com/google/gson/JsonParseException
+
+  private final net.minecraft.network.chat.Component b(net.kyori.adventure.text.Component);
+    descriptor: (Lnet/kyori/adventure/text/Component;)Lnet/minecraft/network/chat/Component;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: getstatic     #283                // Field lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lnet/kyori/adventure/text/serializer/gson/GsonComponentSerializer;
+         6: aload_1
+         7: invokeinterface #289,  2          // InterfaceMethod net/kyori/adventure/text/serializer/gson/GsonComponentSerializer.serialize:(Lnet/kyori/adventure/text/Component;)Ljava/lang/Object;
+        12: dup
+        13: sipush        2778
+        16: sipush        7601
+        19: pop2
+        20: ldc_w         #291                // String serialize(...)
+        23: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        26: checkcast     #233                // class java/lang/String
+        29: astore_3
+        30: getstatic     #293                // Field lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl:Lcom/google/gson/Gson;
+        33: aload_3
+        34: ldc_w         #295                // class com/google/gson/JsonElement
+        37: invokevirtual #301                // Method com/google/gson/Gson.fromJson:(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+        40: checkcast     #295                // class com/google/gson/JsonElement
+        43: astore        4
+        45: astore_2
+        46: aload_0
+        47: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        50: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        53: aload_2
+        54: ifnull        122
+        57: ifnull        137
+        60: goto          67
+        63: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        66: athrow
+        67: getstatic     #307                // Field net/minecraft/network/chat/ComponentSerialization.CODEC:Lcom/mojang/serialization/Codec;
+        70: aload_0
+        71: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        74: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        77: dup
+        78: invokestatic  #310                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+        81: invokevirtual #314                // Method net/minecraft/client/player/LocalPlayer.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+        84: getstatic     #320                // Field com/mojang/serialization/JsonOps.INSTANCE:Lcom/mojang/serialization/JsonOps;
+        87: checkcast     #322                // class com/mojang/serialization/DynamicOps
+        90: invokeinterface #328,  2          // InterfaceMethod net/minecraft/core/RegistryAccess.createSerializationContext:(Lcom/mojang/serialization/DynamicOps;)Lnet/minecraft/resources/RegistryOps;
+        95: checkcast     #322                // class com/mojang/serialization/DynamicOps
+        98: aload         4
+       100: invokeinterface #334,  3          // InterfaceMethod com/mojang/serialization/Codec.parse:(Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+       105: invokedynamic #346,  0            // InvokeDynamic #5:apply:()Ljava/util/function/Function;
+       110: invokeinterface #352,  2          // InterfaceMethod com/mojang/serialization/DataResult.getOrThrow:(Ljava/util/function/Function;)Ljava/lang/Object;
+       115: goto          122
+       118: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       121: athrow
+       122: astore        5
+       124: aload         5
+       126: invokestatic  #310                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       129: aload         5
+       131: checkcast     #354                // class net/minecraft/network/chat/Component
+       134: goto          156
+       137: aload_1
+       138: invokevirtual #158                // Method java/lang/Object.toString:()Ljava/lang/String;
+       141: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       144: astore        5
+       146: aload         5
+       148: invokestatic  #310                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       151: aload         5
+       153: checkcast     #354                // class net/minecraft/network/chat/Component
+       156: areturn
+      Exception table:
+         from    to  target type
+            46    60    63   Class com/google/gson/JsonParseException
+            57   115   118   Class com/google/gson/JsonParseException
+
+  public static final void n(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2792
+         4: sipush        23370
+         7: pop2
+         8: ldc_w         #361                // String name
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: sipush        2693
+        17: sipush        21661
+        20: pop2
+        21: ldc_w         #363                // String failsafe_triggered
+        24: sipush        2807
+        27: sipush        -32261
+        30: pop2
+        31: ldc_w         #365                // String reason
+        34: aload_0
+        35: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+        38: invokestatic  #377                // Method kotlin/collections/MapsKt.mapOf:(Lkotlin/Pair;)Ljava/util/Map;
+        41: iconst_1
+        42: iconst_1
+        43: invokestatic  #382                // Method me/octo/client/utils/lIlIIlIlIlIlllIlllIIlllIlIllIIIIIlllIIIIllIIlllIlllllllIllIllIIIIlllIIlIIllIlllIIIlll.a:(Ljava/lang/String;Ljava/util/Map;ZZ)Z
+        46: pop
+        47: return
+
+  public static final void a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: sipush        2794
+         4: sipush        -26481
+         7: pop2
+         8: ldc_w         #386                // String sender
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_1
+        15: sipush        2798
+        18: sipush        -28134
+        21: pop2
+        22: ldc           #130                // String message
+        24: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        27: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        30: aload_0
+        31: aload_1
+        32: aload_2
+        33: aload_3
+        34: aload         4
+        36: aload         5
+        38: invokedynamic #393,  0            // InvokeDynamic #6:invoke:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lkotlin/jvm/functions/Function0;
+        43: invokespecial #121                // Method a:(Lkotlin/jvm/functions/Function0;)V
+        46: return
+
+  public static void a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.Object);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: astore        8
+         5: iload         6
+         7: iconst_4
+         8: iand
+         9: aload         8
+        11: ifnull        31
+        14: ifeq          26
+        17: goto          24
+        20: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        23: athrow
+        24: aconst_null
+        25: astore_2
+        26: iload         6
+        28: bipush        8
+        30: iand
+        31: aload         8
+        33: ifnull        53
+        36: ifeq          48
+        39: goto          46
+        42: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        45: athrow
+        46: aconst_null
+        47: astore_3
+        48: iload         6
+        50: bipush        16
+        52: iand
+        53: aload         8
+        55: ifnull        76
+        58: ifeq          71
+        61: goto          68
+        64: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        67: athrow
+        68: aconst_null
+        69: astore        4
+        71: iload         6
+        73: bipush        32
+        75: iand
+        76: ifeq          82
+        79: aconst_null
+        80: astore        5
+        82: aload_0
+        83: aload_1
+        84: aload_2
+        85: aload_3
+        86: aload         4
+        88: aload         5
+        90: invokestatic  #396                // Method a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+        93: return
+      Exception table:
+         from    to  target type
+             5    17    20   Class com/google/gson/JsonParseException
+            31    39    42   Class com/google/gson/JsonParseException
+            53    61    64   Class com/google/gson/JsonParseException
+
+  private final net.minecraft.network.chat.MutableComponent b(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: sipush        2714
+         6: sipush        -27892
+         9: pop2
+        10: ldc_w         #399                // String ��8[��9��lPNX IRC��8]
+        13: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        16: dup
+        17: sipush        2707
+        20: sipush        -10365
+        23: pop2
+        24: ldc_w         #401                // String literal(...)
+        27: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        30: astore        8
+        32: nop
+        33: aload_3
+        34: checkcast     #403                // class java/lang/CharSequence
+        37: astore        10
+        39: astore        7
+        41: aload         10
+        43: aload         7
+        45: ifnull        60
+        48: ifnull        80
+        51: goto          58
+        54: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        57: athrow
+        58: aload         10
+        60: invokeinterface #409,  1          // InterfaceMethod java/lang/CharSequence.length:()I
+        65: aload         7
+        67: ifnull        81
+        70: ifne          84
+        73: goto          80
+        76: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        79: athrow
+        80: iconst_1
+        81: goto          85
+        84: iconst_0
+        85: ifne          124
+        88: aload_3
+        89: sipush        2688
+        92: sipush        -3603
+        95: pop2
+        96: ldc_w         #411                // String null
+        99: invokestatic  #231                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       102: aload         7
+       104: ifnull        163
+       107: goto          114
+       110: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       113: athrow
+       114: ifeq          141
+       117: goto          124
+       120: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       123: athrow
+       124: sipush        2739
+       127: sipush        8341
+       130: pop2
+       131: ldc_w         #413                // String ��f
+       134: goto          344
+       137: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       140: athrow
+       141: aload_3
+       142: ldc_w         #415                // String #
+       145: aload         7
+       147: ifnull        200
+       150: iconst_0
+       151: iconst_2
+       152: aconst_null
+       153: invokestatic  #421                // Method kotlin/text/StringsKt.startsWith$default:(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+       156: goto          163
+       159: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       162: athrow
+       163: ifeq          343
+       166: nop
+       167: aload_3
+       168: iconst_1
+       169: invokevirtual #425                // Method java/lang/String.substring:(I)Ljava/lang/String;
+       172: dup
+       173: sipush        2704
+       176: sipush        -15128
+       179: pop2
+       180: ldc_w         #427                // String substring(...)
+       183: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       186: getstatic     #433                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       189: invokevirtual #437                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+       192: dup
+       193: goto          200
+       196: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       199: athrow
+       200: sipush        2773
+       203: sipush        16012
+       206: pop2
+       207: ldc_w         #439                // String toLowerCase(...)
+       210: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       213: astore        10
+       215: aload         10
+       217: aload         7
+       219: ifnull        340
+       222: invokevirtual #440                // Method java/lang/String.length:()I
+       225: bipush        6
+       227: if_icmpne     330
+       230: goto          237
+       233: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       236: athrow
+       237: aload         10
+       239: iconst_0
+       240: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       243: aload         10
+       245: iconst_1
+       246: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       249: aload         10
+       251: iconst_2
+       252: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       255: aload         10
+       257: iconst_3
+       258: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       261: aload         10
+       263: iconst_4
+       264: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       267: aload         10
+       269: iconst_5
+       270: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       273: istore        19
+       275: istore        20
+       277: istore        21
+       279: istore        22
+       281: istore        23
+       283: istore        24
+       285: sipush        2726
+       288: sipush        3967
+       291: pop2
+       292: ldc_w         #446                // String ��x��
+       295: iload         24
+       297: ldc_w         #448                // String ��
+       300: iload         23
+       302: ldc_w         #448                // String ��
+       305: iload         22
+       307: ldc_w         #448                // String ��
+       310: iload         21
+       312: ldc_w         #448                // String ��
+       315: iload         20
+       317: ldc_w         #448                // String ��
+       320: iload         19
+       322: invokedynamic #453,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;CLjava/lang/String;CLjava/lang/String;CLjava/lang/String;CLjava/lang/String;CLjava/lang/String;C)Ljava/lang/String;
+       327: goto          344
+       330: sipush        2739
+       333: sipush        8341
+       336: pop2
+       337: ldc_w         #413                // String ��f
+       340: goto          344
+       343: aload_3
+       344: astore        9
+       346: aload         4
+       348: aload         7
+       350: ifnull        464
+       353: ifnull        456
+       356: goto          363
+       359: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       362: athrow
+       363: aload         4
+       365: checkcast     #403                // class java/lang/CharSequence
+       368: invokeinterface #409,  1          // InterfaceMethod java/lang/CharSequence.length:()I
+       373: aload         7
+       375: ifnull        396
+       378: goto          385
+       381: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       384: athrow
+       385: ifle          399
+       388: goto          395
+       391: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       394: athrow
+       395: iconst_1
+       396: goto          400
+       399: iconst_0
+       400: ifeq          456
+       403: aload         9
+       405: aload         4
+       407: astore        25
+       409: astore        26
+       411: sipush        2736
+       414: sipush        16856
+       417: pop2
+       418: ldc_w         #455                // String ��l
+       421: aload         26
+       423: aload         25
+       425: ldc_w         #457                // String
+       428: invokedynamic #462,  0            // InvokeDynamic #8:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       433: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       436: aload         9
+       438: aload_1
+       439: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       444: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       447: checkcast     #354                // class net/minecraft/network/chat/Component
+       450: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+       453: goto          467
+       456: aload         9
+       458: aload_1
+       459: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       464: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       467: astore        11
+       469: aload         11
+       471: invokestatic  #310                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       474: aload         11
+       476: astore        10
+       478: new           #467                // class java/lang/StringBuilder
+       481: dup
+       482: invokespecial #468                // Method java/lang/StringBuilder."<init>":()V
+       485: astore        12
+       487: aload         12
+       489: astore        13
+       491: iconst_0
+       492: istore        14
+       494: aload         13
+       496: aload_1
+       497: sipush        2731
+       500: sipush        16818
+       503: pop2
+       504: ldc_w         #470                // String ��7Sender: ��f
+       507: swap
+       508: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       513: invokevirtual #473                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       516: pop
+       517: aload         5
+       519: aload         7
+       521: ifnull        628
+       524: ifnull        606
+       527: goto          534
+       530: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       533: athrow
+       534: aload         6
+       536: aload         7
+       538: ifnull        628
+       541: goto          548
+       544: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       547: athrow
+       548: ifnull        606
+       551: goto          558
+       554: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       557: athrow
+       558: aload         13
+       560: aload         5
+       562: aload         6
+       564: sipush        2711
+       567: sipush        21887
+       570: pop2
+       571: ldc_w         #475                // String \n��7Discord: ��f
+       574: dup_x2
+       575: pop
+       576: sipush        2754
+       579: sipush        -10774
+       582: pop2
+       583: ldc_w         #477                // String  ��8(
+       586: swap
+       587: ldc_w         #479                // String )
+       590: invokedynamic #484,  0            // InvokeDynamic #9:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       595: invokevirtual #473                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       598: pop
+       599: goto          606
+       602: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       605: athrow
+       606: aload         13
+       608: sipush        2743
+       611: sipush        20715
+       614: pop2
+       615: ldc_w         #486                // String \n��7Click to mention
+       618: invokevirtual #473                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       621: pop
+       622: nop
+       623: aload         12
+       625: invokevirtual #487                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       628: astore        11
+       630: aload         10
+       632: aload         11
+       634: aload_1
+       635: invokedynamic #496,  0            // InvokeDynamic #10:apply:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/function/UnaryOperator;
+       640: invokevirtual #500                // Method net/minecraft/network/chat/MutableComponent.withStyle:(Ljava/util/function/UnaryOperator;)Lnet/minecraft/network/chat/MutableComponent;
+       643: pop
+       644: aload         8
+       646: aload         10
+       648: checkcast     #354                // class net/minecraft/network/chat/Component
+       651: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+       654: pop
+       655: aload         8
+       657: sipush        2755
+       660: sipush        -10211
+       663: pop2
+       664: ldc_w         #502                // String ��8: ��r
+       667: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       670: checkcast     #354                // class net/minecraft/network/chat/Component
+       673: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+       676: pop
+       677: getstatic     #504                // Field lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll:Ljava/util/regex/Pattern;
+       680: aload_2
+       681: checkcast     #403                // class java/lang/CharSequence
+       684: invokevirtual #510                // Method java/util/regex/Pattern.matcher:(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+       687: astore        12
+       689: iconst_0
+       690: istore        13
+       692: aload         12
+       694: invokevirtual #515                // Method java/util/regex/Matcher.find:()Z
+       697: ifeq          967
+       700: aload         12
+       702: invokevirtual #518                // Method java/util/regex/Matcher.start:()I
+       705: istore        14
+       707: aload         12
+       709: invokevirtual #521                // Method java/util/regex/Matcher.end:()I
+       712: istore        15
+       714: aload         12
+       716: invokevirtual #524                // Method java/util/regex/Matcher.group:()Ljava/lang/String;
+       719: astore        16
+       721: iload         14
+       723: aload         7
+       725: ifnull        825
+       728: iload         13
+       730: aload         7
+       732: ifnull        973
+       735: goto          742
+       738: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       741: athrow
+       742: if_icmple     790
+       745: goto          752
+       748: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       751: athrow
+       752: aload_2
+       753: iload         13
+       755: iload         14
+       757: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+       760: dup
+       761: sipush        2787
+       764: sipush        -32093
+       767: pop2
+       768: ldc_w         #427                // String substring(...)
+       771: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       774: astore        17
+       776: aload         8
+       778: aload         17
+       780: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       783: checkcast     #354                // class net/minecraft/network/chat/Component
+       786: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+       789: pop
+       790: aload         16
+       792: invokestatic  #310                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       795: aload         16
+       797: aload         7
+       799: ifnull        877
+       802: sipush        2774
+       805: sipush        7650
+       808: pop2
+       809: ldc_w         #529                // String http://
+       812: iconst_0
+       813: iconst_2
+       814: aconst_null
+       815: invokestatic  #421                // Method kotlin/text/StringsKt.startsWith$default:(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+       818: goto          825
+       821: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       824: athrow
+       825: ifne          868
+       828: aload         16
+       830: aload         7
+       832: ifnull        882
+       835: goto          842
+       838: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       841: athrow
+       842: sipush        2788
+       845: sipush        424
+       848: pop2
+       849: ldc_w         #531                // String https://
+       852: iconst_0
+       853: iconst_2
+       854: aconst_null
+       855: invokestatic  #421                // Method kotlin/text/StringsKt.startsWith$default:(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+       858: ifeq          880
+       861: goto          868
+       864: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       867: athrow
+       868: aload         16
+       870: goto          877
+       873: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       876: athrow
+       877: goto          898
+       880: aload         16
+       882: sipush        2766
+       885: sipush        16445
+       888: pop2
+       889: ldc_w         #531                // String https://
+       892: swap
+       893: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       898: astore        17
+       900: aload         16
+       902: sipush        2782
+       905: sipush        12512
+       908: pop2
+       909: ldc_w         #533                // String ��b��n
+       912: swap
+       913: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       918: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+       921: aload         17
+       923: invokedynamic #540,  0            // InvokeDynamic #11:apply:(Ljava/lang/String;)Ljava/util/function/UnaryOperator;
+       928: invokevirtual #500                // Method net/minecraft/network/chat/MutableComponent.withStyle:(Ljava/util/function/UnaryOperator;)Lnet/minecraft/network/chat/MutableComponent;
+       931: dup
+       932: sipush        2689
+       935: sipush        -32123
+       938: pop2
+       939: ldc_w         #542                // String withStyle(...)
+       942: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       945: astore        18
+       947: aload         8
+       949: aload         18
+       951: checkcast     #354                // class net/minecraft/network/chat/Component
+       954: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+       957: pop
+       958: iload         15
+       960: istore        13
+       962: aload         7
+       964: ifnonnull     692
+       967: iload         13
+       969: aload_2
+       970: invokevirtual #440                // Method java/lang/String.length:()I
+       973: if_icmpge     1012
+       976: aload_2
+       977: iload         13
+       979: invokevirtual #425                // Method java/lang/String.substring:(I)Ljava/lang/String;
+       982: dup
+       983: sipush        2787
+       986: sipush        -32093
+       989: pop2
+       990: ldc_w         #427                // String substring(...)
+       993: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       996: astore        14
+       998: aload         8
+      1000: aload         14
+      1002: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      1005: checkcast     #354                // class net/minecraft/network/chat/Component
+      1008: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+      1011: pop
+      1012: aload         8
+      1014: areturn
+      Exception table:
+         from    to  target type
+            41    51    54   Class com/google/gson/JsonParseException
+            60    73    76   Class com/google/gson/JsonParseException
+            85   107   110   Class com/google/gson/JsonParseException
+            88   117   120   Class com/google/gson/JsonParseException
+           114   137   137   Class com/google/gson/JsonParseException
+           141   156   159   Class com/google/gson/JsonParseException
+           163   193   196   Class com/google/gson/JsonParseException
+           215   230   233   Class com/google/gson/JsonParseException
+           346   356   359   Class com/google/gson/JsonParseException
+           353   378   381   Class com/google/gson/JsonParseException
+           363   388   391   Class com/google/gson/JsonParseException
+           494   527   530   Class com/google/gson/JsonParseException
+           524   541   544   Class com/google/gson/JsonParseException
+           534   551   554   Class com/google/gson/JsonParseException
+           548   599   602   Class com/google/gson/JsonParseException
+           721   735   738   Class com/google/gson/JsonParseException
+           728   745   748   Class com/google/gson/JsonParseException
+           790   818   821   Class com/google/gson/JsonParseException
+           825   835   838   Class com/google/gson/JsonParseException
+           828   861   864   Class com/google/gson/JsonParseException
+           842   870   873   Class com/google/gson/JsonParseException
+
+  static net.minecraft.network.chat.MutableComponent a(me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: astore        9
+         5: iload         7
+         7: iconst_4
+         8: iand
+         9: aload         9
+        11: ifnull        31
+        14: ifeq          26
+        17: goto          24
+        20: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        23: athrow
+        24: aconst_null
+        25: astore_3
+        26: iload         7
+        28: bipush        8
+        30: iand
+        31: aload         9
+        33: ifnull        54
+        36: ifeq          49
+        39: goto          46
+        42: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        45: athrow
+        46: aconst_null
+        47: astore        4
+        49: iload         7
+        51: bipush        16
+        53: iand
+        54: aload         9
+        56: ifnull        77
+        59: ifeq          72
+        62: goto          69
+        65: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        68: athrow
+        69: aconst_null
+        70: astore        5
+        72: iload         7
+        74: bipush        32
+        76: iand
+        77: ifeq          83
+        80: aconst_null
+        81: astore        6
+        83: aload_0
+        84: aload_1
+        85: aload_2
+        86: aload_3
+        87: aload         4
+        89: aload         5
+        91: aload         6
+        93: invokespecial #545                // Method b:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        96: areturn
+      Exception table:
+         from    to  target type
+             5    17    20   Class com/google/gson/JsonParseException
+            31    39    42   Class com/google/gson/JsonParseException
+            54    62    65   Class com/google/gson/JsonParseException
+
+  private final java.lang.String o(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: aload_1
+         4: ldc_w         #415                // String #
+         7: ldc_w         #549                // String
+        10: iconst_0
+        11: iconst_4
+        12: aconst_null
+        13: invokestatic  #553                // Method kotlin/text/StringsKt.replace$default:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+        16: getstatic     #433                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+        19: invokevirtual #437                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+        22: dup
+        23: sipush        2793
+        26: sipush        27802
+        29: pop2
+        30: ldc_w         #439                // String toLowerCase(...)
+        33: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        36: astore_3
+        37: astore_2
+        38: aload_3
+        39: invokevirtual #440                // Method java/lang/String.length:()I
+        42: aload_2
+        43: ifnull        101
+        46: bipush        6
+        48: if_icmpeq     73
+        51: goto          58
+        54: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        57: athrow
+        58: sipush        2739
+        61: sipush        8341
+        64: pop2
+        65: ldc_w         #413                // String ��f
+        68: areturn
+        69: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        72: athrow
+        73: aload_3
+        74: iconst_0
+        75: iconst_2
+        76: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        79: dup
+        80: sipush        2787
+        83: sipush        -32093
+        86: pop2
+        87: ldc_w         #427                // String substring(...)
+        90: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        93: bipush        16
+        95: invokestatic  #559                // Method kotlin/text/CharsKt.checkRadix:(I)I
+        98: invokestatic  #565                // Method java/lang/Integer.parseInt:(Ljava/lang/String;I)I
+       101: istore        4
+       103: aload_3
+       104: iconst_2
+       105: iconst_4
+       106: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+       109: dup
+       110: sipush        2787
+       113: sipush        -32093
+       116: pop2
+       117: ldc_w         #427                // String substring(...)
+       120: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       123: bipush        16
+       125: invokestatic  #559                // Method kotlin/text/CharsKt.checkRadix:(I)I
+       128: invokestatic  #565                // Method java/lang/Integer.parseInt:(Ljava/lang/String;I)I
+       131: istore        5
+       133: aload_3
+       134: iconst_4
+       135: bipush        6
+       137: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+       140: dup
+       141: sipush        2787
+       144: sipush        -32093
+       147: pop2
+       148: ldc_w         #427                // String substring(...)
+       151: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       154: bipush        16
+       156: invokestatic  #559                // Method kotlin/text/CharsKt.checkRadix:(I)I
+       159: invokestatic  #565                // Method java/lang/Integer.parseInt:(Ljava/lang/String;I)I
+       162: istore        6
+       164: nop
+       165: iload         4
+       167: bipush        120
+       169: aload_2
+       170: ifnull        384
+       173: if_icmple     379
+       176: goto          183
+       179: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       182: athrow
+       183: iload         6
+       185: bipush        120
+       187: aload_2
+       188: ifnull        384
+       191: goto          198
+       194: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       197: athrow
+       198: if_icmple     379
+       201: goto          208
+       204: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       207: athrow
+       208: iload         5
+       210: i2d
+       211: iload         4
+       213: iload         6
+       215: invokestatic  #571                // Method java/lang/Math.min:(II)I
+       218: i2d
+       219: ldc2_w        #572                // double 0.7d
+       222: dmul
+       223: dcmpg
+       224: aload_2
+       225: ifnull        381
+       228: goto          235
+       231: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       234: athrow
+       235: ifge          379
+       238: goto          245
+       241: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       244: athrow
+       245: nop
+       246: iload         4
+       248: sipush        200
+       251: aload_2
+       252: ifnull        320
+       255: goto          262
+       258: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       261: athrow
+       262: if_icmple     315
+       265: goto          272
+       268: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       271: athrow
+       272: iload         6
+       274: sipush        200
+       277: aload_2
+       278: ifnull        320
+       281: goto          288
+       284: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       287: athrow
+       288: if_icmple     315
+       291: goto          298
+       294: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       297: athrow
+       298: sipush        2796
+       301: sipush        17243
+       304: pop2
+       305: ldc_w         #575                // String ��d
+       308: goto          1530
+       311: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       314: athrow
+       315: iload         4
+       317: sipush        150
+       320: aload_2
+       321: ifnull        346
+       324: if_icmple     366
+       327: goto          334
+       330: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       333: athrow
+       334: iload         6
+       336: sipush        150
+       339: goto          346
+       342: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       345: athrow
+       346: if_icmple     366
+       349: sipush        2716
+       352: sipush        -32013
+       355: pop2
+       356: ldc_w         #577                // String ��5
+       359: goto          1530
+       362: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       365: athrow
+       366: sipush        2716
+       369: sipush        -32013
+       372: pop2
+       373: ldc_w         #577                // String ��5
+       376: goto          1530
+       379: iload         4
+       381: sipush        200
+       384: aload_2
+       385: ifnull        522
+       388: if_icmple     517
+       391: goto          398
+       394: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       397: athrow
+       398: iload         6
+       400: bipush        100
+       402: aload_2
+       403: ifnull        522
+       406: goto          413
+       409: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       412: athrow
+       413: if_icmple     517
+       416: goto          423
+       419: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       422: athrow
+       423: iload         6
+       425: sipush        200
+       428: aload_2
+       429: ifnull        522
+       432: goto          439
+       435: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       438: athrow
+       439: if_icmpge     517
+       442: goto          449
+       445: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       448: athrow
+       449: iload         5
+       451: sipush        150
+       454: aload_2
+       455: ifnull        522
+       458: goto          465
+       461: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       464: athrow
+       465: if_icmpge     517
+       468: goto          475
+       471: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       474: athrow
+       475: iload         4
+       477: iload         6
+       479: aload_2
+       480: ifnull        522
+       483: goto          490
+       486: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       489: athrow
+       490: if_icmple     517
+       493: goto          500
+       496: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       499: athrow
+       500: sipush        2796
+       503: sipush        17243
+       506: pop2
+       507: ldc_w         #575                // String ��d
+       510: goto          1530
+       513: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       516: athrow
+       517: iload         4
+       519: sipush        180
+       522: aload_2
+       523: ifnull        661
+       526: if_icmple     656
+       529: goto          536
+       532: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       535: athrow
+       536: iload         5
+       538: bipush        80
+       540: aload_2
+       541: ifnull        661
+       544: goto          551
+       547: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       550: athrow
+       551: if_icmple     656
+       554: goto          561
+       557: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       560: athrow
+       561: iload         5
+       563: iload         4
+       565: aload_2
+       566: ifnull        661
+       569: goto          576
+       572: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       575: athrow
+       576: if_icmpge     656
+       579: goto          586
+       582: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       585: athrow
+       586: iload         6
+       588: iload         5
+       590: aload_2
+       591: ifnull        661
+       594: goto          601
+       597: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       600: athrow
+       601: if_icmpge     656
+       604: goto          611
+       607: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       610: athrow
+       611: iload         5
+       613: sipush        140
+       616: if_icmple     643
+       619: goto          626
+       622: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       625: athrow
+       626: sipush        2697
+       629: sipush        -5416
+       632: pop2
+       633: ldc_w         #579                // String ��6
+       636: goto          1530
+       639: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       642: athrow
+       643: sipush        2697
+       646: sipush        -5416
+       649: pop2
+       650: ldc_w         #579                // String ��6
+       653: goto          1530
+       656: iload         4
+       658: sipush        180
+       661: aload_2
+       662: ifnull        748
+       665: if_icmple     743
+       668: goto          675
+       671: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       674: athrow
+       675: iload         5
+       677: sipush        180
+       680: aload_2
+       681: ifnull        748
+       684: goto          691
+       687: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       690: athrow
+       691: if_icmple     743
+       694: goto          701
+       697: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       700: athrow
+       701: iload         6
+       703: bipush        120
+       705: aload_2
+       706: ifnull        748
+       709: goto          716
+       712: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       715: athrow
+       716: if_icmpge     743
+       719: goto          726
+       722: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       725: athrow
+       726: sipush        2691
+       729: sipush        7346
+       732: pop2
+       733: ldc_w         #581                // String ��e
+       736: goto          1530
+       739: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       742: athrow
+       743: iload         4
+       745: sipush        150
+       748: aload_2
+       749: ifnull        875
+       752: if_icmple     871
+       755: goto          762
+       758: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       761: athrow
+       762: iload         4
+       764: i2d
+       765: iload         5
+       767: i2d
+       768: ldc2_w        #582                // double 1.5d
+       771: dmul
+       772: dcmpl
+       773: aload_2
+       774: ifnull        873
+       777: goto          784
+       780: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       783: athrow
+       784: ifle          871
+       787: goto          794
+       790: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       793: athrow
+       794: iload         4
+       796: i2d
+       797: iload         6
+       799: i2d
+       800: ldc2_w        #582                // double 1.5d
+       803: dmul
+       804: dcmpl
+       805: aload_2
+       806: ifnull        873
+       809: goto          816
+       812: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       815: athrow
+       816: ifle          871
+       819: goto          826
+       822: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       825: athrow
+       826: iload         4
+       828: sipush        200
+       831: if_icmple     858
+       834: goto          841
+       837: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       840: athrow
+       841: sipush        2744
+       844: sipush        1054
+       847: pop2
+       848: ldc_w         #585                // String ��c
+       851: goto          1530
+       854: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       857: athrow
+       858: sipush        2740
+       861: sipush        -22803
+       864: pop2
+       865: ldc_w         #587                // String ��4
+       868: goto          1530
+       871: iload         5
+       873: bipush        120
+       875: aload_2
+       876: ifnull        988
+       879: if_icmple     984
+       882: goto          889
+       885: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       888: athrow
+       889: iload         5
+       891: iload         4
+       893: aload_2
+       894: ifnull        988
+       897: goto          904
+       900: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       903: athrow
+       904: if_icmple     984
+       907: goto          914
+       910: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       913: athrow
+       914: iload         5
+       916: iload         6
+       918: aload_2
+       919: ifnull        988
+       922: goto          929
+       925: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       928: athrow
+       929: if_icmple     984
+       932: goto          939
+       935: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       938: athrow
+       939: iload         5
+       941: sipush        180
+       944: if_icmple     971
+       947: goto          954
+       950: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       953: athrow
+       954: sipush        2701
+       957: sipush        19517
+       960: pop2
+       961: ldc_w         #589                // String ��a
+       964: goto          1530
+       967: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       970: athrow
+       971: sipush        2753
+       974: sipush        26076
+       977: pop2
+       978: ldc_w         #591                // String ��2
+       981: goto          1530
+       984: iload         5
+       986: bipush        120
+       988: aload_2
+       989: ifnull        1085
+       992: if_icmple     1081
+       995: goto          1002
+       998: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1001: athrow
+      1002: iload         6
+      1004: bipush        120
+      1006: aload_2
+      1007: ifnull        1085
+      1010: goto          1017
+      1013: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1016: athrow
+      1017: if_icmple     1081
+      1020: goto          1027
+      1023: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1026: athrow
+      1027: iload         4
+      1029: i2d
+      1030: iload         5
+      1032: iload         6
+      1034: invokestatic  #571                // Method java/lang/Math.min:(II)I
+      1037: i2d
+      1038: ldc2_w        #592                // double 0.8d
+      1041: dmul
+      1042: dcmpg
+      1043: aload_2
+      1044: ifnull        1083
+      1047: goto          1054
+      1050: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1053: athrow
+      1054: ifge          1081
+      1057: goto          1064
+      1060: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1063: athrow
+      1064: sipush        2752
+      1067: sipush        26222
+      1070: pop2
+      1071: ldc_w         #595                // String ��b
+      1074: goto          1530
+      1077: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1080: athrow
+      1081: iload         6
+      1083: bipush        120
+      1085: aload_2
+      1086: ifnull        1204
+      1089: if_icmple     1194
+      1092: goto          1099
+      1095: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1098: athrow
+      1099: iload         6
+      1101: iload         4
+      1103: aload_2
+      1104: ifnull        1204
+      1107: goto          1114
+      1110: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1113: athrow
+      1114: if_icmple     1194
+      1117: goto          1124
+      1120: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1123: athrow
+      1124: iload         6
+      1126: iload         5
+      1128: aload_2
+      1129: ifnull        1204
+      1132: goto          1139
+      1135: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1138: athrow
+      1139: if_icmple     1194
+      1142: goto          1149
+      1145: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1148: athrow
+      1149: iload         6
+      1151: sipush        180
+      1154: if_icmple     1181
+      1157: goto          1164
+      1160: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1163: athrow
+      1164: sipush        2802
+      1167: sipush        13129
+      1170: pop2
+      1171: ldc_w         #597                // String ��9
+      1174: goto          1530
+      1177: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1180: athrow
+      1181: sipush        2745
+      1184: sipush        -638
+      1187: pop2
+      1188: ldc_w         #599                // String ��1
+      1191: goto          1530
+      1194: iload         4
+      1196: iload         5
+      1198: isub
+      1199: invokestatic  #602                // Method java/lang/Math.abs:(I)I
+      1202: bipush        30
+      1204: aload_2
+      1205: ifnull        1235
+      1208: if_icmpge     1520
+      1211: goto          1218
+      1214: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1217: athrow
+      1218: iload         5
+      1220: iload         6
+      1222: isub
+      1223: invokestatic  #602                // Method java/lang/Math.abs:(I)I
+      1226: bipush        30
+      1228: goto          1235
+      1231: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1234: athrow
+      1235: aload_2
+      1236: ifnull        1262
+      1239: if_icmpge     1520
+      1242: goto          1249
+      1245: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1248: athrow
+      1249: nop
+      1250: iload         4
+      1252: sipush        220
+      1255: goto          1262
+      1258: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1261: athrow
+      1262: aload_2
+      1263: ifnull        1350
+      1266: if_icmple     1345
+      1269: goto          1276
+      1272: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1275: athrow
+      1276: iload         5
+      1278: sipush        220
+      1281: aload_2
+      1282: ifnull        1350
+      1285: goto          1292
+      1288: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1291: athrow
+      1292: if_icmple     1345
+      1295: goto          1302
+      1298: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1301: athrow
+      1302: iload         6
+      1304: sipush        220
+      1307: aload_2
+      1308: ifnull        1350
+      1311: goto          1318
+      1314: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1317: athrow
+      1318: if_icmple     1345
+      1321: goto          1328
+      1324: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1327: athrow
+      1328: sipush        2739
+      1331: sipush        8341
+      1334: pop2
+      1335: ldc_w         #413                // String ��f
+      1338: goto          1530
+      1341: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1344: athrow
+      1345: iload         4
+      1347: sipush        150
+      1350: aload_2
+      1351: ifnull        1437
+      1354: if_icmple     1433
+      1357: goto          1364
+      1360: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1363: athrow
+      1364: iload         5
+      1366: sipush        150
+      1369: aload_2
+      1370: ifnull        1437
+      1373: goto          1380
+      1376: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1379: athrow
+      1380: if_icmple     1433
+      1383: goto          1390
+      1386: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1389: athrow
+      1390: iload         6
+      1392: sipush        150
+      1395: aload_2
+      1396: ifnull        1437
+      1399: goto          1406
+      1402: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1405: athrow
+      1406: if_icmple     1433
+      1409: goto          1416
+      1412: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1415: athrow
+      1416: sipush        2762
+      1419: sipush        6275
+      1422: pop2
+      1423: ldc_w         #604                // String ��7
+      1426: goto          1530
+      1429: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1432: athrow
+      1433: iload         4
+      1435: bipush        80
+      1437: aload_2
+      1438: ifnull        1462
+      1441: if_icmple     1507
+      1444: goto          1451
+      1447: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1450: athrow
+      1451: iload         5
+      1453: bipush        80
+      1455: goto          1462
+      1458: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1461: athrow
+      1462: aload_2
+      1463: ifnull        1487
+      1466: if_icmple     1507
+      1469: goto          1476
+      1472: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1475: athrow
+      1476: iload         6
+      1478: bipush        80
+      1480: goto          1487
+      1483: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1486: athrow
+      1487: if_icmple     1507
+      1490: sipush        2732
+      1493: sipush        13801
+      1496: pop2
+      1497: ldc_w         #606                // String ��8
+      1500: goto          1530
+      1503: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+      1506: athrow
+      1507: sipush        2710
+      1510: sipush        -29309
+      1513: pop2
+      1514: ldc_w         #608                // String ��0
+      1517: goto          1530
+      1520: sipush        2739
+      1523: sipush        8341
+      1526: pop2
+      1527: ldc_w         #413                // String ��f
+      1530: areturn
+      Exception table:
+         from    to  target type
+            38    51    54   Class com/google/gson/JsonParseException
+            46    69    69   Class com/google/gson/JsonParseException
+           164   176   179   Class com/google/gson/JsonParseException
+           173   191   194   Class com/google/gson/JsonParseException
+           183   201   204   Class com/google/gson/JsonParseException
+           198   228   231   Class com/google/gson/JsonParseException
+           208   238   241   Class com/google/gson/JsonParseException
+           235   255   258   Class com/google/gson/JsonParseException
+           245   265   268   Class com/google/gson/JsonParseException
+           262   281   284   Class com/google/gson/JsonParseException
+           272   291   294   Class com/google/gson/JsonParseException
+           288   311   311   Class com/google/gson/JsonParseException
+           320   327   330   Class com/google/gson/JsonParseException
+           324   339   342   Class com/google/gson/JsonParseException
+           346   362   362   Class com/google/gson/JsonParseException
+           384   391   394   Class com/google/gson/JsonParseException
+           388   406   409   Class com/google/gson/JsonParseException
+           398   416   419   Class com/google/gson/JsonParseException
+           413   432   435   Class com/google/gson/JsonParseException
+           423   442   445   Class com/google/gson/JsonParseException
+           439   458   461   Class com/google/gson/JsonParseException
+           449   468   471   Class com/google/gson/JsonParseException
+           465   483   486   Class com/google/gson/JsonParseException
+           475   493   496   Class com/google/gson/JsonParseException
+           490   513   513   Class com/google/gson/JsonParseException
+           522   529   532   Class com/google/gson/JsonParseException
+           526   544   547   Class com/google/gson/JsonParseException
+           536   554   557   Class com/google/gson/JsonParseException
+           551   569   572   Class com/google/gson/JsonParseException
+           561   579   582   Class com/google/gson/JsonParseException
+           576   594   597   Class com/google/gson/JsonParseException
+           586   604   607   Class com/google/gson/JsonParseException
+           601   619   622   Class com/google/gson/JsonParseException
+           611   639   639   Class com/google/gson/JsonParseException
+           661   668   671   Class com/google/gson/JsonParseException
+           665   684   687   Class com/google/gson/JsonParseException
+           675   694   697   Class com/google/gson/JsonParseException
+           691   709   712   Class com/google/gson/JsonParseException
+           701   719   722   Class com/google/gson/JsonParseException
+           716   739   739   Class com/google/gson/JsonParseException
+           748   755   758   Class com/google/gson/JsonParseException
+           752   777   780   Class com/google/gson/JsonParseException
+           762   787   790   Class com/google/gson/JsonParseException
+           784   809   812   Class com/google/gson/JsonParseException
+           794   819   822   Class com/google/gson/JsonParseException
+           816   834   837   Class com/google/gson/JsonParseException
+           826   854   854   Class com/google/gson/JsonParseException
+           875   882   885   Class com/google/gson/JsonParseException
+           879   897   900   Class com/google/gson/JsonParseException
+           889   907   910   Class com/google/gson/JsonParseException
+           904   922   925   Class com/google/gson/JsonParseException
+           914   932   935   Class com/google/gson/JsonParseException
+           929   947   950   Class com/google/gson/JsonParseException
+           939   967   967   Class com/google/gson/JsonParseException
+           988   995   998   Class com/google/gson/JsonParseException
+           992  1010  1013   Class com/google/gson/JsonParseException
+          1002  1020  1023   Class com/google/gson/JsonParseException
+          1017  1047  1050   Class com/google/gson/JsonParseException
+          1027  1057  1060   Class com/google/gson/JsonParseException
+          1054  1077  1077   Class com/google/gson/JsonParseException
+          1085  1092  1095   Class com/google/gson/JsonParseException
+          1089  1107  1110   Class com/google/gson/JsonParseException
+          1099  1117  1120   Class com/google/gson/JsonParseException
+          1114  1132  1135   Class com/google/gson/JsonParseException
+          1124  1142  1145   Class com/google/gson/JsonParseException
+          1139  1157  1160   Class com/google/gson/JsonParseException
+          1149  1177  1177   Class com/google/gson/JsonParseException
+          1204  1211  1214   Class com/google/gson/JsonParseException
+          1208  1228  1231   Class com/google/gson/JsonParseException
+          1235  1242  1245   Class com/google/gson/JsonParseException
+          1239  1255  1258   Class com/google/gson/JsonParseException
+          1262  1269  1272   Class com/google/gson/JsonParseException
+          1266  1285  1288   Class com/google/gson/JsonParseException
+          1276  1295  1298   Class com/google/gson/JsonParseException
+          1292  1311  1314   Class com/google/gson/JsonParseException
+          1302  1321  1324   Class com/google/gson/JsonParseException
+          1318  1341  1341   Class com/google/gson/JsonParseException
+          1350  1357  1360   Class com/google/gson/JsonParseException
+          1354  1373  1376   Class com/google/gson/JsonParseException
+          1364  1383  1386   Class com/google/gson/JsonParseException
+          1380  1399  1402   Class com/google/gson/JsonParseException
+          1390  1409  1412   Class com/google/gson/JsonParseException
+          1406  1429  1429   Class com/google/gson/JsonParseException
+          1437  1444  1447   Class com/google/gson/JsonParseException
+          1441  1455  1458   Class com/google/gson/JsonParseException
+          1462  1469  1472   Class com/google/gson/JsonParseException
+          1466  1480  1483   Class com/google/gson/JsonParseException
+          1487  1503  1503   Class com/google/gson/JsonParseException
+
+  private static final void b(kotlin.jvm.functions.Function0);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+    Code:
+         0: aload_0
+         1: invokeinterface #77,  1           // InterfaceMethod kotlin/jvm/functions/Function0.invoke:()Ljava/lang/Object;
+         6: pop
+         7: return
+
+  private static final java.lang.CharSequence a(kotlin.text.MatchResult);
+    descriptor: (Lkotlin/text/MatchResult;)Ljava/lang/CharSequence;
+    Code:
+         0: aload_0
+         1: sipush        2702
+         4: sipush        19288
+         7: pop2
+         8: ldc_w         #611                // String matchResult
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_0
+        15: invokeinterface #616,  1          // InterfaceMethod kotlin/text/MatchResult.getValue:()Ljava/lang/String;
+        20: sipush        2760
+        23: sipush        13241
+        26: pop2
+        27: ldc_w         #618                // String ��x
+        30: ldc_w         #549                // String
+        33: iconst_0
+        34: iconst_4
+        35: aconst_null
+        36: invokestatic  #553                // Method kotlin/text/StringsKt.replace$default:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+        39: ldc_w         #448                // String ��
+        42: ldc_w         #549                // String
+        45: iconst_0
+        46: iconst_4
+        47: aconst_null
+        48: invokestatic  #553                // Method kotlin/text/StringsKt.replace$default:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+        51: astore_1
+        52: aload_1
+        53: sipush        2721
+        56: sipush        14905
+        59: pop2
+        60: ldc_w         #620                // String <color:#
+        63: swap
+        64: ldc_w         #622                // String >
+        67: invokedynamic #627,  0            // InvokeDynamic #12:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        72: checkcast     #403                // class java/lang/CharSequence
+        75: areturn
+
+  private static final java.lang.CharSequence b(kotlin.text.MatchResult);
+    descriptor: (Lkotlin/text/MatchResult;)Ljava/lang/CharSequence;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: aload_0
+         4: sipush        2734
+         7: sipush        1007
+        10: pop2
+        11: ldc_w         #611                // String matchResult
+        14: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        17: astore_1
+        18: getstatic     #629                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Ljava/util/Map;
+        21: aload_0
+        22: invokeinterface #616,  1          // InterfaceMethod kotlin/text/MatchResult.getValue:()Ljava/lang/String;
+        27: invokeinterface #634,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        32: checkcast     #233                // class java/lang/String
+        35: aload_1
+        36: ifnull        67
+        39: dup
+        40: ifnull        60
+        43: goto          50
+        46: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        49: athrow
+        50: checkcast     #403                // class java/lang/CharSequence
+        53: goto          70
+        56: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        59: athrow
+        60: pop
+        61: aload_0
+        62: invokeinterface #616,  1          // InterfaceMethod kotlin/text/MatchResult.getValue:()Ljava/lang/String;
+        67: checkcast     #403                // class java/lang/CharSequence
+        70: areturn
+      Exception table:
+         from    to  target type
+            18    43    46   Class com/google/gson/JsonParseException
+            39    56    56   Class com/google/gson/JsonParseException
+
+  private static final java.lang.String p(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    Code:
+         0: aload_0
+         1: sipush        2717
+         4: sipush        14856
+         7: pop2
+         8: ldc_w         #637                // String text
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: getstatic     #639                // Field IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII:Lkotlin/text/Regex;
+        17: aload_0
+        18: checkcast     #403                // class java/lang/CharSequence
+        21: invokedynamic #645,  0            // InvokeDynamic #13:invoke:()Lkotlin/jvm/functions/Function1;
+        26: invokevirtual #651                // Method kotlin/text/Regex.replace:(Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+        29: astore_1
+        30: getstatic     #653                // Field lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll:Lkotlin/text/Regex;
+        33: aload_1
+        34: checkcast     #403                // class java/lang/CharSequence
+        37: invokedynamic #657,  0            // InvokeDynamic #14:invoke:()Lkotlin/jvm/functions/Function1;
+        42: invokevirtual #651                // Method kotlin/text/Regex.replace:(Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+        45: astore_1
+        46: aload_1
+        47: areturn
+
+  private static final java.lang.String a(kotlin.jvm.functions.Function1, java.lang.String);
+    descriptor: (Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Ljava/lang/String;
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokeinterface #662,  2          // InterfaceMethod kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+         7: checkcast     #233                // class java/lang/String
+        10: areturn
+
+  private static final kotlin.Unit q(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lkotlin/Unit;
+    Code:
+         0: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         3: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+         6: getfield      #666                // Field net/minecraft/client/Minecraft.gui:Lnet/minecraft/client/gui/Gui;
+         9: dup
+        10: ifnull        44
+        13: invokevirtual #672                // Method net/minecraft/client/gui/Gui.getChat:()Lnet/minecraft/client/gui/components/ChatComponent;
+        16: dup
+        17: ifnull        44
+        20: goto          27
+        23: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        26: athrow
+        27: aload_0
+        28: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        31: checkcast     #354                // class net/minecraft/network/chat/Component
+        34: invokevirtual #678                // Method net/minecraft/client/gui/components/ChatComponent.addClientSystemMessage:(Lnet/minecraft/network/chat/Component;)V
+        37: goto          45
+        40: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        43: athrow
+        44: pop
+        45: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        48: areturn
+      Exception table:
+         from    to  target type
+             0    20    23   Class com/google/gson/JsonParseException
+            13    40    40   Class com/google/gson/JsonParseException
+
+  private static final kotlin.Unit b(java.lang.String, net.minecraft.network.chat.MutableComponent);
+    descriptor: (Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;)Lkotlin/Unit;
+    Code:
+         0: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         3: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+         6: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+         9: ifnonnull     20
+        12: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        15: areturn
+        16: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        19: athrow
+        20: sipush        2750
+        23: sipush        -1903
+        26: pop2
+        27: ldc           #168                // String <bold><gradient:#55AAFF:#0066FF>[Polinex]</gradient></bold> <dark_gray>? <white>
+        29: astore_2
+        30: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        33: getstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+        36: aload_2
+        37: aload_0
+        38: invokedynamic #182,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        43: invokeinterface #186,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.deserialize:(Ljava/lang/Object;)Lnet/kyori/adventure/text/Component;
+        48: dup
+        49: sipush        2786
+        52: sipush        22749
+        55: pop2
+        56: ldc           #188                // String deserialize(...)
+        58: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        61: invokespecial #266                // Method b:(Lnet/kyori/adventure/text/Component;)Lnet/minecraft/network/chat/Component;
+        64: astore_3
+        65: invokestatic  #687                // InterfaceMethod net/minecraft/network/chat/Component.empty:()Lnet/minecraft/network/chat/MutableComponent;
+        68: aload_3
+        69: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+        72: aload_1
+        73: checkcast     #354                // class net/minecraft/network/chat/Component
+        76: invokevirtual #465                // Method net/minecraft/network/chat/MutableComponent.append:(Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
+        79: dup
+        80: sipush        2715
+        83: sipush        19042
+        86: pop2
+        87: ldc_w         #689                // String append(...)
+        90: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        93: astore        4
+        95: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        98: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+       101: getfield      #666                // Field net/minecraft/client/Minecraft.gui:Lnet/minecraft/client/gui/Gui;
+       104: dup
+       105: ifnull        137
+       108: invokevirtual #672                // Method net/minecraft/client/gui/Gui.getChat:()Lnet/minecraft/client/gui/components/ChatComponent;
+       111: dup
+       112: ifnull        137
+       115: goto          122
+       118: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       121: athrow
+       122: aload         4
+       124: checkcast     #354                // class net/minecraft/network/chat/Component
+       127: invokevirtual #678                // Method net/minecraft/client/gui/components/ChatComponent.addClientSystemMessage:(Lnet/minecraft/network/chat/Component;)V
+       130: goto          138
+       133: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+       136: athrow
+       137: pop
+       138: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+       141: areturn
+      Exception table:
+         from    to  target type
+             0    16    16   Class com/google/gson/JsonParseException
+            95   115   118   Class com/google/gson/JsonParseException
+           108   133   133   Class com/google/gson/JsonParseException
+
+  private static final kotlin.Unit c(net.kyori.adventure.text.Component);
+    descriptor: (Lnet/kyori/adventure/text/Component;)Lkotlin/Unit;
+    Code:
+         0: invokestatic  #128                // Method me/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.h:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+         3: astore_1
+         4: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         7: aload_1
+         8: ifnull        38
+        11: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        14: getfield      #142                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        17: ifnonnull     35
+        20: goto          27
+        23: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        26: athrow
+        27: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        30: areturn
+        31: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        34: athrow
+        35: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        38: aload_0
+        39: invokespecial #266                // Method b:(Lnet/kyori/adventure/text/Component;)Lnet/minecraft/network/chat/Component;
+        42: astore_2
+        43: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        46: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        49: getfield      #666                // Field net/minecraft/client/Minecraft.gui:Lnet/minecraft/client/gui/Gui;
+        52: invokevirtual #672                // Method net/minecraft/client/gui/Gui.getChat:()Lnet/minecraft/client/gui/components/ChatComponent;
+        55: aload_2
+        56: invokevirtual #678                // Method net/minecraft/client/gui/components/ChatComponent.addClientSystemMessage:(Lnet/minecraft/network/chat/Component;)V
+        59: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        62: areturn
+      Exception table:
+         from    to  target type
+             4    20    23   Class com/google/gson/JsonParseException
+            11    31    31   Class com/google/gson/JsonParseException
+
+  private static final com.google.gson.JsonParseException r(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lcom/google/gson/JsonParseException;
+    Code:
+         0: new           #62                 // class com/google/gson/JsonParseException
+         3: dup
+         4: aload_0
+         5: invokespecial #691                // Method com/google/gson/JsonParseException."<init>":(Ljava/lang/String;)V
+         8: areturn
+
+  private static final kotlin.Unit c(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lkotlin/Unit;
+    Code:
+         0: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         3: aload_0
+         4: aload_1
+         5: aload_2
+         6: aload_3
+         7: aload         4
+         9: aload         5
+        11: invokespecial #545                // Method b:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        14: astore        6
+        16: getstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        19: invokevirtual #65                 // Method a:()Lnet/minecraft/client/Minecraft;
+        22: getfield      #666                // Field net/minecraft/client/Minecraft.gui:Lnet/minecraft/client/gui/Gui;
+        25: dup
+        26: ifnull        58
+        29: invokevirtual #672                // Method net/minecraft/client/gui/Gui.getChat:()Lnet/minecraft/client/gui/components/ChatComponent;
+        32: dup
+        33: ifnull        58
+        36: goto          43
+        39: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        42: athrow
+        43: aload         6
+        45: checkcast     #354                // class net/minecraft/network/chat/Component
+        48: invokevirtual #678                // Method net/minecraft/client/gui/components/ChatComponent.addClientSystemMessage:(Lnet/minecraft/network/chat/Component;)V
+        51: goto          59
+        54: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        57: athrow
+        58: pop
+        59: getstatic     #683                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        62: areturn
+      Exception table:
+         from    to  target type
+            16    36    39   Class com/google/gson/JsonParseException
+            29    54    54   Class com/google/gson/JsonParseException
+
+  private static final net.minecraft.network.chat.Style a(java.lang.String, java.lang.String, net.minecraft.network.chat.Style);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+    Code:
+         0: aload_2
+         1: sipush        2780
+         4: sipush        -11197
+         7: pop2
+         8: ldc_w         #693                // String style
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_2
+        15: new           #25                 // class net/minecraft/network/chat/HoverEvent$ShowText
+        18: dup
+        19: aload_0
+        20: invokestatic  #358                // InterfaceMethod net/minecraft/network/chat/Component.literal:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        23: checkcast     #354                // class net/minecraft/network/chat/Component
+        26: invokespecial #695                // Method net/minecraft/network/chat/HoverEvent$ShowText."<init>":(Lnet/minecraft/network/chat/Component;)V
+        29: checkcast     #27                 // class net/minecraft/network/chat/HoverEvent
+        32: invokevirtual #701                // Method net/minecraft/network/chat/Style.withHoverEvent:(Lnet/minecraft/network/chat/HoverEvent;)Lnet/minecraft/network/chat/Style;
+        35: new           #22                 // class net/minecraft/network/chat/ClickEvent$SuggestCommand
+        38: dup
+        39: aload_1
+        40: invokedynamic #705,  0            // InvokeDynamic #15:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        45: invokespecial #706                // Method net/minecraft/network/chat/ClickEvent$SuggestCommand."<init>":(Ljava/lang/String;)V
+        48: checkcast     #19                 // class net/minecraft/network/chat/ClickEvent
+        51: invokevirtual #710                // Method net/minecraft/network/chat/Style.withClickEvent:(Lnet/minecraft/network/chat/ClickEvent;)Lnet/minecraft/network/chat/Style;
+        54: areturn
+
+  private static final net.minecraft.network.chat.Style a(java.lang.String, net.minecraft.network.chat.Style);
+    descriptor: (Ljava/lang/String;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+    Code:
+         0: aload_1
+         1: sipush        2759
+         4: sipush        -17163
+         7: pop2
+         8: ldc_w         #693                // String style
+        11: invokestatic  #136                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_1
+        15: new           #17                 // class net/minecraft/network/chat/ClickEvent$OpenUrl
+        18: dup
+        19: aload_0
+        20: invokestatic  #716                // Method java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;
+        23: invokespecial #719                // Method net/minecraft/network/chat/ClickEvent$OpenUrl."<init>":(Ljava/net/URI;)V
+        26: checkcast     #19                 // class net/minecraft/network/chat/ClickEvent
+        29: invokevirtual #710                // Method net/minecraft/network/chat/Style.withClickEvent:(Lnet/minecraft/network/chat/ClickEvent;)Lnet/minecraft/network/chat/Style;
+        32: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: bipush        119
+         2: anewarray     #233                // class java/lang/String
+         5: astore        5
+         7: iconst_0
+         8: istore_3
+         9: iconst_1
+        10: ldc_w         #722                // String \u009eB\n!?=\u0085\u0015`?\u008c\u0012!\u0088??c\u0082\u0006\f\u000f?????��w\u0012E\u0007??\u009d??��c\u0007\u001b??6?\u009d \u0004?\u009dp��\u000e\u008c\n\u007f\u009e\u008e?\u0080?\u0019t7EY{\u000f??\u0012F\u0019?\u0013?��??\u001aG��)\u00022!\tz?��?wm��\u001cg\u0002 p\u000bQE\u009du��\u0089,.\u0003��<5\u0085|g>?b\u009d?C/????\u0011\u000b��Ao\u008b&??��??uT\u007f��\nrA?y\u0090\u008f7aO\u0090\u0012#\u000b\u008aKi@?\u008c??��\u0002??\u0002&&\u0006\u001b��?\u0087?U\u0002i`\r?^{%��77???}D\n\f\u0015\u0093{\u001b\u0081z@????\u0083\u0002?\"\u000e��\u0017\u008b\u0006\u0001\u0005\u0016?\u00851E&\b\u0097\u000e???O\u008a��??c?:<?T\r\u0000??????��\u008d\u0095\u0012a?\u0002??\f?<?U\u0019xb\u001e??\u0001r\u0002F\u0002\u0004��W?��\u0002\u001f?\f��)?2O?@?I?D\u0088\u0007?d??l??\u0002\u0090?\u0012??2?\u0087\u0019\u0093T?\u008b��?\u0019F����\u0010?\u000b????��A\'\u009a?\u0095\u008aP??\u0080?>9\u0002??P??L?@_?P��??\u000f?V\u0083O}??\u0093?1???��\u000b\u0013?q\u0098t?hl\u0014\u001d???`&9?\u0084??!\b\u001f\f?J?U?8U\u0097??\bd\u0002\u0017��\u0003X{?\u0002@x\u0003e-[\u0007\u0091\u009a??\u0096?��\u0002\u0095\u007f\b\u00016��V?#?\u000f\u0010\'R|\u0015(xIS7��4\u008b\u001bc?\u0094\u0002l8\u0002D?W?\u0013\f???0\u0011??\u0015\u0095U\u0089c\u0092?��l\u0095N��?\u008a???\u008b??����?LZ?\u009a?\u0081??\u0080Ga\u008d\u0093I+??9?>?\u0099\u0004m\u00073?x\u0019?\u0015?~N?��\u0093\u0090nr_@{\\h\\��\u0088a??r?\u0089\u000b��\u0084?Mc\u008e}?)?y$Q����|\u0090\u0096b`\u009cJ\u0013?\u0083?F?\u00149?\u0002[???��gO$D\u001b?v.|\u0096?\n?\"��\u0000??\f\u0001~��\u0002\u0015?9\u009c?Dg?I\u0011??\u009c\u008c\u0084X/\u000e0?��??|?l\u0004???;\\\u008bQ\'?x??��5???��ha?\u009a\'?,\u001c?^\u0095?FS\u0000\f2TE?7n1#?{??\u0002Bq\u0002S?\u0005\u008c?L��?\u0013z?0Ys\u0013?9?V��?(K??2?��\u0002&\u0015\f��\u0000\u008bL\u007fi[\f???K\u000e4??D\u0010?rF?\u0086?\u0097.?\u0002\u0095��2\u009f_$Z??\u0090\"?\u001f?\u0098\u009d`xaF$$\'\\?��\u0013\u001a|��;*?\u0099L>?\f\u0098\u009ds!`?X\u0091?��\u0098\u0083��9u\u000e\u007f#\u0092\u0095=?��\u0001xn^\u008a��DP?-b\u0014b\'\u0089\u000e?(����\u0089\u0006?c?��\u0002R\u0083\u0011e\u0095��7S��\u001erv\r?r4\fW\r8?��\f\u0090g???��(B\u0082?e?\u000f,��Y&\u0010?8����B]???��~?\u0015z9?????\u0002L?\u00023?\u0002\u0016j\u0006?i.?3C\u0002?/\u0002?��:?\u0016ls??��\u0093?\u009f\u0012\u009c?z\'\u0010\u009dM\u0015?\re\u009ev��?\u000b\u009f?>??H\u0083Z??\u0097?z????[\rI\u009eKJ\u008a?��V��\u0082?\u009d\u0006q???\u0011?\u0005???\u009e\u008c\u00021\u009b\u0002\u0081?\u0004\u0080\u007f\u000fg\u0006\u001e[?\u0087\'?\u0006?\u001ek+??\u000bHB?!?=?\u000b\u001c?\u0095\b\u009d??\u0006u?\u008d��\u0002?e\u0002??\u0002;\u009f\u0002?��\u0006\u009dld\u0099?\u0096\u0002R\"\u0010?��I#S��\u0090?ucu\u00913 ����\u0007\u008f��?Ot??\f&?\u001aro��\u0006����?)��>��??\u0089\u0016\u0094\u0007f\u0004???6?p?sI\u0001DPr\u0088\u0000@[???\u0017s\u009f05?\u0004?&\u0007��E\u0084\u0019����4��\u009fFA\u0018n\u0083��?��]vX,?;\u0007>?\u001aA\';\u0002\b*��\u0089?o#~j\u0002l?\u0005.??_?\u0002o\n\u0004bp??> D?9T\u0082O��\r?�¨�\u0012??��??\u0013?\u0012d??I\u0003\u008a?\u008av��??��??��0O(L?8��?U5???\n???\u009b>T.y\'?Z\b?\u001b,*1E\u001f$\n?\t!H?\u0010<��?\u0000\u000e?A?{\u000b=TH\u0091\u0017&){?\u0002?H\b\u0082\u0080Bi\t\u0013\u0002D\u0006b\u009c\u0098;_?\u000e\u0003Z��>?Bq?????=?\u0007?5??+?\u0083\u0013?��?��c?`\u0007??#\u001b\u0099]\u00926?\u000f:\u000b?\u000f\u008c\u0088\u007f\b\u0099��1+0\u0010?J?\u0016\u0012\u0018\u000e_?s)??e?T\u000e\u0082\u0002,\u001b\u0017v`��\u0015\u0095?y!��\u0002A?\u0002?<\u0007\u0014\u00032)��%g\u0002?>\u0004????\u0010Dn=???A\u0002O\u001b2\u009e????\u0006?��\u0085��?t\b\u009d?\u0003\u001c?\u0083?��\u0002?G5\u001aX\u0094??��R??o?\u0096��\u0096rC\u0014???I��?W\u0005z-\u008a\u0007?F??Y\u0005\u009a?\u008a2?_\u0087Y m\u0084\u00883?D��?[\f.?\u001b\u008aO?\u0002\u001f0?9X\u0006y\u008fq??\u001e\b��\u000e\u0082\b=? v
+        13: dup
+        14: astore_2
+        15: invokevirtual #440                // Method java/lang/String.length:()I
+        18: istore        4
+        20: bipush        11
+        22: istore_1
+        23: invokestatic  #725                // Method b:(Z)V
+        26: iconst_m1
+        27: istore_0
+        28: bipush        18
+        30: iinc          0, 1
+        33: aload_2
+        34: iload_0
+        35: dup
+        36: iload_1
+        37: iadd
+        38: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        41: iconst_m1
+        42: goto          148
+        45: aload         5
+        47: swap
+        48: iload_3
+        49: iinc          3, 1
+        52: swap
+        53: aastore
+        54: iload_0
+        55: iload_1
+        56: iadd
+        57: dup
+        58: istore_0
+        59: iload         4
+        61: if_icmpge     73
+        64: aload_2
+        65: iload_0
+        66: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+        69: istore_1
+        70: goto          28
+        73: ldc_w         #727                // String Jp=?D?UN?I_?(?\u0003T��\u0018?��\u0091W?m��?T\u008fh?\u0085\u0085DZ\u0092\u0002\u009a\u0017?��?\u0019????\u0089��\u0081eO1k?\u0081\u0084???��\u001b?\u0080\u0097{5P\u0098\u008e?\u0002??
+        76: dup
+        77: astore_2
+        78: invokevirtual #440                // Method java/lang/String.length:()I
+        81: istore        4
+        83: bipush        70
+        85: istore_1
+        86: iconst_m1
+        87: istore_0
+        88: iconst_3
+        89: iinc          0, 1
+        92: aload_2
+        93: iload_0
+        94: dup
+        95: iload_1
+        96: iadd
+        97: invokevirtual #527                // Method java/lang/String.substring:(II)Ljava/lang/String;
+       100: iconst_0
+       101: goto          148
+       104: aload         5
+       106: swap
+       107: iload_3
+       108: iinc          3, 1
+       111: swap
+       112: aastore
+       113: iload_0
+       114: iload_1
+       115: iadd
+       116: dup
+       117: istore_0
+       118: iload         4
+       120: if_icmpge     132
+       123: aload_2
+       124: iload_0
+       125: invokevirtual #444                // Method java/lang/String.charAt:(I)C
+       128: istore_1
+       129: goto          88
+       132: aload         5
+       134: putstatic     #729                // Field c:[Ljava/lang/String;
+       137: bipush        119
+       139: anewarray     #233                // class java/lang/String
+       142: putstatic     #731                // Field d:[Ljava/lang/String;
+       145: goto          304
+       148: dup_x2
+       149: pop
+       150: invokevirtual #735                // Method java/lang/String.toCharArray:()[C
+       153: dup_x1
+       154: arraylength
+       155: dup_x2
+       156: pop
+       157: iconst_0
+       158: istore        6
+       160: dup2_x1
+       161: pop2
+       162: dup_x2
+       163: iconst_1
+       164: if_icmpgt     264
+       167: dup2
+       168: swap
+       169: iload         6
+       171: dup2_x1
+       172: caload
+       173: swap
+       174: iload         6
+       176: bipush        7
+       178: irem
+       179: tableswitch   { // 0 to 5
+
+                       0: 216
+
+                       1: 221
+
+                       2: 226
+
+                       3: 231
+
+                       4: 236
+
+                       5: 241
+                 default: 246
+            }
+       216: bipush        104
+       218: goto          248
+       221: bipush        15
+       223: goto          248
+       226: bipush        94
+       228: goto          248
+       231: bipush        66
+       233: goto          248
+       236: bipush        83
+       238: goto          248
+       241: bipush        98
+       243: goto          248
+       246: bipush        43
+       248: ixor
+       249: ixor
+       250: i2c
+       251: castore
+       252: iinc          6, 1
+       255: dup
+       256: ifne          264
+       259: dup2
+       260: dup_x1
+       261: goto          171
+       264: dup2_x1
+       265: pop2
+       266: dup_x2
+       267: iload         6
+       269: if_icmpgt     167
+       272: pop
+       273: new           #233                // class java/lang/String
+       276: dup_x1
+       277: swap
+       278: invokespecial #740                // Method java/lang/String."<init>":([C)V
+       281: invokevirtual #743                // Method java/lang/String.intern:()Ljava/lang/String;
+       284: swap
+       285: pop
+       286: swap
+       287: tableswitch   { // 0 to 0
+
+                       0: 104
+                 default: 45
+            }
+       304: new           #2                  // class me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       307: dup
+       308: invokespecial #744                // Method "<init>":()V
+       311: putstatic     #138                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       314: bipush        22
+       316: anewarray     #746                // class kotlin/Pair
+       319: astore        7
+       321: aload         7
+       323: iconst_0
+       324: sipush        2797
+       327: sipush        6271
+       330: pop2
+       331: ldc_w         #608                // String ��0
+       334: sipush        2727
+       337: sipush        -8239
+       340: pop2
+       341: ldc_w         #748                // String <black>
+       344: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       347: aastore
+       348: aload         7
+       350: iconst_1
+       351: sipush        2756
+       354: sipush        5204
+       357: pop2
+       358: ldc_w         #599                // String ��1
+       361: sipush        2765
+       364: sipush        -26003
+       367: pop2
+       368: ldc_w         #750                // String <dark_blue>
+       371: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       374: aastore
+       375: aload         7
+       377: iconst_2
+       378: sipush        2804
+       381: sipush        -592
+       384: pop2
+       385: ldc_w         #591                // String ��2
+       388: sipush        2709
+       391: sipush        7301
+       394: pop2
+       395: ldc_w         #752                // String <dark_green>
+       398: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       401: aastore
+       402: aload         7
+       404: iconst_3
+       405: sipush        2772
+       408: sipush        -8864
+       411: pop2
+       412: ldc_w         #754                // String ��3
+       415: sipush        2785
+       418: sipush        -20185
+       421: pop2
+       422: ldc_w         #756                // String <dark_aqua>
+       425: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       428: aastore
+       429: aload         7
+       431: iconst_4
+       432: sipush        2741
+       435: sipush        -19117
+       438: pop2
+       439: ldc_w         #587                // String ��4
+       442: sipush        2777
+       445: sipush        -24142
+       448: pop2
+       449: ldc_w         #758                // String <dark_red>
+       452: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       455: aastore
+       456: aload         7
+       458: iconst_5
+       459: sipush        2751
+       462: sipush        -11411
+       465: pop2
+       466: ldc_w         #577                // String ��5
+       469: sipush        2705
+       472: sipush        -30461
+       475: pop2
+       476: ldc_w         #760                // String <dark_purple>
+       479: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       482: aastore
+       483: aload         7
+       485: bipush        6
+       487: sipush        2699
+       490: sipush        -17371
+       493: pop2
+       494: ldc_w         #579                // String ��6
+       497: sipush        2763
+       500: sipush        -15223
+       503: pop2
+       504: ldc_w         #762                // String <gold>
+       507: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       510: aastore
+       511: aload         7
+       513: bipush        7
+       515: sipush        2723
+       518: sipush        -7808
+       521: pop2
+       522: ldc_w         #604                // String ��7
+       525: sipush        2758
+       528: sipush        428
+       531: pop2
+       532: ldc_w         #764                // String <gray>
+       535: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       538: aastore
+       539: aload         7
+       541: bipush        8
+       543: sipush        2725
+       546: sipush        -29492
+       549: pop2
+       550: ldc_w         #606                // String ��8
+       553: sipush        2692
+       556: sipush        16091
+       559: pop2
+       560: ldc_w         #766                // String <dark_gray>
+       563: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       566: aastore
+       567: aload         7
+       569: bipush        9
+       571: sipush        2718
+       574: sipush        -12115
+       577: pop2
+       578: ldc_w         #597                // String ��9
+       581: sipush        2789
+       584: sipush        1093
+       587: pop2
+       588: ldc_w         #768                // String <blue>
+       591: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       594: aastore
+       595: aload         7
+       597: bipush        10
+       599: sipush        2799
+       602: sipush        9981
+       605: pop2
+       606: ldc_w         #589                // String ��a
+       609: sipush        2791
+       612: sipush        -12739
+       615: pop2
+       616: ldc_w         #770                // String <green>
+       619: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       622: aastore
+       623: aload         7
+       625: bipush        11
+       627: sipush        2767
+       630: sipush        -31587
+       633: pop2
+       634: ldc_w         #595                // String ��b
+       637: sipush        2746
+       640: sipush        10637
+       643: pop2
+       644: ldc_w         #772                // String <aqua>
+       647: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       650: aastore
+       651: aload         7
+       653: bipush        12
+       655: sipush        2706
+       658: sipush        15826
+       661: pop2
+       662: ldc_w         #585                // String ��c
+       665: sipush        2742
+       668: sipush        -22066
+       671: pop2
+       672: ldc_w         #774                // String <red>
+       675: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       678: aastore
+       679: aload         7
+       681: bipush        13
+       683: sipush        2779
+       686: sipush        30793
+       689: pop2
+       690: ldc_w         #575                // String ��d
+       693: sipush        2790
+       696: sipush        11077
+       699: pop2
+       700: ldc_w         #776                // String <light_purple>
+       703: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       706: aastore
+       707: aload         7
+       709: bipush        14
+       711: sipush        2771
+       714: sipush        -31360
+       717: pop2
+       718: ldc_w         #581                // String ��e
+       721: sipush        2800
+       724: sipush        24754
+       727: pop2
+       728: ldc_w         #778                // String <yellow>
+       731: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       734: aastore
+       735: aload         7
+       737: bipush        15
+       739: sipush        2761
+       742: sipush        -20559
+       745: pop2
+       746: ldc_w         #413                // String ��f
+       749: sipush        2695
+       752: sipush        -17836
+       755: pop2
+       756: ldc_w         #780                // String <white>
+       759: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       762: aastore
+       763: aload         7
+       765: bipush        16
+       767: sipush        2781
+       770: sipush        19586
+       773: pop2
+       774: ldc_w         #782                // String ��k
+       777: sipush        2719
+       780: sipush        -11232
+       783: pop2
+       784: ldc_w         #784                // String <obfuscated>
+       787: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       790: aastore
+       791: aload         7
+       793: bipush        17
+       795: sipush        2720
+       798: sipush        23445
+       801: pop2
+       802: ldc_w         #455                // String ��l
+       805: sipush        2698
+       808: sipush        -15020
+       811: pop2
+       812: ldc_w         #786                // String <bold>
+       815: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       818: aastore
+       819: aload         7
+       821: bipush        18
+       823: sipush        2747
+       826: sipush        -12833
+       829: pop2
+       830: ldc_w         #788                // String ��m
+       833: sipush        2690
+       836: sipush        248
+       839: pop2
+       840: ldc_w         #790                // String <strikethrough>
+       843: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       846: aastore
+       847: aload         7
+       849: bipush        19
+       851: sipush        2729
+       854: sipush        -14342
+       857: pop2
+       858: ldc_w         #792                // String ��n
+       861: sipush        2737
+       864: sipush        -23320
+       867: pop2
+       868: ldc_w         #794                // String <underlined>
+       871: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       874: aastore
+       875: aload         7
+       877: bipush        20
+       879: sipush        2713
+       882: iconst_m1
+       883: pop2
+       884: ldc_w         #796                // String ��o
+       887: sipush        2770
+       890: sipush        18455
+       893: pop2
+       894: ldc_w         #798                // String <italic>
+       897: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       900: aastore
+       901: aload         7
+       903: bipush        21
+       905: sipush        2696
+       908: sipush        15583
+       911: pop2
+       912: ldc_w         #800                // String ��r
+       915: sipush        2769
+       918: sipush        -23139
+       921: pop2
+       922: ldc_w         #802                // String <reset>
+       925: invokestatic  #371                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       928: aastore
+       929: aload         7
+       931: invokestatic  #805                // Method kotlin/collections/MapsKt.mapOf:([Lkotlin/Pair;)Ljava/util/Map;
+       934: putstatic     #629                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Ljava/util/Map;
+       937: new           #647                // class kotlin/text/Regex
+       940: dup
+       941: sipush        2708
+       944: sipush        -27005
+       947: pop2
+       948: ldc_w         #807                // String ��[0-9a-fk-or]
+       951: invokespecial #808                // Method kotlin/text/Regex."<init>":(Ljava/lang/String;)V
+       954: putstatic     #653                // Field lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll:Lkotlin/text/Regex;
+       957: new           #647                // class kotlin/text/Regex
+       960: dup
+       961: sipush        2784
+       964: sipush        21241
+       967: pop2
+       968: ldc_w         #810                // String ��x(��[0-9a-fA-F]){6}
+       971: invokespecial #808                // Method kotlin/text/Regex."<init>":(Ljava/lang/String;)V
+       974: putstatic     #639                // Field IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII:Lkotlin/text/Regex;
+       977: invokedynamic #815,  0            // InvokeDynamic #16:invoke:()Lkotlin/jvm/functions/Function1;
+       982: putstatic     #105                // Field llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI:Lkotlin/jvm/functions/Function1;
+       985: invokestatic  #819                // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage.builder:()Lnet/kyori/adventure/text/minimessage/MiniMessage$Builder;
+       988: getstatic     #105                // Field llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI:Lkotlin/jvm/functions/Function1;
+       991: invokedynamic #825,  0            // InvokeDynamic #17:apply:(Lkotlin/jvm/functions/Function1;)Ljava/util/function/UnaryOperator;
+       996: invokeinterface #829,  2          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage$Builder.preProcessor:(Ljava/util/function/UnaryOperator;)Lnet/kyori/adventure/text/minimessage/MiniMessage$Builder;
+      1001: invokeinterface #833,  1          // InterfaceMethod net/kyori/adventure/text/minimessage/MiniMessage$Builder.build:()Lnet/kyori/adventure/text/minimessage/MiniMessage;
+      1006: dup
+      1007: sipush        2728
+      1010: sipush        13216
+      1013: pop2
+      1014: ldc_w         #835                // String build(...)
+      1017: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      1020: putstatic     #170                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lnet/kyori/adventure/text/minimessage/MiniMessage;
+      1023: invokestatic  #839                // InterfaceMethod net/kyori/adventure/text/serializer/gson/GsonComponentSerializer.gson:()Lnet/kyori/adventure/text/serializer/gson/GsonComponentSerializer;
+      1026: dup
+      1027: sipush        2700
+      1030: sipush        -21176
+      1033: pop2
+      1034: ldc_w         #841                // String gson(...)
+      1037: invokestatic  #191                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      1040: putstatic     #283                // Field lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lnet/kyori/adventure/text/serializer/gson/GsonComponentSerializer;
+      1043: sipush        2801
+      1046: new           #843                // class com/google/gson/GsonBuilder
+      1049: dup
+      1050: invokespecial #844                // Method com/google/gson/GsonBuilder."<init>":()V
+      1053: invokevirtual #848                // Method com/google/gson/GsonBuilder.disableHtmlEscaping:()Lcom/google/gson/GsonBuilder;
+      1056: invokevirtual #851                // Method com/google/gson/GsonBuilder.create:()Lcom/google/gson/Gson;
+      1059: putstatic     #293                // Field lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl:Lcom/google/gson/Gson;
+      1062: sipush        -19848
+      1065: pop2
+      1066: ldc_w         #853                // String (?i)\\b(?:https?://|www\\.)[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|]
+      1069: iconst_2
+      1070: invokestatic  #857                // Method java/util/regex/Pattern.compile:(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+      1073: putstatic     #504                // Field lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll:Ljava/util/regex/Pattern;
+      1076: return
+
+  public static void b(boolean);
+    descriptor: (Z)V
+    Code:
+         0: iload_0
+         1: putstatic     #859                // Field IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl:Z
+         4: return
+
+  public static boolean i();
+    descriptor: ()Z
+    Code:
+         0: getstatic     #859                // Field IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl:Z
+         3: ireturn
+
+  public static boolean j();
+    descriptor: ()Z
+    Code:
+         0: invokestatic  #861                // Method i:()Z
+         3: istore_0
+         4: iload_0
+         5: ifne          14
+         8: iconst_1
+         9: ireturn
+        10: invokestatic  #80                 // Method a:(Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+        13: athrow
+        14: iconst_0
+        15: ireturn
+      Exception table:
+         from    to  target type
+             4    10    10   Class com/google/gson/JsonParseException
+
+  private static com.google.gson.JsonParseException a(com.google.gson.JsonParseException);
+    descriptor: (Lcom/google/gson/JsonParseException;)Lcom/google/gson/JsonParseException;
+    Code:
+         0: aload_0
+         1: areturn
+
+  private static java.lang.String a(int, int);
+    descriptor: (II)Ljava/lang/String;
+    Code:
+         0: iload_0
+         1: sipush        2692
+         4: ixor
+         5: ldc_w         #862                // int 65535
+         8: iand
+         9: istore_2
+        10: getstatic     #731                // Field d:[Ljava/lang/String;
+        13: iload_2
+        14: aaload
+        15: ifnonnull     2615
+        18: getstatic     #729                // Field c:[Ljava/lang/String;
+        21: iload_2
+        22: aaload
+        23: invokevirtual #735                // Method java/lang/String.toCharArray:()[C
+        26: astore_3
+        27: aload_3
+        28: iconst_0
+        29: caload
+        30: sipush        255
+        33: iand
+        34: tableswitch   { // 0 to 254
+
+                       0: 1068
+
+                       1: 1074
+
+                       2: 1078
+
+                       3: 1083
+
+                       4: 1089
+
+                       5: 1094
+
+                       6: 1100
+
+                       7: 1105
+
+                       8: 1111
+
+                       9: 1117
+
+                      10: 1123
+
+                      11: 1129
+
+                      12: 1134
+
+                      13: 1139
+
+                      14: 1145
+
+                      15: 1150
+
+                      16: 1155
+
+                      17: 1160
+
+                      18: 1166
+
+                      19: 1171
+
+                      20: 1176
+
+                      21: 1181
+
+                      22: 1187
+
+                      23: 1193
+
+                      24: 1198
+
+                      25: 1203
+
+                      26: 1208
+
+                      27: 1213
+
+                      28: 1218
+
+                      29: 1223
+
+                      30: 1228
+
+                      31: 1234
+
+                      32: 1240
+
+                      33: 1245
+
+                      34: 1250
+
+                      35: 1256
+
+                      36: 1262
+
+                      37: 1268
+
+                      38: 1273
+
+                      39: 1278
+
+                      40: 1284
+
+                      41: 1290
+
+                      42: 1296
+
+                      43: 1301
+
+                      44: 1306
+
+                      45: 1311
+
+                      46: 1317
+
+                      47: 1323
+
+                      48: 1328
+
+                      49: 1334
+
+                      50: 1340
+
+                      51: 1345
+
+                      52: 1350
+
+                      53: 1355
+
+                      54: 1361
+
+                      55: 1367
+
+                      56: 1373
+
+                      57: 1378
+
+                      58: 1384
+
+                      59: 1389
+
+                      60: 1395
+
+                      61: 1400
+
+                      62: 1405
+
+                      63: 1410
+
+                      64: 1415
+
+                      65: 1421
+
+                      66: 1427
+
+                      67: 1432
+
+                      68: 1438
+
+                      69: 1443
+
+                      70: 1448
+
+                      71: 1454
+
+                      72: 1459
+
+                      73: 1465
+
+                      74: 1470
+
+                      75: 1475
+
+                      76: 1481
+
+                      77: 1487
+
+                      78: 1493
+
+                      79: 1498
+
+                      80: 1503
+
+                      81: 1509
+
+                      82: 1514
+
+                      83: 1520
+
+                      84: 1525
+
+                      85: 1530
+
+                      86: 1535
+
+                      87: 1540
+
+                      88: 1546
+
+                      89: 1552
+
+                      90: 1558
+
+                      91: 1563
+
+                      92: 1568
+
+                      93: 1574
+
+                      94: 1579
+
+                      95: 1584
+
+                      96: 1590
+
+                      97: 1596
+
+                      98: 1602
+
+                      99: 1607
+
+                     100: 1613
+
+                     101: 1618
+
+                     102: 1624
+
+                     103: 1629
+
+                     104: 1635
+
+                     105: 1641
+
+                     106: 1647
+
+                     107: 1653
+
+                     108: 1658
+
+                     109: 1664
+
+                     110: 1670
+
+                     111: 1675
+
+                     112: 1680
+
+                     113: 1686
+
+                     114: 1691
+
+                     115: 1697
+
+                     116: 1702
+
+                     117: 1707
+
+                     118: 1713
+
+                     119: 1719
+
+                     120: 1724
+
+                     121: 1730
+
+                     122: 1734
+
+                     123: 1740
+
+                     124: 1746
+
+                     125: 1752
+
+                     126: 1758
+
+                     127: 1763
+
+                     128: 1768
+
+                     129: 1774
+
+                     130: 1780
+
+                     131: 1785
+
+                     132: 1791
+
+                     133: 1797
+
+                     134: 1802
+
+                     135: 1808
+
+                     136: 1813
+
+                     137: 1818
+
+                     138: 1823
+
+                     139: 1829
+
+                     140: 1835
+
+                     141: 1840
+
+                     142: 1846
+
+                     143: 1851
+
+                     144: 1856
+
+                     145: 1861
+
+                     146: 1867
+
+                     147: 1872
+
+                     148: 1877
+
+                     149: 1882
+
+                     150: 1888
+
+                     151: 1894
+
+                     152: 1899
+
+                     153: 1905
+
+                     154: 1910
+
+                     155: 1915
+
+                     156: 1920
+
+                     157: 1925
+
+                     158: 1931
+
+                     159: 1935
+
+                     160: 1941
+
+                     161: 1947
+
+                     162: 1952
+
+                     163: 1957
+
+                     164: 1963
+
+                     165: 1968
+
+                     166: 1973
+
+                     167: 1977
+
+                     168: 1982
+
+                     169: 1987
+
+                     170: 1992
+
+                     171: 1998
+
+                     172: 2003
+
+                     173: 2009
+
+                     174: 2015
+
+                     175: 2020
+
+                     176: 2026
+
+                     177: 2032
+
+                     178: 2038
+
+                     179: 2043
+
+                     180: 2049
+
+                     181: 2055
+
+                     182: 2060
+
+                     183: 2065
+
+                     184: 2070
+
+                     185: 2075
+
+                     186: 2081
+
+                     187: 2087
+
+                     188: 2093
+
+                     189: 2099
+
+                     190: 2104
+
+                     191: 2110
+
+                     192: 2116
+
+                     193: 2121
+
+                     194: 2127
+
+                     195: 2133
+
+                     196: 2139
+
+                     197: 2145
+
+                     198: 2151
+
+                     199: 2157
+
+                     200: 2163
+
+                     201: 2169
+
+                     202: 2174
+
+                     203: 2179
+
+                     204: 2184
+
+                     205: 2190
+
+                     206: 2196
+
+                     207: 2202
+
+                     208: 2207
+
+                     209: 2212
+
+                     210: 2218
+
+                     211: 2224
+
+                     212: 2229
+
+                     213: 2235
+
+                     214: 2241
+
+                     215: 2246
+
+                     216: 2252
+
+                     217: 2257
+
+                     218: 2262
+
+                     219: 2268
+
+                     220: 2273
+
+                     221: 2279
+
+                     222: 2285
+
+                     223: 2290
+
+                     224: 2295
+
+                     225: 2301
+
+                     226: 2307
+
+                     227: 2312
+
+                     228: 2318
+
+                     229: 2322
+
+                     230: 2327
+
+                     231: 2332
+
+                     232: 2338
+
+                     233: 2343
+
+                     234: 2349
+
+                     235: 2355
+
+                     236: 2361
+
+                     237: 2367
+
+                     238: 2373
+
+                     239: 2378
+
+                     240: 2383
+
+                     241: 2389
+
+                     242: 2394
+
+                     243: 2399
+
+                     244: 2405
+
+                     245: 2411
+
+                     246: 2416
+
+                     247: 2420
+
+                     248: 2426
+
+                     249: 2431
+
+                     250: 2437
+
+                     251: 2442
+
+                     252: 2448
+
+                     253: 2453
+
+                     254: 2459
+                 default: 2464
+            }
+      1068: sipush        225
+      1071: goto          2467
+      1074: iconst_2
+      1075: goto          2467
+      1078: bipush        15
+      1080: goto          2467
+      1083: sipush        138
+      1086: goto          2467
+      1089: bipush        118
+      1091: goto          2467
+      1094: sipush        226
+      1097: goto          2467
+      1100: bipush        8
+      1102: goto          2467
+      1105: sipush        129
+      1108: goto          2467
+      1111: sipush        176
+      1114: goto          2467
+      1117: sipush        181
+      1120: goto          2467
+      1123: sipush        244
+      1126: goto          2467
+      1129: bipush        117
+      1131: goto          2467
+      1134: bipush        94
+      1136: goto          2467
+      1139: sipush        188
+      1142: goto          2467
+      1145: bipush        26
+      1147: goto          2467
+      1150: bipush        58
+      1152: goto          2467
+      1155: bipush        61
+      1157: goto          2467
+      1160: sipush        140
+      1163: goto          2467
+      1166: bipush        63
+      1168: goto          2467
+      1171: bipush        113
+      1173: goto          2467
+      1176: bipush        9
+      1178: goto          2467
+      1181: sipush        208
+      1184: goto          2467
+      1187: sipush        207
+      1190: goto          2467
+      1193: bipush        32
+      1195: goto          2467
+      1198: bipush        33
+      1200: goto          2467
+      1203: bipush        12
+      1205: goto          2467
+      1208: bipush        41
+      1210: goto          2467
+      1213: bipush        84
+      1215: goto          2467
+      1218: bipush        56
+      1220: goto          2467
+      1223: bipush        124
+      1225: goto          2467
+      1228: sipush        142
+      1231: goto          2467
+      1234: sipush        199
+      1237: goto          2467
+      1240: bipush        31
+      1242: goto          2467
+      1245: bipush        111
+      1247: goto          2467
+      1250: sipush        236
+      1253: goto          2467
+      1256: sipush        212
+      1259: goto          2467
+      1262: sipush        230
+      1265: goto          2467
+      1268: bipush        19
+      1270: goto          2467
+      1273: bipush        70
+      1275: goto          2467
+      1278: sipush        211
+      1281: goto          2467
+      1284: sipush        209
+      1287: goto          2467
+      1290: sipush        197
+      1293: goto          2467
+      1296: bipush        53
+      1298: goto          2467
+      1301: bipush        18
+      1303: goto          2467
+      1306: bipush        112
+      1308: goto          2467
+      1311: sipush        239
+      1314: goto          2467
+      1317: sipush        218
+      1320: goto          2467
+      1323: bipush        39
+      1325: goto          2467
+      1328: sipush        224
+      1331: goto          2467
+      1334: sipush        215
+      1337: goto          2467
+      1340: bipush        95
+      1342: goto          2467
+      1345: bipush        13
+      1347: goto          2467
+      1350: bipush        22
+      1352: goto          2467
+      1355: sipush        237
+      1358: goto          2467
+      1361: sipush        220
+      1364: goto          2467
+      1367: sipush        245
+      1370: goto          2467
+      1373: bipush        78
+      1375: goto          2467
+      1378: sipush        200
+      1381: goto          2467
+      1384: bipush        47
+      1386: goto          2467
+      1389: sipush        191
+      1392: goto          2467
+      1395: bipush        88
+      1397: goto          2467
+      1400: bipush        54
+      1402: goto          2467
+      1405: bipush        80
+      1407: goto          2467
+      1410: bipush        14
+      1412: goto          2467
+      1415: sipush        222
+      1418: goto          2467
+      1421: sipush        203
+      1424: goto          2467
+      1427: bipush        75
+      1429: goto          2467
+      1432: sipush        159
+      1435: goto          2467
+      1438: bipush        37
+      1440: goto          2467
+      1443: bipush        20
+      1445: goto          2467
+      1448: sipush        217
+      1451: goto          2467
+      1454: bipush        119
+      1456: goto          2467
+      1459: sipush        195
+      1462: goto          2467
+      1465: bipush        48
+      1467: goto          2467
+      1470: bipush        85
+      1472: goto          2467
+      1475: sipush        130
+      1478: goto          2467
+      1481: sipush        193
+      1484: goto          2467
+      1487: sipush        160
+      1490: goto          2467
+      1493: bipush        114
+      1495: goto          2467
+      1498: bipush        109
+      1500: goto          2467
+      1503: sipush        171
+      1506: goto          2467
+      1509: bipush        29
+      1511: goto          2467
+      1514: sipush        184
+      1517: goto          2467
+      1520: bipush        102
+      1522: goto          2467
+      1525: bipush        28
+      1527: goto          2467
+      1530: bipush        98
+      1532: goto          2467
+      1535: bipush        104
+      1537: goto          2467
+      1540: sipush        229
+      1543: goto          2467
+      1546: sipush        148
+      1549: goto          2467
+      1552: sipush        141
+      1555: goto          2467
+      1558: bipush        64
+      1560: goto          2467
+      1563: bipush        96
+      1565: goto          2467
+      1568: sipush        221
+      1571: goto          2467
+      1574: bipush        87
+      1576: goto          2467
+      1579: bipush        99
+      1581: goto          2467
+      1584: sipush        234
+      1587: goto          2467
+      1590: sipush        251
+      1593: goto          2467
+      1596: sipush        247
+      1599: goto          2467
+      1602: bipush        76
+      1604: goto          2467
+      1607: sipush        240
+      1610: goto          2467
+      1613: bipush        90
+      1615: goto          2467
+      1618: sipush        235
+      1621: goto          2467
+      1624: bipush        52
+      1626: goto          2467
+      1629: sipush        202
+      1632: goto          2467
+      1635: sipush        186
+      1638: goto          2467
+      1641: sipush        165
+      1644: goto          2467
+      1647: sipush        131
+      1650: goto          2467
+      1653: bipush        34
+      1655: goto          2467
+      1658: sipush        183
+      1661: goto          2467
+      1664: sipush        167
+      1667: goto          2467
+      1670: bipush        23
+      1672: goto          2467
+      1675: bipush        50
+      1677: goto          2467
+      1680: sipush        169
+      1683: goto          2467
+      1686: bipush        40
+      1688: goto          2467
+      1691: sipush        146
+      1694: goto          2467
+      1697: bipush        92
+      1699: goto          2467
+      1702: bipush        79
+      1704: goto          2467
+      1707: sipush        173
+      1710: goto          2467
+      1713: sipush        145
+      1716: goto          2467
+      1719: bipush        125
+      1721: goto          2467
+      1724: sipush        213
+      1727: goto          2467
+      1730: iconst_0
+      1731: goto          2467
+      1734: sipush        189
+      1737: goto          2467
+      1740: sipush        242
+      1743: goto          2467
+      1746: sipush        214
+      1749: goto          2467
+      1752: sipush        147
+      1755: goto          2467
+      1758: bipush        120
+      1760: goto          2467
+      1763: bipush        46
+      1765: goto          2467
+      1768: sipush        246
+      1771: goto          2467
+      1774: sipush        223
+      1777: goto          2467
+      1780: bipush        127
+      1782: goto          2467
+      1785: sipush        185
+      1788: goto          2467
+      1791: sipush        175
+      1794: goto          2467
+      1797: bipush        81
+      1799: goto          2467
+      1802: sipush        172
+      1805: goto          2467
+      1808: bipush        103
+      1810: goto          2467
+      1813: bipush        74
+      1815: goto          2467
+      1818: bipush        11
+      1820: goto          2467
+      1823: sipush        162
+      1826: goto          2467
+      1829: sipush        253
+      1832: goto          2467
+      1835: bipush        72
+      1837: goto          2467
+      1840: sipush        238
+      1843: goto          2467
+      1846: bipush        122
+      1848: goto          2467
+      1851: bipush        35
+      1853: goto          2467
+      1856: bipush        60
+      1858: goto          2467
+      1861: sipush        153
+      1864: goto          2467
+      1867: bipush        66
+      1869: goto          2467
+      1872: bipush        42
+      1874: goto          2467
+      1877: bipush        106
+      1879: goto          2467
+      1882: sipush        135
+      1885: goto          2467
+      1888: sipush        179
+      1891: goto          2467
+      1894: bipush        55
+      1896: goto          2467
+      1899: sipush        143
+      1902: goto          2467
+      1905: bipush        27
+      1907: goto          2467
+      1910: bipush        45
+      1912: goto          2467
+      1915: bipush        121
+      1917: goto          2467
+      1920: bipush        6
+      1922: goto          2467
+      1925: sipush        163
+      1928: goto          2467
+      1931: iconst_1
+      1932: goto          2467
+      1935: sipush        252
+      1938: goto          2467
+      1941: sipush        201
+      1944: goto          2467
+      1947: bipush        67
+      1949: goto          2467
+      1952: bipush        126
+      1954: goto          2467
+      1957: sipush        227
+      1960: goto          2467
+      1963: bipush        107
+      1965: goto          2467
+      1968: bipush        71
+      1970: goto          2467
+      1973: iconst_5
+      1974: goto          2467
+      1977: bipush        115
+      1979: goto          2467
+      1982: bipush        82
+      1984: goto          2467
+      1987: bipush        97
+      1989: goto          2467
+      1992: sipush        194
+      1995: goto          2467
+      1998: bipush        108
+      2000: goto          2467
+      2003: sipush        136
+      2006: goto          2467
+      2009: sipush        134
+      2012: goto          2467
+      2015: bipush        36
+      2017: goto          2467
+      2020: sipush        216
+      2023: goto          2467
+      2026: sipush        210
+      2029: goto          2467
+      2032: sipush        196
+      2035: goto          2467
+      2038: bipush        116
+      2040: goto          2467
+      2043: sipush        248
+      2046: goto          2467
+      2049: sipush        133
+      2052: goto          2467
+      2055: bipush        21
+      2057: goto          2467
+      2060: bipush        30
+      2062: goto          2467
+      2065: bipush        68
+      2067: goto          2467
+      2070: bipush        101
+      2072: goto          2467
+      2075: sipush        255
+      2078: goto          2467
+      2081: sipush        137
+      2084: goto          2467
+      2087: sipush        219
+      2090: goto          2467
+      2093: sipush        149
+      2096: goto          2467
+      2099: bipush        49
+      2101: goto          2467
+      2104: sipush        228
+      2107: goto          2467
+      2110: sipush        190
+      2113: goto          2467
+      2116: bipush        51
+      2118: goto          2467
+      2121: sipush        151
+      2124: goto          2467
+      2127: sipush        158
+      2130: goto          2467
+      2133: sipush        154
+      2136: goto          2467
+      2139: sipush        170
+      2142: goto          2467
+      2145: sipush        177
+      2148: goto          2467
+      2151: sipush        187
+      2154: goto          2467
+      2157: sipush        156
+      2160: goto          2467
+      2163: sipush        161
+      2166: goto          2467
+      2169: bipush        65
+      2171: goto          2467
+      2174: bipush        44
+      2176: goto          2467
+      2179: bipush        25
+      2181: goto          2467
+      2184: sipush        155
+      2187: goto          2467
+      2190: sipush        139
+      2193: goto          2467
+      2196: sipush        144
+      2199: goto          2467
+      2202: bipush        73
+      2204: goto          2467
+      2207: bipush        59
+      2209: goto          2467
+      2212: sipush        231
+      2215: goto          2467
+      2218: sipush        232
+      2221: goto          2467
+      2224: bipush        38
+      2226: goto          2467
+      2229: sipush        192
+      2232: goto          2467
+      2235: sipush        233
+      2238: goto          2467
+      2241: bipush        110
+      2243: goto          2467
+      2246: sipush        166
+      2249: goto          2467
+      2252: bipush        62
+      2254: goto          2467
+      2257: bipush        86
+      2259: goto          2467
+      2262: sipush        182
+      2265: goto          2467
+      2268: bipush        89
+      2270: goto          2467
+      2273: sipush        204
+      2276: goto          2467
+      2279: sipush        168
+      2282: goto          2467
+      2285: bipush        100
+      2287: goto          2467
+      2290: bipush        7
+      2292: goto          2467
+      2295: sipush        164
+      2298: goto          2467
+      2301: sipush        243
+      2304: goto          2467
+      2307: bipush        43
+      2309: goto          2467
+      2312: sipush        254
+      2315: goto          2467
+      2318: iconst_3
+      2319: goto          2467
+      2322: bipush        10
+      2324: goto          2467
+      2327: bipush        17
+      2329: goto          2467
+      2332: sipush        174
+      2335: goto          2467
+      2338: bipush        83
+      2340: goto          2467
+      2343: sipush        180
+      2346: goto          2467
+      2349: sipush        178
+      2352: goto          2467
+      2355: sipush        250
+      2358: goto          2467
+      2361: sipush        198
+      2364: goto          2467
+      2367: sipush        157
+      2370: goto          2467
+      2373: bipush        93
+      2375: goto          2467
+      2378: bipush        77
+      2380: goto          2467
+      2383: sipush        241
+      2386: goto          2467
+      2389: bipush        91
+      2391: goto          2467
+      2394: bipush        105
+      2396: goto          2467
+      2399: sipush        132
+      2402: goto          2467
+      2405: sipush        249
+      2408: goto          2467
+      2411: bipush        69
+      2413: goto          2467
+      2416: iconst_4
+      2417: goto          2467
+      2420: sipush        152
+      2423: goto          2467
+      2426: bipush        24
+      2428: goto          2467
+      2431: sipush        150
+      2434: goto          2467
+      2437: bipush        16
+      2439: goto          2467
+      2442: sipush        128
+      2445: goto          2467
+      2448: bipush        57
+      2450: goto          2467
+      2453: sipush        205
+      2456: goto          2467
+      2459: bipush        123
+      2461: goto          2467
+      2464: sipush        206
+      2467: istore        4
+      2469: iload_1
+      2470: sipush        255
+      2473: iand
+      2474: iload         4
+      2476: isub
+      2477: istore        5
+      2479: iload         5
+      2481: ifge          2490
+      2484: iinc_w        5, 256
+      2490: iload_1
+      2491: ldc_w         #862                // int 65535
+      2494: iand
+      2495: bipush        8
+      2497: iushr
+      2498: iload         4
+      2500: isub
+      2501: istore        6
+      2503: iload         6
+      2505: ifge          2514
+      2508: iinc_w        6, 256
+      2514: iconst_0
+      2515: istore        7
+      2517: goto          2592
+      2520: iload         7
+      2522: iconst_2
+      2523: irem
+      2524: istore        8
+      2526: aload_3
+      2527: iload         7
+      2529: dup2
+      2530: caload
+      2531: iload         8
+      2533: ifne          2564
+      2536: iload         5
+      2538: ixor
+      2539: i2c
+      2540: castore
+      2541: iload         5
+      2543: iconst_3
+      2544: iushr
+      2545: iload         5
+      2547: iconst_5
+      2548: ishl
+      2549: ior
+      2550: aload_3
+      2551: iload         7
+      2553: caload
+      2554: ixor
+      2555: sipush        255
+      2558: iand
+      2559: istore        5
+      2561: goto          2589
+      2564: iload         6
+      2566: ixor
+      2567: i2c
+      2568: castore
+      2569: iload         6
+      2571: iconst_3
+      2572: iushr
+      2573: iload         6
+      2575: iconst_5
+      2576: ishl
+      2577: ior
+      2578: aload_3
+      2579: iload         7
+      2581: caload
+      2582: ixor
+      2583: sipush        255
+      2586: iand
+      2587: istore        6
+      2589: iinc          7, 1
+      2592: iload         7
+      2594: aload_3
+      2595: arraylength
+      2596: if_icmplt     2520
+      2599: getstatic     #731                // Field d:[Ljava/lang/String;
+      2602: iload_2
+      2603: new           #233                // class java/lang/String
+      2606: dup
+      2607: aload_3
+      2608: invokespecial #740                // Method java/lang/String."<init>":([C)V
+      2611: invokevirtual #743                // Method java/lang/String.intern:()Ljava/lang/String;
+      2614: aastore
+      2615: getstatic     #731                // Field d:[Ljava/lang/String;
+      2618: iload_2
+      2619: aaload
+      2620: areturn
+
+  public static final void a(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)V
+    Code:
+         0: aload_0
+         1: invokestatic  #866                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+         4: astore_1
+         5: aload_1
+         6: ldc_w         #868                // String /
+         9: invokevirtual #872                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        12: ifeq          32
+        15: aload_1
+        16: invokevirtual #440                // Method java/lang/String.length:()I
+        19: iconst_1
+        20: if_icmple     32
+        23: aload_1
+        24: iconst_1
+        25: invokevirtual #425                // Method java/lang/String.substring:(I)Ljava/lang/String;
+        28: invokestatic  #874                // Method b:(Ljava/lang/String;)V
+        31: return
+        32: aload_0
+        33: invokestatic  #876                // Method polinex$sendChatRaw:(Ljava/lang/Object;)V
+        36: return
+}

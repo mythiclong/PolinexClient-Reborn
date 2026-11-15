@@ -1,0 +1,312 @@
+// PX-FIX PhaseA: jar-only nested type restored as SIGNATURE-ONLY STUB (round 12).
+// jar class: me.octo.client.lIIIIIlIIIIllllllllIIIlIIlIIIIIIlIlIlIlllIlllIlllIllIIIIIlllllIIIIlIIlIlIlIlIllIIIIlI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+package me.octo.client;
+
+public final class lIIIIIlIIIIllllllllIIIlIIlIIIIIIlIlIlIlllIlllIlllIllIIIIIlllllIIIIlIIlIlIlIlIllIIIIlI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI extends me.octo.client.IllIIlllIlIIllIIIlIIIIIIlIIIIIIlIlIlIIlIIlIllIllllIIlIllllllIIlIllIlIlIIIIIllIllIIlIl {
+    private static java.lang.String[] f;
+    private static java.lang.String[] g;
+     lIIIIIlIIIIllllllllIIIlIIlIIIIIIlIlIlIlllIlllIlllIllIIIIIlllllIIIIlIIlIlIlIlIllIIIIlI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI() {
+        super("Use crypt scroll", 0);
+    }
+   public boolean b() {
+      return kotlin.jvm.internal.Intrinsics.areEqual(
+         lIIIIIlIIIIllllllllIIIlIIlIIIIIIlIlIlIlllIlllIlllIllIIIIIlllllIIIIlIIlIlIlIlIllIIIIlI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl
+            .a()
+            .y(),
+         "Revenant Horror"
+      );
+   }
+    private static String c(int n, int n2) {
+        int n3 = (n ^ 0xFFFFDC48) & 0xFFFF;
+        if (g[n3] == null) {
+            int n4;
+            char[] cArray = f[n3].toCharArray();
+            int n5 = switch (cArray[0] & 0xFF) {
+                case 0 -> 81;
+                case 1 -> 132;
+                case 2 -> 247;
+                case 3 -> 134;
+                case 4 -> 10;
+                case 5 -> 248;
+                case 6 -> 50;
+                case 7 -> 175;
+                case 8 -> 129;
+                case 9 -> 118;
+                case 10 -> 113;
+                case 11 -> 123;
+                case 12 -> 181;
+                case 13 -> 178;
+                case 14 -> 234;
+                case 15 -> 16;
+                case 16 -> 7;
+                case 17 -> 252;
+                case 18 -> 158;
+                case 19 -> 89;
+                case 20 -> 240;
+                case 21 -> 57;
+                case 22 -> 183;
+                case 23 -> 115;
+                case 24 -> 199;
+                case 25 -> 204;
+                case 26 -> 107;
+                case 27 -> 100;
+                case 28 -> 70;
+                case 29 -> 102;
+                case 30 -> 1;
+                case 31 -> 83;
+                case 32 -> 77;
+                case 33 -> 245;
+                case 34 -> 246;
+                case 35 -> 217;
+                case 36 -> 101;
+                case 37 -> 59;
+                case 38 -> 90;
+                case 39 -> 97;
+                case 40 -> 214;
+                case 41 -> 92;
+                case 42 -> 87;
+                case 43 -> 94;
+                case 44 -> 54;
+                case 45 -> 49;
+                case 46 -> 160;
+                case 47 -> 232;
+                case 48 -> 38;
+                case 49 -> 190;
+                case 50 -> 125;
+                case 51 -> 98;
+                case 52 -> 187;
+                case 53 -> 157;
+                case 54 -> 46;
+                case 55 -> 93;
+                case 56 -> 17;
+                case 57 -> 13;
+                case 58 -> 200;
+                case 59 -> 71;
+                case 60 -> 6;
+                case 61 -> 9;
+                case 62 -> 165;
+                case 63 -> 85;
+                case 64 -> 130;
+                case 65 -> 5;
+                case 66 -> 184;
+                case 67 -> 237;
+                case 68 -> 11;
+                case 69 -> 122;
+                case 70 -> 25;
+                case 71 -> 159;
+                case 72 -> 143;
+                case 73 -> 105;
+                case 74 -> 121;
+                case 75 -> 96;
+                case 76 -> 3;
+                case 77 -> 108;
+                case 78 -> 213;
+                case 79 -> 219;
+                case 80 -> 174;
+                case 81 -> 238;
+                case 82 -> 195;
+                case 83 -> 255;
+                case 84 -> 156;
+                case 85 -> 14;
+                case 86 -> 228;
+                case 87 -> 133;
+                case 88 -> 167;
+                case 89 -> 12;
+                case 90 -> 51;
+                case 91 -> 136;
+                case 92 -> 74;
+                case 93 -> 148;
+                case 94 -> 202;
+                case 95 -> 127;
+                case 96 -> 163;
+                case 97 -> 191;
+                case 98 -> 91;
+                case 99 -> 224;
+                case 100 -> 251;
+                case 101 -> 103;
+                case 102 -> 24;
+                case 103 -> 242;
+                case 104 -> 52;
+                case 105 -> 78;
+                case 106 -> 116;
+                case 107 -> 31;
+                case 108 -> 111;
+                case 109 -> 42;
+                case 110 -> 220;
+                case 111 -> 145;
+                case 112 -> 198;
+                case 113 -> 2;
+                case 114 -> 66;
+                case 115 -> 110;
+                case 116 -> 41;
+                case 117 -> 23;
+                case 118 -> 186;
+                case 119 -> 192;
+                case 120 -> 65;
+                case 121 -> 229;
+                case 122 -> 171;
+                case 123 -> 221;
+                case 124 -> 147;
+                case 125 -> 26;
+                case 126 -> 30;
+                case 127 -> 168;
+                case 128 -> 207;
+                case 129 -> 29;
+                case 130 -> 226;
+                case 131 -> 154;
+                case 132 -> 227;
+                case 133 -> 182;
+                case 134 -> 209;
+                case 135 -> 141;
+                case 136 -> 218;
+                case 137 -> 177;
+                case 138 -> 76;
+                case 139 -> 241;
+                case 140 -> 40;
+                case 141 -> 149;
+                case 142 -> 243;
+                case 143 -> 135;
+                case 144 -> 205;
+                case 145 -> 131;
+                case 146 -> 211;
+                case 147 -> 4;
+                case 148 -> 153;
+                case 149 -> 172;
+                case 150 -> 250;
+                case 151 -> 32;
+                case 152 -> 27;
+                case 153 -> 188;
+                case 154 -> 19;
+                case 155 -> 150;
+                case 156 -> 164;
+                case 157 -> 196;
+                case 158 -> 55;
+                case 159 -> 161;
+                case 160 -> 169;
+                case 161 -> 39;
+                case 162 -> 128;
+                case 163 -> 139;
+                case 164 -> 223;
+                case 165 -> 208;
+                case 166 -> 45;
+                case 167 -> 63;
+                case 168 -> 239;
+                case 169 -> 144;
+                case 170 -> 225;
+                case 171 -> 179;
+                case 172 -> 69;
+                case 173 -> 244;
+                case 174 -> 137;
+                case 175 -> 231;
+                case 176 -> 185;
+                case 177 -> 95;
+                case 178 -> 48;
+                case 179 -> 33;
+                case 180 -> 140;
+                case 181 -> 88;
+                case 182 -> 28;
+                case 183 -> 47;
+                case 184 -> 215;
+                case 185 -> 82;
+                case 186 -> 189;
+                case 187 -> 35;
+                case 188 -> 112;
+                case 189 -> 120;
+                case 190 -> 72;
+                case 191 -> 152;
+                case 192 -> 138;
+                case 193 -> 21;
+                case 194 -> 60;
+                case 195 -> 99;
+                case 196 -> 58;
+                case 197 -> 20;
+                case 198 -> 79;
+                case 199 -> 254;
+                case 200 -> 233;
+                case 201 -> 180;
+                case 202 -> 117;
+                case 203 -> 8;
+                case 204 -> 80;
+                case 205 -> 176;
+                case 206 -> 236;
+                case 207 -> 22;
+                case 208 -> 210;
+                case 209 -> 56;
+                case 210 -> 44;
+                case 211 -> 222;
+                case 212 -> 75;
+                case 213 -> 114;
+                case 214 -> 68;
+                case 215 -> 146;
+                case 216 -> 62;
+                case 217 -> 119;
+                case 218 -> 230;
+                case 219 -> 235;
+                case 220 -> 67;
+                case 221 -> 53;
+                case 222 -> 193;
+                case 223 -> 166;
+                case 224 -> 155;
+                case 225 -> 162;
+                case 226 -> 151;
+                case 227 -> 86;
+                case 228 -> 43;
+                case 229 -> 109;
+                case 230 -> 73;
+                case 231 -> 15;
+                case 232 -> 104;
+                case 233 -> 203;
+                case 234 -> 253;
+                case 235 -> 84;
+                case 236 -> 0;
+                case 237 -> 106;
+                case 238 -> 18;
+                case 239 -> 142;
+                case 240 -> 64;
+                case 241 -> 173;
+                case 242 -> 212;
+                case 243 -> 37;
+                case 244 -> 197;
+                case 245 -> 170;
+                case 246 -> 34;
+                case 247 -> 249;
+                case 248 -> 216;
+                case 249 -> 206;
+                case 250 -> 124;
+                case 251 -> 36;
+                case 252 -> 201;
+                case 253 -> 126;
+                case 254 -> 61;
+                default -> 194;
+            };
+            int n6 = (n2 & 0xFF) - n5;
+            if (n6 < 0) {
+                n6 += 256;
+            }
+            if ((n4 = ((n2 & 0xFFFF) >>> 8) - n5) < 0) {
+                n4 += 256;
+            }
+            int n7 = 0;
+            while (n7 < cArray.length) {
+                int n8 = n7 % 2;
+                int n9 = n7;
+                char[] cArray2 = cArray;
+                char c = cArray[n9];
+                if (n8 == 0) {
+                    cArray2[n9] = (char)(c ^ n6);
+                    n6 = ((n6 >>> 3 | n6 << 5) ^ cArray[n7]) & 0xFF;
+                } else {
+                    cArray2[n9] = (char)(c ^ n4);
+                    n4 = ((n4 >>> 3 | n4 << 5) ^ cArray[n7]) & 0xFF;
+                }
+                ++n7;
+            }
+            g[n3] = new String(cArray).intern();
+        }
+        return g[n3];
+    }
+    static {
+        f = new java.lang.String[0];
+        g = new java.lang.String[0];
+    }
+}

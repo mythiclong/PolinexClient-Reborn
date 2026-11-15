@@ -1,0 +1,56 @@
+{
+  "experiment_id": "R1863",
+  "slice_id": "GLACITE-COMMISSION-ACV-BYTECODE-BASELINE",
+  "status": "READ_ONLY_BASELINE",
+  "repository_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+  "source": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "source_sha256": "D3AF13EC054490F78B24AC118B8EF7363BA88F1C9FC0A0D6DC7BA50171A9E98C",
+  "original_owner_class_sha256": "38CA55B2830FBD0E860ED91F52476BEDC336A6DFB8362C9DFEA95AB05139F99E",
+  "methods": {
+    "aC": {
+      "original": {
+        "path": "original-aC.javap.txt",
+        "sha256": "6A6BC3457FD4A79179A05A9011729F5B4EC77643C0586878E3E2C9749BF7BBE8",
+        "instruction_count": 772,
+        "exception_table": true
+      },
+      "compiled": {
+        "path": "compiled-aC.javap.txt",
+        "sha256": "290F5DE2843F176B8AE55207942BED712FD554303069C0F613D59AF40272149F",
+        "instruction_count": 1,
+        "exception_table": false
+      }
+    },
+    "bs": {
+      "original": {
+        "path": "original-bs.javap.txt",
+        "sha256": "AB06D7344BF16C5FA7D5F0FDC504BAE87151F1300F35F91405A8C04594BF9922",
+        "instruction_count": 866,
+        "exception_table": true
+      },
+      "compiled": {
+        "path": "compiled-bs.javap.txt",
+        "sha256": "8855498665228D4372A57D70CF3E877BA3A202A617FF5686E4962E2097E20BE9",
+        "instruction_count": 1,
+        "exception_table": false
+      }
+    },
+    "M": {
+      "original": {
+        "path": "original-M.javap.txt",
+        "sha256": "5EF96491E91A164D300B4A1FC433E5DD4FA06339EC8C1A21177AEF34425AE467",
+        "instruction_count": 243,
+        "exception_table": true
+      },
+      "compiled": {
+        "path": "compiled-M.javap.txt",
+        "sha256": "C437A44DBD718B3320CD3CFF42805B7EE9A42A01FB4ED16AC5201D730C4BFE92",
+        "instruction_count": 1,
+        "exception_table": false
+      }
+    }
+  },
+  "full_original_javap_sha256": "4A14D8CE24303D0E4E49B41DC399D609CC32996366F4CDA12F04FB3BE6F2DAFE",
+  "full_compiled_javap_sha256": "5B3128CB2369637C82132C153DAD5FAE1F0DB0E8AB8DC4E1D5FC12C3C7938D5E"
+}

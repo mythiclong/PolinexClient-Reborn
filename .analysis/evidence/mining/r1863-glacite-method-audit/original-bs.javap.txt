@@ -1,0 +1,1259 @@
+  private final void bs();
+    descriptor: ()V
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Code:
+      stack=7, locals=25, args_size=1
+         0: invokestatic  #224                // Method me/octo/client/llIIllIlIIIIllIIlIIIlIllIllIllIIIllllIIlIIlIlIllIIllIIlIlIIIllllllllIIIIllIIlIIlIlIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.d:()I
+         3: istore_1
+         4: getstatic     #599                // Field me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl:Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+         7: invokevirtual #602                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Lme/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll;
+        10: iload_1
+        11: ifne          40
+        14: invokevirtual #606                // Method me/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.d:()Z
+        17: ifne          43
+        20: goto          27
+        23: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        26: athrow
+        27: getstatic     #599                // Field me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl:Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        30: invokevirtual #602                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Lme/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll;
+        33: goto          40
+        36: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        39: athrow
+        40: invokevirtual #883                // Method me/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.k:()V
+        43: aload_0
+        44: invokevirtual #423                // Method ap:()Lnet/minecraft/client/Minecraft;
+        47: getfield      #887                // Field net/minecraft/client/Minecraft.level:Lnet/minecraft/client/multiplayer/ClientLevel;
+        50: dup
+        51: ifnonnull     60
+        54: pop
+        55: return
+        56: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        59: athrow
+        60: astore_2
+        61: iload_1
+        62: ifne          108
+        65: aload_0
+        66: invokevirtual #423                // Method ap:()Lnet/minecraft/client/Minecraft;
+        69: getfield      #429                // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        72: dup
+        73: ifnull        100
+        76: goto          83
+        79: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        82: athrow
+        83: checkcast     #611                // class net/minecraft/world/entity/Entity
+        86: invokestatic  #616                // Method me/octo/client/utils/player/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a:(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
+        89: dup
+        90: ifnonnull     109
+        93: goto          100
+        96: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        99: athrow
+       100: pop
+       101: goto          108
+       104: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       107: athrow
+       108: return
+       109: astore_3
+       110: iload_1
+       111: ifne          137
+       114: aload_0
+       115: getfield      #289                // Field lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl:Lme/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII;
+       118: dup
+       119: ifnonnull     138
+       122: goto          129
+       125: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       128: athrow
+       129: pop
+       130: goto          137
+       133: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       136: athrow
+       137: return
+       138: astore        4
+       140: aload         4
+       142: invokevirtual #890                // Method me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII.c:()Ljava/util/List;
+       145: checkcast     #738                // class java/lang/Iterable
+       148: astore        6
+       150: nop
+       151: iconst_0
+       152: istore        7
+       154: aload         6
+       156: astore        8
+       158: new           #892                // class java/util/ArrayList
+       161: dup
+       162: invokespecial #893                // Method java/util/ArrayList."<init>":()V
+       165: checkcast     #744                // class java/util/Collection
+       168: astore        9
+       170: iconst_0
+       171: istore        10
+       173: aload         8
+       175: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       180: astore        11
+       182: aload         11
+       184: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       189: ifeq          267
+       192: aload         11
+       194: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       199: astore        12
+       201: aload         12
+       203: checkcast     #243                // class net/minecraft/core/BlockPos
+       206: astore        13
+       208: iconst_0
+       209: istore        14
+       211: aload_0
+       212: getfield      #160                // Field lIIIIlIIIIlIIllIlIlIIlIlIlIIlIIlIllIIllllIlIllIllIIllIIIIllllllIlIlIlIIllIIlIIIlIlllI:Ljava/util/HashSet;
+       215: aload         13
+       217: invokevirtual #896                // Method java/util/HashSet.contains:(Ljava/lang/Object;)Z
+       220: iload_1
+       221: ifne          299
+       224: iload_1
+       225: ifne          246
+       228: goto          235
+       231: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       234: athrow
+       235: ifne          249
+       238: goto          245
+       241: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       244: athrow
+       245: iconst_1
+       246: goto          250
+       249: iconst_0
+       250: ifeq          182
+       253: aload         9
+       255: aload         12
+       257: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+       262: pop
+       263: iload_1
+       264: ifeq          182
+       267: aload         9
+       269: checkcast     #730                // class java/util/List
+       272: nop
+       273: checkcast     #738                // class java/lang/Iterable
+       276: astore        6
+       278: nop
+       279: iconst_0
+       280: istore        7
+       282: aload         6
+       284: astore        8
+       286: new           #892                // class java/util/ArrayList
+       289: dup
+       290: invokespecial #893                // Method java/util/ArrayList."<init>":()V
+       293: checkcast     #744                // class java/util/Collection
+       296: astore        9
+       298: iconst_0
+       299: istore        10
+       301: aload         8
+       303: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       308: astore        11
+       310: aload         11
+       312: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       317: ifeq          373
+       320: aload         11
+       322: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       327: astore        12
+       329: aload         12
+       331: checkcast     #243                // class net/minecraft/core/BlockPos
+       334: astore        13
+       336: iconst_0
+       337: istore        14
+       339: aload_2
+       340: aload         13
+       342: invokevirtual #901                // Method net/minecraft/client/multiplayer/ClientLevel.isLoaded:(Lnet/minecraft/core/BlockPos;)Z
+       345: iload_1
+       346: ifne          368
+       349: ifeq          310
+       352: goto          359
+       355: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       358: athrow
+       359: aload         9
+       361: aload         12
+       363: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+       368: pop
+       369: iload_1
+       370: ifeq          310
+       373: aload         9
+       375: checkcast     #730                // class java/util/List
+       378: nop
+       379: astore        5
+       381: aload_0
+       382: iload_1
+       383: ifne          417
+       386: getfield      #165                // Field llIlllIlIlllllllIlllIIlllIlIIIllllIIlIlIIIIIIIIlIIIIIIIIlIIllIIIIIIIIlIllllIlllIlllIl:Lme/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI;
+       389: invokevirtual #540                // Method me/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI.f:()V
+       392: aload         5
+       394: invokeinterface #792,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+       399: ifeq          486
+       402: goto          409
+       405: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       408: athrow
+       409: aload_0
+       410: goto          417
+       413: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       416: athrow
+       417: iload_1
+       418: ifne          479
+       421: invokevirtual #455                // Method W:()Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+       424: getstatic     #350                // Field me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl:Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+       427: if_acmpne     471
+       430: goto          437
+       433: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       436: athrow
+       437: sipush        13980
+       440: sipush        -26166
+       443: pop2
+       444: ldc_w         #903                // String No veins left
+       447: invokestatic  #907                // Method me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c:(Ljava/lang/String;)V
+       450: aload_0
+       451: getstatic     #909                // Field me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI:Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+       454: sipush        5000
+       457: invokevirtual #476                // Method a:(Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;I)V
+       460: iload_1
+       461: ifeq          1994
+       464: goto          471
+       467: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       470: athrow
+       471: aload_0
+       472: goto          479
+       475: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       478: athrow
+       479: invokespecial #912                // Method bt:()V
+       482: iload_1
+       483: ifeq          1994
+       486: new           #285                // class java/util/HashMap
+       489: dup
+       490: invokespecial #913                // Method java/util/HashMap."<init>":()V
+       493: astore        6
+       495: aload         4
+       497: invokevirtual #914                // Method me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII.b:()Ljava/util/List;
+       500: checkcast     #738                // class java/lang/Iterable
+       503: astore        7
+       505: iconst_0
+       506: istore        8
+       508: aload         7
+       510: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       515: astore        9
+       517: aload         9
+       519: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       524: ifeq          613
+       527: aload         9
+       529: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       534: astore        10
+       536: aload         10
+       538: checkcast     #243                // class net/minecraft/core/BlockPos
+       541: astore        11
+       543: iconst_0
+       544: istore        12
+       546: aload         6
+       548: checkcast     #916                // class java/util/Map
+       551: astore        13
+       553: getstatic     #621                // Field me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl;
+       556: aload         11
+       558: invokevirtual #919                // Method net/minecraft/core/BlockPos.getCenter:()Lnet/minecraft/world/phys/Vec3;
+       561: dup
+       562: sipush        14012
+       565: sipush        -16267
+       568: pop2
+       569: ldc_w         #921                // String getCenter(...)
+       572: invokestatic  #659                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       575: aload_3
+       576: invokevirtual #923                // Method me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.b:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)D
+       579: invokestatic  #928                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       582: astore        14
+       584: aload         13
+       586: aload         11
+       588: aload         14
+       590: invokeinterface #932,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       595: pop
+       596: nop
+       597: nop
+       598: iload_1
+       599: ifne          614
+       602: iload_1
+       603: ifeq          517
+       606: goto          613
+       609: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       612: athrow
+       613: nop
+       614: aload         5
+       616: checkcast     #738                // class java/lang/Iterable
+       619: astore        8
+       621: iconst_0
+       622: istore        9
+       624: aload         8
+       626: new           #934                // class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll$IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI
+       629: dup
+       630: aload         4
+       632: aload_3
+       633: aload         6
+       635: invokespecial #937                // Method me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll$IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI."<init>":(Lme/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII;Lnet/minecraft/world/phys/Vec3;Ljava/util/HashMap;)V
+       638: checkcast     #939                // class java/util/Comparator
+       641: invokestatic  #943                // Method kotlin/collections/CollectionsKt.sortedWith:(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
+       644: checkcast     #738                // class java/lang/Iterable
+       647: new           #892                // class java/util/ArrayList
+       650: dup
+       651: invokespecial #893                // Method java/util/ArrayList."<init>":()V
+       654: checkcast     #744                // class java/util/Collection
+       657: invokestatic  #947                // Method kotlin/collections/CollectionsKt.toCollection:(Ljava/lang/Iterable;Ljava/util/Collection;)Ljava/util/Collection;
+       660: checkcast     #892                // class java/util/ArrayList
+       663: astore        7
+       665: aload         7
+       667: checkcast     #744                // class java/util/Collection
+       670: invokeinterface #747,  1          // InterfaceMethod java/util/Collection.isEmpty:()Z
+       675: ifne          690
+       678: iconst_1
+       679: iload_1
+       680: ifne          691
+       683: goto          691
+       686: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       689: athrow
+       690: iconst_0
+       691: ifeq          1990
+       694: iconst_0
+       695: istore        8
+       697: new           #892                // class java/util/ArrayList
+       700: dup
+       701: aload         7
+       703: checkcast     #738                // class java/lang/Iterable
+       706: invokestatic  #951                // Method kotlin/collections/CollectionsKt.withIndex:(Ljava/lang/Iterable;)Ljava/lang/Iterable;
+       709: iconst_5
+       710: invokestatic  #742                // Method kotlin/collections/CollectionsKt.take:(Ljava/lang/Iterable;I)Ljava/util/List;
+       713: checkcast     #744                // class java/util/Collection
+       716: invokespecial #954                // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+       719: checkcast     #738                // class java/lang/Iterable
+       722: astore        10
+       724: nop
+       725: iconst_0
+       726: istore        11
+       728: aload         10
+       730: astore        12
+       732: new           #892                // class java/util/ArrayList
+       735: dup
+       736: aload         10
+       738: bipush        10
+       740: invokestatic  #958                // Method kotlin/collections/CollectionsKt.collectionSizeOrDefault:(Ljava/lang/Iterable;I)I
+       743: invokespecial #960                // Method java/util/ArrayList."<init>":(I)V
+       746: checkcast     #744                // class java/util/Collection
+       749: astore        13
+       751: iconst_0
+       752: istore        14
+       754: aload         12
+       756: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       761: astore        15
+       763: aload         15
+       765: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       770: ifeq          842
+       773: aload         15
+       775: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       780: astore        16
+       782: aload         13
+       784: aload         16
+       786: checkcast     #962                // class kotlin/collections/IndexedValue
+       789: astore        18
+       791: astore        23
+       793: iconst_0
+       794: istore        19
+       796: aload         18
+       798: getstatic     #686                // Field me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll.lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI:Lme/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       801: invokevirtual #689                // Method me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Lme/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII;
+       804: aload         18
+       806: invokevirtual #965                // Method kotlin/collections/IndexedValue.getValue:()Ljava/lang/Object;
+       809: checkcast     #243                // class net/minecraft/core/BlockPos
+       812: invokevirtual #968                // Method me/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII.g:(Lnet/minecraft/core/BlockPos;)Ljava/util/ArrayList;
+       815: invokestatic  #218                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       818: aload         23
+       820: swap
+       821: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+       826: pop
+       827: iload_1
+       828: ifne          883
+       831: iload_1
+       832: ifeq          763
+       835: goto          842
+       838: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       841: athrow
+       842: aload         13
+       844: checkcast     #730                // class java/util/List
+       847: nop
+       848: checkcast     #738                // class java/lang/Iterable
+       851: astore        10
+       853: nop
+       854: iconst_0
+       855: istore        11
+       857: aload         10
+       859: astore        12
+       861: new           #892                // class java/util/ArrayList
+       864: dup
+       865: aload         10
+       867: bipush        10
+       869: invokestatic  #958                // Method kotlin/collections/CollectionsKt.collectionSizeOrDefault:(Ljava/lang/Iterable;I)I
+       872: invokespecial #960                // Method java/util/ArrayList."<init>":(I)V
+       875: checkcast     #744                // class java/util/Collection
+       878: astore        13
+       880: iconst_0
+       881: istore        14
+       883: aload         12
+       885: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       890: astore        15
+       892: aload         15
+       894: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       899: ifeq          976
+       902: aload         15
+       904: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       909: astore        16
+       911: aload         13
+       913: aload         16
+       915: checkcast     #188                // class kotlin/Pair
+       918: astore        18
+       920: astore        23
+       922: iconst_0
+       923: istore        19
+       925: aload         18
+       927: getstatic     #686                // Field me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll.lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI:Lme/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       930: invokevirtual #689                // Method me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Lme/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII;
+       933: getstatic     #686                // Field me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll.lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI:Lme/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       936: invokevirtual #689                // Method me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Lme/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII;
+       939: aload         18
+       941: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+       944: checkcast     #730                // class java/util/List
+       947: invokevirtual #974                // Method me/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII.h:(Ljava/util/List;)Ljava/util/ArrayList;
+       950: checkcast     #730                // class java/util/List
+       953: invokevirtual #977                // Method me/octo/client/IlIIllIlIllIlIlllIIIIIllIIlIlllIlIIlllllIlIlIIlIIllIIIIIIlIlllIlIlIllIIlIlIlIlIlIIlII.g:(Ljava/util/List;)Lnet/minecraft/core/BlockPos;
+       956: invokestatic  #218                // Method kotlin/TuplesKt.to:(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+       959: aload         23
+       961: swap
+       962: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+       967: pop
+       968: iload_1
+       969: ifne          1010
+       972: iload_1
+       973: ifeq          892
+       976: aload         13
+       978: checkcast     #730                // class java/util/List
+       981: nop
+       982: checkcast     #738                // class java/lang/Iterable
+       985: astore        10
+       987: nop
+       988: iconst_0
+       989: istore        11
+       991: aload         10
+       993: astore        12
+       995: new           #892                // class java/util/ArrayList
+       998: dup
+       999: invokespecial #893                // Method java/util/ArrayList."<init>":()V
+      1002: checkcast     #744                // class java/util/Collection
+      1005: astore        13
+      1007: iconst_0
+      1008: istore        14
+      1010: aload         12
+      1012: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+      1017: astore        15
+      1019: aload         15
+      1021: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1026: ifeq          1141
+      1029: aload         15
+      1031: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1036: astore        16
+      1038: aload         16
+      1040: checkcast     #188                // class kotlin/Pair
+      1043: astore        18
+      1045: iconst_0
+      1046: istore        19
+      1048: aload         18
+      1050: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1053: iload_1
+      1054: ifne          909
+      1057: iload_1
+      1058: ifne          1112
+      1061: ifnonnull     1107
+      1064: goto          1071
+      1067: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1070: athrow
+      1071: aload_0
+      1072: getfield      #160                // Field lIIIIlIIIIlIIllIlIlIIlIlIlIIlIIlIllIIllllIlIllIllIIllIIIIllllllIlIlIlIIllIIlIIIlIlllI:Ljava/util/HashSet;
+      1075: aload         7
+      1077: aload         18
+      1079: invokevirtual #980                // Method kotlin/Pair.getFirst:()Ljava/lang/Object;
+      1082: checkcast     #188                // class kotlin/Pair
+      1085: invokevirtual #980                // Method kotlin/Pair.getFirst:()Ljava/lang/Object;
+      1088: checkcast     #962                // class kotlin/collections/IndexedValue
+      1091: invokevirtual #983                // Method kotlin/collections/IndexedValue.getIndex:()I
+      1094: invokevirtual #987                // Method java/util/ArrayList.remove:(I)Ljava/lang/Object;
+      1097: invokevirtual #650                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+      1100: pop
+      1101: iload         8
+      1103: iconst_1
+      1104: iadd
+      1105: istore        8
+      1107: aload         18
+      1109: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1112: ifnull        1123
+      1115: iconst_1
+      1116: goto          1124
+      1119: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1122: athrow
+      1123: iconst_0
+      1124: ifeq          1019
+      1127: aload         13
+      1129: aload         16
+      1131: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      1136: pop
+      1137: iload_1
+      1138: ifeq          1019
+      1141: aload         13
+      1143: checkcast     #730                // class java/util/List
+      1146: nop
+      1147: checkcast     #738                // class java/lang/Iterable
+      1150: astore        10
+      1152: nop
+      1153: iconst_0
+      1154: istore        11
+      1156: aload         10
+      1158: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+      1163: astore        12
+      1165: aload         12
+      1167: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1172: iload_1
+      1173: ifne          1221
+      1176: ifne          1194
+      1179: goto          1186
+      1182: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1185: athrow
+      1186: aconst_null
+      1187: goto          1390
+      1190: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1193: athrow
+      1194: aload         12
+      1196: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1201: astore        13
+      1203: aload         12
+      1205: iload_1
+      1206: ifne          1235
+      1209: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1214: goto          1221
+      1217: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1220: athrow
+      1221: ifne          1233
+      1224: aload         13
+      1226: goto          1390
+      1229: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1232: athrow
+      1233: aload         13
+      1235: checkcast     #188                // class kotlin/Pair
+      1238: astore        14
+      1240: iconst_0
+      1241: istore        15
+      1243: iload_1
+      1244: ifne          1292
+      1247: getstatic     #992                // Field me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+      1250: aload         14
+      1252: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1255: dup
+      1256: invokestatic  #571                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      1259: checkcast     #243                // class net/minecraft/core/BlockPos
+      1262: iconst_0
+      1263: iconst_2
+      1264: aconst_null
+      1265: invokestatic  #995                // Method me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.b:(Lme/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;Lnet/minecraft/core/BlockPos;ZILjava/lang/Object;)Ljava/util/List;
+      1268: dup
+      1269: ifnull        1291
+      1272: goto          1279
+      1275: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1278: athrow
+      1279: invokeinterface #998,  1          // InterfaceMethod java/util/List.size:()I
+      1284: goto          1295
+      1287: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1290: athrow
+      1291: pop
+      1292: ldc_w         #999                // int 2147483647
+      1295: istore        14
+      1297: aload         12
+      1299: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1304: astore        15
+      1306: aload         15
+      1308: checkcast     #188                // class kotlin/Pair
+      1311: astore        16
+      1313: iconst_0
+      1314: istore        18
+      1316: getstatic     #992                // Field me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+      1319: aload         16
+      1321: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1324: dup
+      1325: invokestatic  #571                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      1328: checkcast     #243                // class net/minecraft/core/BlockPos
+      1331: iconst_0
+      1332: iconst_2
+      1333: aconst_null
+      1334: invokestatic  #995                // Method me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.b:(Lme/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;Lnet/minecraft/core/BlockPos;ZILjava/lang/Object;)Ljava/util/List;
+      1337: dup
+      1338: ifnull        1349
+      1341: invokeinterface #998,  1          // InterfaceMethod java/util/List.size:()I
+      1346: goto          1353
+      1349: pop
+      1350: ldc_w         #999                // int 2147483647
+      1353: istore        16
+      1355: iload         14
+      1357: iload_1
+      1358: ifne          1381
+      1361: iload         16
+      1363: if_icmple     1374
+      1366: aload         15
+      1368: astore        13
+      1370: iload         16
+      1372: istore        14
+      1374: aload         12
+      1376: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1381: ifne          1297
+      1384: iload_1
+      1385: ifne          1355
+      1388: aload         13
+      1390: checkcast     #188                // class kotlin/Pair
+      1393: astore        9
+      1395: iload_1
+      1396: ifne          1489
+      1399: aload         9
+      1401: ifnonnull     1482
+      1404: goto          1411
+      1407: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1410: athrow
+      1411: iload         8
+      1413: iconst_5
+      1414: if_icmpge     1478
+      1417: goto          1424
+      1420: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1423: athrow
+      1424: aload         7
+      1426: invokevirtual #1000               // Method java/util/ArrayList.size:()I
+      1429: iload_1
+      1430: ifne          675
+      1433: iload_1
+      1434: ifne          1472
+      1437: ifeq          1478
+      1440: goto          1447
+      1443: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1446: athrow
+      1447: aload_0
+      1448: getfield      #160                // Field lIIIIlIIIIlIIllIlIlIIlIlIlIIlIIlIllIIllllIlIllIllIIllIIIIllllllIlIlIlIIllIIlIIIlIlllI:Ljava/util/HashSet;
+      1451: aload         7
+      1453: iconst_0
+      1454: invokevirtual #987                // Method java/util/ArrayList.remove:(I)Ljava/lang/Object;
+      1457: invokevirtual #650                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+      1460: pop
+      1461: iload         8
+      1463: iconst_1
+      1464: iadd
+      1465: goto          1472
+      1468: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1471: athrow
+      1472: istore        8
+      1474: iload_1
+      1475: ifeq          1411
+      1478: iload_1
+      1479: ifeq          665
+      1482: aload_0
+      1483: getstatic     #372                // Field me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.lllllIllllIlIIIIIIlllIIllllllIlIlIIlIIllIIlllllIIlIIIIIIlllllIIllllllllIIIlllIlllllll:Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+      1486: invokevirtual #881                // Method a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;)V
+      1489: aload_0
+      1490: getfield      #289                // Field lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl:Lme/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII;
+      1493: dup
+      1494: iload_1
+      1495: ifne          1532
+      1498: ifnull        1541
+      1501: goto          1508
+      1504: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1507: athrow
+      1508: aload         9
+      1510: invokevirtual #980                // Method kotlin/Pair.getFirst:()Ljava/lang/Object;
+      1513: checkcast     #188                // class kotlin/Pair
+      1516: invokevirtual #980                // Method kotlin/Pair.getFirst:()Ljava/lang/Object;
+      1519: checkcast     #962                // class kotlin/collections/IndexedValue
+      1522: invokevirtual #965                // Method kotlin/collections/IndexedValue.getValue:()Ljava/lang/Object;
+      1525: goto          1532
+      1528: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1531: athrow
+      1532: checkcast     #243                // class net/minecraft/core/BlockPos
+      1535: invokevirtual #1002               // Method me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII.b:(Lnet/minecraft/core/BlockPos;)V
+      1538: goto          1542
+      1541: pop
+      1542: aload_0
+      1543: getfield      #289                // Field lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl:Lme/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII;
+      1546: dup
+      1547: iload_1
+      1548: ifne          1573
+      1551: ifnull        1582
+      1554: goto          1561
+      1557: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1560: athrow
+      1561: aload         9
+      1563: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1566: goto          1573
+      1569: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1572: athrow
+      1573: checkcast     #243                // class net/minecraft/core/BlockPos
+      1576: invokevirtual #1004               // Method me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII.a:(Lnet/minecraft/core/BlockPos;)V
+      1579: goto          1583
+      1582: pop
+      1583: aload         9
+      1585: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1588: checkcast     #243                // class net/minecraft/core/BlockPos
+      1591: dup
+      1592: ifnull        1619
+      1595: astore        13
+      1597: iconst_0
+      1598: istore        14
+      1600: getstatic     #626                // Field me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;
+      1603: aload         13
+      1605: invokevirtual #629                // Method me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.g:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+      1608: dconst_0
+      1609: ldc2_w        #1005               // double 1.27d
+      1612: dconst_0
+      1613: invokevirtual #1009               // Method net/minecraft/world/phys/Vec3.add:(DDD)Lnet/minecraft/world/phys/Vec3;
+      1616: goto          1621
+      1619: pop
+      1620: aconst_null
+      1621: astore        10
+      1623: aload_0
+      1624: getfield      #289                // Field lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl:Lme/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII;
+      1627: dup
+      1628: ifnull        1988
+      1631: aload         10
+      1633: iload_1
+      1634: ifne          1672
+      1637: goto          1644
+      1640: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1643: athrow
+      1644: ifnull        1981
+      1647: goto          1654
+      1650: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1653: athrow
+      1654: aload         9
+      1656: invokevirtual #980                // Method kotlin/Pair.getFirst:()Ljava/lang/Object;
+      1659: checkcast     #188                // class kotlin/Pair
+      1662: invokevirtual #971                // Method kotlin/Pair.getSecond:()Ljava/lang/Object;
+      1665: goto          1672
+      1668: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1671: athrow
+      1672: checkcast     #738                // class java/lang/Iterable
+      1675: astore        12
+      1677: astore        23
+      1679: iconst_0
+      1680: istore        13
+      1682: aload         12
+      1684: astore        14
+      1686: new           #892                // class java/util/ArrayList
+      1689: dup
+      1690: aload         12
+      1692: bipush        10
+      1694: invokestatic  #958                // Method kotlin/collections/CollectionsKt.collectionSizeOrDefault:(Ljava/lang/Iterable;I)I
+      1697: invokespecial #960                // Method java/util/ArrayList."<init>":(I)V
+      1700: checkcast     #744                // class java/util/Collection
+      1703: astore        15
+      1705: iconst_0
+      1706: istore        16
+      1708: aload         14
+      1710: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+      1715: astore        18
+      1717: aload         18
+      1719: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1724: ifeq          1779
+      1727: aload         18
+      1729: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1734: astore        19
+      1736: aload         15
+      1738: aload         19
+      1740: checkcast     #243                // class net/minecraft/core/BlockPos
+      1743: astore        21
+      1745: astore        24
+      1747: iconst_0
+      1748: istore        22
+      1750: aload         21
+      1752: invokevirtual #919                // Method net/minecraft/core/BlockPos.getCenter:()Lnet/minecraft/world/phys/Vec3;
+      1755: aload         24
+      1757: swap
+      1758: invokeinterface #897,  2          // InterfaceMethod java/util/Collection.add:(Ljava/lang/Object;)Z
+      1763: pop
+      1764: iload_1
+      1765: ifne          1798
+      1768: iload_1
+      1769: ifeq          1717
+      1772: goto          1779
+      1775: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1778: athrow
+      1779: aload         15
+      1781: checkcast     #730                // class java/util/List
+      1784: nop
+      1785: aload         23
+      1787: swap
+      1788: checkcast     #738                // class java/lang/Iterable
+      1791: astore        12
+      1793: astore        23
+      1795: iconst_0
+      1796: istore        13
+      1798: aload         12
+      1800: invokeinterface #751,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+      1805: astore        14
+      1807: aload         14
+      1809: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1814: iload_1
+      1815: ifne          1863
+      1818: ifne          1836
+      1821: goto          1828
+      1824: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1827: athrow
+      1828: aconst_null
+      1829: goto          1972
+      1832: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1835: athrow
+      1836: aload         14
+      1838: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1843: astore        15
+      1845: aload         14
+      1847: iload_1
+      1848: ifne          1877
+      1851: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1856: goto          1863
+      1859: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1862: athrow
+      1863: ifne          1875
+      1866: aload         15
+      1868: goto          1972
+      1871: invokestatic  #283                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+      1874: athrow
+      1875: aload         15
+      1877: checkcast     #636                // class net/minecraft/world/phys/Vec3
+      1880: astore        16
+      1882: iconst_0
+      1883: istore        18
+      1885: getstatic     #621                // Field me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl;
+      1888: aload         16
+      1890: invokestatic  #571                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      1893: aload         16
+      1895: aload         10
+      1897: invokevirtual #923                // Method me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.b:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)D
+      1900: dstore        16
+      1902: aload         14
+      1904: invokeinterface #759,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      1909: astore        18
+      1911: aload         18
+      1913: checkcast     #636                // class net/minecraft/world/phys/Vec3
+      1916: astore        19
+      1918: iconst_0
+      1919: istore        21
+      1921: getstatic     #621                // Field me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl;
+      1924: aload         19
+      1926: invokestatic  #571                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      1929: aload         19
+      1931: aload         10
+      1933: invokevirtual #923                // Method me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.b:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)D
+      1936: dstore        19
+      1938: dload         16
+      1940: dload         19
+      1942: invokestatic  #1013               // Method java/lang/Double.compare:(DD)I
+      1945: ifle          1956
+      1948: aload         18
+      1950: astore        15
+      1952: dload         19
+      1954: dstore        16
+      1956: aload         14
+      1958: invokeinterface #756,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      1963: ifne          1902
+      1966: iload_1
+      1967: ifne          1952
+      1970: aload         15
+      1972: aload         23
+      1974: swap
+      1975: checkcast     #636                // class net/minecraft/world/phys/Vec3
+      1978: goto          1982
+      1981: aconst_null
+      1982: invokevirtual #1016               // Method me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII.a:(Lnet/minecraft/world/phys/Vec3;)V
+      1985: goto          1989
+      1988: pop
+      1989: return
+      1990: aload_0
+      1991: invokespecial #912                // Method bt:()V
+      1994: return
+      Exception table:
+         from    to  target type
+             4    20    23   Class java/util/NoSuchElementException
+            14    33    36   Class java/util/NoSuchElementException
+            43    56    56   Class java/util/NoSuchElementException
+            61    76    79   Class java/util/NoSuchElementException
+            65    93    96   Class java/util/NoSuchElementException
+            83   101   104   Class java/util/NoSuchElementException
+           110   122   125   Class java/util/NoSuchElementException
+           114   130   133   Class java/util/NoSuchElementException
+           211   228   231   Class java/util/NoSuchElementException
+           224   238   241   Class java/util/NoSuchElementException
+           339   352   355   Class java/util/NoSuchElementException
+           381   402   405   Class java/util/NoSuchElementException
+           386   410   413   Class java/util/NoSuchElementException
+           417   430   433   Class java/util/NoSuchElementException
+           421   464   467   Class java/util/NoSuchElementException
+           437   472   475   Class java/util/NoSuchElementException
+           584   606   609   Class java/util/NoSuchElementException
+           678   686   686   Class java/util/NoSuchElementException
+           796   835   838   Class java/util/NoSuchElementException
+          1057  1064  1067   Class java/util/NoSuchElementException
+          1112  1119  1119   Class java/util/NoSuchElementException
+          1165  1179  1182   Class java/util/NoSuchElementException
+          1176  1190  1190   Class java/util/NoSuchElementException
+          1203  1214  1217   Class java/util/NoSuchElementException
+          1221  1229  1229   Class java/util/NoSuchElementException
+          1243  1272  1275   Class java/util/NoSuchElementException
+          1247  1287  1287   Class java/util/NoSuchElementException
+          1395  1404  1407   Class java/util/NoSuchElementException
+          1399  1417  1420   Class java/util/NoSuchElementException
+          1433  1440  1443   Class java/util/NoSuchElementException
+          1437  1465  1468   Class java/util/NoSuchElementException
+          1489  1501  1504   Class java/util/NoSuchElementException
+          1498  1525  1528   Class java/util/NoSuchElementException
+          1542  1554  1557   Class java/util/NoSuchElementException
+          1551  1566  1569   Class java/util/NoSuchElementException
+          1623  1637  1640   Class java/util/NoSuchElementException
+          1631  1647  1650   Class java/util/NoSuchElementException
+          1644  1665  1668   Class java/util/NoSuchElementException
+          1750  1772  1775   Class java/util/NoSuchElementException
+          1807  1821  1824   Class java/util/NoSuchElementException
+          1818  1832  1832   Class java/util/NoSuchElementException
+          1845  1856  1859   Class java/util/NoSuchElementException
+          1863  1871  1871   Class java/util/NoSuchElementException
+      StackMapTable: number_of_entries = 147
+        frame_type = 255 /* full_frame */
+          offset_delta = 23
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll ]
+        frame_type = 2 /* same */
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/client/multiplayer/ClientLevel ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 18
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/client/player/LocalPlayer ]
+        frame_type = 76 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/world/phys/Vec3 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 15
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3 ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 43
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 48
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator, class java/lang/Object, class net/minecraft/core/BlockPos, int ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 69 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 2 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 248 /* chop */
+          offset_delta = 16
+        frame_type = 95 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 10 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 44
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator, class java/lang/Object, class net/minecraft/core/BlockPos, int ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 248 /* chop */
+          offset_delta = 4
+        frame_type = 255 /* full_frame */
+          offset_delta = 31
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll ]
+        frame_type = 79 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 93 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll ]
+        frame_type = 6 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 30
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/lang/Iterable, int, class java/util/Iterator, top, class java/lang/Object ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 91
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, class net/minecraft/core/BlockPos, int, class java/util/Map, class java/lang/Double ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/lang/Iterable, int, class java/util/Iterator, top, class java/lang/Object ]
+          stack = []
+        frame_type = 0 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 50
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList ]
+          stack = []
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 71
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 74
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator, class java/lang/Object, top, class kotlin/collections/IndexedValue, int, top, top, top, class java/util/Collection ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator ]
+          stack = []
+        frame_type = 40 /* same */
+        frame_type = 8 /* same */
+        frame_type = 80 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+        frame_type = 251 /* same_frame_extended */
+          offset_delta = 66
+        frame_type = 33 /* same */
+        frame_type = 8 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 47
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator, class java/lang/Object, top, class kotlin/Pair, int ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 35 /* same */
+        frame_type = 68 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 16
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, class java/util/Iterator ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 40
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/util/Collection, int, class java/util/Iterator ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 22
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/util/Iterator ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 39
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, class kotlin/Pair, int ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/List ]
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/List ]
+        frame_type = 0 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 1
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 51
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object, class kotlin/Pair, top, int ]
+          stack = [ class java/util/List ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 1
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object, int, top, int ]
+          stack = []
+        frame_type = 18 /* same */
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 8
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, top, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class java/lang/Object ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 16
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 84 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 5 /* same */
+        frame_type = 3 /* same */
+        frame_type = 6 /* same */
+        frame_type = 78 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 83 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/lang/Object ]
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 0 /* same */
+        frame_type = 78 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/lang/Object ]
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 0 /* same */
+        frame_type = 99 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/core/BlockPos ]
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/world/phys/Vec3 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 18
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class net/minecraft/world/phys/Vec3 ]
+        frame_type = 69 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 77 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/lang/Object ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 44
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, top, class java/util/Iterator, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 57
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, top, class java/util/Iterator, class java/lang/Object, top, class net/minecraft/core/BlockPos, int, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/Collection ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/lang/Iterable, class java/util/Collection, int, top, class java/util/Iterator, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = []
+        frame_type = 18 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 25
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/util/Iterator, class java/util/Collection, int, top, class java/util/Iterator, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 22
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, int, top, class java/util/Iterator, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class java/util/NoSuchElementException ]
+        frame_type = 3 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 24
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, double, top, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 49
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, double, class java/lang/Object, double, int, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = []
+        frame_type = 3 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 15
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Iterable, int, class java/util/Iterator, class java/lang/Object, top, top, class java/lang/Object, top, top, top, top, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+          stack = [ class java/lang/Object ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 8
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Object, top, top, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class net/minecraft/world/phys/Vec3 ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 5
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/util/Iterator, class java/lang/Object, int, class java/lang/Object ]
+          stack = [ class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList, int, class kotlin/Pair, class net/minecraft/world/phys/Vec3, int, class java/lang/Object, top, top, class java/lang/Object ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/util/HashMap, class java/util/ArrayList ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll, int, class net/minecraft/client/multiplayer/ClientLevel, class net/minecraft/world/phys/Vec3, class me/octo/client/utils/IllIlIlIlIlIIlIIIlllllIIllIIIlIlIIIIllllIlIllIIIlIlllIlllIlIlIIlIllllIIlllIlllIIIIIII, class java/util/List, class java/lang/Object ]
+          stack = []
+

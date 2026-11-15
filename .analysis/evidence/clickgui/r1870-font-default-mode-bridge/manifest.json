@@ -1,0 +1,66 @@
+{
+  "experiment_id": "R1870",
+  "slice_id": "CLICKGUI-FONT-DEFAULT-MODE-BRIDGES",
+  "status": "STATIC_AND_FULL_TREE_COMPILE_PASS_RUNTIME_PENDING",
+  "started_utc": "2026-11-15T07:19:54.566402+00:00",
+  "repository_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+  "source": "polinex-src/src/main/java/me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll.java",
+  "preimage_sha256": "6892340B5D537F6E6AE9F42571835DB45C978D01B66BF089C040EA0186DF40C9",
+  "postimage_sha256": "EC98A3570233C3101DFFB7692F6FB2661200A01D3D15B46DCD0DF6261989B8BD",
+  "methods": [
+    {
+      "name": "a",
+      "descriptor": "(Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;ZILjava/lang/Object;)D",
+      "original_bytecode": "../r1869-display-method-bytecode-recheck/font_bridge-original.javap.txt",
+      "original_line": 1143
+    },
+    {
+      "name": "b",
+      "descriptor": "(Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;ZILjava/lang/Object;)I",
+      "original_bytecode": "../r1869-display-method-bytecode-recheck/font_bridge-original.javap.txt",
+      "original_line": 1180
+    },
+    {
+      "name": "f",
+      "descriptor": "()Z",
+      "original_bytecode": "../r1869-display-method-bytecode-recheck/font_bridge-original.javap.txt",
+      "original_line": 2352
+    }
+  ],
+  "patch_summary": "Restored f()-conditional default-argument semantics for text measurement and width wrappers; f() is bytecode-verified as !e().",
+  "validation": {
+    "source_bytes_preserved_outside_two_methods": true,
+    "build": {
+      "command": ".\\gradlew.bat --no-daemon --offline --max-workers=1 compileJava --rerun-tasks --console=plain \"-Dorg.gradle.jvmargs=-Xmx1g -XX:MaxMetaspaceSize=512m -XX:ReservedCodeCacheSize=96m -XX:+UseSerialGC\"",
+      "started_utc": "2026-11-15T07:20:14.3355906+00:00",
+      "finished_utc": "2026-11-15T07:20:59.0985345+00:00",
+      "exit_code": 0,
+      "log": "compile.log",
+      "log_sha256": "1E31A775421207D7E0130E649DCB36EFB74E38354EDC3804C2AB20E178862A4E",
+      "result": "BUILD SUCCESSFUL; 18 existing Unsafe warnings"
+    },
+    "compiled_bytecode": {
+      "command": "javap -classpath build/classes/java/main -p -s -c <font bridge FQCN>",
+      "exit_code": 0,
+      "output": "font_bridge-compiled-after-fix.javap.txt",
+      "output_sha256": "428EC15D18990610B246B4F38F9D01BB1A17991DA23B9E55F3EFB766CBAA193C",
+      "class_sha256": "3271F58DE08818055411197C7560C4BD27065A31FDEE7460D4BE9E3BBD11B561"
+    },
+    "five_page_unprobed_runtime": "PENDING",
+    "source_sha256": "EC98A3570233C3101DFFB7692F6FB2661200A01D3D15B46DCD0DF6261989B8BD",
+    "mixin_registry_sha256": "3C92FE9D8E900C4AC2D0627EDA8DD4C8428DE1181EBF69483CABEFE5C20D73EF",
+    "clickgui_probe_mixins_registered": false,
+    "original_vs_compiled_control_flow": {
+      "expected_truth_table": "f=false: default result equals mask bit; f=true: mask bit set forces false, unset preserves argument",
+      "methods": [
+        "a(String,boolean,int,Object):double",
+        "b(String,boolean,int,Object):int"
+      ],
+      "compiled_methods_call_f_once": true,
+      "compiled_methods_mask_bit": 2,
+      "compiled_methods_delegate_to_exact_typed_overload": true
+    }
+  },
+  "finished_utc": "2026-11-15T07:25:31.425708+00:00"
+}

@@ -1,0 +1,1580 @@
+[
+ {
+  "file": "me\\octo\\client\\IIIIIlIlIIlIIllllllIlllllIlIlIIIIIIIIlIlllllIlIIlIlIIlIIIIIIIlllIIIlllIIIlllllIlIIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIIIlIlIIlIIllllllIlllllIlIlIIIIIIIIlIlllllIlIIlIlIIlIIIIIIIlllIIIlllIIIlllllIlIIlII.java",
+  "errors": [
+   {
+    "line": 62,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 76,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 62,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 76,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIIIIlIllIlllIlllIIIIlIIIIlIllllIIllIIIIIlllIllIllllIIllllIllllllIIIIIlIlIlIIlIlIIIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIIIlIllIlllIlllIIIIlIIIIlIllllIIllIIIIIlllIllIllllIIllllIllllllIIIIIlIlIlIIlIlIIIll.java",
+  "errors": [
+   {
+    "line": 246,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 260,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 246,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 260,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIIlIIllIIllIIIlIIllIIIllIIlIllIlllIIIlIlIIIIIlllIIllIIIllIllIIIIlIIIIIIlIIlIIIlIlIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlIIllIIllIIIlIIllIIIllIIlIllIlllIIIlIlIIIIIlllIIllIIIllIllIIIIlIIIIIIlIIlIIIlIlIll.java",
+  "errors": [
+   {
+    "line": 507,
+    "msg": "for-loop的初始化程序错误"
+   },
+   {
+    "line": 507,
+    "msg": "for-loop的初始化程序错误"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIIllIlIIIIllllIllIIIIIlIllllIlIIlIllIIlIlIIIllIlIllIlIIlIIlIIllIlIIlIllllIlIIIlIlIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIllIlIIIIllllIllIIIIIlIllllIlIIlIllIIlIlIIIllIlIllIlIIlIIlIIllIlIIlIllllIlIIIlIlIll.java",
+  "errors": [
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "errors": [
+   {
+    "line": 5245,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 5258,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 6226,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6266,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 6352,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6375,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 5245,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6226,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6352,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 5258,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 6266,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 6375,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIlIIllIlIlllllIIIllllllIlIlIlIIIIllIlIIIlIllIIIllIllIlllIlIIIlllIllIIlIIIIIIIllllIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIIllIlIlllllIIIllllllIlIlIlIIIIllIlIIIlIllIIIllIllIlllIlIIIlllIllIIlIIIIIIIllllIIl.java",
+  "errors": [
+   {
+    "line": 6435,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6450,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8422,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8460,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8481,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8521,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8592,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8612,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 6435,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8422,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8481,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 8592,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 6450,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8460,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8521,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 8612,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIlIllIIIIllIlIIIIllIlIlIllIllIlIIIIIIIIlIIIIllIIIllIlIlllIlIIIllIIIllIlllIIIlIIIIIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIllIIIIllIlIIIIllIlIlIllIllIlIIIIIIIIlIIIIllIIIllIlIlllIlIIIllIIIllIlllIIIlIIIIIIl.java",
+  "errors": [
+   {
+    "line": 10,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 12,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 10,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 12,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIlIllIIllIllIIIIIIIIlIllIIIIIIIIIIlllIIlIIlIIllllIIlllIlIlllIlIIllIIllIIllIIlIllIllI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIllIIllIllIIIIIIIIlIllIIIIIIIIIIlllIIlIIlIIllllIIlllIlIlllIlIIllIIllIIllIIlIllIllI.java",
+  "errors": [
+   {
+    "line": 204,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 223,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 204,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 223,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIlIlllIIIIIlIIIIIIIIlllIIlllIIIIllllIIIlllIlIlIIllIlllIllIIIlIIIlIllIIIlIIllIIIIlIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIlllIIIIIlIIIIIIIIlllIIlllIIIIllllIIIlllIlIlIIllIlllIllIIIlIIIlIllIIIlIIllIIIIlIIl.java",
+  "errors": [
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 17,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 17,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIllIIlllllllIIllllIlIlIIIIIllIllIIIlllIIIlIIIllllllIIlIIIlIlIlIIllIllIIIIIlIlIlIIIlI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIllIIlllllllIIllllIlIlIIIIIllIllIIIlllIIIlIIIllllllIIlIIIlIlIlIIllIllIIIIIlIlIlIIIlI.java",
+  "errors": [
+   {
+    "line": 31,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 31,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IIlllIllIIIlIIlIIllIIlllIlIIIlllIIlIIIlIIIlIIllIIlIlllIlllllllIIlllIlIIIIIIIllIIIlIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIlllIllIIIlIIlIIllIIlllIlIIIlllIIlIIIlIIIlIIllIIlIlllIlllllllIIlllIlIIIIIIIllIIIlIll.java",
+  "errors": [
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIIIIIlIIlIIIIlIlIIllIlllIlllIllIlIlIllllIIllIIIIllIllIlIlIIIIIIIIIlIlIIlIlIlIlIllIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIIIIlIIlIIIIlIlIIllIlllIlllIllIlIlIllllIIllIIIIllIllIlIlIIIIIIIIIlIlIIlIlIlIlIllIl.java",
+  "errors": [
+   {
+    "line": 9,
+    "msg": "需要="
+   },
+   {
+    "line": 10,
+    "msg": "需要="
+   },
+   {
+    "line": 113,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 9,
+    "msg": "需要="
+   },
+   {
+    "line": 10,
+    "msg": "需要="
+   },
+   {
+    "line": 113,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIIIIIllIllIIllIIlIllIIIlllIIlIIlIlllIIlIllllIllllIlIlllIlIllIIIIIlIIlllllllIIllIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIIIIllIllIIllIIlIllIIIlllIIlIIlIlllIIlIllllIllllIlIlllIlIllIIIIIlIIlllllllIIllIlII.java",
+  "errors": [
+   {
+    "line": 2332,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2351,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2377,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2402,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2332,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2377,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2351,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2402,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIIlIIIIIllIlIlllllllllIllIlIIIlIIllllllIlllIIllIllIlIIlIIllllllllllIIlllIlllIllllll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIlIIIIIllIlIlllllllllIllIlIIIlIIllllllIlllIIllIllIlIIlIIllllllllllIIlllIlllIllllll.java",
+  "errors": [
+   {
+    "line": 34,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 34,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIIlIIIlIIlIlIIlllIlllIIIlIlIllIllIIIlIlIllIIlIIIlIIllIlllIIllIIIIlIlIlllIllllllIIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIlIIIlIIlIlIIlllIlllIIIlIlIllIllIIIlIlIllIIlIIIlIIllIlllIIllIIIIlIlIlllIllllllIIII.java",
+  "errors": [
+   {
+    "line": 6,
+    "msg": "需要="
+   },
+   {
+    "line": 74,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 6,
+    "msg": "需要="
+   },
+   {
+    "line": 74,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIIlIllIlIlllIlIllIIlIIlIlIlIlIlllIIlIIIIIIlIIIIIIIIIlllIIlIIlIIIIIIllIllllIIlllIIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIlIllIlIlllIlIllIIlIIlIlIlIlIlllIIlIIIIIIlIIIIIIIIIlllIIlIIlIIIIIIllIllllIIlllIIIl.java",
+  "errors": [
+   {
+    "line": 1397,
+    "msg": "for-loop的初始化程序错误"
+   },
+   {
+    "line": 1397,
+    "msg": "for-loop的初始化程序错误"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIllIIIlIIlIllIIIlIIIIlllIIIlIlllIllIIlllIllIIlIlllIllIlIlIIlIIIIlIIIIlllIIlIlIlIlIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIllIIIlIIlIllIIIlIIIIlllIIIlIlllIllIIlllIllIIlIlllIllIlIlIIlIIIIlIIIIlllIIlIlIlIlIl.java",
+  "errors": [
+   {
+    "line": 143,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 157,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 143,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 157,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IlIlllllllIllllIIlllllllIIlIlIIIIlIIIIIIllIIlIIlIlIIIIIlIIlIIllllllIllIlIIIIIIIIlIlIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IlIlllllllIllllIIlllllllIIlIlIIIIlIIIIIIllIIlIIlIlIIIIIlIIlIIllllllIllIlIIIIIIIIlIlIl.java",
+  "errors": [
+   {
+    "line": 11,
+    "msg": "需要="
+   },
+   {
+    "line": 12,
+    "msg": "需要="
+   },
+   {
+    "line": 619,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 11,
+    "msg": "需要="
+   },
+   {
+    "line": 12,
+    "msg": "需要="
+   },
+   {
+    "line": 619,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IllIIIIlIIIIIllllIlIIllIIllllIIIIlllIllIllllIIlIIlIIIIlIlIIlIIlIIlIIIlllIIllllllIIlIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IllIIIIlIIIIIllllIlIIllIIllllIIIIlllIllIllllIIlIIlIIIIlIlIIlIIlIIlIIIlllIIllllllIIlIl.java",
+  "errors": [
+   {
+    "line": 7,
+    "msg": "需要="
+   },
+   {
+    "line": 29,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 7,
+    "msg": "需要="
+   },
+   {
+    "line": 29,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IllIIlIIlIlIIllIIIlIIIIlIIllIIIlllllIIlllIIIllIIlllIlllIIIIlIIlllIlIllIIIIllIIlllIlll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IllIIlIIlIlIIllIIIlIIIIlIIllIIIlllllIIlllIIIllIIlllIlllIIIIlIIlllIlIllIIIIllIIlllIlll.java",
+  "errors": [
+   {
+    "line": 30,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 30,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IllIlIlIIlIIllIlIIIIIIlllIIIIlIlllllllIllllIIIlIIlIIllllIlIlIlIlllllllIIlllIIIlIlIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IllIlIlIIlIIllIlIIIIIIlllIIIIlIlllllllIllllIIIlIIlIIllllIlIlIlIlllllllIIlllIIIlIlIlII.java",
+  "errors": [
+   {
+    "line": 9651,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9689,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9710,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9750,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9821,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9841,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9651,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9710,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9821,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 9689,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9750,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9841,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IllIllIlIIIIIllIlIlIlIIIIllllIIIllllIllIIlllIIlIllIllIlllIIllIIlIlllllIIlIIllllIlIlll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IllIllIlIIIIIllIlIlIlIIIIllllIIIllllIllIIlllIIlIllIllIlllIIllIIlIlllllIIlIIllllIlIlll.java",
+  "errors": [
+   {
+    "line": 2397,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2413,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2397,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2413,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\IllIllllIIIIIIIIIllllIIlIlIlIlIIIIlIIllIlIlIlIIIllllIlIIIIIlIIlIIIlIIlIIlIlIllllIlIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\IllIllllIIIIIIIIIllllIIlIlIlIlIIIIlIIllIlIlIlIIIllllIlIIIIIlIIlIIIlIIlIIlIlIllllIlIll.java",
+  "errors": [
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 11,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 9,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 11,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIIIIlIIIIIIIIlllIlIlIlIIIllIlIIllllIIIIIlllIllIIlIlllIIIIllllIIlIlIIlIIIIIIlIlIIIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIIIIlIIIIIIIIlllIlIlIlIIIllIlIIllllIIIIIlllIllIIlIlllIIIIllllIIlIlIIlIIIIIIlIlIIIII.java",
+  "errors": [
+   {
+    "line": 31,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 31,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIIlIIIIlIIIlIlIlllIlIIIlIIIIllIlIllIllIlIlIllIlIllIIllllIIllIlIlIIIIIllIllIIlllIIlI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIIlIIIIlIIIlIlIlllIlIIIlIIIIllIlIllIllIlIlIllIlIllIIllllIIllIlIlIIIIIllIllIIlllIIlI.java",
+  "errors": [
+   {
+    "line": 95,
+    "msg": "不是语句"
+   },
+   {
+    "line": 95,
+    "msg": "不是语句"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIIlIlIlIIlIIIIIlIlIlIIllllIllIlIlllIIIIIllIIlIllIIIIIIIIlIlIlllIllllllIllIlIlIIIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIIlIlIlIIlIIIIIlIlIlIIllllIllIlIlllIIIIIllIIlIllIIIIIIIIlIlIlllIllllllIllIlIlIIIlII.java",
+  "errors": [
+   {
+    "line": 121,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 137,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 121,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 137,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIIllIlIlllIlIllIIIIlIlIIIllIIIlIlIIlIllIlllIlIlIllIlIIIlIllIIIIIIIllIlIlIIIIlIIIIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIIllIlIlllIlIllIIIIlIlIIIllIIIlIlIIlIllIlllIlIlIllIlIIIlIllIIIIIIIllIlIlIIIIlIIIIIl.java",
+  "errors": [
+   {
+    "line": 24,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 24,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIlIlIIllIlIllIlIllIllIlIlllllllllIIIIIlIIIIllIIIlllIIllllIIlIIIlIIIIIllIlllllIllIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIlIlIIllIlIllIlIllIllIlIlllllllllIIIIIlIIIIllIIIlllIIllllIIlIIIlIIIIIllIlllllIllIII.java",
+  "errors": [
+   {
+    "line": 35,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 35,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIlIllllIIlIlIlIlllIIlIIIllIIIIlIIllIIIlIIlIllIIIlllIlIlllIlIlllIIllIllIIlIIIllllIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIlIllllIIlIlIlIlllIIlIIIllIIIIlIIllIIIlIIlIllIIIlllIlIlllIlIlllIIllIllIIlIIIllllIll.java",
+  "errors": [
+   {
+    "line": 32,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 32,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIIllIlIIlllllIllIllIIlIIlIlllIlIllIIIllIllIIlllIIllIIllIllIIIllIllIIIllIllIlllIIIIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIIllIlIIlllllIllIllIIlIIlIlllIlIllIIIllIllIIlllIIllIIllIllIIIllIllIIIllIllIlllIIIIII.java",
+  "errors": [
+   {
+    "line": 14,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 14,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI.java",
+  "errors": [
+   {
+    "line": 174,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 186,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 174,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 186,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIllIIIllIIIlIIIlIIIIlIIIlIlllllllIllIIIIIllIlllIlllllIlIIIIllIIIIIllllllIIllIIlIIlIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIllIIIllIIIlIIIlIIIIlIIIlIlllllllIllIIIIIllIlllIlllllIlIIIIllIIIIIllllllIIllIIlIIlIl.java",
+  "errors": [
+   {
+    "line": 7,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 7,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lIllIlIIIIIIIlIIIIIIllIlIlIIlllllllllllIIIIIIllIlIIlIIlllIIIIIlIlllllIlllIlIIIlIllllI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lIllIlIIIIIIIlIIIIIIllIlIlIIlllllllllllIIIIIIllIlIIlIIlllIIIIIlIlllllIlllIlIIIlIllllI.java",
+  "errors": [
+   {
+    "line": 250,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 279,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 250,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 279,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIIIIIIIIIllIlllIIllIIIIIIIIIlIIIIIIlllIIlllllIIlIlllIIIlIllIlIIllllIlIIlIIIlIIlIIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIIIIIIIIIllIlllIIllIIIIIIIIIlIIIIIIlllIIlllllIIlIlllIIIlIllIlIIllllIlIIlIIIlIIlIIll.java",
+  "errors": [
+   {
+    "line": 64,
+    "msg": "for-loop的初始化程序错误"
+   },
+   {
+    "line": 64,
+    "msg": "for-loop的初始化程序错误"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIIIIlIIlIllIllIllIlIllllIIllIIllIllIIIlIlIIIlIIIIIIIIIIlllIlllIIlIlIIIlIIIlIIIlIIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIIIIlIIlIllIllIllIlIllllIIllIIllIllIIIlIlIIIlIIIIIIIIIIlllIlllIIlIlIIIlIIIlIIIlIIIl.java",
+  "errors": [
+   {
+    "line": 8,
+    "msg": "需要="
+   },
+   {
+    "line": 29,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 8,
+    "msg": "需要="
+   },
+   {
+    "line": 29,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIIlIIlllllllIlIlIlllllIIllIIlllIlIllIlllIllIIlIlIllllIlIllIIIIIIIlIlIlllIlIIlIlllII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIIlIIlllllllIlIlIlllllIIllIIlllIlIllIlllIllIIlIlIllllIlIllIIIIIIIlIlIlllIlIIlIlllII.java",
+  "errors": [
+   {
+    "line": 179,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 194,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 179,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 194,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIIlIlIIIlIIIllIlIIlIllIlIlllIlllllllIlllIIIllIIllIllIIIlIllIllllllIllIlIlllIlIIllIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIIlIlIIIlIIIllIlIIlIllIlIlllIlllllllIlllIIIllIIllIllIIIlIllIllllllIllIlIlllIlIIllIl.java",
+  "errors": [
+   {
+    "line": 7,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 11,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 13,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 17,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 19,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 7,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 11,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 13,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 17,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 19,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIIllIlIIIIllIIlIIIlIllIllIllIIIllllIIlIIlIlIllIIllIIlIlIIIllllllllIIIIllIIlIIlIlIll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIIllIlIIIIllIIlIIIlIllIllIllIIIllllIIlIIlIlIllIIllIIlIlIIIllllllllIIIIllIIlIIlIlIll.java",
+  "errors": [
+   {
+    "line": 2661,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2677,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2661,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2677,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llIlIlIllIIIllllIIIlIIlIlIIlIIllIllIlIlIIlIlIlIIlllIlIIlIllIIllIIIIlIIIllIIIllllllIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llIlIlIllIIIllllIIIlIIlIlIIlIIllIllIlIlIIlIlIlIIlllIlIIlIllIIllIIIIlIIIllIIIllllllIII.java",
+  "errors": [
+   {
+    "line": 3973,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 3981,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 4535,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 4543,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 5082,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 5090,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 3973,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 4535,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 5082,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 3981,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 4543,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 5090,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lllIIIIlIlIlIlIIIllIIlIIlllllllIIlllIlllIIlIllllIIIlIllllIIlIIIlIlIIIlIIIllIIlIllIlll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lllIIIIlIlIlIlIIIllIIlIIlllllllIIlllIlllIIlIllllIIIlIllllIIlIIIlIlIIIlIIIllIIlIllIlll.java",
+  "errors": [
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 15,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lllIIllIlllIIlllllllIIlIllllllIIlIlIIlIIIlIlllIllIlIlIlIllllIlIlIIllIlIIIlIllllIlIllI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lllIIllIlllIIlllllllIIlIllllllIIlIlIIlIIIlIlllIllIlIlIlIllllIlIlIIllIlIIIlIllllIlIllI.java",
+  "errors": [
+   {
+    "line": 13,
+    "msg": "需要="
+   },
+   {
+    "line": 14,
+    "msg": "需要="
+   },
+   {
+    "line": 125,
+    "msg": "接口中不允许有初始化程序"
+   },
+   {
+    "line": 13,
+    "msg": "需要="
+   },
+   {
+    "line": 14,
+    "msg": "需要="
+   },
+   {
+    "line": 125,
+    "msg": "接口中不允许有初始化程序"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lllIIlllIIllIlIIlIlIlIIlIlIllIlIIIIIIIIIllIIlIlllllIIlllIllllIlIllIIIllIIIIlllIIIIlll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lllIIlllIIllIlIIlIlIlIIlIlIllIlIIIIIIIIIllIIlIlllllIIlllIllllIlIllIIIllIIIIlllIIIIlll.java",
+  "errors": [
+   {
+    "line": 240,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 257,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 240,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 257,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lllIlIIlIIIllIlllIllIIlllIlIlIlIlIllIIlIlIIlIIlIlIIIIlIllIlllllIIlIlIlIIIIllIIlIlIIIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lllIlIIlIIIllIlllIllIIlllIlIlIlIlIllIIlIlIIlIIlIlIIIIlIllIlllllIIlIlIlIIIIllIIlIlIIIl.java",
+  "errors": [
+   {
+    "line": 1565,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 1565,
+    "msg": "不是语句"
+   },
+   {
+    "line": 1565,
+    "msg": "需要';'"
+   },
+   {
+    "line": 2280,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 2280,
+    "msg": "不是语句"
+   },
+   {
+    "line": 2280,
+    "msg": "需要';'"
+   },
+   {
+    "line": 2361,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 2361,
+    "msg": "不是语句"
+   },
+   {
+    "line": 2361,
+    "msg": "需要';'"
+   },
+   {
+    "line": 1565,
+    "msg": "不是语句"
+   },
+   {
+    "line": 2280,
+    "msg": "不是语句"
+   },
+   {
+    "line": 2361,
+    "msg": "不是语句"
+   },
+   {
+    "line": 1565,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 2280,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 2361,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 1565,
+    "msg": "需要';'"
+   },
+   {
+    "line": 2280,
+    "msg": "需要';'"
+   },
+   {
+    "line": 2361,
+    "msg": "需要';'"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llllIlIlIlIIIIIIlIIlIIlIlIIlIIlllllIllIllllIllllIIIlllIlIllllIlllIlIIlllIIIIlllIIIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llllIlIlIlIIIIIIlIIlIIlIlIIlIIlllllIllIllllIllllIIIlllIlIllllIlllIlIIlllIIIIlllIIIlII.java",
+  "errors": [
+   {
+    "line": 38,
+    "msg": "不是语句"
+   },
+   {
+    "line": 39,
+    "msg": "不是语句"
+   },
+   {
+    "line": 40,
+    "msg": "不是语句"
+   },
+   {
+    "line": 41,
+    "msg": "不是语句"
+   },
+   {
+    "line": 38,
+    "msg": "不是语句"
+   },
+   {
+    "line": 39,
+    "msg": "不是语句"
+   },
+   {
+    "line": 40,
+    "msg": "不是语句"
+   },
+   {
+    "line": 41,
+    "msg": "不是语句"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\lllllIllIIlIlIlIllIlIIlllIlIlIllIlIlIlIIIIlllllIllllIIllIllIllIlllIlIIIlIlIlllIIlllll.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\lllllIllIIlIlIlIllIlIIlllIlIlIllIlIlIlIIIIlllllIllllIIllIllIllIlllIlIIIlIlIlllIIlllll.java",
+  "errors": [
+   {
+    "line": 180,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 180,
+    "msg": "不是语句"
+   },
+   {
+    "line": 180,
+    "msg": "需要';'"
+   },
+   {
+    "line": 632,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 632,
+    "msg": "不是语句"
+   },
+   {
+    "line": 632,
+    "msg": "需要';'"
+   },
+   {
+    "line": 180,
+    "msg": "不是语句"
+   },
+   {
+    "line": 632,
+    "msg": "不是语句"
+   },
+   {
+    "line": 180,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 632,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 180,
+    "msg": "需要';'"
+   },
+   {
+    "line": 632,
+    "msg": "需要';'"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\llllllIIlllIlIIIlIIIlIIIIlllIllIlIllIlIIIIllIllIlIllIlIlIllllIllIIllIlIlIllllIlIIIllI.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\llllllIIlllIlIIIlIIIlIIIIlllIllIlIllIlIIIIllIllIlIllIlIlIllllIllIIllIlIlIllllIlIIIllI.java",
+  "errors": [
+   {
+    "line": 14,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 18,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 20,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 22,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 24,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 26,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 14,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 18,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 20,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 22,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 24,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 26,
+    "msg": "需要<标识符>"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\mixin\\client\\MinecraftMixin.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\mixin\\client\\MinecraftMixin.java",
+  "errors": [
+   {
+    "line": 222,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 222,
+    "msg": "需要case, default或'}'"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\mixin\\network\\ConnectionMixin.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\mixin\\network\\ConnectionMixin.java",
+  "errors": [
+   {
+    "line": 145,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   },
+   {
+    "line": 145,
+    "msg": "需要case, default或'}'"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\utils\\lIIIIlIIlIIlIIIIlllIllIlllIIIIIllIIIlIIIllIIlIlllIIlIIIllIlIlIlIllllIlIIIllIllIIlllIl.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\lIIIIlIIlIIlIIIIlllIllIlllIIIIIllIIIlIIIllIIlIlllIIlIIIllIlIlIlIllllIlIIIllIllIIlllIl.java",
+  "errors": [
+   {
+    "line": 346,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 347,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 346,
+    "msg": "非法的表达式开始"
+   },
+   {
+    "line": 347,
+    "msg": "非法的表达式开始"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\utils\\llIIIlIIllIIIllIIIlllllllIlIlIlIlIllllIlIIllIIIllIlIlllIIIlllIIlIllIlIlIIIlIllIIIIlII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\llIIIlIIllIIIllIIIlllllllIlIlIlIlIllllIlIIllIIIllIlIlllIIIlllIIlIllIlIlIIIlIllIIIIlII.java",
+  "errors": [
+   {
+    "line": 4199,
+    "msg": "不是语句"
+   },
+   {
+    "line": 4199,
+    "msg": "不是语句"
+   }
+  ]
+ },
+ {
+  "file": "me\\octo\\client\\utils\\player\\pathfinder\\llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.java",
+  "abs": "D:\\Work\\OpenPoli\\polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\player\\pathfinder\\llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.java",
+  "errors": [
+   {
+    "line": 2281,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2286,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2328,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2333,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2281,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2328,
+    "msg": "需要'('或'['"
+   },
+   {
+    "line": 2286,
+    "msg": "需要<标识符>"
+   },
+   {
+    "line": 2333,
+    "msg": "需要<标识符>"
+   }
+  ]
+ }
+]

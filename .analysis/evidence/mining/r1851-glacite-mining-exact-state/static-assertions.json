@@ -1,0 +1,89 @@
+{
+  "experiment_id": "R1851-GLACITE-MINING-EXACT-STATE",
+  "baseline_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "evidence_commit": "uncommitted; evidence generated against dirty working tree",
+  "source_file": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "source_sha256": "d3af13ec054490f78b24ac118b8ef7363ba88f1c9fc0a0d6dc7ba50171a9e98c",
+  "source_tree_fingerprint": {
+    "root": "<REPO_ROOT>\\polinex-src",
+    "file_count": 1740,
+    "sha256": "0dfd37ab844e10877bbfbacafc3277edf57ac518bc7df21e6dd9cb4cdcf831c6",
+    "source_files": 1681,
+    "resource_files": 51,
+    "build_inputs": 8
+  },
+  "compiled_class": "polinex-src/build/classes/java/main/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.class",
+  "compiled_class_sha256": "0e89d4fbf84dc6289726c7915c1836be7b6772e087e0a38f01e20b43c65a6d04",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "build": {
+    "experiment": "R1851-GLACITE-MINING-EXACT-STATE",
+    "start_utc": "2026-11-15T00:06:38.2657583Z",
+    "end_utc": "2026-11-15T00:07:20.3813261Z",
+    "command": "gradlew.bat --no-daemon compileJava --offline --rerun-tasks --console=plain \"-Dorg.gradle.jvmargs=-Xmx1g -XX:MaxMetaspaceSize=512m -XX:ReservedCodeCacheSize=96m -XX:+UseSerialGC\"",
+    "exit_code": 0
+  },
+  "javap_exit_code": 0,
+  "assertions": "PASS",
+  "registration_calls": [
+    {
+      "label": "Glacite commission travel",
+      "mask": 48,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;Lkotlin/jvm/functions/Function0;JZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "47: invokestatic  #195                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;Lkotlin/jvm/functions/Function0;JZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    },
+    {
+      "label": "Glacite commission pigeon",
+      "mask": 40,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "90: invokestatic  #211                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    },
+    {
+      "label": "Glacite commission area route",
+      "mask": 104,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "139: invokestatic  #226                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    },
+    {
+      "label": "Glacite commission vein route",
+      "mask": 104,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "188: invokestatic  #226                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    },
+    {
+      "label": "Glacite commission mining",
+      "mask": 104,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "237: invokestatic  #226                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    },
+    {
+      "label": "Glacite commission completion",
+      "mask": 16,
+      "descriptor": "(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Ljava/util/Set;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V",
+      "call": "276: invokestatic  #260                // Method me/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI.a:(Lme/octo/client/IllllllIllIIIllIllIIlIIIllIllIlIlIlIllllllllIIlllIllllIllIlIIIIlIIlIIIlIIlIlIIlIIIIlI;Ljava/lang/String;Ljava/util/Set;JJLkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V"
+    }
+  ],
+  "mining_callbacks": {
+    "enabled_predicate": "h(this), Function0<Boolean>",
+    "state_supplier": "i(this), Function0<Object>"
+  },
+  "state_supplier_i": {
+    "descriptor": "(LOwner;)Ljava/lang/Object;",
+    "constructor": "(IIZZZLnet/minecraft/core/BlockPos;)V",
+    "route_field_reads": 1,
+    "argument_order_matches_original": true,
+    "exception_type": "NoSuchElementException rethrown through original helper a(...)"
+  },
+  "inspection_attempts": [
+    {
+      "command": "first R1851 assertion expected h/i methods to call themselves",
+      "exit_code": 1,
+      "classification": "assertion bug; corrected to check return opcodes"
+    },
+    {
+      "command": "javap output transcode used nested relative evidence path",
+      "exit_code": 1,
+      "classification": "path typo; corrected using absolute path"
+    }
+  ],
+  "known_shape_note": "Java constructor source emits one state allocation before evaluating the same arguments, matching original order; source callback bridges synthesize lambda methods that invoke the original h/i targets."
+}

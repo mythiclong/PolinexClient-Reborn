@@ -1,0 +1,1 @@
+.\gradlew.bat --no-daemon --offline --max-workers=1 compileJava --rerun-tasks --console=plain "-Dorg.gradle.jvmargs=-Xmx1g -XX:MaxMetaspaceSize=512m -XX:ReservedCodeCacheSize=96m -XX:+UseSerialGC"

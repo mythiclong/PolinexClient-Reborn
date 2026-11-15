@@ -1,0 +1,59 @@
+  private java.lang.Boolean lambda$aD$7();
+
+    descriptor: ()Ljava/lang/Boolean;
+
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+
+    Code:
+
+      stack=1, locals=1, args_size=1
+
+         0: aload_0
+
+         1: invokestatic  #959                // Method h:(Lme/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll;)Z
+
+         4: invokestatic  #791                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+
+         7: areturn
+
+      LineNumberTable:
+
+        line 1976: 0
+
+      LocalVariableTable:
+
+        Start  Length  Slot  Name   Signature
+
+            0       8     0  this   Lme/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll;
+
+
+
+
+  private java.lang.Object lambda$aD$8();
+
+    descriptor: ()Ljava/lang/Object;
+
+    flags: (0x1002) ACC_PRIVATE, ACC_SYNTHETIC
+
+    Code:
+
+      stack=1, locals=1, args_size=1
+
+         0: aload_0
+
+         1: invokestatic  #955                // Method i:(Lme/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll;)Ljava/lang/Object;
+
+         4: areturn
+
+      LineNumberTable:
+
+        line 1979: 0
+
+      LocalVariableTable:
+
+        Start  Length  Slot  Name   Signature
+
+            0       5     0  this   Lme/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll;
+
+
+

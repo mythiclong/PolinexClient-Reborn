@@ -1,0 +1,7 @@
+{
+  "original_member_refs_excluding_identity_guard": 40,
+  "compiled_member_refs": 40,
+  "original_refs_absent_from_compiled": [],
+  "compiled_refs_not_in_original": [],
+  "status": "MATCH"
+}

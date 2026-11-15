@@ -1,0 +1,7 @@
+# Shell scripts must keep LF: the Windows working copy is checked out with core.autocrlf=true,
+# and a CRLF shebang makes bash fail on a fresh clone.
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Preserve machine evidence byte-for-byte so recorded SHA256 values remain reproducible.
+.analysis/evidence/** -text

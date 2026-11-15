@@ -1,0 +1,107 @@
+# ===== Build outputs & caches =====
+polinex-src/build/
+polinex-src/.gradle/
+.gradle-home/
+build/
+
+# ===== Logs (hundreds of MB of javac output) =====
+*.log
+
+# ===== Per-pass source backups =====
+backup-*/
+polinex-src/backup-*/
+.analysis/backup-*/
+**/*.bak
+**/*.bak-*
+**/*.java.bak
+
+# ===== Heavy analysis artifacts =====
+.analysis/toolchain-probes/
+.analysis/cfr-out/
+.analysis/artifacts/
+.analysis/tools/
+.analysis/META-INF/
+.analysis/vf-*.jar
+.analysis/procyon.jar
+.analysis/*-out.jar
+.analysis/selected-classfiles/
+
+# ===== Transient analysis workdirs (keep only scripts + reports + key jars) =====
+.analysis/*/
+!.analysis/reports/
+!.analysis/reports/**
+!.analysis/phaseA/
+.analysis/phaseA/*
+!.analysis/phaseA/*.py
+!.analysis/phaseA/*.sh
+!.analysis/phaseA/pass161/
+!.analysis/phaseA/pass161/**
+
+# ===== Original decompiled baseline (regenerable from jar) =====
+polinex-src/decompiled/
+
+# ===== Tooling workspace =====
+.claude/
+
+# ===== Superseded restored tree (older attempt, kept locally only) =====
+polinex-restored/
+
+# ===== Python caches =====
+__pycache__/
+*.pyc
+
+# ===== OS noise =====
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ===== Temp =====
+*.tmp
+*.temp
+
+# ===== Original decompiled jar (regenerable) =====
+polinex-src/decompiled-src.jar
+
+# persist orchestrator tooling (same rationale as pass161/)
+!.analysis/phaseA/lead/
+!.analysis/phaseA/lead/**
+__pycache__/
+*.pyc
+__pycache__/
+*.pyc
+.analysis/*.out
+.analysis/fastrun*.out
+.analysis/errs.txt
+.analysis/_jdumptest.txt
+.analysis/phaseA/_*.py
+/*.py
+/probe*
+/*.json
+/zz*
+/x*.py
+# per-worker oracle artefacts (FASTJAVAC_TAG)
+.analysis/srcs.*.txt
+.analysis/fastjavac.*.log
+.analysis/fast-out-*/
+# worker backups must never be tracked inside the source tree
+polinex-src/**/*bak
+polinex-src/**/*.bak
+dist/*.jar
+
+# ===== Dev client run dir (logs, crash reports, saves) =====
+polinex-src/run/
+
+# ===== Third-party mod jars kept locally for analysis, never committed =====
+.analysis/cracked.jar
+
+# ���ļ���javap ȫ��ת���� .analysis/r300javapall.py �ɸ������ɣ������
+.analysis/reports/r300-javap-all.txt
+
+# Curated public handoff evidence
+!.analysis/evidence/
+!.analysis/evidence/**
+
+# Exclude protected JNIC payloads from the community snapshot
+/polinex-src/src/main/resources/dev/jnic/lib/
+# Do not publish the original nested jar containing first-party classes
+/polinex-src/src/main/resources/META-INF/jars/occlusionculling-0.0.8-SNAPSHOT.jar

@@ -1,0 +1,12 @@
+  private final void bs();
+    descriptor: ()V
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 4583: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lme/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll;
+

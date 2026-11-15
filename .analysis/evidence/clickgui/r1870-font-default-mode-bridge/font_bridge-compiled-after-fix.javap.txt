@@ -1,0 +1,3907 @@
+Compiled from "lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll.java"
+public final class me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll {
+  public static me.octo.client.PXDyn var20;
+    descriptor: Lme/octo/client/PXDyn;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+
+  private final double lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII;
+    descriptor: D
+
+  private double IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl;
+    descriptor: D
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll llIIlIIIlIlIlIIIllIlIlllllllllIllIlIlIIIlIlIllIllIIIllIIlllllIIllIlIIlIllllIlIllIlllI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IlIlIlIIIIIlIllllllIllIIIIllIlIIlIIIlllllIllIIlIIlIIIllIlIlIIllIlIIllIIllllIlIIllIlIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIllllIllllIIIIllIIlIllIIlIllIlIlllIlIlIlIIIllIllIllIllIlIIIlllIlllIlIllllIlIIlIIllll;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll IIllIlIlIlIIlIIIlIIIIlIlIllllIlIlIIIIlIIlIIlIIlllIllllllIlIIIlIllIllIlllIlIllIllIllIl;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  public static me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI;
+    descriptor: Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+
+  private static float IllIIlllIIIlllllIlIIIllllIllIIlIIIIIlIIIIIIlIlllllllIIIlllIIllllIlIlIlIIlIlIIlllIllll;
+    descriptor: F
+
+  private static boolean lllllIllllIlIIIIIIlllIIllllllIlIlIIlIIllIIlllllIIlIIIIIIlllllIIllllllllIIIlllIlllllll;
+    descriptor: Z
+
+  private static java.lang.String[] a;
+    descriptor: [Ljava/lang/String;
+
+  private static java.lang.String[] b;
+    descriptor: [Ljava/lang/String;
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, int, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;IZILjava/lang/Object;)D
+    Code:
+         0: iload         4
+         2: iconst_2
+         3: iand
+         4: ifeq          12
+         7: aload_1
+         8: invokevirtual #1                  // Method java/lang/String.length:()I
+        11: istore_2
+        12: iload         4
+        14: iconst_4
+        15: iand
+        16: ifeq          21
+        19: iconst_0
+        20: istore_3
+        21: aload_0
+        22: aload_1
+        23: iload_2
+        24: iload_3
+        25: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        28: dreturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;ZILjava/lang/Object;)D
+    Code:
+         0: iload_2
+         1: iconst_1
+         2: iand
+         3: ifeq          8
+         6: iconst_0
+         7: istore_1
+         8: aload_0
+         9: iload_1
+        10: invokevirtual #13                 // Method a:(Z)D
+        13: dreturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         8
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_0
+         9: istore        7
+        11: aload_0
+        12: aload_1
+        13: dload_2
+        14: dload         4
+        16: aload         6
+        18: iload         7
+        20: invokevirtual #16                 // Method a:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        23: dreturn
+
+  public static double b(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: invokestatic  #19                 // Method e:()Z
+         3: istore        10
+         5: iload         10
+         7: ifeq          28
+        10: iload         8
+        12: bipush        16
+        14: iand
+        15: ifeq          22
+        18: iconst_1
+        19: goto          23
+        22: iconst_0
+        23: istore        7
+        25: goto          39
+        28: iload         8
+        30: bipush        16
+        32: iand
+        33: ifeq          39
+        36: iconst_1
+        37: istore        7
+        39: aload_0
+        40: aload_1
+        41: dload_2
+        42: dload         4
+        44: aload         6
+        46: iload         7
+        48: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        51: dreturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;IILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         6
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_1
+         9: istore        5
+        11: aload_0
+        12: aload_1
+        13: iload_2
+        14: iload_3
+        15: aload         4
+        17: iload         5
+        19: invokevirtual #26                 // Method a:(Ljava/lang/String;IILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        22: dreturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, float, float, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;FFLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         6
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_1
+         9: istore        5
+        11: aload_0
+        12: aload_1
+        13: fload_2
+        14: fload_3
+        15: aload         4
+        17: iload         5
+        19: invokevirtual #29                 // Method a:(Ljava/lang/String;FFLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        22: dreturn
+
+  public static double c(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         8
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_0
+         9: istore        7
+        11: aload_0
+        12: aload_1
+        13: dload_2
+        14: dload         4
+        16: aload         6
+        18: iload         7
+        20: invokevirtual #32                 // Method c:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        23: dreturn
+
+  public static double d(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         8
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_0
+         9: istore        7
+        11: aload_0
+        12: aload_1
+        13: dload_2
+        14: dload         4
+        16: aload         6
+        18: iload         7
+        20: invokevirtual #35                 // Method d:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        23: dreturn
+
+  public static double e(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         8
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_0
+         9: istore        7
+        11: aload_0
+        12: aload_1
+        13: dload_2
+        14: dload         4
+        16: aload         6
+        18: iload         7
+        20: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        23: dreturn
+
+  public static double f(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)D
+    Code:
+         0: iload         8
+         2: bipush        16
+         4: iand
+         5: ifeq          11
+         8: iconst_0
+         9: istore        7
+        11: aload_0
+        12: aload_1
+        13: dload_2
+        14: dload         4
+        16: aload         6
+        18: iload         7
+        20: invokevirtual #40                 // Method f:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        23: dreturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;ZILjava/lang/Object;)D
+    Code:
+         0: invokestatic  #43                 // Method f:()Z
+         3: istore        5
+         5: iload_3
+         6: iconst_2
+         7: iand
+         8: istore        6
+        10: iload         5
+        12: ifne          29
+        15: iload         6
+        17: ifeq          24
+        20: iconst_1
+        21: goto          25
+        24: iconst_0
+        25: istore_2
+        26: goto          36
+        29: iload         6
+        31: ifeq          36
+        34: iconst_0
+        35: istore_2
+        36: aload_0
+        37: aload_1
+        38: iload_2
+        39: invokevirtual #45                 // Method a:(Ljava/lang/String;Z)D
+        42: dreturn
+
+  public static int b(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;ZILjava/lang/Object;)I
+    Code:
+         0: invokestatic  #43                 // Method f:()Z
+         3: istore        5
+         5: iload_3
+         6: iconst_2
+         7: iand
+         8: istore        6
+        10: iload         5
+        12: ifne          29
+        15: iload         6
+        17: ifeq          24
+        20: iconst_1
+        21: goto          25
+        24: iconst_0
+        25: istore_2
+        26: goto          36
+        29: iload         6
+        31: ifeq          36
+        34: iconst_0
+        35: istore_2
+        36: aload_0
+        37: aload_1
+        38: iload_2
+        39: invokevirtual #48                 // Method b:(Ljava/lang/String;Z)I
+        42: ireturn
+
+  public static double b(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;ZILjava/lang/Object;)D
+    Code:
+         0: iload_2
+         1: iconst_1
+         2: iand
+         3: ifeq          8
+         6: iconst_0
+         7: istore_1
+         8: aload_0
+         9: iload_1
+        10: invokevirtual #51                 // Method b:(Z)D
+        13: dreturn
+
+  public static int c(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;ZILjava/lang/Object;)I
+    Code:
+         0: iload_2
+         1: iconst_1
+         2: iand
+         3: ifeq          8
+         6: iconst_0
+         7: istore_1
+         8: aload_0
+         9: iload_1
+        10: invokevirtual #53                 // Method c:(Z)I
+        13: ireturn
+
+  public static double a(me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll, java.lang.String, double, boolean, int, java.lang.Object);
+    descriptor: (Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;DZILjava/lang/Object;)D
+    Code:
+         0: iload         5
+         2: iconst_4
+         3: iand
+         4: ifeq          10
+         7: iconst_0
+         8: istore        4
+        10: aload_0
+        11: aload_1
+        12: dload_2
+        13: iload         4
+        15: invokevirtual #56                 // Method a:(Ljava/lang/String;DZ)D
+        18: dreturn
+
+  public static <T> T d(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T a(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T b(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T b(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T a(java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T a(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T a(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T a(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T c(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T c(java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T d(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T e(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T f(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T b(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  public static <T> T d(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    Code:
+         0: aconst_null
+         1: areturn
+
+  private me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll(double);
+    descriptor: (D)V
+    Code:
+         0: aload_0
+         1: invokespecial #59                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: dload_1
+         6: putfield      #65                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:D
+         9: aload_0
+        10: aload_0
+        11: getfield      #65                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:D
+        14: putfield      #69                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:D
+        17: return
+
+  public final double a();
+    descriptor: ()D
+    Code:
+         0: aload_0
+         1: getfield      #69                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:D
+         4: dreturn
+
+  public final void a(double);
+    descriptor: (D)V
+    Code:
+         0: aload_0
+         1: dload_1
+         2: putfield      #69                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:D
+         5: return
+
+  private final float b();
+    descriptor: ()F
+    Code:
+         0: ldc2_w        #72                 // double 18.0d
+         3: aload_0
+         4: getfield      #69                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:D
+         7: dmul
+         8: d2f
+         9: freturn
+
+  public final double a(java.lang.String, int, boolean);
+    descriptor: (Ljava/lang/String;IZ)D
+    Code:
+         0: invokestatic  #19                 // Method e:()Z
+         3: ifeq          10
+         6: iconst_1
+         7: goto          11
+        10: iconst_0
+        11: istore        4
+        13: sipush        -28701
+        16: istore        5
+        18: sipush        -3712
+        21: istore        6
+        23: aload_1
+        24: ldc           #74                 // String text
+        26: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        29: iload         4
+        31: ifeq          38
+        34: iconst_1
+        35: goto          39
+        38: iconst_0
+        39: istore        7
+        41: aload_1
+        42: invokevirtual #1                  // Method java/lang/String.length:()I
+        45: istore        4
+        47: iload         7
+        49: ifne          64
+        52: iload         4
+        54: ifne          61
+        57: iconst_1
+        58: goto          62
+        61: iconst_0
+        62: istore        4
+        64: iload         4
+        66: ifeq          71
+        69: dconst_0
+        70: dreturn
+        71: iload_2
+        72: aload_1
+        73: invokevirtual #1                  // Method java/lang/String.length:()I
+        76: if_icmpeq     107
+        79: aload_1
+        80: iconst_0
+        81: iload_2
+        82: invokevirtual #82                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+        85: astore        8
+        87: sipush        -28693
+        90: istore        5
+        92: sipush        23896
+        95: istore        6
+        97: aload         8
+        99: ldc           #86                 // String substring(...)
+       101: invokestatic  #88                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       104: goto          110
+       107: aload_1
+       108: astore        8
+       110: aload         8
+       112: astore        9
+       114: aload_0
+       115: invokevirtual #91                 // Method b:()F
+       118: fstore        10
+       120: aload         9
+       122: fload         10
+       124: getstatic     #94                 // Field me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Lme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;
+       127: invokestatic  #100                // Method me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.a:(Ljava/lang/String;FLme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;)F
+       130: fstore        11
+       132: fload         11
+       134: f2d
+       135: iload_3
+       136: ifeq          143
+       139: dconst_1
+       140: goto          144
+       143: dconst_0
+       144: dadd
+       145: dreturn
+
+  public final double a(boolean);
+    descriptor: (Z)D
+    Code:
+         0: aload_0
+         1: invokevirtual #91                 // Method b:()F
+         4: fstore_2
+         5: fload_2
+         6: f2d
+         7: iload_1
+         8: ifeq          15
+        11: dconst_1
+        12: goto          16
+        15: dconst_0
+        16: dadd
+        17: dreturn
+
+  public final double a(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: invokestatic  #43                 // Method f:()Z
+         3: ifeq          10
+         6: iconst_1
+         7: goto          11
+        10: iconst_0
+        11: istore        8
+        13: sipush        -28701
+        16: istore        9
+        18: sipush        -3712
+        21: istore        10
+        23: aload_1
+        24: ldc           #74                 // String text
+        26: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        29: sipush        -28690
+        32: istore        9
+        34: sipush        13702
+        37: istore        10
+        39: aload         6
+        41: ldc           #103                // String color
+        43: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        46: iload         8
+        48: ifeq          55
+        51: iconst_1
+        52: goto          56
+        55: iconst_0
+        56: istore        11
+        58: aload_0
+        59: invokevirtual #91                 // Method b:()F
+        62: fstore        12
+        64: iload         7
+        66: ifeq          73
+        69: iconst_1
+        70: goto          74
+        73: iconst_0
+        74: istore        8
+        76: iload         11
+        78: ifeq          160
+        81: iload         7
+        83: ifne          128
+        86: aload_1
+        87: dload_2
+        88: dconst_1
+        89: dadd
+        90: d2f
+        91: dload         4
+        93: dconst_1
+        94: dadd
+        95: d2f
+        96: fload         12
+        98: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+       101: dup
+       102: iconst_0
+       103: iconst_0
+       104: iconst_0
+       105: aload         6
+       107: invokevirtual #107                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.d:()I
+       110: i2d
+       111: ldc2_w        #109                // double 0.25d
+       114: dmul
+       115: d2i
+       116: invokespecial #111                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(IIII)V
+       119: invokevirtual #114                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.o:()I
+       122: getstatic     #94                 // Field me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Lme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;
+       125: invokestatic  #117                // Method me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.a:(Ljava/lang/String;FFFILme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;)V
+       128: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+       131: dup
+       132: aload         6
+       134: invokevirtual #120                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:()I
+       137: aload         6
+       139: invokevirtual #122                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.b:()I
+       142: aload         6
+       144: invokevirtual #124                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.c:()I
+       147: aload         6
+       149: invokevirtual #107                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.d:()I
+       152: invokespecial #111                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(IIII)V
+       155: invokevirtual #114                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.o:()I
+       158: istore        8
+       160: iload         8
+       162: istore        13
+       164: aload_1
+       165: dload_2
+       166: d2f
+       167: dload         4
+       169: d2f
+       170: fload         12
+       172: iload         13
+       174: getstatic     #94                 // Field me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Lme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;
+       177: invokestatic  #117                // Method me/octo/client/utils/lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl.a:(Ljava/lang/String;FFFILme/octo/client/utils/IIIIIlIIIlllIlllIIIIIIIIllIlIIIIllllIllIIlIlllIIlIlIIIIlIIllllIIlllIIIIlIIllllIIIIlIl;)V
+       180: aload_0
+       181: aload_1
+       182: aload_1
+       183: invokevirtual #1                  // Method java/lang/String.length:()I
+       186: iload         7
+       188: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+       191: dstore        14
+       193: iload         11
+       195: ifne          205
+       198: iconst_1
+       199: anewarray     #126                // class me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll
+       202: invokestatic  #128                // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.b:([Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;)V
+       205: dload         14
+       207: dreturn
+
+  public final double b(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        8
+         5: sipush        -3712
+         8: istore        9
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        8
+        21: sipush        13702
+        24: istore        9
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: dload         4
+        38: aload         6
+        40: iload         7
+        42: invokevirtual #16                 // Method a:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        45: dreturn
+
+  public final double a(java.lang.String, double, double);
+    descriptor: (Ljava/lang/String;DD)D
+    Code:
+         0: sipush        -28701
+         3: istore        6
+         5: sipush        -3712
+         8: istore        7
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        24: iconst_1
+        25: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        28: dreturn
+
+  public final double a(java.lang.String, int, int);
+    descriptor: (Ljava/lang/String;II)D
+    Code:
+         0: sipush        -28701
+         3: istore        4
+         5: sipush        -3712
+         8: istore        5
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        25: iconst_1
+        26: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        29: dreturn
+
+  public final double a(java.lang.String, float, float);
+    descriptor: (Ljava/lang/String;FF)D
+    Code:
+         0: sipush        -28701
+         3: istore        4
+         5: sipush        -3712
+         8: istore        5
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: fload_2
+        19: f2d
+        20: fload_3
+        21: f2d
+        22: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        25: iconst_1
+        26: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        29: dreturn
+
+  public final double a(java.lang.String, double, double, int);
+    descriptor: (Ljava/lang/String;DDI)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        24: dup
+        25: iload         6
+        27: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        30: iconst_0
+        31: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        34: dreturn
+
+  public final double a(java.lang.String, int, int, int);
+    descriptor: (Ljava/lang/String;III)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        25: dup
+        26: iload         4
+        28: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        31: iconst_0
+        32: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        35: dreturn
+
+  public final double a(java.lang.String, float, float, int);
+    descriptor: (Ljava/lang/String;FFI)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: fload_2
+        19: f2d
+        20: fload_3
+        21: f2d
+        22: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        25: dup
+        26: iload         4
+        28: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        31: iconst_0
+        32: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        35: dreturn
+
+  public final double a(java.lang.String, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;IILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        6
+         5: sipush        -3712
+         8: istore        7
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        6
+        21: sipush        13702
+        24: istore        7
+        26: aload         4
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: iload_2
+        36: i2d
+        37: iload_3
+        38: i2d
+        39: aload         4
+        41: iload         5
+        43: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        46: dreturn
+
+  public final double a(java.lang.String, float, float, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;FFLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        6
+         5: sipush        -3712
+         8: istore        7
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        6
+        21: sipush        13702
+        24: istore        7
+        26: aload         4
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: fload_2
+        36: f2d
+        37: fload_3
+        38: f2d
+        39: aload         4
+        41: iload         5
+        43: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        46: dreturn
+
+  public final double c(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        8
+         5: sipush        -3712
+         8: istore        9
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        8
+        21: sipush        13702
+        24: istore        9
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: aload_1
+        36: invokevirtual #1                  // Method java/lang/String.length:()I
+        39: iload         7
+        41: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        44: dstore        10
+        46: aload_0
+        47: aload_1
+        48: dload_2
+        49: dload         10
+        51: ldc2_w        #138                // double 2.0d
+        54: ddiv
+        55: dsub
+        56: dload         4
+        58: aload         6
+        60: iload         7
+        62: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        65: dreturn
+
+  public final double b(java.lang.String, double, double, int);
+    descriptor: (Ljava/lang/String;DDI)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        24: dup
+        25: iload         6
+        27: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        30: iconst_0
+        31: invokevirtual #32                 // Method c:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        34: dreturn
+
+  public final double b(java.lang.String, int, int, int);
+    descriptor: (Ljava/lang/String;III)D
+    Code:
+         0: sipush        -28689
+         3: istore        5
+         5: sipush        27958
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        25: dup
+        26: iload         4
+        28: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        31: iconst_1
+        32: invokevirtual #32                 // Method c:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        35: dreturn
+
+  public final double b(java.lang.String, int, int);
+    descriptor: (Ljava/lang/String;II)D
+    Code:
+         0: sipush        -28701
+         3: istore        4
+         5: sipush        -3712
+         8: istore        5
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        25: iconst_1
+        26: invokevirtual #32                 // Method c:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        29: dreturn
+
+  public final double a(java.lang.String, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;IILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        5
+        21: sipush        13702
+        24: istore        6
+        26: aload         4
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: iload_2
+        36: i2d
+        37: iload_3
+        38: i2d
+        39: aload         4
+        41: iconst_1
+        42: invokevirtual #32                 // Method c:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        45: dreturn
+
+  public final double d(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        8
+         5: sipush        -3712
+         8: istore        9
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        8
+        21: sipush        13702
+        24: istore        9
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: iload         7
+        36: invokevirtual #13                 // Method a:(Z)D
+        39: dstore        10
+        41: aload_0
+        42: aload_1
+        43: dload_2
+        44: dload         4
+        46: dload         10
+        48: ldc2_w        #138                // double 2.0d
+        51: ddiv
+        52: dsub
+        53: aload         6
+        55: iload         7
+        57: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        60: dreturn
+
+  public final double e(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: invokestatic  #43                 // Method f:()Z
+         3: istore        8
+         5: sipush        -28701
+         8: istore        9
+        10: sipush        -3712
+        13: istore        10
+        15: aload_1
+        16: ldc           #74                 // String text
+        18: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        21: sipush        -28690
+        24: istore        9
+        26: sipush        13702
+        29: istore        10
+        31: aload         6
+        33: ldc           #103                // String color
+        35: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        38: iload         8
+        40: istore        11
+        42: aload_0
+        43: aload_1
+        44: aload_1
+        45: invokevirtual #1                  // Method java/lang/String.length:()I
+        48: iload         7
+        50: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        53: dstore        12
+        55: aload_0
+        56: iload         7
+        58: invokevirtual #13                 // Method a:(Z)D
+        61: dstore        14
+        63: aload_0
+        64: aload_1
+        65: dload_2
+        66: dload         12
+        68: ldc2_w        #138                // double 2.0d
+        71: ddiv
+        72: dsub
+        73: dload         4
+        75: dload         14
+        77: ldc2_w        #138                // double 2.0d
+        80: ddiv
+        81: dsub
+        82: aload         6
+        84: iload         7
+        86: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        89: dstore        16
+        91: invokestatic  #140                // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+        94: ifnonnull     110
+        97: iload         11
+        99: ifne          106
+       102: iconst_1
+       103: goto          107
+       106: iconst_0
+       107: invokestatic  #143                // Method d:(Z)V
+       110: dload         16
+       112: dreturn
+
+  public final double b(java.lang.String, double, double);
+    descriptor: (Ljava/lang/String;DD)D
+    Code:
+         0: sipush        -28701
+         3: istore        6
+         5: sipush        -3712
+         8: istore        7
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        24: iconst_0
+        25: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        28: dreturn
+
+  public final double c(java.lang.String, int, int);
+    descriptor: (Ljava/lang/String;II)D
+    Code:
+         0: sipush        -28701
+         3: istore        4
+         5: sipush        -3712
+         8: istore        5
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        25: iconst_0
+        26: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        29: dreturn
+
+  public final double b(java.lang.String, float, float);
+    descriptor: (Ljava/lang/String;FF)D
+    Code:
+         0: sipush        -28701
+         3: istore        4
+         5: sipush        -3712
+         8: istore        5
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: fload_2
+        19: f2d
+        20: fload_3
+        21: f2d
+        22: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        25: iconst_0
+        26: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        29: dreturn
+
+  public final double c(java.lang.String, double, double, int);
+    descriptor: (Ljava/lang/String;DDI)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        24: dup
+        25: iload         6
+        27: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        30: iconst_0
+        31: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        34: dreturn
+
+  public final double c(java.lang.String, int, int, int);
+    descriptor: (Ljava/lang/String;III)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        25: dup
+        26: iload         4
+        28: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        31: iconst_0
+        32: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        35: dreturn
+
+  public final double b(java.lang.String, float, float, int);
+    descriptor: (Ljava/lang/String;FFI)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: fload_2
+        19: f2d
+        20: fload_3
+        21: f2d
+        22: new           #105                // class me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll
+        25: dup
+        26: iload         4
+        28: invokespecial #135                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll."<init>":(I)V
+        31: iconst_0
+        32: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        35: dreturn
+
+  public final double b(java.lang.String, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;IILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        5
+        21: sipush        13702
+        24: istore        6
+        26: aload         4
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: iload_2
+        36: i2d
+        37: iload_3
+        38: i2d
+        39: aload         4
+        41: iconst_0
+        42: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        45: dreturn
+
+  public final double a(java.lang.String, float, float, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;FFLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        5
+        21: sipush        13702
+        24: istore        6
+        26: aload         4
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: fload_2
+        36: f2d
+        37: fload_3
+        38: f2d
+        39: aload         4
+        41: iconst_0
+        42: invokevirtual #38                 // Method e:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        45: dreturn
+
+  public final double f(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        8
+         5: sipush        -3712
+         8: istore        9
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        8
+        21: sipush        13702
+        24: istore        9
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: aload_1
+        36: invokevirtual #1                  // Method java/lang/String.length:()I
+        39: iload         7
+        41: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        44: dstore        10
+        46: aload_0
+        47: aload_1
+        48: dload_2
+        49: dload         10
+        51: dsub
+        52: dload         4
+        54: aload         6
+        56: iload         7
+        58: invokevirtual #23                 // Method b:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        61: dreturn
+
+  public final double a(java.lang.String, boolean);
+    descriptor: (Ljava/lang/String;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore_3
+         4: sipush        -3712
+         7: istore        4
+         9: aload_1
+        10: ldc           #74                 // String text
+        12: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        15: aload_0
+        16: aload_1
+        17: aload_1
+        18: invokevirtual #1                  // Method java/lang/String.length:()I
+        21: iload_2
+        22: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        25: dreturn
+
+  public final int b(java.lang.String, boolean);
+    descriptor: (Ljava/lang/String;Z)I
+    Code:
+         0: sipush        -28701
+         3: istore_3
+         4: sipush        -3712
+         7: istore        4
+         9: aload_1
+        10: ldc           #74                 // String text
+        12: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        15: aload_0
+        16: aload_1
+        17: aload_1
+        18: invokevirtual #1                  // Method java/lang/String.length:()I
+        21: iload_2
+        22: invokevirtual #7                  // Method a:(Ljava/lang/String;IZ)D
+        25: d2i
+        26: ireturn
+
+  public final double b(boolean);
+    descriptor: (Z)D
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokevirtual #13                 // Method a:(Z)D
+         5: dreturn
+
+  public final int c(boolean);
+    descriptor: (Z)I
+    Code:
+         0: aload_0
+         1: iload_1
+         2: invokevirtual #13                 // Method a:(Z)D
+         5: d2i
+         6: ireturn
+
+  public final java.lang.String a(java.lang.String, double);
+    descriptor: (Ljava/lang/String;D)Ljava/lang/String;
+    Code:
+         0: invokestatic  #19                 // Method e:()Z
+         3: ifeq          10
+         6: iconst_1
+         7: goto          11
+        10: iconst_0
+        11: istore        4
+        13: sipush        -28701
+        16: istore        5
+        18: sipush        -3712
+        21: istore        6
+        23: aload_1
+        24: ldc           #74                 // String text
+        26: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        29: iload         4
+        31: ifeq          38
+        34: iconst_1
+        35: goto          39
+        38: iconst_0
+        39: istore        7
+        41: aload_0
+        42: aload_1
+        43: iconst_0
+        44: iconst_0
+        45: bipush        6
+        47: aconst_null
+        48: invokestatic  #146                // Method a:(Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;IZILjava/lang/Object;)D
+        51: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        54: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        57: dload_2
+        58: dsub
+        59: dup2
+        60: dstore        8
+        62: dconst_0
+        63: dcmpl
+        64: ifne          71
+        67: iconst_0
+        68: goto          83
+        71: dload         8
+        73: dconst_0
+        74: dcmpg
+        75: ifge          82
+        78: iconst_m1
+        79: goto          83
+        82: iconst_1
+        83: istore        4
+        85: iload         7
+        87: ifne          103
+        90: iload         4
+        92: ifgt          97
+        95: aload_1
+        96: areturn
+        97: aload_1
+        98: invokevirtual #1                  // Method java/lang/String.length:()I
+       101: istore        4
+       103: iload         4
+       105: istore        10
+       107: iload         10
+       109: ifle          227
+       112: aload_1
+       113: iconst_0
+       114: iload         10
+       116: invokevirtual #82                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+       119: astore        11
+       121: sipush        -28692
+       124: istore        6
+       126: sipush        32047
+       129: istore        12
+       131: aload         11
+       133: ldc           #86                 // String substring(...)
+       135: invokestatic  #88                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       138: sipush        -28695
+       141: istore        5
+       143: sipush        27095
+       146: istore        6
+       148: aload_0
+       149: aload         11
+       151: invokedynamic #159,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       156: iconst_0
+       157: iconst_0
+       158: bipush        6
+       160: aconst_null
+       161: invokestatic  #146                // Method a:(Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;IZILjava/lang/Object;)D
+       164: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       167: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+       170: dload_2
+       171: dsub
+       172: dup2
+       173: dstore        13
+       175: dconst_0
+       176: dcmpl
+       177: ifne          184
+       180: iconst_0
+       181: goto          196
+       184: dload         13
+       186: dconst_0
+       187: dcmpg
+       188: ifge          195
+       191: iconst_m1
+       192: goto          196
+       195: iconst_1
+       196: istore        4
+       198: iload         7
+       200: ifne          234
+       203: iload         7
+       205: ifeq          211
+       208: goto          234
+       211: iload         4
+       213: ifle          227
+       216: iinc          10, -1
+       219: iload         7
+       221: ifne          227
+       224: goto          107
+       227: iload         10
+       229: istore        4
+       231: goto          234
+       234: iload         4
+       236: ifle          287
+       239: aload_1
+       240: iconst_0
+       241: iload         10
+       243: invokevirtual #82                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+       246: astore        12
+       248: sipush        -28692
+       251: istore        5
+       253: sipush        32047
+       256: istore        6
+       258: aload         12
+       260: ldc           #86                 // String substring(...)
+       262: invokestatic  #88                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       265: sipush        -28702
+       268: istore        13
+       270: sipush        28874
+       273: istore        5
+       275: aload         12
+       277: invokedynamic #159,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       282: astore        11
+       284: goto          291
+       287: ldc           #163                // String
+       289: astore        11
+       291: aload         11
+       293: areturn
+
+  public final double a(java.lang.String, double, double, double);
+    descriptor: (Ljava/lang/String;DDD)D
+    Code:
+         0: sipush        -28701
+         3: istore        8
+         5: sipush        -3712
+         8: istore        9
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: dload_2
+        19: dload         4
+        21: dload         6
+        23: dload_2
+        24: dsub
+        25: invokevirtual #165                // Method b:(Ljava/lang/String;DDD)D
+        28: dreturn
+
+  public final int d(java.lang.String, int, int, int);
+    descriptor: (Ljava/lang/String;III)I
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: iload         4
+        24: i2d
+        25: invokevirtual #168                // Method a:(Ljava/lang/String;DDD)D
+        28: d2i
+        29: ireturn
+
+  public final double a(java.lang.String, double, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        9
+         5: sipush        -3712
+         8: istore        10
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        9
+        21: sipush        13702
+        24: istore        10
+        26: aload         8
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: dload         4
+        38: dload         6
+        40: dload_2
+        41: dsub
+        42: aload         8
+        44: iconst_1
+        45: invokevirtual #170                // Method b:(Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        48: dreturn
+
+  public final int a(java.lang.String, int, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;IIILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)I
+    Code:
+         0: sipush        -28701
+         3: istore        6
+         5: sipush        -3712
+         8: istore        7
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        6
+        21: sipush        13702
+        24: istore        7
+        26: aload         5
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: iload_2
+        36: i2d
+        37: iload_3
+        38: i2d
+        39: iload         4
+        41: i2d
+        42: aload         5
+        44: invokevirtual #173                // Method a:(Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+        47: d2i
+        48: ireturn
+
+  public final double a(java.lang.String, double, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: sipush        -28701
+         3: istore        10
+         5: sipush        -3712
+         8: istore        11
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        10
+        21: sipush        13702
+        24: istore        11
+        26: aload         8
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: dload         4
+        38: dload         6
+        40: dload_2
+        41: dsub
+        42: aload         8
+        44: iload         9
+        46: invokevirtual #170                // Method b:(Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        49: dreturn
+
+  public final int a(java.lang.String, int, int, int, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;IIILme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)I
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        7
+        21: sipush        13702
+        24: istore        8
+        26: aload         5
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: iload_2
+        36: i2d
+        37: iload_3
+        38: i2d
+        39: iload         4
+        41: i2d
+        42: aload         5
+        44: iload         6
+        46: invokevirtual #176                // Method a:(Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        49: d2i
+        50: ireturn
+
+  public final double b(java.lang.String, double, double, double);
+    descriptor: (Ljava/lang/String;DDD)D
+    Code:
+         0: dconst_0
+         1: dstore        8
+         3: invokestatic  #43                 // Method f:()Z
+         6: ifeq          13
+         9: iconst_1
+        10: goto          14
+        13: iconst_0
+        14: istore        10
+        16: sipush        -28701
+        19: istore        11
+        21: sipush        -3712
+        24: istore        12
+        26: aload_1
+        27: ldc           #74                 // String text
+        29: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        32: iload         10
+        34: ifeq          41
+        37: iconst_1
+        38: goto          42
+        41: iconst_0
+        42: istore        13
+        44: aload_1
+        45: invokevirtual #1                  // Method java/lang/String.length:()I
+        48: istore        10
+        50: iload         13
+        52: ifeq          67
+        55: iload         10
+        57: ifne          64
+        60: iconst_1
+        61: goto          65
+        64: iconst_0
+        65: istore        10
+        67: iload         10
+        69: ifeq          75
+        72: dload         4
+        74: dreturn
+        75: aload_0
+        76: aload_1
+        77: dload         6
+        79: invokevirtual #178                // Method b:(Ljava/lang/String;D)[Ljava/lang/String;
+        82: astore        14
+        84: dload         4
+        86: dstore        15
+        88: aload_0
+        89: iconst_1
+        90: invokevirtual #13                 // Method a:(Z)D
+        93: dstore        17
+        95: iconst_0
+        96: istore        19
+        98: aload         14
+       100: arraylength
+       101: istore        20
+       103: iload         19
+       105: iload         20
+       107: if_icmpge     161
+       110: aload         14
+       112: iload         19
+       114: aaload
+       115: astore        21
+       117: aload_0
+       118: aload         21
+       120: dload_2
+       121: dload         15
+       123: getstatic     #131                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       126: iconst_1
+       127: invokevirtual #16                 // Method a:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+       130: pop2
+       131: dload         15
+       133: dload         17
+       135: dadd
+       136: dstore        8
+       138: iload         13
+       140: ifne          146
+       143: goto          168
+       146: dload         8
+       148: dstore        15
+       150: iinc          19, 1
+       153: iload         13
+       155: ifeq          161
+       158: goto          103
+       161: dload         15
+       163: dstore        8
+       165: goto          168
+       168: dload         8
+       170: dreturn
+
+  public final int e(java.lang.String, int, int, int);
+    descriptor: (Ljava/lang/String;III)I
+    Code:
+         0: sipush        -28701
+         3: istore        5
+         5: sipush        -3712
+         8: istore        6
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: aload_0
+        17: aload_1
+        18: iload_2
+        19: i2d
+        20: iload_3
+        21: i2d
+        22: iload         4
+        24: i2d
+        25: invokevirtual #165                // Method b:(Ljava/lang/String;DDD)D
+        28: d2i
+        29: ireturn
+
+  public final double b(java.lang.String, double, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll, boolean);
+    descriptor: (Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+    Code:
+         0: aconst_null
+         1: astore        10
+         3: dconst_0
+         4: dstore        11
+         6: invokestatic  #43                 // Method f:()Z
+         9: ifeq          16
+        12: iconst_1
+        13: goto          17
+        16: iconst_0
+        17: istore        13
+        19: sipush        -28701
+        22: istore        14
+        24: sipush        -3712
+        27: istore        15
+        29: aload_1
+        30: ldc           #74                 // String text
+        32: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        35: iload         13
+        37: ifeq          44
+        40: iconst_1
+        41: goto          45
+        44: iconst_0
+        45: istore        16
+        47: sipush        -28690
+        50: istore        17
+        52: sipush        13702
+        55: istore        14
+        57: aload         8
+        59: ldc           #103                // String color
+        61: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        64: aload_1
+        65: invokevirtual #1                  // Method java/lang/String.length:()I
+        68: istore        13
+        70: iload         16
+        72: ifeq          87
+        75: iload         13
+        77: ifne          84
+        80: iconst_1
+        81: goto          85
+        84: iconst_0
+        85: istore        13
+        87: iload         13
+        89: ifeq          95
+        92: dload         4
+        94: dreturn
+        95: aload_0
+        96: aload_1
+        97: dload         6
+        99: invokevirtual #178                // Method b:(Ljava/lang/String;D)[Ljava/lang/String;
+       102: astore        18
+       104: dload         4
+       106: dstore        19
+       108: aload_0
+       109: iload         9
+       111: invokevirtual #13                 // Method a:(Z)D
+       114: dstore        21
+       116: iconst_0
+       117: istore        23
+       119: aload         18
+       121: arraylength
+       122: istore        24
+       124: iload         23
+       126: iload         24
+       128: if_icmpge     182
+       131: aload         18
+       133: iload         23
+       135: aaload
+       136: astore        10
+       138: aload_0
+       139: aload         10
+       141: dload_2
+       142: dload         19
+       144: aload         8
+       146: iload         9
+       148: invokevirtual #16                 // Method a:(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+       151: pop2
+       152: dload         19
+       154: dload         21
+       156: dadd
+       157: dstore        11
+       159: iload         16
+       161: ifne          167
+       164: goto          189
+       167: dload         11
+       169: dstore        19
+       171: iinc          23, 1
+       174: iload         16
+       176: ifeq          182
+       179: goto          124
+       182: dload         19
+       184: dstore        11
+       186: goto          189
+       189: dload         11
+       191: dreturn
+
+  public final double a(java.lang.String, double, boolean);
+    descriptor: (Ljava/lang/String;DZ)D
+    Code:
+         0: invokestatic  #43                 // Method f:()Z
+         3: ifeq          10
+         6: iconst_1
+         7: goto          11
+        10: iconst_0
+        11: istore        5
+        13: sipush        -28701
+        16: istore        6
+        18: sipush        -3712
+        21: istore        7
+        23: aload_1
+        24: ldc           #74                 // String text
+        26: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        29: iload         5
+        31: ifeq          38
+        34: iconst_1
+        35: goto          39
+        38: iconst_0
+        39: istore        8
+        41: aload_1
+        42: invokevirtual #1                  // Method java/lang/String.length:()I
+        45: istore        5
+        47: iload         8
+        49: ifeq          64
+        52: iload         5
+        54: ifne          61
+        57: iconst_1
+        58: goto          62
+        61: iconst_0
+        62: istore        5
+        64: iload         5
+        66: ifeq          71
+        69: dconst_0
+        70: dreturn
+        71: aload_0
+        72: aload_1
+        73: dload_2
+        74: invokevirtual #178                // Method b:(Ljava/lang/String;D)[Ljava/lang/String;
+        77: astore        9
+        79: aload         9
+        81: arraylength
+        82: i2d
+        83: aload_0
+        84: iload         4
+        86: invokevirtual #13                 // Method a:(Z)D
+        89: dmul
+        90: dreturn
+
+  private final java.lang.String[] b(java.lang.String, double);
+    descriptor: (Ljava/lang/String;D)[Ljava/lang/String;
+    Code:
+         0: aconst_null
+         1: astore        4
+         3: aconst_null
+         4: astore        5
+         6: invokestatic  #43                 // Method f:()Z
+         9: istore        6
+        11: aload_1
+        12: invokevirtual #1                  // Method java/lang/String.length:()I
+        15: istore        7
+        17: iload         6
+        19: ifeq          34
+        22: iload         7
+        24: ifne          31
+        27: iconst_1
+        28: goto          32
+        31: iconst_0
+        32: istore        7
+        34: iload         7
+        36: ifeq          44
+        39: iconst_0
+        40: anewarray     #2                  // class java/lang/String
+        43: areturn
+        44: aload_1
+        45: astore        5
+        47: iconst_1
+        48: anewarray     #2                  // class java/lang/String
+        51: dup
+        52: iconst_0
+        53: ldc           #181                // String \n
+        55: aastore
+        56: astore        8
+        58: aload         5
+        60: aload         8
+        62: iconst_0
+        63: iconst_0
+        64: invokestatic  #183                // Method kotlin/text/StringsKt.split:(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
+        67: astore        9
+        69: new           #189                // class java/util/ArrayList
+        72: dup
+        73: invokespecial #191                // Method java/util/ArrayList."<init>":()V
+        76: astore        10
+        78: aload         9
+        80: checkcast     #192                // class java/util/List
+        83: invokeinterface #194,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        88: astore        11
+        90: aload         11
+        92: invokeinterface #198,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        97: ifeq          491
+       100: aload         11
+       102: invokeinterface #203,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       107: checkcast     #2                  // class java/lang/String
+       110: astore        12
+       112: aload         12
+       114: invokevirtual #1                  // Method java/lang/String.length:()I
+       117: istore        7
+       119: iload         6
+       121: ifeq          136
+       124: iload         7
+       126: ifne          133
+       129: iconst_1
+       130: goto          134
+       133: iconst_0
+       134: istore        7
+       136: iload         7
+       138: ifeq          159
+       141: aload         10
+       143: ldc           #163                // String
+       145: invokeinterface #207,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       150: pop
+       151: iload         6
+       153: ifeq          159
+       156: goto          90
+       159: aload         12
+       161: astore        4
+       163: iconst_1
+       164: anewarray     #2                  // class java/lang/String
+       167: dup
+       168: iconst_0
+       169: ldc           #211                // String
+       171: aastore
+       172: astore        13
+       174: aload         4
+       176: aload         13
+       178: iconst_0
+       179: iconst_0
+       180: invokestatic  #183                // Method kotlin/text/StringsKt.split:(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
+       183: astore        14
+       185: new           #213                // class java/lang/StringBuilder
+       188: dup
+       189: invokespecial #215                // Method java/lang/StringBuilder."<init>":()V
+       192: astore        15
+       194: aload         14
+       196: invokeinterface #194,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       201: astore        16
+       203: aload         16
+       205: invokeinterface #198,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       210: ifeq          414
+       213: aload         16
+       215: invokeinterface #203,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       220: checkcast     #2                  // class java/lang/String
+       223: astore        17
+       225: aload         15
+       227: invokevirtual #216                // Method java/lang/StringBuilder.length:()I
+       230: istore        7
+       232: iload         6
+       234: ifne          240
+       237: goto          424
+       240: iload         6
+       242: ifeq          257
+       245: iload         7
+       247: ifne          254
+       250: iconst_1
+       251: goto          255
+       254: iconst_0
+       255: istore        7
+       257: iload         7
+       259: ifeq          273
+       262: aload         15
+       264: aload         17
+       266: invokevirtual #217                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       269: pop
+       270: goto          406
+       273: aload         15
+       275: invokestatic  #221                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       278: aload         17
+       280: invokedynamic #224,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       285: astore        18
+       287: aload_0
+       288: aload         18
+       290: iconst_0
+       291: iconst_0
+       292: bipush        6
+       294: aconst_null
+       295: invokestatic  #146                // Method a:(Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;Ljava/lang/String;IZILjava/lang/Object;)D
+       298: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       301: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+       304: dload_2
+       305: dsub
+       306: dup2
+       307: dstore        19
+       309: dconst_0
+       310: dcmpl
+       311: ifne          318
+       314: iconst_0
+       315: goto          330
+       318: dload         19
+       320: dconst_0
+       321: dcmpg
+       322: ifge          329
+       325: iconst_m1
+       326: goto          330
+       329: iconst_1
+       330: istore        7
+       332: iload         6
+       334: ifeq          392
+       337: iload         7
+       339: ifgt          358
+       342: aload         15
+       344: ldc           #211                // String
+       346: invokevirtual #217                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       349: aload         17
+       351: invokevirtual #217                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       354: pop
+       355: goto          406
+       358: aload         15
+       360: invokevirtual #227                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       363: astore        21
+       365: sipush        -28694
+       368: istore        22
+       370: sipush        -24720
+       373: istore        23
+       375: aload         21
+       377: ldc           #231                // String toString(...)
+       379: invokestatic  #88                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       382: aload         10
+       384: aload         21
+       386: invokeinterface #207,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       391: pop
+       392: aload         15
+       394: invokestatic  #233                // Method kotlin/text/StringsKt.clear:(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
+       397: pop
+       398: aload         15
+       400: aload         17
+       402: invokevirtual #217                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       405: pop
+       406: iload         6
+       408: ifeq          414
+       411: goto          203
+       414: aload         15
+       416: invokevirtual #216                // Method java/lang/StringBuilder.length:()I
+       419: istore        7
+       421: goto          424
+       424: iload         6
+       426: ifeq          441
+       429: iload         7
+       431: ifle          438
+       434: iconst_1
+       435: goto          439
+       438: iconst_0
+       439: istore        7
+       441: iload         7
+       443: ifeq          488
+       446: aload         15
+       448: invokevirtual #227                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       451: astore        17
+       453: sipush        -28696
+       456: istore        18
+       458: sipush        -1283
+       461: istore        19
+       463: aload         17
+       465: ldc           #231                // String toString(...)
+       467: invokestatic  #88                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       470: aload         10
+       472: aload         17
+       474: invokeinterface #207,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       479: pop
+       480: iload         6
+       482: ifne          488
+       485: goto          491
+       488: goto          90
+       491: aload         10
+       493: astore        11
+       495: iconst_0
+       496: istore        12
+       498: aload         11
+       500: iconst_0
+       501: anewarray     #2                  // class java/lang/String
+       504: invokeinterface #237,  2          // InterfaceMethod java/util/Collection.toArray:([Ljava/lang/Object;)[Ljava/lang/Object;
+       509: checkcast     #243                // class "[Ljava/lang/String;"
+       512: areturn
+
+  public final double a(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        7
+        21: sipush        13702
+        24: istore        8
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_0
+        35: invokestatic  #221                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        38: aload_1
+        39: invokestatic  #245                // Method java/lang/Double.parseDouble:(Ljava/lang/String;)D
+        42: dload_2
+        43: dload         4
+        45: aload         6
+        47: iconst_0
+        48: invokevirtual #170                // Method b:(Ljava/lang/String;DDDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D
+        51: dreturn
+
+  public final double b(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        7
+        21: sipush        13702
+        24: istore        8
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        39: dload         4
+        41: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        44: aload         6
+        46: iconst_0
+        47: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        50: invokestatic  #254                // Method c:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        53: checkcast     #150                // class java/lang/Double
+        56: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        59: dreturn
+
+  public final double c(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28691
+        19: istore        7
+        21: sipush        13277
+        24: istore        8
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        39: dload         4
+        41: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        44: aload         6
+        46: iconst_0
+        47: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        50: invokestatic  #257                // Method d:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        53: checkcast     #150                // class java/lang/Double
+        56: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        59: dreturn
+
+  public final double d(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        7
+        21: sipush        13702
+        24: istore        8
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        39: dload         4
+        41: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        44: aload         6
+        46: iconst_0
+        47: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        50: invokestatic  #259                // Method e:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        53: checkcast     #150                // class java/lang/Double
+        56: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        59: dreturn
+
+  public final double e(java.lang.String, double, double, me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll);
+    descriptor: (Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;)D
+    Code:
+         0: sipush        -28701
+         3: istore        7
+         5: sipush        -3712
+         8: istore        8
+        10: aload_1
+        11: ldc           #74                 // String text
+        13: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: sipush        -28690
+        19: istore        7
+        21: sipush        13702
+        24: istore        8
+        26: aload         6
+        28: ldc           #103                // String color
+        30: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: aload_0
+        34: aload_1
+        35: dload_2
+        36: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        39: dload         4
+        41: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        44: aload         6
+        46: iconst_0
+        47: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        50: invokestatic  #261                // Method f:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        53: checkcast     #150                // class java/lang/Double
+        56: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        59: dreturn
+
+  public final double a(java.lang.String);
+    descriptor: (Ljava/lang/String;)D
+    Code:
+         0: sipush        -28701
+         3: istore_2
+         4: sipush        -3712
+         7: istore_3
+         8: aload_1
+         9: ldc           #74                 // String text
+        11: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_0
+        15: aload_1
+        16: iconst_0
+        17: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        20: invokestatic  #263                // Method a:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        23: checkcast     #150                // class java/lang/Double
+        26: invokevirtual #155                // Method java/lang/Double.doubleValue:()D
+        29: dreturn
+
+  public final int b(java.lang.String);
+    descriptor: (Ljava/lang/String;)I
+    Code:
+         0: sipush        -28701
+         3: istore_2
+         4: sipush        -3712
+         7: istore_3
+         8: aload_1
+         9: ldc           #74                 // String text
+        11: invokestatic  #76                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: aload_0
+        15: invokestatic  #221                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        18: aload_1
+        19: invokestatic  #245                // Method java/lang/Double.parseDouble:(Ljava/lang/String;)D
+        22: invokestatic  #149                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        25: iconst_0
+        26: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        29: iconst_2
+        30: invokestatic  #266                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        33: aconst_null
+        34: invokestatic  #271                // Method b:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        37: checkcast     #267                // class java/lang/Integer
+        40: invokevirtual #274                // Method java/lang/Integer.intValue:()I
+        43: ireturn
+
+  public final double c();
+    descriptor: ()D
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokestatic  #221                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+         5: iconst_0
+         6: invokevirtual #48                 // Method b:(Ljava/lang/String;Z)I
+         9: i2d
+        10: dreturn
+
+  public final int d();
+    descriptor: ()I
+    Code:
+         0: aload_0
+         1: iconst_0
+         2: invokestatic  #249                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+         5: invokestatic  #277                // Method c:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+         8: checkcast     #267                // class java/lang/Integer
+        11: invokevirtual #274                // Method java/lang/Integer.intValue:()I
+        14: ireturn
+
+  public static void d(boolean);
+    descriptor: (Z)V
+    Code:
+         0: iload_0
+         1: putstatic     #280                // Field lllllIllllIlIIIIIIlllIIllllllIlIlIIlIIllIIlllllIIlIIIIIIlllllIIllllllllIIIlllIlllllll:Z
+         4: return
+
+  public static boolean e();
+    descriptor: ()Z
+    Code:
+         0: getstatic     #280                // Field lllllIllllIlIIIIIIlllIIllllllIlIlIIlIIllIIlllllIIlIIIIIIlllllIIllllllllIIIlllIlllllll:Z
+         3: ireturn
+
+  public static boolean f();
+    descriptor: ()Z
+    Code:
+         0: invokestatic  #19                 // Method e:()Z
+         3: istore_0
+         4: iload_0
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: ireturn
+
+  private static java.lang.String a(int, int);
+    descriptor: (II)Ljava/lang/String;
+    Code:
+         0: iload_0
+         1: sipush        -28694
+         4: ixor
+         5: ldc_w         #284                // int 65535
+         8: iand
+         9: istore_2
+        10: getstatic     #285                // Field b:[Ljava/lang/String;
+        13: iload_2
+        14: aaload
+        15: ifnonnull     2626
+        18: getstatic     #287                // Field a:[Ljava/lang/String;
+        21: iload_2
+        22: aaload
+        23: invokevirtual #289                // Method java/lang/String.toCharArray:()[C
+        26: astore_3
+        27: aload_3
+        28: iconst_0
+        29: caload
+        30: sipush        255
+        33: iand
+        34: tableswitch   { // 0 to 254
+
+                       0: 1068
+
+                       1: 1074
+
+                       2: 1079
+
+                       3: 1084
+
+                       4: 1089
+
+                       5: 1094
+
+                       6: 1098
+
+                       7: 1104
+
+                       8: 1109
+
+                       9: 1114
+
+                      10: 1119
+
+                      11: 1124
+
+                      12: 1129
+
+                      13: 1135
+
+                      14: 1140
+
+                      15: 1145
+
+                      16: 1151
+
+                      17: 1157
+
+                      18: 1162
+
+                      19: 1168
+
+                      20: 1174
+
+                      21: 1180
+
+                      22: 1186
+
+                      23: 1192
+
+                      24: 1198
+
+                      25: 1202
+
+                      26: 1208
+
+                      27: 1213
+
+                      28: 1219
+
+                      29: 1225
+
+                      30: 1230
+
+                      31: 1235
+
+                      32: 1241
+
+                      33: 1246
+
+                      34: 1251
+
+                      35: 1257
+
+                      36: 1263
+
+                      37: 1268
+
+                      38: 1273
+
+                      39: 1278
+
+                      40: 1283
+
+                      41: 1288
+
+                      42: 1294
+
+                      43: 1299
+
+                      44: 1305
+
+                      45: 1311
+
+                      46: 1316
+
+                      47: 1322
+
+                      48: 1327
+
+                      49: 1333
+
+                      50: 1339
+
+                      51: 1345
+
+                      52: 1350
+
+                      53: 1355
+
+                      54: 1361
+
+                      55: 1367
+
+                      56: 1373
+
+                      57: 1378
+
+                      58: 1384
+
+                      59: 1389
+
+                      60: 1394
+
+                      61: 1399
+
+                      62: 1405
+
+                      63: 1410
+
+                      64: 1416
+
+                      65: 1422
+
+                      66: 1427
+
+                      67: 1433
+
+                      68: 1439
+
+                      69: 1445
+
+                      70: 1450
+
+                      71: 1455
+
+                      72: 1461
+
+                      73: 1467
+
+                      74: 1472
+
+                      75: 1477
+
+                      76: 1482
+
+                      77: 1488
+
+                      78: 1493
+
+                      79: 1499
+
+                      80: 1505
+
+                      81: 1511
+
+                      82: 1517
+
+                      83: 1523
+
+                      84: 1529
+
+                      85: 1535
+
+                      86: 1540
+
+                      87: 1545
+
+                      88: 1551
+
+                      89: 1557
+
+                      90: 1562
+
+                      91: 1567
+
+                      92: 1572
+
+                      93: 1577
+
+                      94: 1582
+
+                      95: 1588
+
+                      96: 1593
+
+                      97: 1598
+
+                      98: 1604
+
+                      99: 1610
+
+                     100: 1615
+
+                     101: 1621
+
+                     102: 1626
+
+                     103: 1631
+
+                     104: 1637
+
+                     105: 1643
+
+                     106: 1649
+
+                     107: 1654
+
+                     108: 1659
+
+                     109: 1664
+
+                     110: 1669
+
+                     111: 1674
+
+                     112: 1680
+
+                     113: 1686
+
+                     114: 1691
+
+                     115: 1696
+
+                     116: 1702
+
+                     117: 1707
+
+                     118: 1713
+
+                     119: 1718
+
+                     120: 1723
+
+                     121: 1728
+
+                     122: 1734
+
+                     123: 1740
+
+                     124: 1745
+
+                     125: 1750
+
+                     126: 1755
+
+                     127: 1761
+
+                     128: 1767
+
+                     129: 1772
+
+                     130: 1778
+
+                     131: 1784
+
+                     132: 1789
+
+                     133: 1794
+
+                     134: 1800
+
+                     135: 1805
+
+                     136: 1811
+
+                     137: 1817
+
+                     138: 1823
+
+                     139: 1829
+
+                     140: 1834
+
+                     141: 1840
+
+                     142: 1846
+
+                     143: 1851
+
+                     144: 1857
+
+                     145: 1863
+
+                     146: 1868
+
+                     147: 1873
+
+                     148: 1879
+
+                     149: 1884
+
+                     150: 1889
+
+                     151: 1895
+
+                     152: 1900
+
+                     153: 1905
+
+                     154: 1911
+
+                     155: 1916
+
+                     156: 1921
+
+                     157: 1926
+
+                     158: 1931
+
+                     159: 1937
+
+                     160: 1942
+
+                     161: 1948
+
+                     162: 1954
+
+                     163: 1960
+
+                     164: 1966
+
+                     165: 1972
+
+                     166: 1978
+
+                     167: 1984
+
+                     168: 1990
+
+                     169: 1996
+
+                     170: 2002
+
+                     171: 2006
+
+                     172: 2011
+
+                     173: 2017
+
+                     174: 2022
+
+                     175: 2028
+
+                     176: 2034
+
+                     177: 2040
+
+                     178: 2045
+
+                     179: 2050
+
+                     180: 2055
+
+                     181: 2060
+
+                     182: 2065
+
+                     183: 2071
+
+                     184: 2076
+
+                     185: 2080
+
+                     186: 2085
+
+                     187: 2091
+
+                     188: 2095
+
+                     189: 2101
+
+                     190: 2107
+
+                     191: 2112
+
+                     192: 2116
+
+                     193: 2121
+
+                     194: 2127
+
+                     195: 2132
+
+                     196: 2138
+
+                     197: 2144
+
+                     198: 2150
+
+                     199: 2155
+
+                     200: 2161
+
+                     201: 2167
+
+                     202: 2173
+
+                     203: 2179
+
+                     204: 2184
+
+                     205: 2190
+
+                     206: 2195
+
+                     207: 2200
+
+                     208: 2206
+
+                     209: 2212
+
+                     210: 2218
+
+                     211: 2224
+
+                     212: 2230
+
+                     213: 2235
+
+                     214: 2240
+
+                     215: 2246
+
+                     216: 2251
+
+                     217: 2257
+
+                     218: 2263
+
+                     219: 2269
+
+                     220: 2274
+
+                     221: 2280
+
+                     222: 2285
+
+                     223: 2291
+
+                     224: 2297
+
+                     225: 2303
+
+                     226: 2308
+
+                     227: 2314
+
+                     228: 2319
+
+                     229: 2324
+
+                     230: 2329
+
+                     231: 2334
+
+                     232: 2340
+
+                     233: 2346
+
+                     234: 2351
+
+                     235: 2357
+
+                     236: 2362
+
+                     237: 2367
+
+                     238: 2372
+
+                     239: 2377
+
+                     240: 2383
+
+                     241: 2388
+
+                     242: 2393
+
+                     243: 2398
+
+                     244: 2403
+
+                     245: 2408
+
+                     246: 2414
+
+                     247: 2419
+
+                     248: 2425
+
+                     249: 2430
+
+                     250: 2436
+
+                     251: 2441
+
+                     252: 2447
+
+                     253: 2453
+
+                     254: 2459
+                 default: 2465
+            }
+      1068: sipush        210
+      1071: goto          2467
+      1074: bipush        53
+      1076: goto          2467
+      1079: bipush        49
+      1081: goto          2467
+      1084: bipush        21
+      1086: goto          2467
+      1089: bipush        127
+      1091: goto          2467
+      1094: iconst_4
+      1095: goto          2467
+      1098: sipush        246
+      1101: goto          2467
+      1104: bipush        8
+      1106: goto          2467
+      1109: bipush        93
+      1111: goto          2467
+      1114: bipush        32
+      1116: goto          2467
+      1119: bipush        73
+      1121: goto          2467
+      1124: bipush        65
+      1126: goto          2467
+      1129: sipush        233
+      1132: goto          2467
+      1135: bipush        125
+      1137: goto          2467
+      1140: bipush        94
+      1142: goto          2467
+      1145: sipush        166
+      1148: goto          2467
+      1151: sipush        227
+      1154: goto          2467
+      1157: bipush        101
+      1159: goto          2467
+      1162: sipush        185
+      1165: goto          2467
+      1168: sipush        220
+      1171: goto          2467
+      1174: sipush        180
+      1177: goto          2467
+      1180: sipush        236
+      1183: goto          2467
+      1186: sipush        226
+      1189: goto          2467
+      1192: sipush        138
+      1195: goto          2467
+      1198: iconst_3
+      1199: goto          2467
+      1202: sipush        135
+      1205: goto          2467
+      1208: bipush        56
+      1210: goto          2467
+      1213: sipush        155
+      1216: goto          2467
+      1219: sipush        209
+      1222: goto          2467
+      1225: bipush        55
+      1227: goto          2467
+      1230: bipush        60
+      1232: goto          2467
+      1235: sipush        132
+      1238: goto          2467
+      1241: bipush        25
+      1243: goto          2467
+      1246: bipush        9
+      1248: goto          2467
+      1251: sipush        241
+      1254: goto          2467
+      1257: sipush        169
+      1260: goto          2467
+      1263: bipush        105
+      1265: goto          2467
+      1268: bipush        77
+      1270: goto          2467
+      1273: bipush        13
+      1275: goto          2467
+      1278: bipush        107
+      1280: goto          2467
+      1283: bipush        64
+      1285: goto          2467
+      1288: sipush        231
+      1291: goto          2467
+      1294: bipush        42
+      1296: goto          2467
+      1299: sipush        249
+      1302: goto          2467
+      1305: sipush        163
+      1308: goto          2467
+      1311: bipush        110
+      1313: goto          2467
+      1316: sipush        184
+      1319: goto          2467
+      1322: bipush        28
+      1324: goto          2467
+      1327: sipush        254
+      1330: goto          2467
+      1333: sipush        177
+      1336: goto          2467
+      1339: sipush        239
+      1342: goto          2467
+      1345: bipush        41
+      1347: goto          2467
+      1350: bipush        115
+      1352: goto          2467
+      1355: sipush        223
+      1358: goto          2467
+      1361: sipush        207
+      1364: goto          2467
+      1367: sipush        190
+      1370: goto          2467
+      1373: bipush        67
+      1375: goto          2467
+      1378: sipush        232
+      1381: goto          2467
+      1384: bipush        48
+      1386: goto          2467
+      1389: bipush        97
+      1391: goto          2467
+      1394: bipush        61
+      1396: goto          2467
+      1399: sipush        215
+      1402: goto          2467
+      1405: bipush        11
+      1407: goto          2467
+      1410: sipush        150
+      1413: goto          2467
+      1416: sipush        197
+      1419: goto          2467
+      1422: bipush        92
+      1424: goto          2467
+      1427: sipush        183
+      1430: goto          2467
+      1433: sipush        189
+      1436: goto          2467
+      1439: sipush        245
+      1442: goto          2467
+      1445: bipush        108
+      1447: goto          2467
+      1450: bipush        112
+      1452: goto          2467
+      1455: sipush        131
+      1458: goto          2467
+      1461: sipush        213
+      1464: goto          2467
+      1467: bipush        50
+      1469: goto          2467
+      1472: bipush        66
+      1474: goto          2467
+      1477: bipush        51
+      1479: goto          2467
+      1482: sipush        206
+      1485: goto          2467
+      1488: bipush        120
+      1490: goto          2467
+      1493: sipush        250
+      1496: goto          2467
+      1499: sipush        200
+      1502: goto          2467
+      1505: sipush        221
+      1508: goto          2467
+      1511: sipush        235
+      1514: goto          2467
+      1517: sipush        248
+      1520: goto          2467
+      1523: sipush        224
+      1526: goto          2467
+      1529: sipush        151
+      1532: goto          2467
+      1535: bipush        44
+      1537: goto          2467
+      1540: bipush        52
+      1542: goto          2467
+      1545: sipush        156
+      1548: goto          2467
+      1551: sipush        168
+      1554: goto          2467
+      1557: bipush        20
+      1559: goto          2467
+      1562: bipush        84
+      1564: goto          2467
+      1567: bipush        81
+      1569: goto          2467
+      1572: bipush        119
+      1574: goto          2467
+      1577: bipush        62
+      1579: goto          2467
+      1582: sipush        164
+      1585: goto          2467
+      1588: bipush        99
+      1590: goto          2467
+      1593: bipush        78
+      1595: goto          2467
+      1598: sipush        145
+      1601: goto          2467
+      1604: sipush        176
+      1607: goto          2467
+      1610: bipush        63
+      1612: goto          2467
+      1615: sipush        154
+      1618: goto          2467
+      1621: bipush        80
+      1623: goto          2467
+      1626: bipush        68
+      1628: goto          2467
+      1631: sipush        234
+      1634: goto          2467
+      1637: sipush        158
+      1640: goto          2467
+      1643: sipush        137
+      1646: goto          2467
+      1649: bipush        59
+      1651: goto          2467
+      1654: bipush        79
+      1656: goto          2467
+      1659: bipush        31
+      1661: goto          2467
+      1664: bipush        85
+      1666: goto          2467
+      1669: bipush        15
+      1671: goto          2467
+      1674: sipush        171
+      1677: goto          2467
+      1680: sipush        130
+      1683: goto          2467
+      1686: bipush        117
+      1688: goto          2467
+      1691: bipush        17
+      1693: goto          2467
+      1696: sipush        136
+      1699: goto          2467
+      1702: bipush        40
+      1704: goto          2467
+      1707: sipush        149
+      1710: goto          2467
+      1713: bipush        37
+      1715: goto          2467
+      1718: bipush        19
+      1720: goto          2467
+      1723: bipush        75
+      1725: goto          2467
+      1728: sipush        141
+      1731: goto          2467
+      1734: sipush        153
+      1737: goto          2467
+      1740: bipush        82
+      1742: goto          2467
+      1745: bipush        87
+      1747: goto          2467
+      1750: bipush        16
+      1752: goto          2467
+      1755: sipush        194
+      1758: goto          2467
+      1761: sipush        160
+      1764: goto          2467
+      1767: bipush        6
+      1769: goto          2467
+      1772: sipush        187
+      1775: goto          2467
+      1778: sipush        148
+      1781: goto          2467
+      1784: bipush        58
+      1786: goto          2467
+      1789: bipush        38
+      1791: goto          2467
+      1794: sipush        255
+      1797: goto          2467
+      1800: bipush        113
+      1802: goto          2467
+      1805: sipush        142
+      1808: goto          2467
+      1811: sipush        199
+      1814: goto          2467
+      1817: sipush        129
+      1820: goto          2467
+      1823: sipush        196
+      1826: goto          2467
+      1829: bipush        100
+      1831: goto          2467
+      1834: sipush        192
+      1837: goto          2467
+      1840: sipush        243
+      1843: goto          2467
+      1846: bipush        36
+      1848: goto          2467
+      1851: sipush        251
+      1854: goto          2467
+      1857: sipush        238
+      1860: goto          2467
+      1863: bipush        26
+      1865: goto          2467
+      1868: bipush        90
+      1870: goto          2467
+      1873: sipush        188
+      1876: goto          2467
+      1879: bipush        18
+      1881: goto          2467
+      1884: bipush        10
+      1886: goto          2467
+      1889: sipush        140
+      1892: goto          2467
+      1895: bipush        30
+      1897: goto          2467
+      1900: bipush        91
+      1902: goto          2467
+      1905: sipush        225
+      1908: goto          2467
+      1911: bipush        47
+      1913: goto          2467
+      1916: bipush        98
+      1918: goto          2467
+      1921: bipush        76
+      1923: goto          2467
+      1926: bipush        126
+      1928: goto          2467
+      1931: sipush        237
+      1934: goto          2467
+      1937: bipush        109
+      1939: goto          2467
+      1942: sipush        219
+      1945: goto          2467
+      1948: sipush        179
+      1951: goto          2467
+      1954: sipush        253
+      1957: goto          2467
+      1960: sipush        198
+      1963: goto          2467
+      1966: sipush        240
+      1969: goto          2467
+      1972: sipush        143
+      1975: goto          2467
+      1978: sipush        147
+      1981: goto          2467
+      1984: sipush        193
+      1987: goto          2467
+      1990: sipush        229
+      1993: goto          2467
+      1996: sipush        152
+      1999: goto          2467
+      2002: iconst_0
+      2003: goto          2467
+      2006: bipush        88
+      2008: goto          2467
+      2011: sipush        174
+      2014: goto          2467
+      2017: bipush        7
+      2019: goto          2467
+      2022: sipush        161
+      2025: goto          2467
+      2028: sipush        182
+      2031: goto          2467
+      2034: sipush        172
+      2037: goto          2467
+      2040: bipush        12
+      2042: goto          2467
+      2045: bipush        70
+      2047: goto          2467
+      2050: bipush        39
+      2052: goto          2467
+      2055: bipush        23
+      2057: goto          2467
+      2060: bipush        89
+      2062: goto          2467
+      2065: sipush        157
+      2068: goto          2467
+      2071: bipush        57
+      2073: goto          2467
+      2076: iconst_2
+      2077: goto          2467
+      2080: bipush        122
+      2082: goto          2467
+      2085: sipush        144
+      2088: goto          2467
+      2091: iconst_1
+      2092: goto          2467
+      2095: sipush        128
+      2098: goto          2467
+      2101: sipush        134
+      2104: goto          2467
+      2107: bipush        96
+      2109: goto          2467
+      2112: iconst_5
+      2113: goto          2467
+      2116: bipush        72
+      2118: goto          2467
+      2121: sipush        204
+      2124: goto          2467
+      2127: bipush        104
+      2129: goto          2467
+      2132: sipush        159
+      2135: goto          2467
+      2138: sipush        242
+      2141: goto          2467
+      2144: sipush        133
+      2147: goto          2467
+      2150: bipush        33
+      2152: goto          2467
+      2155: sipush        165
+      2158: goto          2467
+      2161: sipush        247
+      2164: goto          2467
+      2167: sipush        205
+      2170: goto          2467
+      2173: sipush        230
+      2176: goto          2467
+      2179: bipush        45
+      2181: goto          2467
+      2184: sipush        216
+      2187: goto          2467
+      2190: bipush        29
+      2192: goto          2467
+      2195: bipush        102
+      2197: goto          2467
+      2200: sipush        203
+      2203: goto          2467
+      2206: sipush        181
+      2209: goto          2467
+      2212: sipush        217
+      2215: goto          2467
+      2218: sipush        218
+      2221: goto          2467
+      2224: sipush        201
+      2227: goto          2467
+      2230: bipush        116
+      2232: goto          2467
+      2235: bipush        74
+      2237: goto          2467
+      2240: sipush        173
+      2243: goto          2467
+      2246: bipush        83
+      2248: goto          2467
+      2251: sipush        212
+      2254: goto          2467
+      2257: sipush        178
+      2260: goto          2467
+      2263: sipush        244
+      2266: goto          2467
+      2269: bipush        69
+      2271: goto          2467
+      2274: sipush        146
+      2277: goto          2467
+      2280: bipush        103
+      2282: goto          2467
+      2285: sipush        139
+      2288: goto          2467
+      2291: sipush        191
+      2294: goto          2467
+      2297: sipush        252
+      2300: goto          2467
+      2303: bipush        123
+      2305: goto          2467
+      2308: sipush        222
+      2311: goto          2467
+      2314: bipush        14
+      2316: goto          2467
+      2319: bipush        106
+      2321: goto          2467
+      2324: bipush        86
+      2326: goto          2467
+      2329: bipush        111
+      2331: goto          2467
+      2334: sipush        202
+      2337: goto          2467
+      2340: sipush        214
+      2343: goto          2467
+      2346: bipush        54
+      2348: goto          2467
+      2351: sipush        162
+      2354: goto          2467
+      2357: bipush        46
+      2359: goto          2467
+      2362: bipush        24
+      2364: goto          2467
+      2367: bipush        22
+      2369: goto          2467
+      2372: bipush        121
+      2374: goto          2467
+      2377: sipush        208
+      2380: goto          2467
+      2383: bipush        71
+      2385: goto          2467
+      2388: bipush        34
+      2390: goto          2467
+      2393: bipush        118
+      2395: goto          2467
+      2398: bipush        43
+      2400: goto          2467
+      2403: bipush        95
+      2405: goto          2467
+      2408: sipush        167
+      2411: goto          2467
+      2414: bipush        27
+      2416: goto          2467
+      2419: sipush        175
+      2422: goto          2467
+      2425: bipush        35
+      2427: goto          2467
+      2430: sipush        195
+      2433: goto          2467
+      2436: bipush        124
+      2438: goto          2467
+      2441: sipush        228
+      2444: goto          2467
+      2447: sipush        186
+      2450: goto          2467
+      2453: sipush        211
+      2456: goto          2467
+      2459: sipush        170
+      2462: goto          2467
+      2465: bipush        114
+      2467: istore        4
+      2469: iload_1
+      2470: sipush        255
+      2473: iand
+      2474: iload         4
+      2476: isub
+      2477: istore        5
+      2479: iload         5
+      2481: ifge          2490
+      2484: iinc_w        5, 256
+      2490: iload_1
+      2491: ldc_w         #284                // int 65535
+      2494: iand
+      2495: bipush        8
+      2497: iushr
+      2498: iload         4
+      2500: isub
+      2501: istore        6
+      2503: iload         6
+      2505: ifge          2514
+      2508: iinc_w        6, 256
+      2514: iconst_0
+      2515: istore        7
+      2517: iload         7
+      2519: aload_3
+      2520: arraylength
+      2521: if_icmpge     2610
+      2524: iload         7
+      2526: iconst_2
+      2527: irem
+      2528: istore        8
+      2530: aload_3
+      2531: iload         7
+      2533: caload
+      2534: istore        9
+      2536: iload         8
+      2538: ifne          2574
+      2541: aload_3
+      2542: iload         7
+      2544: iload         9
+      2546: iload         5
+      2548: ixor
+      2549: i2c
+      2550: castore
+      2551: iload         5
+      2553: iconst_3
+      2554: iushr
+      2555: iload         5
+      2557: iconst_5
+      2558: ishl
+      2559: ior
+      2560: aload_3
+      2561: iload         7
+      2563: caload
+      2564: ixor
+      2565: sipush        255
+      2568: iand
+      2569: istore        5
+      2571: goto          2604
+      2574: aload_3
+      2575: iload         7
+      2577: iload         9
+      2579: iload         6
+      2581: ixor
+      2582: i2c
+      2583: castore
+      2584: iload         6
+      2586: iconst_3
+      2587: iushr
+      2588: iload         6
+      2590: iconst_5
+      2591: ishl
+      2592: ior
+      2593: aload_3
+      2594: iload         7
+      2596: caload
+      2597: ixor
+      2598: sipush        255
+      2601: iand
+      2602: istore        6
+      2604: iinc          7, 1
+      2607: goto          2517
+      2610: getstatic     #285                // Field b:[Ljava/lang/String;
+      2613: iload_2
+      2614: new           #2                  // class java/lang/String
+      2617: dup
+      2618: aload_3
+      2619: invokespecial #293                // Method java/lang/String."<init>":([C)V
+      2622: invokevirtual #296                // Method java/lang/String.intern:()Ljava/lang/String;
+      2625: aastore
+      2626: getstatic     #285                // Field b:[Ljava/lang/String;
+      2629: iload_2
+      2630: aaload
+      2631: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: aconst_null
+         1: putstatic     #299                // Field var20:Lme/octo/client/PXDyn;
+         4: aconst_null
+         5: astore_0
+         6: aconst_null
+         7: astore_0
+         8: bipush        10
+        10: anewarray     #2                  // class java/lang/String
+        13: astore_1
+        14: iconst_0
+        15: istore_2
+        16: ldc_w         #303                // String ?��?\u009dY?V,\u001bB?@?\u000eD9\u0095\u0010%��\u0018?zwu ?��\r\u0085��{V��?@\u0003?��쨹?\u0003��{\u001a\u0005?\u001e:��\u0019\u0004?\u0093\u0017P\u000e\u000e>??\f?=w?\u0007��.f(\u00059\u0007&\u0092\u009a
+        19: astore_3
+        20: ldc_w         #303                // String ?��?\u009dY?V,\u001bB?@?\u000eD9\u0095\u0010%��\u0018?zwu ?��\r\u0085��{V��?@\u0003?��쨹?\u0003��{\u001a\u0005?\u001e:��\u0019\u0004?\u0093\u0017P\u000e\u000e>??\f?=w?\u0007��.f(\u00059\u0007&\u0092\u009a
+        23: invokevirtual #1                  // Method java/lang/String.length:()I
+        26: istore        4
+        28: bipush        13
+        30: istore        5
+        32: iconst_m1
+        33: istore        6
+        35: iconst_0
+        36: invokestatic  #143                // Method d:(Z)V
+        39: bipush        120
+        41: istore        7
+        43: aload_3
+        44: iinc          6, 1
+        47: iload         6
+        49: iload         6
+        51: iload         5
+        53: iadd
+        54: invokevirtual #82                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+        57: astore        8
+        59: iconst_m1
+        60: istore        9
+        62: aload         8
+        64: invokevirtual #289                // Method java/lang/String.toCharArray:()[C
+        67: astore        10
+        69: aload         10
+        71: arraylength
+        72: istore        11
+        74: iconst_0
+        75: istore        12
+        77: iload         7
+        79: istore        13
+        81: aload         10
+        83: astore_0
+        84: iload         11
+        86: istore        14
+        88: iload         11
+        90: iconst_1
+        91: if_icmpgt     109
+        94: aload         10
+        96: astore        16
+        98: iload         7
+       100: istore        15
+       102: iload         12
+       104: istore        17
+       106: goto          139
+       109: iload         7
+       111: istore        13
+       113: iload         11
+       115: istore        14
+       117: iload         11
+       119: iload         12
+       121: if_icmpgt     127
+       124: goto          276
+       127: aload         10
+       129: astore        16
+       131: iload         7
+       133: istore        15
+       135: iload         12
+       137: istore        17
+       139: aload         16
+       141: iload         17
+       143: aload         16
+       145: iload         17
+       147: caload
+       148: iload         15
+       150: ixor
+       151: iload         12
+       153: bipush        7
+       155: irem
+       156: tableswitch   { // 0 to 5
+
+                       0: 196
+
+                       1: 200
+
+                       2: 205
+
+                       3: 210
+
+                       4: 215
+
+                       5: 220
+                 default: 225
+            }
+       196: iconst_2
+       197: goto          227
+       200: bipush        102
+       202: goto          227
+       205: bipush        85
+       207: goto          227
+       210: bipush        36
+       212: goto          227
+       215: bipush        16
+       217: goto          227
+       220: bipush        108
+       222: goto          227
+       225: bipush        90
+       227: ixor
+       228: i2c
+       229: castore
+       230: iinc          12, 1
+       233: iload         13
+       235: ifne          252
+       238: iload         13
+       240: istore        17
+       242: aload_0
+       243: astore        16
+       245: iload         13
+       247: istore        15
+       249: goto          139
+       252: iload         14
+       254: iload         12
+       256: if_icmpgt     262
+       259: goto          276
+       262: aload_0
+       263: astore        16
+       265: iload         13
+       267: istore        15
+       269: iload         12
+       271: istore        17
+       273: goto          139
+       276: new           #2                  // class java/lang/String
+       279: dup
+       280: aload_0
+       281: invokespecial #293                // Method java/lang/String."<init>":([C)V
+       284: invokevirtual #296                // Method java/lang/String.intern:()Ljava/lang/String;
+       287: astore        10
+       289: iload         9
+       291: lookupswitch  { // 1
+
+                       0: 308
+                 default: 594
+            }
+       308: aload_1
+       309: iload_2
+       310: iinc          2, 1
+       313: aload         10
+       315: aastore
+       316: iload         6
+       318: iload         5
+       320: iadd
+       321: dup
+       322: istore        6
+       324: iload         4
+       326: if_icmplt     583
+       329: aload_1
+       330: putstatic     #287                // Field a:[Ljava/lang/String;
+       333: bipush        10
+       335: anewarray     #2                  // class java/lang/String
+       338: putstatic     #285                // Field b:[Ljava/lang/String;
+       341: new           #305                // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       344: dup
+       345: aconst_null
+       346: checkcast     #307                // class kotlin/jvm/internal/DefaultConstructorMarker
+       349: invokespecial #309                // Method me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+       352: putstatic     #312                // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       355: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       358: dup
+       359: ldc2_w        #316                // double 0.4d
+       362: invokespecial #318                // Method "<init>":(D)V
+       365: putstatic     #321                // Field lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       368: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       371: dup
+       372: ldc2_w        #325                // double 0.5d
+       375: invokespecial #318                // Method "<init>":(D)V
+       378: putstatic     #327                // Field IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       381: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       384: dup
+       385: ldc2_w        #329                // double 0.566d
+       388: invokespecial #318                // Method "<init>":(D)V
+       391: putstatic     #331                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       394: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       397: dup
+       398: ldc2_w        #334                // double 0.625d
+       401: invokespecial #318                // Method "<init>":(D)V
+       404: putstatic     #336                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       407: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       410: dup
+       411: ldc2_w        #339                // double 0.75d
+       414: invokespecial #318                // Method "<init>":(D)V
+       417: putstatic     #341                // Field lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       420: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       423: dup
+       424: ldc2_w        #344                // double 0.825d
+       427: invokespecial #318                // Method "<init>":(D)V
+       430: putstatic     #346                // Field IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       433: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       436: dup
+       437: ldc2_w        #349                // double 0.9d
+       440: invokespecial #318                // Method "<init>":(D)V
+       443: putstatic     #351                // Field llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       446: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       449: dup
+       450: dconst_1
+       451: invokespecial #318                // Method "<init>":(D)V
+       454: putstatic     #354                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       457: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       460: dup
+       461: ldc2_w        #357                // double 1.25d
+       464: invokespecial #318                // Method "<init>":(D)V
+       467: putstatic     #359                // Field lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       470: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       473: dup
+       474: ldc2_w        #361                // double 1.5d
+       477: invokespecial #318                // Method "<init>":(D)V
+       480: putstatic     #363                // Field lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       483: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       486: dup
+       487: ldc2_w        #366                // double 1.8d
+       490: invokespecial #318                // Method "<init>":(D)V
+       493: putstatic     #368                // Field lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       496: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       499: dup
+       500: ldc2_w        #138                // double 2.0d
+       503: invokespecial #318                // Method "<init>":(D)V
+       506: putstatic     #371                // Field IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       509: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       512: dup
+       513: ldc2_w        #374                // double 2.5d
+       516: invokespecial #318                // Method "<init>":(D)V
+       519: putstatic     #376                // Field llIIlIIIlIlIlIIIllIlIlllllllllIllIlIlIIIlIlIllIllIIIllIIlllllIIllIlIIlIllllIlIllIlllI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       522: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       525: dup
+       526: ldc2_w        #379                // double 1.15d
+       529: invokespecial #318                // Method "<init>":(D)V
+       532: putstatic     #381                // Field IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       535: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       538: dup
+       539: ldc2_w        #339                // double 0.75d
+       542: invokespecial #318                // Method "<init>":(D)V
+       545: putstatic     #384                // Field IlIlIlIIIIIlIllllllIllIIIIllIlIIlIIIlllllIllIIlIIlIIIllIlIlIIllIlIIllIIllllIlIIllIlIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       548: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       551: dup
+       552: ldc2_w        #387                // double 0.85d
+       555: invokespecial #318                // Method "<init>":(D)V
+       558: putstatic     #389                // Field IIllllIllllIIIIllIIlIllIIlIllIlIlllIlIlIlIIIllIllIllIllIlIIIlllIlllIlIllllIlIIlIIllll:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       561: new           #8                  // class me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll
+       564: dup
+       565: ldc2_w        #392                // double 0.7d
+       568: invokespecial #318                // Method "<init>":(D)V
+       571: putstatic     #394                // Field IIllIlIlIlIIlIIIlIIIIlIlIllllIlIlIIIIlIIlIIlIIlllIllllllIlIIIlIllIllIlllIlIllIllIllIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       574: getstatic     #354                // Field lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       577: putstatic     #397                // Field llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI:Lme/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll;
+       580: goto          670
+       583: aload_3
+       584: iload         6
+       586: invokevirtual #400                // Method java/lang/String.charAt:(I)C
+       589: istore        5
+       591: goto          644
+       594: aload_1
+       595: iload_2
+       596: iinc          2, 1
+       599: aload         10
+       601: aastore
+       602: iload         6
+       604: iload         5
+       606: iadd
+       607: dup
+       608: istore        6
+       610: iload         4
+       612: if_icmpge     626
+       615: aload_3
+       616: iload         6
+       618: invokevirtual #400                // Method java/lang/String.charAt:(I)C
+       621: istore        5
+       623: goto          39
+       626: ldc_w         #404                // String ???\u0004?!��?
+       629: astore_3
+       630: ldc_w         #404                // String ???\u0004?!��?
+       633: invokevirtual #1                  // Method java/lang/String.length:()I
+       636: istore        4
+       638: iconst_3
+       639: istore        5
+       641: iconst_m1
+       642: istore        6
+       644: bipush        63
+       646: istore        7
+       648: aload_3
+       649: iinc          6, 1
+       652: iload         6
+       654: iload         6
+       656: iload         5
+       658: iadd
+       659: invokevirtual #82                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+       662: astore        8
+       664: iconst_0
+       665: istore        9
+       667: goto          62
+       670: return
+}

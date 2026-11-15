@@ -1,0 +1,27 @@
+{
+  "slice_id": "GLACITE-COMMISSION-AC-COMPILE",
+  "created_utc": "2026-11-15T05:54:43.014155+00:00",
+  "git_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_file": "src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "source_sha256": "91a5709fcf930ef70d8a385552f5c9edfbaa56da53f5cf568c8c416f552c21bb",
+  "source_method": "aC()V",
+  "source_method_sha256": "7763d30736aff27416a141c8b8eb82a309d6f5bde68dbca7e851f42fbd1de826",
+  "original_bytecode_evidence": "..\\.analysis\\evidence\\mining\\r1863-glacite-method-audit\\original-aC.javap.txt",
+  "compiled_bytecode_file": "compiled-aC.javap.txt",
+  "compiled_bytecode_sha256": "e9b76a42ab0f3e2965ef1fc50855da1ce4f1069485f21bc4b41585bf4232c31a",
+  "compile_status": "PASS from Gradle output; evidence log will be captured on next exact rerun",
+  "symbolic_reference_comparison": {
+    "original_member_reference_count_excluding_guard": 170,
+    "compiled_member_reference_count": 168,
+    "original_refs_absent_from_compiled": [
+      "java/lang/Number.intValue:()I",
+      "me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll$llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I",
+      "me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll$llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:[I"
+    ],
+    "compiled_refs_not_in_original": [
+      "java/lang/Integer.intValue:()I"
+    ],
+    "status": "REVIEW"
+  }
+}

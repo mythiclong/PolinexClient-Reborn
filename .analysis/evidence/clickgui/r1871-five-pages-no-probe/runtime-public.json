@@ -1,0 +1,31 @@
+{
+  "experiment_id": "R1871",
+  "slice_id": "CLICKGUI-FIVE-PAGES-NOPROBE-POSTFIX",
+  "status": "VOID",
+  "started_utc": "2026-11-15T15:30:30.618145+08:00",
+  "finished_utc": "2026-11-15T15:33:54.24667+08:00",
+  "evidence_generated_at_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+  "tested_source_sha256": "EC98A3570233C3101DFFB7692F6FB2661200A01D3D15B46DCD0DF6261989B8BD",
+  "compiled_class_sha256": "3271F58DE08818055411197C7560C4BD27065A31FDEE7460D4BE9E3BBD11B561",
+  "mixin_registry_sha256": "3C92FE9D8E900C4AC2D0627EDA8DD4C8428DE1181EBF69483CABEFE5C20D73EF",
+  "clickgui_probe_mixins_registered": false,
+  "gradle_task": "runClient with isolated game directory and quickPlaySingleplayer argument",
+  "harness_result": "exit 2: startup log marker expected by driver was absent; no F4 or page actions executed",
+  "observed_startup": [
+    "Minecraft 26.1.2 and Fabric started",
+    "170 modules loaded",
+    "no config file found; defaults used",
+    "startup event handler threw UnsatisfiedLinkError for Polinex.a(event)"
+  ],
+  "actions": [],
+  "screenshots": [],
+  "assertions": {
+    "F4_opened": "NOT_TESTED",
+    "five_pages": "NOT_TESTED",
+    "labels_visible": "NOT_TESTED",
+    "user_desktop_preserved": false
+  },
+  "desktop_safety": "FAILED: desktop guard detected foreground-window and cursor-state changes during launch; no reuse of this input path",
+  "run_log_sha256": "5130A684EB436CCCEFAAD52D85AA683D82F59CCBA41B4C009445124492E7C6EB"
+}

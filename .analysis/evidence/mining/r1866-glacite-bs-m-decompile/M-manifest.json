@@ -1,0 +1,43 @@
+{
+  "slice_id": "GLACITE-COMMISSION-M-RESTORE",
+  "git_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_file": "<REPO_ROOT>\\polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "source_sha256": "617c0793c87c12cea2c66da22bdaef2e769a7cb90987d262cea6844ac1edef57",
+  "source_method_sha256": "b0dfab74041075068bda2873d8fdf7eccf7ca869c6b05b7f5439f44357c3a971",
+  "original_method_evidence": "..\\.analysis\\evidence\\mining\\r1863-glacite-method-audit\\original-M.javap.txt",
+  "compiled_method_evidence": "compiled-M.javap.txt",
+  "compiled_method_sha256": "f2579d40bf005d2c18a9523dd4e0e82d94e6bc51e20463642313376109f0f76c",
+  "compile_command": ".\\gradlew.bat --no-daemon --offline --max-workers=1 compileJava --rerun-tasks --console=plain",
+  "compile_exit_code": 0,
+  "compile_log": "compile-M-attempt2.log",
+  "reference_comparison": {
+    "original_member_refs_excluding_identity_guard": 40,
+    "compiled_member_refs": 40,
+    "original_refs_absent_from_compiled": [],
+    "compiled_refs_not_in_original": [],
+    "status": "MATCH"
+  },
+  "source_edits": [
+    {
+      "slice_id": "GLACITE-COMMISSION-M-RESTORE",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+      "preimage_sha256": "91a5709fcf930ef70d8a385552f5c9edfbaa56da53f5cf568c8c416f552c21bb",
+      "candidate_method_sha256": "89706a61926908619a188fbc3fb6d56df05d1f1bf478f07c40917df54d457c27",
+      "postimage_sha256": "afe463c5e21d18bcd176a9198d339bfc8f8d136cdd4d0c669eb841bf9b9b9897",
+      "method": "M()V",
+      "source": "CFR decompilation of original class after removing only M()V exception table; original full method bytecode remains r1863 evidence",
+      "written_utc": "2026-11-15T06:00:04.482470+00:00",
+      "scope": "replaced only M()V method block"
+    },
+    {
+      "slice_id": "GLACITE-COMMISSION-M-TYPED-OVERLOAD-FIX",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+      "preimage_sha256": "afe463c5e21d18bcd176a9198d339bfc8f8d136cdd4d0c669eb841bf9b9b9897",
+      "postimage_sha256": "617c0793c87c12cea2c66da22bdaef2e769a7cb90987d262cea6844ac1edef57",
+      "candidate_method_sha256": "a6fcde6233a7c1cc10d190e94f147ac2a69bab442011450f6a0126aa4cebe054",
+      "reason": "CFR inserted Object/Object[] casts; those changed List<T> inference and selected PX-FIX Object overloads instead of inherited original a(List)V/b(List)V. Restored generic element types so Java binds to exact original descriptors.",
+      "created_utc": "2026-11-15T06:07:34.286180+00:00"
+    }
+  ]
+}

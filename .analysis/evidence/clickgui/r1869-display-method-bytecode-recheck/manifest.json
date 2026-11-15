@@ -1,0 +1,83 @@
+{
+  "experiment_id": "R1869",
+  "slice_id": "CLICKGUI-DISPLAY-METHOD-BYTECODE-RECHECK",
+  "status": "STATIC_AUDIT",
+  "started_utc": "2026-11-15T07:15:10.7424507+00:00",
+  "repository_head": "32f4664fc008b9ac76859c48e45d8e3a63bec083",
+  "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+  "source_hashes": {
+    "page": "7ED52BC63555161BCB8C1B64DC370C7440C3C78A222EA093A08FD658CD4045C9",
+    "draw_utility": "42211F0D3C5E6C61D14571018C19ADB60477F7B44EE5DEF2C823EBAC458CAEB5",
+    "font_bridge": "449551DA44327A75E991CCD5483EB39789E440DF4C726B29261F8A850BE93A5F"
+  },
+  "build_artifact_hash": "40F8512E8B62EC087458B96A263CD428233B82B2B16E5D24421119DD4D24837E",
+  "disassemblies": [
+    {
+      "key": "page",
+      "side": "original",
+      "class": "me.octo.client.IlIllllIIlllIIIIIlIllIlIlIIlIIIlIIlllllllIllIllIlIIllIIIlllllIIIlIIIIlIlIIllIIIlIllll",
+      "classpath": "<REPO_ROOT>\\.analysis\\cracked.jar",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\.analysis\\cracked.jar\" -p -s -c me.octo.client.IlIllllIIlllIIIIIlIllIlIlIIlIIIlIIlllllllIllIllIlIIllIIIlllllIIIlIIIIlIlIIllIIIlIllll",
+      "exit_code": 0,
+      "output": "page-original.javap.txt",
+      "sha256": "2ADE9C662B0E3E9862587E81162ABC6D66F9937487BFC93C1EBE1A88B04956E7",
+      "bytes": 176670
+    },
+    {
+      "key": "page",
+      "side": "compiled",
+      "class": "me.octo.client.IlIllllIIlllIIIIIlIllIlIlIIlIIIlIIlllllllIllIllIlIIllIIIlllllIIIlIIIIlIlIIllIIIlIllll",
+      "classpath": "<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main\" -p -s -c me.octo.client.IlIllllIIlllIIIIIlIllIlIlIIlIIIlIIlllllllIllIllIlIIllIIIlllllIIIlIIIIlIlIIllIIIlIllll",
+      "exit_code": 0,
+      "output": "page-compiled.javap.txt",
+      "sha256": "6DEC0BEBEC7329625F3E4BC0613A910C417C39B6C4AC218C3EED12FF9672074F",
+      "bytes": 154340
+    },
+    {
+      "key": "draw_utility",
+      "side": "original",
+      "class": "me.octo.client.utils.lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl",
+      "classpath": "<REPO_ROOT>\\.analysis\\cracked.jar",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\.analysis\\cracked.jar\" -p -s -c me.octo.client.utils.lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl",
+      "exit_code": 0,
+      "output": "draw_utility-original.javap.txt",
+      "sha256": "598FF87520DAB0E3371878496C6AB68FCDE448FBEE7CE938EFFF7CA6F371C6A1",
+      "bytes": 398132
+    },
+    {
+      "key": "draw_utility",
+      "side": "compiled",
+      "class": "me.octo.client.utils.lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl",
+      "classpath": "<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main\" -p -s -c me.octo.client.utils.lllIIlIllIIIIIlIIIIlIllllllIIllIlIlIIlllllIIlIIlIIIIlIIllIIIlIlIIIllllIIIIlIlIIIIlIIl",
+      "exit_code": 0,
+      "output": "draw_utility-compiled.javap.txt",
+      "sha256": "DC987F7A11F012F8DE3B8530D0B8412606E53B9910F090A6B8EBFFBC9ACD1A21",
+      "bytes": 342317
+    },
+    {
+      "key": "font_bridge",
+      "side": "original",
+      "class": "me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll",
+      "classpath": "<REPO_ROOT>\\.analysis\\cracked.jar",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\.analysis\\cracked.jar\" -p -s -c me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll",
+      "exit_code": 0,
+      "output": "font_bridge-original.javap.txt",
+      "sha256": "5B40F3ED6738DE290886B1C28959C9C84E15A4D54172035BB0C957CD3B8C1583",
+      "bytes": 151547
+    },
+    {
+      "key": "font_bridge",
+      "side": "compiled",
+      "class": "me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll",
+      "classpath": "<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main",
+      "command": "${JAVA_HOME}\\bin\\javap.exe -classpath \"<REPO_ROOT>\\polinex-src\\build\\classes\\java\\main\" -p -s -c me.octo.client.utils.lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll",
+      "exit_code": 0,
+      "output": "font_bridge-compiled.javap.txt",
+      "sha256": "99C8F5D9CDEAE01AE48D08CA20304C5C1EECB489D3BB8F4ECADFACB33C2ED37B",
+      "bytes": 166891
+    }
+  ],
+  "finished_utc": "2026-11-15T07:15:10.9020225+00:00"
+}

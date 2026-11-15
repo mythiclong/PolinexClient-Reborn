@@ -1,0 +1,9 @@
+{
+  "slice_id": "GLACITE-COMMISSION-M-TYPED-OVERLOAD-FIX",
+  "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+  "preimage_sha256": "afe463c5e21d18bcd176a9198d339bfc8f8d136cdd4d0c669eb841bf9b9b9897",
+  "postimage_sha256": "617c0793c87c12cea2c66da22bdaef2e769a7cb90987d262cea6844ac1edef57",
+  "candidate_method_sha256": "a6fcde6233a7c1cc10d190e94f147ac2a69bab442011450f6a0126aa4cebe054",
+  "reason": "CFR inserted Object/Object[] casts; those changed List<T> inference and selected PX-FIX Object overloads instead of inherited original a(List)V/b(List)V. Restored generic element types so Java binds to exact original descriptors.",
+  "created_utc": "2026-11-15T06:07:34.286180+00:00"
+}

@@ -1,0 +1,5 @@
+package me.octo.client;
+
+public final class llIllIIlIllIIIlIIIlIlIIIIlIIIIIllllllllIIIIlIIIIIIIIIllIlIIllIIllIIllllIIllIlIllIIlll {
+   private static float IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
+}

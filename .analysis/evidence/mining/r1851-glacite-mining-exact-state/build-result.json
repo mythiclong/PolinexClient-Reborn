@@ -1,0 +1,7 @@
+{
+  "experiment": "R1851-GLACITE-MINING-EXACT-STATE",
+  "start_utc": "2026-11-15T00:06:38.2657583Z",
+  "end_utc": "2026-11-15T00:07:20.3813261Z",
+  "command": "gradlew.bat --no-daemon compileJava --offline --rerun-tasks --console=plain \"-Dorg.gradle.jvmargs=-Xmx1g -XX:MaxMetaspaceSize=512m -XX:ReservedCodeCacheSize=96m -XX:+UseSerialGC\"",
+  "exit_code": 0
+}
