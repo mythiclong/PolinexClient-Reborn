@@ -1,8 +1,8 @@
-# Polinex-Reborn
+# Polinex-Reconstruction
 
 这是我给 Polinex 做的 Minecraft 26.1.2 Fabric 源码重建工程。目标是把托管源码补齐，让它可以自行构建、修改和运行，并按原版行为逐项恢复功能。
 
-我准备把后续工作交给愿意接手的人。前前后后在这件事上烧了我 **30B+ DeepSeek V4.1 Flash tokens**，精力和 token 都不太够了。这里记录的是当前真实进度，不代表项目已经完成。
+我决定停止亲自推进源码还原，把剩余源码恢复与验证交给愿意接手的社区成员。前前后后在这件事上烧了我 **30B+ DeepSeek V4.1 Flash tokens**。这里记录目前的真实进度；项目并未完成。
 
 ## 目前进度
 
