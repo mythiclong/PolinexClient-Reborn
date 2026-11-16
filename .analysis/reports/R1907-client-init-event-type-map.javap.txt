@@ -1,0 +1,477 @@
+
+===== Polinex original event declarations =====
+
+
+  public final native void a(me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI);
+    descriptor: (Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;)V
+    flags: (0x0111) ACC_PUBLIC, ACC_FINAL, ACC_NATIVE
+    RuntimeVisibleAnnotations:
+      0: #87()
+        me.octo.client.events.impl.base.annotations.SubscribeEvent
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #50()
+          org.jetbrains.annotations.NotNull
+    MethodParameters:
+      Name                           Flags
+      v1
+
+  public final native void a(me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI);
+    descriptor: (Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;)V
+    flags: (0x0111) ACC_PUBLIC, ACC_FINAL, ACC_NATIVE
+    RuntimeVisibleAnnotations:
+      0: #87()
+        me.octo.client.events.impl.base.annotations.SubscribeEvent
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #50()
+          org.jetbrains.annotations.NotNull
+    MethodParameters:
+      Name                           Flags
+      v1
+
+  public final native void a(me.octo.client.events.impl.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll);
+    descriptor: (Lme/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;)V
+    flags: (0x0111) ACC_PUBLIC, ACC_FINAL, ACC_NATIVE
+    RuntimeVisibleAnnotations:
+      0: #87()
+        me.octo.client.events.impl.base.annotations.SubscribeEvent
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #50()
+          org.jetbrains.annotations.NotNull
+    MethodParameters:
+      Name                           Flags
+      v1
+
+
+===== MinecraftMixin original publishers =====
+
+
+  private void polinex$onInitFinished(java.lang.Object, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.lang.Runnable>);
+    descriptor: (Ljava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=3, args_size=3
+         0: getstatic     #61                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+         3: getfield      #65                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         6: getstatic     #71                 // Field me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+         9: invokevirtual #77                 // Method me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:(Lme/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;)Z
+        12: pop
+        13: return
+    Signature: #48                          // (Ljava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Runnable;>;)V
+    RuntimeVisibleAnnotations:
+      0: #49(#50=[s#51],#52=[@#53(#7=s#54)])
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["buildInitialScreens(Lnet/minecraft/client/Minecraft$GameLoadCookie;)Ljava/lang/Runnable;"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="RETURN"
+          )]
+        )
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #55()
+          org.spongepowered.asm.mixin.injection.Coerce
+      parameter 1:
+
+  private void onClose(org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    descriptor: (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #61                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+         3: getfield      #65                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         6: getstatic     #86                 // Field me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+         9: invokevirtual #77                 // Method me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:(Lme/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;)Z
+        12: pop
+        13: return
+    RuntimeVisibleAnnotations:
+      0: #49(#50=[s#80],#52=[@#53(#7=s#81)])
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["close"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+        )
+
+
+===== original init event class =====
+
+
+Classfile jar:file:///D:/Work/OpenPoli/.analysis/cracked.jar!/me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.class
+  Last modified 2026��8��3��; size 788 bytes
+  SHA-256 checksum 7c3eb192e3f02d14144c15186af88a03f0f3b44433d5017fcda79d0cd3846a55
+  Compiled from "IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.java"
+public final class me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI extends me.octo.client.events.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI
+  super_class: #4                         // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  interfaces: 0, fields: 1, methods: 2, attributes: 1
+Constant pool:
+   #1 = Utf8               me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI
+   #2 = Class              #1             // me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI
+   #3 = Utf8               me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #4 = Class              #3             // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #5 = Utf8               IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.java
+   #6 = Utf8               IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI
+   #7 = Utf8               Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+   #8 = Utf8               Lorg/jetbrains/annotations/NotNull;
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = NameAndType        #9:#10         // "<init>":()V
+  #12 = Methodref          #4.#11         // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+  #13 = Utf8               <clinit>
+  #14 = Methodref          #2.#11         // me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI."<init>":()V
+  #15 = NameAndType        #6:#7          // IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+  #16 = Fieldref           #2.#15         // me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+  #17 = Utf8               RuntimeInvisibleAnnotations
+  #18 = Utf8               Code
+  #19 = Utf8               SourceFile
+{
+  public static me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+    descriptor: Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    RuntimeInvisibleAnnotations:
+      0: #8()
+        org.jetbrains.annotations.NotNull
+
+  private me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #12                 // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+         4: return
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #2                  // class me/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI
+         3: dup
+         4: invokespecial #14                 // Method "<init>":()V
+         7: putstatic     #16                 // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;
+        10: return
+}
+SourceFile: "IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI.java"
+
+
+
+===== original close event class =====
+
+
+Classfile jar:file:///D:/Work/OpenPoli/.analysis/cracked.jar!/me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.class
+  Last modified 2026��8��3��; size 788 bytes
+  SHA-256 checksum 249c8cbc91e68e3242c72a279f2862cbe5b259538e513900d013dc2b1c0cf93b
+  Compiled from "IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.java"
+public final class me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI extends me.octo.client.events.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI
+  super_class: #4                         // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  interfaces: 0, fields: 1, methods: 2, attributes: 1
+Constant pool:
+   #1 = Utf8               me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI
+   #2 = Class              #1             // me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI
+   #3 = Utf8               me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #4 = Class              #3             // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #5 = Utf8               IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.java
+   #6 = Utf8               IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI
+   #7 = Utf8               Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+   #8 = Utf8               Lorg/jetbrains/annotations/NotNull;
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = NameAndType        #9:#10         // "<init>":()V
+  #12 = Methodref          #4.#11         // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+  #13 = Utf8               <clinit>
+  #14 = Methodref          #2.#11         // me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI."<init>":()V
+  #15 = NameAndType        #6:#7          // IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+  #16 = Fieldref           #2.#15         // me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+  #17 = Utf8               RuntimeInvisibleAnnotations
+  #18 = Utf8               Code
+  #19 = Utf8               SourceFile
+{
+  public static me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+    descriptor: Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    RuntimeInvisibleAnnotations:
+      0: #8()
+        org.jetbrains.annotations.NotNull
+
+  private me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #12                 // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+         4: return
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #2                  // class me/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI
+         3: dup
+         4: invokespecial #14                 // Method "<init>":()V
+         7: putstatic     #16                 // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;
+        10: return
+}
+SourceFile: "IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI.java"
+
+
+
+===== original third event class =====
+
+
+Classfile jar:file:///D:/Work/OpenPoli/.analysis/cracked.jar!/me/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.class
+  Last modified 2026��8��3��; size 432 bytes
+  SHA-256 checksum 85363fa38f1c956216beaeb441a8f12a7cf4deca8e69175a258646c8d1bf5ad9
+  Compiled from "IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java"
+public class me.octo.client.events.impl.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll extends me.octo.client.events.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // me/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll
+  super_class: #4                         // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+  interfaces: 0, fields: 0, methods: 1, attributes: 1
+Constant pool:
+   #1 = Utf8               me/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll
+   #2 = Class              #1             // me/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll
+   #3 = Utf8               me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #4 = Class              #3             // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+   #5 = Utf8               IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java
+   #6 = Utf8               <init>
+   #7 = Utf8               ()V
+   #8 = NameAndType        #6:#7          // "<init>":()V
+   #9 = Methodref          #4.#8          // me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+  #10 = Utf8               Code
+  #11 = Utf8               SourceFile
+{
+  public me.octo.client.events.impl.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #9                  // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll."<init>":()V
+         4: return
+}
+SourceFile: "IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java"
+
+
+
+===== EventBus original dispatch method =====
+
+
+  public final boolean a(me.octo.client.events.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll);
+    descriptor: (Lme/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;)Z
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=4, locals=7, args_size=2
+         0: invokestatic  #240                // Method b:()[I
+         3: aload_1
+         4: sipush        -13825
+         7: sipush        -30135
+        10: pop2
+        11: ldc_w         #399                // String event
+        14: invokestatic  #58                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        17: astore_2
+        18: aload_2
+        19: ifnonnull     55
+        22: aload_0
+        23: getfield      #68                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Ljava/util/concurrent/ConcurrentHashMap;
+        26: aload_1
+        27: invokevirtual #92                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        30: invokevirtual #402                // Method java/util/concurrent/ConcurrentHashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        33: checkcast     #132                // class java/util/List
+        36: dup
+        37: ifnonnull     57
+        40: goto          47
+        43: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        46: athrow
+        47: pop
+        48: goto          55
+        51: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        54: athrow
+        55: iconst_0
+        56: ireturn
+        57: astore_3
+        58: aload_3
+        59: invokeinterface #139,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        64: astore        4
+        66: aload         4
+        68: invokeinterface #145,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        73: ifeq          242
+        76: aload         4
+        78: invokeinterface #149,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        83: checkcast     #27                 // class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll
+        86: astore        5
+        88: aload_2
+        89: ifnonnull     191
+        92: aload_1
+        93: invokevirtual #403                // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.d:()Z
+        96: aload_2
+        97: ifnonnull     246
+       100: goto          107
+       103: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       106: athrow
+       107: ifeq          179
+       110: goto          117
+       113: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       116: athrow
+       117: aload_1
+       118: invokevirtual #406                // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Z
+       121: aload_2
+       122: ifnonnull     165
+       125: goto          132
+       128: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       131: athrow
+       132: ifeq          179
+       135: goto          142
+       138: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       141: athrow
+       142: aload         5
+       144: aload_2
+       145: ifnonnull     182
+       148: goto          155
+       151: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       154: athrow
+       155: invokevirtual #407                // Method me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.d:()Z
+       158: goto          165
+       161: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       164: athrow
+       165: ifne          179
+       168: aload_2
+       169: ifnull        66
+       172: goto          179
+       175: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       178: athrow
+       179: nop
+       180: aload         5
+       182: invokevirtual #410                // Method me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.b:()Ljava/util/function/Consumer;
+       185: aload_1
+       186: invokeinterface #413,  2          // InterfaceMethod java/util/function/Consumer.accept:(Ljava/lang/Object;)V
+       191: goto          66
+       194: astore        6
+       196: aload_0
+       197: aload_0
+       198: aload_1
+       199: aload         6
+       201: invokevirtual #416                // Method a:(Lme/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Lme/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;Ljava/lang/Throwable;)V
+       204: aload_1
+       205: invokevirtual #92                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       208: invokevirtual #419                // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+       211: sipush        -13832
+       214: sipush        -32508
+       217: pop2
+       218: ldc_w         #421                // String Exception in event handler for
+       221: swap
+       222: ldc_w         #423                // String :
+       225: invokedynamic #428,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       230: invokestatic  #432                // Method me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.b:(Ljava/lang/String;)V
+       233: aload         6
+       235: invokevirtual #435                // Method java/lang/Throwable.printStackTrace:()V
+       238: aload_2
+       239: ifnull        66
+       242: aload_1
+       243: invokevirtual #403                // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.d:()Z
+       246: aload_2
+       247: ifnonnull     271
+       250: ifeq          274
+       253: goto          260
+       256: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       259: athrow
+       260: aload_1
+       261: invokevirtual #406                // Method me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.e:()Z
+       264: goto          271
+       267: invokestatic  #86                 // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       270: athrow
+       271: goto          275
+       274: iconst_0
+       275: ireturn
+      Exception table:
+         from    to  target type
+           165   172   175   Class java/lang/Throwable
+           142   158   161   Class java/lang/Throwable
+           132   148   151   Class java/lang/Throwable
+           117   135   138   Class java/lang/Throwable
+           107   125   128   Class java/lang/Throwable
+            92   110   113   Class java/lang/Throwable
+            88   100   103   Class java/lang/Throwable
+            22    48    51   Class java/lang/Throwable
+            18    40    43   Class java/lang/Throwable
+           179   191   194   Class java/lang/Throwable
+           246   253   256   Class java/lang/Throwable
+           250   264   267   Class java/lang/Throwable
+      StackMapTable: number_of_entries = 31
+        frame_type = 255 /* full_frame */
+          offset_delta = 43
+          locals = [ class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI, class me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll, class "[I" ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/util/List ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 3 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ class java/util/List ]
+        frame_type = 253 /* append */
+          offset_delta = 8
+          locals = [ class java/util/List, class java/util/Iterator ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 36
+          locals = [ class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI, class me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll, class "[I", class java/util/List, class java/util/Iterator, class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 69 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 3 /* same */
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 69 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 3 /* same */
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll ]
+        frame_type = 69 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 3 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll ]
+        frame_type = 8 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 47
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 73 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 3 /* same */
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+        frame_type = 67 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 2 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #31()
+          org.jetbrains.annotations.NotNull

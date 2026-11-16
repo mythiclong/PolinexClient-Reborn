@@ -1,0 +1,56 @@
+{
+  "slice_id": "R1903-client-init-state8-guard-key",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T23:53:14.478035+00:00",
+  "command": "python -B .analysis/tools/verify_r1903_state8_guard_key.py --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+  "inputs": {
+    "keystream_path": "D:/Work/OpenPoli/.analysis/artifacts/jnic-windows-x64.derived-keystream.bin",
+    "keystream_sha256": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "R1875-client-init-string-operands.json": "2C4931D06D142BED5A1714D0D397BE23D627F3757BA5F6B23FB0A3F72BCE5F3C",
+    "R1883-client-initialized-dispatch-map.json": "BAD62DF193FC42BE462555302096E14BA2D1CE3201370CA96028F516E0351757",
+    "R1885-client-initialized-dispatch-path-correction.json": "5980F1C3E3F33FF618B708D537B629951EDA7D04DE744A256E83BE8134C0A52B",
+    "R1902-client-init-state8-state5-control-flow.json": "9FD45ED213B81E0D971EB7320A0B660827E1D17AE84C4E24A3AD77B885679F8F"
+  },
+  "guard": {
+    "global_offset": "0x8edb",
+    "derived_keystream_u32_little_endian": "0x16b31c06",
+    "comparison_immediate": "0x6cce96cb",
+    "comparison_result": "not equal",
+    "branch": "jne 0x180044b83",
+    "decoded_next_state": 5,
+    "effective_target": "0x180044adc",
+    "state5_behavior": "R1902 maps RuntimeException construction with message 'Cannot initialize client on render thread.'"
+  },
+  "cross_check": {
+    "R1875_string_xor_uses_same_keystream": true,
+    "R1875_decoded_message": "Cannot initialize client on render thread.",
+    "dispatcher_map_state5_target": "0x180044adc",
+    "dispatch_correction_state5_target": "0x180044adc"
+  },
+  "assertions": {
+    "keystream_hash_matches_R1875_and_R1883_inputs": true,
+    "guard_load_and_comparison_match_disassembly": true,
+    "derived_value_does_not_equal_guard_immediate": true,
+    "mismatch_branch_decodes_to_state5": true,
+    "state5_routes_to_runtimeexception_block": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for derived-key comparison and state-5 route",
+    "build_regression": "not run; analysis-only slice",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The recovered derived keystream and matching string-XOR use support the field-to-stream mapping. This static check does not observe the live native global buffer or its runtime initialization; the branch is therefore a static expectation, not runtime proof.",
+  "tool_sha256": "7CA13781E4AC18F96B3CE23430FC799A0B0278835B43862FC3490A37158D57A4",
+  "ended_utc": "2026-11-15T23:53:14.610949+00:00",
+  "exit_code": 0
+}

@@ -1,0 +1,457 @@
+{
+  "slice_id": "R1877-client-initialized-class-helper-map",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T18:55:37.086896+00:00",
+  "ended_utc": "2026-11-15T18:55:37.171726+00:00",
+  "command": ".analysis/tools/map_client_initialized_class_helpers.py --disassembly .analysis/reports/R1876-client-initialized-helper-range.objdump.txt --literals .analysis/reports/R1876-client-initialized-helper-literals.json --static-fields .analysis/reports/R1873-client-initialized-static-fields.json --source-file polinex-src/src/main/java/me/octo/client/Polinex.java",
+  "exit_code": 0,
+  "inputs": {
+    ".analysis\\reports\\R1876-client-initialized-helper-range.objdump.txt": "B9E6A3AC13DDACC8BA70466B43768AD9A547D359B789438A48E4E9EB91435DA5",
+    ".analysis\\reports\\R1876-client-initialized-helper-literals.json": "1DEADEF05778F873AAF9A250799B1F67792979AF2E64D13FD4C79975FCFB3FC4",
+    ".analysis\\reports\\R1873-client-initialized-static-fields.json": "B65666D9FBE51384DD0780C93DE641AC364B345DC6902CE785381920169F8264"
+  },
+  "direct_helper_target_count": 27,
+  "class_helper_count": 24,
+  "non_class_helper_targets": [
+    "0x1800461cd",
+    "0x180046281",
+    "0x180046323"
+  ],
+  "helpers": [
+    {
+      "helper": "0x180046124",
+      "event_direct_call_sites": [
+        "0x180043d15",
+        "0x180044c0f"
+      ],
+      "decoded_class_name": "me/octo/client/Polinex$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "copy_xor_call": "0x18004616b",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170ec0",
+      "cache_global_atomic_publish": "0x180170ec0",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800461ab"
+    },
+    {
+      "helper": "0x1800463c2",
+      "event_direct_call_sites": [
+        "0x180043f70"
+      ],
+      "decoded_class_name": "me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll",
+      "copy_xor_call": "0x180046409",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170ef8",
+      "cache_global_atomic_publish": "0x180170ef8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046449"
+    },
+    {
+      "helper": "0x18004646b",
+      "event_direct_call_sites": [
+        "0x18004408c"
+      ],
+      "decoded_class_name": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+      "copy_xor_call": "0x1800464b2",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f10",
+      "cache_global_atomic_publish": "0x180170f10",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800464f4"
+    },
+    {
+      "helper": "0x180046516",
+      "event_direct_call_sites": [
+        "0x1800440ce"
+      ],
+      "decoded_class_name": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "copy_xor_call": "0x18004655d",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f20",
+      "cache_global_atomic_publish": "0x180170f20",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x18004659f"
+    },
+    {
+      "helper": "0x1800465c1",
+      "event_direct_call_sites": [
+        "0x180044110"
+      ],
+      "decoded_class_name": "me/octo/client/lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII",
+      "copy_xor_call": "0x180046608",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f30",
+      "cache_global_atomic_publish": "0x180170f30",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046648"
+    },
+    {
+      "helper": "0x18004666a",
+      "event_direct_call_sites": [
+        "0x18004418a"
+      ],
+      "decoded_class_name": "me/octo/client/IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl",
+      "copy_xor_call": "0x1800466b1",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f48",
+      "cache_global_atomic_publish": "0x180170f48",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800466f1"
+    },
+    {
+      "helper": "0x180046713",
+      "event_direct_call_sites": [
+        "0x180044204"
+      ],
+      "decoded_class_name": "me/octo/client/lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl",
+      "copy_xor_call": "0x18004675a",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f60",
+      "cache_global_atomic_publish": "0x180170f60",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x18004679a"
+    },
+    {
+      "helper": "0x1800467bc",
+      "event_direct_call_sites": [
+        "0x18004427e"
+      ],
+      "decoded_class_name": "me/octo/client/IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII",
+      "copy_xor_call": "0x180046803",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f78",
+      "cache_global_atomic_publish": "0x180170f78",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046843"
+    },
+    {
+      "helper": "0x180046865",
+      "event_direct_call_sites": [
+        "0x1800442f8"
+      ],
+      "decoded_class_name": "me/octo/client/lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll",
+      "copy_xor_call": "0x1800468ac",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170f90",
+      "cache_global_atomic_publish": "0x180170f90",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800468ec"
+    },
+    {
+      "helper": "0x18004690e",
+      "event_direct_call_sites": [
+        "0x180044372"
+      ],
+      "decoded_class_name": "me/octo/client/lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+      "copy_xor_call": "0x180046955",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170fa8",
+      "cache_global_atomic_publish": "0x180170fa8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046995"
+    },
+    {
+      "helper": "0x1800469b7",
+      "event_direct_call_sites": [
+        "0x1800443df"
+      ],
+      "decoded_class_name": "me/octo/client/IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+      "copy_xor_call": "0x1800469fe",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170fb8",
+      "cache_global_atomic_publish": "0x180170fb8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046a3e"
+    },
+    {
+      "helper": "0x180046a60",
+      "event_direct_call_sites": [
+        "0x18004444c"
+      ],
+      "decoded_class_name": "me/octo/client/llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+      "copy_xor_call": "0x180046aa7",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170fc8",
+      "cache_global_atomic_publish": "0x180170fc8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046ae7"
+    },
+    {
+      "helper": "0x180046b09",
+      "event_direct_call_sites": [
+        "0x1800444b9"
+      ],
+      "decoded_class_name": "me/octo/client/llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+      "copy_xor_call": "0x180046b50",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170fd8",
+      "cache_global_atomic_publish": "0x180170fd8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046b90"
+    },
+    {
+      "helper": "0x180046bb2",
+      "event_direct_call_sites": [
+        "0x180044526"
+      ],
+      "decoded_class_name": "me/octo/client/lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+      "copy_xor_call": "0x180046bf9",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170fe8",
+      "cache_global_atomic_publish": "0x180170fe8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046c39"
+    },
+    {
+      "helper": "0x180046c5b",
+      "event_direct_call_sites": [
+        "0x180044593"
+      ],
+      "decoded_class_name": "me/octo/client/IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+      "copy_xor_call": "0x180046ca2",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180170ff8",
+      "cache_global_atomic_publish": "0x180170ff8",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046ce2"
+    },
+    {
+      "helper": "0x180046d04",
+      "event_direct_call_sites": [
+        "0x180044600"
+      ],
+      "decoded_class_name": "me/octo/client/IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+      "copy_xor_call": "0x180046d4b",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171008",
+      "cache_global_atomic_publish": "0x180171008",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046d8b"
+    },
+    {
+      "helper": "0x180046dad",
+      "event_direct_call_sites": [
+        "0x18004466d"
+      ],
+      "decoded_class_name": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+      "copy_xor_call": "0x180046df4",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171018",
+      "cache_global_atomic_publish": "0x180171018",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046e34"
+    },
+    {
+      "helper": "0x180046e56",
+      "event_direct_call_sites": [
+        "0x1800446da"
+      ],
+      "decoded_class_name": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+      "copy_xor_call": "0x180046e9d",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171028",
+      "cache_global_atomic_publish": "0x180171028",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046edd"
+    },
+    {
+      "helper": "0x180046eff",
+      "event_direct_call_sites": [
+        "0x180044747"
+      ],
+      "decoded_class_name": "me/octo/client/IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+      "copy_xor_call": "0x180046f46",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171038",
+      "cache_global_atomic_publish": "0x180171038",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180046f86"
+    },
+    {
+      "helper": "0x180046fa8",
+      "event_direct_call_sites": [
+        "0x1800447b4"
+      ],
+      "decoded_class_name": "me/octo/client/IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+      "copy_xor_call": "0x180046fef",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171048",
+      "cache_global_atomic_publish": "0x180171048",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x18004702f"
+    },
+    {
+      "helper": "0x180047051",
+      "event_direct_call_sites": [
+        "0x180044821"
+      ],
+      "decoded_class_name": "me/octo/client/IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+      "copy_xor_call": "0x180047098",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171058",
+      "cache_global_atomic_publish": "0x180171058",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800470d8"
+    },
+    {
+      "helper": "0x1800470fa",
+      "event_direct_call_sites": [
+        "0x18004488e"
+      ],
+      "decoded_class_name": "me/octo/client/IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+      "copy_xor_call": "0x180047141",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171068",
+      "cache_global_atomic_publish": "0x180171068",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x180047181"
+    },
+    {
+      "helper": "0x1800471a3",
+      "event_direct_call_sites": [
+        "0x1800448fb"
+      ],
+      "decoded_class_name": "me/octo/client/IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+      "copy_xor_call": "0x1800471ea",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171078",
+      "cache_global_atomic_publish": "0x180171078",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x18004722a"
+    },
+    {
+      "helper": "0x18004724c",
+      "event_direct_call_sites": [
+        "0x180044968"
+      ],
+      "decoded_class_name": "me/octo/client/IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+      "copy_xor_call": "0x180047293",
+      "jni_find_class_table_offset": "0x30",
+      "jni_find_class_table_load": true,
+      "find_class_call_before_cache_publish": true,
+      "jni_new_global_ref_table_offset": "0xa8",
+      "new_global_ref_call_before_cache_publish": true,
+      "cache_global_read": "0x180171088",
+      "cache_global_atomic_publish": "0x180171088",
+      "cache_read_matches_publish": true,
+      "atomic_publish_site": "0x1800472d3"
+    }
+  ],
+  "R1873_cross_checks": [
+    {
+      "native_site": "0x180045116",
+      "class_helper": "0x18004646b",
+      "decoded_class_matches_GetStaticFieldID_owner": true,
+      "class_cache_matches_R1873": true
+    },
+    {
+      "native_site": "0x1800451b2",
+      "class_helper": "0x180046516",
+      "decoded_class_matches_GetStaticFieldID_owner": true,
+      "class_cache_matches_R1873": true
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "24 direct event helper targets resolve decoded class names, JNI FindClass/NewGlobalRef calls, and matching atomic class-cache slots; two R1873 owners and class caches match",
+    "build_regression": "not run; no Java source changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Direct call sites and helper internals are statically mapped. Conditional reachability, the later JNI method/field operations, full event control flow, and runtime effects remain open."
+}

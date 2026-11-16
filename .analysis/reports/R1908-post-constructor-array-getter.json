@@ -1,0 +1,109 @@
+{
+  "slice_id": "R1908-post-constructor-array-getter",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T05:52:20.973789+00:00",
+  "ended_utc": "2026-11-16T05:52:21.539411+00:00",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.java": "7F34C02FC01E6DAE24E2DF2FD27CFE83E1F89DB3715A386293272FD762C4CC31",
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "inputs_sha256": {
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1900-post-constructor-class-helper.objdump.txt": "24AD5F0E222EF1B42FB715F130138A6E303EB2A1D68A40CF10E7B9DFDE73A6E3",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1900-post-constructor-method-helper.objdump.txt": "4804B27F34C660522B6DA8BD460F1E62431DE950018629F83CEA6F57D6B5D5A6",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1901-post-constructor-array-field-writes.json": "9AD38BDE16B347E43C419B217C9DCDA7439CE85FAA3448F992F08A1C2415C70D",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "<WORKTREE_ROOT>\\polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.java": "7F34C02FC01E6DAE24E2DF2FD27CFE83E1F89DB3715A386293272FD762C4CC31",
+    "<WORKTREE_ROOT>\\polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "commands": {
+    "descriptor_decode": {
+      "argv": [
+        "<PYTHON_39>",
+        "-B",
+        "<WORKTREE_ROOT>\\.analysis\\tools\\decode_event_string_operands.py",
+        "--disassembly",
+        "<WORKTREE_ROOT>\\.analysis\\reports\\R1900-post-constructor-method-helper.objdump.txt",
+        "--pe",
+        "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+        "--keystream",
+        "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin"
+      ],
+      "exit_code": 0
+    },
+    "original_javap": {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.utils.lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll"
+      ],
+      "exit_code": 0
+    },
+    "verifier": {
+      "argv": [
+        ".analysis/tools/verify_r1908_post_constructor_array_getter.py",
+        "--root",
+        ".",
+        "--pe",
+        "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+        "--keystream",
+        "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+        "--jar",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "--javap",
+        "<JDK_25>\\bin\\javap.exe",
+        "--output",
+        ".analysis/reports/R1908-post-constructor-array-getter.json"
+      ],
+      "exit_code": 0
+    }
+  },
+  "method_mapping": {
+    "event_call_sequence": [
+      "0x1800449d5",
+      "0x1800449e0",
+      "0x1800449ee"
+    ],
+    "jni_function": "CallStaticObjectMethod",
+    "class_helper_rva": "0x18001d423",
+    "class_name": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+    "method_id_helper_rva": "0x18001d983",
+    "decoded_method_name": "f",
+    "descriptor_helper_rva": "0x18001da1e",
+    "descriptor": "()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;",
+    "target": "me.octo.client.utils.lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;"
+  },
+  "original_getter_bytecode": "  public static me.octo.client.utils.lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll[] f();\n    descriptor: ()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;\n    Code:\n         0: getstatic     #122                // Field IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;\n         3: areturn\n\n  private static java.lang.String b(int, int);\n    descriptor: (II)Ljava/lang/String;",
+  "array_field": {
+    "owner": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+    "name": "IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII",
+    "descriptor": "[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;"
+  },
+  "assertions": {
+    "class_helper_decodes_to_array_owner": true,
+    "method_helper_decodes_name_f": true,
+    "method_helper_decodes_exact_array_descriptor": true,
+    "event_calls_static_getter_with_class_and_method_helpers": true,
+    "original_jar_getter_is_getstatic_then_areturn": true,
+    "managed_source_getter_returns_the_same_field": true,
+    "array_field_matches_original_owner_and_array_type": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for the post-constructor static getter and its backing array field",
+    "build_regression": "not run; no source changed",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This proves the getter returns the static array field and matches the native helper call. It does not observe runtime values or prove the state -11 branch unreachable under reflective/native writes."
+}

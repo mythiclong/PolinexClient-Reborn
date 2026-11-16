@@ -1,0 +1,316 @@
+{
+  "slice_id": "R1885-client-initialized-dispatch-path-correction",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T20:30:08.731218+00:00",
+  "ended_utc": "2026-11-15T20:30:08.810745+00:00",
+  "command": [
+    "<PYTHON_39>",
+    "-B",
+    ".analysis/tools/correct_client_initialized_dispatch_targets.py",
+    "--event-disassembly",
+    ".analysis/reports/R1872-polininex-client-initialized.objdump.txt",
+    "--prior-map",
+    ".analysis/reports/R1883-client-initialized-dispatch-map.json",
+    "--pe",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+    "--keystream",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+    "--source-file",
+    "polinex-src/src/main/java/me/octo/client/Polinex.java",
+    "--output",
+    ".analysis/reports/R1885-client-initialized-dispatch-path-correction.json"
+  ],
+  "exit_code": 0,
+  "inputs_sha256": {
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    ".analysis\\reports\\R1883-client-initialized-dispatch-map.json": "BAD62DF193FC42BE462555302096E14BA2D1CE3201370CA96028F516E0351757",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "dispatcher_split": {
+    "branch": "signed state > 0x10 branches to an inline compare arm; only state <= 0x10 adds 0x10 and indexes the relative jump table",
+    "instructions": {
+      "0x180043cea": "cmp    $0x10,%eax",
+      "0x180043ced": "jg     0x180043dfb",
+      "0x180043cf3": "add    $0x10,%eax",
+      "0x180043cf6": "cmp    $0x18,%eax",
+      "0x180043cf9": "ja     0x1800449c8",
+      "0x180043cff": "movslq (%r15,%rax,4),%rax",
+      "0x180043dfb": "cmp    $0x11,%eax",
+      "0x180043dfe": "jne    0x180043ecb"
+    },
+    "table_range_fallback": "0x1800449c8",
+    "state_17_target": "0x180043e04",
+    "non_17_state_above_0x10_target": "0x180043ecb",
+    "initial_state": {
+      "decoded_state_signed": -16,
+      "table_index": 0,
+      "target": "0x180043d08"
+    }
+  },
+  "transitions": [
+    {
+      "transition_site": "0x180043e9d",
+      "decoded_state_signed": 21,
+      "prior_table_based_target": "0x180044adc",
+      "effective_route": {
+        "route_kind": "inline-non-17-arm",
+        "comparison_site": "0x180043dfb",
+        "target": "0x180043ecb",
+        "table_index": null
+      },
+      "prior_target_matches_effective": false
+    },
+    {
+      "transition_site": "0x180043ec6",
+      "decoded_state_signed": 21,
+      "prior_table_based_target": "0x180044adc",
+      "effective_route": {
+        "route_kind": "inline-non-17-arm",
+        "comparison_site": "0x180043dfb",
+        "target": "0x180043ecb",
+        "table_index": null
+      },
+      "prior_target_matches_effective": false
+    },
+    {
+      "transition_site": "0x180043f5e",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044a58",
+      "decoded_state_signed": -10,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 6
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044ad7",
+      "decoded_state_signed": -10,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 6
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044b56",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044b7e",
+      "decoded_state_signed": 17,
+      "prior_table_based_target": "0x180046123",
+      "effective_route": {
+        "route_kind": "inline-state-17-compare-arm",
+        "comparison_site": "0x180043dfb",
+        "target": "0x180043e04",
+        "table_index": null
+      },
+      "prior_target_matches_effective": false
+    },
+    {
+      "transition_site": "0x180044b90",
+      "decoded_state_signed": 5,
+      "prior_table_based_target": "0x180044adc",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x180044adc",
+        "table_index": 21
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044bb2",
+      "decoded_state_signed": 4,
+      "prior_table_based_target": "0x18004610e",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x18004610e",
+        "table_index": 20
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044be6",
+      "decoded_state_signed": 7,
+      "prior_table_based_target": "0x180043f63",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x180043f63",
+        "table_index": 23
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044c93",
+      "decoded_state_signed": -10,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 6
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044cb8",
+      "decoded_state_signed": -10,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 6
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044cca",
+      "decoded_state_signed": 4,
+      "prior_table_based_target": "0x18004610e",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x18004610e",
+        "table_index": 20
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044d75",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044daf",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044dc4",
+      "decoded_state_signed": -11,
+      "prior_table_based_target": "0x180044a5d",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x180044a5d",
+        "table_index": 5
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044dd6",
+      "decoded_state_signed": 8,
+      "prior_table_based_target": "0x180043ea2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x180043ea2",
+        "table_index": 24
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044e47",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044eca",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    },
+    {
+      "transition_site": "0x180044f1c",
+      "decoded_state_signed": -9,
+      "prior_table_based_target": "0x1800460a2",
+      "effective_route": {
+        "route_kind": "relative-jump-table",
+        "comparison_site": "0x180043cf6",
+        "target": "0x1800460a2",
+        "table_index": 7
+      },
+      "prior_target_matches_effective": true
+    }
+  ],
+  "corrected_target_count": 3,
+  "corrected_states": [
+    17,
+    21
+  ],
+  "static_cross_checks": {
+    "state_17_block_calls_render_thread_method": "0x180043e11 -> helper 0x1800461cd; R1880 resolves RenderSystem.isOnRenderThread()Z at invocation 0x180043e2f",
+    "state_21_block_calls_exception_helper": "0x180043ed8 -> helper 0x18004180d and 0x180043ef4 invokes Polinex.a(Exception); R1879 maps the exact descriptor"
+  },
+  "acceptance": {
+    "static_reconstruction": "entry and all 20 transitions rerouted through the observed compare/jump-table split; three state-17/state-21 edges corrected from the table-only interpretation",
+    "build_regression": "not run; analysis-only artifacts added",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The correction resolves dispatcher destinations, not all branch predicates or method effects. State-17's thread predicate and state-21's exception handling still require full path reconstruction.",
+  "prior_evidence_preserved": "R1883 is unchanged; this report corrects its table-based destination interpretation for signed states above 0x10."
+}

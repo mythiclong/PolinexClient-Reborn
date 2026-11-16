@@ -1,0 +1,1192 @@
+{
+  "slice_id": "R1901-post-constructor-array-field-writes",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T23:22:21.055933+00:00",
+  "ended_utc": "2026-11-15T23:22:25.118369+00:00",
+  "command": "python -B <WORKTREE_ROOT>/.analysis/tools/verify_r1901_array_field_writes.py --jar <REFERENCE_ROOT>\\.analysis\\cracked.jar --output .analysis\\reports\\R1901-post-constructor-array-field-writes.json --context .analysis\\reports\\R1872-polininex-client-initialized.objdump.txt --context .analysis\\reports\\R1881-client-initialized-all-jni-calls.json --context .analysis\\reports\\R1897-event-init-inner-original.javap.txt --context .analysis\\reports\\R1898-module-base-original.javap.txt --context .analysis\\reports\\R1900-post-constructor-method-helper.objdump.txt --context polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.java",
+  "exit_code": 0,
+  "inputs_sha256": {
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "<WORKTREE_ROOT>\\.analysis\\tools\\verify_r1901_array_field_writes.py": "bcbf32569a636cbf2bedcd325fe8a57ddca3e4ae054c72c1665672fe8eed8d17",
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984dabcf91cc65de31b305175331bc35eda1a6d6a68b1f101165dc2579d11",
+    ".analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998d6f08493ca2688ad9e7c02f9428f638958635f2e276f620655a4669f2ec3d",
+    ".analysis\\reports\\R1897-event-init-inner-original.javap.txt": "0a2c6a564d89bc05988801cd0649dc0240da16fe9c6cf3545aac2f15318d1b48",
+    ".analysis\\reports\\R1898-module-base-original.javap.txt": "13b60d4da1ece075a6c1f68bf38f2369fd0c18859aaf87c87db83be713df70f2",
+    ".analysis\\reports\\R1900-post-constructor-method-helper.objdump.txt": "4804b27f34c660522b6da8bd460f1e62431de950018629f83cea6f57d6b5d5a6",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.java": "7f34c02fc01e6dae24e2df2fd27cfe83e1f89db3715a386293272fd762c4cc31"
+  },
+  "result": {
+    "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "class_files_scanned": 5475,
+    "class_parse_errors": [],
+    "field": {
+      "owner": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+      "name": "IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII",
+      "descriptor": "[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;"
+    },
+    "setter": {
+      "name": "b",
+      "descriptor": "([Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;)V"
+    },
+    "putstatic_sites": [
+      {
+        "class": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+        "method": "b",
+        "descriptor": "([Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;)V",
+        "bci": 1
+      }
+    ],
+    "invokestatic_calls": [
+      {
+        "class": "me/octo/client/IIIIIIIIlIlIIIllIlllIIIIlIIIIllIIllIlIIlIIllIlIlIllIIIllIlllIllIlIIlllIIIlIIIIIlllIIl",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 739,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0173"
+      },
+      {
+        "class": "me/octo/client/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/llIIlllIlIIlllIIllIlIlIIIlIIllIlllIllIlIllIIllIlIllIIIlllIlIllllIIIIIlIIlllIlIIlIlIII;Z)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+        "bci": 923,
+        "previous_opcode": 189,
+        "previous_bytes": "bd010c"
+      },
+      {
+        "class": "me/octo/client/IIIIlIlIIlIIlIllIIllIIIIIIllIllIIIlIIIIlIIIlIIIIIlllIlIIlIIIlllIlIllIlIIIlIllllIIIllI",
+        "method": "d",
+        "descriptor": "()Ljava/util/List;",
+        "bci": 130,
+        "previous_opcode": 189,
+        "previous_bytes": "bd010a"
+      },
+      {
+        "class": "me/octo/client/IIIIlIlIlllllIlllIllIIIIllllllIllllIlIlIllllIlIIlIlIIIlIlIllIIlllIIIIlIIIIIlIIIllIIll",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/lllIlIIlIIIIlIlIlIllllllIIIllllIIlIllIIllllllIIlIllIllIllllllllIIlIIIIIlIIllllIlllIlI;)V",
+        "bci": 246,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0068"
+      },
+      {
+        "class": "me/octo/client/IIIIlllIlIlIIllllIlIlIIlIlIllIlIllllIIIIIlIIIIIIIlIIIlIIIlIllIlIIlIIllllIlIlllllIllIl",
+        "method": "S",
+        "descriptor": "()Lme/octo/client/utils/IllllIIlIIIlIIIIlIlIIlIIIllIllIIIIIlIIIllIlIIlIllllllIIIlllllIIIIlIllIlIlllIllIIIIIll;",
+        "bci": 159,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0133"
+      },
+      {
+        "class": "me/octo/client/IIIlIIIIlIlIIllIIIIIlIlllIIIIlllIllllIllllIllllIIllllIlIIIlIlIIIIIIlllIIIlllIllIIIlII",
+        "method": "f",
+        "descriptor": "(Ljava/lang/String;)V",
+        "bci": 172,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0171"
+      },
+      {
+        "class": "me/octo/client/IIIlIlIIlIIIlIIIIIllIIllIIllllIIIIIIIIIlIIIlIIlIlIllIIIIIIIllllIlIlllIIlIlIlIIlIlIlIl",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;)V",
+        "bci": 132,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0114"
+      },
+      {
+        "class": "me/octo/client/IIIlIlIlIlIlIIlllIIIIIIlIIIIlIlIlIlIIlIIIlllIlllIIllIlllllIlllllIIlIlIIIIllIIlllIlllI",
+        "method": "j",
+        "descriptor": "()V",
+        "bci": 112,
+        "previous_opcode": 189,
+        "previous_bytes": "bd018c"
+      },
+      {
+        "class": "me/octo/client/IIIlIllllIllllIllIlIIIlllllIlIlIIIllllIllIlllIlllIlIlIllIIlIllllIIlIIlIIllllIIlIlIlII",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIFFFFI)V",
+        "bci": 521,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c8"
+      },
+      {
+        "class": "me/octo/client/IIIlIlllllllIlIlIllIlIIIlIlIlIIIIIIllllIIIlIlIlIIIlIlllllIlIIllIIllllIlIIIllllIllllll",
+        "method": "aC",
+        "descriptor": "()V",
+        "bci": 29,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0046"
+      },
+      {
+        "class": "me/octo/client/IIIllIIIlIIIllIIIIlllIllIIlllIllIIlllllIIIllIllIIIIIIllIlllllIlIlIIlIlIlllllIIllIlllI",
+        "method": "b",
+        "descriptor": "()Lme/octo/client/IIIIIIlIlIIIlllIllIIIlllIllllllIIIIlllllIlIlIIIIllIIlIIIIIllIllIIllIIlIllIIIllIlIlIlI;",
+        "bci": 195,
+        "previous_opcode": 189,
+        "previous_bytes": "bd008b"
+      },
+      {
+        "class": "me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll",
+        "method": "bp",
+        "descriptor": "()Ljava/util/HashMap;",
+        "bci": 909,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0111"
+      },
+      {
+        "class": "me/octo/client/IIIlllIllIIIlIlIIIIlIlIlIIIlIllIIllllIIIlIlllIlllIlIlIlIIIIlIIIIIlIlllIIIIIllIlllIIII$IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI",
+        "method": "invokeSuspend",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "bci": 557,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0101"
+      },
+      {
+        "class": "me/octo/client/IIIlllllIlIIlllIllllIllIlllIlllIIIIIlIlIllIllIlIlIlIlIIIIIIlIIIIlIIIllllIllllllIIIIll",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/IIIlllllIlIIlllIllllIllIlllIlllIIIIIlIlIllIllIlIlIlIlIIIIIIlIIIIlIIIllllIllllllIIIIll;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "bci": 84,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0055"
+      },
+      {
+        "class": "me/octo/client/IIlIIIIIllIlIIIlIllIIlIlIIIIIllIllllllllIIIIlIlIlIIIIIllIlIIlIIIIlIllIlIIllIIIIIllIlI",
+        "method": "S",
+        "descriptor": "()Ljava/util/ArrayList;",
+        "bci": 217,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0074"
+      },
+      {
+        "class": "me/octo/client/IIlIIIIlllIIlIlIIlllllIllllllIIllllIllllIlIlIIllIlIIIIIIIllllIllIIlllIIIIlllIIlllIlll",
+        "method": "a",
+        "descriptor": "(Ljava/lang/String;)Z",
+        "bci": 156,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00b3"
+      },
+      {
+        "class": "me/octo/client/IIlIIIllllIlIllIIIlIllIIllllllIIlIlllIllIIIlIlIlIllIIllIllllIIllIIIlIIIlIlIllIlIllllI",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/BlockPos;",
+        "bci": 242,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0037"
+      },
+      {
+        "class": "me/octo/client/IIlIIlIIIlllIlIIIlIIlIIllIIIlIIlllIllIIIlIlllllllIIlIIlIIIllIlIIIlIlIlIllllIlllllIIIl",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 451,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/IIlIIlIIlIlIIIIlIllIIIllllIIIIlIlIlIIlIllIIIllIlIIIIlIIlllIlIIIIllllllIIlllIlIlllIIll",
+        "method": "h",
+        "descriptor": "()Lme/octo/client/IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI;",
+        "bci": 429,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0146"
+      },
+      {
+        "class": "me/octo/client/IIlIIllIIIlIIIlIllIIIllIIllllIIIlIlIllIlIIIlIllllIlIlIIIllIllIlIlIIllIIlIIlIIlllIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "<init>",
+        "descriptor": "(Lme/octo/client/IIlIIllIIIlIIIlIllIIIllIIllllIIIlIlIllIlIIIlIllllIlIlIIIllIllIlIlIIllIIlIIlIIlllIIlll;Lme/octo/client/lIIlIllIIllIIllllllIllllIIIIIIIllllIIllIIIIlllIllIIIIlIIlIlIllIlIlllIllIlIIIllIIllIll;)V",
+        "bci": 66,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0041"
+      },
+      {
+        "class": "me/octo/client/IIlIlIIllIIIIlIllIIIlllIIIllIIIIlIIIlIlIIlllllIlIIIIllIllIIlllIIIllllIlllIlllllllIlIl",
+        "method": "M",
+        "descriptor": "()V",
+        "bci": 475,
+        "previous_opcode": 189,
+        "previous_bytes": "bd014b"
+      },
+      {
+        "class": "me/octo/client/IIlIllIIllIllIIIIIIIIlIllIIIIIIIIIIlllIIlIIlIIllllIIlllIlIlllIlIIllIIllIIllIIlIllIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 444,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00aa"
+      },
+      {
+        "class": "me/octo/client/IIlIlllIlIIlIIlllIlIlIIIIlIllllIIIlllIIIlIlIlllIIlIllIIIIIlIIIIIlIllIlIllIlIllllllIll",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 211,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0059"
+      },
+      {
+        "class": "me/octo/client/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI",
+        "method": "a",
+        "descriptor": "()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+        "bci": 99,
+        "previous_opcode": 189,
+        "previous_bytes": "bd005b"
+      },
+      {
+        "class": "me/octo/client/IIllIIllllllIIlIIlIIIlllIIIlIllIlIIIllIIIlIIlllIlllIIlIIlIllIIlllIIIllIlIIIlIIIlIIlII",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 138,
+        "previous_opcode": 189,
+        "previous_bytes": "bd007e"
+      },
+      {
+        "class": "me/octo/client/IIlllIIIIIlllIIlllIIIllIIIIIIlIlIIlIIIIllIlIIIllIllIlIlIIlIIIlllIIllIIllIIIllIIIIIIIl$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "compare",
+        "descriptor": "(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "bci": 60,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002a"
+      },
+      {
+        "class": "me/octo/client/IIllllIIIIlIIIIlllIIIlllIlIlIIllllllIllIlIllIlIIlIIlIIIIlIllIIlIlIlIIIIIIIlIlllIllIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+        "method": "a",
+        "descriptor": "(Lkotlinx/serialization/encoding/Decoder;)Lme/octo/client/IIllllIIIIlIIIIlllIIIlllIlIlIIllllllIllIlIllIlIIlIIlIIIIlIllIIlIlIlIIIIIIIlIlllIllIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;",
+        "bci": 196,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0070"
+      },
+      {
+        "class": "me/octo/client/IIllllIIIIlIlllIIIIIIlIlIIIlIllllIIIIlllllIllIIlIIlIlllIlIIlIllIlIllIlIIlIIllllIIlIIl",
+        "method": "e",
+        "descriptor": "()V",
+        "bci": 514,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c7"
+      },
+      {
+        "class": "me/octo/client/IlIIIIIlIIlIIIIlIlIIllIlllIlllIllIlIlIllllIIllIIIIllIllIlIlIIIIIIIIIlIlIIlIlIlIlIllIl$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/IlIIIIIlIIlIIIIlIlIIllIlllIlllIllIlIlIllllIIllIIIIllIllIlIlIIIIIIIIIlIlIIlIlIlIlIllIl;Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIFFFF)Z",
+        "bci": 42,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002d"
+      },
+      {
+        "class": "me/octo/client/IlIIIlllllllIIIIIIlIIllllIlIlIllIIlIIlIlIIIlllIIllllIlIlIIIIllIlllIIIIIlllIIlIlIllIlI",
+        "method": "<init>",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DDDD[Lme/octo/client/IIlIIIIlllIIlIlIIlllllIllllllIIllllIllllIlIlIIllIlIIIIIIIllllIllIIlllIIIIlllIIlllIlll;Lme/octo/client/lllllIIIllllllIIlIlIIIIIIIllIIIIIlIlIlIlIlIlIlIIIlIlIIIlIllIIlIllllIlllIlIIllllIlIIIl;)V",
+        "bci": 144,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0041"
+      },
+      {
+        "class": "me/octo/client/IlIIlIllIlIIlIIIIIlllIlIIllllIlllIlIIllllIlIIlIlIlIIIIIIIlIllIlIllIIIllIIIIllllIllIII",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/IlIIlIllIlIIlIIIIIlllIlIIllllIlllIlIIllllIlIIlIlIlIIIIIIIlIllIlIllIIIllIIIIllllIllIII;Ljava/util/List;Ljava/lang/String;ZILjava/lang/Object;)V",
+        "bci": 42,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0231"
+      },
+      {
+        "class": "me/octo/client/IlIIlIlllIllIIIlIlIlIIIllllIlllIlIIIIIIlllIIIIIlIIllIIIIIIIllIIIIllIIIlllIIlIIlllIIII",
+        "method": "c",
+        "descriptor": "(Lnet/minecraft/world/entity/Entity;)Z",
+        "bci": 50,
+        "previous_opcode": 189,
+        "previous_bytes": "bd003a"
+      },
+      {
+        "class": "me/octo/client/IlIIllIIIIlIllIlIlIlIIIlllIIIIIIlllllIlllIlllllIlIlllllIIIIIIlIlIIIllIIllIIlIllIllIIl",
+        "method": "I",
+        "descriptor": "()Z",
+        "bci": 29,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0062"
+      },
+      {
+        "class": "me/octo/client/IlIIlllIlIIllIIIlIIlIIIlIIllllIllIllllIllIIllIIllIlIllIIIIIlllllIlllIlIllIIIIlIIlIlIl",
+        "method": "a",
+        "descriptor": "()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+        "bci": 595,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002f"
+      },
+      {
+        "class": "me/octo/client/IlIlIIIlIlIlIIIlIlIIllllllIIlIllIIllllIlIllllIIllIlIIIIIllllIlIllIIIllIIIIIIIIllIIIII",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lme/octo/client/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;III)Lme/octo/client/lIIlllIIlIIIIIllIlIlllIllIIIIlIIlIlIIIlIIIlllllIIllllIIIIIllIIIlIIllllIIIIlIIlIllllll;",
+        "bci": 1049,
+        "previous_opcode": 189,
+        "previous_bytes": "bd016b"
+      },
+      {
+        "class": "me/octo/client/IlIlIIIllIIlIIlllIlIlIlIIlIIIlIllIllIIIllIIlIlIIllIIlIIlIlllIIIlllIlIIlIIIIlIllIlIlII",
+        "method": "<init>",
+        "descriptor": "(Ljava/lang/String;)V",
+        "bci": 129,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0063"
+      },
+      {
+        "class": "me/octo/client/IlIlIllllllIlllIlIIlIlIllIlllIlllIlIIllIllIIlIllIIlIIIlIlIlIlIIIlIlIlllIIlIIIIllIIIlI",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Ljava/lang/String;Ljava/util/List;)V",
+        "bci": 204,
+        "previous_opcode": 189,
+        "previous_bytes": "bd007e"
+      },
+      {
+        "class": "me/octo/client/IlIllIIIlIIlIllIIIlIIIIlllIIIlIlllIllIIlllIllIIlIlllIllIlIlIIlIIIIlIIIIlllIIlIlIlIlIl$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 222,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0068"
+      },
+      {
+        "class": "me/octo/client/IlIllIIllIlIlIlIIlIIIlIIlIIlIIlIllllIIIllllIllIIIlllIIlIIIIlIIlllIlllIllIIIllIlIlIIIl",
+        "method": "a",
+        "descriptor": "()V",
+        "bci": 86,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0053"
+      },
+      {
+        "class": "me/octo/client/IlIlllIIIllIIlllIIlIIlIIlIIlIllIllIIIIIIIIIIIlllIlIlIlIIllIlIllIlIIlIIllllIllllllIlll",
+        "method": "extractRenderState",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIF)V",
+        "bci": 313,
+        "previous_opcode": 189,
+        "previous_bytes": "bd01d3"
+      },
+      {
+        "class": "me/octo/client/IlIllllllIlIlIllIlIIlllIIlIIIIllIllIIlIIIIlIIlIlIlllIIlIIllllIIIlIlIIlIIIlllIllIIlIIl",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 168,
+        "previous_opcode": 189,
+        "previous_bytes": "bd007c"
+      },
+      {
+        "class": "me/octo/client/IlIlllllllIllllIIlllllllIIlIlIIIIlIIIIIIllIIlIIlIlIIIIIlIIlIIllllllIllIlIIIIIIIIlIlIl$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/IlIlllllllIllllIIlllllllIIlIlIIIIlIIIIIIllIIlIIlIlIIIIIlIIlIIllllllIllIlIIIIIIIIlIlIl;Lnet/minecraft/client/gui/GuiGraphicsExtractor;[Lme/octo/client/IlIIIIIlIIlIIIIlIlIIllIlllIlllIllIlIlIllllIIllIIIIllIllIlIlIIIIIIIIIlIlIIlIlIlIlIllIl;Lme/octo/client/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;IIIF)Lme/octo/client/lIIlllIIlIIIIIllIlIlllIllIIIIlIIlIlIIIlIIIlllllIIllllIIIIIllIIIlIIllllIIIIlIIlIllllll;",
+        "bci": 68,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0032"
+      },
+      {
+        "class": "me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "b",
+        "descriptor": "()Ljava/util/List;",
+        "bci": 490,
+        "previous_opcode": 189,
+        "previous_bytes": "bd009a"
+      },
+      {
+        "class": "me/octo/client/IllIlIIIIlIIlIIllIIIlIlIIlIIlIIIlllllIIIIIlllllIIlIIIIlIIllIlIlIlIlIIIIllIIllllIIIIlI",
+        "method": "b",
+        "descriptor": "(Lorg/graalvm/polyglot/Value;)Lme/octo/client/lIIIlIlIIIIlIlIlIlllIIlIIlIIIIIlIIIlIIlIllIllIlIIIlIlIlIlIlIIIlIIIllIIlIllIIlllIIIIlI;",
+        "bci": 272,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c2"
+      },
+      {
+        "class": "me/octo/client/IllIlllIllIIlIIlIllllIlIIIIlIlllIIIlllIIlIllIlIIIIIlIllIlllIlllIlIIIIIlIllIIIlIllIIII",
+        "method": "M",
+        "descriptor": "()V",
+        "bci": 177,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0228"
+      },
+      {
+        "class": "me/octo/client/IlllIIIIlIIIllIIlIllIIIllIIlIllIIIllIIlIIlIlIlIIIIllIlIIlIIIIIIIlIIlIIIlIlIIIlIIllIII$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "compare",
+        "descriptor": "(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "bci": 68,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0032"
+      },
+      {
+        "class": "me/octo/client/IllllIllIllllIlllllIlIlIlllIIIIIllllllIIlllIlIIIlIlIIlIIIlIlllIIIllllllIIlIlllIIIlIIl",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lkotlin/Pair;",
+        "bci": 487,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ad"
+      },
+      {
+        "class": "me/octo/client/IlllllIllIlllIIIlIlllIIllIIIIllllllIllIlIlIlllIlIlIlIlIlIlIIlllllIIIIIlIlllllllIllIll",
+        "method": "<init>",
+        "descriptor": "(Lme/octo/client/IIIlIllllllIlIlIIIllIIllIllllllllIlIlIlllIlIlIIIIlIlllIlIlIIlIlllllIIllIlllIllIlIlIII;)V",
+        "bci": 463,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00d6"
+      },
+      {
+        "class": "me/octo/client/IllllllIIlIIIIlIIIllIlIlllIIIIIIlIIllIIlIlIIIIlIIllIlIlllIIlIlllllIIIIIIlIIlllIlIIIlI",
+        "method": "M",
+        "descriptor": "()V",
+        "bci": 47,
+        "previous_opcode": 189,
+        "previous_bytes": "bd009c"
+      },
+      {
+        "class": "me/octo/client/events/impl/IIIlllIIIIIlIIllIllIlllllIIlllIIlllIlIIllIllllllIlIllllllIIlIlllllIlIlIIIlIlllIIlllIl",
+        "method": "<init>",
+        "descriptor": "(Lcom/mojang/blaze3d/vertex/PoseStack;FFLnet/minecraft/client/Camera;DDDILkotlin/jvm/internal/DefaultConstructorMarker;)V",
+        "bci": 100,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002c"
+      },
+      {
+        "class": "me/octo/client/events/impl/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+        "method": "<init>",
+        "descriptor": "(Lnet/minecraft/network/protocol/Packet;)V",
+        "bci": 21,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0019"
+      },
+      {
+        "class": "me/octo/client/events/impl/IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll",
+        "method": "<init>",
+        "descriptor": "(DD)V",
+        "bci": 33,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0021"
+      },
+      {
+        "class": "me/octo/client/events/impl/IlllIIIIllllIIllIlllIllIIIllIIIlIllIIllIlIIIlllIllllllIllIlIIIIIllIIlIlIllIIllIIlIIII",
+        "method": "<init>",
+        "descriptor": "(Lnet/minecraft/client/player/AbstractClientPlayer;FFLnet/minecraft/world/InteractionHand;FLnet/minecraft/world/item/ItemStack;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IZ)V",
+        "bci": 150,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0050"
+      },
+      {
+        "class": "me/octo/client/events/impl/base/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll",
+        "method": "a",
+        "descriptor": "()V",
+        "bci": 133,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c2"
+      },
+      {
+        "class": "me/octo/client/events/impl/lIlIllIlllIlllIIllllllIIlIIlIllllIIlIIIIllIlIIIIlIIlIlllllIlIlllIIIlIIIlIlIlIlIllllII",
+        "method": "<init>",
+        "descriptor": "(Ljava/lang/String;ILme/octo/client/events/impl/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;)V",
+        "bci": 59,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002c"
+      },
+      {
+        "class": "me/octo/client/events/impl/lIllIllIIlIIlllIIIIIlIIlIlIIIIlIIlIllIIIIIIIIIlIIIIlIIlIlllIIIIIlIIIlIIIIIllIllIlIIIl",
+        "method": "<init>",
+        "descriptor": "(III)V",
+        "bci": 33,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0029"
+      },
+      {
+        "class": "me/octo/client/events/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "b",
+        "descriptor": "(Lme/octo/client/events/impl/base/EventPriority;)V",
+        "bci": 167,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0069"
+      },
+      {
+        "class": "me/octo/client/lIIIIlIlllIlIlIIlllIlIIlIIIIIIlIlIIIIIIlIIlllIlIlIlIIIllllIllllIIlllIlIIlIlIIIlIlIlII",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 60,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002f"
+      },
+      {
+        "class": "me/octo/client/lIIIIllllIlIIIIlIlIllllIIllIlIlIIlIIIIlIIlllIlIIllllllIIlIIllIIlIIlllllIIllIIlllIIIII",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 73,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0037"
+      },
+      {
+        "class": "me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+        "method": "a",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/Integer;",
+        "bci": 128,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0069"
+      },
+      {
+        "class": "me/octo/client/lIIlIIIIIIlIIlIIIIlIIIlllIlllIIIllIllIllIlIIlIlIIIIllIIllIIIIlIIllllIIlIllIlIllllIlll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+        "method": "compare",
+        "descriptor": "(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "bci": 238,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0047"
+      },
+      {
+        "class": "me/octo/client/lIIlIlIIllIlIllIlIllIllIlIlllllllllIIIIIlIIIIllIIIlllIIllllIIlIIIlIIIIIllIlllllIllIII",
+        "method": "a",
+        "descriptor": "(FFFFIIF)Lme/octo/client/IlIIlIIIlIIlIlIIlllIlllIIIlIlIllIllIIIlIlIllIIlIIIlIIllIlllIIllIIIIlIlIlllIllllllIIII;",
+        "bci": 645,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00e6"
+      },
+      {
+        "class": "me/octo/client/lIIllIIllllIIlIIIIIIIIIIIlIIIlIlIIlIlllIllIlIlIIIlIlIlIlIIllIllIIlIIIIlllllIllIllIllI",
+        "method": "O",
+        "descriptor": "()V",
+        "bci": 162,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0444"
+      },
+      {
+        "class": "me/octo/client/lIIllIlIllIIIIlIllIlllIIIIIlIllIIIIlIlIIllIIIIIIlIIlIIlIlllIlIIllIlIIlIlIIIIlIllIIIII",
+        "method": "k",
+        "descriptor": "(I)[[F",
+        "bci": 194,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00bc"
+      },
+      {
+        "class": "me/octo/client/lIIlllIIIIIIIIllIIlIllIIIIIIlllIIIIIIlllIlIIlIIlIlIlIIlIIIlllIllIllIllIIIIlllIIIIlIII",
+        "method": "aD",
+        "descriptor": "()V",
+        "bci": 559,
+        "previous_opcode": 189,
+        "previous_bytes": "bd025b"
+      },
+      {
+        "class": "me/octo/client/lIIlllIIIIIllIIlIlIllllllIlIIlIlllIIlIllIIIIlIIllIlIlllIlIIlIIlIIllIlIIllIIIIlIlIIIIl",
+        "method": "a",
+        "descriptor": "()V",
+        "bci": 122,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0083"
+      },
+      {
+        "class": "me/octo/client/lIIlllIIIIlIlIlIIlIlIIIIllIIIIllIlIIllIIlIllIllllllllllllIlllIlIlllIIIllIlIIllIIIIIIl",
+        "method": "a",
+        "descriptor": "(Ljava/util/List;Ljava/util/List;Lme/octo/client/utils/player/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;ZZZZZLme/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll;)V",
+        "bci": 285,
+        "previous_opcode": 189,
+        "previous_bytes": "bd02b4"
+      },
+      {
+        "class": "me/octo/client/lIIlllIlIlllllIlIllIllIIIIlllllIlIIllIllIlllIIIIlIIIIIlllllIlIIIIIIlIIIIIIllIlIllIIIl",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 163,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0081"
+      },
+      {
+        "class": "me/octo/client/lIlIIlIIlllIlIlIlllIlllIIIIlllIlIIIIIllIllllIllIIIIIIlIlIIIIIIIlllIIllIIIllIIIllIIIlI",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 317,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00b2"
+      },
+      {
+        "class": "me/octo/client/lIlIIlIlIIlllIllIIlIIIlIllIlIlIlIlIlllIllllllIIIllIIIIlIIllIlIIIIIIIIllllIIIIIlIIIlIl",
+        "method": "a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Set;Ljava/util/List;ZZ)Lme/octo/client/lIlIIlIlIIlllIllIIlIIIlIllIlIlIlIlIlllIllllllIIIllIIIIlIIllIlIIIIIIIIllllIIIIIlIIIlIl$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;",
+        "bci": 366,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0099"
+      },
+      {
+        "class": "me/octo/client/lIlIlIllIIlIIlIIIIlIIlIIlIIIllIIIIllIllIIllIlllIIIlllIIIIIllIlllIIIIIIIlIIIIllIlIIlIl",
+        "method": "a",
+        "descriptor": "(Z)Lcom/mojang/blaze3d/pipeline/RenderTarget;",
+        "bci": 132,
+        "previous_opcode": 189,
+        "previous_bytes": "bd006b"
+      },
+      {
+        "class": "me/octo/client/lIlIlIllIlllIlIllIIIllIIllIIlIIlIlllIIIlIIlllIIlIlIIllllIIIlIllIIlllIIlIIIIIllIIlIlIl",
+        "method": "<init>",
+        "descriptor": "(Ljava/lang/String;)V",
+        "bci": 64,
+        "previous_opcode": 189,
+        "previous_bytes": "bd005f"
+      },
+      {
+        "class": "me/octo/client/lIllIIIIIlIIllIlllIIlIIIIIlIlIlIlIIIllIIlIlIlIIIIIIlllIIIlIllIlIIlIIllIIllIlIIIIIlIll",
+        "method": "b",
+        "descriptor": "(D)V",
+        "bci": 153,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00be"
+      },
+      {
+        "class": "me/octo/client/lIllIlIIIIIIIIlllIIIIlIIIlIlIlIlIlIIIlIIlIIlllIllIIIIlllIIlIIIIlIlllIIIlIIllllIlllllI",
+        "method": "a",
+        "descriptor": "(Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4fc;Lnet/minecraft/world/phys/AABB;Lme/octo/client/llllllIllIlllIllIllllIIllIlllIIIlIIIlllIIllIIIIllIIlllIIlIlIllIllIIIlIllIIIIllIIlIIll;I)V",
+        "bci": 135,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0085"
+      },
+      {
+        "class": "me/octo/client/lIllIlIIIIIIIlIIIIIIllIlIlIIlllllllllllIIIIIIllIlIIlIIlllIIIIIlIlllllIlllIlIIIlIllllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 129,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0072"
+      },
+      {
+        "class": "me/octo/client/lIllIlIlIlIlIllIlllIlIlIllIllIIIIllIIIIlllIIlllIllllIIIIIIlIIIIIlIIIIlllIIIlIlIlllIIl",
+        "method": "b",
+        "descriptor": "(Lnet/minecraft/world/phys/BlockHitResult;)V",
+        "bci": 166,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0126"
+      },
+      {
+        "class": "me/octo/client/lIllllIIlIllIIlllIIlIllIIlIlIIllIlIlllIlIIlIIlllIIlIlllIlIlIIlllIllIlIIIIllIlIIlIIIlI",
+        "method": "b",
+        "descriptor": "()V",
+        "bci": 216,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0110"
+      },
+      {
+        "class": "me/octo/client/lIllllIllllIIllIlIllIlIlIIIIlIIlllllllIlIIIIIIlIlIlIIIlIIIIllIllllIllllIIIlllIIIIlIlI",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 60,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0040"
+      },
+      {
+        "class": "me/octo/client/llIIIIIIIllIllIIllIlIIlIlIIIlllllllllIIIlllIIIlIIlIlIllIlIllIlllllIllIIllllIlIIllIllI",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/AABB;ZLnet/minecraft/world/phys/Vec3;Z)Lme/octo/client/utils/player/lllllIllIlIIllIIlIllllIlIIlIlllllIlIllllIIIlIllIlllllllllIllIIlllIIIIIlIllIIllllIlllI;",
+        "bci": 398,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/llIIIIlllIIIlIIIIIlIlIIllIlIlllIIlIIIIIIIIIlIlllIlIIIIlllIllIllIIIlllIllIIIIIlIlllIll",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 125,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0045"
+      },
+      {
+        "class": "me/octo/client/llIIIIllllIIIIlIIIlIlllllIllllIlIlIlIlIlIlIIlIIIllllIIlIllllIIlIlllIlIlIlIIIlllllIlll",
+        "method": "A",
+        "descriptor": "()V",
+        "bci": 378,
+        "previous_opcode": 189,
+        "previous_bytes": "bd01d0"
+      },
+      {
+        "class": "me/octo/client/llIIIlIIllIIllIlIIIIIlIlIlIIIllIlllIllIlllIllIllIlIIIIIIIlllIIIIIlllIllIIllIlllIllIIl",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIFF)Z",
+        "bci": 189,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00e1"
+      },
+      {
+        "class": "me/octo/client/llIIlIIIIIIIIlIIlllIlllIIllIIIlIIlllIllllllIIlllllIIIIllIIIIllIlllIIIllIIIIIIlIIIIlII",
+        "method": "d",
+        "descriptor": "()Z",
+        "bci": 113,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ae"
+      },
+      {
+        "class": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+        "method": "r",
+        "descriptor": "()F",
+        "bci": 154,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0378"
+      },
+      {
+        "class": "me/octo/client/llIIlllIlIIlllIIllIlIlIIIlIIllIlllIllIlIllIIllIlIllIIIlllIlIllllIIIIIlIIlllIlIIlIlIII",
+        "method": "A",
+        "descriptor": "()V",
+        "bci": 465,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0485"
+      },
+      {
+        "class": "me/octo/client/llIIlllIlIlllIIllIllIIIIIlIlIlIlIlIIlllIlllllIlIIlIIIlIlllllIIIIllIIIIllIIIlllIlllIIl",
+        "method": "a",
+        "descriptor": "()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+        "bci": 339,
+        "previous_opcode": 189,
+        "previous_bytes": "bd008c"
+      },
+      {
+        "class": "me/octo/client/llIlIIlllIllIllIlIIllllIIllIIlIIIlIlIIllIlIllIlIIllIlIlIlIIIlIIIllIlIIlIIlIllIlIIllll",
+        "method": "a",
+        "descriptor": "()Lcom/google/gson/JsonElement;",
+        "bci": 330,
+        "previous_opcode": 189,
+        "previous_bytes": "bd003d"
+      },
+      {
+        "class": "me/octo/client/llIlIIlllllIIIIlIllIlIlllIllllllIIIlIIllIIlIIIIIllIIlIIIIllllIlIlllllllIlIIlIIIllIIII",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/events/impl/llIlIllIllIllIlIllllIIlIlllIIIlllIlIllIllIIlIIIlIIlIIllllllIIlIlIIllIIIlIlIllIIllIllI;)V",
+        "bci": 823,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ec"
+      },
+      {
+        "class": "me/octo/client/llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI",
+        "method": "a",
+        "descriptor": "(FFFFII)Lme/octo/client/IlIIlIIIlIIlIlIIlllIlllIIIlIlIllIllIIIlIlIllIIlIIIlIIllIlllIIllIIIIlIlIlllIllllllIIII;",
+        "bci": 1266,
+        "previous_opcode": 189,
+        "previous_bytes": "bd01d7"
+      },
+      {
+        "class": "me/octo/client/llIllIIlllIIIlIIIIlIIIIIllIllIIIlIIIlllIlIllIlIIIllIllllIIlIllIIllIIllIIIlIIIIlIlllll",
+        "method": "mouseDragged",
+        "descriptor": "(Lnet/minecraft/client/input/MouseButtonEvent;DD)Z",
+        "bci": 75,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0042"
+      },
+      {
+        "class": "me/octo/client/llIllIlllllIlIlIIllIIIlllIIllIIlIIllIIIlIllllIllIllIllIIIlIllIllIIllIIllIlIIlIIIlIIII",
+        "method": "aB",
+        "descriptor": "()V",
+        "bci": 49,
+        "previous_opcode": 189,
+        "previous_bytes": "bd009f"
+      },
+      {
+        "class": "me/octo/client/llIlllllIIlllIllllIllIIIlllIIIIlllIIlIlIlIllIlIllIIIlIlllIlIIllllIlIIlIlIIlllIllIIIII",
+        "method": "c",
+        "descriptor": "(I)Ljava/util/List;",
+        "bci": 157,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00dc"
+      },
+      {
+        "class": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+        "method": "<init>",
+        "descriptor": "()V",
+        "bci": 541,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c9"
+      },
+      {
+        "class": "me/octo/client/lllIIIlIIIlllIlllIlllIllllIIllIlIlIlIIllIIllIlllllIIlllIIIllIlIIIIllIlIlIIlIIllIlllII",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lme/octo/client/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;III)Lme/octo/client/lIIlllIIlIIIIIllIlIlllIllIIIIlIIlIlIIIlIIIlllllIIllllIIIIIllIIIlIIllllIIIIlIIlIllllll;",
+        "bci": 933,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0162"
+      },
+      {
+        "class": "me/octo/client/lllIIIlIllllIIlIlllIlIlIllIIIlIlllllIIIlIIIIlIllIlIlIllIllIIllIIllllIIllIIIllllIlIIlI",
+        "method": "extractRenderState",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIF)V",
+        "bci": 256,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00f6"
+      },
+      {
+        "class": "me/octo/client/lllIIIlllIIIIlIllIlIIlllllIIIlIIlIIIllIllllllIllIlIIIlIlIIlllIIIIIlIIIIIlIlIIlIlIlIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 151,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0096"
+      },
+      {
+        "class": "me/octo/client/lllIIlIIIIIIlIIlIlIllIllIlIIIlIllIllIlllIlllllllIIllIIIllIIllIllllIlIlllllIlIlIIIlIIl",
+        "method": "am",
+        "descriptor": "()V",
+        "bci": 46,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0035"
+      },
+      {
+        "class": "me/octo/client/lllIIlIlIIllIIIllIlIIIIIIlIIIIlllIllIlIlIIIlIIIIlIIIIIIIIIllIllIllIlIlllIIllIIllIlIII$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "a",
+        "descriptor": "(Lcom/mojang/blaze3d/vertex/MeshData;Lcom/mojang/blaze3d/pipeline/RenderPipeline;Ljava/util/function/Function;Ljava/util/function/Function;)Lme/octo/client/lllIIlIlIIllIIIllIlIIIIIIlIIIIlllIllIlIlIIIlIIIIlIIIIIIIIIllIllIllIlIlllIIllIIllIlIII;",
+        "bci": 311,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ac"
+      },
+      {
+        "class": "me/octo/client/lllIIlllIIllIlIIlIlIlIIlIlIllIlIIIIIIIIIllIIlIlllllIIlllIllllIlIllIIIllIIIIlllIIIIlll",
+        "method": "<init>",
+        "descriptor": "(Ljava/io/File;)V",
+        "bci": 838,
+        "previous_opcode": 189,
+        "previous_bytes": "bd01a6"
+      },
+      {
+        "class": "me/octo/client/lllIlIIIllllIllllllIIIIllllllIllIIllllIllIIIlllIllIllIIlIIllIIlIllIIllllIIlIlIIIllIIl",
+        "method": "M",
+        "descriptor": "()V",
+        "bci": 388,
+        "previous_opcode": 189,
+        "previous_bytes": "bd03d0"
+      },
+      {
+        "class": "me/octo/client/lllIlIIlIIIllIlllIllIIlllIlIlIlIlIllIIlIlIIlIIlIlIIIIlIllIlllllIIlIlIlIIIIllIIlIlIIIl",
+        "method": "<init>",
+        "descriptor": "(Lme/octo/client/IllIllIlIIIlIllIllIllllllIlIllllllllIllIIlllIIIIIIIlllIIIllIlIllIIIlllIIllIIIlIIlIIlI;)V",
+        "bci": 200,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00a1"
+      },
+      {
+        "class": "me/octo/client/lllIlIIllIIIIIIlllIllIlIIIllllIlIIlIIIIIlIlIlIlIIIIlIIIlllIIIIlIIIlIIIlllIIlllllIIllI",
+        "method": "<init>",
+        "descriptor": "(Z)V",
+        "bci": 251,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0085"
+      },
+      {
+        "class": "me/octo/client/lllIllIlllIllIllIlIIIlIIlIIIllIIIlIIllllllllIIlIIIIIlIIIlIllIIlIlIllIllIIlIIIIllIlIIl",
+        "method": "aD",
+        "descriptor": "()V",
+        "bci": 291,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0134"
+      },
+      {
+        "class": "me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl",
+        "method": "aD",
+        "descriptor": "()V",
+        "bci": 239,
+        "previous_opcode": 189,
+        "previous_bytes": "bd031e"
+      },
+      {
+        "class": "me/octo/client/llllllIIlllIIIIIlIllIIIIIIllIIIIllIllIIllIlIIIIlIIllIIllIIlIIIlIIIIIlIllIlIlIIIIlIlII",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/events/impl/llIlIIIIlIlllIIllllIIllIllIIIlIIIIIIIlIIIllIIllIllllllllllIllIIIllIlIlIlIlIIlIIIllIII;)V",
+        "bci": 335,
+        "previous_opcode": 189,
+        "previous_bytes": "bd007d"
+      },
+      {
+        "class": "me/octo/client/llllllIlIlIIlIIllIIllllIllIlIlIllIIIlIIlIllllIlIllIIIIlllIIlIllIIlIIlIllIIIlIIIllIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "<init>",
+        "descriptor": "(ZZZZFFZZZZ)V",
+        "bci": 75,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0033"
+      },
+      {
+        "class": "me/octo/client/llllllIllIlllIllIllllIIllIlllIIIlIIIlllIIllIIIIllIIlllIIlIlIllIllIIIlIllIIIIllIIlIIll",
+        "method": "a",
+        "descriptor": "(Lme/octo/client/llllllIllIlllIllIllllIIllIlllIIIlIIIlllIIllIIIIllIIlllIIlIlIllIllIIIlIllIIIIllIIlIIll;DDDD)Lme/octo/client/llllllIllIlllIllIllllIIllIlllIIIlIIIlllIIllIIIIllIIlllIIlIlIllIllIIIlIllIIIIllIIlIIll;",
+        "bci": 145,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0095"
+      },
+      {
+        "class": "me/octo/client/utils/IIIIlIlIlllllIlllIllIIIIllllllIllllIlIlIllllIlIIlIlIIIlIlIllIIlllIIIIlIIIIIlIIIllIIll",
+        "method": "<init>",
+        "descriptor": "(ILme/octo/client/utils/llIIlIlllllIllIllllIlllIllIIlllllIllllllIlIIllIIIIlllIIIlllllIIIlIllllIllIIlllIlIlIlI;D)V",
+        "bci": 101,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0046"
+      },
+      {
+        "class": "me/octo/client/utils/IIIlIIIIlIlIIllIIIIIlIlllIIIIlllIllllIllllIllllIIllllIlIIIlIlIIIIIIlllIIIlllIllIIIlII",
+        "method": "a",
+        "descriptor": "(JJLkotlin/jvm/functions/Function0;)Ljava/util/concurrent/ScheduledFuture;",
+        "bci": 61,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0066"
+      },
+      {
+        "class": "me/octo/client/utils/IIIlIllllIllllIllIlIIIlllllIlIlIIIllllIllIlllIlllIlIlIllIIlIllllIIlIIlIIllllIIlIlIlII",
+        "method": "s",
+        "descriptor": "()V",
+        "bci": 502,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00c2"
+      },
+      {
+        "class": "me/octo/client/utils/IIIlllIIIIIlIIllIllIlllllIIlllIIlllIlIIllIllllllIlIllllllIIlIlllllIlIlIIIlIlllIIlllIl",
+        "method": "a",
+        "descriptor": "(Ljava/lang/String;)V",
+        "bci": 162,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/utils/IIlIIlIlllIIllIIIllIIIIIIIIllIIllllIlIlllIIlIlIllIIIIIIIlIlIIIIIlIIIIllIlIIlIIllllIIl",
+        "method": "a",
+        "descriptor": "(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFFFFFFFFFFF)V",
+        "bci": 977,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00b1"
+      },
+      {
+        "class": "me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;",
+        "bci": 367,
+        "previous_opcode": 189,
+        "previous_bytes": "bd011e"
+      },
+      {
+        "class": "me/octo/client/utils/IlIllllIIlllIIIIIlIllIlIlIIlIIIlIIlllllllIllIllIlIIllIIIlllllIIIlIIIIlIlIIllIIIlIllll",
+        "method": "b",
+        "descriptor": "(FFFF)V",
+        "bci": 324,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0043"
+      },
+      {
+        "class": "me/octo/client/utils/IllIllllIIlIIIllllllIIIlllllIIlllIlllIIlllIlIIllllIlllIllIIllIIIlllllIIllIlIlIIlllllI",
+        "method": "<init>",
+        "descriptor": "(JLme/octo/client/utils/IllllIlIIIIllIllllIIIIIlIlllllllIIIIIlIIllIIllIlIllIlllllIIlllIlIlllIlllIlIlIlIIlIIII;)V",
+        "bci": 237,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0048"
+      },
+      {
+        "class": "me/octo/client/utils/lIIIIIllIIIlIIlIllIlIllllIlIlIIIllIlllllIlIllIIllllIIlIllIIIlllIIIllIIlIlIlIlIIIIIlIl",
+        "method": "a",
+        "descriptor": "(Ljava/lang/String;ZF)F",
+        "bci": 278,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00e4"
+      },
+      {
+        "class": "me/octo/client/utils/lIIIIlIIllIIlIlIIlIllIIllIIIlIllIIllIIIlIlIllIlIlIIlIlIIlIIlIIlIlIlIllllIIIllIIlIIIll",
+        "method": "a",
+        "descriptor": "(Ljava/lang/String;DDLme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)D",
+        "bci": 160,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0084"
+      },
+      {
+        "class": "me/octo/client/utils/lIIIIlllIllIlIlIlllIlllIlIlllIlIIlIlIIllIlllIllllIIllllIIIlIIlIllllIIIlIIIlIlIlIlIlII",
+        "method": "a",
+        "descriptor": "(IIF)I",
+        "bci": 540,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0128"
+      },
+      {
+        "class": "me/octo/client/utils/lIIIlllIIlIlIllllIllIIIllIIlIllIlllIIllllIIlIlIIIIIIlllllllIlIlllllIlIIlIIlIIIIlIIlII",
+        "method": "a",
+        "descriptor": "(Ljava/util/Map;)Ljava/util/Map;",
+        "bci": 126,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0060"
+      },
+      {
+        "class": "me/octo/client/utils/lIIlIllIIlIllIllIlIlllIlIlllllIIllllIIlIlIllIllIllIIIIIlllIIlIIlIllllIIIIllIIlIIlIlll",
+        "method": "<init>",
+        "descriptor": "(JLjava/lang/String;Ljava/lang/String;Lme/octo/client/utils/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;JJJZ)V",
+        "bci": 275,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0081"
+      },
+      {
+        "class": "me/octo/client/utils/lIIllIlIIllIIIlIIlIIlIIllIIllIIIllIIIlIlIIlIlIlIlIlIllIllIlIIlIIIllIlIIIlIIlIIlIIIlII",
+        "method": "D",
+        "descriptor": "()V",
+        "bci": 542,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/utils/lIIllllIIlIIIIllIlIIIIIllIllllllIIIlIlIlIlIllIIlIlIllIlIIIIIIllIIIIlIlllIlIlllIlllIll",
+        "method": "a",
+        "descriptor": "(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Ljava/util/Set;Ljava/util/List;)Lkotlin/Pair;",
+        "bci": 453,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/utils/lIlIlIlIlIlIlIIIIlIllIllIlIlIllIllllIlIIIIlIllIllllIllIIIIIIllIlIlllIIIlIllllIlIllIII",
+        "method": "a",
+        "descriptor": "(Ljava/lang/Iterable;)V",
+        "bci": 96,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0076"
+      },
+      {
+        "class": "me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "method": "<init>",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V",
+        "bci": 466,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ae"
+      },
+      {
+        "class": "me/octo/client/utils/llIIlllIlIlllIIllIllIIIIIlIlIlIlIlIIlllIlllllIlIIlIIIlIlllllIIIIllIIIIllIIIlllIlllIIl",
+        "method": "b",
+        "descriptor": "([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;",
+        "bci": 143,
+        "previous_opcode": 189,
+        "previous_bytes": "bd009e"
+      },
+      {
+        "class": "me/octo/client/utils/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII",
+        "method": "aB",
+        "descriptor": "()V",
+        "bci": 68,
+        "previous_opcode": 189,
+        "previous_bytes": "bd005b"
+      },
+      {
+        "class": "me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI",
+        "method": "e",
+        "descriptor": "(Ljava/lang/String;)V",
+        "bci": 49,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0041"
+      },
+      {
+        "class": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+        "method": "<clinit>",
+        "descriptor": "()V",
+        "bci": 12,
+        "previous_opcode": 62,
+        "previous_bytes": "3e"
+      },
+      {
+        "class": "me/octo/client/utils/llllIlIllllIIlllIIIIllIlIIIIIlIIllIlIlIlIlIIllIlIIIlIllIIIllllIIIllIIllllllIIlllIlIII",
+        "method": "a",
+        "descriptor": "(D)I",
+        "bci": 325,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0048"
+      },
+      {
+        "class": "me/octo/client/utils/llllllIIIlllIlIllIIlIIIIIIIIllIIlllIIIIllllIlIlIIlIIllllIIIlIIllIlIIlIllIlIIIIlIIlIII",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 80,
+        "previous_opcode": 189,
+        "previous_bytes": "bd002c"
+      },
+      {
+        "class": "me/octo/client/utils/llllllIIIllllIIlllIIIlIlIIlIIIIlIIllllIlllIllIIIIllIIIlllIIlllIlIllllllIlIlllllllIIII",
+        "method": "a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Ljava/util/Map;",
+        "bci": 713,
+        "previous_opcode": 189,
+        "previous_bytes": "bd01c2"
+      },
+      {
+        "class": "me/octo/client/utils/llllllIlIlIIlIIllIIllllIllIlIlIllIIIlIIlIllllIlIllIIIIlllIIlIllIIlIIlIllIIIlIIIllIllI",
+        "method": "hashCode",
+        "descriptor": "()I",
+        "bci": 86,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0051"
+      },
+      {
+        "class": "me/octo/client/utils/player/IIIlIlIIlIIIlIIIIIllIIllIIllllIIIIIIIIIlIIIlIIlIlIllIIIIIIIllllIlIlllIIlIlIlIIlIlIlIl",
+        "method": "c",
+        "descriptor": "()V",
+        "bci": 758,
+        "previous_opcode": 189,
+        "previous_bytes": "bd00ef"
+      },
+      {
+        "class": "me/octo/client/utils/player/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII",
+        "method": "a",
+        "descriptor": "(DDDD)D",
+        "bci": 171,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0056"
+      },
+      {
+        "class": "me/octo/client/utils/player/lIIllIIIlIlIIIlIIIIIlIlIIlIIIIIIIIlIIllIIIIlIlllIIllIIllIIlllllllIIllIllIlllllIlIlIII",
+        "method": "l",
+        "descriptor": "()V",
+        "bci": 116,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+        "method": "b",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;ZD)V",
+        "bci": 404,
+        "previous_opcode": 189,
+        "previous_bytes": "bd0004"
+      },
+      {
+        "class": "me/octo/client/utils/player/pathfinder/IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll",
+        "method": "a",
+        "descriptor": "()Ljava/util/HashMap;",
+        "bci": 6854,
+        "previous_opcode": 189,
+        "previous_bytes": "bd003a"
+      }
+    ],
+    "invokestatic_count": 137,
+    "previous_opcode_counts": {
+      "0x3e": 1,
+      "0xbd": 136
+    },
+    "method_handle_references": [],
+    "class_initializer_call": [
+      {
+        "class": "me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll",
+        "method": "<clinit>",
+        "descriptor": "()V",
+        "bci": 12,
+        "previous_opcode": 62,
+        "previous_bytes": "3e"
+      }
+    ],
+    "class_initializer_stack_evidence": [
+      {
+        "bci": 6,
+        "opcode": 6,
+        "bytes": "06"
+      },
+      {
+        "bci": 7,
+        "opcode": 189,
+        "bytes": "bd0002"
+      },
+      {
+        "bci": 10,
+        "opcode": 3,
+        "bytes": "03"
+      },
+      {
+        "bci": 11,
+        "opcode": 62,
+        "bytes": "3e"
+      },
+      {
+        "bci": 12,
+        "opcode": 184,
+        "bytes": "b80046"
+      }
+    ],
+    "interpretation": "The only field write is the setter's putstatic. Every direct setter call is preceded by anewarray, except the class initializer call: it allocates the array at bci 7, then pushes/stores an int before invokestatic at bci 12, leaving the nonnull array below it.",
+    "limits": "This archives Java class-file putstatic/invokestatic references and method handles. It does not exclude reflective or native writes elsewhere in the program."
+  },
+  "acceptance": {
+    "static_reconstruction": "checked all Java class files in the pinned archive for direct field writes and setter calls",
+    "build_regression": "not applicable; analysis tool only",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  }
+}

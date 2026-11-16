@@ -1,0 +1,71 @@
+
+> Configure project :
+Fabric Loom: 1.18.0-alpha.19
+Mod-provided javadoc from mod fabric-content-registries-v0 should have the markdown metadata entry
+
+> Task :compileJava
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\IIIlIIIIIlIIlIIIIlllIlIlllIllllIlIIlIlIIlIlllIIlIIlIllIIIllIllIIlIIIIIIllIIIlllIIlIIl.java:28: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+import sun.misc.Unsafe;
+               ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\lIIlllIIlIIIIIllIlIlllIllIIIIlIIlIlIIIlIIIlllllIIllllIIIIIllIIIlIIllllIIIIlIIlIllllll.java:3: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+import sun.misc.Unsafe;
+               ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:12: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+import sun.misc.Unsafe;
+               ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\IIIlIIIIIlIIlIIIIlllIlIlllIllllIlIIlIlIIlIlllIIlIIlIllIIIllIllIIlIIIIIIllIIIlllIIlIIl.java:77: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static Unsafe c() {
+                  ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\IIIlIIIIIlIIlIIIIlllIlIlllIllllIlIIlIlIIlIlllIIlIIlIllIIIllIllIIlIIIIIIllIIIlllIIlIIl.java:79: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+         Object var0 = Unsafe.class.getDeclaredField("theUnsafe");
+                       ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\IIIlIIIIIlIIlIIIIlllIlIlllIllllIlIIlIlIIlIlllIIlIIlIllIIIllIllIIlIIIIIIllIIIlllIIlIIl.java:85: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+            return (Unsafe)var1;
+                    ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\lIIlllIIlIIIIIllIlIlllIllIIIIlIIlIlIIIlIIIlllllIIllllIIIIIllIIIlIIllllIIIIlIIlIllllll.java:8: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static Unsafe a() {
+                  ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:132: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static final Unsafe b(Lazy var0) {
+                        ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:134: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+      return var1 instanceof Unsafe ? (Unsafe)var1 : c();
+                             ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:134: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+      return var1 instanceof Unsafe ? (Unsafe)var1 : c();
+                                       ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:137: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static final Unsafe c() {
+                        ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:184: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static final Unsafe e(Lazy var0) {
+                        ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:186: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+      return var1 instanceof Unsafe ? (Unsafe)var1 : e();
+                             ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:186: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+      return var1 instanceof Unsafe ? (Unsafe)var1 : e();
+                                       ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:189: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static final Unsafe e() {
+                        ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:252: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+   private static Unsafe getUnsafeOrNull() {
+                  ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:254: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+         Field var0 = Unsafe.class.getDeclaredField("theUnsafe");
+                      ^
+<WORKTREE_ROOT>\polinex-src\src\main\java\me\octo\client\utils\llIlIlIIIllIIIIIIlIIIllllIlllIIIlIlIlIlIlIlIIlIlllIIIIIlllllllIIIIIllIllllIllIIlllllI.java:256: 警告: Unsafe是内部专用 API, 可能会在未来发行版中删除
+         return (Unsafe)var0.get(null);
+                 ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+18 个警告
+
+[Incubating] Problems report is available at: file:///<WORKTREE_ROOT>/polinex-src/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 32s
+1 actionable task: 1 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

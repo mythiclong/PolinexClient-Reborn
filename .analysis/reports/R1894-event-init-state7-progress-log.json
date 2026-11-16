@@ -1,0 +1,68 @@
+{
+  "slice_id": "R1894-client-initialized-state7-progress-log",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "Polinex.java": "070e5d02b6a3dc9566778d08f49f2bb26cb02d1e8110d9817d3b70357126f6c1",
+    "lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.java": "695327613150a0c1a344ba3a8928963503e8aa92cb9e725fd4ab09bbd5309602"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T22:21:33.955357+00:00",
+  "ended_utc": "2026-11-15T22:21:34.932791+00:00",
+  "command": "python -B .analysis/tools/verify_r1894_event_init_logging.py --root . --output .analysis/reports/R1894-event-init-state7-progress-log.json",
+  "exit_code": 0,
+  "subcommands": [
+    {
+      "command": "D:\\Apps\\mingw64\\bin\\objdump.exe -d --start-address=0x180002dc0 --stop-address=0x180002f3a <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<PYTHON_39>\" -B <WORKTREE_ROOT>\\.analysis\\tools\\decode_event_string_operands.py --disassembly <WORKTREE_ROOT>\\.analysis\\reports\\R1894-event-initialization-helpers.objdump.txt --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main -p -c -s me.octo.client.utils.lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI",
+      "exit_code": 0
+    }
+  ],
+  "inputs_sha256": {
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319c4f2c967e3c9c4bcc13863947b07797fd4dc1b3dd046d6eeeafef09db42b",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5ff9bcd0eff99d8037e4fee224e6ce8a47016816e0ae8192047b39b03cff6334",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1894-event-initialization-helpers.objdump.txt": "812f78098bea22f2070f4a09831c6d6faa165df57391bd9b80335921c74e111a",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1894-original-log-utility.javap.txt": "1fdce0bf650c9741ec9d27a33697e8865195a245a5f0ec9bd1a9cc215cc89122",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1894-compiled-log-utility.javap.txt": "875c6d96e5bf4f8ffee9eb93450a32e1d56225517cdcecea85c79fe9309adba1",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984dabcf91cc65de31b305175331bc35eda1a6d6a68b1f101165dc2579d11",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1876-client-initialized-helper-literals.json": "1deadef05778f873aaf9a250799b1f67792979af2e64d13fd4c79975fcfb3fc4",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998d6f08493ca2688ad9e7c02f9428f638958635f2e276f620655a4669f2ec3d",
+    "<WORKTREE_ROOT>\\polinex-src\\src\\main\\java\\me\\octo\\client\\utils\\lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.java": "695327613150a0c1a344ba3a8928963503e8aa92cb9e725fd4ab09bbd5309602"
+  },
+  "decoded_call": {
+    "helper_class": "me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI",
+    "method": "d",
+    "descriptor": "(Ljava/lang/String;)V",
+    "jni_callsite": "0x180044069",
+    "jni_function": "CallStaticVoidMethod",
+    "message": "Initializing Polinex Rendering (pt2)."
+  },
+  "assertions": {
+    "helper_dump_matches_fresh_objdump": true,
+    "class_helper_decodes_to_source_owner": true,
+    "static_method_name_descriptor_decode": true,
+    "event_call_uses_CallStaticVoidMethod": true,
+    "progress_message_decodes": true,
+    "original_and_compiled_method_body_match_logger_info": true,
+    "managed_source_has_same_log_effect": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for helper class, method ID, descriptor, invocation target, message, and Logger.info side effect",
+    "build_regression": "not run in this slice; compiled class is from the R1892 full-tree compile",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This proves only the progress-log call at the start of state 7. The remaining initialization calls and dispatcher effects are open."
+}

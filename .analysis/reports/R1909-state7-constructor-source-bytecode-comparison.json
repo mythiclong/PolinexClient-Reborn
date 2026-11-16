@@ -1,0 +1,604 @@
+{
+  "slice_id": "R1909-state7-constructor-source-bytecode-comparison",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T06:00:19.607617+00:00",
+  "ended_utc": "2026-11-16T06:00:29.364002+00:00",
+  "inputs_sha256": {
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1895-state7-constructor-bytecode.json": "21E58C343173EC98129BE8860C00D84F51C0B1E849CD4F936A5DAFCD5B7D5936",
+    "<WORKTREE_ROOT>\\.analysis\\reports\\R1895-state7-constructor-classes.original.javap.txt": "A04BC9B0701DD30C66F70E91A8CDA7580D761AC5F0C03A25E0204BE0BF6E5244",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "<JDK_25>\\bin\\javap.exe": "E89022515D7DC3DFB05ABBB2D1650D9CF7DBD99923E11009ACC8715C3B330EB5"
+  },
+  "commands": [
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "constructor_count": 15,
+  "constructors": [
+    {
+      "owner": "me/octo/client/lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+      "descriptor": "()V",
+      "allocation_call": "0x180044380",
+      "constructor_call": "0x1800443bc",
+      "source_sha256": "00915771EA0BB95C75C00D5768C142032B583C1984CE9EEC645C608E9C3A68ED",
+      "compiled_class_sha256": "51FA9FEE373EF964A6C537617764E0ED7BDE697824B0F2A7F65876B12519CDAB",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:03.646834+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.904775+00:00",
+      "original_constructor_sha256": "9A8918DC31160C888F86AFC61568964807C4ABF6A99CA66FB15B355D13F37240",
+      "compiled_constructor_sha256": "57748D8D953BF6ACE58E819728160127DA37235053B2F02A8A3A35E8B23056E5",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 17
+    },
+    {
+      "owner": "me/octo/client/IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+      "descriptor": "()V",
+      "allocation_call": "0x1800443ed",
+      "constructor_call": "0x180044429",
+      "source_sha256": "707748DF01A9A93794FE7B3CD9E8AF2DC8C7B8156A7F5C3547745170322D5D94",
+      "compiled_class_sha256": "634E3AE7E1FD6B4950F5217A7E445A199851CB4974C2DE4EC145E3BF892A81F4",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:54.946256+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:44.527037+00:00",
+      "original_constructor_sha256": "10DD7528E6E55F66C6D7DA61598E75826C4CB423A63383AFECFE72A244B348F6",
+      "compiled_constructor_sha256": "691F490CE9D5AB19843A077745DE9F91413E8628B8F69D8F3921C4194BD9DDB7",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    },
+    {
+      "owner": "me/octo/client/llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+      "descriptor": "()V",
+      "allocation_call": "0x18004445a",
+      "constructor_call": "0x180044496",
+      "source_sha256": "03577334CF014A2F7D4C5FABF463ACF5336C0AEFB6BD790ED78666BC56BABEB5",
+      "compiled_class_sha256": "7CFF32BDC8854FBCEAA67FB63919885C1651033F82774B83F374F4DF3737BDD0",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:05.427661+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:46.381733+00:00",
+      "original_constructor_sha256": "2F2075EF6473D3218443E1DCA552044FE51AC9530BEA12168A8A2C737438F735",
+      "compiled_constructor_sha256": "0517DDD5325B88024BC386AE0F0637D86EC85D28CE98C295EDA777AB5D729861",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    },
+    {
+      "owner": "me/octo/client/llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+      "descriptor": "()V",
+      "allocation_call": "0x1800444c7",
+      "constructor_call": "0x180044503",
+      "source_sha256": "2CA5661B32491FE58A23E3FE0A75469A85AE548622485E55EF6A4047FF8E3189",
+      "compiled_class_sha256": "D1EAFA8EED3AA0A1058F0045614D869DA1A86EDFEAF9114D58D3DA2FD7CBB4A7",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:05.040955+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:46.288761+00:00",
+      "original_constructor_sha256": "575072C03705AACE5879E8D3474CBFB0BB6E862078244001CE40A5E03EEBF14C",
+      "compiled_constructor_sha256": "8B594563071F64BFD61144034E6E7231F82720D1A0F55965D0259BD84CE8ED06",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    },
+    {
+      "owner": "me/octo/client/lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+      "descriptor": "()V",
+      "allocation_call": "0x180044534",
+      "constructor_call": "0x180044570",
+      "source_sha256": "FE6A008B3BC8257DCF7DDCFAB2E7CE09DBF54F6691CF64614DB6DF314115054D",
+      "compiled_class_sha256": "D1BC5F7E5F90A23AFF18F32B9EE9B4748E85F2BD3DFB7AF6A46FF6DEFD948498",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:03.292421+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.829714+00:00",
+      "original_constructor_sha256": "3B693DDCA2E802AA174611657D98545393F3D9B671ED8E81ED46183951318BED",
+      "compiled_constructor_sha256": "72E774C5345E70F48EB6BCB4519971344EAE145ABEEBCE7086B80B570006E9B8",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    },
+    {
+      "owner": "me/octo/client/IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+      "descriptor": "()V",
+      "allocation_call": "0x1800445a1",
+      "constructor_call": "0x1800445dd",
+      "source_sha256": "23C431CCD4853D4307AB2F2282805E6858780C64FB508EE9793A6CE90B3398F8",
+      "compiled_class_sha256": "132CEE97C54998EA5C378C5913AC54936C9784CDFB1E327C06D9EA4A4BF48447",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:00.051528+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.152315+00:00",
+      "original_constructor_sha256": "860C9BD154D4F52FB28273D976809D13A39462BCD57645482B1B41F5F65FE37F",
+      "compiled_constructor_sha256": "8F32EC2F2DECA8294D79CA949996144AD5E7FC1919F9B2C150F2E81014C3F85B",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    },
+    {
+      "owner": "me/octo/client/IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+      "descriptor": "()V",
+      "allocation_call": "0x18004460e",
+      "constructor_call": "0x18004464a",
+      "source_sha256": "AABC3818DE4FB3DE53022FE73D857870C49AB6D1823CF2185DEFD6AE35CD083D",
+      "compiled_class_sha256": "B031BAA6AADFD601209992C4E65E8408C7D8E47BF5E77F2A81552B784F57E1D4",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:58.895805+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:44.928615+00:00",
+      "original_constructor_sha256": "715234F45172851052894F9710223D3E8BAF977590A4CAA364C2CE81B45AB172",
+      "compiled_constructor_sha256": "3285BA539261A62B78C6BF19EB57977E60207D3F2E06ACA2C4CEAD98781ACDFE",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 12
+    },
+    {
+      "owner": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+      "descriptor": "()V",
+      "allocation_call": "0x18004467b",
+      "constructor_call": "0x1800446b7",
+      "source_sha256": "D2AF72589296AF955BB49E3285AF2E9AD22B0F258AEC1A5A5447E4222D8501DE",
+      "compiled_class_sha256": "2FC7D5DD9D785CDE5D061B21B51185FBE9CEEE9DB4D9531B9FCE036577A3998B",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:04.714002+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:46.210339+00:00",
+      "original_constructor_sha256": "E26436E9FF7B73554A2A1AD3CDC850F4BFB21126941DD8443C6888BD4578F8F5",
+      "compiled_constructor_sha256": "A5D716A2B5BC68963CCA94487F862D0DB7CC200B06BD6DE927E2C133E0E784CF",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 22
+    },
+    {
+      "owner": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+      "descriptor": "()V",
+      "allocation_call": "0x1800446e8",
+      "constructor_call": "0x180044724",
+      "source_sha256": "F47E5C57DE42F9FED4B5D62EC42EA57B7FBE3613A084EB872E940D68C3C27F16",
+      "compiled_class_sha256": "BDACAFC1414346F5B82ACE8C2B73E6AFD854FF8F216D1392C3577F13DA0A8206",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:05.498184+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:46.401559+00:00",
+      "original_constructor_sha256": "E9CCE763DDD916DB68888CBD3C709C975934E4BA42BFAE7B018F2FC1A78C46E7",
+      "compiled_constructor_sha256": "CDBD4D48C566364EF65D7991288C05F0ED520C917B4E09397BEA729DE6A51091",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 293
+    },
+    {
+      "owner": "me/octo/client/IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+      "descriptor": "()V",
+      "allocation_call": "0x180044755",
+      "constructor_call": "0x180044791",
+      "source_sha256": "86EEBC39025CEBA96ABFA7E120D4F969BBA53F093D4F723E08D311E7C12CC849",
+      "compiled_class_sha256": "AAA0660F00DD5B51CE025AE68211EF1BB5D9A3DA004831171F61380318C4BDA2",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:00.846708+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.266196+00:00",
+      "original_constructor_sha256": "F0ED7D9B22DCCD76DD7AC39BADEB247772847ACBA1B55252C9D86CCC507B401B",
+      "compiled_constructor_sha256": "D16753535A643A373FEEE33F2A1DB59AA547C7C47B83ECA540237C8069B29353",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 17
+    },
+    {
+      "owner": "me/octo/client/IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+      "descriptor": "()V",
+      "allocation_call": "0x1800447c2",
+      "constructor_call": "0x1800447fe",
+      "source_sha256": "2373C4290C19FCE8C312DE13E95C9BF1842162E788C10C75D818FDB47E205565",
+      "compiled_class_sha256": "87634B3A51FBF8B5760E378453E267FF3FE2341464709E3572D2A539DC10C456",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:57.510701+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:44.723207+00:00",
+      "original_constructor_sha256": "2D158F0BF515D825F4DDC950A2856B481B2158E6E037536CD3F814071C8FCED0",
+      "compiled_constructor_sha256": "51BF7A05E0AF93AEA3A2C9695FBBBA3FD354C5D8DF44840F663A967B39D54D74",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 4
+    },
+    {
+      "owner": "me/octo/client/IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+      "descriptor": "()V",
+      "allocation_call": "0x18004482f",
+      "constructor_call": "0x18004486b",
+      "source_sha256": "D7BB47D0AC6312370342B97DF8468BF6F2A4491402D39FFD0725DCB8D1EF3C33",
+      "compiled_class_sha256": "E8AC9E896FC9D04318708FE93F4162C2F9E6643C80B612976266BFBC1FB7185C",
+      "compiled_class_mtime_utc": "2026-11-15T21:46:00.861214+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.270187+00:00",
+      "original_constructor_sha256": "6736021F245A627B3047EEC74518B04204DBAA77D8EA36238E1E34C66BD52BD6",
+      "compiled_constructor_sha256": "09DCBFD6E0DAF391DF2DB33C6BEC5FDD987F2076F486B8DDFA8A12B4A85B518F",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 22
+    },
+    {
+      "owner": "me/octo/client/IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+      "descriptor": "()V",
+      "allocation_call": "0x18004489c",
+      "constructor_call": "0x1800448d8",
+      "source_sha256": "9585ED8B478421540E181457FE55ED62FDEAF818865E9A2B475E5FA071A4152E",
+      "compiled_class_sha256": "B3D6A429265CDBA5174F78EF46888DE5FEC605AA321F4699048918A78D7DB82A",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:59.738904+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:45.076570+00:00",
+      "original_constructor_sha256": "A9B7FFCC51C21A74E6892B5A9B3546244809DD871DF5F7D9D039A1ABF9638A59",
+      "compiled_constructor_sha256": "3B8230D67F2561A7A51F2AD0FC0AE2FD14A3605B362345F60039E3E2095E7124",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 13
+    },
+    {
+      "owner": "me/octo/client/IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+      "descriptor": "()V",
+      "allocation_call": "0x180044909",
+      "constructor_call": "0x180044945",
+      "source_sha256": "652BD8149E3EFF4D7F468D70A4B566A1C48C954DBC513F07585F933A5FC47C2D",
+      "compiled_class_sha256": "8A64883DB18BF772EA993486CF33EFA849E2CF4BD7637A22D6B276CE4BFF119A",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:56.573331+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:44.620467+00:00",
+      "original_constructor_sha256": "8E18621582E6836EF1783BB3DEB7369D146E977EEBEDB13B6B49495461506E0A",
+      "compiled_constructor_sha256": "C8B84B30488830A1ACDD3473BBE6D06662CE4C2EE3DC8845769F8153DE8F89E2",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 73
+    },
+    {
+      "owner": "me/octo/client/IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+      "descriptor": "()V",
+      "allocation_call": "0x180044976",
+      "constructor_call": "0x1800449b2",
+      "source_sha256": "491F7B1C0CD9B47254666D58ECE2C6B15797EBC709DBADDD2F8A9622E2973923",
+      "compiled_class_sha256": "D52DFFBD460BD4463DFC6595617993096512A2FC5999C3359E9C3B501B823EBF",
+      "compiled_class_mtime_utc": "2026-11-15T21:45:54.086694+00:00",
+      "source_mtime_utc": "2026-11-15T15:02:44.442296+00:00",
+      "original_constructor_sha256": "36F84B412B650C784B9149AC9705E876FCDB3B58AF1972A8F5D7AD922603A993",
+      "compiled_constructor_sha256": "E4ACF182789832B8684E420AAC3A150253049EA90EAE1E3365C378A421A73B11",
+      "instruction_and_exception_table_match": false,
+      "original_code_lines": 6
+    }
+  ],
+  "assertions": {
+    "all_15_original_alloc_and_nonvirtual_constructor_calls_mapped": true,
+    "all_15_current_sources_match_the_R1895_source_hashes": true,
+    "all_15_compiled_constructor_bodies_match_original": false
+  },
+  "acceptance": {
+    "static_reconstruction": "failed; inspect per-constructor differences",
+    "build_regression": "not run by this comparison",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This compares the constructor instruction streams and exception tables in the captured compiled class files. It does not compare class initialization, downstream behavior, or the native event handler at runtime."
+}

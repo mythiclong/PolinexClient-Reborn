@@ -1,0 +1,101 @@
+{
+  "slice_id": "R1879-client-initialized-inline-resolvers",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:15:24.840823+00:00",
+  "ended_utc": "2026-11-15T19:15:24.929709+00:00",
+  "command": ".analysis/tools/decode_client_initialized_inline_resolvers.py --event-disassembly .analysis/reports/R1876-client-initialized-helper-range.objdump.txt --class-helper-disassembly .analysis/reports/R1879-class-helper-4180d.objdump.txt --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin --source-file polinex-src/src/main/java/me/octo/client/Polinex.java",
+  "exit_code": 0,
+  "inputs": {
+    ".analysis\\reports\\R1876-client-initialized-helper-range.objdump.txt": "B9E6A3AC13DDACC8BA70466B43768AD9A547D359B789438A48E4E9EB91435DA5",
+    ".analysis\\reports\\R1879-class-helper-4180d.objdump.txt": "349AA8531D530439EAF4E132A46D94D49ACEB159006138182AB45D7DC4A7B318",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334"
+  },
+  "inline_class_helpers": [
+    {
+      "helper": "0x1800461cd",
+      "find_class_call": "0x180046244",
+      "decoded_class_name": "com/mojang/blaze3d/systems/RenderSystem",
+      "jni_find_class_table_offset": "0x30",
+      "jni_new_global_ref_table_offset": "0xa8",
+      "find_class_table_load_present": true,
+      "new_global_ref_before_cache_publish": true,
+      "class_cache_read": "0x180170ed0",
+      "class_cache_atomic_publish": "0x180170ed0",
+      "cache_read_matches_publish": true,
+      "cache_publish_site": "0x18004625b",
+      "event_direct_call_sites": [
+        "0x180043e11"
+      ]
+    },
+    {
+      "helper": "0x180046281",
+      "find_class_call": "0x1800462ea",
+      "decoded_class_name": "java/lang/RuntimeException",
+      "jni_find_class_table_offset": "0x30",
+      "jni_new_global_ref_table_offset": "0xa8",
+      "find_class_table_load_present": true,
+      "new_global_ref_before_cache_publish": true,
+      "class_cache_read": "0x180170ee0",
+      "class_cache_atomic_publish": "0x180170ee0",
+      "cache_read_matches_publish": true,
+      "cache_publish_site": "0x180046301",
+      "event_direct_call_sites": [
+        "0x180043e61",
+        "0x180043f26",
+        "0x180044a20",
+        "0x180044a9f",
+        "0x180044ae9",
+        "0x180044c5b",
+        "0x180044e0f"
+      ]
+    },
+    {
+      "helper": "0x18004180d",
+      "find_class_call": "0x180041879",
+      "decoded_class_name": "me/octo/client/Polinex",
+      "jni_find_class_table_offset": "0x30",
+      "jni_new_global_ref_table_offset": "0xa8",
+      "find_class_table_load_present": true,
+      "new_global_ref_before_cache_publish": true,
+      "class_cache_read": "0x180170d80",
+      "class_cache_atomic_publish": "0x180170d80",
+      "cache_read_matches_publish": true,
+      "cache_publish_site": "0x180041890",
+      "event_direct_call_sites": [
+        "0x180043ed8",
+        "0x1800460af"
+      ]
+    }
+  ],
+  "inline_GetStaticMethodID_helper": {
+    "helper": "0x180046323",
+    "event_direct_call_sites": [
+      "0x180043ee3",
+      "0x1800460ba"
+    ],
+    "call_site": "0x1800463b4",
+    "name": "a",
+    "descriptor": "(Ljava/lang/Exception;)Ljava/lang/Exception;",
+    "name_stack_displacement": -2,
+    "descriptor_stack_displacement": -48,
+    "lookup_kind": "GetStaticMethodID",
+    "jni_table_offset": "0x388",
+    "method_id_cache_global": "0x180170ee8",
+    "resolved_class_helper": "0x18004180d",
+    "resolved_class_name": "me/octo/client/Polinex"
+  },
+  "interpretation": "Two event helpers use inline encrypted class strings rather than the common copy/XOR helper. A separate helper resolves one static method on the class returned by 0x18004180d. Each class cache read and atomic publish was matched.",
+  "acceptance": {
+    "static_reconstruction": "two inline FindClass/NewGlobalRef helpers and one inline GetStaticMethodID helper decoded and cache-cross-checked",
+    "build_regression": "not run; no Java source changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Direct calls and resolver bodies are statically mapped. Runtime reachability, complete event control flow, and the semantic effects of the resolved Java method remain open."
+}

@@ -1,0 +1,113 @@
+{
+  "slice_id": "R1904-client-init-exception-and-minus11-paths",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "tool_sha256": "B574168B3C515C85BDCE86B5C0E393E9E6C01BA1128F5E69E4950B82ED38E72E",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T01:12:19.132713+00:00",
+  "commands": {
+    "verifier": "python -B .analysis/tools/verify_r1904_exception_and_minus11_paths.py --pe <static-pe> --keystream <derived-keystream> --jar <cracked.jar> --javap <jdk-25-javap> --objdump <objdump>",
+    "objdump": [
+      "D:\\Apps\\mingw64\\bin\\objdump.exe",
+      "-d",
+      "--start-address=0x18001f4f2",
+      "--stop-address=0x18001f594",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+    ],
+    "objdump_exit_code": 0,
+    "javap": [
+      "<JDK_25>\\bin\\javap.exe",
+      "-classpath",
+      "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+      "-p",
+      "-c",
+      "-s",
+      "me.octo.client.Polinex$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll"
+    ],
+    "javap_exit_code": 0
+  },
+  "inputs_sha256": {
+    "R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "R1874-polinex-exception-identity-helper.json": "85236D590800331384B66165800C69822BC265BD972D58A48A5148D827188BB3",
+    "R1880-client-initialized-method-id-use-map.json": "59924FA4893EEB6D28FD1E438A60267168BBA6428DFF1449A8350FB971964262",
+    "R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    "R1883-client-initialized-dispatch-map.json": "BAD62DF193FC42BE462555302096E14BA2D1CE3201370CA96028F516E0351757",
+    "R1885-client-initialized-dispatch-path-correction.json": "5980F1C3E3F33FF618B708D537B629951EDA7D04DE744A256E83BE8134C0A52B",
+    "R1893-client-initialized-state17-state21-control-flow.json": "2D19BF8E25EDE8B42FEFE0FCDA2CB62BF7F4E7CAC08CD14C6FAC4A125980F48D",
+    "R1902-client-init-state8-state5-control-flow.json": "9FD45ED213B81E0D971EB7320A0B660827E1D17AE84C4E24A3AD77B885679F8F",
+    "native_pe_sha256": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "keystream_sha256": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "source_sha256": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1",
+    "javap_output_sha256": "5414EA9730C344ECE8A5DC9407557A3BEB24966BF9E63D954885A2CD524B4908",
+    "helper_objdump_output_sha256": "1FFF1E794E4083B70B916491C7A2760E40BDD66A117961DAA0F955685FAD63AB"
+  },
+  "supersedes": [
+    "R1893 state-21 normal_result claim that a null helper return dispatches state 8",
+    "R1902 equal-guard repeat/loop inference; state 5 findings remain independently corroborated"
+  ],
+  "state21": {
+    "entry": "0x180043ecb",
+    "helper": "Polinex.a(Exception):Exception; R1874 proves identity native semantics",
+    "no_pending_exception_and_nonnull_return": "Throw at 0x180044bfd, then common ExceptionOccurred/IsInstanceOf; RuntimeException is cleared and routes state -9; other pending exception returns",
+    "no_pending_exception_and_null_return": {
+      "route": "ThrowNew at 0x180044df4, then common ExceptionOccurred/IsInstanceOf; RuntimeException is cleared and routes state -9",
+      "throwable_class": "java/lang/NullPointerException",
+      "message_pointer": "0x18013a82d",
+      "static_pe_c_string_prefix": "",
+      "runtime_message": "not directly observed; static PE pointer begins with NUL"
+    },
+    "handler_leaves_exception_pending": "ExceptionOccurred/IsInstanceOf; RuntimeException is cleared and routes state -9; other exception remains pending to return",
+    "state_minus9_target": "0x1800460a2",
+    "state_minus9_minus10_relay": "same identity helper; pending exception returns, nonnull helper result is Throw, null result uses ThrowNew with the same class/message pointer",
+    "raw_branch_proof": "0x180044f07 -> 0x180044beb; rbx==null branches to 0x180044ddb (ThrowNew), while nonnull is Throw then jumps to 0x180044df6; neither branch dispatches state 8"
+  },
+  "state_minus11": {
+    "entry": "0x180044a5d",
+    "new_array": "NewIntArray(1)",
+    "setter": {
+      "owner": "me.octo.client.Polinex$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "method": "b([I)V",
+      "field": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "[I",
+      "original_bytecode": [
+        "0: aload_0",
+        "1: putstatic     #140                // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I",
+        "4: return"
+      ],
+      "current_source_matches": true,
+      "getter": "c()[I returns the same static field"
+    },
+    "successful_setter_guard": {
+      "global_offset": "0x8fb1",
+      "derived_keystream_u32": "0x90584005",
+      "compare_immediate": "0xf7ee810a",
+      "comparison": "not equal",
+      "route": "encoded state 4 -> epilogue 0x18004610e"
+    },
+    "setter_exception": "RuntimeException is cleared and routes state -10; a non-RuntimeException remains pending to return",
+    "limits": "The normal reachability of state -11 remains unproven; R1901 leaves reflection/native writers outside its classfile scan."
+  },
+  "assertions": {
+    "state21_null_return_uses_ThrowNew_not_state8": true,
+    "ThrowNew_class_helper_decodes_to_NullPointerException": true,
+    "state_minus9_and_minus10_share_exception_relay": true,
+    "state_minus11_original_setter_and_source_match": true,
+    "state_minus11_guard_decodes_to_state4_return": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for state-21 null/non-null branches and state -11 setter/guard path",
+    "build_regression": "not run; analysis-only slice",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "ThrowNew's message pointer is not decoded beyond the static PE's leading NUL; runtime mutation of that region is unobserved. State -11 runtime reachability and global initialization are unprobed.",
+  "ended_utc": "2026-11-16T01:12:19.737043+00:00",
+  "exit_code": 0
+}

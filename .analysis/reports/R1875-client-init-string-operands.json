@@ -1,0 +1,220 @@
+{
+  "slice_id": "R1875-client-init-string-operands",
+  "worktree": "<WORKTREE_ROOT>",
+  "source_baseline_commit": "6d4e231",
+  "probe_status": "static-only; no client or desktop input",
+  "started_utc": "2026-11-15T18:27:16.6475008Z",
+  "ended_utc": "2026-11-15T18:27:16.9020801Z",
+  "command": "python .analysis/tools/decode_event_string_operands.py --disassembly .analysis/reports/R1872-polininex-client-initialized.objdump.txt --pe D:/Work/OpenPoli/.analysis/artifacts/jnic-windows-x64.static-pe.bin --keystream D:/Work/OpenPoli/.analysis/artifacts/jnic-windows-x64.derived-keystream.bin",
+  "exit_code": 0,
+  "validation_note": "The initial wrapper check paired the copy-helper call address with the GetStaticFieldID address directly; the decoder itself exited 0. Cross-check was corrected using the observed +0x70 call-site offset and then passed.",
+  "cross_checks": [
+    {
+      "copy_helper_call": "0x180045131",
+      "get_static_field_id_call": "0x1800451a1",
+      "actual": "lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll",
+      "expected": "lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll",
+      "pass": true
+    },
+    {
+      "copy_helper_call": "0x1800451cd",
+      "get_static_field_id_call": "0x18004523d",
+      "actual": "IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI",
+      "expected": "IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI",
+      "pass": true
+    }
+  ],
+  "decoded": {
+    "disassembly_sha256": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "pe_sha256": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "keystream_sha256": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "copy_helper": "0x18012e0c8",
+    "decoded_operand_count": 16,
+    "operands": [
+      {
+        "call_va": "0x180043ff8",
+        "data_va": "0x18013ecba",
+        "pe_file_offset": "0x13d6ba",
+        "copy_length": 75,
+        "key_offset": "0x8f53",
+        "xor_length": 74,
+        "stack_buffer_displacement": -3,
+        "encoding": "utf-16le",
+        "decoded": "Initializing Polinex Rendering (pt2)."
+      },
+      {
+        "call_va": "0x180044ce7",
+        "data_va": "0x18013ec65",
+        "pe_file_offset": "0x13d665",
+        "copy_length": 85,
+        "key_offset": "0x8ef3",
+        "xor_length": 84,
+        "stack_buffer_displacement": -88,
+        "encoding": "utf-16le",
+        "decoded": "Cannot initialize client on render thread."
+      },
+      {
+        "call_va": "0x180044fb8",
+        "data_va": "0x18015eb0b",
+        "pe_file_offset": "0x15d50b",
+        "copy_length": 86,
+        "key_offset": "0x3b113",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll"
+      },
+      {
+        "call_va": "0x180044fef",
+        "data_va": "0x18015eb61",
+        "pe_file_offset": "0x15d561",
+        "copy_length": 103,
+        "key_offset": "0x3b168",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll;"
+      },
+      {
+        "call_va": "0x180045131",
+        "data_va": "0x18015ec83",
+        "pe_file_offset": "0x15d683",
+        "copy_length": 86,
+        "key_offset": "0x35e4d",
+        "xor_length": 85,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll"
+      },
+      {
+        "call_va": "0x1800451cd",
+        "data_va": "0x18015edb9",
+        "pe_file_offset": "0x15d7b9",
+        "copy_length": 86,
+        "key_offset": "0x380af",
+        "xor_length": 85,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI"
+      },
+      {
+        "call_va": "0x180045266",
+        "data_va": "0x18015ee99",
+        "pe_file_offset": "0x15d899",
+        "copy_length": 86,
+        "key_offset": "0x38bab",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl"
+      },
+      {
+        "call_va": "0x18004529d",
+        "data_va": "0x18015eeef",
+        "pe_file_offset": "0x15d8ef",
+        "copy_length": 103,
+        "key_offset": "0x38c00",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII;"
+      },
+      {
+        "call_va": "0x18004538a",
+        "data_va": "0x18015efd0",
+        "pe_file_offset": "0x15d9d0",
+        "copy_length": 86,
+        "key_offset": "0x39c77",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl"
+      },
+      {
+        "call_va": "0x1800453c1",
+        "data_va": "0x18015f026",
+        "pe_file_offset": "0x15da26",
+        "copy_length": 103,
+        "key_offset": "0x39ccc",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl;"
+      },
+      {
+        "call_va": "0x18004547f",
+        "data_va": "0x18015f0f2",
+        "pe_file_offset": "0x15daf2",
+        "copy_length": 86,
+        "key_offset": "0x2ef81",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl"
+      },
+      {
+        "call_va": "0x1800454b6",
+        "data_va": "0x18015f148",
+        "pe_file_offset": "0x15db48",
+        "copy_length": 103,
+        "key_offset": "0x2efd6",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl;"
+      },
+      {
+        "call_va": "0x1800455a3",
+        "data_va": "0x18015f229",
+        "pe_file_offset": "0x15dc29",
+        "copy_length": 86,
+        "key_offset": "0x2f48e",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl"
+      },
+      {
+        "call_va": "0x1800455da",
+        "data_va": "0x18015f27f",
+        "pe_file_offset": "0x15dc7f",
+        "copy_length": 103,
+        "key_offset": "0x2f4e3",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII;"
+      },
+      {
+        "call_va": "0x1800456c7",
+        "data_va": "0x18015f360",
+        "pe_file_offset": "0x15dd60",
+        "copy_length": 86,
+        "key_offset": "0x3c3d5",
+        "xor_length": 85,
+        "stack_buffer_displacement": 80,
+        "encoding": "ascii",
+        "decoded": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl"
+      },
+      {
+        "call_va": "0x1800456fe",
+        "data_va": "0x18015f3b6",
+        "pe_file_offset": "0x15ddb6",
+        "copy_length": 103,
+        "key_offset": "0x3c42a",
+        "xor_length": 102,
+        "stack_buffer_displacement": 176,
+        "encoding": "ascii",
+        "decoded": "Lme/octo/client/lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll;"
+      }
+    ]
+  },
+  "interpretation": "Literal operands only; control-flow reachability, JNI API operation types, and field owners are not asserted by this decoder.",
+  "acceptance": {
+    "static_reconstruction": "16 copy/XOR literal operands decoded; two field names match R1873 after mapping each literal builder to its subsequent GetStaticFieldID invoke",
+    "build_regression": "not run; no source change",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  }
+}

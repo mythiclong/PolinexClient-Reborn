@@ -1,0 +1,12 @@
+
+<REFERENCE_ROOT>\.analysis\artifacts\jnic-windows-x64.static-pe.bin:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+0000000180049c76 <.text+0x48c76>:
+   180049c76:	55                   	push   %rbp
+   180049c77:	48 89 e5             	mov    %rsp,%rbp
+   180049c7a:	4c 89 c0             	mov    %r8,%rax
+   180049c7d:	5d                   	pop    %rbp
+   180049c7e:	c3                   	retq

@@ -24,17 +24,18 @@
 
 ## 当前进度
 
-状态快照：**2026-11-15**。下列是已有证据能支持的结论；源码库存数字不是已还原功能数。
+状态快照：**2026-11-16**。下列是已有证据能支持的结论；源码库存数字不是已还原功能数。
 
 | 范围 | 当前状态 |
 |---|---|
+| **启动事件** | `Polinex.a(E_CLIENT_INITIALIZED)` 的入口检查、状态 17/21 和部分状态 7/8/异常路径已静态映射；native 处理器尚未恢复为托管源码。R1909 的 15 个状态 7 构造器在原版/编译字节码比较中全部不匹配，原因待查。 |
 | **ClickGUI** | 多页布局和字体/绘制辅助方法有静态修复及编译记录。R1871 无探针验收为 **VOID**：启动流程未到 F4 或页面断言，并记录到 `UnsatisfiedLinkError: Polinex.a(event)`；因此不能据此判定页面显示或输入已通过/失败。五页画面、控件交互及设置保存/重载仍未闭环。 |
 | **OpenGL FBO** | framebuffer、program、VAO、array buffer 和 pixel-pack/unpack 状态恢复已有原版字节码对照与编译后语义检查；尚无客户端运行验收。 |
 | **Glacite Commission Macro** | 注册入口和若干方法已静态恢复；`aC()` / `bs()` 等仍需完整控制流、异常和副作用对照，整项未通过正常用户路径验收。 |
 | **Powder Macro / Pathfinder** | 有部分源码片段和扫描/BFS/flood-fill helper；依赖有效 Minecraft 世界或实体状态的行为尚未完成实机对照。 |
 | **整体验收** | 干净 checkout 的发布构建、完整功能等价和真实兼容服务器的登录/交互/断开/重连均未通过验收。 |
 
-截至该快照的源码库存记录：**1602** 个 Java 文件、**1,159,472** 行、**622** 处 `PXDyn`、**7075** 个 `PX-FIX` 标记、**220** 个 native 声明。这些数字仅帮助定位工作，不衡量功能完成度。
+截至该快照的源码库存记录：**1602** 个 Java 文件、**1,159,513** 行、**620** 处 `PXDyn`、**7075** 个 `PX-FIX` 标记、**219** 个 native 声明。这些数字仅帮助定位工作，不衡量功能完成度；可运行 `python -B .analysis/stats.py` 复算。
 
 ## 构建
 
@@ -52,6 +53,7 @@ cd PolinexClient-Reborn/polinex-src
 ## 交接资料
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1909 启动事件构造器比较](.analysis/reports/R1909-state7-constructor-source-bytecode-comparison.json)
 - [详细交接](.analysis/reports/HANDOFF-20261115.md)
 - [FBO 状态恢复记录](.analysis/reports/FBO-STATE-RESTORE.md)
 - [R1871 去标识化机器记录](.analysis/evidence/clickgui/r1871-five-pages-no-probe/runtime-public.json)
@@ -59,7 +61,7 @@ cd PolinexClient-Reborn/polinex-src
 
 ## 接手须知
 
-- 原始 jar 是行为对照依据，但没有包含在仓库中。请只使用自己合法持有、获授权的文件；不要把原始 jar、受保护 class 或未恢复的 JNI 载荷当作源码实现提交。
+- 仓库根目录包含 `rawpolinex.jar`，SHA-256 为 `D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26`，与本轮分析使用的 `.analysis/cracked.jar` 完全相同。它是行为对照输入，不能替代托管源码；受保护 class 和未恢复的 JNI 载荷也不能冒充源码实现。
 - 对照方法时记录完整类名、方法名和 JVM descriptor，并核对字段、调用目标、分支、默认参数、异常与副作用。编译通过或标记减少不等于功能等价。
 - 依赖 Minecraft 世界/实体的逻辑应在有效游戏状态和正常入口下验证。留下最小机器记录，并说明 VOID、环境噪声和未完成项。
 - 快照中的 `fabric.mod.json` 仍引用未随仓库提供的 `occlusionculling-0.0.8-SNAPSHOT.jar`。该嵌套包原本含有 7 个 `me/octo/client` 类，其中 1 个尚无对应源码；因此当前快照的客户端加载状态也未验证。

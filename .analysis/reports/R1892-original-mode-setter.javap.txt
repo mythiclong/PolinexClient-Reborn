@@ -1,0 +1,120 @@
+  public final void a(me.octo.client.lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI, boolean);
+    descriptor: (Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;Z)V
+    Code:
+         0: invokestatic  #152                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I
+         3: aload_1
+         4: sipush        23151
+         7: sipush        -17217
+        10: pop2
+        11: ldc_w         #1066               // String mode
+        14: invokestatic  #271                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        17: astore_3
+        18: aload_1
+        19: getstatic     #1068               // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:[I
+        22: swap
+        23: invokevirtual #1071               // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.ordinal:()I
+        26: iaload
+        27: aload_3
+        28: ifnonnull     61
+        31: tableswitch   { // 1 to 3
+
+                       1: 60
+
+                       2: 64
+
+                       3: 68
+                 default: 72
+            }
+        56: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        59: athrow
+        60: iconst_0
+        61: goto          80
+        64: iconst_1
+        65: goto          80
+        68: iconst_2
+        69: goto          80
+        72: new           #149                // class kotlin/NoWhenBranchMatchedException
+        75: dup
+        76: invokespecial #1072               // Method kotlin/NoWhenBranchMatchedException."<init>":()V
+        79: athrow
+        80: istore        4
+        82: invokestatic  #122                // Method me/octo/client/IllIllllIIIIIIIIIllllIIlIlIlIlIIIIlIIllIlIlIlIIIllllIlIIIIIlIIlIIIlIIlIIlIlIllllIlIll.e:()Lme/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII;
+        85: iload         4
+        87: invokevirtual #1074               // Method me/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII.c:(I)V
+        90: aload_0
+        91: aload_1
+        92: getstatic     #1063               // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+        95: if_acmpeq     106
+        98: iconst_1
+        99: goto          107
+       102: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       105: athrow
+       106: iconst_0
+       107: putfield      #1076               // Field lIlllllIIIIlllllIlIIIIIIIllllIlIllIllIIlIIIIIIIIIlIlIIIlIIlIlIIIlIlllIllIIllIllIllllI:Z
+       110: getstatic     #1081               // Field me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl;
+       113: invokevirtual #1083               // Method me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.e:()V
+       116: iload_2
+       117: aload_3
+       118: ifnonnull     147
+       121: ifeq          230
+       124: goto          131
+       127: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       130: athrow
+       131: aload_1
+       132: getstatic     #1068               // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:[I
+       135: swap
+       136: invokevirtual #1071               // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.ordinal:()I
+       139: iaload
+       140: goto          147
+       143: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       146: athrow
+       147: tableswitch   { // 1 to 3
+
+                       1: 172
+
+                       2: 189
+
+                       3: 202
+                 default: 215
+            }
+       172: sipush        23270
+       175: sipush        5107
+       178: pop2
+       179: ldc_w         #1085               // String ��eClipping: Ban clips will be saved locally, and you\'ll choose on the ban disconnect screen whether to also upload them.
+       182: goto          223
+       185: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       188: athrow
+       189: sipush        23254
+       192: sipush        -11042
+       195: pop2
+       196: ldc_w         #1087               // String ��aClipping: Ban clips will be saved locally only.
+       199: goto          223
+       202: sipush        23153
+       205: sipush        -25382
+       208: pop2
+       209: ldc_w         #1089               // String ��aClipping: Ban clips will be saved locally and also uploaded automatically.
+       212: goto          223
+       215: new           #149                // class kotlin/NoWhenBranchMatchedException
+       218: dup
+       219: invokespecial #1072               // Method kotlin/NoWhenBranchMatchedException."<init>":()V
+       222: athrow
+       223: astore        5
+       225: aload         5
+       227: invokestatic  #227                // Method me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c:(Ljava/lang/String;)V
+       230: invokestatic  #1094               // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+       233: ifnonnull     249
+       236: iconst_5
+       237: newarray       int
+       239: invokestatic  #1096               // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:([I)V
+       242: goto          249
+       245: invokestatic  #196                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       248: athrow
+       249: return
+      Exception table:
+         from    to  target type
+            18    56    56   Class kotlin/NoWhenBranchMatchedException
+            82   102   102   Class kotlin/NoWhenBranchMatchedException
+           107   124   127   Class kotlin/NoWhenBranchMatchedException
+           121   140   143   Class kotlin/NoWhenBranchMatchedException
+           147   185   185   Class kotlin/NoWhenBranchMatchedException
+           230   242   245   Class kotlin/NoWhenBranchMatchedException

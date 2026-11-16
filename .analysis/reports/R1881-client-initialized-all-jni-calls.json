@@ -1,0 +1,1546 @@
+{
+  "slice_id": "R1881-client-initialized-all-jni-calls",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:35:35.898767+00:00",
+  "ended_utc": "2026-11-15T19:35:35.977770+00:00",
+  "command": ".analysis/tools/map_client_initialized_all_jni_calls.py --disassembly .analysis/reports/R1872-polininex-client-initialized.objdump.txt --jni-header <JDK_25>\\include\\jni.h --source-file polinex-src/src/main/java/me/octo/client/Polinex.java --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin --output .analysis/reports/R1881-client-initialized-all-jni-calls.json",
+  "exit_code": 0,
+  "inputs_sha256": {
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "<JDK_25>\\include\\jni.h": "1E03BD83D1662AC00647F7A06C11D32333767EE537803EC1D153E89888414520",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334"
+  },
+  "function_range": {
+    "start_inclusive": "0x180043ca9",
+    "end_exclusive": "0x180046124",
+    "boundary_basis": "R1872 disassembly entry; R1877 maps the first shared helper at the exclusive end address",
+    "disassembly_instruction_count": 2125
+  },
+  "jni_header": "JDK 25 JNINativeInterface_; 64-bit table offsets checked against six named anchors",
+  "indirect_jni_call_count": 186,
+  "unresolved_count": 0,
+  "invocation_counts": {
+    "AllocObject": 16,
+    "CallNonvirtualVoidMethod": 16,
+    "CallObjectMethod": 4,
+    "CallStaticBooleanMethod": 1,
+    "CallStaticObjectMethod": 4,
+    "CallStaticVoidMethod": 3,
+    "CallVoidMethod": 2,
+    "ExceptionCheck": 58,
+    "ExceptionClear": 11,
+    "ExceptionOccurred": 10,
+    "GetMethodID": 22,
+    "GetStaticFieldID": 8,
+    "GetStaticMethodID": 3,
+    "GetStaticObjectField": 8,
+    "IsInstanceOf": 11,
+    "NewIntArray": 1,
+    "NewString": 3,
+    "Throw": 3,
+    "ThrowNew": 2
+  },
+  "calls": [
+    {
+      "call_site": "0x180043d33",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043d0b",
+      "jni_table_base_register": "%r14",
+      "jni_table_offset": "0x390",
+      "jni_function": "CallStaticObjectMethod"
+    },
+    {
+      "call_site": "0x180043d3e",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043d98",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180043d4f",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x518",
+      "jni_function": "NewString"
+    },
+    {
+      "call_site": "0x180043da3",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043de0",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043db4",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x468",
+      "jni_function": "CallStaticVoidMethod"
+    },
+    {
+      "call_site": "0x180043de8",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043e2f",
+      "instruction": "callq  *%r13",
+      "function_pointer_load": "0x180043e07",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x3a8",
+      "jni_function": "CallStaticBooleanMethod"
+    },
+    {
+      "call_site": "0x180043e3a",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043e4e",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180043e72",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043e57",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180043e82",
+      "instruction": "callq  *0x88(%r9)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%r9",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180043ef4",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043ece",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x390",
+      "jni_function": "CallStaticObjectMethod"
+    },
+    {
+      "call_site": "0x180043eff",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043f13",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180043f34",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043f1c",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180043f44",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180043f8e",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x180043f66",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x180043f99",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180043fc7",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043faa",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x1e8",
+      "jni_function": "CallVoidMethod"
+    },
+    {
+      "call_site": "0x180043fcf",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044027",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180043fe0",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x518",
+      "jni_function": "NewString"
+    },
+    {
+      "call_site": "0x180044032",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044069",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044043",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x468",
+      "jni_function": "CallStaticVoidMethod"
+    },
+    {
+      "call_site": "0x180044071",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800440aa",
+      "instruction": "callq  *%r12",
+      "function_pointer_load": "0x180044082",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x1800440b3",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800440ec",
+      "instruction": "callq  *%r12",
+      "function_pointer_load": "0x1800440c4",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x1800440f5",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004412e",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x180044106",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x180044139",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044167",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004414a",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x110",
+      "jni_function": "CallObjectMethod"
+    },
+    {
+      "call_site": "0x18004416f",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800441a8",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x180044180",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x1800441b3",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800441e1",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800441c4",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x1e8",
+      "jni_function": "CallVoidMethod"
+    },
+    {
+      "call_site": "0x1800441e9",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044222",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x1800441fa",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x18004422d",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004425b",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004423e",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x110",
+      "jni_function": "CallObjectMethod"
+    },
+    {
+      "call_site": "0x180044263",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004429c",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x180044274",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x1800442a7",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800442d5",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800442b8",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x110",
+      "jni_function": "CallObjectMethod"
+    },
+    {
+      "call_site": "0x1800442dd",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044316",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x1800442ee",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x488",
+      "jni_function": "GetStaticObjectField"
+    },
+    {
+      "call_site": "0x180044321",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004434f",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044332",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x110",
+      "jni_function": "CallObjectMethod"
+    },
+    {
+      "call_site": "0x180044357",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044380",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044368",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x18004438b",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800443bc",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004439c",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x1800443c4",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800443ed",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800443d5",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800443f8",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044429",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044409",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044431",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004445a",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044442",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044465",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044496",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044476",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x18004449e",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800444c7",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800444af",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800444d2",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044503",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800444e3",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x18004450b",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044534",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004451c",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x18004453f",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044570",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044550",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044578",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800445a1",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044589",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800445ac",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800445dd",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800445bd",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x1800445e5",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004460e",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800445f6",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044619",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004464a",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004462a",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044652",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004467b",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044663",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044686",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800446b7",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044697",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x1800446bf",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800446e8",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800446d0",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800446f3",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044724",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044704",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x18004472c",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044755",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004473d",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044760",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044791",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044771",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044799",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800447c2",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800447aa",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800447cd",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800447fe",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800447de",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044806",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004482f",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044817",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x18004483a",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004486b",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004484b",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044873",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x18004489c",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044884",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x1800448a7",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800448d8",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800448b8",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x1800448e0",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044909",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800448f1",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044914",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044945",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044925",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x18004494d",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044976",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004495e",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044981",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800449b2",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044992",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x1800449ba",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800449ee",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800449cb",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x390",
+      "jni_function": "CallStaticObjectMethod"
+    },
+    {
+      "call_site": "0x1800449f9",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044a0d",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044a2e",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044a16",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044a3e",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044a68",
+      "instruction": "callq  *0x598(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x598",
+      "jni_function": "NewIntArray"
+    },
+    {
+      "call_site": "0x180044a77",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044a8b",
+      "instruction": "callq  *0x78(%r13)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%r13",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044aad",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044a95",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044abd",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044af7",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044adf",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0xd8",
+      "jni_function": "AllocObject"
+    },
+    {
+      "call_site": "0x180044b02",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044b16",
+      "instruction": "callq  *0x78(%rdx)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rdx",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044b28",
+      "instruction": "callq  *0x100(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044b3c",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044bfd",
+      "instruction": "callq  *0x68(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x68",
+      "jni_function": "Throw"
+    },
+    {
+      "call_site": "0x180044c30",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044c05",
+      "jni_table_base_register": "%r13",
+      "jni_table_offset": "0x468",
+      "jni_function": "CallStaticVoidMethod"
+    },
+    {
+      "call_site": "0x180044c38",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044c48",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044c69",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044c51",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044c79",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044d16",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044ccf",
+      "jni_table_base_register": "%rdx",
+      "jni_table_offset": "0x518",
+      "jni_function": "NewString"
+    },
+    {
+      "call_site": "0x180044d21",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044d35",
+      "instruction": "callq  *0x78(%rdx)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rdx",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044d47",
+      "instruction": "callq  *0x100(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044d5b",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044d80",
+      "instruction": "callq  *0x100(%r9)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%r9",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044d95",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044df4",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044ddb",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x70",
+      "jni_function": "ThrowNew"
+    },
+    {
+      "call_site": "0x180044dfc",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044e1d",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044e05",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044e2d",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044e71",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044e4c",
+      "jni_table_base_register": "%rdx",
+      "jni_table_offset": "0x2d8",
+      "jni_function": "CallNonvirtualVoidMethod"
+    },
+    {
+      "call_site": "0x180044e79",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x180044e89",
+      "instruction": "callq  *0x78(%r8)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%r8",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044e9c",
+      "instruction": "callq  *0x100(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044eb0",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044ed2",
+      "instruction": "callq  *0x68(%r8)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%r8",
+      "jni_table_offset": "0x68",
+      "jni_function": "Throw"
+    },
+    {
+      "call_site": "0x180044edc",
+      "instruction": "callq  *0x78(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x78",
+      "jni_function": "ExceptionOccurred"
+    },
+    {
+      "call_site": "0x180044eee",
+      "instruction": "callq  *0x100(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x100",
+      "jni_function": "IsInstanceOf"
+    },
+    {
+      "call_site": "0x180044f02",
+      "instruction": "callq  *0x88(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x88",
+      "jni_function": "ExceptionClear"
+    },
+    {
+      "call_site": "0x180044f8f",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180044f21",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x388",
+      "jni_function": "GetStaticMethodID"
+    },
+    {
+      "call_site": "0x18004501f",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180044fa0",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x18004508e",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045030",
+      "jni_table_base_register": "%r14",
+      "jni_table_offset": "0x388",
+      "jni_function": "GetStaticMethodID"
+    },
+    {
+      "call_site": "0x180045105",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x18004509f",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800451a1",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180045116",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x18004523d",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800451b2",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x1800452cd",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004524e",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x180045361",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x1800452de",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800453f1",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180045372",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x180045456",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045402",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800454e6",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x180045467",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x18004557a",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x1800454f7",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x18004560a",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x18004558b",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x18004569e",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x18004561b",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x18004572e",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800456af",
+      "jni_table_base_register": "%rdi",
+      "jni_table_offset": "0x480",
+      "jni_function": "GetStaticFieldID"
+    },
+    {
+      "call_site": "0x1800457c2",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x18004573f",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045846",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x1800457d3",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800458ca",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045857",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x18004594e",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x1800458db",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800459d2",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x18004595f",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045a56",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x1800459e3",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045ada",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045a67",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045b5e",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045aeb",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045bcc",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045b6f",
+      "jni_table_base_register": "%r13",
+      "jni_table_offset": "0x388",
+      "jni_function": "GetStaticMethodID"
+    },
+    {
+      "call_site": "0x180045c50",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045bdd",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045cd4",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045c61",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045d58",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045ce5",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045ddc",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045d69",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045e60",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045ded",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045ee4",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045e71",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045f68",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045ef5",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x180045fec",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045f79",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x18004607f",
+      "instruction": "callq  *%rax",
+      "function_pointer_load": "0x180045ffd",
+      "jni_table_base_register": "%rdx",
+      "jni_table_offset": "0x108",
+      "jni_function": "GetMethodID"
+    },
+    {
+      "call_site": "0x1800460cb",
+      "instruction": "callq  *%rbx",
+      "function_pointer_load": "0x1800460a5",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x390",
+      "jni_function": "CallStaticObjectMethod"
+    },
+    {
+      "call_site": "0x1800460d6",
+      "instruction": "callq  *0x720(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x720",
+      "jni_function": "ExceptionCheck"
+    },
+    {
+      "call_site": "0x1800460ee",
+      "instruction": "callq  *0x68(%rax)",
+      "function_pointer_load": "same instruction",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x68",
+      "jni_function": "Throw"
+    },
+    {
+      "call_site": "0x18004610c",
+      "instruction": "callq  *%rdi",
+      "function_pointer_load": "0x1800460f3",
+      "jni_table_base_register": "%rax",
+      "jni_table_offset": "0x70",
+      "jni_function": "ThrowNew"
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "all indirect calls in the bounded event body map to named JDK 25 JNIEnv table entries; no unknown offsets or unassociated register calls",
+    "build_regression": "not run; Java sources were not changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "JNI API targets are mapped; this does not establish branch reachability, argument values, object/field semantics, exception behavior, or full event equivalence."
+}

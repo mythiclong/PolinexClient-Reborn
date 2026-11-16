@@ -1,0 +1,84 @@
+{
+  "slice_id": "R1884-client-initialized-kotlin-parameter-check",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T20:19:14.407436+00:00",
+  "ended_utc": "2026-11-15T20:19:14.532162+00:00",
+  "commands": [
+    [
+      "objdump",
+      "-d",
+      "--start-address=0x18000205d",
+      "--stop-address=0x1800020ff",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+    ],
+    [
+      "objdump",
+      "-d",
+      "--start-address=0x180006e3a",
+      "--stop-address=0x180006efb",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+    ]
+  ],
+  "exit_code": 0,
+  "inputs_sha256": {
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    ".analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    ".analysis\\reports\\R1880-client-initialized-method-id-use-map.json": "59924FA4893EEB6D28FD1E438A60267168BBA6428DFF1449A8350FB971964262",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26"
+  },
+  "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+  "native_resolvers": {
+    "find_class": {
+      "function_start": "0x18000205d",
+      "call_site": "0x1800020c6",
+      "jni_table_offset": "0x30",
+      "decoded_class": "kotlin/jvm/internal/Intrinsics",
+      "cache_global": "0x1801704e8",
+      "class_cache_publish_and_return": "0x1800020d1-0x1800020ff"
+    },
+    "get_static_method_id": {
+      "function_start": "0x180006e3a",
+      "class_resolver_call": "0x180006eda -> 0x18000205d",
+      "call_site": "0x180006eed",
+      "jni_table_offset": "0x388",
+      "decoded_method": "checkNotNullParameter",
+      "decoded_descriptor": "(Ljava/lang/Object;Ljava/lang/String;)V",
+      "cache_global": "0x1801706e8",
+      "method_id_cache_publish_and_return": "0x180006eef-0x180006efb"
+    },
+    "decoder_note": "For FindClass only, the shared JNI method decoder's in-memory view maps its single RDX string pointer to its name slot; a synthetic R9 pointer addresses the same already-decoded stack string. Saved objdump instructions are unchanged."
+  },
+  "event_call": {
+    "jni_call_site": "0x180043de0",
+    "jni_function": "CallStaticVoidMethod",
+    "class_helper_call": "0x180043dbe -> 0x18000205d",
+    "method_id_helper_call": "0x180043dc9 -> 0x180006e3a",
+    "java_target": "kotlin/jvm/internal/Intrinsics.checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V",
+    "parameter_name": "e",
+    "parameter_name_utf16_code_unit": "U+0065",
+    "parameter_name_cipher_word_le": "4119",
+    "parameter_name_keystream_offset": "0x8ec1",
+    "parameter_name_keystream_bytes": "2419",
+    "parameter_name_plaintext_bytes": "6500",
+    "java_argument_1": "event object saved from incoming R8 at [RBP+0x48], then passed in R9",
+    "java_argument_2": "NewString result from call 0x180043d98, spilled at [RSP+0x20] and passed as the second JNI vararg",
+    "null_check_effect": "Kotlin Intrinsics.checkNotNullParameter on the incoming event object; native code checks ExceptionCheck immediately after the call and branches to 0x18004610e if pending",
+    "success_continuation": "0x180044b5e",
+    "exception_continuation": "0x18004610e"
+  },
+  "acceptance": {
+    "static_reconstruction": "FindClass, GetStaticMethodID, target class/method/descriptor, parameter name and both event-call arguments resolved from PE instructions and the derived keystream",
+    "build_regression": "not run; analysis-only artifacts added",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This closes the entry null-check target and its argument provenance only. It does not recover the rest of the event control flow or establish runtime reachability beyond the statically mapped dispatcher block."
+}

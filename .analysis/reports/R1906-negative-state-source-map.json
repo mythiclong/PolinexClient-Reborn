@@ -1,0 +1,169 @@
+{
+  "slice_id": "R1906-negative-state-source-map",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T01:52:47.369935+00:00",
+  "commands": {
+    "verifier_argv": [
+      "<PYTHON_39>",
+      "-B",
+      ".analysis/tools/verify_r1906_negative_state_sources.py",
+      "--keystream",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin"
+    ],
+    "exit_code": 0,
+    "prior_tool_attempts": [
+      {
+        "exit_code": 1,
+        "error": "TypeError: need() takes 2 positional arguments but 3 were given; verifier helper signature corrected."
+      },
+      {
+        "exit_code": 1,
+        "error": "KeyError for 0x180044e8d; corrected exception call site to 0x180044e89 based on R1872/R1881."
+      }
+    ]
+  },
+  "inputs_sha256": {
+    "R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    "R1883-client-initialized-dispatch-map.json": "BAD62DF193FC42BE462555302096E14BA2D1CE3201370CA96028F516E0351757",
+    "R1885-client-initialized-dispatch-path-correction.json": "5980F1C3E3F33FF618B708D537B629951EDA7D04DE744A256E83BE8134C0A52B",
+    "R1905-state7-exception-edges.json": "C447B567EC0C527D36F9A8EF27C72E9B351420C3EDD76B185F6BE36B4133E12C",
+    "derived_keystream": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334"
+  },
+  "negative_state_edges": [
+    {
+      "transition_site": "0x180043f5e",
+      "state": -9,
+      "origin": "state21-helper-pending-runtimeexception",
+      "exception_occurred": "0x180043f13",
+      "runtimeexception_test": "0x180043f34",
+      "exception_clear": "0x180043f44",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044a58",
+      "state": -10,
+      "origin": "state7-f-array-helper-runtimeexception",
+      "exception_occurred": "0x180044a0d",
+      "runtimeexception_test": "0x180044a2e",
+      "exception_clear": "0x180044a3e",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044ad7",
+      "state": -10,
+      "origin": "state-minus11-newintarray-runtimeexception",
+      "exception_occurred": "0x180044a8b",
+      "runtimeexception_test": "0x180044aad",
+      "exception_clear": "0x180044abd",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044b56",
+      "state": -9,
+      "origin": "state5-runtimeexception-allocation-error",
+      "exception_occurred": "0x180044b16",
+      "runtimeexception_test": "0x180044b28",
+      "exception_clear": "0x180044b3c",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044c93",
+      "state": -10,
+      "origin": "state-minus11-setter-runtimeexception",
+      "exception_occurred": "0x180044c48",
+      "runtimeexception_test": "0x180044c69",
+      "exception_clear": "0x180044c79",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044cb8",
+      "state": -10,
+      "origin": "state-minus11-guard-equality",
+      "exception_occurred": null,
+      "runtimeexception_test": null,
+      "exception_clear": null,
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "guard equality enters relay with R12 still holding the int[]; static keystream predicts the opposite branch, live global value unobserved"
+    },
+    {
+      "transition_site": "0x180044d75",
+      "state": -9,
+      "origin": "state5-newstring-runtimeexception",
+      "exception_occurred": "0x180044d35",
+      "runtimeexception_test": "0x180044d47",
+      "exception_clear": "0x180044d5b",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044daf",
+      "state": -9,
+      "origin": "state17-repeated-runtimeexception-check",
+      "exception_occurred": "0x180043e4e",
+      "runtimeexception_test": "0x180044d80",
+      "exception_clear": "0x180044d95",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044e47",
+      "state": -9,
+      "origin": "state21-throw-result-runtimeexception",
+      "exception_occurred": "0x180044dfc",
+      "runtimeexception_test": "0x180044e1d",
+      "exception_clear": "0x180044e2d",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044eca",
+      "state": -9,
+      "origin": "state5-constructor-runtimeexception",
+      "exception_occurred": "0x180044e89",
+      "runtimeexception_test": "0x180044e9c",
+      "exception_clear": "0x180044eb0",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    },
+    {
+      "transition_site": "0x180044f1c",
+      "state": -9,
+      "origin": "state5-explicit-throw-runtimeexception",
+      "exception_occurred": "0x180044edc",
+      "runtimeexception_test": "0x180044eee",
+      "exception_clear": "0x180044f02",
+      "dispatcher_target": "0x1800460a2",
+      "source_outcome": "clear RuntimeException then enter common relay"
+    }
+  ],
+  "assertions": {
+    "all_11_state_minus9_minus10_transitions_classified": true,
+    "all_exceptional_edges_clear_only_runtimeexception_before_dispatch": true,
+    "all_11_edges_share_0x1800460a2": true,
+    "state17_duplicate_type_check_preserved": true,
+    "minus11_equal_guard_kept_open": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for all negative-state transition sources in the captured dispatcher map",
+    "build_regression": "not run; no source changed",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; event entry remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The -10 guard-equality path carries an int[] in R12 and remains unexplained; the static keystream value is not a runtime observation. Other positive-state startup behavior and side effects remain open.",
+  "ended_utc": "2026-11-16T01:52:47.513936+00:00",
+  "exit_code": 0
+}

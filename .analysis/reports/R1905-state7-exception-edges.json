@@ -1,0 +1,339 @@
+{
+  "slice_id": "R1905-state7-exception-edges-and-negative-relay",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T01:43:23.645517+00:00",
+  "commands": {
+    "verifier_argv": [
+      "<PYTHON_39>",
+      "-B",
+      ".analysis/tools/verify_r1905_state7_exception_edges.py",
+      "--pe",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+      "--keystream",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+      "--objdump",
+      "D:\\Apps\\mingw64\\bin\\objdump.exe"
+    ],
+    "objdump": [
+      {
+        "argv": [
+          "D:\\Apps\\mingw64\\bin\\objdump.exe",
+          "-d",
+          "--start-address=0x18004180d",
+          "--stop-address=0x1800418b0",
+          "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "DC36DF64AEF6C6C61BE818065AB65751A2A26D4FD2E20CD324EDD132F8FB4471"
+      },
+      {
+        "argv": [
+          "D:\\Apps\\mingw64\\bin\\objdump.exe",
+          "-d",
+          "--start-address=0x180046281",
+          "--stop-address=0x180046323",
+          "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "11B5AFB4687ED0DAE0F2143EAFAB454270458EA74A10E2CE950D7E83EFB52CE5"
+      },
+      {
+        "argv": [
+          "D:\\Apps\\mingw64\\bin\\objdump.exe",
+          "-d",
+          "--start-address=0x180046323",
+          "--stop-address=0x1800463c2",
+          "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "66F65BE490D60F6C5D8BCCC6A518989BCDBE457BC097595AE4532C5364632F14"
+      },
+      {
+        "argv": [
+          "D:\\Apps\\mingw64\\bin\\objdump.exe",
+          "-d",
+          "--start-address=0x18001f4f2",
+          "--stop-address=0x18001f594",
+          "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "1FFF1E794E4083B70B916491C7A2760E40BDD66A117961DAA0F955685FAD63AB"
+      }
+    ],
+    "exit_code": 0
+  },
+  "inputs_sha256": {
+    "R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "R1874-polinex-exception-identity-helper.json": "85236D590800331384B66165800C69822BC265BD972D58A48A5148D827188BB3",
+    "R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    "R1883-client-initialized-dispatch-map.json": "BAD62DF193FC42BE462555302096E14BA2D1CE3201370CA96028F516E0351757",
+    "R1885-client-initialized-dispatch-path-correction.json": "5980F1C3E3F33FF618B708D537B629951EDA7D04DE744A256E83BE8134C0A52B",
+    "R1895-state7-constructor-bytecode.json": "21E58C343173EC98129BE8860C00D84F51C0B1E849CD4F936A5DAFCD5B7D5936",
+    "R1904a-correction.json": "0B7B389EC30223FCB870107A5462AC82D952F7ACE30D39200630175F12592C72",
+    "native_pe": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "derived_keystream": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "source_jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "verifier": "D4CBD75B5CA5B5E8DB241A3C3E3810A11DE307F3E5F013C7EA31EBDA5F1C99D0"
+  },
+  "state7": {
+    "preconstructor_checks": [
+      {
+        "call": "0x180044316",
+        "jni_function": "GetStaticObjectField",
+        "exception_check": "0x180044321",
+        "exception_route": "pending exception returns from event entry"
+      },
+      {
+        "call": "0x18004434f",
+        "jni_function": "CallObjectMethod",
+        "exception_check": "0x180044357",
+        "exception_route": "pending exception returns from event entry"
+      }
+    ],
+    "constructor_count": 15,
+    "constructor_exception_edges": [
+      {
+        "class": "me/octo/client/lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+        "descriptor": "()V",
+        "alloc_object": "0x180044380",
+        "alloc_exception_check": "0x18004438b",
+        "constructor_call": "0x1800443bc",
+        "constructor_exception_check": "0x1800443c4",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+        "descriptor": "()V",
+        "alloc_object": "0x1800443ed",
+        "alloc_exception_check": "0x1800443f8",
+        "constructor_call": "0x180044429",
+        "constructor_exception_check": "0x180044431",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+        "descriptor": "()V",
+        "alloc_object": "0x18004445a",
+        "alloc_exception_check": "0x180044465",
+        "constructor_call": "0x180044496",
+        "constructor_exception_check": "0x18004449e",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+        "descriptor": "()V",
+        "alloc_object": "0x1800444c7",
+        "alloc_exception_check": "0x1800444d2",
+        "constructor_call": "0x180044503",
+        "constructor_exception_check": "0x18004450b",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+        "descriptor": "()V",
+        "alloc_object": "0x180044534",
+        "alloc_exception_check": "0x18004453f",
+        "constructor_call": "0x180044570",
+        "constructor_exception_check": "0x180044578",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+        "descriptor": "()V",
+        "alloc_object": "0x1800445a1",
+        "alloc_exception_check": "0x1800445ac",
+        "constructor_call": "0x1800445dd",
+        "constructor_exception_check": "0x1800445e5",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+        "descriptor": "()V",
+        "alloc_object": "0x18004460e",
+        "alloc_exception_check": "0x180044619",
+        "constructor_call": "0x18004464a",
+        "constructor_exception_check": "0x180044652",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+        "descriptor": "()V",
+        "alloc_object": "0x18004467b",
+        "alloc_exception_check": "0x180044686",
+        "constructor_call": "0x1800446b7",
+        "constructor_exception_check": "0x1800446bf",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+        "descriptor": "()V",
+        "alloc_object": "0x1800446e8",
+        "alloc_exception_check": "0x1800446f3",
+        "constructor_call": "0x180044724",
+        "constructor_exception_check": "0x18004472c",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+        "descriptor": "()V",
+        "alloc_object": "0x180044755",
+        "alloc_exception_check": "0x180044760",
+        "constructor_call": "0x180044791",
+        "constructor_exception_check": "0x180044799",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+        "descriptor": "()V",
+        "alloc_object": "0x1800447c2",
+        "alloc_exception_check": "0x1800447cd",
+        "constructor_call": "0x1800447fe",
+        "constructor_exception_check": "0x180044806",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+        "descriptor": "()V",
+        "alloc_object": "0x18004482f",
+        "alloc_exception_check": "0x18004483a",
+        "constructor_call": "0x18004486b",
+        "constructor_exception_check": "0x180044873",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+        "descriptor": "()V",
+        "alloc_object": "0x18004489c",
+        "alloc_exception_check": "0x1800448a7",
+        "constructor_call": "0x1800448d8",
+        "constructor_exception_check": "0x1800448e0",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+        "descriptor": "()V",
+        "alloc_object": "0x180044909",
+        "alloc_exception_check": "0x180044914",
+        "constructor_call": "0x180044945",
+        "constructor_exception_check": "0x18004494d",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      },
+      {
+        "class": "me/octo/client/IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+        "descriptor": "()V",
+        "alloc_object": "0x180044976",
+        "alloc_exception_check": "0x180044981",
+        "constructor_call": "0x1800449b2",
+        "constructor_exception_check": "0x1800449ba",
+        "exception_route": "pending exception branches directly to epilogue 0x18004610e; no ExceptionOccurred/ExceptionClear on this edge"
+      }
+    ],
+    "all_30_alloc_and_constructor_exception_checks_return_pending_exception": true,
+    "f_array_exception": "ExceptionOccurred -> IsInstanceOf(java/lang/RuntimeException); nonmatch returns pending; match ExceptionClear then state -10; no-exception path tests result and null routes through state -11"
+  },
+  "state_minus11": {
+    "null_f_array_path": "sets R12=0 and dispatches state -11",
+    "new_int_array": "NewIntArray(1); result stored in R12",
+    "setter": "nested b([I)V receives array as first Java argument; lazy GetStaticMethodID path republishes cache before retry",
+    "allocation_and_setter_runtimeexception": "ExceptionOccurred -> IsInstanceOf(java/lang/RuntimeException); nonmatch returns pending; match clears and routes -10",
+    "successful_guard": "derived +0x8fb1 value 0x90584005 differs from 0xf7ee810a, so static expected route is state 4; live global value not observed",
+    "guard_equal_caveat": "equality branch routes -10 while R12 still contains the int[]; keep this uncommon/invalid-looking path open until runtime global-state semantics are known"
+  },
+  "negative_state_relay": {
+    "transition_count": 11,
+    "transitions": [
+      {
+        "transition_site": "0x180043f5e",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044a58",
+        "state": -10,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044ad7",
+        "state": -10,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044b56",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044c93",
+        "state": -10,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044cb8",
+        "state": -10,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044d75",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044daf",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044e47",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044eca",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      },
+      {
+        "transition_site": "0x180044f1c",
+        "state": -9,
+        "relay_target": "0x1800460a2"
+      }
+    ],
+    "jni_call": "CallStaticObjectMethod(env, Polinex class, methodID a(Ljava/lang/Exception;)Ljava/lang/Exception;, R12)",
+    "decoded_owner": "me/octo/client/Polinex",
+    "decoded_runtimeexception_class": "java/lang/RuntimeException",
+    "identity_native_behavior": "returns the same Exception reference, including null; no other side effect",
+    "pending_from_helper": "return from event entry with pending exception",
+    "nonnull_result": "JNI Throw(result), then return",
+    "null_result": "ThrowNew(java/lang/NullPointerException, message_pointer=0x18013a82d), then return",
+    "runtime_message": "not directly observed; static PE bytes start with NUL",
+    "helper_dump_file": ".analysis/reports/R1905-exception-helpers.objdump.txt",
+    "helper_dump_sha256": "C5A78935B85FD00A78DD59EF8BCEE30E9975FECEDBCF8958C10E6BC7011497FA"
+  },
+  "assertions": {
+    "15_constructor_pairs_matched_R1895_and_R1881": true,
+    "30_constructor_checks_branch_to_epilogue": true,
+    "all_negative_dispatch_states_route_to_common_relay": true,
+    "relay_class_method_and_argument_registers_decoded": true,
+    "state7_and_state_minus11_exception_edges_match_raw_disassembly": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for all state-7 allocation/constructor exception edges, final array-helper exception dispatch, state -11 allocation/setter edges, and common -9/-10 JNI relay",
+    "build_regression": "not run; no source changed",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Static global/keystream-derived guard values are not live native-buffer observations. The state -11 equal-guard path remains open; other native initializer transitions and startup side effects are not fully restored.",
+  "ended_utc": "2026-11-16T01:43:23.946424+00:00",
+  "exit_code": 0,
+  "outputs_sha256": {
+    "R1905-exception-helpers.objdump.txt": "03E0E220DE2E10B1579A64EEE8390F9FCFC828DB2D03B2D329D93DE7CAC32C7A"
+  }
+}

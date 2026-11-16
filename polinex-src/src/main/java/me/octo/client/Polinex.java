@@ -281,7 +281,7 @@ public final class Polinex implements ModInitializer {
       Polinex.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI = v0;
    }
 
-   private static native Exception a(Exception v0);
+   private static Exception a(Exception v0) { return v0; }
 
    private static native String a(int i0, int i1);
 

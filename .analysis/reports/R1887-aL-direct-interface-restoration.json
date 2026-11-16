@@ -1,0 +1,76 @@
+{
+  "slice_id": "R1887-aL-direct-interface-restoration",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java": "869a6798456e60d9cbed58e485e6558f276e86b44f78fd0b716b2f07d6862444",
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070e5d02b6a3dc9566778d08f49f2bb26cb02d1e8110d9817d3b70357126f6c1"
+  },
+  "probe_status": "static bytecode comparison and compile only; no client/game/input/network interaction",
+  "started_utc": "2026-11-15T21:08:52.9166630+00:00",
+  "ended_utc": "2026-11-15T21:09:05.6978197+00:00",
+  "build": {
+    "command": "gradlew.bat -p polinex-src compileJava --no-daemon --console=plain",
+    "exit_code": 0,
+    "java": "Temurin 25.0.4.1",
+    "log": ".analysis/reports/R1887-compile.log",
+    "log_sha256": "eb45539b5f3ac8add38e96062c3964b8ab22ff9d4f19017ce23c5f536acf8080"
+  },
+  "inputs_sha256": {
+    "field_map": "82812142bd786c93eba96f74c553fb1ff081387a66af01f7af70c1f740f21032",
+    "compiled_aL_javap": "d6f0e995bf11ebe421c1873a1c2c4b1312ae28c97166fb0631a2c4f0504e3269",
+    "original_jar": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "call_map": "59924fa4893eeb6d28fd1e438a60267168bba6428dff1449a8350fb971964262",
+    "original_aL_javap": "520cd699e6377cfbc7b70664b93c21413cce3fb264af9d909c7595b86c840ef2",
+    "sentinel_javap": "e3c08ae203bed5f6ee8cdef378cb6468ebca2338a1e14ce94534c093293582f6"
+  },
+  "compiled_class": {
+    "path": "polinex-src/build/classes/java/main/me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.class",
+    "sha256": "44d966e0f7fff90c40a5573ed4b4f0133d91f026aebbf8c49b56ea9498928b65"
+  },
+  "method": {
+    "original_bytecode": ".analysis/reports/R1886-original-aL.javap.txt",
+    "descriptor": "()V",
+    "owner": "me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll",
+    "compiled_bytecode": ".analysis/reports/R1887-compiled-aL.javap.txt",
+    "name": "aL"
+  },
+  "reconstruction": {
+    "dispatch_difference": "aJ()V call bytecode uses invokespecial in original and invokevirtual in javac output; same owner/name/descriptor. Full call target sequence remains identical.",
+    "original_and_compiled_invoke_target_sequence_equal": true,
+    "compiled_retains_PXDyn_calls": false,
+    "compiled_uses_direct_iterable_iterator": true,
+    "original_side_effects_retained": true,
+    "compiled_uses_direct_collection_empty": true,
+    "side_effects": [
+      "KeyMapping.setDown:(Z)V",
+      "KeyMapping.getDefaultKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;",
+      "KeyMapping.setKey:(Lcom/mojang/blaze3d/platform/InputConstants$Key;)V",
+      "KeyMapping.resetMapping:()V",
+      "Method aI:()V",
+      "Method ap:()Lnet/minecraft/client/Minecraft;",
+      "Options.save:()V"
+    ],
+    "invoke_target_count_compiled": 19,
+    "changed_source_lines": [
+      "Collection.isEmpty:()Z",
+      "Iterable.iterator:()Ljava/util/Iterator;"
+    ],
+    "invoke_target_count_original": 19
+  },
+  "sentinel": {
+    "owner": "me.octo.client.lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+    "semantic_use": "aL()V preserves null and non-null sentinel branches rather than assuming a fixed runtime value",
+    "getter_descriptor": "()[I",
+    "static_initializer_evidence": ".analysis/reports/R1887-sentinel-initialization.javap.txt",
+    "setter_descriptor": "([I)V",
+    "source_scan": "no argument-bearing setter call found for this exact owner outside the owner initializer; getter calls remain"
+  },
+  "acceptance": {
+    "build_regression": true,
+    "normal_user_path": "not run: caller native event remains unrecovered",
+    "static_reconstruction": true,
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This closes only the Collection/Iterable call-target mismatch in aL()V. It does not complete the caller event dispatcher or prove full ClickGUI/runtime behavior."
+}

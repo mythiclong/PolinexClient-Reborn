@@ -1,0 +1,89 @@
+  public final void aL();
+    descriptor: ()V
+    Code:
+         0: invokestatic  #120                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I
+         3: aload_0
+         4: invokespecial #462                // Method aJ:()Ljava/util/List;
+         7: astore_2
+         8: astore_1
+         9: aload_2
+        10: checkcast     #147                // class java/lang/Iterable
+        13: astore_3
+        14: iconst_0
+        15: istore        4
+        17: aload_3
+        18: aload_1
+        19: ifnonnull     49
+        22: instanceof    #434                // class java/util/Collection
+        25: ifeq          48
+        28: aload_3
+        29: checkcast     #434                // class java/util/Collection
+        32: aload_1
+        33: ifnonnull     49
+        36: invokeinterface #437,  1          // InterfaceMethod java/util/Collection.isEmpty:()Z
+        41: ifeq          48
+        44: iconst_1
+        45: goto          128
+        48: aload_3
+        49: invokeinterface #151,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+        54: astore        5
+        56: aload         5
+        58: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        63: ifeq          127
+        66: aload         5
+        68: invokeinterface #161,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        73: astore        6
+        75: aload         6
+        77: checkcast     #375                // class net/minecraft/client/KeyMapping
+        80: astore        7
+        82: iconst_0
+        83: istore        8
+        85: aload         7
+        87: sipush        -21467
+        90: sipush        17874
+        93: pop2
+        94: ldc_w         #473                // String null cannot be cast to non-null type me.octo.client.mixin.accessors.KeyMappingAccessor
+        97: invokestatic  #476                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       100: aload         7
+       102: checkcast     #478                // class me/octo/client/mixin/accessors/KeyMappingAccessor
+       105: invokeinterface #481,  1          // InterfaceMethod me/octo/client/mixin/accessors/KeyMappingAccessor.getKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       110: getstatic     #424                // Field com/mojang/blaze3d/platform/InputConstants.UNKNOWN:Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       113: invokestatic  #428                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       116: ifne          56
+       119: iconst_0
+       120: aload_1
+       121: ifnonnull     116
+       124: goto          128
+       127: iconst_1
+       128: ifne          132
+       131: return
+       132: aload_2
+       133: invokeinterface #488,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       138: astore_3
+       139: aload_3
+       140: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       145: ifeq          183
+       148: aload_3
+       149: invokeinterface #161,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       154: checkcast     #375                // class net/minecraft/client/KeyMapping
+       157: astore        4
+       159: aload         4
+       161: iconst_0
+       162: invokevirtual #378                // Method net/minecraft/client/KeyMapping.setDown:(Z)V
+       165: aload         4
+       167: aload         4
+       169: invokevirtual #491                // Method net/minecraft/client/KeyMapping.getDefaultKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       172: invokevirtual #495                // Method net/minecraft/client/KeyMapping.setKey:(Lcom/mojang/blaze3d/platform/InputConstants$Key;)V
+       175: aload_1
+       176: ifnonnull     200
+       179: aload_1
+       180: ifnull        139
+       183: invokestatic  #498                // Method net/minecraft/client/KeyMapping.resetMapping:()V
+       186: aload_0
+       187: invokevirtual #315                // Method aI:()V
+       190: aload_0
+       191: invokevirtual #109                // Method ap:()Lnet/minecraft/client/Minecraft;
+       194: getfield      #200                // Field net/minecraft/client/Minecraft.options:Lnet/minecraft/client/Options;
+       197: invokevirtual #501                // Method net/minecraft/client/Options.save:()V
+       200: return
+

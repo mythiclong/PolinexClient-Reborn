@@ -1,0 +1,270 @@
+{
+  "slice_id": "R1895-client-initialized-state7-constructors",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T22:27:07.830512+00:00",
+  "ended_utc": "2026-11-15T22:27:14.491062+00:00",
+  "command": "python -B .analysis/tools/inspect_r1895_state7_constructor_bytecode.py --root .",
+  "exit_code": 0,
+  "input_sha256": {
+    ".analysis\\reports\\R1880-client-initialized-method-id-use-map.json": "59924fa4893eeb6d28fd1e438a60267168bba6428dff1449a8350fb971964262",
+    ".analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998d6f08493ca2688ad9e7c02f9428f638958635f2e276f620655a4669f2ec3d",
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984dabcf91cc65de31b305175331bc35eda1a6d6a68b1f101165dc2579d11",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26"
+  },
+  "javap_commands": [
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+      "exit_code": 0
+    },
+    {
+      "command": "\"<JDK_25>\\bin\\javap.exe\" -classpath <REFERENCE_ROOT>\\.analysis\\cracked.jar -p -c -s me.octo.client.IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+      "exit_code": 0
+    }
+  ],
+  "class_count": 15,
+  "mappings": [
+    {
+      "class": "me/octo/client/lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI.java",
+      "source_exists": true,
+      "source_sha256": "00915771ea0bb95c75c00d5768c142032b583c1984ce9eec645c608e9c3a68ed",
+      "descriptor": "()V",
+      "allocation_call": "0x180044380",
+      "constructor_call": "0x1800443bc",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044372"
+    },
+    {
+      "class": "me/octo/client/IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII.java",
+      "source_exists": true,
+      "source_sha256": "707748df01a9a93794fe7b3cd9e8af2dc8c7b8156a7f5c3547745170322d5d94",
+      "descriptor": "()V",
+      "allocation_call": "0x1800443ed",
+      "constructor_call": "0x180044429",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x1800443df"
+    },
+    {
+      "class": "me/octo/client/llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll.java",
+      "source_exists": true,
+      "source_sha256": "03577334cf014a2f7d4c5fabf463acf5336c0aefb6bd790ed78666bc56babeb5",
+      "descriptor": "()V",
+      "allocation_call": "0x18004445a",
+      "constructor_call": "0x180044496",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x18004444c"
+    },
+    {
+      "class": "me/octo/client/llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll.java",
+      "source_exists": true,
+      "source_sha256": "2ca5661b32491fe58a23e3fe0a75469a85ae548622485e55ef6a4047ff8e3189",
+      "descriptor": "()V",
+      "allocation_call": "0x1800444c7",
+      "constructor_call": "0x180044503",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x1800444b9"
+    },
+    {
+      "class": "me/octo/client/lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll.java",
+      "source_exists": true,
+      "source_sha256": "fe6a008b3bc8257dcf7ddcfab2e7ce09dbf54f6691cf64614db6df314115054d",
+      "descriptor": "()V",
+      "allocation_call": "0x180044534",
+      "constructor_call": "0x180044570",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044526"
+    },
+    {
+      "class": "me/octo/client/IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI.java",
+      "source_exists": true,
+      "source_sha256": "23c431ccd4853d4307ab2f2282805e6858780c64fb508ee9793a6ce90b3398f8",
+      "descriptor": "()V",
+      "allocation_call": "0x1800445a1",
+      "constructor_call": "0x1800445dd",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044593"
+    },
+    {
+      "class": "me/octo/client/IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI.java",
+      "source_exists": true,
+      "source_sha256": "aabc3818de4fb3de53022fe73d857870c49ab6d1823cf2185defd6ae35cd083d",
+      "descriptor": "()V",
+      "allocation_call": "0x18004460e",
+      "constructor_call": "0x18004464a",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044600"
+    },
+    {
+      "class": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl.java",
+      "source_exists": true,
+      "source_sha256": "d2af72589296af955bb49e3285af2e9ad22b0f258aec1a5a5447e4222d8501de",
+      "descriptor": "()V",
+      "allocation_call": "0x18004467b",
+      "constructor_call": "0x1800446b7",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x18004466d"
+    },
+    {
+      "class": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl.java",
+      "source_exists": true,
+      "source_sha256": "f47e5c57de42f9fed4b5d62ec42ea57b7fbe3613a084eb872e940d68c3c27f16",
+      "descriptor": "()V",
+      "allocation_call": "0x1800446e8",
+      "constructor_call": "0x180044724",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x1800446da"
+    },
+    {
+      "class": "me/octo/client/IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI.java",
+      "source_exists": true,
+      "source_sha256": "86eebc39025ceba96abfa7e120d4f969bba53f093d4f723e08d311e7c12cc849",
+      "descriptor": "()V",
+      "allocation_call": "0x180044755",
+      "constructor_call": "0x180044791",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044747"
+    },
+    {
+      "class": "me/octo/client/IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl.java",
+      "source_exists": true,
+      "source_sha256": "2373c4290c19fce8c312de13e95c9bf1842162e788c10c75d818fdb47e205565",
+      "descriptor": "()V",
+      "allocation_call": "0x1800447c2",
+      "constructor_call": "0x1800447fe",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x1800447b4"
+    },
+    {
+      "class": "me/octo/client/IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll.java",
+      "source_exists": true,
+      "source_sha256": "d7bb47d0ac6312370342b97df8468bf6f2a4491402d39ffd0725dcb8d1ef3c33",
+      "descriptor": "()V",
+      "allocation_call": "0x18004482f",
+      "constructor_call": "0x18004486b",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044821"
+    },
+    {
+      "class": "me/octo/client/IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII.java",
+      "source_exists": true,
+      "source_sha256": "9585ed8b478421540e181457fe55ed62fdeaf818865e9a2b475e5fa071a4152e",
+      "descriptor": "()V",
+      "allocation_call": "0x18004489c",
+      "constructor_call": "0x1800448d8",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x18004488e"
+    },
+    {
+      "class": "me/octo/client/IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI.java",
+      "source_exists": true,
+      "source_sha256": "652bd8149e3eff4d7f468d70a4b566a1c48c954dbc513f07585f933a5fc47c2d",
+      "descriptor": "()V",
+      "allocation_call": "0x180044909",
+      "constructor_call": "0x180044945",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x1800448fb"
+    },
+    {
+      "class": "me/octo/client/IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl.java",
+      "source_exists": true,
+      "source_sha256": "491f7b1c0cd9b47254666d58ece2c6b15797ebc709dbaddd2f8a9622e2973923",
+      "descriptor": "()V",
+      "allocation_call": "0x180044976",
+      "constructor_call": "0x1800449b2",
+      "jni_allocation": "AllocObject",
+      "jni_constructor": "CallNonvirtualVoidMethod",
+      "class_helper_call": "0x180044968"
+    }
+  ],
+  "full_original_bytecode": ".analysis\\reports\\R1895-state7-constructor-classes.original.javap.txt",
+  "full_original_bytecode_sha256": "a04bc9b0701dd30c66f70e91a8cda7580d761ac5f0c03a25e0204be0bf6e5244",
+  "acceptance": {
+    "static_reconstruction": "mapped all 15 AllocObject and CallNonvirtualVoidMethod pairs and extracted full original class bytecode",
+    "build_regression": "not run; no Java source changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The constructor bytecode is evidence for this state-7 initialization sequence; call ordering and later consumers remain open."
+}

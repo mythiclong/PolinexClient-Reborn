@@ -1,0 +1,131 @@
+{
+  "slice_id": "R1907-client-init-event-type-map",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T02:11:20.623022+00:00",
+  "ended_utc": "2026-11-16T02:11:23.548196+00:00",
+  "commands": [
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.Polinex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.mixin.client.MinecraftMixin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.events.impl.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "<JDK_25>\\bin\\javap.exe",
+        "-classpath",
+        "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+        "-v",
+        "-p",
+        "-c",
+        "-s",
+        "me.octo.client.events.impl.base.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "inputs_sha256": {
+    "original_jar": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "Polinex.java": "070e5d02b6a3dc9566778d08f49f2bb26cb02d1e8110d9817d3b70357126f6c1",
+    "MinecraftMixin.java": "fd1ab0dddef964a2b4225809f077dc3ab3eb3bae041430e9102804c60e3928e9"
+  },
+  "method_mapping": {
+    "initialization_event_class": "me.octo.client.events.impl.IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI",
+    "initialization_handler": "Polinex.a(Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;)V",
+    "initialization_publisher": {
+      "class": "MinecraftMixin",
+      "method": "polinex$onInitFinished(Ljava/lang/Object;CallbackInfoReturnable;)V",
+      "injection_target": "Minecraft.buildInitialScreens(Minecraft$GameLoadCookie):Runnable at RETURN",
+      "action": "loads the event singleton and calls EventBus.a(Event):Z"
+    },
+    "close_event_class": "me.octo.client.events.impl.IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI",
+    "close_handler": "Polinex.a(Lme/octo/client/events/impl/IIllIIIlllllIlIIIIlIllllIIlIlllIlIllIlllllllIIIIlIlIIlIllIlIIllllIlllIlIIllIIlIlllIlI;)V",
+    "close_publisher": {
+      "class": "MinecraftMixin",
+      "method": "onClose(CallbackInfo)V",
+      "injection_target": "Minecraft.close at HEAD",
+      "action": "loads the other event singleton and calls EventBus.a(Event):Z"
+    },
+    "third_subscriber_descriptor": "Polinex.a(Lme/octo/client/events/impl/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;)V"
+  },
+  "assertions": {
+    "all_javap_commands_succeeded": true,
+    "first_native_subscriber_is_posted_after_initial_screens": true,
+    "second_native_subscriber_is_posted_during_close": true,
+    "event_bus_invokes_registered_consumers": true
+  },
+  "acceptance": {
+    "static_reconstruction": "passed for event class identity and direct publisher-to-handler descriptor mapping",
+    "build_regression": "not run; no Java source changed",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; initialization handler remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The mapping proves which original event descriptor is published after Minecraft.buildInitialScreens returns. It does not recover the remaining native handler body or its later side effects.",
+  "bytecode_excerpt": ".analysis/reports/R1907-client-init-event-type-map.javap.txt",
+  "bytecode_excerpt_sha256": "656cb9977efeda1ac2cc863debdf27a5f59b90b420d0dd08dd47b203c60fc342",
+  "verification_failures": [],
+  "exit_code": 0
+}

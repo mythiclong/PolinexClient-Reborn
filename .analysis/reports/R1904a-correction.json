@@ -1,0 +1,78 @@
+{
+  "slice_id": "R1904a-correction-and-verifier-rerun",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-16T01:20:50.061896+00:00",
+  "commands": {
+    "verifier_argv": [
+      "<WORKTREE_ROOT>\\.analysis\\tools\\verify_r1904_exception_and_minus11_paths.py",
+      "--pe",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin",
+      "--keystream",
+      "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+      "--jar",
+      "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+      "--javap",
+      "<JDK_25>\\bin\\javap.exe",
+      "--objdump",
+      "D:\\Apps\\mingw64\\bin\\objdump.exe"
+    ],
+    "execution_note": "Loaded the unchanged R1904 verifier module and redirected only its OUTPUT variable in memory to R1904a-verifier-rerun.json, preserving the historical R1904 report. Its main() ran with the recorded verifier argv.",
+    "original_r1904_command_field": "python -B .analysis/tools/verify_r1904_exception_and_minus11_paths.py --pe <static-pe> --keystream <derived-keystream> --jar <cracked.jar> --javap <jdk-25-javap> --objdump <objdump>",
+    "original_command_limitation": "R1904 stored angle-bracket path placeholders, so its exact original shell invocation was not captured; this record preserves the exact argv used for the successful rerun.",
+    "objdump_exit_code": 0,
+    "javap_exit_code": 0,
+    "verifier_exit_code": 0
+  },
+  "inputs_sha256": {
+    "R1904-original-report": "CFE7EBAB9C03A4B8EA7FA85A5BBA561F14D75AB5A9DE7867BA2F830783A3690E",
+    "R1904a-rerun-report": "EA589A39DBFB931BEC35E0BA55E7F3B13616985D12EE16500188EAD006D18CE8",
+    "R1872-client-init-objdump": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "R1904-verifier": "B574168B3C515C85BDCE86B5C0E393E9E6C01BA1128F5E69E4950B82ED38E72E",
+    "native_pe": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "derived_keystream": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "source_jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "corrections": {
+    "R1904_raw_branch_proof": {
+      "recorded_address_typo": "0x180044f07",
+      "correct_address": "0x180043f07",
+      "verified_instructions": {
+        "180043f07": "180043f07:\t0f 84 de 0c 00 00    \tje     0x180044beb",
+        "180044beb": "180043f07:\t0f 84 de 0c 00 00    \tje     0x180044beb",
+        "180044bf1": "180044bf1:\t0f 84 e4 01 00 00    \tje     0x180044ddb",
+        "180044ddb": "180044bf1:\t0f 84 e4 01 00 00    \tje     0x180044ddb",
+        "180044df4": "180044df4:\tff d7                \tcallq  *%rdi"
+      },
+      "interpretation": "0x180043f07 branches to 0x180044beb; at 0x180044bf1, null rbx branches to 0x180044ddb, then ThrowNew at 0x180044df4. Neither branch dispatches state 8."
+    },
+    "R1904_verifier_command": {
+      "problem": "The historical field is a placeholder template, not a literal executed command.",
+      "resolution": "Successful rerun argv is recorded in commands.verifier_argv; no claim is made about the original shell command."
+    },
+    "state21_claim": "A null identity-helper return reaches ThrowNew(NullPointerException), then the common exception check routes RuntimeException to state -9; the earlier state-8 loop claim is superseded."
+  },
+  "rerun_assertions": {
+    "state21_null_return_uses_ThrowNew_not_state8": true,
+    "ThrowNew_class_helper_decodes_to_NullPointerException": true,
+    "state_minus9_and_minus10_share_exception_relay": true,
+    "state_minus11_original_setter_and_source_match": true,
+    "state_minus11_guard_decodes_to_state4_return": true
+  },
+  "acceptance": {
+    "static_reconstruction": "R1904 verifier rerun passed, including state-21 null route, state -9/-10 relay anchors, and state -11 setter/guard.",
+    "build_regression": "not run; analysis-only correction",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "ended_utc": "2026-11-16T01:23:18.160509+00:00",
+  "exit_code": 0
+}

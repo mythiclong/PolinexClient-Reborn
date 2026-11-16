@@ -1,0 +1,65 @@
+{
+  "slice_id": "R1873-client-initialized-static-fields",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_baseline_commit": "243bbcfd926fe6404c6e0e82f6ad240ddd4379c7",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "0E7B366BADBC6167CD1DCFF9CA22B6454043FBF81E6A148400B27F6F6B781D37",
+    "polinex-src/src/main/java/me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI.java": "1C99FA07B15A162478B3470331FF0010561EBC755E088F204E5EE1DC8B813E2A"
+  },
+  "method": {
+    "owner": "me.octo.client.Polinex",
+    "name": "a",
+    "descriptor": "(Lme/octo/client/events/impl/IIIIIIIlllIIllIlllIlllIIlIIIIllIllIlllIlIIllllllIlIIlIIlllIllIllIIlIIlIlIllIlllllIIlI;)V",
+    "native_pe_sha256": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "keystream_sha256": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334",
+    "disassembly_sha256": "AA597F5CDEF11AF64CA556740BC7DC3DC46366897783023E7AE4340B326FF73D",
+    "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "command": "python .analysis/tools/decode_client_initialized_static_fields.py --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin",
+  "exit_code": 0,
+  "started_utc": "2026-11-15T17:03:09.1728426Z",
+  "ended_utc": "2026-11-15T17:03:09.4052544Z",
+  "assertions": [
+    {
+      "native_site": "0x180045116",
+      "get_static_field_id_call": "0x1800451a1",
+      "class_helper": "0x18004646b",
+      "owner": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+      "field_name": "lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll",
+      "descriptor": "Lnet/minecraft/resources/Identifier;",
+      "class_cache": "0x180170f10",
+      "field_id_cache": "0x180170f18",
+      "get_static_object_field": "0x1800440aa",
+      "source_declaration": "lIllll...java:969"
+    },
+    {
+      "native_site": "0x1800451b2",
+      "get_static_field_id_call": "0x18004523d",
+      "class_helper": "0x180046516",
+      "owner": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "field_name": "IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI",
+      "descriptor": "Lnet/minecraft/resources/Identifier;",
+      "class_cache": "0x180170f20",
+      "field_id_cache": "0x180170f28",
+      "get_static_object_field": "0x1800440ec",
+      "source_declaration": "lIllll...java:824"
+    }
+  ],
+  "behavior_observed": [
+    "Both cache-miss paths call FindClass using the decoded owner, then GetStaticFieldID with the decoded name and Identifier descriptor.",
+    "Both cached IDs are used by GetStaticObjectField; the returned object register is overwritten before use, so this event handler does not retain either Identifier value.",
+    "Each field read is followed by ExceptionCheck. GetStaticObjectField has the Java class-initialization side effect; this establishes that both owner classes are touched on this path, while their semantic purpose outside class initialization is not inferred.",
+    "The two owner classes contain the corresponding static Identifier fields in the current source. The independent read-only audit confirmed the same addresses, decoding inputs, caches, and absence of a write in this path."
+  ],
+  "acceptance": {
+    "static_reconstruction": "partial progress: two field queries, owner classes, cache slots, and reads resolved",
+    "full_control_flow": "open",
+    "build_regression": "not run; no Java source changed in this slice",
+    "normal_client_entry": "not run",
+    "runtime_probe": "not run",
+    "real_server": "not run"
+  },
+  "remaining": "Continue reconstructing the complete event handler, including all branches, method targets, object construction, exception behavior, and initialization side effects before editing Polinex.a(event)."
+}

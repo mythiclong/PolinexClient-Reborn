@@ -1,0 +1,360 @@
+{
+  "slice_id": "R1883-client-initialized-dispatch-map",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:58:56.205820+00:00",
+  "ended_utc": "2026-11-15T19:58:56.279331+00:00",
+  "command": ".analysis/tools/map_client_initialized_dispatch.py --disassembly .analysis/reports/R1872-polininex-client-initialized.objdump.txt --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin --source-file polinex-src/src/main/java/me/octo/client/Polinex.java --output .analysis/reports/R1883-client-initialized-dispatch-map.json",
+  "exit_code": 0,
+  "inputs_sha256": {
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334"
+  },
+  "dispatcher": {
+    "entry": "0x180043cea",
+    "table_va": "0x180132764",
+    "table_rva": "0x132764",
+    "table_entry_count": 25,
+    "state_index_rule": "signed state > 0x10 uses itself; otherwise add 0x10, as implemented by CMP/JG/ADD in the entry block",
+    "table": [
+      {
+        "index": 0,
+        "relative_displacement": -977500,
+        "target": "0x180043d08"
+      },
+      {
+        "index": 1,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 2,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 3,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 4,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 5,
+        "relative_displacement": -974087,
+        "target": "0x180044a5d"
+      },
+      {
+        "index": 6,
+        "relative_displacement": -968386,
+        "target": "0x1800460a2"
+      },
+      {
+        "index": 7,
+        "relative_displacement": -968386,
+        "target": "0x1800460a2"
+      },
+      {
+        "index": 8,
+        "relative_displacement": -973516,
+        "target": "0x180044c98"
+      },
+      {
+        "index": 9,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 10,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 11,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 12,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 13,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 14,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 15,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 16,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 17,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 18,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 19,
+        "relative_displacement": -968257,
+        "target": "0x180046123"
+      },
+      {
+        "index": 20,
+        "relative_displacement": -968278,
+        "target": "0x18004610e"
+      },
+      {
+        "index": 21,
+        "relative_displacement": -973960,
+        "target": "0x180044adc"
+      },
+      {
+        "index": 22,
+        "relative_displacement": -973833,
+        "target": "0x180044b5b"
+      },
+      {
+        "index": 23,
+        "relative_displacement": -976897,
+        "target": "0x180043f63"
+      },
+      {
+        "index": 24,
+        "relative_displacement": -977090,
+        "target": "0x180043ea2"
+      }
+    ]
+  },
+  "initial_state": {
+    "immediate": "0xe1e8df35",
+    "keystream_offset": "0x8ebd",
+    "keystream_u32": "0x1e1720c5",
+    "decoded_state_signed": -16,
+    "dispatcher_table_index": 0,
+    "entry_target": "0x180043d08"
+  },
+  "transition_count": 20,
+  "distinct_next_targets": 7,
+  "transition_target_counts": {
+    "0x180043ea2": 1,
+    "0x180043f63": 1,
+    "0x180044a5d": 1,
+    "0x180044adc": 3,
+    "0x1800460a2": 11,
+    "0x18004610e": 2,
+    "0x180046123": 1
+  },
+  "transitions": [
+    {
+      "transition_site": "0x180043e9d",
+      "keystream_offset": "0x8ecb",
+      "keystream_u32": "0xb55dc126",
+      "xor_immediate": "0xb55dc133",
+      "decoded_state_signed": 21,
+      "dispatcher_table_index": 21,
+      "next_target": "0x180044adc"
+    },
+    {
+      "transition_site": "0x180043ec6",
+      "keystream_offset": "0x8ee3",
+      "keystream_u32": "0xab22f2cd",
+      "xor_immediate": "0xab22f2d8",
+      "decoded_state_signed": 21,
+      "dispatcher_table_index": 21,
+      "next_target": "0x180044adc"
+    },
+    {
+      "transition_site": "0x180043f5e",
+      "keystream_offset": "0x8ee7",
+      "keystream_u32": "0x98d5934a",
+      "xor_immediate": "0x672a6cbd",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044a58",
+      "keystream_offset": "0x8f9d",
+      "keystream_u32": "0x3dc9f70d",
+      "xor_immediate": "0xc23608fb",
+      "decoded_state_signed": -10,
+      "dispatcher_table_index": 6,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044ad7",
+      "keystream_offset": "0x8fa9",
+      "keystream_u32": "0xeb54baad",
+      "xor_immediate": "0x14ab455b",
+      "decoded_state_signed": -10,
+      "dispatcher_table_index": 6,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044b56",
+      "keystream_offset": "0x8eef",
+      "keystream_u32": "0x158372b4",
+      "xor_immediate": "0xea7c8d43",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044b7e",
+      "keystream_offset": "0x8ec7",
+      "keystream_u32": "0x6e8cbaf6",
+      "xor_immediate": "0x6e8cbae7",
+      "decoded_state_signed": 17,
+      "dispatcher_table_index": 17,
+      "next_target": "0x180046123"
+    },
+    {
+      "transition_site": "0x180044b90",
+      "keystream_offset": "0x8edf",
+      "keystream_u32": "0x26080e51",
+      "xor_immediate": "0x26080e54",
+      "decoded_state_signed": 5,
+      "dispatcher_table_index": 21,
+      "next_target": "0x180044adc"
+    },
+    {
+      "transition_site": "0x180044bb2",
+      "keystream_offset": "0x8fa1",
+      "keystream_u32": "0x129541f6",
+      "xor_immediate": "0x129541f2",
+      "decoded_state_signed": 4,
+      "dispatcher_table_index": 20,
+      "next_target": "0x18004610e"
+    },
+    {
+      "transition_site": "0x180044be6",
+      "keystream_offset": "0x8ed3",
+      "keystream_u32": "0x204e239e",
+      "xor_immediate": "0x204e2399",
+      "decoded_state_signed": 7,
+      "dispatcher_table_index": 23,
+      "next_target": "0x180043f63"
+    },
+    {
+      "transition_site": "0x180044c93",
+      "keystream_offset": "0x8fad",
+      "keystream_u32": "0xcf9fc31c",
+      "xor_immediate": "0x30603cea",
+      "decoded_state_signed": -10,
+      "dispatcher_table_index": 6,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044cb8",
+      "keystream_offset": "0x8fb9",
+      "keystream_u32": "0xc4bf6f70",
+      "xor_immediate": "0x3b409086",
+      "decoded_state_signed": -10,
+      "dispatcher_table_index": 6,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044cca",
+      "keystream_offset": "0x8fb5",
+      "keystream_u32": "0x336dc792",
+      "xor_immediate": "0x336dc796",
+      "decoded_state_signed": 4,
+      "dispatcher_table_index": 20,
+      "next_target": "0x18004610e"
+    },
+    {
+      "transition_site": "0x180044d75",
+      "keystream_offset": "0x8f47",
+      "keystream_u32": "0x2ee1870b",
+      "xor_immediate": "0xd11e78fc",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044daf",
+      "keystream_offset": "0x8ecf",
+      "keystream_u32": "0xdbb361cd",
+      "xor_immediate": "0x244c9e3a",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044dc4",
+      "keystream_offset": "0x8fa5",
+      "keystream_u32": "0x2df9cf19",
+      "xor_immediate": "0xd20630ec",
+      "decoded_state_signed": -11,
+      "dispatcher_table_index": 5,
+      "next_target": "0x180044a5d"
+    },
+    {
+      "transition_site": "0x180044dd6",
+      "keystream_offset": "0x8ed7",
+      "keystream_u32": "0x6418ea58",
+      "xor_immediate": "0x6418ea50",
+      "decoded_state_signed": 8,
+      "dispatcher_table_index": 24,
+      "next_target": "0x180043ea2"
+    },
+    {
+      "transition_site": "0x180044e47",
+      "keystream_offset": "0x8eeb",
+      "keystream_u32": "0x120b3a6e",
+      "xor_immediate": "0xedf4c599",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044eca",
+      "keystream_offset": "0x8f4b",
+      "keystream_u32": "0x4018ca37",
+      "xor_immediate": "0xbfe735c0",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    },
+    {
+      "transition_site": "0x180044f1c",
+      "keystream_offset": "0x8f4f",
+      "keystream_u32": "0xe9ebecc1",
+      "xor_immediate": "0x16141336",
+      "decoded_state_signed": -9,
+      "dispatcher_table_index": 7,
+      "next_target": "0x1800460a2"
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "entry state and all twenty state assignments decode through the original PE jump table and recovered keystream; every target is an instruction in the bounded handler disassembly",
+    "build_regression": "not run; Java sources were not changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This maps the flattened dispatch table and its state assignments. It does not yet resolve all conditional predicates, method arguments, exception paths, or end-to-end behavior."
+}

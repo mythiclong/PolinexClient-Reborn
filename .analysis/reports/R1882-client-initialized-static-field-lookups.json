@@ -1,0 +1,196 @@
+{
+  "slice_id": "R1882-client-initialized-static-field-lookups",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java": "275CBD382C850A59A56C3933847C9EE7F1A7A746133F243A33D0EDBEB9C1BC7B",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI.java": "1C99FA07B15A162478B3470331FF0010561EBC755E088F204E5EE1DC8B813E2A",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII.java": "12047050657F4D66C6EE14082E74B906E8E18A6C517195C3D844602329436D6C",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl.java": "173A44D288D7A56ABB503644E14542CF4CF33A0058B241AAEE15E0D0D732E77F",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl.java": "DF2836084807BBB2B188F4DE9C9CBB4D718907A21FAE5AD62415226282A03107",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII.java": "E01C24522EBF92349B4F3F709F05B6D411B214395ABE6B8CEBEABA139934DF77",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll.java": "F49FC8F5881F0D291C4FFEC939082A6E4044D2057F28B508A55F9D74D5CCC0D1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:53:16.142403+00:00",
+  "ended_utc": "2026-11-15T19:53:19.392101+00:00",
+  "command": ".analysis/tools/map_client_initialized_static_field_lookups.py --disassembly .analysis/reports/R1872-polininex-client-initialized.objdump.txt --method-call-map .analysis/reports/R1881-client-initialized-all-jni-calls.json --literal-map .analysis/reports/R1876-client-initialized-helper-literals.json --class-map .analysis/reports/R1877-client-initialized-class-helper-map.json --prior-fields .analysis/reports/R1873-client-initialized-static-fields.json --source-root polinex-src/src/main/java --original-jar <REFERENCE_ROOT>\\.analysis\\cracked.jar --output .analysis/reports/R1882-client-initialized-static-field-lookups.json",
+  "exit_code": 0,
+  "inputs_sha256": {
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984DABCF91CC65DE31B305175331BC35EDA1A6D6A68B1F101165DC2579D11",
+    ".analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998D6F08493CA2688AD9E7C02F9428F638958635F2E276F620655A4669F2EC3D",
+    ".analysis\\reports\\R1876-client-initialized-helper-literals.json": "1DEADEF05778F873AAF9A250799B1F67792979AF2E64D13FD4C79975FCFB3FC4",
+    ".analysis\\reports\\R1877-client-initialized-class-helper-map.json": "F1D6CCB5B32859EFB6963A9ED57842EF6FC3C1FAE3E6DC437B62C723C7D57A37",
+    ".analysis\\reports\\R1873-client-initialized-static-fields.json": "B65666D9FBE51384DD0780C93DE641AC364B345DC6902CE785381920169F8264",
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26"
+  },
+  "javap_version": "25.0.4.1",
+  "lookup_count": 8,
+  "read_count": 8,
+  "source_declaration_match_count": 8,
+  "original_jar_field_match_count": 8,
+  "independent_R1873_cross_check_count": 2,
+  "fields": [
+    {
+      "get_static_field_id_call": "0x18004501f",
+      "field_id_cache_global": "0x180170f00",
+      "cache_miss_branch_target": "0x180044fa0",
+      "get_static_object_field_call": "0x180043f8e",
+      "class_helper_call": "0x180043f70",
+      "class_helper": "0x1800463c2",
+      "owner": "me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll",
+      "field_name": "IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll",
+      "descriptor": "Lme/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll;",
+      "original_jar_field_declaration": "public static me.octo.client.lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll;",
+      "managed_source_declarations_in_outer_file": [
+        "67: public static lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    },
+    {
+      "get_static_field_id_call": "0x1800451a1",
+      "field_id_cache_global": "0x180170f18",
+      "cache_miss_branch_target": "0x180045116",
+      "get_static_object_field_call": "0x1800440aa",
+      "class_helper_call": "0x18004408c",
+      "class_helper": "0x18004646b",
+      "owner": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+      "field_name": "lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll",
+      "descriptor": "Lnet/minecraft/resources/Identifier;",
+      "original_jar_field_declaration": "public static net.minecraft.resources.Identifier lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;",
+      "managed_source_declarations_in_outer_file": [
+        "830: public static Identifier lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;",
+        "969: public static Identifier lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": true
+    },
+    {
+      "get_static_field_id_call": "0x18004523d",
+      "field_id_cache_global": "0x180170f28",
+      "cache_miss_branch_target": "0x1800451b2",
+      "get_static_object_field_call": "0x1800440ec",
+      "class_helper_call": "0x1800440ce",
+      "class_helper": "0x180046516",
+      "owner": "me/octo/client/lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "field_name": "IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI",
+      "descriptor": "Lnet/minecraft/resources/Identifier;",
+      "original_jar_field_declaration": "public static net.minecraft.resources.Identifier IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;",
+      "managed_source_declarations_in_outer_file": [
+        "824: public static Identifier IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;",
+        "963: public static Identifier IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIllllIIIIIIIIlIllIlIllIIIIIIlIIllIIllllIIIIlIIllIlllIllIIlIlIllIIIIllllIllllIlIIlllI.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": true
+    },
+    {
+      "get_static_field_id_call": "0x1800452cd",
+      "field_id_cache_global": "0x180170f38",
+      "cache_miss_branch_target": "0x18004524e",
+      "get_static_object_field_call": "0x18004412e",
+      "class_helper_call": "0x180044110",
+      "class_helper": "0x1800465c1",
+      "owner": "me/octo/client/lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII",
+      "field_name": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "Lme/octo/client/lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII;",
+      "original_jar_field_declaration": "public static me.octo.client.lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;",
+      "managed_source_declarations_in_outer_file": [
+        "27: public static lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    },
+    {
+      "get_static_field_id_call": "0x1800453f1",
+      "field_id_cache_global": "0x180170f50",
+      "cache_miss_branch_target": "0x180045372",
+      "get_static_object_field_call": "0x1800441a8",
+      "class_helper_call": "0x18004418a",
+      "class_helper": "0x18004666a",
+      "owner": "me/octo/client/IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl",
+      "field_name": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "Lme/octo/client/IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl;",
+      "original_jar_field_declaration": "public static me.octo.client.IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;",
+      "managed_source_declarations_in_outer_file": [
+        "30: public static IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    },
+    {
+      "get_static_field_id_call": "0x1800454e6",
+      "field_id_cache_global": "0x180170f68",
+      "cache_miss_branch_target": "0x180045467",
+      "get_static_object_field_call": "0x180044222",
+      "class_helper_call": "0x180044204",
+      "class_helper": "0x180046713",
+      "owner": "me/octo/client/lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl",
+      "field_name": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "Lme/octo/client/lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl;",
+      "original_jar_field_declaration": "public static me.octo.client.lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;",
+      "managed_source_declarations_in_outer_file": [
+        "26: public static lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    },
+    {
+      "get_static_field_id_call": "0x18004560a",
+      "field_id_cache_global": "0x180170f80",
+      "cache_miss_branch_target": "0x18004558b",
+      "get_static_object_field_call": "0x18004429c",
+      "class_helper_call": "0x18004427e",
+      "class_helper": "0x1800467bc",
+      "owner": "me/octo/client/IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII",
+      "field_name": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "Lme/octo/client/IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII;",
+      "original_jar_field_declaration": "public static me.octo.client.IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;",
+      "managed_source_declarations_in_outer_file": [
+        "25: public static IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    },
+    {
+      "get_static_field_id_call": "0x18004572e",
+      "field_id_cache_global": "0x180170f98",
+      "cache_miss_branch_target": "0x1800456af",
+      "get_static_object_field_call": "0x180044316",
+      "class_helper_call": "0x1800442f8",
+      "class_helper": "0x180046865",
+      "owner": "me/octo/client/lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll",
+      "field_name": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+      "descriptor": "Lme/octo/client/lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll;",
+      "original_jar_field_declaration": "public static me.octo.client.lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;",
+      "managed_source_declarations_in_outer_file": [
+        "30: public static lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;"
+      ],
+      "source_file": "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll.java",
+      "source_file_field_descriptor_match": true,
+      "original_jar_field_descriptor_match": true,
+      "R1873_independent_cross_check": false
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "all eight GetStaticFieldID caches link through their miss branch to one GetStaticObjectField read; owner, name, descriptor, resolver class, managed source declaration and original JAR field agree",
+    "build_regression": "not run; Java sources were not changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Static field identities and lookup/read links are resolved. This does not establish which returned field values are consumed later, full branch reachability, or overall event equivalence."
+}

@@ -1,0 +1,56 @@
+{
+  "slice_id": "R1874-polinex-exception-identity-helper",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_baseline_commit": "243bbcfd926fe6404c6e0e82f6ad240ddd4379c7",
+  "method": {
+    "owner": "me.octo.client.Polinex",
+    "name": "a",
+    "descriptor": "(Ljava/lang/Exception;)Ljava/lang/Exception;",
+    "access_flags_original": "private static native",
+    "native_rva": 302198,
+    "native_va": "0x180049c76",
+    "original_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "native_pe_sha256": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B"
+  },
+  "source_files_sha256": {
+    "before": "0E7B366BADBC6167CD1DCFF9CA22B6454043FBF81E6A148400B27F6F6B781D37",
+    "after": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "compiled_class_sha256": "915F76684D89C29B3102F540FD99FE3D540A22502EA75CD1C0490D7003842567",
+  "static_reconstruction": {
+    "native_instructions": "push rbp; mov rbp,rsp; mov rax,r8; pop rbp; ret",
+    "semantics": "Windows x64 JNI static method parameter 1 is in R8; returns the same Exception reference, including null; no other side effect",
+    "java_body": "return v0;",
+    "original_javap_assertion": true,
+    "compiled_javap_assertion": true
+  },
+  "build": {
+    "command": ".\\gradlew.bat compileJava --rerun-tasks",
+    "java_home": "<JDK_25>",
+    "started_utc": "2026-11-15T17:26:33.9030618Z",
+    "ended_utc": "2026-11-15T17:27:06.8007203Z",
+    "exit_code": 0,
+    "output": "R1874-compile.log",
+    "initial_java17_attempt": {
+      "command": ".\\gradlew.bat compileJava",
+      "exit_code": 1,
+      "reason": "Loom requires Java 25; initial daemon used Java 17 before compileJava ran"
+    }
+  },
+  "commands": {
+    "objdump_exit": 0,
+    "original_javap_exit": 0,
+    "compiled_javap_exit": 0
+  },
+  "probe_status": "static-only; no game, keyboard, mouse, or server interaction",
+  "acceptance": {
+    "static_reconstruction": "passed against original PE and JVM descriptor",
+    "build_regression": "full compileJava re-run passed",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; helper has no identified normal user entry in this slice",
+    "vanilla_behavior_comparison": "not applicable to this identity helper",
+    "real_server": "not run"
+  },
+  "remaining": "This helper was not proven to be called from Polinex.a(E_CLIENT_INITIALIZED); keep it separate from that event call graph."
+}

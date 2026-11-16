@@ -1,0 +1,22 @@
+owner: me.octo.client.lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+  public static void b(int[]);
+    descriptor: ([I)V
+    Code:
+         0: aload_0
+         1: putstatic     #115                // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I
+         4: return
+
+  public static int[] b();
+    descriptor: ()[I
+    Code:
+         0: getstatic     #115                // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I
+         3: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: iconst_4
+         1: anewarray     #57                 // class java/lang/String
+         4: astore        5
+         6: iconst_0
+         7: istore_3

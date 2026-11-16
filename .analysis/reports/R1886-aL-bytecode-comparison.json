@@ -1,0 +1,108 @@
+{
+  "slice_id": "R1886-aL-direct-collection-iterator-call-review",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java": "275CBD382C850A59A56C3933847C9EE7F1A7A746133F243A33D0EDBEB9C1BC7B"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T20:56:17.060856+00:00",
+  "ended_utc": "2026-11-15T20:56:18.006172+00:00",
+  "commands": {
+    "original": [
+      "javap",
+      "-classpath",
+      "<REFERENCE_ROOT>\\.analysis\\cracked.jar",
+      "-p",
+      "-c",
+      "-s",
+      "me.octo.client.lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll"
+    ],
+    "compiled": [
+      "javap",
+      "-classpath",
+      "<WORKTREE_ROOT>\\polinex-src\\build\\classes\\java\\main",
+      "-p",
+      "-c",
+      "-s",
+      "me.octo.client.lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll"
+    ]
+  },
+  "exit_code": 0,
+  "inputs_sha256": {
+    "<REFERENCE_ROOT>\\.analysis\\cracked.jar": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java": "275CBD382C850A59A56C3933847C9EE7F1A7A746133F243A33D0EDBEB9C1BC7B",
+    ".analysis\\reports\\R1880-client-initialized-method-id-use-map.json": "59924FA4893EEB6D28FD1E438A60267168BBA6428DFF1449A8350FB971964262",
+    ".analysis\\reports\\R1882-client-initialized-static-field-lookups.json": "82812142BD786C93EBA96F74C553FB1FF081387A66AF01F7AF70C1F740F21032"
+  },
+  "compiled_class": {
+    "path": "polinex-src\\build\\classes\\java\\main\\me\\octo\\client\\lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.class",
+    "sha256": "8734C08E2BD7654EB42A1FDA6C18C3A17D61ACE7E1ADD640AD63163426439853"
+  },
+  "method": {
+    "owner": "me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll",
+    "name": "aL",
+    "descriptor": "()V"
+  },
+  "original_method_bytecode_file": ".analysis\\reports\\R1886-original-aL.javap.txt",
+  "compiled_method_bytecode_file": ".analysis\\reports\\R1886-compiled-aL.javap.txt",
+  "original_invoke_instructions": [
+    "0: invokestatic  #120                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I",
+    "4: invokespecial #462                // Method aJ:()Ljava/util/List;",
+    "36: invokeinterface #437,  1          // InterfaceMethod java/util/Collection.isEmpty:()Z",
+    "49: invokeinterface #151,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;",
+    "58: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z",
+    "68: invokeinterface #161,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;",
+    "97: invokestatic  #476                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V",
+    "105: invokeinterface #481,  1          // InterfaceMethod me/octo/client/mixin/accessors/KeyMappingAccessor.getKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;",
+    "113: invokestatic  #428                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z",
+    "133: invokeinterface #488,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;",
+    "140: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z",
+    "149: invokeinterface #161,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;",
+    "162: invokevirtual #378                // Method net/minecraft/client/KeyMapping.setDown:(Z)V",
+    "169: invokevirtual #491                // Method net/minecraft/client/KeyMapping.getDefaultKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;",
+    "172: invokevirtual #495                // Method net/minecraft/client/KeyMapping.setKey:(Lcom/mojang/blaze3d/platform/InputConstants$Key;)V",
+    "183: invokestatic  #498                // Method net/minecraft/client/KeyMapping.resetMapping:()V",
+    "187: invokevirtual #315                // Method aI:()V",
+    "191: invokevirtual #109                // Method ap:()Lnet/minecraft/client/Minecraft;",
+    "197: invokevirtual #501                // Method net/minecraft/client/Options.save:()V"
+  ],
+  "compiled_invoke_instructions": [
+    "4: invokestatic  #50                 // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I",
+    "10: invokevirtual #428                // Method aJ:()Ljava/util/List;",
+    "58: invokevirtual #404                // Method me/octo/client/PXDyn.isEmpty:([Ljava/lang/Object;)Ljava/lang/Object;",
+    "64: invokevirtual #319                // Method java/lang/Boolean.booleanValue:()Z",
+    "87: invokevirtual #455                // Method me/octo/client/PXDyn.iterator:([Ljava/lang/Object;)Ljava/lang/Object;",
+    "97: invokeinterface #72,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z",
+    "113: invokeinterface #78,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;",
+    "145: invokestatic  #443                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V",
+    "153: invokeinterface #448,  1          // InterfaceMethod me/octo/client/mixin/accessors/KeyMappingAccessor.getKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;",
+    "161: invokestatic  #382                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z",
+    "191: invokeinterface #457,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;",
+    "200: invokeinterface #72,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z",
+    "210: invokeinterface #78,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;",
+    "223: invokevirtual #332                // Method net/minecraft/client/KeyMapping.setDown:(Z)V",
+    "230: invokevirtual #460                // Method net/minecraft/client/KeyMapping.getDefaultKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;",
+    "233: invokevirtual #463                // Method net/minecraft/client/KeyMapping.setKey:(Lcom/mojang/blaze3d/platform/InputConstants$Key;)V",
+    "250: invokestatic  #467                // Method net/minecraft/client/KeyMapping.resetMapping:()V",
+    "254: invokevirtual #270                // Method aI:()V",
+    "258: invokevirtual #40                 // Method ap:()Lnet/minecraft/client/Minecraft;",
+    "264: invokevirtual #470                // Method net/minecraft/client/Options.save:()V"
+  ],
+  "findings": {
+    "original_collection_empty": "invokeinterface java/util/Collection.isEmpty:()Z",
+    "original_iterable_iterator": "invokeinterface java/lang/Iterable.iterator:()Ljava/util/Iterator;",
+    "compiled_contains_pxdyn_isEmpty": true,
+    "compiled_contains_pxdyn_iterator": true,
+    "compiled_contains_direct_collection_empty": false,
+    "compiled_contains_direct_iterable_iterator": false,
+    "source_call_sites": "The direct Collection/Iterable calls must replace the two PXDyn wrappers while preserving all surrounding branches and side effects."
+  },
+  "acceptance": {
+    "static_reconstruction": "complete original aL()V and current compiled aL()V bytecode captured; exact call mismatch identified",
+    "build_regression": "not run before source repair",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "This evidence covers only aL()V's Collection/Iterable call sites. It does not assert full behavioral equivalence until after repair and compiled-bytecode review."
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "openpolinex-slice-evidence/v1",
+  "slice_id": "R1892-clipping-mode-setter-restoration",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "probe_status": "static bytecode reconstruction and full-tree compile only; no client, input, world, or server interaction",
+  "started_utc": "2026-11-15T21:45:31.0583754+00:00",
+  "ended_utc": "2026-11-15T21:46:15.2461469+00:00",
+  "inputs": {
+    "original_jar": "D:/Work/OpenPoli/.analysis/cracked.jar",
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_method_dump": ".analysis/reports/R1889-original-outer-class.javap.txt",
+    "original_method_dump_sha256": "c167ac1bf7e9b9740455c04dd2c0f3ce27ea4377176ee6216a6d24371fa8ae57",
+    "enum_mapping_dump": ".analysis/reports/R1891-original-enum-map.javap.txt",
+    "enum_mapping_dump_sha256": "d0257f0d6eb0b52061a1d529751c26cedd175ca47a2c2ca56d42f16362cf36f2",
+    "sentinel_nested_class_dump_sha256": "04a4aa7e7490240112e0eceac6868a9bb1d263d548c2e92bf68fb3cf630b3685"
+  },
+  "method": {
+    "owner": "me.octo.client.lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll",
+    "name": "a",
+    "descriptor": "(Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;Z)V",
+    "source": "polinex-src/src/main/java/me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll.java",
+    "source_sha256": "13791608b3470bce7da76374baee0e1dfd6a13fa35f88d6343957b3ff57708e3",
+    "compiled_class": "polinex-src/build/classes/java/main/me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll.class",
+    "compiled_class_sha256": "35136c75508a03cfd0edf06952ec0fe1aab2cfdefd4861eaf53956a0e8c13496",
+    "original_extracted_method": ".analysis/reports/R1892-original-mode-setter.javap.txt",
+    "original_method_sha256": "abd4732c8e03af95eff452256ff82bf80b932bbced3a9f57e1c915efbbbc11b5",
+    "compiled_method": ".analysis/reports/R1892-compiled-mode-setter.javap.txt",
+    "compiled_method_sha256": "8728051870e1f2627afafd0d3ef5f31fcfc625016ba94f779ddb9783cecbbe19"
+  },
+  "reconstruction": {
+    "enum_mapping": [
+      {
+        "enum_constant": "IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl",
+        "table_value": 1,
+        "service_index": 0,
+        "log": "ask before upload"
+      },
+      {
+        "enum_constant": "lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII",
+        "table_value": 2,
+        "service_index": 1,
+        "log": "local only"
+      },
+      {
+        "enum_constant": "IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIllIIll",
+        "table_value": 3,
+        "service_index": 2,
+        "log": "local and automatic upload"
+      }
+    ],
+    "restored_effect_order": [
+      "initialize/read sentinel via nested b()[I before the mode null check",
+      "map enum to service index 0/1/2 and call mode service c(I)V",
+      "write the instance mode-derived boolean",
+      "call the singleton notification/update method",
+      "when requested, log the enum-specific message using the original mapping",
+      "if the clipping utility array is null, write new int[5] to the sentinel setter"
+    ],
+    "sentinel": {
+      "class_initializer": "passes null to b([I)V; null is not a global runtime invariant",
+      "conditional_writer": "a(Enum,boolean) calls utility f(); when null it passes new int[5] to the same setter",
+      "consumer": "aL()V retains both null and non-null branches"
+    },
+    "compiled_invocation_sequence": [
+      "0: invokestatic  #122                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I",
+      "8: invokestatic  #612                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V",
+      "51: invokespecial #837                // Method kotlin/NoWhenBranchMatchedException.\"<init>\":()V",
+      "62: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;",
+      "69: invokestatic  #27                 // Method me/octo/client/IllIllllIIIIIIIIIllllIIlIlIlIlIIIIlIIllIlIlIlIIIllllIlIIIIIlIIlIIIlIIlIIlIlIllllIlIll.e:()Lme/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII;",
+      "73: invokevirtual #838                // Method me/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII.c:(I)V",
+      "83: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;",
+      "109: invokevirtual #722                // Method me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.e:()V",
+      "119: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;",
+      "179: invokespecial #837                // Method kotlin/NoWhenBranchMatchedException.\"<init>\":()V",
+      "190: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;",
+      "199: invokestatic  #363                // Method me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.c:(Ljava/lang/String;)V",
+      "202: invokestatic  #846                // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;",
+      "211: invokestatic  #851                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:([I)V",
+      "221: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;"
+    ],
+    "assertions": {
+      "original_and_compiled_descriptors_equal": true,
+      "compiled_has_ordered_original_side_effect_calls": true,
+      "compiled_has_enum_default_exception": true,
+      "compiled_has_exception_identity_adapter": true,
+      "compiled_has_five_item_sentinel_write": true,
+      "original_static_init_has_null_sentinel_setter_path": true,
+      "original_conditional_writer_has_five_item_array": true
+    }
+  },
+  "build": {
+    "command": ".\\polinex-src\\gradlew.bat -p .\\polinex-src compileJava --no-daemon --console=plain --rerun-tasks",
+    "java": "Temurin 25.0.4.1+1",
+    "java_home": "<JDK_25>",
+    "exit_code": 0,
+    "log": ".analysis/reports/R1892-compile.log",
+    "log_sha256": "39ca31ac5cc58a3efb0dabde2ce279f86b113b8dfd93404d19e73f297f1938a7"
+  },
+  "acceptance": {
+    "static_reconstruction": true,
+    "full_tree_compile": true,
+    "normal_user_path": "not run; Polinex.a(E_CLIENT_INITIALIZED) remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": [
+    "The Java compiler emits five NoWhenBranchMatchedException protected ranges versus six in the original; the identity adapter and relevant branches are retained, but handler ranges are not instruction-identical.",
+    "This closes one Clipping mode setter method, not all Clipping behavior or configuration persistence."
+  ]
+}

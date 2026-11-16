@@ -1,0 +1,92 @@
+{
+  "slice_id": "R1902-client-init-state8-state5-control-flow",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "worktree": "<WORKTREE_ROOT>",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "source_files_sha256": {
+    "polinex-src/src/main/java/me/octo/client/Polinex.java": "070e5d02b6a3dc9566778d08f49f2bb26cb02d1e8110d9817d3b70357126f6c1"
+  },
+  "tool_sha256": "9f931b6984a060256987bc885e316cd02c0039acc8c59578a8143d79693ec2c3",
+  "reference_artifacts": {
+    "cracked_jar_sha256": "D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26",
+    "native_pe_sha256": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T23:49:06.259939+00:00",
+  "command": "python -B .analysis/tools/verify_r1902_client_init_state8_state5.py",
+  "inputs_sha256": {
+    "R1872-polininex-client-initialized.objdump.txt": "337984dabcf91cc65de31b305175331bc35eda1a6d6a68b1f101165dc2579d11",
+    "R1874-polinex-exception-identity-helper.json": "85236d590800331384b66165800c69822bc265bd972d58a48a5148d827188bb3",
+    "R1875-client-init-string-operands.json": "2c4931d06d142bed5a1714d0d397be23d627f3757ba5f6b23fb0a3f72bce5f3c",
+    "R1880-client-initialized-method-id-use-map.json": "59924fa4893eeb6d28fd1e438a60267168bba6428dff1449a8350fb971964262",
+    "R1881-client-initialized-all-jni-calls.json": "998d6f08493ca2688ad9e7c02f9428f638958635f2e276f620655a4669f2ec3d",
+    "R1883-client-initialized-dispatch-map.json": "bad62df193fc42be462555302096e14ba2d1ce3201370ca96028f516e0351757",
+    "R1885-client-initialized-dispatch-path-correction.json": "5980f1c3e3f33ff618b708d537b629951eda7d04de744a256e83be8134c0a52b",
+    "R1893-client-initialized-state17-state21-control-flow.json": "2d19bf8e25ede8b42fefe0fcda2cb62bf7f4e7cac08cd14c6fac4a125980f48d"
+  },
+  "assertions": {
+    "state8_equal_and_unequal_routes": true,
+    "false_thread_state8_null_payload": true,
+    "state5_runtimeexception_class_and_jni_calls": true,
+    "decoded_render_thread_message": true,
+    "runtimeexception_constructor_descriptor": true,
+    "exception_relay_identity_and_state_minus9_link": true
+  },
+  "key_observations": [
+    {
+      "entry_state": 8,
+      "normal_false_render_thread_predecessor": {
+        "exception_check": "clear at 0x180043e42",
+        "boolean_source": "RenderSystem.isOnRenderThread()Z result in EBX/BL",
+        "r12_effect": "dispatcher initialized R12 to zero; the false BL value is merged into the low bits, preserving zero",
+        "state8_entry": "0x180043ea2"
+      },
+      "comparison": "[global+0x8edb] == 0x6cce96cb",
+      "equal_route": {
+        "encoded_state": 21,
+        "effective_target_after_dispatch_correction": "0x180043ecb",
+        "handler": "Polinex.a(Exception):Exception",
+        "handler_result_on_null_input": "null, then state 8 per R1893",
+        "normal_false_thread_result_enters_with_null_r12": true,
+        "repeat_condition": "possible if the guard remains equal; reachability/value and external writers are not established here"
+      },
+      "unequal_route": {
+        "encoded_state": 5,
+        "target": "0x180044adc"
+      },
+      "guard_value_origin": "unresolved; no writer/reachability claim in this slice"
+    },
+    {
+      "entry_state": 5,
+      "target": "0x180044adc",
+      "class": "java/lang/RuntimeException",
+      "normal_path": [
+        "AllocObject(RuntimeException)",
+        "NewString(decoded message, 42 UTF-16 code units)",
+        "RuntimeException.<init>(String)",
+        "Throw(allocated exception)",
+        "ExceptionOccurred + IsInstanceOf(RuntimeException)",
+        "ExceptionClear then encoded state -9"
+      ],
+      "decoded_message": "Cannot initialize client on render thread.",
+      "exceptional_path": "JNI exceptions are class-checked; non-RuntimeException remains pending to return, RuntimeException is cleared and routed through -9"
+    },
+    {
+      "entry_state": -9,
+      "target": "0x1800460a2",
+      "helper": "Polinex.a(Exception):Exception",
+      "helper_evidence": "R1874 proves the native implementation returns the same reference; R1893 links the event call"
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "passed for state 8 branch targets and state 5 construction/throw/exception-cleanup sequence",
+    "build_regression": "not run; analysis-only slice",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run; E_CLIENT_INITIALIZED remains native",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "The source and normal reachability of [global+0x8edb] remain unresolved. This record does not prove the guard's runtime value or that either state-8 branch is reachable in normal startup.",
+  "ended_utc": "2026-11-15T23:49:06.397625+00:00",
+  "exit_code": 0
+}

@@ -1,0 +1,112 @@
+  public final void a(me.octo.client.lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI, boolean);
+    descriptor: (Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;Z)V
+    Code:
+         0: invokestatic  #122                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I
+         3: pop
+         4: aload_1
+         5: ldc_w         #835                // String mode
+         8: invokestatic  #612                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        11: aload_1
+        12: getstatic     #712                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+        15: if_acmpne     23
+        18: iconst_0
+        19: istore_3
+        20: goto          55
+        23: aload_1
+        24: getstatic     #818                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+        27: if_acmpne     35
+        30: iconst_1
+        31: istore_3
+        32: goto          55
+        35: aload_1
+        36: getstatic     #822                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+        39: if_acmpne     47
+        42: iconst_2
+        43: istore_3
+        44: goto          55
+        47: new           #828                // class kotlin/NoWhenBranchMatchedException
+        50: dup
+        51: invokespecial #837                // Method kotlin/NoWhenBranchMatchedException."<init>":()V
+        54: athrow
+        55: goto          69
+        58: astore        4
+        60: aload         4
+        62: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        65: checkcast     #576                // class java/lang/RuntimeException
+        68: athrow
+        69: invokestatic  #27                 // Method me/octo/client/IllIllllIIIIIIIIIllllIIlIlIlIlIIIIlIIllIlIlIlIIIllllIlIIIIIlIIlIIIlIIlIIlIlIllllIlIll.e:()Lme/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII;
+        72: iload_3
+        73: invokevirtual #838                // Method me/octo/client/lIIlIlIIlIIIlIlIlIIlllIllIllllIlllIlIIIllIlIlIllIlIIIIlllIlIlIlIIlIlllIIIIIllIllllIII.c:(I)V
+        76: goto          90
+        79: astore        4
+        81: aload         4
+        83: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+        86: checkcast     #576                // class java/lang/RuntimeException
+        89: athrow
+        90: aload_0
+        91: aload_1
+        92: getstatic     #712                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+        95: if_acmpeq     102
+        98: iconst_1
+        99: goto          103
+       102: iconst_0
+       103: putfield      #705                // Field lIlllllIIIIlllllIlIIIIIIIllllIlIllIllIIlIIIIIIIIIlIlIIIlIIlIlIIIlIlllIllIIllIllIllllI:Z
+       106: getstatic     #717                // Field me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl;
+       109: invokevirtual #722                // Method me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.e:()V
+       112: goto          126
+       115: astore        4
+       117: aload         4
+       119: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       122: checkcast     #576                // class java/lang/RuntimeException
+       125: athrow
+       126: iload_2
+       127: ifeq          202
+       130: aload_1
+       131: getstatic     #712                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+       134: if_acmpne     145
+       137: ldc_w         #840                // String ��eClipping: Ban clips will be saved locally, and you\'ll choose on the ban disconnect screen whether to also upload them.
+       140: astore        4
+       142: goto          183
+       145: aload_1
+       146: getstatic     #818                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+       149: if_acmpne     160
+       152: ldc_w         #842                // String ��aClipping: Ban clips will be saved locally only.
+       155: astore        4
+       157: goto          183
+       160: aload_1
+       161: getstatic     #822                // Field me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Lme/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+       164: if_acmpne     175
+       167: ldc_w         #844                // String ��aClipping: Ban clips will be saved locally and also uploaded automatically.
+       170: astore        4
+       172: goto          183
+       175: new           #828                // class kotlin/NoWhenBranchMatchedException
+       178: dup
+       179: invokespecial #837                // Method kotlin/NoWhenBranchMatchedException."<init>":()V
+       182: athrow
+       183: goto          197
+       186: astore        5
+       188: aload         5
+       190: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       193: checkcast     #576                // class java/lang/RuntimeException
+       196: athrow
+       197: aload         4
+       199: invokestatic  #363                // Method me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.c:(Ljava/lang/String;)V
+       202: invokestatic  #846                // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+       205: ifnonnull     214
+       208: iconst_5
+       209: newarray       int
+       211: invokestatic  #851                // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:([I)V
+       214: goto          228
+       217: astore        4
+       219: aload         4
+       221: invokestatic  #573                // Method a:(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+       224: checkcast     #576                // class java/lang/RuntimeException
+       227: athrow
+       228: return
+      Exception table:
+         from    to  target type
+            11    55    58   Class kotlin/NoWhenBranchMatchedException
+            69    76    79   Class kotlin/NoWhenBranchMatchedException
+            90   112   115   Class kotlin/NoWhenBranchMatchedException
+           130   183   186   Class kotlin/NoWhenBranchMatchedException
+           202   214   217   Class kotlin/NoWhenBranchMatchedException

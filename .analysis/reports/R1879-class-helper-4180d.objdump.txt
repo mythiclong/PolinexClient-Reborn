@@ -1,0 +1,55 @@
+
+<REFERENCE_ROOT>\.analysis\artifacts\jnic-windows-x64.static-pe.bin:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+000000018004180d <.text+0x4080d>:
+   18004180d:	55                   	push   %rbp
+   18004180e:	56                   	push   %rsi
+   18004180f:	57                   	push   %rdi
+   180041810:	48 83 ec 40          	sub    $0x40,%rsp
+   180041814:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+   180041819:	48 8b 15 60 f5 12 00 	mov    0x12f560(%rip),%rdx        # 0x180170d80
+   180041820:	48 85 d2             	test   %rdx,%rdx
+   180041823:	74 0b                	je     0x180041830
+   180041825:	48 89 d0             	mov    %rdx,%rax
+   180041828:	48 83 c4 40          	add    $0x40,%rsp
+   18004182c:	5f                   	pop    %rdi
+   18004182d:	5e                   	pop    %rsi
+   18004182e:	5d                   	pop    %rbp
+   18004182f:	c3                   	retq   
+   180041830:	48 89 ce             	mov    %rcx,%rsi
+   180041833:	48 8b 01             	mov    (%rcx),%rax
+   180041836:	48 8b 40 30          	mov    0x30(%rax),%rax
+   18004183a:	0f 10 05 58 c5 11 00 	movups 0x11c558(%rip),%xmm0        # 0x18015dd99
+   180041841:	0f 29 45 e0          	movaps %xmm0,-0x20(%rbp)
+   180041845:	48 b9 b4 97 e6 05 7c 	movabs $0x5acb7c05e697b4,%rcx
+   18004184c:	cb 5a 00 
+   18004184f:	48 89 4d ef          	mov    %rcx,-0x11(%rbp)
+   180041853:	48 8b 0d c6 e7 12 00 	mov    0x12e7c6(%rip),%rcx        # 0x180170020
+   18004185a:	31 d2                	xor    %edx,%edx
+   18004185c:	44 8a 84 11 b7 a1 03 	mov    0x3a1b7(%rcx,%rdx,1),%r8b
+   180041863:	00 
+   180041864:	44 30 44 15 e0       	xor    %r8b,-0x20(%rbp,%rdx,1)
+   180041869:	48 ff c2             	inc    %rdx
+   18004186c:	48 83 fa 16          	cmp    $0x16,%rdx
+   180041870:	75 ea                	jne    0x18004185c
+   180041872:	48 8d 55 e0          	lea    -0x20(%rbp),%rdx
+   180041876:	48 89 f1             	mov    %rsi,%rcx
+   180041879:	ff d0                	callq  *%rax
+   18004187b:	4c 8b 06             	mov    (%rsi),%r8
+   18004187e:	48 89 f1             	mov    %rsi,%rcx
+   180041881:	48 89 c2             	mov    %rax,%rdx
+   180041884:	41 ff 90 a8 00 00 00 	callq  *0xa8(%r8)
+   18004188b:	48 89 c2             	mov    %rax,%rdx
+   18004188e:	31 c0                	xor    %eax,%eax
+   180041890:	f0 48 0f b1 15 e7 f4 	lock cmpxchg %rdx,0x12f4e7(%rip)        # 0x180170d80
+   180041897:	12 00 
+   180041899:	74 8a                	je     0x180041825
+   18004189b:	48 89 c7             	mov    %rax,%rdi
+   18004189e:	48 8b 06             	mov    (%rsi),%rax
+   1800418a1:	48 89 f1             	mov    %rsi,%rcx
+   1800418a4:	ff 90 b0 00 00 00    	callq  *0xb0(%rax)
+   1800418aa:	48 89 fa             	mov    %rdi,%rdx
+   1800418ad:	e9 73 ff ff ff       	jmpq   0x180041825

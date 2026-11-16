@@ -1,0 +1,679 @@
+{
+  "slice_id": "R1880-client-initialized-method-id-use-map",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:24:41.122463+00:00",
+  "ended_utc": "2026-11-15T19:24:41.243748+00:00",
+  "command": ".analysis/tools/map_client_initialized_method_uses.py --disassembly .analysis/reports/R1876-client-initialized-helper-range.objdump.txt --method-ids .analysis/reports/R1878-client-initialized-method-id-operands.json --copy-xor-helpers .analysis/reports/R1877-client-initialized-class-helper-map.json --inline-helpers .analysis/reports/R1879-client-initialized-inline-resolvers.json --jni-header <JDK_25>\\include\\jni.h --source-file polinex-src/src/main/java/me/octo/client/Polinex.java",
+  "exit_code": 0,
+  "inputs": {
+    ".analysis\\reports\\R1876-client-initialized-helper-range.objdump.txt": "B9E6A3AC13DDACC8BA70466B43768AD9A547D359B789438A48E4E9EB91435DA5",
+    ".analysis\\reports\\R1878-client-initialized-method-id-operands.json": "4CEFDC7C543222687CBEA1553E9CCEFC8C4EB2CE892B49CF987F4801B3113E82",
+    ".analysis\\reports\\R1877-client-initialized-class-helper-map.json": "F1D6CCB5B32859EFB6963A9ED57842EF6FC3C1FAE3E6DC437B62C723C7D57A37",
+    ".analysis\\reports\\R1879-client-initialized-inline-resolvers.json": "93CCB94BD756441C8B7D767B102AC9B04EAFD54A4B4678F1F4FAFB7D9F4CA499",
+    "<JDK_25>\\include\\jni.h": "1E03BD83D1662AC00647F7A06C11D32333767EE537803EC1D153E89888414520"
+  },
+  "jni_header": "JDK 25 JNINativeInterface_; 64-bit pointer table offsets checked against existing R1873 anchors",
+  "method_id_use_count": 25,
+  "invocation_counts": {
+    "CallNonvirtualVoidMethod": 16,
+    "CallObjectMethod": 4,
+    "CallStaticBooleanMethod": 1,
+    "CallStaticObjectMethod": 1,
+    "CallStaticVoidMethod": 1,
+    "CallVoidMethod": 2
+  },
+  "uses": [
+    {
+      "lookup_block": "0x180044f21",
+      "lookup_kind": "GetStaticMethodID",
+      "method_name": "isOnRenderThread",
+      "descriptor": "()Z",
+      "method_id_cache_global": "0x180170ed8",
+      "event_cache_read": "0x180043e19",
+      "jni_invocation": {
+        "call_site": "0x180043e2f",
+        "function_pointer_load": "0x180043e07",
+        "jni_table_offset": "0x3a8",
+        "jni_function": "CallStaticBooleanMethod",
+        "indirect_register": "%r13"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180043e11",
+        "helper": "0x1800461cd",
+        "class_name": "com/mojang/blaze3d/systems/RenderSystem",
+        "cache": "0x180170ed0"
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x180045030",
+      "lookup_kind": "GetStaticMethodID",
+      "method_name": "c",
+      "descriptor": "()[I",
+      "method_id_cache_global": "0x180170ec8",
+      "event_cache_read": "0x180043d1d",
+      "jni_invocation": {
+        "call_site": "0x180043d33",
+        "function_pointer_load": "0x180043d0b",
+        "jni_table_offset": "0x390",
+        "jni_function": "CallStaticObjectMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180043d15",
+        "helper": "0x180046124",
+        "class_name": "me/octo/client/Polinex$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x18004509f",
+      "lookup_kind": "GetMethodID",
+      "method_name": "aL",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170f08",
+      "event_cache_read": "0x180043fb1",
+      "jni_invocation": {
+        "call_site": "0x180043fc7",
+        "function_pointer_load": "0x180043faa",
+        "jni_table_offset": "0x1e8",
+        "jni_function": "CallVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180043f70",
+        "helper": "0x1800463c2",
+        "class_name": "me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x1800452de",
+      "lookup_kind": "GetMethodID",
+      "method_name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "method_id_cache_global": "0x180170f40",
+      "event_cache_read": "0x180044151",
+      "jni_invocation": {
+        "call_site": "0x180044167",
+        "function_pointer_load": "0x18004414a",
+        "jni_table_offset": "0x110",
+        "jni_function": "CallObjectMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044110",
+        "helper": "0x1800465c1",
+        "class_name": "me/octo/client/lIIlIlllIllIIIllIIIIIIIlIIIlIlIIlIIlllIIIlIIIllIllIlIIlllIIIIIIIIlIllllIlIIllIIIlllII",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x180045402",
+      "lookup_kind": "GetMethodID",
+      "method_name": "a",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170f58",
+      "event_cache_read": "0x1800441cb",
+      "jni_invocation": {
+        "call_site": "0x1800441e1",
+        "function_pointer_load": "0x1800441c4",
+        "jni_table_offset": "0x1e8",
+        "jni_function": "CallVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x18004418a",
+        "helper": "0x18004666a",
+        "class_name": "me/octo/client/IIIlIIIIlIlllllllllIlIIllIIIIIIIIIIIIlllIIIlIllIIIlIllIllIIIllIIIIlllIlIlIIllIIIIlIIl",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x1800454f7",
+      "lookup_kind": "GetMethodID",
+      "method_name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "method_id_cache_global": "0x180170f70",
+      "event_cache_read": "0x180044245",
+      "jni_invocation": {
+        "call_site": "0x18004425b",
+        "function_pointer_load": "0x18004423e",
+        "jni_table_offset": "0x110",
+        "jni_function": "CallObjectMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044204",
+        "helper": "0x180046713",
+        "class_name": "me/octo/client/lIlIIIllllIllllllllIlIIIllIIIIIIIIlIllllllIIllIlllIIIIIlIllIIIIIIlllIlIllIIIIlIIlllIl",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x18004561b",
+      "lookup_kind": "GetMethodID",
+      "method_name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "method_id_cache_global": "0x180170f88",
+      "event_cache_read": "0x1800442bf",
+      "jni_invocation": {
+        "call_site": "0x1800442d5",
+        "function_pointer_load": "0x1800442b8",
+        "jni_table_offset": "0x110",
+        "jni_function": "CallObjectMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x18004427e",
+        "helper": "0x1800467bc",
+        "class_name": "me/octo/client/IlIIIIIlllIIIIIIIlIlIIIIIIIIIlIllIllllllIlIlIlIllllllIlIIlIIIIlIllIIllIllIIIIlIIIlIII",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x18004573f",
+      "lookup_kind": "GetMethodID",
+      "method_name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "method_id_cache_global": "0x180170fa0",
+      "event_cache_read": "0x180044339",
+      "jni_invocation": {
+        "call_site": "0x18004434f",
+        "function_pointer_load": "0x180044332",
+        "jni_table_offset": "0x110",
+        "jni_function": "CallObjectMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800442f8",
+        "helper": "0x180046865",
+        "class_name": "me/octo/client/lIlIlIllIllIllIllIIIIIlIlllIllIIIIlIlIIlllllIlIllllIIIllllIIIllIlIIlIIlllllIIllIIllll",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x1800457d3",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170fb0",
+      "event_cache_read": "0x1800443a3",
+      "jni_invocation": {
+        "call_site": "0x1800443bc",
+        "function_pointer_load": "0x18004439c",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044372",
+        "helper": "0x18004690e",
+        "class_name": "me/octo/client/lIlIlIlllIIIllIIllIllIIIIlIllIIlllllIlIIIIlIIlIlIllIIIlllIlllIIlIlIIIlIIIllllIIIIlllI",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x180044380",
+        "function_pointer_load": "0x180044368",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045857",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170fc0",
+      "event_cache_read": "0x180044410",
+      "jni_invocation": {
+        "call_site": "0x180044429",
+        "function_pointer_load": "0x180044409",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800443df",
+        "helper": "0x1800469b7",
+        "class_name": "me/octo/client/IIIlIllIIlIIlllIllIlIlIllIlIIIIIIlIlllllllIllIlIIIIllIlIlIIlIIIIIlIIIllIllllIIIIlIIII",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x1800443ed",
+        "function_pointer_load": "0x1800443d5",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x1800458db",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170fd0",
+      "event_cache_read": "0x18004447d",
+      "jni_invocation": {
+        "call_site": "0x180044496",
+        "function_pointer_load": "0x180044476",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x18004444c",
+        "helper": "0x180046a60",
+        "class_name": "me/octo/client/llIllllIlIlIlIlIIlIlIllIlllIlIlIIIllllllllIIIlllIlIlIllIIlllllIlllllIIIIIlIIIIIlllIll",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x18004445a",
+        "function_pointer_load": "0x180044442",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x18004595f",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170fe0",
+      "event_cache_read": "0x1800444ea",
+      "jni_invocation": {
+        "call_site": "0x180044503",
+        "function_pointer_load": "0x1800444e3",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800444b9",
+        "helper": "0x180046b09",
+        "class_name": "me/octo/client/llIlIIIllIIlllIIlIIIIIlllllllIIlIllIIllIlIlIlIlIlIIIllIllIIllllIlIlIlIllIIIIIlIlIIIll",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x1800444c7",
+        "function_pointer_load": "0x1800444af",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x1800459e3",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180170ff0",
+      "event_cache_read": "0x180044557",
+      "jni_invocation": {
+        "call_site": "0x180044570",
+        "function_pointer_load": "0x180044550",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044526",
+        "helper": "0x180046bb2",
+        "class_name": "me/octo/client/lIlIIIIIIIIIIlIllIIIllllllIIIIIIIIIIlIllIIlllllIlllIlIIIlIlllIllIIIIllIllIllllllIllll",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x180044534",
+        "function_pointer_load": "0x18004451c",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045a67",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171000",
+      "event_cache_read": "0x1800445c4",
+      "jni_invocation": {
+        "call_site": "0x1800445dd",
+        "function_pointer_load": "0x1800445bd",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044593",
+        "helper": "0x180046c5b",
+        "class_name": "me/octo/client/IllIIlIlllIlIllIlIllIlIIllIlIIlIllIllIlIllIllIIlIllIIlIIIlIlIIIIIIlllIIIllIIIIlIIIllI",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x1800445a1",
+        "function_pointer_load": "0x180044589",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045aeb",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171010",
+      "event_cache_read": "0x180044631",
+      "jni_invocation": {
+        "call_site": "0x18004464a",
+        "function_pointer_load": "0x18004462a",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044600",
+        "helper": "0x180046d04",
+        "class_name": "me/octo/client/IlIIIlIlIlIIIlIIIIlIlllIlllIlIIlIllIlIIllIIIllIlIlIlIIIIIllIlllIIlIlIIIllIllIIllllllI",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x18004460e",
+        "function_pointer_load": "0x1800445f6",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045b6f",
+      "lookup_kind": "GetStaticMethodID",
+      "method_name": "b",
+      "descriptor": "([I)V",
+      "method_id_cache_global": "0x180171098",
+      "event_cache_read": "0x180044c17",
+      "jni_invocation": {
+        "call_site": "0x180044c30",
+        "function_pointer_load": "0x180044c05",
+        "jni_table_offset": "0x468",
+        "jni_function": "CallStaticVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044c0f",
+        "helper": "0x180046124",
+        "class_name": "me/octo/client/Polinex$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "cache": null
+      },
+      "nearby_alloc_object": null
+    },
+    {
+      "lookup_block": "0x180045bdd",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171020",
+      "event_cache_read": "0x18004469e",
+      "jni_invocation": {
+        "call_site": "0x1800446b7",
+        "function_pointer_load": "0x180044697",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x18004466d",
+        "helper": "0x180046dad",
+        "class_name": "me/octo/client/llIIlIIIlIIlllIlllllIIIIlIIIllIIIIIIllIIIlIIlllIlllllllIlIIlllIIllIIIIIIllIIllIIIlIIl",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x18004467b",
+        "function_pointer_load": "0x180044663",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045c61",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171030",
+      "event_cache_read": "0x18004470b",
+      "jni_invocation": {
+        "call_site": "0x180044724",
+        "function_pointer_load": "0x180044704",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800446da",
+        "helper": "0x180046e56",
+        "class_name": "me/octo/client/lllIIIIIIlllllIIIllIIllIIllIlIIIlIllIlllIIlIllIIlIlIlllIIIIIIIlIlIlIIlIlIlIllllIIIIIl",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x1800446e8",
+        "function_pointer_load": "0x1800446d0",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045ce5",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171040",
+      "event_cache_read": "0x180044778",
+      "jni_invocation": {
+        "call_site": "0x180044791",
+        "function_pointer_load": "0x180044771",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044747",
+        "helper": "0x180046eff",
+        "class_name": "me/octo/client/IlllIIIIlIIlIlIlIIlIIlllIlIIIllllIlIlllIIlIIllIIllIlIIlIllIlllIIIlIIIIlllIIlllIIllIlI",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x180044755",
+        "function_pointer_load": "0x18004473d",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045d69",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171050",
+      "event_cache_read": "0x1800447e5",
+      "jni_invocation": {
+        "call_site": "0x1800447fe",
+        "function_pointer_load": "0x1800447de",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800447b4",
+        "helper": "0x180046fa8",
+        "class_name": "me/octo/client/IIlIllIIIlIIIlIIIIllllIlIllIIlIIIIlllIIlllIlllIllllIIIlIIlIIIlIlIIIIIlIIIlIIIlIllIlIl",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x1800447c2",
+        "function_pointer_load": "0x1800447aa",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045ded",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171060",
+      "event_cache_read": "0x180044852",
+      "jni_invocation": {
+        "call_site": "0x18004486b",
+        "function_pointer_load": "0x18004484b",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044821",
+        "helper": "0x180047051",
+        "class_name": "me/octo/client/IlllIIIIlIlllIlllllIlIlIIllIlllIlIIllllllIlllllIllIllllIllIIIllIIlIlIlllIIlIllIIlIlll",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x18004482f",
+        "function_pointer_load": "0x180044817",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045e71",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171070",
+      "event_cache_read": "0x1800448bf",
+      "jni_invocation": {
+        "call_site": "0x1800448d8",
+        "function_pointer_load": "0x1800448b8",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x18004488e",
+        "helper": "0x1800470fa",
+        "class_name": "me/octo/client/IlIllllIIIIIIIIIllIllIIlIlIlIlIIlIlIllllIIIIIlIIIllIIIIlllIlIIlIIllIllIIIIIIlIIIIlIII",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x18004489c",
+        "function_pointer_load": "0x180044884",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045ef5",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171080",
+      "event_cache_read": "0x18004492c",
+      "jni_invocation": {
+        "call_site": "0x180044945",
+        "function_pointer_load": "0x180044925",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x1800448fb",
+        "helper": "0x1800471a3",
+        "class_name": "me/octo/client/IIlIIIIllllllIIlIIIIIIlIllIlllIllIllIlIIllIIlIllIlIIIlIIlIllllllllIIllIllIllIIllIlllI",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x180044909",
+        "function_pointer_load": "0x1800448f1",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045f79",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "()V",
+      "method_id_cache_global": "0x180171090",
+      "event_cache_read": "0x180044999",
+      "jni_invocation": {
+        "call_site": "0x1800449b2",
+        "function_pointer_load": "0x180044992",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044968",
+        "helper": "0x18004724c",
+        "class_name": "me/octo/client/IIIIlIllIIllllIlIllllIllIIIIIIllIllIIIIllIlIlIIlIlIllIllIIlllIlllIIlllIIlIllIIIllIlIl",
+        "cache": null
+      },
+      "nearby_alloc_object": {
+        "call_site": "0x180044976",
+        "function_pointer_load": "0x18004495e",
+        "jni_table_offset": "0xd8",
+        "jni_function": "AllocObject",
+        "indirect_register": "%rdi"
+      }
+    },
+    {
+      "lookup_block": "0x180045ffd",
+      "lookup_kind": "GetMethodID",
+      "method_name": "<init>",
+      "descriptor": "(Ljava/lang/String;)V",
+      "method_id_cache_global": "0x180170ef0",
+      "event_cache_read": "0x180044e53",
+      "jni_invocation": {
+        "call_site": "0x180044e71",
+        "function_pointer_load": "0x180044e4c",
+        "jni_table_offset": "0x2d8",
+        "jni_function": "CallNonvirtualVoidMethod",
+        "indirect_register": "%rdi"
+      },
+      "nearby_class_helper": {
+        "event_class_helper_call": "0x180044e0f",
+        "helper": "0x180046281",
+        "class_name": "java/lang/RuntimeException",
+        "cache": "0x180170ee0"
+      },
+      "nearby_alloc_object": null
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "all 25 GetMethodID/GetStaticMethodID caches linked to their direct JNI invocation sites; JDK 25 table offsets and constructor allocations cross-checked",
+    "build_regression": "not run; no Java source changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Nearby class helpers are direct-call associations; only constructor AllocObject/CallNonvirtualVoidMethod pairings are class-bound by the same local sequence. Method arguments, exception branches, and whole-handler reachability remain open."
+}

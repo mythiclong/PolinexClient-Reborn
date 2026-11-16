@@ -1,0 +1,305 @@
+{
+  "slice_id": "R1878-client-initialized-method-id-operands",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_files_sha256": {
+    "polinex-src\\src\\main\\java\\me\\octo\\client\\Polinex.java": "070E5D02B6A3DC9566778D08F49F2BB26CB02D1E8110D9817D3B70357126F6C1"
+  },
+  "probe_status": "static-only; no client, game, keyboard, or mouse interaction",
+  "started_utc": "2026-11-15T19:24:40.811440+00:00",
+  "ended_utc": "2026-11-15T19:24:40.897474+00:00",
+  "command": ".analysis/tools/decode_client_initialized_method_ids.py --disassembly .analysis/reports/R1876-client-initialized-helper-range.objdump.txt --pe <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin --keystream <REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin --source-file polinex-src/src/main/java/me/octo/client/Polinex.java",
+  "exit_code": 0,
+  "inputs": {
+    ".analysis\\reports\\R1876-client-initialized-helper-range.objdump.txt": "B9E6A3AC13DDACC8BA70466B43768AD9A547D359B789438A48E4E9EB91435DA5",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.static-pe.bin": "0319C4F2C967E3C9C4BCC13863947B07797FD4DC1B3DD046D6EEEAFEF09DB42B",
+    "<REFERENCE_ROOT>\\.analysis\\artifacts\\jnic-windows-x64.derived-keystream.bin": "5FF9BCD0EFF99D8037E4FEE224E6CE8A47016816E0AE8192047B39B03CFF6334"
+  },
+  "lookup_count": 25,
+  "GetStaticMethodID_count": 3,
+  "GetMethodID_count": 22,
+  "lookups": [
+    {
+      "call_site": "0x180044f8f",
+      "name": "isOnRenderThread",
+      "descriptor": "()Z",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetStaticMethodID",
+      "jni_table_offset": "0x388",
+      "lookup_block_start": "0x180044f21",
+      "method_id_cache_global": "0x180170ed8"
+    },
+    {
+      "call_site": "0x18004508e",
+      "name": "c",
+      "descriptor": "()[I",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetStaticMethodID",
+      "jni_table_offset": "0x388",
+      "lookup_block_start": "0x180045030",
+      "method_id_cache_global": "0x180170ec8"
+    },
+    {
+      "call_site": "0x180045105",
+      "name": "aL",
+      "descriptor": "()V",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x18004509f",
+      "method_id_cache_global": "0x180170f08"
+    },
+    {
+      "call_site": "0x180045361",
+      "name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x1800452de",
+      "method_id_cache_global": "0x180170f40"
+    },
+    {
+      "call_site": "0x180045456",
+      "name": "a",
+      "descriptor": "()V",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045402",
+      "method_id_cache_global": "0x180170f58"
+    },
+    {
+      "call_site": "0x18004557a",
+      "name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x1800454f7",
+      "method_id_cache_global": "0x180170f70"
+    },
+    {
+      "call_site": "0x18004569e",
+      "name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x18004561b",
+      "method_id_cache_global": "0x180170f88"
+    },
+    {
+      "call_site": "0x1800457c2",
+      "name": "toString",
+      "descriptor": "()Ljava/lang/String;",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x18004573f",
+      "method_id_cache_global": "0x180170fa0"
+    },
+    {
+      "call_site": "0x180045846",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x1800457d3",
+      "method_id_cache_global": "0x180170fb0"
+    },
+    {
+      "call_site": "0x1800458ca",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045857",
+      "method_id_cache_global": "0x180170fc0"
+    },
+    {
+      "call_site": "0x18004594e",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x1800458db",
+      "method_id_cache_global": "0x180170fd0"
+    },
+    {
+      "call_site": "0x1800459d2",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x18004595f",
+      "method_id_cache_global": "0x180170fe0"
+    },
+    {
+      "call_site": "0x180045a56",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x1800459e3",
+      "method_id_cache_global": "0x180170ff0"
+    },
+    {
+      "call_site": "0x180045ada",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045a67",
+      "method_id_cache_global": "0x180171000"
+    },
+    {
+      "call_site": "0x180045b5e",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045aeb",
+      "method_id_cache_global": "0x180171010"
+    },
+    {
+      "call_site": "0x180045bcc",
+      "name": "b",
+      "descriptor": "([I)V",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetStaticMethodID",
+      "jni_table_offset": "0x388",
+      "lookup_block_start": "0x180045b6f",
+      "method_id_cache_global": "0x180171098"
+    },
+    {
+      "call_site": "0x180045c50",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045bdd",
+      "method_id_cache_global": "0x180171020"
+    },
+    {
+      "call_site": "0x180045cd4",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045c61",
+      "method_id_cache_global": "0x180171030"
+    },
+    {
+      "call_site": "0x180045d58",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045ce5",
+      "method_id_cache_global": "0x180171040"
+    },
+    {
+      "call_site": "0x180045ddc",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045d69",
+      "method_id_cache_global": "0x180171050"
+    },
+    {
+      "call_site": "0x180045e60",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045ded",
+      "method_id_cache_global": "0x180171060"
+    },
+    {
+      "call_site": "0x180045ee4",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045e71",
+      "method_id_cache_global": "0x180171070"
+    },
+    {
+      "call_site": "0x180045f68",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045ef5",
+      "method_id_cache_global": "0x180171080"
+    },
+    {
+      "call_site": "0x180045fec",
+      "name": "<init>",
+      "descriptor": "()V",
+      "name_stack_displacement": 176,
+      "descriptor_stack_displacement": 80,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045f79",
+      "method_id_cache_global": "0x180171090"
+    },
+    {
+      "call_site": "0x18004607f",
+      "name": "<init>",
+      "descriptor": "(Ljava/lang/String;)V",
+      "name_stack_displacement": 80,
+      "descriptor_stack_displacement": 176,
+      "lookup_kind": "GetMethodID",
+      "jni_table_offset": "0x108",
+      "lookup_block_start": "0x180045ffd",
+      "method_id_cache_global": "0x180170ef0"
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "JNI method-name and descriptor stack operands decoded from PE bytes, keystream offsets, and complete lookup blocks",
+    "build_regression": "not run; no Java source changed",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "Names, descriptors, JNI lookup kind, and method-ID cache slots are resolved. Receiver-class provenance, invocation reachability, full initialization control flow, and method effects remain open."
+}

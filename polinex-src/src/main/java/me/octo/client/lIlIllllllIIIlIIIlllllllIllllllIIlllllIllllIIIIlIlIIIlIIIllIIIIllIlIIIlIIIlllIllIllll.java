@@ -630,7 +630,7 @@ public final class lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllII
                   break label54;
                }
 
-               if (((me.octo.client.PXDyn)var11).isEmpty()) {
+               if (((Collection<?>)var11).isEmpty()) {
                   var12 = true;
                   break label58;
                }
@@ -639,7 +639,7 @@ public final class lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllII
             var11 = var3;
          }
 
-         Iterator var5 = ((me.octo.client.PXDyn)var11).iterator();
+         Iterator var5 = ((Iterable<?>)var11).iterator();
 
          label45:
          while (true) {

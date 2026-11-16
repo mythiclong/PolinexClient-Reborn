@@ -1,0 +1,1508 @@
+Compiled from "lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI.java"
+public final class me.octo.client.utils.lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI {
+  public static me.octo.client.utils.lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
+    descriptor: Lme/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI;
+
+  private static org.apache.logging.log4j.Logger lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII;
+    descriptor: Lorg/apache/logging/log4j/Logger;
+
+  private static java.lang.String[] IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl;
+    descriptor: [Ljava/lang/String;
+
+  private static java.lang.String[] b;
+    descriptor: [Ljava/lang/String;
+
+  private static java.lang.String[] c;
+    descriptor: [Ljava/lang/String;
+
+  private me.octo.client.utils.lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI();
+    descriptor: ()V
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public static final void a(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: sipush        15333
+         3: istore_1
+         4: sipush        -5711
+         7: istore_2
+         8: aload_0
+         9: ldc           #7                  // String message
+        11: invokestatic  #9                  // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: getstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+        17: aload_0
+        18: invokeinterface #21,  2           // InterfaceMethod org/apache/logging/log4j/Logger.fatal:(Ljava/lang/String;)V
+        23: return
+
+  public static final void b(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: sipush        15333
+         3: istore_1
+         4: sipush        -5711
+         7: istore_2
+         8: aload_0
+         9: ldc           #7                  // String message
+        11: invokestatic  #9                  // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: sipush        15335
+        17: istore_2
+        18: sipush        372
+        21: istore_3
+        22: getstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+        25: aload_0
+        26: invokedynamic #27,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        31: invokeinterface #31,  2           // InterfaceMethod org/apache/logging/log4j/Logger.error:(Ljava/lang/String;)V
+        36: return
+
+  public static final void c(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: sipush        15333
+         3: istore_1
+         4: sipush        -5711
+         7: istore_2
+         8: aload_0
+         9: ldc           #7                  // String message
+        11: invokestatic  #9                  // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: invokestatic  #34                 // Method me/octo/client/utils/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.b:()[Ljava/lang/String;
+        17: pop
+        18: sipush        15334
+        21: istore_3
+        22: sipush        25575
+        25: istore        4
+        27: getstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+        30: aload_0
+        31: invokedynamic #40,  0             // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        36: invokeinterface #41,  2           // InterfaceMethod org/apache/logging/log4j/Logger.warn:(Ljava/lang/String;)V
+        41: invokestatic  #44                 // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.f:()[Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;
+        44: ifnonnull     54
+        47: iconst_3
+        48: anewarray     #50                 // class java/lang/String
+        51: invokestatic  #52                 // Method me/octo/client/utils/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.b:([Ljava/lang/String;)V
+        54: return
+
+  public static final void d(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: sipush        15329
+         3: istore_1
+         4: sipush        3238
+         7: istore_2
+         8: aload_0
+         9: ldc           #7                  // String message
+        11: invokestatic  #9                  // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: getstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+        17: aload_0
+        18: invokeinterface #55,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+        23: return
+
+  public static final void e(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: invokestatic  #34                 // Method me/octo/client/utils/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.b:()[Ljava/lang/String;
+         3: astore_1
+         4: sipush        15333
+         7: istore_2
+         8: sipush        -5711
+        11: istore_3
+        12: aload_0
+        13: ldc           #7                  // String message
+        15: invokestatic  #9                  // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        18: aload_1
+        19: astore        4
+        21: sipush        15332
+        24: istore_2
+        25: sipush        -27216
+        28: istore_3
+        29: getstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+        32: aload_0
+        33: invokedynamic #58,  0             // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        38: invokeinterface #55,  2           // InterfaceMethod org/apache/logging/log4j/Logger.info:(Ljava/lang/String;)V
+        43: aload         4
+        45: ifnonnull     55
+        48: iconst_3
+        49: anewarray     #45                 // class me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll
+        52: invokestatic  #59                 // Method me/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll.b:([Lme/octo/client/utils/lllIlIIllIlIIIIIllllIllIlllllIlIIIIIIlIlIllIIlIIlllIllIlllllIIIIIIlIIIIIlIllllIlllIll;)V
+        55: return
+
+  public static void b(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: putstatic     #62                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:[Ljava/lang/String;
+         4: return
+
+  public static java.lang.String[] b();
+    descriptor: ()[Ljava/lang/String;
+    Code:
+         0: getstatic     #62                 // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:[Ljava/lang/String;
+         3: areturn
+
+  private static java.lang.String a(int, int);
+    descriptor: (II)Ljava/lang/String;
+    Code:
+         0: iload_0
+         1: sipush        15332
+         4: ixor
+         5: ldc           #66                 // int 65535
+         7: iand
+         8: istore_2
+         9: getstatic     #67                 // Field c:[Ljava/lang/String;
+        12: iload_2
+        13: aaload
+        14: ifnonnull     2625
+        17: getstatic     #70                 // Field b:[Ljava/lang/String;
+        20: iload_2
+        21: aaload
+        22: invokevirtual #72                 // Method java/lang/String.toCharArray:()[C
+        25: astore_3
+        26: aload_3
+        27: iconst_0
+        28: caload
+        29: sipush        255
+        32: iand
+        33: tableswitch   { // 0 to 254
+
+                       0: 1068
+
+                       1: 1074
+
+                       2: 1080
+
+                       3: 1086
+
+                       4: 1091
+
+                       5: 1097
+
+                       6: 1102
+
+                       7: 1108
+
+                       8: 1114
+
+                       9: 1120
+
+                      10: 1125
+
+                      11: 1130
+
+                      12: 1135
+
+                      13: 1140
+
+                      14: 1145
+
+                      15: 1150
+
+                      16: 1156
+
+                      17: 1162
+
+                      18: 1167
+
+                      19: 1173
+
+                      20: 1178
+
+                      21: 1183
+
+                      22: 1187
+
+                      23: 1193
+
+                      24: 1199
+
+                      25: 1205
+
+                      26: 1210
+
+                      27: 1216
+
+                      28: 1221
+
+                      29: 1226
+
+                      30: 1232
+
+                      31: 1238
+
+                      32: 1244
+
+                      33: 1249
+
+                      34: 1255
+
+                      35: 1260
+
+                      36: 1265
+
+                      37: 1270
+
+                      38: 1276
+
+                      39: 1282
+
+                      40: 1287
+
+                      41: 1292
+
+                      42: 1297
+
+                      43: 1303
+
+                      44: 1308
+
+                      45: 1314
+
+                      46: 1320
+
+                      47: 1325
+
+                      48: 1330
+
+                      49: 1335
+
+                      50: 1340
+
+                      51: 1345
+
+                      52: 1351
+
+                      53: 1356
+
+                      54: 1361
+
+                      55: 1367
+
+                      56: 1371
+
+                      57: 1377
+
+                      58: 1382
+
+                      59: 1387
+
+                      60: 1393
+
+                      61: 1398
+
+                      62: 1403
+
+                      63: 1409
+
+                      64: 1415
+
+                      65: 1420
+
+                      66: 1426
+
+                      67: 1432
+
+                      68: 1438
+
+                      69: 1443
+
+                      70: 1448
+
+                      71: 1453
+
+                      72: 1459
+
+                      73: 1465
+
+                      74: 1471
+
+                      75: 1477
+
+                      76: 1482
+
+                      77: 1486
+
+                      78: 1491
+
+                      79: 1497
+
+                      80: 1503
+
+                      81: 1509
+
+                      82: 1515
+
+                      83: 1521
+
+                      84: 1527
+
+                      85: 1533
+
+                      86: 1538
+
+                      87: 1543
+
+                      88: 1548
+
+                      89: 1553
+
+                      90: 1558
+
+                      91: 1564
+
+                      92: 1570
+
+                      93: 1576
+
+                      94: 1582
+
+                      95: 1588
+
+                      96: 1594
+
+                      97: 1600
+
+                      98: 1606
+
+                      99: 1612
+
+                     100: 1617
+
+                     101: 1623
+
+                     102: 1628
+
+                     103: 1634
+
+                     104: 1639
+
+                     105: 1644
+
+                     106: 1649
+
+                     107: 1654
+
+                     108: 1660
+
+                     109: 1665
+
+                     110: 1671
+
+                     111: 1676
+
+                     112: 1682
+
+                     113: 1687
+
+                     114: 1693
+
+                     115: 1699
+
+                     116: 1704
+
+                     117: 1709
+
+                     118: 1714
+
+                     119: 1720
+
+                     120: 1726
+
+                     121: 1732
+
+                     122: 1737
+
+                     123: 1743
+
+                     124: 1749
+
+                     125: 1753
+
+                     126: 1758
+
+                     127: 1764
+
+                     128: 1770
+
+                     129: 1775
+
+                     130: 1781
+
+                     131: 1786
+
+                     132: 1791
+
+                     133: 1797
+
+                     134: 1803
+
+                     135: 1809
+
+                     136: 1814
+
+                     137: 1819
+
+                     138: 1825
+
+                     139: 1830
+
+                     140: 1836
+
+                     141: 1842
+
+                     142: 1847
+
+                     143: 1853
+
+                     144: 1859
+
+                     145: 1865
+
+                     146: 1870
+
+                     147: 1875
+
+                     148: 1880
+
+                     149: 1885
+
+                     150: 1890
+
+                     151: 1895
+
+                     152: 1900
+
+                     153: 1905
+
+                     154: 1911
+
+                     155: 1917
+
+                     156: 1922
+
+                     157: 1926
+
+                     158: 1931
+
+                     159: 1936
+
+                     160: 1941
+
+                     161: 1947
+
+                     162: 1952
+
+                     163: 1957
+
+                     164: 1963
+
+                     165: 1969
+
+                     166: 1975
+
+                     167: 1981
+
+                     168: 1987
+
+                     169: 1993
+
+                     170: 1998
+
+                     171: 2004
+
+                     172: 2009
+
+                     173: 2014
+
+                     174: 2020
+
+                     175: 2025
+
+                     176: 2030
+
+                     177: 2035
+
+                     178: 2041
+
+                     179: 2047
+
+                     180: 2053
+
+                     181: 2058
+
+                     182: 2063
+
+                     183: 2068
+
+                     184: 2073
+
+                     185: 2079
+
+                     186: 2085
+
+                     187: 2091
+
+                     188: 2097
+
+                     189: 2103
+
+                     190: 2108
+
+                     191: 2114
+
+                     192: 2119
+
+                     193: 2124
+
+                     194: 2130
+
+                     195: 2135
+
+                     196: 2141
+
+                     197: 2146
+
+                     198: 2152
+
+                     199: 2158
+
+                     200: 2164
+
+                     201: 2170
+
+                     202: 2174
+
+                     203: 2179
+
+                     204: 2185
+
+                     205: 2190
+
+                     206: 2196
+
+                     207: 2201
+
+                     208: 2206
+
+                     209: 2212
+
+                     210: 2218
+
+                     211: 2223
+
+                     212: 2228
+
+                     213: 2234
+
+                     214: 2239
+
+                     215: 2245
+
+                     216: 2250
+
+                     217: 2255
+
+                     218: 2261
+
+                     219: 2266
+
+                     220: 2271
+
+                     221: 2277
+
+                     222: 2282
+
+                     223: 2287
+
+                     224: 2293
+
+                     225: 2298
+
+                     226: 2304
+
+                     227: 2309
+
+                     228: 2315
+
+                     229: 2321
+
+                     230: 2327
+
+                     231: 2333
+
+                     232: 2338
+
+                     233: 2343
+
+                     234: 2348
+
+                     235: 2354
+
+                     236: 2359
+
+                     237: 2364
+
+                     238: 2370
+
+                     239: 2376
+
+                     240: 2381
+
+                     241: 2386
+
+                     242: 2391
+
+                     243: 2397
+
+                     244: 2403
+
+                     245: 2408
+
+                     246: 2414
+
+                     247: 2420
+
+                     248: 2425
+
+                     249: 2431
+
+                     250: 2437
+
+                     251: 2443
+
+                     252: 2449
+
+                     253: 2454
+
+                     254: 2459
+                 default: 2465
+            }
+      1068: sipush        243
+      1071: goto          2467
+      1074: sipush        148
+      1077: goto          2467
+      1080: sipush        169
+      1083: goto          2467
+      1086: bipush        115
+      1088: goto          2467
+      1091: sipush        206
+      1094: goto          2467
+      1097: bipush        56
+      1099: goto          2467
+      1102: sipush        193
+      1105: goto          2467
+      1108: sipush        181
+      1111: goto          2467
+      1114: sipush        227
+      1117: goto          2467
+      1120: bipush        40
+      1122: goto          2467
+      1125: bipush        74
+      1127: goto          2467
+      1130: bipush        35
+      1132: goto          2467
+      1135: bipush        103
+      1137: goto          2467
+      1140: bipush        110
+      1142: goto          2467
+      1145: bipush        21
+      1147: goto          2467
+      1150: sipush        152
+      1153: goto          2467
+      1156: sipush        197
+      1159: goto          2467
+      1162: bipush        109
+      1164: goto          2467
+      1167: sipush        250
+      1170: goto          2467
+      1173: bipush        125
+      1175: goto          2467
+      1178: bipush        79
+      1180: goto          2467
+      1183: iconst_1
+      1184: goto          2467
+      1187: sipush        218
+      1190: goto          2467
+      1193: sipush        151
+      1196: goto          2467
+      1199: sipush        211
+      1202: goto          2467
+      1205: bipush        111
+      1207: goto          2467
+      1210: sipush        223
+      1213: goto          2467
+      1216: bipush        89
+      1218: goto          2467
+      1221: bipush        11
+      1223: goto          2467
+      1226: sipush        232
+      1229: goto          2467
+      1232: sipush        186
+      1235: goto          2467
+      1238: sipush        158
+      1241: goto          2467
+      1244: bipush        65
+      1246: goto          2467
+      1249: sipush        179
+      1252: goto          2467
+      1255: bipush        36
+      1257: goto          2467
+      1260: bipush        54
+      1262: goto          2467
+      1265: bipush        9
+      1267: goto          2467
+      1270: sipush        215
+      1273: goto          2467
+      1276: sipush        237
+      1279: goto          2467
+      1282: bipush        18
+      1284: goto          2467
+      1287: bipush        26
+      1289: goto          2467
+      1292: bipush        113
+      1294: goto          2467
+      1297: sipush        132
+      1300: goto          2467
+      1303: bipush        85
+      1305: goto          2467
+      1308: sipush        217
+      1311: goto          2467
+      1314: sipush        219
+      1317: goto          2467
+      1320: bipush        20
+      1322: goto          2467
+      1325: bipush        70
+      1327: goto          2467
+      1330: bipush        67
+      1332: goto          2467
+      1335: bipush        118
+      1337: goto          2467
+      1340: bipush        7
+      1342: goto          2467
+      1345: sipush        187
+      1348: goto          2467
+      1351: bipush        126
+      1353: goto          2467
+      1356: bipush        121
+      1358: goto          2467
+      1361: sipush        172
+      1364: goto          2467
+      1367: iconst_0
+      1368: goto          2467
+      1371: sipush        128
+      1374: goto          2467
+      1377: bipush        48
+      1379: goto          2467
+      1382: bipush        12
+      1384: goto          2467
+      1387: sipush        129
+      1390: goto          2467
+      1393: bipush        119
+      1395: goto          2467
+      1398: bipush        37
+      1400: goto          2467
+      1403: sipush        255
+      1406: goto          2467
+      1409: sipush        159
+      1412: goto          2467
+      1415: bipush        100
+      1417: goto          2467
+      1420: sipush        213
+      1423: goto          2467
+      1426: sipush        161
+      1429: goto          2467
+      1432: sipush        182
+      1435: goto          2467
+      1438: bipush        16
+      1440: goto          2467
+      1443: bipush        71
+      1445: goto          2467
+      1448: bipush        19
+      1450: goto          2467
+      1453: sipush        144
+      1456: goto          2467
+      1459: sipush        220
+      1462: goto          2467
+      1465: sipush        204
+      1468: goto          2467
+      1471: sipush        175
+      1474: goto          2467
+      1477: bipush        59
+      1479: goto          2467
+      1482: iconst_3
+      1483: goto          2467
+      1486: bipush        81
+      1488: goto          2467
+      1491: sipush        146
+      1494: goto          2467
+      1497: sipush        228
+      1500: goto          2467
+      1503: sipush        176
+      1506: goto          2467
+      1509: sipush        149
+      1512: goto          2467
+      1515: sipush        137
+      1518: goto          2467
+      1521: sipush        202
+      1524: goto          2467
+      1527: sipush        170
+      1530: goto          2467
+      1533: bipush        51
+      1535: goto          2467
+      1538: bipush        108
+      1540: goto          2467
+      1543: bipush        23
+      1545: goto          2467
+      1548: bipush        73
+      1550: goto          2467
+      1553: bipush        46
+      1555: goto          2467
+      1558: sipush        200
+      1561: goto          2467
+      1564: sipush        233
+      1567: goto          2467
+      1570: sipush        130
+      1573: goto          2467
+      1576: sipush        251
+      1579: goto          2467
+      1582: sipush        240
+      1585: goto          2467
+      1588: sipush        153
+      1591: goto          2467
+      1594: sipush        157
+      1597: goto          2467
+      1600: sipush        164
+      1603: goto          2467
+      1606: sipush        207
+      1609: goto          2467
+      1612: bipush        102
+      1614: goto          2467
+      1617: sipush        140
+      1620: goto          2467
+      1623: bipush        112
+      1625: goto          2467
+      1628: sipush        131
+      1631: goto          2467
+      1634: bipush        15
+      1636: goto          2467
+      1639: bipush        29
+      1641: goto          2467
+      1644: bipush        96
+      1646: goto          2467
+      1649: bipush        127
+      1651: goto          2467
+      1654: sipush        234
+      1657: goto          2467
+      1660: bipush        114
+      1662: goto          2467
+      1665: sipush        189
+      1668: goto          2467
+      1671: bipush        53
+      1673: goto          2467
+      1676: sipush        133
+      1679: goto          2467
+      1682: bipush        92
+      1684: goto          2467
+      1687: sipush        160
+      1690: goto          2467
+      1693: sipush        167
+      1696: goto          2467
+      1699: bipush        68
+      1701: goto          2467
+      1704: bipush        27
+      1706: goto          2467
+      1709: bipush        104
+      1711: goto          2467
+      1714: sipush        246
+      1717: goto          2467
+      1720: sipush        196
+      1723: goto          2467
+      1726: sipush        253
+      1729: goto          2467
+      1732: bipush        14
+      1734: goto          2467
+      1737: sipush        244
+      1740: goto          2467
+      1743: sipush        239
+      1746: goto          2467
+      1749: iconst_5
+      1750: goto          2467
+      1753: bipush        66
+      1755: goto          2467
+      1758: sipush        212
+      1761: goto          2467
+      1764: sipush        147
+      1767: goto          2467
+      1770: bipush        13
+      1772: goto          2467
+      1775: sipush        198
+      1778: goto          2467
+      1781: bipush        82
+      1783: goto          2467
+      1786: bipush        116
+      1788: goto          2467
+      1791: sipush        190
+      1794: goto          2467
+      1797: sipush        185
+      1800: goto          2467
+      1803: sipush        209
+      1806: goto          2467
+      1809: bipush        101
+      1811: goto          2467
+      1814: bipush        17
+      1816: goto          2467
+      1819: sipush        154
+      1822: goto          2467
+      1825: bipush        90
+      1827: goto          2467
+      1830: sipush        236
+      1833: goto          2467
+      1836: sipush        222
+      1839: goto          2467
+      1842: bipush        63
+      1844: goto          2467
+      1847: sipush        139
+      1850: goto          2467
+      1853: sipush        178
+      1856: goto          2467
+      1859: sipush        184
+      1862: goto          2467
+      1865: bipush        43
+      1867: goto          2467
+      1870: bipush        98
+      1872: goto          2467
+      1875: bipush        55
+      1877: goto          2467
+      1880: bipush        44
+      1882: goto          2467
+      1885: bipush        94
+      1887: goto          2467
+      1890: bipush        50
+      1892: goto          2467
+      1895: bipush        41
+      1897: goto          2467
+      1900: bipush        47
+      1902: goto          2467
+      1905: sipush        163
+      1908: goto          2467
+      1911: sipush        203
+      1914: goto          2467
+      1917: bipush        42
+      1919: goto          2467
+      1922: iconst_4
+      1923: goto          2467
+      1926: bipush        83
+      1928: goto          2467
+      1931: bipush        124
+      1933: goto          2467
+      1936: bipush        93
+      1938: goto          2467
+      1941: sipush        248
+      1944: goto          2467
+      1947: bipush        34
+      1949: goto          2467
+      1952: bipush        60
+      1954: goto          2467
+      1957: sipush        192
+      1960: goto          2467
+      1963: sipush        174
+      1966: goto          2467
+      1969: sipush        230
+      1972: goto          2467
+      1975: sipush        229
+      1978: goto          2467
+      1981: sipush        214
+      1984: goto          2467
+      1987: sipush        162
+      1990: goto          2467
+      1993: bipush        38
+      1995: goto          2467
+      1998: sipush        210
+      2001: goto          2467
+      2004: bipush        39
+      2006: goto          2467
+      2009: bipush        87
+      2011: goto          2467
+      2014: sipush        165
+      2017: goto          2467
+      2020: bipush        33
+      2022: goto          2467
+      2025: bipush        107
+      2027: goto          2467
+      2030: bipush        76
+      2032: goto          2467
+      2035: sipush        254
+      2038: goto          2467
+      2041: sipush        225
+      2044: goto          2467
+      2047: sipush        194
+      2050: goto          2467
+      2053: bipush        45
+      2055: goto          2467
+      2058: bipush        123
+      2060: goto          2467
+      2063: bipush        10
+      2065: goto          2467
+      2068: bipush        117
+      2070: goto          2467
+      2073: sipush        205
+      2076: goto          2467
+      2079: sipush        156
+      2082: goto          2467
+      2085: sipush        226
+      2088: goto          2467
+      2091: sipush        143
+      2094: goto          2467
+      2097: sipush        231
+      2100: goto          2467
+      2103: bipush        58
+      2105: goto          2467
+      2108: sipush        245
+      2111: goto          2467
+      2114: bipush        95
+      2116: goto          2467
+      2119: bipush        105
+      2121: goto          2467
+      2124: sipush        145
+      2127: goto          2467
+      2130: bipush        77
+      2132: goto          2467
+      2135: sipush        238
+      2138: goto          2467
+      2141: bipush        49
+      2143: goto          2467
+      2146: sipush        173
+      2149: goto          2467
+      2152: sipush        150
+      2155: goto          2467
+      2158: sipush        221
+      2161: goto          2467
+      2164: sipush        224
+      2167: goto          2467
+      2170: iconst_2
+      2171: goto          2467
+      2174: bipush        52
+      2176: goto          2467
+      2179: sipush        134
+      2182: goto          2467
+      2185: bipush        80
+      2187: goto          2467
+      2190: sipush        208
+      2193: goto          2467
+      2196: bipush        61
+      2198: goto          2467
+      2201: bipush        72
+      2203: goto          2467
+      2206: sipush        249
+      2209: goto          2467
+      2212: sipush        242
+      2215: goto          2467
+      2218: bipush        64
+      2220: goto          2467
+      2223: bipush        88
+      2225: goto          2467
+      2228: sipush        188
+      2231: goto          2467
+      2234: bipush        69
+      2236: goto          2467
+      2239: sipush        247
+      2242: goto          2467
+      2245: bipush        97
+      2247: goto          2467
+      2250: bipush        99
+      2252: goto          2467
+      2255: sipush        241
+      2258: goto          2467
+      2261: bipush        24
+      2263: goto          2467
+      2266: bipush        8
+      2268: goto          2467
+      2271: sipush        195
+      2274: goto          2467
+      2277: bipush        106
+      2279: goto          2467
+      2282: bipush        62
+      2284: goto          2467
+      2287: sipush        142
+      2290: goto          2467
+      2293: bipush        28
+      2295: goto          2467
+      2298: sipush        155
+      2301: goto          2467
+      2304: bipush        6
+      2306: goto          2467
+      2309: sipush        199
+      2312: goto          2467
+      2315: sipush        141
+      2318: goto          2467
+      2321: sipush        168
+      2324: goto          2467
+      2327: sipush        235
+      2330: goto          2467
+      2333: bipush        78
+      2335: goto          2467
+      2338: bipush        122
+      2340: goto          2467
+      2343: bipush        91
+      2345: goto          2467
+      2348: sipush        201
+      2351: goto          2467
+      2354: bipush        22
+      2356: goto          2467
+      2359: bipush        84
+      2361: goto          2467
+      2364: sipush        171
+      2367: goto          2467
+      2370: sipush        191
+      2373: goto          2467
+      2376: bipush        32
+      2378: goto          2467
+      2381: bipush        75
+      2383: goto          2467
+      2386: bipush        86
+      2388: goto          2467
+      2391: sipush        252
+      2394: goto          2467
+      2397: sipush        216
+      2400: goto          2467
+      2403: bipush        25
+      2405: goto          2467
+      2408: sipush        135
+      2411: goto          2467
+      2414: sipush        138
+      2417: goto          2467
+      2420: bipush        30
+      2422: goto          2467
+      2425: sipush        183
+      2428: goto          2467
+      2431: sipush        136
+      2434: goto          2467
+      2437: sipush        177
+      2440: goto          2467
+      2443: sipush        166
+      2446: goto          2467
+      2449: bipush        120
+      2451: goto          2467
+      2454: bipush        57
+      2456: goto          2467
+      2459: sipush        180
+      2462: goto          2467
+      2465: bipush        31
+      2467: istore        4
+      2469: iload_1
+      2470: sipush        255
+      2473: iand
+      2474: iload         4
+      2476: isub
+      2477: istore        5
+      2479: iload         5
+      2481: ifge          2490
+      2484: iinc_w        5, 256
+      2490: iload_1
+      2491: ldc           #66                 // int 65535
+      2493: iand
+      2494: bipush        8
+      2496: iushr
+      2497: iload         4
+      2499: isub
+      2500: istore        6
+      2502: iload         6
+      2504: ifge          2513
+      2507: iinc_w        6, 256
+      2513: iconst_0
+      2514: istore        7
+      2516: iload         7
+      2518: aload_3
+      2519: arraylength
+      2520: if_icmpge     2609
+      2523: iload         7
+      2525: iconst_2
+      2526: irem
+      2527: istore        8
+      2529: aload_3
+      2530: iload         7
+      2532: caload
+      2533: istore        9
+      2535: iload         8
+      2537: ifne          2573
+      2540: aload_3
+      2541: iload         7
+      2543: iload         9
+      2545: iload         5
+      2547: ixor
+      2548: i2c
+      2549: castore
+      2550: iload         5
+      2552: iconst_3
+      2553: iushr
+      2554: iload         5
+      2556: iconst_5
+      2557: ishl
+      2558: ior
+      2559: aload_3
+      2560: iload         7
+      2562: caload
+      2563: ixor
+      2564: sipush        255
+      2567: iand
+      2568: istore        5
+      2570: goto          2603
+      2573: aload_3
+      2574: iload         7
+      2576: iload         9
+      2578: iload         6
+      2580: ixor
+      2581: i2c
+      2582: castore
+      2583: iload         6
+      2585: iconst_3
+      2586: iushr
+      2587: iload         6
+      2589: iconst_5
+      2590: ishl
+      2591: ior
+      2592: aload_3
+      2593: iload         7
+      2595: caload
+      2596: ixor
+      2597: sipush        255
+      2600: iand
+      2601: istore        6
+      2603: iinc          7, 1
+      2606: goto          2516
+      2609: getstatic     #67                 // Field c:[Ljava/lang/String;
+      2612: iload_2
+      2613: new           #50                 // class java/lang/String
+      2616: dup
+      2617: aload_3
+      2618: invokespecial #76                 // Method java/lang/String."<init>":([C)V
+      2621: invokevirtual #79                 // Method java/lang/String.intern:()Ljava/lang/String;
+      2624: aastore
+      2625: getstatic     #67                 // Field c:[Ljava/lang/String;
+      2628: iload_2
+      2629: aaload
+      2630: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: aconst_null
+         1: astore_0
+         2: bipush        6
+         4: anewarray     #50                 // class java/lang/String
+         7: astore_1
+         8: iconst_0
+         9: istore_2
+        10: ldc           #83                 // String \u001f4A??\nf2����?5\u0007\u008a?>C?��?\n@??T?\u001eM\u0019?p\u0010\u009b`?X?Em\u008a?\u009b\u008a\u008c?%~\t
+        12: astore_3
+        13: ldc           #83                 // String \u001f4A??\nf2����?5\u0007\u008a?>C?��?\n@??T?\u001eM\u0019?p\u0010\u009b`?X?Em\u008a?\u009b\u008a\u008c?%~\t
+        15: invokevirtual #85                 // Method java/lang/String.length:()I
+        18: istore        4
+        20: iconst_5
+        21: anewarray     #50                 // class java/lang/String
+        24: astore        5
+        26: bipush        12
+        28: istore        6
+        30: iconst_m1
+        31: istore        7
+        33: aload         5
+        35: invokestatic  #89                 // Method b:([Ljava/lang/String;)V
+        38: bipush        125
+        40: istore        8
+        42: aload_3
+        43: iinc          7, 1
+        46: iload         7
+        48: iload         7
+        50: iload         6
+        52: iadd
+        53: invokevirtual #90                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+        56: astore        9
+        58: iconst_m1
+        59: istore        10
+        61: aload         9
+        63: invokevirtual #72                 // Method java/lang/String.toCharArray:()[C
+        66: astore        11
+        68: aload         11
+        70: arraylength
+        71: istore        12
+        73: iconst_0
+        74: istore        13
+        76: iload         8
+        78: istore        14
+        80: aload         11
+        82: astore_0
+        83: iload         12
+        85: istore        15
+        87: iload         12
+        89: iconst_1
+        90: if_icmpgt     108
+        93: aload         11
+        95: astore        17
+        97: iload         8
+        99: istore        16
+       101: iload         13
+       103: istore        18
+       105: goto          138
+       108: iload         8
+       110: istore        14
+       112: iload         12
+       114: istore        15
+       116: iload         12
+       118: iload         13
+       120: if_icmpgt     126
+       123: goto          273
+       126: aload         11
+       128: astore        17
+       130: iload         8
+       132: istore        16
+       134: iload         13
+       136: istore        18
+       138: aload         17
+       140: iload         18
+       142: aload         17
+       144: iload         18
+       146: caload
+       147: iload         16
+       149: ixor
+       150: iload         13
+       152: bipush        7
+       154: irem
+       155: tableswitch   { // 0 to 5
+
+                       0: 192
+
+                       1: 197
+
+                       2: 202
+
+                       3: 207
+
+                       4: 212
+
+                       5: 217
+                 default: 222
+            }
+       192: bipush        8
+       194: goto          224
+       197: bipush        15
+       199: goto          224
+       202: bipush        15
+       204: goto          224
+       207: bipush        113
+       209: goto          224
+       212: bipush        115
+       214: goto          224
+       217: bipush        57
+       219: goto          224
+       222: bipush        66
+       224: ixor
+       225: i2c
+       226: castore
+       227: iinc          13, 1
+       230: iload         14
+       232: ifne          249
+       235: iload         14
+       237: istore        18
+       239: aload_0
+       240: astore        17
+       242: iload         14
+       244: istore        16
+       246: goto          138
+       249: iload         15
+       251: iload         13
+       253: if_icmpgt     259
+       256: goto          273
+       259: aload_0
+       260: astore        17
+       262: iload         14
+       264: istore        16
+       266: iload         13
+       268: istore        18
+       270: goto          138
+       273: new           #50                 // class java/lang/String
+       276: dup
+       277: aload_0
+       278: invokespecial #76                 // Method java/lang/String."<init>":([C)V
+       281: invokevirtual #79                 // Method java/lang/String.intern:()Ljava/lang/String;
+       284: astore        11
+       286: iload         10
+       288: lookupswitch  { // 1
+
+                       0: 308
+                 default: 383
+            }
+       308: aload_1
+       309: iload_2
+       310: iinc          2, 1
+       313: aload         11
+       315: aastore
+       316: iload         7
+       318: iload         6
+       320: iadd
+       321: dup
+       322: istore        7
+       324: iload         4
+       326: if_icmplt     372
+       329: aload_1
+       330: putstatic     #70                 // Field b:[Ljava/lang/String;
+       333: bipush        6
+       335: anewarray     #50                 // class java/lang/String
+       338: putstatic     #67                 // Field c:[Ljava/lang/String;
+       341: new           #16                 // class me/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI
+       344: dup
+       345: invokespecial #94                 // Method "<init>":()V
+       348: putstatic     #95                 // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/lllIlIIIIllIIIlIllIllIlIIlIllIIlIlllIIlllIlIllIllIllIIIlllIIlIIIlIIIlIllIlllIIllIIIlI;
+       351: sipush        15328
+       354: istore        12
+       356: sipush        -23949
+       359: istore        13
+       361: ldc           #99                 // String Polinex
+       363: invokestatic  #101                // Method org/apache/logging/log4j/LogManager.getLogger:(Ljava/lang/String;)Lorg/apache/logging/log4j/Logger;
+       366: putstatic     #15                 // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lorg/apache/logging/log4j/Logger;
+       369: goto          458
+       372: aload_3
+       373: iload         7
+       375: invokevirtual #107                // Method java/lang/String.charAt:(I)C
+       378: istore        6
+       380: goto          432
+       383: aload_1
+       384: iload_2
+       385: iinc          2, 1
+       388: aload         11
+       390: aastore
+       391: iload         7
+       393: iload         6
+       395: iadd
+       396: dup
+       397: istore        7
+       399: iload         4
+       401: if_icmpge     415
+       404: aload_3
+       405: iload         7
+       407: invokevirtual #107                // Method java/lang/String.charAt:(I)C
+       410: istore        6
+       412: goto          38
+       415: ldc           #111                // String \u001e?��?\u001a??\u0007?x\u009d>F����
+       417: astore_3
+       418: ldc           #111                // String \u001e?��?\u001a??\u0007?x\u009d>F����
+       420: invokevirtual #85                 // Method java/lang/String.length:()I
+       423: istore        4
+       425: bipush        7
+       427: istore        6
+       429: iconst_m1
+       430: istore        7
+       432: bipush        24
+       434: istore        8
+       436: aload_3
+       437: iinc          7, 1
+       440: iload         7
+       442: iload         7
+       444: iload         6
+       446: iadd
+       447: invokevirtual #90                 // Method java/lang/String.substring:(II)Ljava/lang/String;
+       450: astore        9
+       452: iconst_0
+       453: istore        10
+       455: goto          61
+       458: return
+}

@@ -1,0 +1,103 @@
+
+<REFERENCE_ROOT>\.analysis\artifacts\jnic-windows-x64.static-pe.bin:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+0000000180006e3a <.text+0x5e3a>:
+   180006e3a:	55                   	push   %rbp
+   180006e3b:	56                   	push   %rsi
+   180006e3c:	57                   	push   %rdi
+   180006e3d:	48 83 ec 70          	sub    $0x70,%rsp
+   180006e41:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+   180006e46:	48 8b 05 9b 98 16 00 	mov    0x16989b(%rip),%rax        # 0x1801706e8
+   180006e4d:	48 85 c0             	test   %rax,%rax
+   180006e50:	74 08                	je     0x180006e5a
+   180006e52:	48 83 c4 70          	add    $0x70,%rsp
+   180006e56:	5f                   	pop    %rdi
+   180006e57:	5e                   	pop    %rsi
+   180006e58:	5d                   	pop    %rbp
+   180006e59:	c3                   	retq   
+   180006e5a:	48 89 ce             	mov    %rcx,%rsi
+   180006e5d:	48 8b 01             	mov    (%rcx),%rax
+   180006e60:	48 8b b8 88 03 00 00 	mov    0x388(%rax),%rdi
+   180006e67:	0f 10 05 1c 48 15 00 	movups 0x15481c(%rip),%xmm0        # 0x18015b68a
+   180006e6e:	0f 29 45 e0          	movaps %xmm0,-0x20(%rbp)
+   180006e72:	48 b8 3d 40 4c 87 6c 	movabs $0x233f6c874c403d,%rax
+   180006e79:	3f 23 00 
+   180006e7c:	48 89 45 ee          	mov    %rax,-0x12(%rbp)
+   180006e80:	48 8b 05 99 91 16 00 	mov    0x169199(%rip),%rax        # 0x180170020
+   180006e87:	31 c9                	xor    %ecx,%ecx
+   180006e89:	8a 94 08 0b a6 03 00 	mov    0x3a60b(%rax,%rcx,1),%dl
+   180006e90:	30 54 0d e0          	xor    %dl,-0x20(%rbp,%rcx,1)
+   180006e94:	48 ff c1             	inc    %rcx
+   180006e97:	48 83 f9 15          	cmp    $0x15,%rcx
+   180006e9b:	75 ec                	jne    0x180006e89
+   180006e9d:	0f 10 05 0c 48 15 00 	movups 0x15480c(%rip),%xmm0        # 0x18015b6b0
+   180006ea4:	0f 29 45 c0          	movaps %xmm0,-0x40(%rbp)
+   180006ea8:	0f 10 05 f1 47 15 00 	movups 0x1547f1(%rip),%xmm0        # 0x18015b6a0
+   180006eaf:	0f 29 45 b0          	movaps %xmm0,-0x50(%rbp)
+   180006eb3:	48 b9 49 b1 46 4c d4 	movabs $0xdafcd44c46b149,%rcx
+   180006eba:	fc da 00 
+   180006ebd:	48 89 4d d0          	mov    %rcx,-0x30(%rbp)
+   180006ec1:	31 c9                	xor    %ecx,%ecx
+   180006ec3:	8a 94 08 20 a6 03 00 	mov    0x3a620(%rax,%rcx,1),%dl
+   180006eca:	30 54 0d b0          	xor    %dl,-0x50(%rbp,%rcx,1)
+   180006ece:	48 ff c1             	inc    %rcx
+   180006ed1:	48 83 f9 27          	cmp    $0x27,%rcx
+   180006ed5:	75 ec                	jne    0x180006ec3
+   180006ed7:	48 89 f1             	mov    %rsi,%rcx
+   180006eda:	e8 7e b1 ff ff       	callq  0x18000205d
+   180006edf:	4c 8d 45 e0          	lea    -0x20(%rbp),%r8
+   180006ee3:	4c 8d 4d b0          	lea    -0x50(%rbp),%r9
+   180006ee7:	48 89 f1             	mov    %rsi,%rcx
+   180006eea:	48 89 c2             	mov    %rax,%rdx
+   180006eed:	ff d7                	callq  *%rdi
+   180006eef:	48 89 05 f2 97 16 00 	mov    %rax,0x1697f2(%rip)        # 0x1801706e8
+   180006ef6:	e9 57 ff ff ff       	jmpq   0x180006e52
+   180006efb:	55                   	push   %rbp
+   180006efc:	56                   	push   %rsi
+   180006efd:	57                   	push   %rdi
+   180006efe:	48 83 ec 40          	sub    $0x40,%rsp
+   180006f02:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+   180006f07:	48 8b 15 ea 97 16 00 	mov    0x1697ea(%rip),%rdx        # 0x1801706f8
+   180006f0e:	48 85 d2             	test   %rdx,%rdx
+   180006f11:	74 0b                	je     0x180006f1e
+   180006f13:	48 89 d0             	mov    %rdx,%rax
+   180006f16:	48 83 c4 40          	add    $0x40,%rsp
+   180006f1a:	5f                   	pop    %rdi
+   180006f1b:	5e                   	pop    %rsi
+   180006f1c:	5d                   	pop    %rbp
+   180006f1d:	c3                   	retq   
+   180006f1e:	48 89 ce             	mov    %rcx,%rsi
+   180006f21:	48 8b 01             	mov    (%rcx),%rax
+   180006f24:	48 8b 40 30          	mov    0x30(%rax),%rax
+   180006f28:	0f 10 05 ab 47 15 00 	movups 0x1547ab(%rip),%xmm0        # 0x18015b6da
+   180006f2f:	0f 29 45 e0          	movaps %xmm0,-0x20(%rbp)
+   180006f33:	c6 45 f0 00          	movb   $0x0,-0x10(%rbp)
+   180006f37:	48 8b 0d e2 90 16 00 	mov    0x1690e2(%rip),%rcx        # 0x180170020
+   180006f3e:	31 d2                	xor    %edx,%edx
+   180006f40:	44 8a 84 11 91 a1 03 	mov    0x3a191(%rcx,%rdx,1),%r8b
+   180006f47:	00 
+   180006f48:	44 30 44 15 e0       	xor    %r8b,-0x20(%rbp,%rdx,1)
+   180006f4d:	48 ff c2             	inc    %rdx
+   180006f50:	48 83 fa 10          	cmp    $0x10,%rdx
+   180006f54:	75 ea                	jne    0x180006f40
+   180006f56:	48 8d 55 e0          	lea    -0x20(%rbp),%rdx
+   180006f5a:	48 89 f1             	mov    %rsi,%rcx
+   180006f5d:	ff d0                	callq  *%rax
+   180006f5f:	4c 8b 06             	mov    (%rsi),%r8
+   180006f62:	48 89 f1             	mov    %rsi,%rcx
+   180006f65:	48 89 c2             	mov    %rax,%rdx
+   180006f68:	41 ff 90 a8 00 00 00 	callq  *0xa8(%r8)
+   180006f6f:	48 89 c2             	mov    %rax,%rdx
+   180006f72:	31 c0                	xor    %eax,%eax
+   180006f74:	f0 48 0f b1 15 7b 97 	lock cmpxchg %rdx,0x16977b(%rip)        # 0x1801706f8
+   180006f7b:	16 00 
+   180006f7d:	74 94                	je     0x180006f13
+   180006f7f:	48 89 c7             	mov    %rax,%rdi
+   180006f82:	48 8b 06             	mov    (%rsi),%rax
+   180006f85:	48 89 f1             	mov    %rsi,%rcx
+   180006f88:	ff 90 b0 00 00 00    	callq  *0xb0(%rax)
+   180006f8e:	48                   	rex.W
+   180006f8f:	89                   	.byte 0x89

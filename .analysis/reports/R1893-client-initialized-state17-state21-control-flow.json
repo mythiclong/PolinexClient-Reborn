@@ -1,0 +1,66 @@
+{
+  "slice_id": "R1893-client-initialized-state17-state21-control-flow",
+  "source_baseline_commit": "cb4551747dfbe7d3e8fb5668b3ad088da30fa8df",
+  "source_worktree_sha256": {
+    "Polinex.java": "070e5d02b6a3dc9566778d08f49f2bb26cb02d1e8110d9817d3b70357126f6c1",
+    "lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll.java": "13791608b3470bce7da76374baee0e1dfd6a13fa35f88d6343957b3ff57708e3",
+    "lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.java": "869a6798456e60d9cbed58e485e6558f276e86b44f78fd0b716b2f07d6862444"
+  },
+  "probe_status": "static-only; no client, game, keyboard, mouse, or server interaction",
+  "started_utc": "2026-11-15T22:10:42.372850+00:00",
+  "ended_utc": "2026-11-15T22:10:42.546965+00:00",
+  "command": "python -B .analysis/tools/verify_r1893_client_initialized_states.py --root . --output .analysis/reports/R1893-client-initialized-state17-state21-control-flow.json",
+  "exit_code": 0,
+  "inputs_sha256": {
+    ".analysis\\reports\\R1872-polininex-client-initialized.objdump.txt": "337984dabcf91cc65de31b305175331bc35eda1a6d6a68b1f101165dc2579d11",
+    ".analysis\\reports\\R1880-client-initialized-method-id-use-map.json": "59924fa4893eeb6d28fd1e438a60267168bba6428dff1449a8350fb971964262",
+    ".analysis\\reports\\R1881-client-initialized-all-jni-calls.json": "998d6f08493ca2688ad9e7c02f9428f638958635f2e276f620655a4669f2ec3d",
+    ".analysis\\reports\\R1879-client-initialized-inline-resolvers.json": "93ccb94bd756441c8b7d767b102ac9b04eafd54a4b4678f1f4fafb7d9f4ca499",
+    ".analysis\\reports\\R1882-client-initialized-static-field-lookups.json": "82812142bd786c93eba96f74c553fb1ff081387a66af01f7af70c1f740f21032",
+    ".analysis\\reports\\R1885-client-initialized-dispatch-path-correction.json": "5980f1c3e3f33ff618b708d537b629951eda7d04de744a256e83be8134c0a52b"
+  },
+  "assertions": {
+    "render_thread_method_and_descriptor": true,
+    "runtime_exception_class_resolution": true,
+    "Polinex_a_Exception_method_resolution": true,
+    "state_7_singleton_field_matches_source_and_jar": true,
+    "state_7_calls_aL_on_singleton": true,
+    "JNI_callsite_mapping": true,
+    "branch_targets": true,
+    "state_21_state_8_and_state_minus_9_routes": true
+  },
+  "key_observations": [
+    {
+      "state": 17,
+      "entry": "0x180043e04",
+      "call": "RenderSystem.isOnRenderThread()Z via CallStaticBooleanMethod at 0x180043e2f",
+      "normal_result": "With no pending JNI exception, true routes to state 7 at 0x180043f63; false routes to state 8 at 0x180043ea2",
+      "exception_result": "The pending throwable is checked against java/lang/RuntimeException; a match is cleared and dispatches state 21 at 0x180043ecb",
+      "other_exception_path": "The shared fallback repeats IsInstanceOf using the same cached class; false returns with the exception pending, true clears and dispatches state -9 at 0x1800460a2"
+    },
+    {
+      "state": 21,
+      "entry": "0x180043ecb",
+      "call": "Polinex.a(Exception):Exception via CallStaticObjectMethod at 0x180043ef4, with the throwable from ExceptionOccurred as its argument",
+      "normal_result": "After ExceptionCheck reports no pending exception, a null return dispatches state 8; a non-null return is passed to JNI Throw at 0x180044bfd",
+      "throw_result": "The pending throwable is checked against RuntimeException; a match is cleared and dispatches state -9, while a non-match remains pending at return",
+      "handler_exception": "If the static handler itself leaves an exception pending, RuntimeException is cleared and dispatches state -9; another exception remains pending at return"
+    },
+    {
+      "state": 7,
+      "entry": "0x180043f63",
+      "static_receiver": "GetStaticObjectField at 0x180043f8e reads me/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll.IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll with descriptor Lme/octo/client/lIlIllllllIIIlIIIlllllllIllllllIIlllllIllllIIIIlIlIIIlIIIllIIIIllIlIIIlIIIlllIllIllll;; the field declaration matches both managed source and the original JAR",
+      "first_call": "CallVoidMethod invokes aL()V at 0x180043fc7 on the object returned by that static field read",
+      "scope": "This confirms only the first state-7 call; the rest of the branch remains open"
+    }
+  ],
+  "acceptance": {
+    "static_reconstruction": "passed for states 17 and 21 call targets, arguments, predicates, JNI exception operations, and dispatcher routes",
+    "build_regression": "not run; this slice changed no Java source",
+    "direct_runtime_probe": "not run",
+    "normal_user_path": "not run",
+    "vanilla_comparison": "not run",
+    "real_server": "not run"
+  },
+  "limits": "States 7, 8, and -9 have confirmed destinations but their complete effects remain open. The native E_CLIENT_INITIALIZED method and remaining dispatcher paths are not restored."
+}

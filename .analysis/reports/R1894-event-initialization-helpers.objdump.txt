@@ -1,0 +1,112 @@
+
+D:/Work/OpenPoli/.analysis/artifacts/jnic-windows-x64.static-pe.bin:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+0000000180002dc0 <.text+0x1dc0>:
+   180002dc0:	f0 f9                	lock stc 
+   180002dc2:	00 31                	add    %dh,(%rcx)
+   180002dc4:	c9                   	leaveq 
+   180002dc5:	8a 94 08 c8 f0 02 00 	mov    0x2f0c8(%rax,%rcx,1),%dl
+   180002dcc:	30 54 0d d0          	xor    %dl,-0x30(%rbp,%rcx,1)
+   180002dd0:	48 ff c1             	inc    %rcx
+   180002dd3:	48 83 f9 21          	cmp    $0x21,%rcx
+   180002dd7:	75 ec                	jne    0x180002dc5
+   180002dd9:	48 89 f1             	mov    %rsi,%rcx
+   180002ddc:	e8 d7 9c 12 00       	callq  0x18012cab8
+   180002de1:	4c 8d 45 f6          	lea    -0xa(%rbp),%r8
+   180002de5:	4c 8d 4d d0          	lea    -0x30(%rbp),%r9
+   180002de9:	48 89 f1             	mov    %rsi,%rcx
+   180002dec:	48 89 c2             	mov    %rax,%rdx
+   180002def:	ff d7                	callq  *%rdi
+   180002df1:	48 89 05 a0 d7 16 00 	mov    %rax,0x16d7a0(%rip)        # 0x180170598
+   180002df8:	e9 64 ff ff ff       	jmpq   0x180002d61
+   180002dfd:	55                   	push   %rbp
+   180002dfe:	56                   	push   %rsi
+   180002dff:	57                   	push   %rdi
+   180002e00:	48 81 ec 90 00 00 00 	sub    $0x90,%rsp
+   180002e07:	48 8d ac 24 80 00 00 	lea    0x80(%rsp),%rbp
+   180002e0e:	00 
+   180002e0f:	48 8b 15 92 d7 16 00 	mov    0x16d792(%rip),%rdx        # 0x1801705a8
+   180002e16:	48 85 d2             	test   %rdx,%rdx
+   180002e19:	74 0e                	je     0x180002e29
+   180002e1b:	48 89 d0             	mov    %rdx,%rax
+   180002e1e:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+   180002e25:	5f                   	pop    %rdi
+   180002e26:	5e                   	pop    %rsi
+   180002e27:	5d                   	pop    %rbp
+   180002e28:	c3                   	retq   
+   180002e29:	48 89 ce             	mov    %rcx,%rsi
+   180002e2c:	48 8b 01             	mov    (%rcx),%rax
+   180002e2f:	48 8b 78 30          	mov    0x30(%rax),%rdi
+   180002e33:	48 8d 15 5b 82 15 00 	lea    0x15825b(%rip),%rdx        # 0x18015b095
+   180002e3a:	48 8d 4d a5          	lea    -0x5b(%rbp),%rcx
+   180002e3e:	41 b8 6b 00 00 00    	mov    $0x6b,%r8d
+   180002e44:	e8 7f b2 12 00       	callq  0x18012e0c8
+   180002e49:	31 c0                	xor    %eax,%eax
+   180002e4b:	48 8b 0d ce d1 16 00 	mov    0x16d1ce(%rip),%rcx        # 0x180170020
+   180002e52:	8a 94 01 a9 ae 03 00 	mov    0x3aea9(%rcx,%rax,1),%dl
+   180002e59:	30 54 05 a5          	xor    %dl,-0x5b(%rbp,%rax,1)
+   180002e5d:	48 ff c0             	inc    %rax
+   180002e60:	48 83 f8 6a          	cmp    $0x6a,%rax
+   180002e64:	75 ec                	jne    0x180002e52
+   180002e66:	48 8d 55 a5          	lea    -0x5b(%rbp),%rdx
+   180002e6a:	48 89 f1             	mov    %rsi,%rcx
+   180002e6d:	ff d7                	callq  *%rdi
+   180002e6f:	4c 8b 06             	mov    (%rsi),%r8
+   180002e72:	48 89 f1             	mov    %rsi,%rcx
+   180002e75:	48 89 c2             	mov    %rax,%rdx
+   180002e78:	41 ff 90 a8 00 00 00 	callq  *0xa8(%r8)
+   180002e7f:	48 89 c2             	mov    %rax,%rdx
+   180002e82:	31 c0                	xor    %eax,%eax
+   180002e84:	f0 48 0f b1 15 1b d7 	lock cmpxchg %rdx,0x16d71b(%rip)        # 0x1801705a8
+   180002e8b:	16 00 
+   180002e8d:	74 8c                	je     0x180002e1b
+   180002e8f:	48 89 c7             	mov    %rax,%rdi
+   180002e92:	48 8b 06             	mov    (%rsi),%rax
+   180002e95:	48 89 f1             	mov    %rsi,%rcx
+   180002e98:	ff 90 b0 00 00 00    	callq  *0xb0(%rax)
+   180002e9e:	48 89 fa             	mov    %rdi,%rdx
+   180002ea1:	e9 75 ff ff ff       	jmpq   0x180002e1b
+   180002ea6:	55                   	push   %rbp
+   180002ea7:	56                   	push   %rsi
+   180002ea8:	57                   	push   %rdi
+   180002ea9:	48 83 ec 40          	sub    $0x40,%rsp
+   180002ead:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+   180002eb2:	48 8b 05 f7 d6 16 00 	mov    0x16d6f7(%rip),%rax        # 0x1801705b0
+   180002eb9:	48 85 c0             	test   %rax,%rax
+   180002ebc:	74 08                	je     0x180002ec6
+   180002ebe:	48 83 c4 40          	add    $0x40,%rsp
+   180002ec2:	5f                   	pop    %rdi
+   180002ec3:	5e                   	pop    %rsi
+   180002ec4:	5d                   	pop    %rbp
+   180002ec5:	c3                   	retq   
+   180002ec6:	48 89 ce             	mov    %rcx,%rsi
+   180002ec9:	48 8b 01             	mov    (%rcx),%rax
+   180002ecc:	48 8b b8 88 03 00 00 	mov    0x388(%rax),%rdi
+   180002ed3:	c6 45 ff 00          	movb   $0x0,-0x1(%rbp)
+   180002ed7:	48 8b 05 42 d1 16 00 	mov    0x16d142(%rip),%rax        # 0x180170020
+   180002ede:	8a 88 13 af 03 00    	mov    0x3af13(%rax),%cl
+   180002ee4:	80 f1 d0             	xor    $0xd0,%cl
+   180002ee7:	88 4d fe             	mov    %cl,-0x2(%rbp)
+   180002eea:	0f 10 05 0f 82 15 00 	movups 0x15820f(%rip),%xmm0        # 0x18015b100
+   180002ef1:	0f 29 45 e0          	movaps %xmm0,-0x20(%rbp)
+   180002ef5:	48 b9 5a 56 c2 f4 47 	movabs $0x55ae47f4c2565a,%rcx
+   180002efc:	ae 55 00 
+   180002eff:	48 89 4d ee          	mov    %rcx,-0x12(%rbp)
+   180002f03:	31 c9                	xor    %ecx,%ecx
+   180002f05:	8a 94 08 14 af 03 00 	mov    0x3af14(%rax,%rcx,1),%dl
+   180002f0c:	30 54 0d e0          	xor    %dl,-0x20(%rbp,%rcx,1)
+   180002f10:	48 ff c1             	inc    %rcx
+   180002f13:	48 83 f9 15          	cmp    $0x15,%rcx
+   180002f17:	75 ec                	jne    0x180002f05
+   180002f19:	48 89 f1             	mov    %rsi,%rcx
+   180002f1c:	e8 dc fe ff ff       	callq  0x180002dfd
+   180002f21:	4c 8d 45 fe          	lea    -0x2(%rbp),%r8
+   180002f25:	4c 8d 4d e0          	lea    -0x20(%rbp),%r9
+   180002f29:	48 89 f1             	mov    %rsi,%rcx
+   180002f2c:	48 89 c2             	mov    %rax,%rdx
+   180002f2f:	ff d7                	callq  *%rdi
+   180002f31:	48 89 05 78 d6 16 00 	mov    %rax,0x16d678(%rip)        # 0x1801705b0
+   180002f38:	eb 84                	jmp    0x180002ebe

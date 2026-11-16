@@ -1,0 +1,113 @@
+  public final void aL();
+    descriptor: ()V
+    Code:
+         0: aconst_null
+         1: astore_1
+         2: aconst_null
+         3: astore_2
+         4: invokestatic  #50                 // Method me/octo/client/lIIIlllIIIIIIlIlIIlIlIllIIIIlIlllIIllIlllIIIIIIIllllIIlIIIllIIIlIIIIlIIllIIllIlIllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:()[I
+         7: astore        6
+         9: aload_0
+        10: invokevirtual #428                // Method aJ:()Ljava/util/List;
+        13: astore        4
+        15: aload         6
+        17: astore_3
+        18: aload         4
+        20: astore        7
+        22: iconst_0
+        23: istore        8
+        25: aload         7
+        27: astore_1
+        28: aload_3
+        29: ifnonnull     71
+        32: aload         7
+        34: instanceof    #390                // class java/util/Collection
+        37: ifeq          68
+        40: aload         7
+        42: astore_1
+        43: aload_3
+        44: ifnull        50
+        47: goto          71
+        50: aload_1
+        51: checkcast     #390                // class java/util/Collection
+        54: invokeinterface #455,  1          // InterfaceMethod java/util/Collection.isEmpty:()Z
+        59: ifeq          68
+        62: iconst_1
+        63: istore        5
+        65: goto          171
+        68: aload         7
+        70: astore_1
+        71: aload_1
+        72: checkcast     #67                 // class java/lang/Iterable
+        75: invokeinterface #66,  1           // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+        80: astore        9
+        82: aload         9
+        84: invokeinterface #72,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        89: ifne          98
+        92: iconst_1
+        93: istore        5
+        95: goto          171
+        98: aload         9
+       100: invokeinterface #78,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       105: astore        10
+       107: aload         10
+       109: checkcast     #333                // class net/minecraft/client/KeyMapping
+       112: astore        11
+       114: iconst_0
+       115: istore        12
+       117: sipush        -21467
+       120: istore        13
+       122: sipush        17874
+       125: istore        14
+       127: aload         11
+       129: ldc_w         #441                // String null cannot be cast to non-null type me.octo.client.mixin.accessors.KeyMappingAccessor
+       132: invokestatic  #443                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+       135: aload         11
+       137: checkcast     #446                // class me/octo/client/mixin/accessors/KeyMappingAccessor
+       140: invokeinterface #448,  1          // InterfaceMethod me/octo/client/mixin/accessors/KeyMappingAccessor.getKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       145: getstatic     #378                // Field com/mojang/blaze3d/platform/InputConstants.UNKNOWN:Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       148: invokestatic  #382                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       151: istore        5
+       153: iload         5
+       155: ifne          168
+       158: iconst_0
+       159: istore        5
+       161: aload_3
+       162: ifnonnull     153
+       165: goto          171
+       168: goto          82
+       171: iload         5
+       173: ifeq          257
+       176: aload         4
+       178: invokeinterface #457,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       183: astore        6
+       185: aload         6
+       187: invokeinterface #72,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+       192: ifeq          237
+       195: aload         6
+       197: invokeinterface #78,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       202: checkcast     #333                // class net/minecraft/client/KeyMapping
+       205: astore        7
+       207: aload         7
+       209: iconst_0
+       210: invokevirtual #332                // Method net/minecraft/client/KeyMapping.setDown:(Z)V
+       213: aload         7
+       215: aload         7
+       217: invokevirtual #460                // Method net/minecraft/client/KeyMapping.getDefaultKey:()Lcom/mojang/blaze3d/platform/InputConstants$Key;
+       220: invokevirtual #463                // Method net/minecraft/client/KeyMapping.setKey:(Lcom/mojang/blaze3d/platform/InputConstants$Key;)V
+       223: aload_3
+       224: ifnull        230
+       227: goto          257
+       230: aload_3
+       231: ifnonnull     237
+       234: goto          185
+       237: invokestatic  #467                // Method net/minecraft/client/KeyMapping.resetMapping:()V
+       240: aload_0
+       241: invokevirtual #270                // Method aI:()V
+       244: aload_0
+       245: invokevirtual #40                 // Method ap:()Lnet/minecraft/client/Minecraft;
+       248: getfield      #134                // Field net/minecraft/client/Minecraft.options:Lnet/minecraft/client/Options;
+       251: invokevirtual #470                // Method net/minecraft/client/Options.save:()V
+       254: goto          257
+       257: return
+
