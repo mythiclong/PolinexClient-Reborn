@@ -53,6 +53,7 @@ Existing records include successful full-source compilation with dependencies ca
 ## Handoff documents
 
 - [Current resume](.analysis/reports/RESUME.md)
+- [2026-11-16 evidence sync index](.analysis/reports/SYNC-20261116.json)
 - [R1909 initialization constructor comparison](.analysis/reports/R1909-state7-constructor-source-bytecode-comparison.json)
 - [Detailed handoff](.analysis/reports/HANDOFF-20261115.md)
 - [FBO restoration report](.analysis/reports/FBO-STATE-RESTORE.md)

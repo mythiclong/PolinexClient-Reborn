@@ -53,6 +53,7 @@ cd PolinexClient-Reborn/polinex-src
 ## 交接资料
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [2026-11-16 证据同步索引](.analysis/reports/SYNC-20261116.json)
 - [R1909 启动事件构造器比较](.analysis/reports/R1909-state7-constructor-source-bytecode-comparison.json)
 - [详细交接](.analysis/reports/HANDOFF-20261115.md)
 - [FBO 状态恢复记录](.analysis/reports/FBO-STATE-RESTORE.md)
