@@ -87,7 +87,7 @@ public final class IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIlll
          .o();
 
       label133:
-      for (boolean[] var26 :((boolean[][])(Object)( var22))) {
+      for (boolean[] var26 : (List<boolean[]>) (List<?>) var22) {
          float var27;
          label156: {
             var27 = var23.a();
@@ -255,7 +255,7 @@ public final class IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIlll
          .o()
          .a();
 
-      for (boolean[] var9 :((boolean[][])(Object)( var5))) {
+      for (boolean[] var9 : (List<boolean[]>) (List<?>) var5) {
          float var10;
          label114: {
             var10 = var7;

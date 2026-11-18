@@ -194,7 +194,7 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
                var6 = Files.readAllBytes(var12.toPath());
             }
             catch (java.io.IOException iOException) {
-               throw new RuntimeException(iOException);
+               throw rethrowIoException(iOException);
             }
             int var7 = var6.length;
             NativePathFinder.loadCache(var6, var7);
@@ -297,7 +297,7 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
                Object var21 = IlllIIllIlIllIIllIIIIlIlIllIlIIlllIIIIlIIIIIIIIIIlIlIIlllIllIlIlIlIllIIllIIlIIlIllllI;
                Long var30 = var7;
                if (var2 != 0) {
-                  if (((me.octo.client.PXDyn)var21).containsKey(var30)) {
+                  if (((java.util.Map)var21).containsKey(var30)) {
                      break label101;
                   }
 
@@ -305,7 +305,7 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
                   var30 = var7;
                }
 
-               ((me.octo.client.PXDyn)var21).put(
+               ((java.util.Map)var21).put(
                   var30,
                   new llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI(
                      var18, var5, var6, new IntArrayList(), new ByteArrayList()
@@ -677,10 +677,15 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
             }
          }
       } catch (java.io.IOException var13) {
-         return;
+         throw rethrowIoException(var13);
       }
 
       me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c("Wrote data to: " + var7 + " for " + me.octo.client.utils.IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.g().name());
+   }
+
+   @SuppressWarnings("unchecked")
+   private static <T extends Throwable> RuntimeException rethrowIoException(java.io.IOException exception) throws T {
+      throw (T)exception;
    }
 
    private final byte a(BlockState var1, BlockPos var2, BlockGetter var3) {
@@ -739,7 +744,7 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
          var9 = var1;
       }
 
-      Block var10 = ((me.octo.client.PXDyn)var9).getBlock();
+      Block var10 = ((BlockState)var9).getBlock();
       short var10002 = 25974;
       var10003 = -25932;
       Intrinsics.checkNotNullExpressionValue(var10, "getBlock(...)");

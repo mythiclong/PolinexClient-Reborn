@@ -1,0 +1,61 @@
+{
+  "experiment_id": "R1949",
+  "slice_id": "PATHFINDER-CACHE-GATE-STATE-OWNER",
+  "baseline_head": "d64b1816f27894ba59b443030f95e72a595e0f65",
+  "evidence_generated_against_source_sha256": "df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+  "methods_reviewed": {
+    "original_n_descriptor": "()Lkotlin/Unit;",
+    "current_n_descriptor": "()Lkotlin/Unit;",
+    "original_loader_descriptor": "()Lkotlin/Unit;",
+    "current_loader_descriptor": "()Lkotlin/Unit;"
+  },
+  "gate_setter": {
+    "owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+    "name": "b",
+    "descriptor": "(I)V"
+  },
+  "callsite_scan": {
+    "class_files_scanned": 5475,
+    "parse_failures": 0,
+    "invokestatic_calls": [
+      {
+        "caller_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "caller_method": "<clinit>",
+        "caller_descriptor": "()V",
+        "bytecode_offset": 9,
+        "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "target_method": "b",
+        "target_descriptor": "(I)V"
+      },
+      {
+        "caller_owner": "me/octo/client/utils/player/pathfinder/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII",
+        "caller_method": "<init>",
+        "caller_descriptor": "(Ljava/util/HashMap;Ljava/util/HashMap;)V",
+        "bytecode_offset": 549,
+        "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "target_method": "b",
+        "target_descriptor": "(I)V"
+      }
+    ]
+  },
+  "conclusion": {
+    "holder_initializer": "setter initializes the gate state to 0",
+    "constructor_path": "the only non-initializer direct setter call is the conditional call in the Pathfinder cache owner constructor; current source and compiled javap retain the same call target and branch role",
+    "static_question": "closed: the previously suspected different gate-state owner/call-target discrepancy is not present",
+    "runtime_question": "open: valid/malformed cache-file behavior has not been executed"
+  },
+  "probe_state": "static only; no game input, client runtime, world, entity, or server probe",
+  "artifacts": {
+    "original_wrapper": "original-n-load-wrapper.javap.txt",
+    "compiled_wrapper": "current-n-load-wrapper.javap.txt",
+    "original_loader": "original-load-helper.javap.txt",
+    "compiled_loader": "current-load-helper.javap.txt",
+    "original_gate_holder": "original-gate-holder.javap.txt",
+    "compiled_gate_holder": "compiled-gate-holder.javap.txt",
+    "original_gate_call_owner": "original-gate-state-writer.javap.txt",
+    "compiled_gate_call_owner": "compiled-gate-state-writer.javap.txt",
+    "callsite_scan": "gate-state-owner-callsite-scan.json"
+  }
+}

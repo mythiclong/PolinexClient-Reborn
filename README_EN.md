@@ -1,45 +1,44 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-26.1.2-6A8E3A?logo=minecraft&logoColor=white" alt="Minecraft 26.1.2">
   <img src="https://img.shields.io/badge/Loader-Fabric-C9B89A" alt="Fabric">
-  <img src="https://img.shields.io/badge/Status-Community%20handoff-orange" alt="Community handoff">
+  <img src="https://img.shields.io/badge/Status-Active%20restoration-orange" alt="Active restoration">
 </p>
 
 <p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/Language-Chinese-lightgrey?style=for-the-badge" alt="Switch to Chinese"></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/语言-简体中文-lightgrey?style=for-the-badge" alt="Switch to Chinese"></a>
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="English"></a>
 </p>
 
 <h1 align="center">PolinexClient-Reborn</h1>
 
-<p align="center">Source reconstruction and community handoff for a Minecraft 26.1.2 Fabric mod</p>
-<p align="center"><b>Work in progress · The author has stopped source restoration · Community contributions welcome</b></p>
+<p align="center">Source reconstruction and community collaboration for a Minecraft 26.1.2 Fabric mod</p>
+<p align="center"><b>Restoration is ongoing · Pathfinder is the current priority</b></p>
 
 ---
 
 ## About
 
-This repository brings together a managed-source snapshot of Polinex, its restoration status, and reviewable evidence for future contributors. The goal is to recover the original features in source that can be built, modified, and run. **This is not a feature-complete or behavior-equivalent release.**
+This repository contains a managed-source snapshot of Polinex, restoration progress, and reviewable evidence. The goal is to recover the original features in source that developers can build, modify, and run. The project is unfinished; source counts and successful compilation do not establish feature equivalence.
 
-The author has stopped restoration work due to limited time and token budget, and is leaving the remaining work to contributors. More than **30B DeepSeek V4.1 Flash tokens** were spent along the way.
+I previously planned to leave the remaining work to the community because of limited time and token budget. I am now continuing the Pathfinder source restoration, and contributors are welcome to take on small, verifiable slices. More than **30B DeepSeek V4.1 Flash tokens** were spent along the way.
 
 ## Project status
 
-Snapshot: **2026-11-16**. The notes below reflect available evidence. Source-inventory counts do not represent completed features.
+Snapshot: **2026-11-18**. Each claim is limited to the evidence linked below; source inventory is not a feature-completion metric.
 
 | Area | Current status |
 |---|---|
-| **Initialization event** | The entry checks, state 17/21, and parts of the state 7/8 and exception paths in `Polinex.a(E_CLIENT_INITIALIZED)` are mapped statically; the native handler has not been restored to managed source. R1909 found all 15 state-7 constructors mismatching the original bytecode; the cause remains under investigation. |
-| **ClickGUI** | Static fixes and compile records exist for page layout and drawing/font helpers. The R1871 no-probe acceptance was **VOID**: startup never reached F4 or page assertions and logged `UnsatisfiedLinkError: Polinex.a(event)`. It does not prove the GUI passed or failed. Page visuals, control interaction, and settings persistence remain open. |
-| **OpenGL FBO** | Framebuffer, program, VAO, array-buffer, and pixel-pack/unpack restoration have original-bytecode comparisons and post-compile semantic checks; client runtime acceptance is still missing. |
-| **Glacite Commission Macro** | Registration paths and some methods have been statically restored. `aC()` / `bs()` still need full control-flow, exception, and side-effect comparison; the feature has not passed a normal user-path acceptance. |
-| **Powder Macro / Pathfinder** | Some source fragments and scan/BFS/flood-fill helpers exist. Behavior that depends on a valid Minecraft world or entities has not been compared in-game. |
-| **Overall acceptance** | A release build from a clean checkout, full feature equivalence, and login/interact/disconnect/reconnect against a compatible live server have not been accepted. |
+| **Pathfinder A\*** | R1947 restores candidate-node and null-contract behavior against complete original bytecode. R1948 fixes A* node-allocation order and the compiled form of its `Function2` callback. Full-tree `compileJava --rerun-tasks --no-daemon` passed with Temurin 25, exit code 0. |
+| **Pathfinder cache** | R1949 compares the complete loader bytecode and scans all 5,475 classes in the original JAR with no parse errors. The gate setter calls in class initialization and the cache-constructor branch are identified. Actual cache-file loading has not been tested. |
+| **Pathfinder runtime acceptance** | No acceptance yet for a valid client world, normal player entry point, collision/route output, or cache reads and writes. It has not been verified on a compatible server. Static restoration and compilation do not replace these checks. |
+| **ClickGUI** | A same-process vanilla Options comparison records working keyboard and scroll input, with no observable mouse response from category icons or the Draw control. Screen event forwarding, control hit-testing, and leaf controls still need inspection; module toggling and settings save/reload are open. |
+| **Other features** | Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, and networking still have incomplete restoration or acceptance. Login, interaction, disconnect, and reconnect against a real compatible server have not passed. |
 
-Source inventory at this snapshot: **1,602** Java files, **1,159,513** lines, **620** `PXDyn` occurrences, **7,075** `PX-FIX` markers, and **219** native declarations. These figures help locate work; they do not measure feature completion. Recalculate them with `python -B .analysis/stats.py`.
+Source inventory: **1,602** Java files, **1,158,787** lines, **569** lines / **581** occurrences of `PXDyn`, **7,029** `PX-FIX` markers, and **219** native declarations. Recalculate with `python -B .analysis/stats.py`. These figures only describe the source inventory.
 
 ## Build
 
-Requires **JDK 25**. This repository contains very long obfuscated class names; on Windows, enable Git long paths before cloning:
+Requires **JDK 25**. This repository has very long obfuscated class names; on Windows, enable Git long paths before cloning:
 
 ```powershell
 git config --global core.longpaths true
@@ -48,32 +47,35 @@ cd PolinexClient-Reborn/polinex-src
 .\gradlew.bat build --no-daemon --console=plain
 ```
 
-Existing records include successful full-source compilation with dependencies cached. **A clean-checkout build, empty-cache build, and release build are not yet confirmed.** The first build needs network access to download Gradle and project dependencies. The expected artifact is under `polinex-src/build/libs/`.
+Existing records include full-source compilation with dependencies cached. A clean-checkout build, empty-cache network build, and release build are not yet confirmed. The first build downloads Gradle and project dependencies. The expected artifact is under `polinex-src/build/libs/`.
 
-## Handoff documents
+## Handoff and evidence
 
-- [Current resume](.analysis/reports/RESUME.md)
-- [2026-11-16 evidence sync index](.analysis/reports/SYNC-20261116.json)
-- [R1909 initialization constructor comparison](.analysis/reports/R1909-state7-constructor-source-bytecode-comparison.json)
-- [Detailed handoff](.analysis/reports/HANDOFF-20261115.md)
-- [FBO restoration report](.analysis/reports/FBO-STATE-RESTORE.md)
-- [Sanitized R1871 machine record](.analysis/evidence/clickgui/r1871-five-pages-no-probe/runtime-public.json)
+- [Current short handoff](.analysis/reports/RESUME.md)
+- [2026-11-18 Pathfinder sync record](.analysis/reports/SYNC-20261118-PATHFINDER.json)
+- [R1947 candidate-node and null-contract audit](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
+- [R1948 A* core audit](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
+- [R1949 cache loader and gate call sites](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
+- [Reproducible original-JAR call-site scanner](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
 - [Contribution notes](CONTRIBUTING.md)
 
-## Notes for contributors
+## Contributing
 
-- The repository root includes `rawpolinex.jar` (SHA-256 `D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26`), byte-identical to the `.analysis/cracked.jar` used for this analysis. It is a behavioral input, not a managed-source implementation; protected classes and unrecovered JNI payloads must not be presented as source.
-- Record the full class name, method name, and JVM descriptor when comparing methods. Check fields, call targets, branches, default arguments, exceptions, and side effects. Compilation or a lower marker count does not establish behavioral equivalence.
-- Validate world/entity-dependent logic through valid game state and normal entry points. Keep minimal machine-readable evidence and label VOID runs, environment noise, and unfinished work.
-- The snapshot's `fabric.mod.json` still references `occlusionculling-0.0.8-SNAPSHOT.jar`, which is not included. The original nested package contained seven `me/octo/client` classes, one of which has no corresponding source; client loading from this snapshot is therefore unverified.
-- This repository has no `LICENSE`. It does not grant permission to use or redistribute the original Polinex or its binaries.
+- Compare full bytecode using the complete class name, method name, and JVM descriptor. Check fields, call targets, branches, default arguments, exceptions, and side effects.
+- Validate world- or entity-dependent logic through a valid game state and normal entry point. Invalid fixtures, marker counts, successful startup, or lack of a crash do not establish behavior equivalence.
+- Keep source-content SHA-256, commands and exit codes, inputs/assertions, probe state, and necessary logs. Label VOID runs and unfinished acceptance dimensions.
+- Do not replace managed-source implementation with protected original classes or unrecovered JNI payloads.
+
+## Notes
+
+The repository root includes `rawpolinex.jar` (SHA-256 `D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26`) as a local behavioral reference; it does not replace managed source. This repository has no `LICENSE` and grants no rights to the original Polinex or its binaries.
 
 ## Thanks
 
 Thanks to 鲨鱼神 (QQ: 1127367472) for cracking Polinex. Thanks to 猪圈中转站. If you would like to try it, you can [register with my invite link](https://api.pigcode.org/register?invite=N9SM4PWP).
 
-Models used: **DeepSeek V4 Flash**, **DeepSeek V4.1 Flash**, **DeepSeek V4 Pro**, **Kimi K3**, **Kimi K3.1 Pro**, **Opus 5.5**, **Opus 4.8**, **GPT-6 Luna**, **GPT-6 Sol**, **GPT-6.1 Sol**, **GPT-6.1 Terra**.
+Models used: DeepSeek V4 Flash, DeepSeek V4.1 Flash, DeepSeek V4 Pro, Kimi K3, Kimi K3.1 Pro, Opus 5.5, Opus 4.8, GPT-6 Luna, GPT-6 Sol, GPT-6.1 Sol, and GPT-6.1 Terra.
 
 ---
 
-<p align="center">If you want to continue, start with a small, clearly scoped task that can produce behavioral evidence.</p>
+<p align="center">Community contributions are welcome; start with one clearly scoped task that can produce behavioral evidence.</p>

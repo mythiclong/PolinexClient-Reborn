@@ -1192,7 +1192,9 @@ public final class lIllIlIIIIIllIlllIlIlIIIlIlllIIIIllIIlIIIlIIllllIIIlIIlIIIIII
          boolean var86 = me.octo.client.utils.player.pathfinder.IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.a(
             me.octo.client.utils.player.pathfinder.IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI,
             var61.a(),
-            false);
+             false,
+             2,
+             null);
          if (var2 != null) {
             if (!var86) {
                continue;

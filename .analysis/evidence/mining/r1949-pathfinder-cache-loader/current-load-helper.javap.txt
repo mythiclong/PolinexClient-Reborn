@@ -1,0 +1,230 @@
+  private static final kotlin.Unit polinex$loadPathfinderCacheOriginal() throws java.lang.Throwable;
+    descriptor: ()Lkotlin/Unit;
+    Code:
+         0: invokestatic  #515                // Method java/lang/System.currentTimeMillis:()J
+         3: putstatic     #520                // Field IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl:J
+         6: invokestatic  #63                 // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$PXEvMid.k:()I
+         9: istore_0
+        10: getstatic     #68                 // Field me/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl;
+        13: invokevirtual #74                 // Method me/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.g:()Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+        16: astore_1
+        17: aconst_null
+        18: astore_2
+        19: iload_0
+        20: ifeq          34
+        23: aload_1
+        24: getstatic     #982                // Field me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llIlIIlIlIIllIlIIIlIIlIlIIIlIlIIIIIIIIIllllIlIllIIlIIlIllIIIIIIlIlIllIIIllIlllllIlllI:Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+        27: if_acmpne     34
+        30: getstatic     #984                // Field me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl:Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+        33: astore_1
+        34: new           #925                // class java/io/File
+        37: dup
+        38: new           #925                // class java/io/File
+        41: dup
+        42: getstatic     #987                // Field me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl;
+        45: invokevirtual #992                // Method me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.a:()Ljava/lang/String;
+        48: getstatic     #995                // Field me/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI:Lme/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        51: invokevirtual #1001               // Method me/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Ljava/lang/String;
+        54: invokespecial #1004               // Method java/io/File."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+        57: aload_1
+        58: invokevirtual #1007               // Method me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.name:()Ljava/lang/String;
+        61: invokedynamic #1010,  0           // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        66: invokespecial #1011               // Method java/io/File."<init>":(Ljava/io/File;Ljava/lang/String;)V
+        69: astore_3
+        70: aload_3
+        71: invokevirtual #1014               // Method java/io/File.exists:()Z
+        74: istore        4
+        76: iload_0
+        77: ifeq          85
+        80: iload         4
+        82: ifne          106
+        85: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        88: astore_2
+        89: iload_0
+        90: ifne          98
+        93: iload         4
+        95: goto          99
+        98: iconst_1
+        99: putstatic     #55                 // Field lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI:Z
+       102: getstatic     #974                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+       105: areturn
+       106: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       109: astore        5
+       111: iload_0
+       112: ifne          119
+       115: aconst_null
+       116: goto          129
+       119: invokestatic  #1017               // Method me/octo/client/utils/player/pathfinder/IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.a:()Ljava/util/HashMap;
+       122: aload_1
+       123: invokevirtual #236                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       126: checkcast     #210                // class java/util/HashMap
+       129: astore        6
+       131: aload         6
+       133: ifnonnull     145
+       136: new           #210                // class java/util/HashMap
+       139: dup
+       140: invokespecial #212                // Method java/util/HashMap."<init>":()V
+       143: astore        6
+       145: aload         5
+       147: aload         6
+       149: invokevirtual #1022               // Method a:(Ljava/util/HashMap;)V
+       152: aload_3
+       153: invokestatic  #1023               // Method polinex$validPathfinderCache:(Ljava/io/File;)Z
+       156: ifne          164
+       159: aload_3
+       160: invokestatic  #1027               // Method polinex$invalidatePathfinderCache:(Ljava/io/File;)Lkotlin/Unit;
+       163: areturn
+       164: aconst_null
+       165: astore        7
+       167: aconst_null
+       168: astore        8
+       170: new           #1031               // class java/io/RandomAccessFile
+       173: dup
+       174: aload_3
+       175: ldc_w         #1033               // String r
+       178: invokespecial #1035               // Method java/io/RandomAccessFile."<init>":(Ljava/io/File;Ljava/lang/String;)V
+       181: invokevirtual #1036               // Method java/io/RandomAccessFile.getChannel:()Ljava/nio/channels/FileChannel;
+       184: astore        7
+       186: aload         7
+       188: checkcast     #1040               // class java/nio/channels/FileChannel
+       191: astore        9
+       193: aload         9
+       195: getstatic     #1042               // Field java/nio/channels/FileChannel$MapMode.READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
+       198: lconst_0
+       199: aload         9
+       201: invokevirtual #1048               // Method java/nio/channels/FileChannel.size:()J
+       204: invokevirtual #1050               // Method java/nio/channels/FileChannel.map:(Ljava/nio/channels/FileChannel$MapMode;JJ)Ljava/nio/MappedByteBuffer;
+       207: astore        10
+       209: aload         9
+       211: invokevirtual #1048               // Method java/nio/channels/FileChannel.size:()J
+       214: ldc2_w        #1054               // long 4l
+       217: lsub
+       218: ldc2_w        #1056               // long 5l
+       221: ldiv
+       222: l2i
+       223: istore        11
+       225: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       228: astore_2
+       229: getstatic     #59                 // Field lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI:Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+       232: iload         11
+       234: invokevirtual #1058               // Method it/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap.ensureCapacity:(I)V
+       237: aload         10
+       239: invokevirtual #1061               // Method java/nio/MappedByteBuffer.getInt:()I
+       242: istore        12
+       244: iconst_0
+       245: istore        13
+       247: iload         13
+       249: iload         12
+       251: if_icmpge     395
+       254: aload         10
+       256: invokevirtual #1061               // Method java/nio/MappedByteBuffer.getInt:()I
+       259: istore        14
+       261: aload         10
+       263: invokevirtual #1061               // Method java/nio/MappedByteBuffer.getInt:()I
+       266: iconst_4
+       267: ishl
+       268: istore        15
+       270: aload         10
+       272: invokevirtual #1061               // Method java/nio/MappedByteBuffer.getInt:()I
+       275: iconst_4
+       276: ishl
+       277: istore        16
+       279: getstatic     #177                // Field me/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII;
+       282: iload         15
+       284: iconst_0
+       285: iload         16
+       287: invokevirtual #1064               // Method me/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII.a:(III)J
+       290: lstore        17
+       292: iload_0
+       293: ifne          299
+       296: goto          395
+       299: iconst_0
+       300: istore        19
+       302: iload         19
+       304: iload         14
+       306: if_icmpge     389
+       309: aload         10
+       311: invokevirtual #1067               // Method java/nio/MappedByteBuffer.get:()B
+       314: istore        20
+       316: aload         10
+       318: invokevirtual #1061               // Method java/nio/MappedByteBuffer.getInt:()I
+       321: istore        21
+       323: lload         17
+       325: iload         21
+       327: bipush        15
+       329: iand
+       330: i2l
+       331: bipush        38
+       333: lshl
+       334: lor
+       335: iload         21
+       337: bipush        8
+       339: ishr
+       340: sipush        255
+       343: iand
+       344: i2l
+       345: bipush        26
+       347: lshl
+       348: lor
+       349: iload         21
+       351: iconst_4
+       352: ishr
+       353: bipush        15
+       355: iand
+       356: i2l
+       357: lor
+       358: lstore        22
+       360: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       363: astore_2
+       364: getstatic     #59                 // Field lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI:Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+       367: lload         22
+       369: invokestatic  #185                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       372: iload         20
+       374: invokestatic  #498                // Method java/lang/Byte.valueOf:(B)Ljava/lang/Byte;
+       377: invokeinterface #602,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       382: pop
+       383: iinc          19, 1
+       386: goto          302
+       389: iinc          13, 1
+       392: goto          247
+       395: getstatic     #974                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+       398: astore        14
+       400: aload         7
+       402: aload         8
+       404: invokestatic  #1069               // Method kotlin/io/CloseableKt.closeFinally:(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+       407: goto          431
+       410: astore        9
+       412: aload         9
+       414: astore        8
+       416: aload         9
+       418: athrow
+       419: astore        24
+       421: aload         7
+       423: aload         8
+       425: invokestatic  #1069               // Method kotlin/io/CloseableKt.closeFinally:(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+       428: aload         24
+       430: athrow
+       431: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       434: astore_2
+       435: iconst_1
+       436: putstatic     #55                 // Field lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI:Z
+       439: getstatic     #353                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       442: astore_2
+       443: getstatic     #59                 // Field lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI:Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+       446: invokevirtual #1075               // Method it/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap.size:()I
+       449: istore        9
+       451: invokestatic  #515                // Method java/lang/System.currentTimeMillis:()J
+       454: getstatic     #520                // Field IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl:J
+       457: lsub
+       458: lstore        10
+       460: iload         9
+       462: lload         10
+       464: invokedynamic #1076,  0           // InvokeDynamic #7:makeConcatWithConstants:(IJ)Ljava/lang/String;
+       469: invokestatic  #1079               // Method me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.d:(Ljava/lang/String;)V
+       472: getstatic     #974                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+       475: areturn
+      Exception table:
+         from    to  target type
+           170   400   410   Class java/lang/Throwable
+           170   400   419   any
+           410   421   419   any

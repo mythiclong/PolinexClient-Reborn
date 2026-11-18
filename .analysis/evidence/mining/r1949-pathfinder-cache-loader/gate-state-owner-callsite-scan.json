@@ -1,0 +1,37 @@
+{
+  "experiment_id": "R1949",
+  "generated_utc": "2026-11-18T02:32:41.096621+00:00",
+  "jar_path": "D:\\Work\\OpenPoli\\.analysis\\cracked.jar",
+  "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "scanner_path": "C:\\Users\\AutoB\\.codex\\worktrees\\bootstrap-eclientinit\\OpenPoli\\.analysis\\evidence\\mining\\r1949-pathfinder-cache-loader\\verify_gate_state_owner.py",
+  "scanner_sha256": "f58541b9b6b1b99994e52429d5f774a905ddf7f57fc3e3efb610a93fdea79c9c",
+  "method": {
+    "owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+    "name": "b",
+    "descriptor": "(I)V"
+  },
+  "class_files_scanned": 5475,
+  "parse_failures": [],
+  "invokestatic_call_count": 2,
+  "invokestatic_calls": [
+    {
+      "caller_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "caller_method": "<clinit>",
+      "caller_descriptor": "()V",
+      "bytecode_offset": 9,
+      "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "target_method": "b",
+      "target_descriptor": "(I)V"
+    },
+    {
+      "caller_owner": "me/octo/client/utils/player/pathfinder/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII",
+      "caller_method": "<init>",
+      "caller_descriptor": "(Ljava/util/HashMap;Ljava/util/HashMap;)V",
+      "bytecode_offset": 549,
+      "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "target_method": "b",
+      "target_descriptor": "(I)V"
+    }
+  ],
+  "probe_state": "static class-file instruction scan; no runtime/cache/world/client/server probe"
+}

@@ -32,7 +32,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
    @NotNull
    private List<AABB> llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI;
    @NotNull
-   private me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
+   private me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
    private static String[] lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI;
    private static String[] b;
    private static String[] c;
@@ -48,7 +48,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
       @NotNull List<IlIlllIIIllllIIIIIlIIIIIIIlIllIlIIIlllIllllIlIlIIIlIlIIllIIllIlIIIlllIIIllllllIIlIlll> var8,
       @NotNull List<? extends Function1<? super Entity, Boolean>> var9,
       @NotNull List<? extends AABB> var10,
-      @NotNull me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var11
+      @NotNull me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid var11
    ) {
       short var10001 = -31357;
       short var10002 = 20679;
@@ -148,7 +148,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
    }
 
    @NotNull
-   public final me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll k() {
+   public final me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid k() {
       return this.lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
    }
 
@@ -203,7 +203,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
    }
 
    @NotNull
-   public final me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll v() {
+   public final me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid v() {
       return this.lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
    }
 
@@ -219,7 +219,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
       @NotNull List<IlIlllIIIllllIIIIIlIIIIIIIlIllIlIIIlllIllllIlIlIIIlIlIIllIIllIlIIIlllIIIllllllIIlIlll> var8,
       @NotNull List<? extends Function1<? super Entity, Boolean>> var9,
       @NotNull List<? extends AABB> var10,
-      @NotNull me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var11
+      @NotNull me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid var11
    ) {
       short var10001 = -31330;
       short var10002 = 20775;
@@ -263,7 +263,7 @@ public final class IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllI
    @Override
    public String toString() {
       short var10000 = -31349;
-      me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var1 = this.lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
+      me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid var1 = this.lIIIIIIlllIlllllIlllIllIIIlIlllIllIlIllIIIlllIlIllIlIllllllIIlIIlIlllIIIlIIIlIIlIlIIl;
       List var2 = this.llIllIllIllllllIllIlIIIlIllIIlIlIllIllIllIIIllIIlIlIIIllllllllIllIlllllIlIIlIlIlllllI;
       List var3 = this.IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII;
       List var4 = this.lIlIIllIIIIIIIIlIllIllIllIIIlIlllIlIlIllIlIIlllIllIIIllllllIlIlIIlIIIllIIIlIIlIIIIlll;
@@ -892,11 +892,11 @@ while (true) {
 
       return c[var2];
    }
-   public IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI(java.util.List var1, java.util.List var2, java.util.List var3, java.util.List var4, net.minecraft.world.phys.Vec3 var5, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var6, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var7, java.util.List var8, java.util.List var9, java.util.List var10, me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var11, int var12, kotlin.jvm.internal.DefaultConstructorMarker var13) { /* flags 0x1001 */
+   public IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI(java.util.List var1, java.util.List var2, java.util.List var3, java.util.List var4, net.minecraft.world.phys.Vec3 var5, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var6, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var7, java.util.List var8, java.util.List var9, java.util.List var10, me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid var11, int var12, kotlin.jvm.internal.DefaultConstructorMarker var13) { /* flags 0x1001 */
       this(var1, var2, var3, var4, var5, var6, var7, var8, (((var12 & 256) != 0) ? kotlin.collections.CollectionsKt.emptyList() : var9), (((var12 & 512) != 0) ? kotlin.collections.CollectionsKt.emptyList() : var10), (((var12 & 1024) != 0) ? null : var11));
    }
 
-   public static me.octo.client.IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI a(me.octo.client.IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI var0, java.util.List var1, java.util.List var2, java.util.List var3, java.util.List var4, net.minecraft.world.phys.Vec3 var5, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var6, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var7, java.util.List var8, java.util.List var9, java.util.List var10, me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var11, int var12, java.lang.Object var13) { /* flags 0x1009 */
+   public static me.octo.client.IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI a(me.octo.client.IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI var0, java.util.List var1, java.util.List var2, java.util.List var3, java.util.List var4, net.minecraft.world.phys.Vec3 var5, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var6, me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var7, java.util.List var8, java.util.List var9, java.util.List var10, me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid var11, int var12, java.lang.Object var13) { /* flags 0x1009 */
       String[] var14 = w();
       if (var14 == null && (var12 & 1) != 0) { var1 = var0.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl; }
       if (var14 == null && (var12 & 2) != 0) { var2 = var0.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII; }

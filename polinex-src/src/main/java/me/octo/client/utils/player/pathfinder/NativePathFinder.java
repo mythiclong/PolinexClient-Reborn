@@ -7,7 +7,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class NativePathFinder {
@@ -112,14 +114,13 @@ public class NativePathFinder {
    }
 
    public static long[] findPath(long var0, long var2, float var4, int var5, boolean var6) {
-      Object f = null; // PX-FIX
       if (var0 == var2) {
          return new long[]{var0};
       } else {
          int var7 = var5 > 0 ? var5 : 4096;
          PriorityQueue var8 = new PriorityQueue(Comparator.<NativePathFinder.Node>comparingDouble(var0x -> var0x.f)); // PX-FIX: lambda$findPath$0 定案 (Node.f:double)
-         HashMap var9 = new HashMap();
-         HashSet var10 = new HashSet();
+         Map<Long, NativePathFinder.Node> var9 = new HashMap<>();
+         Set<Long> var10 = new HashSet<>();
          NativePathFinder.Node var11 = new NativePathFinder.Node(var0, null, 0.0, heuristic(var0, var2));
          var8.add(var11);
          var9.put(var0, var11);
@@ -286,7 +287,6 @@ public class NativePathFinder {
       final double f;
 
       Node(long var1, NativePathFinder.Node var3, double var4, double var6) {
-      Object f = null; // PX-FIX
          this.pos = var1;
          this.parent = var3;
          this.g = var4;

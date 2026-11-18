@@ -1,0 +1,24 @@
+{
+  "experiment_id": "R1948-CORR-1",
+  "slice_id": "PATHFINDER-ASTAR-SOURCE-TREE-FINGERPRINT-CORRECTION",
+  "generated_utc": "2026-11-18T02:47:01.518450+00:00",
+  "evidence_produced_against_commit": "d64b1816f27894ba59b443030f95e72a595e0f65",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_file_count": 1602,
+  "method": "SHA256(UTF-8 of path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+  "r1947_file_manifest_aggregate_recomputed": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+  "r1947_file_manifest_aggregate_recorded": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+  "r1947_manifest_matches_recomputation": true,
+  "changed_source_files_vs_r1947_manifest": [
+    {
+      "path": "me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java",
+      "before": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+      "after": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e"
+    }
+  ],
+  "aggregate_recomputed_from_all_current_source_files": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+  "r1948_previous_reported_aggregate": "88c34439c3905f1300a0b09b561204f63255135e2591eb9c43a5de9165211a66",
+  "r1948_previous_reported_aggregate_matches_recomputation": false,
+  "interpretation": "The full current file set and the R1947 per-file manifest differ at exactly the A* owner source file, whose post-fix SHA-256 is recorded by R1948. Replacing that one file hash and recomputing all 1602 entries yields the corrected aggregate above. The prior R1948 aggregate is retained here as a superseded incorrect value; the R1948 build, method hash, and per-file source hash are unaffected.",
+  "probe_state": "source-manifest consistency check only; no client/world/server interaction"
+}

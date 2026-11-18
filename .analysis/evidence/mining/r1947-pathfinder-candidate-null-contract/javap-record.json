@@ -1,0 +1,9 @@
+{
+  "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build/classes/java/main -c -p -s me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI",
+  "working_directory": "C:\\Users\\AutoB\\.codex\\worktrees\\bootstrap-eclientinit\\OpenPoli\\polinex-src",
+  "started_utc": "2026-11-18T01:33:36.2222522+00:00",
+  "ended_utc": "2026-11-18T01:33:36.6276231+00:00",
+  "exit_code": 0,
+  "source_sha256": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+  "owner": "me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI"
+}

@@ -1,0 +1,195 @@
+  public final java.util.ArrayList<net.minecraft.world.phys.Vec3> a(net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, boolean);
+    descriptor: (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/ArrayList;
+    Code:
+         0: invokestatic  #34                 // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$PXEvMid.k:()I
+         3: istore        4
+         5: aload_1
+         6: ldc           #25                 // String target
+         8: invokestatic  #27                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        11: aload_1
+        12: putstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+        15: aload_2
+        16: putstatic     #44                 // Field lIIlllIlIIlIIIllIllllllIIIIIIllIIllIIIIIllIllIllllllIIlIIlIIIlllIIIIIlIIllIlIIIIIIIlI:Lnet/minecraft/core/BlockPos;
+        19: bipush        40
+        21: istore        5
+        23: new           #47                 // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid
+        26: dup
+        27: getstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+        30: invokevirtual #49                 // Method net/minecraft/core/BlockPos.getX:()I
+        33: iload         5
+        35: iadd
+        36: getstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+        39: invokevirtual #49                 // Method net/minecraft/core/BlockPos.getX:()I
+        42: iload         5
+        44: isub
+        45: getstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+        48: invokevirtual #54                 // Method net/minecraft/core/BlockPos.getZ:()I
+        51: iload         5
+        53: iadd
+        54: getstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+        57: invokevirtual #54                 // Method net/minecraft/core/BlockPos.getZ:()I
+        60: iload         5
+        62: isub
+        63: invokespecial #57                 // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid."<init>":(IIII)V
+        66: putstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+        69: aload_0
+        70: invokevirtual #64                 // Method h:()V
+        73: iload         4
+        75: ifne          80
+        78: aconst_null
+        79: areturn
+        80: aload_0
+        81: aload_0
+        82: invokevirtual #7                  // Method a:()Lnet/minecraft/client/Minecraft;
+        85: getfield      #67                 // Field net/minecraft/client/Minecraft.player:Lnet/minecraft/client/player/LocalPlayer;
+        88: invokevirtual #71                 // Method a:(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/core/BlockPos;
+        91: astore        6
+        93: aload         6
+        95: ifnonnull     100
+        98: aconst_null
+        99: areturn
+       100: getstatic     #74                 // Field IIllIllIlllIlllIIllIlIIlllIlIIlIIIIIIIlIllIlIlIlIIIlIIIlllIIIIlIllIlIlIlllIIIllIllIll:Ljava/util/HashMap;
+       103: aload         6
+       105: invokevirtual #78                 // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       108: astore        7
+       110: aload         7
+       112: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       115: aload         7
+       117: checkcast     #84                 // class java/lang/Number
+       120: invokevirtual #86                 // Method java/lang/Number.byteValue:()B
+       123: istore        8
+       125: new           #90                 // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       128: dup
+       129: iconst_0
+       130: iconst_0
+       131: iconst_0
+       132: invokespecial #92                 // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll."<init>":(III)V
+       135: astore        9
+       137: getstatic     #95                 // Field llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl:Ljava/util/HashMap;
+       140: iload         8
+       142: invokestatic  #98                 // Method java/lang/Byte.valueOf:(B)Ljava/lang/Byte;
+       145: invokevirtual #78                 // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       148: astore        10
+       150: aload         10
+       152: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       155: new           #104                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       158: dup
+       159: aload         6
+       161: iload         8
+       163: aload         9
+       165: aload         10
+       167: checkcast     #84                 // class java/lang/Number
+       170: invokevirtual #106                // Method java/lang/Number.doubleValue:()D
+       173: invokespecial #110                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI."<init>":(Lnet/minecraft/core/BlockPos;BLme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;D)V
+       176: astore        11
+       178: aload         11
+       180: aload_0
+       181: aload         11
+       183: invokevirtual #113                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lnet/minecraft/core/BlockPos;
+       186: invokevirtual #116                // Method c:(Lnet/minecraft/core/BlockPos;)D
+       189: invokevirtual #120                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b:(D)V
+       192: aload         11
+       194: dconst_0
+       195: invokevirtual #124                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c:(D)V
+       198: getstatic     #126                // Field IIlllllIlIIlIllIllllIlIIlIIIlllllIIllIlIlIlIIIIlllIIlllIllIllIIIIIllllIIIIllllIIlIlII:Ljava/util/HashMap;
+       201: aload         6
+       203: aload         11
+       205: invokeinterface #129,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       210: pop
+       211: getstatic     #126                // Field IIlllllIlIIlIllIllllIlIIlIIIlllllIIllIlIlIlIIIIlllIIlllIllIllIIIIIllllIIIIllllIIlIlII:Ljava/util/HashMap;
+       214: invokeinterface #135,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+       219: ifne          452
+       222: getstatic     #126                // Field IIlllllIlIIlIllIllllIlIIlIIIlllllIIllIlIlIlIIIIlllIIlllIllIllIIIIIllllIIIIllllIIlIlII:Ljava/util/HashMap;
+       225: invokeinterface #139,  1          // InterfaceMethod java/util/Map.entrySet:()Ljava/util/Set;
+       230: astore        12
+       232: aload         12
+       234: invokeinterface #143,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       239: astore        13
+       241: aload         13
+       243: invokeinterface #149,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       248: ifne          259
+       251: new           #154                // class java/util/NoSuchElementException
+       254: dup
+       255: invokespecial #156                // Method java/util/NoSuchElementException."<init>":()V
+       258: athrow
+       259: aload         13
+       261: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       266: checkcast     #161                // class java/util/Map$Entry
+       269: astore        14
+       271: aload         13
+       273: invokeinterface #149,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       278: ifeq          355
+       281: aload         14
+       283: astore        15
+       285: aload         15
+       287: invokeinterface #163,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       292: checkcast     #104                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       295: invokevirtual #166                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.e:()D
+       298: dstore        16
+       300: aload         13
+       302: invokeinterface #157,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       307: checkcast     #161                // class java/util/Map$Entry
+       310: astore        18
+       312: aload         18
+       314: invokeinterface #163,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       319: checkcast     #104                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       322: invokevirtual #166                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.e:()D
+       325: dstore        19
+       327: dload         16
+       329: dload         19
+       331: invokestatic  #169                // Method java/lang/Double.compare:(DD)I
+       334: ifle          345
+       337: aload         18
+       339: astore        14
+       341: dload         19
+       343: dstore        16
+       345: aload         13
+       347: invokeinterface #149,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       352: ifne          300
+       355: aload         14
+       357: invokeinterface #163,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       362: checkcast     #104                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       365: astore        15
+       367: aload         15
+       369: invokevirtual #113                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lnet/minecraft/core/BlockPos;
+       372: astore        16
+       374: getstatic     #126                // Field IIlllllIlIIlIllIllllIlIIlIIIlllllIIllIlIlIlIIIIlllIIlllIllIllIIIIIllllIIIIllllIIlIlII:Ljava/util/HashMap;
+       377: aload         16
+       379: invokevirtual #175                // Method java/util/HashMap.remove:(Ljava/lang/Object;)Ljava/lang/Object;
+       382: pop
+       383: getstatic     #178                // Field IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll:Ljava/util/HashSet;
+       386: aload         16
+       388: invokevirtual #182                // Method java/util/HashSet.add:(Ljava/lang/Object;)Z
+       391: pop
+       392: iload         4
+       394: ifne          400
+       397: goto          452
+       400: aload         16
+       402: getstatic     #40                 // Field IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI:Lnet/minecraft/core/BlockPos;
+       405: invokestatic  #188                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       408: ifeq          431
+       411: aload_0
+       412: aload         16
+       414: invokevirtual #192                // Method b:(Lnet/minecraft/core/BlockPos;)Ljava/util/List;
+       417: astore        17
+       419: aload_0
+       420: invokevirtual #64                 // Method h:()V
+       423: aload_0
+       424: aload         17
+       426: iload_3
+       427: invokevirtual #195                // Method a:(Ljava/util/List;Z)Ljava/util/ArrayList;
+       430: areturn
+       431: aload_0
+       432: aload         15
+       434: new           #198                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$1
+       437: dup
+       438: aload_0
+       439: aload         15
+       441: aload         16
+       443: invokespecial #200                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$1."<init>":(Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Lnet/minecraft/core/BlockPos;)V
+       446: invokevirtual #203                // Method a:(Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Lkotlin/jvm/functions/Function2;)V
+       449: goto          211
+       452: aload_0
+       453: invokevirtual #64                 // Method h:()V
+       456: aconst_null
+       457: areturn

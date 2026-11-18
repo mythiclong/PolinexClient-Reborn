@@ -38,12 +38,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII {
-   public static <T> T a(Object p0, Object p1, Object p2, Object p3, Object p4) { return null; } // PX-FIX ovld
-
-   public static me.octo.client.PXDyn var14 = null; // PX-FIX missing field v2
-   
-   public static <T> T a(Object p0, Object p1, Object p2, Object p3) { return null; } // PX-FIX ovld
-
    @NotNull
    public static lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
    @NotNull
@@ -213,7 +207,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                break label142;
             }
 
-            if (((me.octo.client.PXDyn)var18).isEmpty()) {
+            if (((Collection<?>)var18).isEmpty()) {
                return (0 != 0);
             }
          }
@@ -386,6 +380,10 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
    }
 
    public static boolean a(lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII var0, List<String> var1, Vec3 var2, double var3, int var4, Object var5) {
+      int mode = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+      if (mode == 0) {
+         return (var4 & 4) != 0;
+      }
       if ((var4 & 4) != 0) {
          var3 = 0.0;
       }
@@ -393,6 +391,10 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
    }
 
    public static boolean a(lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII var0, Vec3 var1, double var2, int var3, Object var4) {
+      int mode = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+      if (mode == 0) {
+         return (var3 & 2) != 0;
+      }
       if ((var3 & 2) != 0) {
          var2 = 0.0;
       }
@@ -1082,7 +1084,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                      break label167;
                   }
 
-                  if (((me.octo.client.PXDyn)var36).isEmpty()) {
+                  if (((Collection<?>)var36).isEmpty()) {
                      var37 = false;
                      break label189;
                   }
@@ -1091,7 +1093,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                var36 = var9;
             }
 
-            Iterator var11 = ((me.octo.client.PXDyn)var36).iterator();
+            Iterator var11 = ((Iterable<?>)var36).iterator();
 
             label158:
             while (true) {
@@ -1127,7 +1129,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                         break label144;
                      }
 
-                     if (((me.octo.client.PXDyn)var38).isEmpty()) {
+                     if (((Collection<?>)var38).isEmpty()) {
                         var39 = false;
                         break label191;
                      }
@@ -1136,7 +1138,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                   var38 = var20;
                }
 
-               Iterator var24 = ((me.octo.client.PXDyn)var38).iterator();
+               Iterator var24 = ((Iterable<?>)var38).iterator();
 
                label137:
                while (true) {
@@ -1469,7 +1471,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                      break label85;
                   }
 
-                  if (((me.octo.client.PXDyn)var21).isEmpty()) {
+                  if (((Collection<?>)var21).isEmpty()) {
                      var22 = false;
                      break label155;
                   }
@@ -1478,7 +1480,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                var21 = var14;
             }
 
-            Iterator var16 = ((me.octo.client.PXDyn)var21).iterator();
+            Iterator var16 = ((Iterable<?>)var21).iterator();
 
             label76:
             while (true) {
@@ -1875,7 +1877,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                                                       break label96;
                                                    }
 
-                                                   if (((me.octo.client.PXDyn)var23).isEmpty()) {
+                                                   if (((Collection<?>)var23).isEmpty()) {
                                                       var24 = false;
                                                       break label132;
                                                    }
@@ -1884,7 +1886,7 @@ public final class lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIl
                                                 var23 = var16;
                                              }
 
-                                             Iterator var18 = ((me.octo.client.PXDyn)var23).iterator();
+                                             Iterator var18 = ((Iterable<?>)var23).iterator();
 
                                              label89:
                                              while (true) {

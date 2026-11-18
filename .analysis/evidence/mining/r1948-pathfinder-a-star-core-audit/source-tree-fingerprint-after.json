@@ -1,0 +1,16 @@
+{
+  "captured_utc": "2026-11-18T02:06:35.451958+00:00",
+  "source_root": "polinex-src/src/main/java",
+  "java_source_count": 1602,
+  "aggregate_algorithm": "SHA256(UTF-8 of path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+  "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+  "changed_path_sha256": {
+    "me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e"
+  },
+  "previous_manifest_aggregate_recomputed": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+  "previous_manifest_aggregate_recorded": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+  "previous_manifest_aggregate_verified": true,
+  "previous_recorded_aggregate_sha256_path_tab_contenthash_lf": "88c34439c3905f1300a0b09b561204f63255135e2591eb9c43a5de9165211a66",
+  "correction_artifact": "source-tree-fingerprint-correction.json",
+  "correction_summary": "Prior R1948 aggregate was inconsistent with the verified R1947 per-file manifest and the sole changed file. See the correction artifact; method/build evidence remains unchanged."
+}

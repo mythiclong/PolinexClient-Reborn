@@ -586,7 +586,9 @@ public final class lIIlIlllllllllIlllIIIllIIIlIlIIllIllIllIlIIlIlllllIllllIIIlII
                0.0,
                var11,
                true,
-               0.0);
+                0.0,
+                16,
+                null);
             if (var4 == null) {
                break;
             }
@@ -896,7 +898,9 @@ public final class lIIlIlllllllllIlllIIIllIIIlIlIIllIllIllIlIIlIlllllIllllIIIlII
          boolean var79 = me.octo.client.utils.player.pathfinder.IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.a(
             me.octo.client.utils.player.pathfinder.IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI,
             var59.a(),
-            false);
+             false,
+             2,
+             null);
          if (var2 != null) {
             if (!var79) {
                continue;

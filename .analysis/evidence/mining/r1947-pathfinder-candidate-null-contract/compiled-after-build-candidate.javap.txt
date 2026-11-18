@@ -1,0 +1,157 @@
+  private final me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI a(net.minecraft.core.BlockPos, me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll);
+    descriptor: (Lnet/minecraft/core/BlockPos;Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;)Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+    Code:
+         0: invokestatic  #34                 // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$PXEvMid.k:()I
+         3: istore_3
+         4: aload_1
+         5: aload_2
+         6: invokevirtual #217                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:()I
+         9: iconst_0
+        10: aload_2
+        11: invokevirtual #221                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c:()I
+        14: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+        17: astore        4
+        19: aload         4
+        21: ldc_w         #461                // String offset(...)
+        24: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        27: aload         4
+        29: invokevirtual #49                 // Method net/minecraft/core/BlockPos.getX:()I
+        32: istore        5
+        34: iload_3
+        35: ifne          80
+        38: iload         5
+        40: getstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+        43: invokevirtual #463                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid.a:()I
+        46: if_icmpge     51
+        49: aconst_null
+        50: areturn
+        51: aload         4
+        53: iconst_0
+        54: iconst_1
+        55: iconst_0
+        56: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+        59: astore        6
+        61: aload         6
+        63: ldc_w         #461                // String offset(...)
+        66: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        69: getstatic     #178                // Field IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll:Ljava/util/HashSet;
+        72: aload         6
+        74: invokevirtual #464                // Method java/util/HashSet.contains:(Ljava/lang/Object;)Z
+        77: pop
+        78: aconst_null
+        79: areturn
+        80: iload         5
+        82: getstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+        85: invokevirtual #463                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid.a:()I
+        88: if_icmpgt     133
+        91: aload         4
+        93: invokevirtual #49                 // Method net/minecraft/core/BlockPos.getX:()I
+        96: getstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+        99: invokevirtual #467                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid.b:()I
+       102: if_icmplt     133
+       105: aload         4
+       107: invokevirtual #54                 // Method net/minecraft/core/BlockPos.getZ:()I
+       110: getstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+       113: invokevirtual #468                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid.c:()I
+       116: if_icmpgt     133
+       119: aload         4
+       121: invokevirtual #54                 // Method net/minecraft/core/BlockPos.getZ:()I
+       124: getstatic     #60                 // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid;
+       127: invokevirtual #469                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$PXEvMid.d:()I
+       130: if_icmpge     135
+       133: aconst_null
+       134: areturn
+       135: iconst_1
+       136: istore        6
+       138: iload         6
+       140: bipush        -2
+       142: if_icmple     322
+       145: aload         4
+       147: iconst_0
+       148: iload         6
+       150: iconst_0
+       151: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       154: astore        7
+       156: aload         7
+       158: ldc_w         #461                // String offset(...)
+       161: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       164: getstatic     #178                // Field IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll:Ljava/util/HashSet;
+       167: aload         7
+       169: invokevirtual #464                // Method java/util/HashSet.contains:(Ljava/lang/Object;)Z
+       172: ifeq          177
+       175: aconst_null
+       176: areturn
+       177: aload_0
+       178: aload         7
+       180: invokevirtual #472                // Method f:(Lnet/minecraft/core/BlockPos;)B
+       183: istore        8
+       185: iload         8
+       187: ifeq          316
+       190: aload         7
+       192: iconst_0
+       193: iconst_1
+       194: iconst_0
+       195: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       198: astore        9
+       200: aload         9
+       202: ldc_w         #461                // String offset(...)
+       205: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       208: aload_0
+       209: aload         9
+       211: invokevirtual #476                // Method d:(Lnet/minecraft/core/BlockPos;)Z
+       214: ifne          219
+       217: aconst_null
+       218: areturn
+       219: aload         7
+       221: iconst_0
+       222: iconst_2
+       223: iconst_0
+       224: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       227: astore        10
+       229: aload         10
+       231: ldc_w         #461                // String offset(...)
+       234: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       237: aload_0
+       238: aload         10
+       240: invokevirtual #479                // Method e:(Lnet/minecraft/core/BlockPos;)Z
+       243: ifne          248
+       246: aconst_null
+       247: areturn
+       248: iload         6
+       250: iconst_1
+       251: if_icmpne     282
+       254: aload_1
+       255: iconst_0
+       256: iconst_3
+       257: iconst_0
+       258: invokevirtual #223                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       261: astore        11
+       263: aload         11
+       265: ldc_w         #461                // String offset(...)
+       268: invokestatic  #318                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       271: aload_0
+       272: aload         11
+       274: invokevirtual #479                // Method e:(Lnet/minecraft/core/BlockPos;)Z
+       277: ifne          282
+       280: aconst_null
+       281: areturn
+       282: new           #104                // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       285: dup
+       286: aload         7
+       288: iload         8
+       290: new           #90                 // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       293: dup
+       294: aload_2
+       295: invokevirtual #217                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:()I
+       298: iload         6
+       300: aload_2
+       301: invokevirtual #221                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c:()I
+       304: invokespecial #92                 // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll."<init>":(III)V
+       307: iload         8
+       309: invokestatic  #481                // Method lookupPathNodeCost:(B)D
+       312: invokespecial #110                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI."<init>":(Lnet/minecraft/core/BlockPos;BLme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;D)V
+       315: areturn
+       316: iinc          6, -1
+       319: goto          138
+       322: aconst_null
+       323: areturn

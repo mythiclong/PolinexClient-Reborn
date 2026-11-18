@@ -1,0 +1,11 @@
+{
+  "owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+  "original_command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath ..\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+  "original_started_utc": "2026-11-18T01:44:46.8573525+00:00",
+  "original_ended_utc": "2026-11-18T01:44:47.3046018+00:00",
+  "original_exit_code": 1,
+  "compiled_command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build/classes/java/main -p -c -s me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+  "compiled_started_utc": "2026-11-18T01:44:47.3046018+00:00",
+  "compiled_ended_utc": "2026-11-18T01:44:47.7705975+00:00",
+  "compiled_exit_code": 0
+}

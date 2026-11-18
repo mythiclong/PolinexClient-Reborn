@@ -119,10 +119,12 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       Object var7o = IIllIllIlllIlllIIllIlIIlllIlIIlIIIIIIIlIllIlIlIlIIIlIIIlllIIIIlIllIlIlIlllIIIllIllIll.get(var6);
       Intrinsics.checkNotNull(var7o);
       byte var7 = ((Number)var7o).byteValue();
-      IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll varSize = new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll(0, 0, 0);
-      Object var8o = llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl.get(Byte.valueOf(var7));
-      Intrinsics.checkNotNull(var8o);
-      IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI var8 = new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI(var6, var7, varSize, ((Number)var8o).doubleValue());
+      IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI var8 = new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI(
+         var6,
+         var7,
+         new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll(0, 0, 0),
+         lookupPathNodeCost(var7)
+      );
       var8.b(this.c(var8.a()));
       var8.c(0.0);
       ((Map)IIlllllIlIIlIllIllllIlIIlIIIlllllIIllIlIlIlIIIIlllIIlllIllIllIIIIIllllIIIIllllIIlIlII).put(var6, var8);
@@ -163,165 +165,43 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
             return this.a(var18, param3);
          }
 
-         this.a(var9, new Function2<IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI, Double, Unit>() {
-            public Unit invoke(IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI n, Double d) {
-               return a(var9, var10, n, d);
-            }
-         });
+         this.a(var9, (n, d) -> a(var9, var10, n, d));
       }
 
       this.h();
       return null;
    }
 
-   private final double a(BlockPos param1) {
-      java.lang.Double var3 = lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII.get(param1);
-      if (var3 != null) {
-         return var3.doubleValue();
+   private final double a(BlockPos blockPos) {
+      int mode = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+      Double cachedCost = lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII.get(blockPos);
+      if (mode == 0 || cachedCost != null) {
+         return cachedCost.doubleValue();
       }
-      double var4 = 0.0;
-      for (var var7 : lIIIIIllIllIllIllllIIlllIlIlllIIIlIllIlIlIIIIIIIIlIIllllIIIIIIIllIlIlIIIlIlIllIllIlll) {
-         var var8 = param1.offset(var7.a(), var7.b(), var7.c());
-         var var9 = this.g().getBlockState(var8);
-         var var10 = var9.getShape((net.minecraft.world.level.BlockGetter) this.g(), var8);
-         if (!var9.isAir() && !var10.isEmpty() && var10.bounds().maxY > 1.0) {
-            continue;
-         }
-         var4 += 1.0;
-      }
-      lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII.put(param1, var4);
-      return var4;
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.RuntimeException: parsing failure!
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
-      //
-      // Bytecode:
-      // 000: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.k ()I
-      // 003: getstatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII Ljava/util/HashMap;
-      // 006: aload 1
-      // 007: invokevirtual java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-      // 00a: checkcast java/lang/Double
-      // 00d: astore 3
-      // 00e: istore 2
-      // 00f: aload 3
-      // 010: iload 2
-      // 011: ifeq 01f
-      // 014: ifnull 023
-      // 017: goto 01e
-      // 01a: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 01d: athrow
-      // 01e: aload 3
-      // 01f: invokevirtual java/lang/Double.doubleValue ()D
-      // 022: dreturn
-      // 023: dconst_0
-      // 024: dstore 4
-      // 026: getstatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIIIIIllIllIllIllllIIlllIlIlllIIIlIllIlIlIIIIIIIIlIIllllIIIIIIIllIlIlIIIlIlIllIllIlll Ljava/util/List;
-      // 029: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
-      // 02e: astore 6
-      // 030: aload 6
-      // 032: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 037: ifeq 102
-      // 03a: aload 6
-      // 03c: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 041: checkcast me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
-      // 044: astore 7
-      // 046: aload 1
-      // 047: aload 7
-      // 049: invokevirtual me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a ()I
-      // 04c: aload 7
-      // 04e: invokevirtual me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.b ()I
-      // 051: aload 7
-      // 053: invokevirtual me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c ()I
-      // 056: invokevirtual net/minecraft/core/BlockPos.offset (III)Lnet/minecraft/core/BlockPos;
-      // 059: dup
-      // 05a: sipush -10002
-      // 05d: sipush -3929
-      // 060: pop2
-      // 061: ldc_w "offset(...)"
-      // 064: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 067: astore 8
-      // 069: aload 0
-      // 06a: invokespecial me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.g ()Lnet/minecraft/client/multiplayer/ClientLevel;
-      // 06d: aload 8
-      // 06f: invokevirtual net/minecraft/client/multiplayer/ClientLevel.getBlockState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
-      // 072: dup
-      // 073: sipush -10008
-      // 076: sipush -28378
-      // 079: pop2
-      // 07a: ldc_w "getBlockState(...)"
-      // 07d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 080: astore 9
-      // 082: aload 9
-      // 084: aload 0
-      // 085: invokespecial me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.g ()Lnet/minecraft/client/multiplayer/ClientLevel;
-      // 088: checkcast net/minecraft/world/level/BlockGetter
-      // 08b: aload 8
-      // 08d: invokevirtual net/minecraft/world/level/block/state/BlockState.getShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
-      // 090: dup
-      // 091: sipush -10009
-      // 094: sipush -29416
-      // 097: pop2
-      // 098: ldc_w "getShape(...)"
-      // 09b: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 09e: astore 10
-      // 0a0: iload 2
-      // 0a1: ifeq 0fe
-      // 0a4: aload 9
-      // 0a6: iload 2
-      // 0a7: ifeq 113
-      // 0aa: goto 0b1
-      // 0ad: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0b0: athrow
-      // 0b1: invokevirtual net/minecraft/world/level/block/state/BlockState.isAir ()Z
-      // 0b4: ifne 0f8
-      // 0b7: goto 0be
-      // 0ba: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0bd: athrow
-      // 0be: aload 10
-      // 0c0: invokevirtual net/minecraft/world/phys/shapes/VoxelShape.isEmpty ()Z
-      // 0c3: iload 2
-      // 0c4: ifeq 0e2
-      // 0c7: goto 0ce
-      // 0ca: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0cd: athrow
-      // 0ce: ifne 030
-      // 0d1: goto 0d8
-      // 0d4: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0d7: athrow
-      // 0d8: aload 10
-      // 0da: invokevirtual net/minecraft/world/phys/shapes/VoxelShape.bounds ()Lnet/minecraft/world/phys/AABB;
-      // 0dd: getfield net/minecraft/world/phys/AABB.maxY D
-      // 0e0: dconst_1
-      // 0e1: dcmpg
-      // 0e2: iload 2
-      // 0e3: ifeq 0f1
-      // 0e6: ifne 0f4
-      // 0e9: goto 0f0
-      // 0ec: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0ef: athrow
-      // 0f0: bipush 1
-      // 0f1: goto 0f5
-      // 0f4: bipush 0
-      // 0f5: ifne 030
-      // 0f8: dload 4
-      // 0fa: dconst_1
-      // 0fb: dadd
-      // 0fc: dstore 4
-      // 0fe: iload 2
-      // 0ff: ifne 030
-      // 102: getstatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII Ljava/util/HashMap;
-      // 105: checkcast java/util/Map
-      // 108: aload 1
-      // 109: dload 4
-      // 10b: invokestatic java/lang/Double.valueOf (D)Ljava/lang/Double;
-      // 10e: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 113: pop
-      // 114: dload 4
-      // 116: dreturn
-   }
 
+      double openNeighborCount = 0.0;
+      for (var direction : lIIIIIllIllIllIllllIIlllIlIlllIIIlIllIlIlIIIIIIIIlIIllllIIIIIIIllIlIlIIIlIlIllIllIlll) {
+         BlockPos neighborPos = blockPos.offset(direction.a(), direction.b(), direction.c());
+         var blockState = this.g().getBlockState(neighborPos);
+         var shape = blockState.getShape((net.minecraft.world.level.BlockGetter)this.g(), neighborPos);
+
+         if (mode != 0 && !blockState.isAir()) {
+            if (shape.isEmpty()) {
+               continue;
+            }
+            if (shape.bounds().maxY == 1.0) {
+               continue;
+            }
+         }
+
+         openNeighborCount += 1.0;
+      }
+
+      if (mode == 0) {
+         lIllIIllIlllIlIlllIllIlIlIIIllllllllllIlllIllIlIIlIIlllIlIIlllIlIIIlllIIllIIllIllIlII.put(blockPos, openNeighborCount);
+      }
+      return openNeighborCount;
+   }
    private final ArrayList<Vec3> a(List<? extends Vec3> param1, boolean param2) {
       int var3 = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.j();
       if (param1.size() < 2) {
@@ -329,23 +209,25 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       }
 
       ArrayList<Vec3> var4 = new ArrayList<Vec3>();
-      if (param2) {
+      if (var3 == 0 && param2) {
          var4.addAll(param1);
       } else {
-         int var5 = 0;
-         int var6 = param1.size() - 1;
-         while (var5 < var6) {
-            Vec3 var7 = var5 > 0 ? param1.get(var5 - 1) : param1.get(var5);
-            Vec3 var8 = param1.get(var5);
-            Vec3 var9 = param1.get(var5 + 1);
-            Vec3 var10 = var5 + 2 < param1.size() ? param1.get(var5 + 2) : param1.get(var5 + 1);
-            double var11 = var8.distanceTo(var9);
-            int var13 = (int)(var11 / 0.1);
-            for (int var14 = 0; var14 <= var13; var14++) {
-               double var15 = (double)var14 / (double)kotlin.ranges.RangesKt.coerceAtLeast(var13, 1);
-               var4.add(this.a(var7, var8, var9, var10, var15));
+         if (var3 == 0) {
+            int var5 = 0;
+            int var6 = param1.size() - 1;
+            while (var5 < var6) {
+               Vec3 var7 = var5 > 0 ? param1.get(var5 - 1) : param1.get(var5);
+               Vec3 var8 = param1.get(var5);
+               Vec3 var9 = param1.get(var5 + 1);
+               Vec3 var10 = var5 + 2 < param1.size() ? param1.get(var5 + 2) : param1.get(var5 + 1);
+               double var11 = var8.distanceTo(var9);
+               int var13 = (int)(var11 / 0.1);
+               for (int var14 = 0; var14 <= var13; var14++) {
+                  double var15 = (double)var14 / (double)kotlin.ranges.RangesKt.coerceAtLeast(var13, 1);
+                  var4.add(this.a(var7, var8, var9, var10, var15));
+               }
+               var5++;
             }
-            var5++;
          }
          var4.add(kotlin.collections.CollectionsKt.last(param1));
       }
@@ -354,7 +236,7 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       var16.add(kotlin.collections.CollectionsKt.first(var4));
       BlockPos var17 = lIIlllIlIIlIIIllIllllllIIIIIIllIIllIIIIIllIllIllllllIIlIIlIIIlllIIIIIlIIllIlIIIIIIIlI;
       Vec3 var18;
-      if (var17 != null) {
+      if (var3 == 0 && var17 != null) {
          var18 = var17.getCenter();
       } else {
          var18 = Vec3.ZERO;
@@ -432,512 +314,7 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       }
 
       return var16;
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.RuntimeException: parsing failure!
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
-      //
-      // Bytecode:
-      // 000: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.j ()I
-      // 003: istore 3
-      // 004: aload 1
-      // 005: invokeinterface java/util/List.size ()I 1
-      // 00a: bipush 2
-      // 00b: if_icmpge 01e
-      // 00e: new java/util/ArrayList
-      // 011: dup
-      // 012: aload 1
-      // 013: checkcast java/util/Collection
-      // 016: invokespecial java/util/ArrayList.<init> (Ljava/util/Collection;)V
-      // 019: areturn
-      // 01a: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 01d: athrow
-      // 01e: new java/util/ArrayList
-      // 021: dup
-      // 022: invokespecial java/util/ArrayList.<init> ()V
-      // 025: astore 4
-      // 027: iload 2
-      // 028: iload 3
-      // 029: ifne 047
-      // 02c: ifeq 046
-      // 02f: goto 036
-      // 032: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 035: athrow
-      // 036: aload 4
-      // 038: aload 1
-      // 039: checkcast java/util/Collection
-      // 03c: invokevirtual java/util/ArrayList.addAll (Ljava/util/Collection;)Z
-      // 03f: goto 14c
-      // 042: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 045: athrow
-      // 046: bipush 0
-      // 047: istore 5
-      // 049: aload 1
-      // 04a: invokeinterface java/util/List.size ()I 1
-      // 04f: bipush 1
-      // 050: isub
-      // 051: istore 6
-      // 053: iload 5
-      // 055: iload 6
-      // 057: if_icmpge 143
-      // 05a: iload 5
-      // 05c: iload 3
-      // 05d: ifne 14c
-      // 060: ifle 07e
-      // 063: goto 06a
-      // 066: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 069: athrow
-      // 06a: aload 1
-      // 06b: iload 5
-      // 06d: bipush 1
-      // 06e: isub
-      // 06f: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 074: checkcast net/minecraft/world/phys/Vec3
-      // 077: goto 089
-      // 07a: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 07d: athrow
-      // 07e: aload 1
-      // 07f: iload 5
-      // 081: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 086: checkcast net/minecraft/world/phys/Vec3
-      // 089: astore 7
-      // 08b: aload 1
-      // 08c: iload 5
-      // 08e: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 093: checkcast net/minecraft/world/phys/Vec3
-      // 096: astore 8
-      // 098: aload 1
-      // 099: iload 5
-      // 09b: bipush 1
-      // 09c: iadd
-      // 09d: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 0a2: checkcast net/minecraft/world/phys/Vec3
-      // 0a5: astore 9
-      // 0a7: iload 5
-      // 0a9: bipush 2
-      // 0aa: iadd
-      // 0ab: aload 1
-      // 0ac: invokeinterface java/util/List.size ()I 1
-      // 0b1: if_icmpge 0c8
-      // 0b4: aload 1
-      // 0b5: iload 5
-      // 0b7: bipush 2
-      // 0b8: iadd
-      // 0b9: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 0be: checkcast net/minecraft/world/phys/Vec3
-      // 0c1: goto 0d5
-      // 0c4: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0c7: athrow
-      // 0c8: aload 1
-      // 0c9: iload 5
-      // 0cb: bipush 1
-      // 0cc: iadd
-      // 0cd: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-      // 0d2: checkcast net/minecraft/world/phys/Vec3
-      // 0d5: astore 10
-      // 0d7: aload 8
-      // 0d9: aload 9
-      // 0db: invokevirtual net/minecraft/world/phys/Vec3.distanceTo (Lnet/minecraft/world/phys/Vec3;)D
-      // 0de: dstore 11
-      // 0e0: dload 11
-      // 0e2: ldc2_w 0.1
-      // 0e5: ddiv
-      // 0e6: d2i
-      // 0e7: istore 13
-      // 0e9: bipush 0
-      // 0ea: istore 14
-      // 0ec: iload 3
-      // 0ed: ifne 13f
-      // 0f0: iload 14
-      // 0f2: iload 13
-      // 0f4: if_icmpgt 13c
-      // 0f7: goto 0fe
-      // 0fa: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 0fd: athrow
-      // 0fe: iload 14
-      // 100: i2d
-      // 101: iload 13
-      // 103: bipush 1
-      // 104: invokestatic kotlin/ranges/RangesKt.coerceAtLeast (II)I
-      // 107: i2d
-      // 108: ddiv
-      // 109: dstore 15
-      // 10b: aload 0
-      // 10c: aload 7
-      // 10e: aload 8
-      // 110: aload 9
-      // 112: aload 10
-      // 114: dload 15
-      // 116: invokespecial me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;
-      // 119: astore 17
-      // 11b: aload 4
-      // 11d: aload 17
-      // 11f: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 122: pop
-      // 123: iload 14
-      // 125: iload 13
-      // 127: if_icmpeq 13c
-      // 12a: iinc 14 1
-      // 12d: iload 3
-      // 12e: ifne 13f
-      // 131: iload 3
-      // 132: ifeq 0fe
-      // 135: goto 13c
-      // 138: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 13b: athrow
-      // 13c: iinc 5 1
-      // 13f: iload 3
-      // 140: ifeq 053
-      // 143: aload 4
-      // 145: aload 1
-      // 146: invokestatic kotlin/collections/CollectionsKt.last (Ljava/util/List;)Ljava/lang/Object;
-      // 149: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 14c: pop
-      // 14d: new java/util/ArrayList
-      // 150: dup
-      // 151: invokespecial java/util/ArrayList.<init> ()V
-      // 154: astore 5
-      // 156: aload 5
-      // 158: aload 4
-      // 15a: checkcast java/util/List
-      // 15d: invokestatic kotlin/collections/CollectionsKt.first (Ljava/util/List;)Ljava/lang/Object;
-      // 160: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 163: pop
-      // 164: getstatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIIlllIlIIlIIIllIllllllIIIIIIllIIllIIIIIllIllIllllllIIlIIlIIIlllIIIIIlIIllIlIIIIIIIlI Lnet/minecraft/core/BlockPos;
-      // 167: astore 6
-      // 169: iload 3
-      // 16a: ifne 194
-      // 16d: aload 6
-      // 16f: dup
-      // 170: ifnull 193
-      // 173: goto 17a
-      // 176: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 179: athrow
-      // 17a: invokevirtual net/minecraft/core/BlockPos.getCenter ()Lnet/minecraft/world/phys/Vec3;
-      // 17d: dup
-      // 17e: iload 3
-      // 17f: ifne 198
-      // 182: goto 189
-      // 185: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 188: athrow
-      // 189: ifnonnull 1a5
-      // 18c: goto 193
-      // 18f: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 192: athrow
-      // 193: pop
-      // 194: getstatic net/minecraft/world/phys/Vec3.ZERO Lnet/minecraft/world/phys/Vec3;
-      // 197: dup
-      // 198: sipush -10014
-      // 19b: sipush -28443
-      // 19e: pop2
-      // 19f: ldc_w "ZERO"
-      // 1a2: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 1a5: astore 7
-      // 1a7: bipush 0
-      // 1a8: istore 8
-      // 1aa: iload 8
-      // 1ac: aload 4
-      // 1ae: checkcast java/util/List
-      // 1b1: invokestatic kotlin/collections/CollectionsKt.getLastIndex (Ljava/util/List;)I
-      // 1b4: if_icmpge 433
-      // 1b7: aload 4
-      // 1b9: iload 3
-      // 1ba: ifne 435
-      // 1bd: iload 8
-      // 1bf: invokevirtual java/util/ArrayList.get (I)Ljava/lang/Object;
-      // 1c2: dup
-      // 1c3: goto 1ca
-      // 1c6: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 1c9: athrow
-      // 1ca: sipush -10012
-      // 1cd: sipush 1615
-      // 1d0: pop2
-      // 1d1: ldc_w "get(...)"
-      // 1d4: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 1d7: checkcast net/minecraft/world/phys/Vec3
-      // 1da: astore 9
-      // 1dc: iload 8
-      // 1de: bipush 1
-      // 1df: iadd
-      // 1e0: istore 10
-      // 1e2: iload 8
-      // 1e4: bipush 1
-      // 1e5: iadd
-      // 1e6: istore 11
-      // 1e8: iload 11
-      // 1ea: aload 4
-      // 1ec: invokevirtual java/util/ArrayList.size ()I
-      // 1ef: if_icmpge 41e
-      // 1f2: aload 4
-      // 1f4: iload 11
-      // 1f6: invokevirtual java/util/ArrayList.get (I)Ljava/lang/Object;
-      // 1f9: dup
-      // 1fa: sipush -10010
-      // 1fd: sipush -17433
-      // 200: pop2
-      // 201: ldc_w "get(...)"
-      // 204: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 207: checkcast net/minecraft/world/phys/Vec3
-      // 20a: astore 12
-      // 20c: iload 2
-      // 20d: iload 3
-      // 20e: ifne 42d
-      // 211: iload 3
-      // 212: ifne 244
-      // 215: goto 21c
-      // 218: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 21b: athrow
-      // 21c: ifeq 28a
-      // 21f: goto 226
-      // 222: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 225: athrow
-      // 226: getstatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;
-      // 229: aload 9
-      // 22b: aload 12
-      // 22d: aconst_null
-      // 22e: bipush 0
-      // 22f: bipush 0
-      // 230: dconst_0
-      // 231: bipush 0
-      // 232: bipush 0
-      // 233: ldc2_w 0.2
-      // 236: sipush 252
-      // 239: aconst_null
-      // 23a: invokestatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.a (Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZDILjava/lang/Object;)Z
-      // 23d: goto 244
-      // 240: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 243: athrow
-      // 244: iload 3
-      // 245: ifne 287
-      // 248: ifeq 286
-      // 24b: goto 252
-      // 24e: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 251: athrow
-      // 252: getstatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;
-      // 255: aload 9
-      // 257: aload 12
-      // 259: aconst_null
-      // 25a: bipush 0
-      // 25b: bipush 0
-      // 25c: dconst_0
-      // 25d: bipush 0
-      // 25e: bipush 0
-      // 25f: ldc2_w -0.299
-      // 262: sipush 252
-      // 265: aconst_null
-      // 266: invokestatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.a (Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZDILjava/lang/Object;)Z
-      // 269: iload 3
-      // 26a: ifne 287
-      // 26d: goto 274
-      // 270: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 273: athrow
-      // 274: ifeq 286
-      // 277: goto 27e
-      // 27a: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 27d: athrow
-      // 27e: bipush 1
-      // 27f: goto 29f
-      // 282: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 285: athrow
-      // 286: bipush 0
-      // 287: goto 29f
-      // 28a: getstatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;
-      // 28d: aload 9
-      // 28f: aload 12
-      // 291: aconst_null
-      // 292: bipush 0
-      // 293: bipush 0
-      // 294: dconst_0
-      // 295: bipush 0
-      // 296: bipush 0
-      // 297: dconst_0
-      // 298: sipush 508
-      // 29b: aconst_null
-      // 29c: invokestatic me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.a (Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZDILjava/lang/Object;)Z
-      // 29f: istore 13
-      // 2a1: iload 11
-      // 2a3: iload 3
-      // 2a4: ifne 402
-      // 2a7: aload 4
-      // 2a9: checkcast java/util/List
-      // 2ac: invokestatic kotlin/collections/CollectionsKt.getLastIndex (Ljava/util/List;)I
-      // 2af: if_icmpne 3f9
-      // 2b2: goto 2b9
-      // 2b5: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 2b8: athrow
-      // 2b9: iload 13
-      // 2bb: iload 3
-      // 2bc: ifne 402
-      // 2bf: goto 2c6
-      // 2c2: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 2c5: athrow
-      // 2c6: ifeq 3f9
-      // 2c9: goto 2d0
-      // 2cc: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 2cf: athrow
-      // 2d0: aload 6
-      // 2d2: iload 3
-      // 2d3: ifne 303
-      // 2d6: goto 2dd
-      // 2d9: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 2dc: athrow
-      // 2dd: ifnull 3f9
-      // 2e0: goto 2e7
-      // 2e3: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 2e6: athrow
-      // 2e7: aload 4
-      // 2e9: iload 11
-      // 2eb: invokevirtual java/util/ArrayList.get (I)Ljava/lang/Object;
-      // 2ee: dup
-      // 2ef: sipush -10010
-      // 2f2: sipush -17433
-      // 2f5: pop2
-      // 2f6: ldc_w "get(...)"
-      // 2f9: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 2fc: goto 303
-      // 2ff: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 302: athrow
-      // 303: checkcast net/minecraft/world/phys/Vec3
-      // 306: astore 14
-      // 308: getstatic me/octo/client/utils/player/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII;
-      // 30b: aload 9
-      // 30d: aload 14
-      // 30f: invokevirtual me/octo/client/utils/player/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.a (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lme/octo/client/utils/player/lllllIllIlIIllIIlIllllIlIIlIlllllIlIllllIIIlIllIlllllllllIllIIlllIIIIIlIllIIllllIlllI;
-      // 312: astore 15
-      // 314: bipush 0
-      // 315: istore 16
-      // 317: new me/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
-      // 31a: dup
-      // 31b: aload 9
-      // 31d: getstatic net/minecraft/world/phys/Vec3.ZERO Lnet/minecraft/world/phys/Vec3;
-      // 320: dup
-      // 321: sipush -10015
-      // 324: sipush 29907
-      // 327: pop2
-      // 328: ldc_w "ZERO"
-      // 32b: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 32e: aload 15
-      // 330: invokevirtual me/octo/client/utils/player/lllllIllIlIIllIIlIllllIlIIlIlllllIlIllllIIIlIllIlllllllllIllIIlllIIIIIlIllIIllllIlllI.a ()F
-      // 333: aload 15
-      // 335: invokevirtual me/octo/client/utils/player/lllllIllIlIIllIIlIllllIlIIlIlllllIlIllllIIIlIllIlllllllllIllIIlllIIIIIlIllIIllllIlllI.b ()F
-      // 338: bipush 1
-      // 339: invokespecial me/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.<init> (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;FFZ)V
-      // 33c: astore 17
-      // 33e: iload 16
-      // 340: bipush 100
-      // 342: if_icmpgt 3f5
-      // 345: iinc 16 1
-      // 348: getstatic me/octo/client/utils/player/pathfinder/PXEvMid.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/PXEvMid;
-      // 34b: dconst_1
-      // 34c: dconst_0
-      // 34d: aload 17
-      // 34f: bipush 0
-      // 350: dconst_0
-      // 351: bipush 24
-      // 353: aconst_null
-      // 354: invokestatic me/octo/client/utils/player/pathfinder/PXEvMid.a (Lme/octo/client/utils/player/pathfinder/PXEvMid;DDLme/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;ZDILjava/lang/Object;)Lme/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
-      // 357: iload 3
-      // 358: ifne 376
-      // 35b: dup
-      // 35c: iload 3
-      // 35d: ifne 1ca
-      // 360: goto 367
-      // 363: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 366: athrow
-      // 367: ifnonnull 372
-      // 36a: pop
-      // 36b: goto 33e
-      // 36e: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 371: athrow
-      // 372: astore 17
-      // 374: aload 17
-      // 376: invokevirtual me/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a ()Lnet/minecraft/world/phys/Vec3;
-      // 379: dconst_0
-      // 37a: ldc2_w 1.26
-      // 37d: dconst_0
-      // 37e: invokevirtual net/minecraft/world/phys/Vec3.add (DDD)Lnet/minecraft/world/phys/Vec3;
-      // 381: dup
-      // 382: sipush -10005
-      // 385: sipush 25855
-      // 388: pop2
-      // 389: ldc_w "add(...)"
-      // 38c: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 38f: astore 18
-      // 391: getstatic me/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl Lme/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll;
-      // 394: aload 6
-      // 396: ldc_w net/minecraft/client/player/RemotePlayer
-      // 399: invokestatic kotlin/collections/CollectionsKt.listOf (Ljava/lang/Object;)Ljava/util/List;
-      // 39c: aload 18
-      // 39e: invokevirtual me/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll.a (Lnet/minecraft/core/BlockPos;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)Lme/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
-      // 3a1: astore 19
-      // 3a3: getstatic me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl Lme/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl;
-      // 3a6: aload 18
-      // 3a8: aload 7
-      // 3aa: invokevirtual me/octo/client/utils/IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.b (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)D
-      // 3ad: ldc2_w 16.0
-      // 3b0: dcmpg
-      // 3b1: iload 3
-      // 3b2: ifne 340
-      // 3b5: ifge 33e
-      // 3b8: aload 19
-      // 3ba: iload 3
-      // 3bb: ifne 3d0
-      // 3be: invokevirtual me/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.b ()Lme/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
-      // 3c1: getstatic me/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII Lme/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
-      // 3c4: if_acmpne 33e
-      // 3c7: goto 3ce
-      // 3ca: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 3cd: athrow
-      // 3ce: aload 19
-      // 3d0: invokevirtual me/octo/client/utils/llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c ()Lnet/minecraft/core/BlockPos;
-      // 3d3: getstatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.lIIlllIlIIlIIIllIllllllIIIIIIllIIllIIIIIllIllIllllllIIlIIlIIIlllIIIIIlIIllIlIIIIIIIlI Lnet/minecraft/core/BlockPos;
-      // 3d6: invokestatic kotlin/jvm/internal/Intrinsics.areEqual (Ljava/lang/Object;Ljava/lang/Object;)Z
-      // 3d9: iload 3
-      // 3da: ifne 3f1
-      // 3dd: ifeq 33e
-      // 3e0: goto 3e7
-      // 3e3: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 3e6: athrow
-      // 3e7: aload 5
-      // 3e9: aload 17
-      // 3eb: invokevirtual me/octo/client/utils/player/pathfinder/PXEvMid$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a ()Lnet/minecraft/world/phys/Vec3;
-      // 3ee: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 3f1: pop
-      // 3f2: aload 5
-      // 3f4: areturn
-      // 3f5: iload 3
-      // 3f6: ifeq 41e
-      // 3f9: iload 13
-      // 3fb: goto 402
-      // 3fe: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 401: athrow
-      // 402: iload 3
-      // 403: ifne 412
-      // 406: ifeq 41b
-      // 409: goto 410
-      // 40c: invokestatic me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a (Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
-      // 40f: athrow
-      // 410: iload 11
-      // 412: istore 10
-      // 414: iinc 11 1
-      // 417: iload 3
-      // 418: ifeq 1e8
-      // 41b: goto 41e
-      // 41e: aload 5
-      // 420: aload 4
-      // 422: iload 10
-      // 424: invokevirtual java/util/ArrayList.get (I)Ljava/lang/Object;
-      // 427: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 42a: pop
-      // 42b: iload 10
-      // 42d: istore 8
-      // 42f: iload 3
-      // 430: ifeq 1aa
-      // 433: aload 5
-      // 435: areturn
    }
-
    private final Vec3 a(Vec3 var1, Vec3 var2, Vec3 var3, Vec3 var4, double var5) {
       double var7 = var5 * var5;
       double var9 = var7 * var5;
@@ -1039,50 +416,71 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       BlockPos param1,
       IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll param2
    ) {
-      if (me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k() == 0) {
+      int guard = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+      BlockPos var4 = param1.offset(param2.a(), 0, param2.c());
+      Intrinsics.checkNotNullExpressionValue(var4, "offset(...)");
+      int x = var4.getX();
+
+      if (guard == 0) {
+         if (x < IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.a()) {
+            return null;
+         }
+
+         BlockPos candidate = var4.offset(0, 1, 0);
+         Intrinsics.checkNotNullExpressionValue(candidate, "offset(...)");
+         IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll.contains(candidate);
          return null;
       }
 
-      BlockPos var4 = param1.offset(param2.a(), 0, param2.c());
-      if (
-         var4.getX() > IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.a()
-            || var4.getX() < IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.b()
-            || var4.getZ() > IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.c()
-            || var4.getZ() < IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.d()
-      ) {
+      if (x > IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.a() || var4.getX() < IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.b() || var4.getZ() > IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.c() || var4.getZ() < IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll.d()) {
          return null;
       }
 
       for (int var5 = 1; var5 > -2; var5--) {
          BlockPos var6 = var4.offset(0, var5, 0);
+         Intrinsics.checkNotNullExpressionValue(var6, "offset(...)");
          if (IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll.contains(var6)) {
             return null;
          }
 
          byte var7 = this.f(var6);
          if (var7 != 0) {
-            if (!this.d(var6.offset(0, 1, 0))) {
+            BlockPos above = var6.offset(0, 1, 0);
+            Intrinsics.checkNotNullExpressionValue(above, "offset(...)");
+            if (!this.d(above)) {
                return null;
             }
 
-            if (!this.e(var6.offset(0, 2, 0))) {
+            BlockPos twoAbove = var6.offset(0, 2, 0);
+            Intrinsics.checkNotNullExpressionValue(twoAbove, "offset(...)");
+            if (!this.e(twoAbove)) {
                return null;
             }
 
-            if (var5 == 1 && !this.e(param1.offset(0, 3, 0))) {
-               return null;
+            if (var5 == 1) {
+               BlockPos threeAbove = param1.offset(0, 3, 0);
+               Intrinsics.checkNotNullExpressionValue(threeAbove, "offset(...)");
+               if (!this.e(threeAbove)) {
+                  return null;
+               }
             }
 
             return new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI(
                var6,
                var7,
                new IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll(param2.a(), var5, param2.c()),
-               llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl.get(Byte.valueOf(var7))
+               lookupPathNodeCost(var7)
             );
          }
       }
 
       return null;
+   }
+
+   private static double lookupPathNodeCost(byte blockCode) {
+      Object rawCost = llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl.get(Byte.valueOf(blockCode));
+      Intrinsics.checkNotNull(rawCost);
+      return ((Number)rawCost).doubleValue();
    }
 
    private static final Unit a(
@@ -1092,6 +490,7 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       double param3
    ) {
       int guard = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.j();
+      Intrinsics.checkNotNullParameter(param2, "node");
       BlockPos pos = param2.a();
       if (IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll.contains(pos)) {
          return Unit.INSTANCE;
@@ -1105,18 +504,20 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
          }
 
          gNew = param3 + param0.g();
-         if (
-            param0.b() == 5
-               && IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.f(param1.above()) == 5
-         ) {
-            gNew += 2.0;
+         if (param0.b() == 5) {
+            BlockPos above = param1.above();
+            Intrinsics.checkNotNullExpressionValue(above, "above(...)");
+            if (IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.f(above) == 5) {
+               gNew += 2.0;
+            }
          }
       } else {
          gNew = param3 + param0.g();
-         if (diff < 0.0) {
-            gNew += Math.abs(diff) * 2.0;
+         double absoluteDifference = Math.abs(diff);
+         if (param0.b() >= 0) {
+            gNew = absoluteDifference + 40.0;
          } else {
-            gNew += 40.0;
+            gNew = absoluteDifference + absoluteDifference * 2.0;
          }
       }
 
@@ -3066,12 +2467,16 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
       return var8;
    }
 
-   // PX-RESTORED d(BlockPos)Z (javap -c): live branch of the anti-tamper watermark (WM.k() != 0 by default)
-   // is "block code 0 or 4" i.e. a position you can stand on.
+    // PX-RESTORED d(BlockPos)Z: k()==0 converts the block code to boolean by testing nonzero;
+    // k()!=0 accepts only block codes 0 and 4.
    private final boolean d(BlockPos param1) {
-      me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
-      byte var3 = this.f(param1);
-      return var3 == 0 || var3 == 4;
+       int mode = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+       byte blockCode = this.f(param1);
+       if (mode == 0) {
+          return blockCode != 0;
+       }
+
+       return blockCode == 0 || blockCode == 4;
    }
 
    // PX-RESTORED e(BlockPos)Z (Vineflower body; the decompiler's `(boolean)` pseudo-casts on the
@@ -3100,8 +2505,13 @@ public final class IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlI
    // PX-RESTORED f(BlockPos)B (javap -c; Vineflower/CFR both failed on this method): traversal-cost
    // code of the block, cached in IIllIllIlllIlllIIllIlIIlllIlIIlIIIIIIIlIllIlIlIlIIIlIIIlllIIIIlIllIlIlIlllIIIllIllIll. Live branch = watermark.j() == 0 (the default).
    private final byte f(BlockPos param1) {
-      me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.j();
-      if (!this.g().isLoaded(param1)) {
+      int mode = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.j();
+      net.minecraft.client.multiplayer.ClientLevel level = this.g();
+      if (mode != 0) {
+         return ((Byte)(Object)level).byteValue();
+      }
+
+      if (!level.isLoaded(param1)) {
          return 0;
       } else {
          Byte var3 = IIllIllIlllIlllIIllIlIIlllIlIIlIIIIIIIlIllIlIlIlIIIlIIIlllIIIIlIllIlIlIlllIIIllIllIll.get(param1);

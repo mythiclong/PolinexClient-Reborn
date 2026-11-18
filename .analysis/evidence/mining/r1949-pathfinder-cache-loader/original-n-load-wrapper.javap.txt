@@ -1,0 +1,10 @@
+  private static kotlin.Unit n();
+    descriptor: ()Lkotlin/Unit;
+    Code:
+         0: invokestatic  #1270               // Method polinex$loadPathfinderCacheOriginal:()Lkotlin/Unit;
+         3: areturn
+         4: invokestatic  #1274               // Method polinex$recoverPathfinderLoadFailure:(Ljava/lang/Throwable;)Lkotlin/Unit;
+         7: areturn
+      Exception table:
+         from    to  target type
+             0     4     4   Class java/lang/Throwable

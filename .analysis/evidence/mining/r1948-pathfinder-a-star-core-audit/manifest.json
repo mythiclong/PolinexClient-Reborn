@@ -1,0 +1,66 @@
+{
+  "experiment_id": "R1948",
+  "slice_id": "PATHFINDER-ASTAR-CORE-STATIC-AUDIT",
+  "valid": true,
+  "review_started_utc": "2026-11-18T01:41:55.640Z",
+  "baseline_head": "d64b1816f27894ba59b443030f95e72a595e0f65",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "owner": "me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI",
+  "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java",
+  "source_sha256": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+  "compiled_class_sha256": "5e470167dcdcb3aa0a3008e7ee71f4eb9b64ad7ac1df2b4fdd3fca9a6e22fbee",
+  "method": "a(BlockPos, BlockPos, boolean):ArrayList",
+  "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/ArrayList;",
+  "original_method": "original-search-a-star.javap.txt",
+  "compiled_method": "compiled-current-search-a-star.javap.txt",
+  "source_method": "source-search-a-star.java.txt",
+  "source_tree_java_count": 1602,
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+  "build_reference": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/build-record.json",
+  "build_exit_code": 0,
+  "probe_state": "complete original/current method bytecode and current source capture; read-only semantic audit; no runtime probe",
+  "runtime_client": false,
+  "world": false,
+  "server": false,
+  "input": "none",
+  "independent_review": "completed; review correctly identified outer-node allocation-order mismatch; its callback representation claim was reversed and was corrected against complete saved javap captures",
+  "limitations": [
+    "No client path request through a live player/world, collision result, route output, or compatible-server behavior has been verified."
+  ],
+  "artifacts_sha256": {
+    "source-search-a-star.java.txt": "0c5056b1749b71d63a2111475bc3f4d1e35abb50515c0e3ad986c2fcfd644b01",
+    "original-search-a-star.javap.txt": "0ea392af1b1c732ba5b67dc76d002c1e79609f53789a9658bae45d838b52e322",
+    "compiled-current-search-a-star.javap.txt": "1aa88d68e8726928d498abefb8fb4a899b80c8b75d571a8249b0ad09ae822795"
+  },
+  "review_result": {
+    "reachable_astar_state_and_iteration": "same for equal guard and bounds helper results, per complete-method review",
+    "original_node_setup": "outer Node allocation offset 142; direction Node allocation offset 150; cost map lookup/check/cast/double conversion offsets 160/168/171-178; outer constructor offset 181",
+    "initial_current_difference": "outer Node allocation occurred only after direction Node and cost conversion",
+    "callback_before_fix": "original uses invokedynamic; current source had anonymous Function2 class",
+    "after_fix": "current source compiles to invokedynamic and outer Node is allocated before direction Node and cost lookup; exact offsets are in allocation-order-and-lambda-fix.json",
+    "remaining_static_limits": [
+      "lookupPathNodeCost adds one helper frame on exceptional cost lookup paths",
+      "the underlying renamed guard/bounds helper implementations were not compared by this method-only review"
+    ]
+  },
+  "post_fix": {
+    "source_sha256": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e",
+    "compiled_class_sha256": "50f446ee7a3949fd75237e8db85f54da8e75d3750e790907936133e6ef11d10d",
+    "compiled_method_sha256": "502957164b3f5e76ef9810abf267223288a3b00a8e7bfb3af440d3060ad1858f",
+    "compiled_class_dump": "compiled-after-lambda.javap.txt",
+    "compiled_method_dump": "compiled-search-a-star-after.javap.txt",
+    "source_method_capture": "source-search-a-star-after.java.txt",
+    "source_tree_fingerprint": "source-tree-fingerprint-after.json",
+    "previous_source_tree_aggregate_sha256": "88c34439c3905f1300a0b09b561204f63255135e2591eb9c43a5de9165211a66",
+    "source_tree_aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "source_tree_fingerprint_correction": "source-tree-fingerprint-correction.json",
+    "build_command": ".\\gradlew.bat compileJava --rerun-tasks --no-daemon",
+    "build_java_home": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot",
+    "build_started_utc": "2026-11-18T02:00:37.2914785Z",
+    "build_ended_utc": "2026-11-18T02:01:22.6419524Z",
+    "build_exit_code": 0,
+    "build_log": "build-after-lambda-jdk25.log",
+    "build_log_sha256": "bae1b8588f80e737ebb28c51f61953c4100fb47fb785895907f986aeec3b8571"
+  }
+}

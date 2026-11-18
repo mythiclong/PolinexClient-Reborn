@@ -1,0 +1,69 @@
+{
+  "experiment_id": "R1948",
+  "source_sha256_before_review": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+  "source_sha256_after_fix": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e",
+  "source_method_sha256_after_fix": "5c33e656a912aafc8e2162619e274dd923b6b305b38ac7b801fdfd60eb8d2fa8",
+  "compiled_class_sha256_after_fix": "50f446ee7a3949fd75237e8db85f54da8e75d3750e790907936133e6ef11d10d",
+  "compiled_method_sha256_after_fix": "502957164b3f5e76ef9810abf267223288a3b00a8e7bfb3af440d3060ad1858f",
+  "compiled_class_dump_sha256_after_fix": "670f79af2521543359cca577c9b7fcdb7418fc4a7b735d76e3a7a14462d7cfb1",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "original_method": {
+    "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/ArrayList;",
+    "outer_node_new_offset": 142,
+    "inner_direction_new_offset": 150,
+    "cost_lookup_check_conversion_offsets": [
+      160,
+      172,
+      175,
+      178
+    ],
+    "outer_constructor_offset": 181,
+    "callback_invokedynamic_site": "529: invokedynamic #300,  0            // InvokeDynamic #0:invoke:(Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Lnet/minecraft/core/BlockPos;)Lkotlin/jvm/functions/Function2;"
+  },
+  "compiled_method_after_fix": {
+    "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/ArrayList;",
+    "outer_node_new_offset": 125,
+    "inner_direction_new_offset": 133,
+    "cost_lookup_helper_call_offset": 145,
+    "outer_constructor_offset": 148,
+    "callback_invokedynamic_site": "413: invokedynamic #190,  0            // InvokeDynamic #0:invoke:(Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;Lnet/minecraft/core/BlockPos;)Lkotlin/jvm/functions/Function2;"
+  },
+  "source_tree_fingerprint": {
+    "captured_utc": "2026-11-18T02:06:35.451958+00:00",
+    "source_root": "polinex-src/src/main/java",
+    "java_source_count": 1602,
+    "aggregate_algorithm": "SHA256(UTF-8 of path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+    "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "changed_path_sha256": {
+      "me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e"
+    },
+    "previous_manifest_aggregate_recomputed": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+    "previous_manifest_aggregate_recorded": "b7f38452bb4e07e7619efe5b112944ba4f40e3d852d8c87e037e89e52af1231b",
+    "previous_manifest_aggregate_verified": true,
+    "previously_reported_aggregate_corrected": "88c34439c3905f1300a0b09b561204f63255135e2591eb9c43a5de9165211a66",
+    "aggregate_correction": "source-tree-fingerprint-correction.json; independently recomputed from all 1602 current source files"
+  },
+  "build": {
+    "command": ".\\gradlew.bat compileJava --rerun-tasks --no-daemon",
+    "working_directory": "polinex-src",
+    "java_home": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot",
+    "started_utc": "2026-11-18T02:00:37.2914785Z",
+    "ended_utc": "2026-11-18T02:01:22.6419524Z",
+    "exit_code": 0,
+    "log": "build-after-lambda-jdk25.log",
+    "log_sha256": "bae1b8588f80e737ebb28c51f61953c4100fb47fb785895907f986aeec3b8571"
+  },
+  "evidence": {
+    "source_method": "source-search-a-star-after.java.txt",
+    "compiled_method": "compiled-search-a-star-after.javap.txt",
+    "compiled_class_dump": "compiled-after-lambda.javap.txt",
+    "source_tree_fingerprint_file": "source-tree-fingerprint-after.json"
+  },
+  "runtime_client": false,
+  "world": false,
+  "server": false,
+  "notes": [
+    "The current compiler output now uses invokedynamic for the A* Function2 callback; the earlier independent review reversed which dump used invokedynamic, corrected against the complete original/current javap captures.",
+    "Nested helper lookupPathNodeCost preserves the original cost read after both object allocations, with an extra helper frame on exceptional lookup paths."
+  ]
+}

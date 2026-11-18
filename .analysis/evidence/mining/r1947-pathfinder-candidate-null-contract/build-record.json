@@ -1,0 +1,42 @@
+{
+  "experiment_id": "R1947",
+  "command": ".\\gradlew.bat compileJava --rerun-tasks --no-daemon",
+  "working_directory": "C:\\Users\\AutoB\\.codex\\worktrees\\bootstrap-eclientinit\\OpenPoli\\polinex-src",
+  "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\java.exe",
+  "java_version": "openjdk version 25.0.4.1 2026-08-18 LTS",
+  "final_source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java",
+  "final_source_sha256": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+  "final_started_utc": "2026-11-18T01:32:18.1820082Z",
+  "final_ended_utc": "2026-11-18T01:33:08.3753647Z",
+  "final_exit_code": 0,
+  "warnings": 18,
+  "log": "compile-temurin25-r1947.log",
+  "attempts": [
+    {
+      "valid": false,
+      "working_directory": "C:\\Users\\AutoB\\.codex\\worktrees\\bootstrap-eclientinit\\OpenPoli",
+      "command": ".\\gradlew.bat compileJava --rerun-tasks --no-daemon",
+      "started_utc": "2026-11-18T01:18:39.4442547Z",
+      "ended_utc": "2026-11-18T01:18:39.7571499Z",
+      "gradle_started": false,
+      "harness_exit_code": 0,
+      "reason": "gradlew.bat not found at repository root."
+    },
+    {
+      "valid": true,
+      "source_sha256": "fa11ffab69fa273835dde36377a749083c0ee15e0cc619ae9123fec78c2d48f3",
+      "started_utc": "2026-11-18T01:19:40.7715326Z",
+      "ended_utc": "2026-11-18T01:20:30.1493107Z",
+      "exit_code": 0,
+      "superseded_by_final_source": true
+    },
+    {
+      "valid": true,
+      "source_sha256": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+      "started_utc": "2026-11-18T01:32:18.1820082Z",
+      "ended_utc": "2026-11-18T01:33:08.3753647Z",
+      "exit_code": 0,
+      "superseded_by_final_source": false
+    }
+  ]
+}

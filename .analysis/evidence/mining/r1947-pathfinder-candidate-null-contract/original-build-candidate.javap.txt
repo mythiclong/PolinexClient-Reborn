@@ -1,0 +1,238 @@
+  private final me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI a(net.minecraft.core.BlockPos, me.octo.client.utils.player.pathfinder.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll);
+    descriptor: (Lnet/minecraft/core/BlockPos;Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;)Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+    Code:
+         0: invokestatic  #141                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.k:()I
+         3: aload_1
+         4: aload_2
+         5: invokevirtual #313                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:()I
+         8: iconst_0
+         9: aload_2
+        10: invokevirtual #317                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c:()I
+        13: invokevirtual #321                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+        16: dup
+        17: sipush        -10004
+        20: sipush        6585
+        23: pop2
+        24: ldc_w         #323                // String offset(...)
+        27: invokestatic  #326                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        30: astore        4
+        32: istore_3
+        33: aload         4
+        35: invokevirtual #150                // Method net/minecraft/core/BlockPos.getX:()I
+        38: getstatic     #158                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        41: invokevirtual #551                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()I
+        44: iload_3
+        45: ifeq          76
+        48: if_icmpgt     154
+        51: goto          58
+        54: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        57: athrow
+        58: aload         4
+        60: invokevirtual #150                // Method net/minecraft/core/BlockPos.getX:()I
+        63: getstatic     #158                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        66: invokevirtual #552                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()I
+        69: goto          76
+        72: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        75: athrow
+        76: iload_3
+        77: ifeq          108
+        80: if_icmplt     154
+        83: goto          90
+        86: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+        89: athrow
+        90: aload         4
+        92: invokevirtual #153                // Method net/minecraft/core/BlockPos.getZ:()I
+        95: getstatic     #158                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        98: invokevirtual #553                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.c:()I
+       101: goto          108
+       104: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       107: athrow
+       108: iload_3
+       109: ifeq          151
+       112: if_icmpgt     154
+       115: goto          122
+       118: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       121: athrow
+       122: aload         4
+       124: invokevirtual #153                // Method net/minecraft/core/BlockPos.getZ:()I
+       127: iload_3
+       128: ifeq          161
+       131: goto          138
+       134: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       137: athrow
+       138: getstatic     #158                // Field IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       141: invokevirtual #555                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.d:()I
+       144: goto          151
+       147: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       150: athrow
+       151: if_icmpge     160
+       154: aconst_null
+       155: areturn
+       156: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       159: athrow
+       160: iconst_1
+       161: istore        5
+       163: bipush        -2
+       165: iload         5
+       167: if_icmpge     462
+       170: aload         4
+       172: iconst_0
+       173: iload         5
+       175: iconst_0
+       176: invokevirtual #321                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       179: dup
+       180: sipush        -10002
+       183: sipush        -3929
+       186: pop2
+       187: ldc_w         #323                // String offset(...)
+       190: invokestatic  #326                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       193: astore        6
+       195: getstatic     #266                // Field IIlllllIlIlIIIIIlIIlllllIIIIllIlIIIIllIIllIIIIllIIIIIIIIlllIllIllIlIllIIlllIlllIlIlll:Ljava/util/HashSet;
+       198: aload         6
+       200: invokevirtual #558                // Method java/util/HashSet.contains:(Ljava/lang/Object;)Z
+       203: iload_3
+       204: ifeq          229
+       207: ifeq          223
+       210: goto          217
+       213: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       216: athrow
+       217: aconst_null
+       218: areturn
+       219: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       222: athrow
+       223: aload_0
+       224: aload         6
+       226: invokespecial #562                // Method f:(Lnet/minecraft/core/BlockPos;)B
+       229: istore        7
+       231: iload_3
+       232: ifeq          458
+       235: iload         7
+       237: ifeq          455
+       240: goto          247
+       243: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       246: athrow
+       247: aload_0
+       248: aload         6
+       250: iconst_0
+       251: iconst_1
+       252: iconst_0
+       253: invokevirtual #321                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       256: dup
+       257: sipush        -10002
+       260: sipush        -3929
+       263: pop2
+       264: ldc_w         #323                // String offset(...)
+       267: invokestatic  #326                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       270: invokespecial #565                // Method d:(Lnet/minecraft/core/BlockPos;)Z
+       273: iload_3
+       274: ifeq          327
+       277: goto          284
+       280: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       283: athrow
+       284: ifeq          341
+       287: goto          294
+       290: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       293: athrow
+       294: aload_0
+       295: aload         6
+       297: iconst_0
+       298: iconst_2
+       299: iconst_0
+       300: invokevirtual #321                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       303: dup
+       304: sipush        -10002
+       307: sipush        -3929
+       310: pop2
+       311: ldc_w         #323                // String offset(...)
+       314: invokestatic  #326                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       317: invokespecial #567                // Method e:(Lnet/minecraft/core/BlockPos;)Z
+       320: goto          327
+       323: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       326: athrow
+       327: iload_3
+       328: ifeq          349
+       331: ifne          347
+       334: goto          341
+       337: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       340: athrow
+       341: aconst_null
+       342: areturn
+       343: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       346: athrow
+       347: iload         5
+       349: iload_3
+       350: ifeq          396
+       353: iconst_1
+       354: if_icmpne     405
+       357: goto          364
+       360: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       363: athrow
+       364: aload_0
+       365: aload_1
+       366: iconst_0
+       367: iconst_3
+       368: iconst_0
+       369: invokevirtual #321                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+       372: dup
+       373: sipush        -10002
+       376: sipush        -3929
+       379: pop2
+       380: ldc_w         #323                // String offset(...)
+       383: invokestatic  #326                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       386: invokespecial #567                // Method e:(Lnet/minecraft/core/BlockPos;)Z
+       389: goto          396
+       392: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       395: athrow
+       396: ifne          405
+       399: aconst_null
+       400: areturn
+       401: invokestatic  #173                // Method a:(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;
+       404: athrow
+       405: new           #22                 // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI
+       408: dup
+       409: aload         6
+       411: iload         7
+       413: new           #24                 // class me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       416: dup
+       417: aload_2
+       418: invokevirtual #313                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:()I
+       421: iload         5
+       423: aload_2
+       424: invokevirtual #317                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c:()I
+       427: invokespecial #190                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll."<init>":(III)V
+       430: getstatic     #192                // Field llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl:Ljava/util/HashMap;
+       433: iload         7
+       435: invokestatic  #198                // Method java/lang/Byte.valueOf:(B)Ljava/lang/Byte;
+       438: invokevirtual #181                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       441: dup
+       442: invokestatic  #116                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       445: checkcast     #183                // class java/lang/Number
+       448: invokevirtual #202                // Method java/lang/Number.doubleValue:()D
+       451: invokespecial #205                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI."<init>":(Lnet/minecraft/core/BlockPos;BLme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;D)V
+       454: areturn
+       455: iinc          5, -1
+       458: iload_3
+       459: ifne          163
+       462: aconst_null
+       463: areturn
+      Exception table:
+         from    to  target type
+            33    51    54   Class java/util/NoSuchElementException
+            48    69    72   Class java/util/NoSuchElementException
+            76    83    86   Class java/util/NoSuchElementException
+            80   101   104   Class java/util/NoSuchElementException
+           108   115   118   Class java/util/NoSuchElementException
+           112   131   134   Class java/util/NoSuchElementException
+           122   144   147   Class java/util/NoSuchElementException
+           151   156   156   Class java/util/NoSuchElementException
+           195   210   213   Class java/util/NoSuchElementException
+           207   219   219   Class java/util/NoSuchElementException
+           231   240   243   Class java/util/NoSuchElementException
+           235   277   280   Class java/util/NoSuchElementException
+           247   287   290   Class java/util/NoSuchElementException
+           284   320   323   Class java/util/NoSuchElementException
+           327   334   337   Class java/util/NoSuchElementException
+           331   343   343   Class java/util/NoSuchElementException
+           349   357   360   Class java/util/NoSuchElementException
+           353   389   392   Class java/util/NoSuchElementException
+           396   401   401   Class java/util/NoSuchElementException

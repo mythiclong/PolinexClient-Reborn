@@ -248,7 +248,7 @@ public final class IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIII
 
          while (var23 < 257) {
             label56:
-            for (Pair var10 :((Pair[])(Object)( var7))) {
+            for (Pair var10 : (List<Pair>) (List<?>) var7) {
                BlockPos var28 = ((BlockPos)var10.getFirst()).offset(0, -var23, 0);
                var10002 = 23526;
                var10003 = -25813;

@@ -2195,7 +2195,9 @@ public final class IllIllIlIIIIIllIlIlIlIIIIllllIIIllllIllIIlllIIlIllIllIlllIIll
                   me.octo.client.utils.player.pathfinder.lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl,
                   CollectionsKt.listOf("Jungle"),
                   me.octo.client.utils.player.IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.w(),
-                  0.0);
+                  0.0,
+                  4,
+                  null);
                if (var1 == 0) {
                   if (!var10000) {
                      break label75;
@@ -2253,7 +2255,9 @@ public final class IllIllIlIIIIIllIlIlIlIIIIllllIIIllllIllIIlllIIlIllIllIlllIIll
             me.octo.client.utils.player.pathfinder.lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl,
             CollectionsKt.listOf("Jungle"),
             me.octo.client.utils.player.IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.w(),
-            0.0);
+             0.0,
+             4,
+             null);
       }
 
       label76: {

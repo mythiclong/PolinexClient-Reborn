@@ -1,0 +1,413 @@
+   private static final Unit n() {
+      try {
+         return polinex$loadPathfinderCacheOriginal();
+      } catch (Throwable var1) {
+         return polinex$recoverPathfinderLoadFailure(var1);
+      }
+   }
+
+   public static final boolean polinex$validPathfinderCache(File var0) {
+      try {
+         if (var0 == null || !var0.isFile()) {
+            return false;
+         }
+
+         byte[] var1 = Files.readAllBytes(var0.toPath());
+         if (var1.length < 4) {
+            return false;
+         }
+
+         ByteBuffer var2 = ByteBuffer.wrap(var1);
+         int var3 = var2.getInt();
+         if (var3 < 0 || var3 > var2.remaining() / 12) {
+            return false;
+         }
+
+         for (int var4 = 0; var4 < var3; ++var4) {
+            if (var2.remaining() < 12) {
+               return false;
+            }
+
+            int var5 = var2.getInt();
+            var2.getInt();
+            var2.getInt();
+            if (var5 < 0 || var5 > var2.remaining() / 5) {
+               return false;
+            }
+
+            var2.position(var2.position() + var5 * 5);
+         }
+
+         return !var2.hasRemaining();
+      } catch (Throwable var6) {
+         return false;
+      }
+   }
+
+   private static final Unit polinex$invalidatePathfinderCache(File var0) {
+      if (var0 != null) {
+         var0.delete();
+      }
+
+      lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI.clear();
+      lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI = true;
+      System.err.println("Polinex: discarded an invalid pathfinder cache; using live chunks.");
+      return Unit.INSTANCE;
+   }
+
+   private static final Unit polinex$recoverPathfinderLoadFailure(Throwable var0) {
+      lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI.clear();
+      lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI = true;
+      System.err.println("Polinex: pathfinder cache load failed; using live chunks.");
+      return Unit.INSTANCE;
+   }
+
+   private static final Unit polinex$loadPathfinderCacheOriginal() throws Throwable {
+      IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl = System.currentTimeMillis();
+      int var0 = IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+      me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI var1 = me.octo.client.utils.IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.g();
+      IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI var28 = null;
+      if (var0 != 0) {
+         if (var1 == me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llIlIIlIlIIllIlIIIlIIlIlIIIlIlIIIIIIIIIllllIlIllIIlIIlIllIIIIIIlIlIllIIIllIlllllIlllI) {
+            var1 = me.octo.client.IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl;
+         }
+      }
+
+      File var2 = new File(new File(me.octo.client.llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.a(), me.octo.client.IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI.a()), var1.name() + ".dat");
+      boolean var29 = var2.exists();
+      if (var0 == 0 || !var29) {
+         var28 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+         lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI = var0 == 0 ? var29 : true;
+         return Unit.INSTANCE;
+      }
+
+      IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI var33 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+      HashMap var30 = var0 == 0 ? null : (HashMap)(Object)IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.a().get(var1);
+      if (var30 == null) {
+         var30 = new HashMap();
+      }
+
+      var33.a(var30);
+      if (!IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.polinex$validPathfinderCache(var2)) {
+         return IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.polinex$invalidatePathfinderCache(var2);
+      }
+
+      java.io.Closeable var3 = null;
+      Throwable var6 = null;
+      try {
+         var3 = new java.io.RandomAccessFile(var2, "r").getChannel();
+         java.nio.channels.FileChannel var5 = (java.nio.channels.FileChannel)var3;
+         java.nio.MappedByteBuffer var7 = var5.map(java.nio.channels.FileChannel.MapMode.READ_ONLY, 0L, var5.size());
+         int var8 = (int)((var5.size() - 4L) / 5L);
+         var28 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+         lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI.ensureCapacity(var8);
+         int var9 = var7.getInt();
+         int var10 = 0;
+         while (var10 < var9) {
+            int var13 = var7.getInt();
+            int var14 = var7.getInt() << 4;
+            int var15 = var7.getInt() << 4;
+            long var16 = me.octo.client.utils.IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a(var14, 0, var15);
+            if (var0 == 0) {
+               break;
+            }
+
+            for (int var18 = 0; var18 < var13; ++var18) {
+               byte var21 = var7.get();
+               int var22 = var7.getInt();
+               long var23 = var16 | (long)(var22 & 15) << 38 | (long)(var22 >> 8 & 255) << 26 | (long)(var22 >> 4 & 15);
+               var28 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+               ((Map)lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI).put(Long.valueOf(var23), Byte.valueOf(var21));
+            }
+
+            ++var10;
+         }
+
+         Unit var31 = Unit.INSTANCE;
+      } catch (Throwable var32) {
+         var6 = var32;
+         throw var32;
+      } finally {
+         kotlin.io.CloseableKt.closeFinally(var3, var6);
+      }
+
+      var28 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+      lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI = true;
+      var28 = IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+      int var27 = lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI.size();
+      long var25 = System.currentTimeMillis() - IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl;
+      me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.d("Loaded " + var27 + " cached states in " + var25 + "ms.");
+      return Unit.INSTANCE;
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.RuntimeException: parsing failure!
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
+      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
+      //
+      // Bytecode:
+      // 000: invokestatic java/lang/System.currentTimeMillis ()J
+      // 003: putstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl J
+      // 006: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.k ()I
+      // 009: getstatic me/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl;
+      // 00c: invokevirtual me/octo/client/utils/IIlllIllIIllIIllIlIIlIlIlIlllllllIllIllIIIIllllIlIIIIIIlIllIIlllIlIlIIIIllllIlllllIIl.g ()Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+      // 00f: astore 1
+      // 010: istore 0
+      // 011: aload 1
+      // 012: iload 0
+      // 013: ifeq 02d
+      // 016: getstatic me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llIlIIlIlIIllIlIIIlIIlIlIIIlIlIIIIIIIIIllllIlIllIIlIIlIllIIIIIIlIlIllIIIllIlllllIlllI Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+      // 019: if_acmpne 02e
+      // 01c: goto 023
+      // 01f: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 022: athrow
+      // 023: getstatic me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.llllllIIIlIlIIIllllIIIIllIIlIlIlIIIlIIlIlIIIlllIlIllIlllIIllIlIIIIIllIlIlIlIlllllllIl Lme/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+      // 026: goto 02d
+      // 029: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 02c: athrow
+      // 02d: astore 1
+      // 02e: new java/io/File
+      // 031: dup
+      // 032: new java/io/File
+      // 035: dup
+      // 036: getstatic me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl Lme/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl;
+      // 039: invokevirtual me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.a ()Ljava/lang/String;
+      // 03c: getstatic me/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI Lme/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 03f: invokevirtual me/octo/client/IIIllIlIIllIIlIlllIIIIlllllIllIlIIIIlIIIlIlIIIlIllIllIIlIIllIIIIllIIlIllIlIIllIllIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a ()Ljava/lang/String;
+      // 042: invokespecial java/io/File.<init> (Ljava/lang/String;Ljava/lang/String;)V
+      // 045: aload 1
+      // 046: invokevirtual me/octo/client/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.name ()Ljava/lang/String;
+      // 049: sipush -18161
+      // 04c: sipush 11418
+      // 04f: pop2
+      // 050: ldc_w ".dat"
+      // 053: invokedynamic makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; bsm=java/lang/invoke/StringConcatFactory.makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; args=[ "\u0001\u0001" ]
+      // 058: invokespecial java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V
+      // 05b: astore 2
+      // 05c: aload 2
+      // 05d: invokevirtual java/io/File.exists ()Z
+      // 060: iload 0
+      // 061: ifeq 07a
+      // 064: ifne 081
+      // 067: goto 06e
+      // 06a: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 06d: athrow
+      // 06e: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 071: pop
+      // 072: bipush 1
+      // 073: goto 07a
+      // 076: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 079: athrow
+      // 07a: putstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI Z
+      // 07d: getstatic kotlin/Unit.INSTANCE Lkotlin/Unit;
+      // 080: areturn
+      // 081: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 084: iload 0
+      // 085: ifeq 0a5
+      // 088: invokestatic me/octo/client/utils/player/pathfinder/IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.a ()Ljava/util/HashMap;
+      // 08b: aload 1
+      // 08c: invokevirtual java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 08f: checkcast java/util/HashMap
+      // 092: dup
+      // 093: ifnonnull 0ac
+      // 096: goto 09d
+      // 099: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 09c: athrow
+      // 09d: pop
+      // 09e: goto 0a5
+      // 0a1: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 0a4: athrow
+      // 0a5: new java/util/HashMap
+      // 0a8: dup
+      // 0a9: invokespecial java/util/HashMap.<init> ()V
+      // 0ac: invokevirtual me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/util/HashMap;)V
+      // 0af: aload 2
+      // 0b0: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.polinex$validPathfinderCache (Ljava/io/File;)Z
+      // 0b3: ifne 0bb
+      // 0b6: aload 2
+      // 0b7: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.polinex$invalidatePathfinderCache (Ljava/io/File;)Lkotlin/Unit;
+      // 0ba: areturn
+      // 0bb: new java/io/RandomAccessFile
+      // 0be: dup
+      // 0bf: aload 2
+      // 0c0: ldc_w "r"
+      // 0c3: invokespecial java/io/RandomAccessFile.<init> (Ljava/io/File;Ljava/lang/String;)V
+      // 0c6: invokevirtual java/io/RandomAccessFile.getChannel ()Ljava/nio/channels/FileChannel;
+      // 0c9: checkcast java/io/Closeable
+      // 0cc: astore 3
+      // 0cd: aconst_null
+      // 0ce: astore 4
+      // 0d0: nop
+      // 0d1: aload 3
+      // 0d2: checkcast java/nio/channels/FileChannel
+      // 0d5: astore 5
+      // 0d7: bipush 0
+      // 0d8: istore 6
+      // 0da: aload 5
+      // 0dc: getstatic java/nio/channels/FileChannel$MapMode.READ_ONLY Ljava/nio/channels/FileChannel$MapMode;
+      // 0df: lconst_0
+      // 0e0: aload 5
+      // 0e2: invokevirtual java/nio/channels/FileChannel.size ()J
+      // 0e5: invokevirtual java/nio/channels/FileChannel.map (Ljava/nio/channels/FileChannel$MapMode;JJ)Ljava/nio/MappedByteBuffer;
+      // 0e8: astore 7
+      // 0ea: aload 5
+      // 0ec: invokevirtual java/nio/channels/FileChannel.size ()J
+      // 0ef: bipush 4
+      // 0f0: i2l
+      // 0f1: lsub
+      // 0f2: bipush 5
+      // 0f3: i2l
+      // 0f4: ldiv
+      // 0f5: l2i
+      // 0f6: istore 8
+      // 0f8: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 0fb: pop
+      // 0fc: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+      // 0ff: iload 8
+      // 101: invokevirtual it/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap.ensureCapacity (I)V
+      // 104: aload 7
+      // 106: invokevirtual java/nio/MappedByteBuffer.getInt ()I
+      // 109: istore 9
+      // 10b: bipush 0
+      // 10c: istore 10
+      // 10e: iload 10
+      // 110: iload 9
+      // 112: if_icmpge 1bf
+      // 115: iload 10
+      // 117: istore 11
+      // 119: bipush 0
+      // 11a: istore 12
+      // 11c: aload 7
+      // 11e: invokevirtual java/nio/MappedByteBuffer.getInt ()I
+      // 121: istore 13
+      // 123: aload 7
+      // 125: invokevirtual java/nio/MappedByteBuffer.getInt ()I
+      // 128: bipush 4
+      // 129: ishl
+      // 12a: istore 14
+      // 12c: aload 7
+      // 12e: invokevirtual java/nio/MappedByteBuffer.getInt ()I
+      // 131: bipush 4
+      // 132: ishl
+      // 133: istore 15
+      // 135: getstatic me/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII;
+      // 138: iload 14
+      // 13a: bipush 0
+      // 13b: iload 15
+      // 13d: invokevirtual me/octo/client/utils/IIllIIIIllIlIIIlIIIIlIIlIIllIlIIlIIlIlIlIlIIIIlllIIIIlIllllIlIllIIIIIIlllIlllIIIIllII.a (III)J
+      // 140: lstore 16
+      // 142: iload 0
+      // 143: ifeq 1c0
+      // 146: bipush 0
+      // 147: istore 18
+      // 149: iload 18
+      // 14b: iload 13
+      // 14d: if_icmpge 1b7
+      // 150: iload 18
+      // 152: istore 19
+      // 154: bipush 0
+      // 155: istore 20
+      // 157: aload 7
+      // 159: invokevirtual java/nio/MappedByteBuffer.get ()B
+      // 15c: istore 21
+      // 15e: aload 7
+      // 160: invokevirtual java/nio/MappedByteBuffer.getInt ()I
+      // 163: istore 22
+      // 165: lload 16
+      // 167: iload 22
+      // 169: bipush 15
+      // 16b: iand
+      // 16c: i2l
+      // 16d: bipush 38
+      // 16f: lshl
+      // 170: lor
+      // 171: iload 22
+      // 173: bipush 8
+      // 175: ishr
+      // 176: sipush 255
+      // 179: iand
+      // 17a: i2l
+      // 17b: bipush 26
+      // 17d: lshl
+      // 17e: lor
+      // 17f: iload 22
+      // 181: bipush 4
+      // 182: ishr
+      // 183: bipush 15
+      // 185: iand
+      // 186: i2l
+      // 187: lor
+      // 188: lstore 23
+      // 18a: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 18d: pop
+      // 18e: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+      // 191: checkcast java/util/Map
+      // 194: lload 23
+      // 196: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
+      // 199: iload 21
+      // 19b: invokestatic java/lang/Byte.valueOf (B)Ljava/lang/Byte;
+      // 19e: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 1a3: pop
+      // 1a4: nop
+      // 1a5: iinc 18 1
+      // 1a8: iload 0
+      // 1a9: ifeq 1bb
+      // 1ac: iload 0
+      // 1ad: ifne 149
+      // 1b0: goto 1b7
+      // 1b3: invokestatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
+      // 1b6: athrow
+      // 1b7: nop
+      // 1b8: iinc 10 1
+      // 1bb: iload 0
+      // 1bc: ifne 10e
+      // 1bf: nop
+      // 1c0: getstatic kotlin/Unit.INSTANCE Lkotlin/Unit;
+      // 1c3: astore 5
+      // 1c5: aload 3
+      // 1c6: aload 4
+      // 1c8: invokestatic kotlin/io/CloseableKt.closeFinally (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 1cb: goto 1e2
+      // 1ce: astore 6
+      // 1d0: aload 6
+      // 1d2: astore 4
+      // 1d4: aload 6
+      // 1d6: athrow
+      // 1d7: astore 6
+      // 1d9: aload 3
+      // 1da: aload 4
+      // 1dc: invokestatic kotlin/io/CloseableKt.closeFinally (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 1df: aload 6
+      // 1e1: athrow
+      // 1e2: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 1e5: pop
+      // 1e6: sipush -18156
+      // 1e9: bipush 1
+      // 1ea: putstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIllllIlllIIllIllllllIIIIIIIIIIllIIlllIIIlllIIlIIIIllIIllIIllIIllIIIIlllIIIlIlllIlIlI Z
+      // 1ed: sipush 27683
+      // 1f0: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      // 1f3: pop
+      // 1f4: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI Lit/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap;
+      // 1f7: invokevirtual it/unimi/dsi/fastutil/longs/Long2ByteOpenHashMap.size ()I
+      // 1fa: invokestatic java/lang/System.currentTimeMillis ()J
+      // 1fd: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl J
+      // 200: lsub
+      // 201: lstore 25
+      // 203: istore 27
+      // 205: pop2
+      // 206: ldc_w "Loaded "
+      // 209: iload 27
+      // 20b: sipush -18157
+      // 20e: sipush -3707
+      // 211: pop2
+      // 212: ldc_w " cached states in "
+      // 215: lload 25
+      // 217: sipush -18171
+      // 21a: sipush 28553
+      // 21d: pop2
+      // 21e: ldc_w "ms."
+      // 221: invokedynamic makeConcatWithConstants (Ljava/lang/String;ILjava/lang/String;JLjava/lang/String;)Ljava/lang/String; bsm=java/lang/invoke/StringConcatFactory.makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; args=[ "\u0001\u0001\u0001\u0001\u0001" ]
+      // 226: invokestatic me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.d (Ljava/lang/String;)V
+      // 229: getstatic kotlin/Unit.INSTANCE Lkotlin/Unit;
+      // 22c: areturn
+   }
+

@@ -1,0 +1,320 @@
+{
+  "sync_id": "SYNC-20261118-PATHFINDER",
+  "date_utc": "2026-11-18",
+  "scope": "Pathfinder source, R1947-R1949 reviewable evidence, current handoff and repository readmes",
+  "evidence_produced_against_commit": "d64b1816f27894ba59b443030f95e72a595e0f65",
+  "evidence_branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "ingest_commits": {
+    "private_openpolinex": null,
+    "public_polinexclient_reborn": null,
+    "note": "Filled after ingestion commits; distinct from evidence baseline."
+  },
+  "targets": {
+    "private_repository": "https://github.com/mythiclong/openpolinex",
+    "private_branch": "codex/handoff-progress-2026-11-15",
+    "public_repository": "https://github.com/mythiclong/PolinexClient-Reborn",
+    "public_branch": "main",
+    "public_pre_ingest_commit": "9a2ed44439286e8960139b1eb25c4965bf25f089"
+  },
+  "source_tree": {
+    "java_file_count": 1602,
+    "aggregate_algorithm": "SHA256(UTF-8 of path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+    "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "changed_java_files": [
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/IIIIlIIllIlIlIlllllIlIIlIllIllllllIlIIllllIlIIIIIllIIlIlIlllIlIlIIIlllIlIlIllIIIllIlI.java",
+        "sha256": "6668631454c586fbc416fc270a3486a2a0fc86fa02f3929cf753e760f1d3d95f"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/IllIllIlIIIIIllIlIlIlIIIIllllIIIllllIllIIlllIIlIllIllIlllIIllIIlIlllllIIlIIllllIlIlll.java",
+        "sha256": "72c4da36a7706f474615f93644c21adcfa8ba915da4f3a84abb00afb14a39737"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/lIIlIlllllllllIlllIIIllIIIlIlIIllIllIllIlIIlIlllllIllllIIIlIIlIIlIllIlIlllIIlIllllIll.java",
+        "sha256": "f0370f020fd07cda87363fab8e4c1723d2f148a9373f9d29c09ddc5e61785add"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/lIllIlIIIIIIIlIIIIIIllIlIlIIlllllllllllIIIIIIllIlIIlIIlllIIIIIlIlllllIlllIlIIIlIllllI.java",
+        "sha256": "39b9b56d334216abcfb70d2e89bdbd7e82bd8fb0cbb03cdcbcfec1bc86b36bc2"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/lIllIlIIIIIllIlllIlIlIIIlIlllIIIIllIIlIIIlIIllllIIIlIIlIIIIIIIlllIIIlIIlIlllIIllIIIIl.java",
+        "sha256": "5e6a3eb7d60cc39042789954cfffd48909553b1acf30c1234c30547181cf8605"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/llllllIIlllIIIIIlIllIIIIIIllIIIIllIllIIllIlIIIIlIIllIIllIIlIIIlIIIIIlIllIlIlIIIIlIlII.java",
+        "sha256": "c965cecabec7912b22a26742e9f9ad56ca4e4390fc6ecccc8491733aa81ca217"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/IllIIlIIIIlIIIlIlIlllllIIIIlllllIlIllIllIIllIIlllIllllIIIlIIIllIIlIIIIllIlIlIIIlllIll.java",
+        "sha256": "632c7f6bfdc2fddbb73f340480a340d731a4426852de5582071ef779aaf4ce5b"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.java",
+        "sha256": "96999423dcee2e4d78051b7b0c632cc39796b70c1801312575db3a39119dfe0e"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+        "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java",
+        "sha256": "0b9f03e9038d18fe865f5ad08e294f2933cb8179e27c07be6072883c5d586cbc"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.java",
+        "sha256": "e356b10e2ead6c52e4f0428354ca67c5abdea89c79c20e00546575bf4403603b"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java",
+        "sha256": "df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+        "sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.java",
+        "sha256": "ed82f68687795351fc5ce8d7b0bd890e5a121e660264a4d7a8a7bab5fa32842c"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+        "sha256": "e175a445d8682b66c21bfdb0ef66ea8b185b52f9b967f469872ba3c1a0e64f43"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.java",
+        "sha256": "8bf6369c9d39c3a4d8fa7be9cd09b9e8b59ef69c6244eb4c2ad7d994efd8c97e"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.java",
+        "sha256": "3cae4ef33c9a553c78657a6f670b5d8bfe1df1b68af385707ad0605fd08a85f8"
+      }
+    ]
+  },
+  "evidence_slices": [
+    "R1947",
+    "R1948",
+    "R1949",
+    "R1948-CORR-1_SOURCE_TREE_FINGERPRINT_CORRECTION"
+  ],
+  "evidence_file_count": 42,
+  "evidence_files": [
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/build-record.json",
+      "sha256": "ca85a17534b693cacf2258f0db304efb470c2a38d4cc12bbdb2d9e296f42bb74",
+      "bytes": 1859
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/compile-temurin25-r1947.log",
+      "sha256": "573a990ef6f5ad28f32ed55534a02e1308841530b3fbc8880bb41816e9e19261",
+      "bytes": 7399
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/compile-temurin25.log",
+      "sha256": "2166090efca399ca6c79fb6b107af4d54069c42dc2758e0caf3bdd3a37c21848",
+      "bytes": 7399
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/compiled-after-build-candidate.javap.txt",
+      "sha256": "1ec88b726679d0bbe3bc6805ceea5ac1b9f031e719ef5e4afddf08f13f8a5c21",
+      "bytes": 11970
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/compiled-after-candidate-class.javap.txt",
+      "sha256": "3f91d39b40302881261fd413e79767ccbe9bbbac9623178f3256eaa72b68df32",
+      "bytes": 144073
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/compiled-before-build-candidate.javap.txt",
+      "sha256": "6136827cdfc2dccf3a41938b7cda088bcc4000ed71cf5afc910f02c46d103379",
+      "bytes": 9590
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/java-source-content-manifest.json",
+      "sha256": "b0735e7fc0ca50ba58018044d46dd8fea1bbca140c74a3bbaf196743933d2d46",
+      "bytes": 383565
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/javap-record.json",
+      "sha256": "72e3bcd8f0fd58ebfe271d408d57942db2e110477d27f2387a82523dcf5ba4f4",
+      "bytes": 731
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json",
+      "sha256": "cd51158c59927226341cd082c36de536df9bae91265c7c579b9a4841d3be3ea1",
+      "bytes": 3651
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/original-build-candidate.javap.txt",
+      "sha256": "fe4adad2dfca20889c95990965b36eab9237b79f201a7659ef4acacb9784034f",
+      "bytes": 17186
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/source-pathfinder-owner-after.java.txt",
+      "sha256": "18120b764e5f686dee7b2c5b9cb4a8e7f86cd2141abe6842df5f532f3697f410",
+      "bytes": 108336
+    },
+    {
+      "path": ".analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/source-pathfinder-owner-before.java.txt",
+      "sha256": "f7b7c54665e705d5e5a0436e95b7c9ba82124ca34ec334c4bf26de12677b7d4a",
+      "bytes": 107192
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/allocation-order-and-lambda-fix.json",
+      "sha256": "c71b31377f14ff4453ec0b5d46f23862bfd64ab8be732de0406abfe0058bd704",
+      "bytes": 4574
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/build-after-allocation-order-jdk25.log",
+      "sha256": "838c99e7fada8e30f8f359b13d754e94b982db1c968bb3a74d227d74f64f6473",
+      "bytes": 7399
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/build-after-allocation-order.log",
+      "sha256": "c0187cc431e0e9fd7dbaf93b6db07a359b87b9233e69ce6495aacb6a1209aa5c",
+      "bytes": 1288
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/build-after-lambda-jdk25.log",
+      "sha256": "bae1b8588f80e737ebb28c51f61953c4100fb47fb785895907f986aeec3b8571",
+      "bytes": 7399
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/compiled-after-allocation-order.javap.txt",
+      "sha256": "040fefce13fadea889a56c27a3d9fe0753dfb41077019e21bc98d437a612bf3d",
+      "bytes": 143335
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/compiled-after-lambda.javap.txt",
+      "sha256": "670f79af2521543359cca577c9b7fcdb7418fc4a7b735d76e3a7a14462d7cfb1",
+      "bytes": 144654
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/compiled-current-search-a-star.javap.txt",
+      "sha256": "1aa88d68e8726928d498abefb8fb4a899b80c8b75d571a8249b0ad09ae822795",
+      "bytes": 15646
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/compiled-search-a-star-after.javap.txt",
+      "sha256": "502957164b3f5e76ef9810abf267223288a3b00a8e7bfb3af440d3060ad1858f",
+      "bytes": 14486
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json",
+      "sha256": "7b1ac5bf6ade218e9c4aaf41fea34fc041e2ecd2161fde0a6079c7fb47b1b26a",
+      "bytes": 4754
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/original-search-a-star.javap.txt",
+      "sha256": "0ea392af1b1c732ba5b67dc76d002c1e79609f53789a9658bae45d838b52e322",
+      "bytes": 18479
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/source-search-a-star-after.java.txt",
+      "sha256": "5c33e656a912aafc8e2162619e274dd923b6b305b38ac7b801fdfd60eb8d2fa8",
+      "bytes": 5125
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/source-search-a-star.java.txt",
+      "sha256": "0c5056b1749b71d63a2111475bc3f4d1e35abb50515c0e3ad986c2fcfd644b01",
+      "bytes": 5913
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/source-tree-fingerprint-after.json",
+      "sha256": "0e609a88925c47cd68ec345104fab80e18dfc3ffaf5a35d760b1bec8f1012aa3",
+      "bytes": 1284
+    },
+    {
+      "path": ".analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/source-tree-fingerprint-correction.json",
+      "sha256": "a980317eb22e8ac06e77017517d758580235394b14fef9f6deb91c1539535155",
+      "bytes": 1949
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/compiled-cache-class.javap.txt",
+      "sha256": "3aa5c9aa9301e7039bdb9035380386b6bae3d6ae958434852c3060904a7d18d6",
+      "bytes": 359114
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/compiled-gate-holder.javap.txt",
+      "sha256": "008020e46e5147250fe3db9d6e652477121c7370ab82ba5b7ad0c5ffb1e43e63",
+      "bytes": 53347
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/compiled-gate-state-writer.javap.txt",
+      "sha256": "6aa9d22ce32b4b575ea19bec928ff1d7a11a2d17ff53b00ba28f6ea9cb6f1575",
+      "bytes": 335722
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/current-load-helper.javap.txt",
+      "sha256": "e9931f9970aaa375d9b9ce139a6b3ad1567ce86af743b3ce6045d54d01652ccc",
+      "bytes": 14982
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/current-n-load-wrapper.javap.txt",
+      "sha256": "9277e4082af209ff13deb820d74de68d98f2bc326a7005e74ec02db9ec2a59c2",
+      "bytes": 512
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/gate-state-owner-callsite-scan.json",
+      "sha256": "e9fd932e01cd83b930e76a34ea0798a4fdc7b274a96115ce978fccabc6f876fb",
+      "bytes": 2277
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/gate-state-owner-semantic-review.json",
+      "sha256": "f03cda20297b21bee0d9361c8c73e93d99a9d7820bc543743f5ac6d46bd703f8",
+      "bytes": 3666
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/javap-record.json",
+      "sha256": "2d4b86758e7cb3e9bb5062537424539978031e2327ddcd0e762ecf0866c86c53",
+      "bytes": 998
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json",
+      "sha256": "c4254e59246f2c23fd5ea883b66ae3683f5ffa6d4534894e9164f954d4e61a80",
+      "bytes": 4956
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/original-cache-class.javap.txt",
+      "sha256": "00db22bf86d1c636e313c414d96ef6f52ce750a50287889b3977e1611f626f35",
+      "bytes": 332718
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/original-gate-holder.javap.txt",
+      "sha256": "2b4e8992aefc99997a50c1ad16960492ac8bca074bedaf891f98fe9431212d8c",
+      "bytes": 52579
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/original-gate-state-writer.javap.txt",
+      "sha256": "8379d0becc5e845d13ea20a75bc9bb663d703af573df6bd07fb052f1948ec5ff",
+      "bytes": 300097
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/original-load-helper.javap.txt",
+      "sha256": "c5ae49e1f616dac3868a0ee6dd804bde5ad9744107cfa162155b84865c15fc4d",
+      "bytes": 17146
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/original-n-load-wrapper.javap.txt",
+      "sha256": "2ef78d5a2476d6e649b4c5aa8eb32b1518fa9f33fb50f12634aee39d2b4e204c",
+      "bytes": 465
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/source-cache-methods.java.txt",
+      "sha256": "e0f06c5a285f1330933b2bbb1ce9a972a0b960e9c8a18ed6f9654cdc76f8774a",
+      "bytes": 25400
+    },
+    {
+      "path": ".analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py",
+      "sha256": "f58541b9b6b1b99994e52429d5f774a905ddf7f57fc3e3efb610a93fdea79c9c",
+      "bytes": 4231
+    }
+  ],
+  "claims_and_limits": [
+    "R1947/R1948 full-tree compileJava with Temurin 25 succeeded; compilation does not establish runtime behavior equivalence.",
+    "R1949 scanned all 5475 original-JAR class files with zero parse failures and found the gate-state initializer and cache-constructor invokestatic callers.",
+    "R1948-CORR-1 preserves the prior aggregate 88c344… as incorrect and records the independently recomputed current 1602-file aggregate a23ce3…. The A* source and build evidence remain unchanged.",
+    "No valid-world Pathfinder route/collision/cache runtime acceptance or compatible-server acceptance is included.",
+    "The original JAR and raw protected payloads are not copied by this sync."
+  ]
+}

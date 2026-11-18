@@ -43,58 +43,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII {
-   public static int var10002 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var12 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var13 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var16 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static me.octo.client.PXDyn var18 = null; // PX-FIX missing field v2
-   
-   public static int var31 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var34 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var40 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var41 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static me.octo.client.PXDyn var42 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var43 = null; // PX-FIX missing field v2
-   
-   public static int var44 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var46 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static me.octo.client.PXDyn var47 = null; // PX-FIX missing field v2
-   
-   public static int var48 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static me.octo.client.PXDyn var49 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var5 = null; // PX-FIX missing field v2
-   
-   public static int var50 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static int var56 = 0; // PX-FIX (retyped int) missing field v2
-   
-   public static me.octo.client.PXDyn var57 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var58 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var62 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var70 = null; // PX-FIX missing field v2
-   
-   public static me.octo.client.PXDyn var74 = null; // PX-FIX missing field v2
-   
-        // PX-FIX varargs-ctor: entry args lost by obfuscator
-        public llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII(Object... px) {
-           this((HashMap<BlockPos, ArrayList<BlockPos>>)null, (HashMap<BlockPos, ArrayList<BlockPos>>)null); // PX-FIX: 委托主构造器（final 字段初始化）
-        }
    public llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII(
       HashMap<BlockPos, ArrayList<BlockPos>> var1, HashMap<BlockPos, ArrayList<BlockPos>> var2, int var3, kotlin.jvm.internal.DefaultConstructorMarker var4
    ) {
@@ -281,6 +229,13 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
          double var47 = 0.0; // PX-FIX hoist
          double var57 = 0.0; // PX-FIX hoist
          double var58 = 0.0; // PX-FIX hoist
+         double var49;
+         int var10002;
+         int var44;
+         int var46;
+         int var48;
+         int var50;
+         int var56;
         
       int var6;
       BlockPos var40;
@@ -504,13 +459,13 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                                           }
                                        }
 
-                                       var49 = ((me.octo.client.PXDyn)(Object)(Object)(Math.abs(var26)));
+                                       var49 = Math.abs(var26);
                                        if (var6 == 0) {
                                           break label302;
                                        }
 
                                        double var67;
-                                       var48 = (var67 = ((Double)(Object)var49) - 0.5625) == 0.0 ? 0 : (var67 < 0.0 ? -1 : 1);
+                                        var48 = (var67 = var49 - 0.5625) == 0.0 ? 0 : (var67 < 0.0 ? -1 : 1);
                                     }
 
                                     if (var48 <= 0) {
@@ -550,7 +505,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                                        }
                                     }
 
-                                    var49 = ((me.octo.client.PXDyn)(Object)(Object)(var31));
+                                    var49 = var31;
                                  }
 
                                  label208: {
@@ -620,7 +575,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                                     var57 = var58 * var62;
                                  }
 
-                                 var31 = ((Double)(Object)var49) + ((Double)(Object)var57);
+                                 var31 = var49 + var57;
                               }
 
                               var50 = 0;
@@ -1122,7 +1077,6 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
 
       while (true) {
          if (var4 != null) {
-            var5 = ((me.octo.client.PXDyn)(Object)(Object)(var3));
             if (var2 == 0) {
                break;
             }
@@ -1135,16 +1089,17 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
             }
          }
 
-         var5 = ((me.octo.client.PXDyn)(Object)(Object)(var3));
          break;
       }
 
-      return ((ArrayList<IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll>)(Object)(var5));
+      return var3;
    }
 
    private final llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll b(
       llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var1
    ) {
+      int var12;
+      int var13;
       int var2;
       BlockPos var3;
       double var11;
@@ -1263,6 +1218,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
          llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var46 = null; // PX-FIX hoist
          int var44 = 0; // PX-FIX hoist
          llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var43 = null; // PX-FIX hoist
+          llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var74;
          int var40 = 0; // PX-FIX hoist
          int var34 = 0; // PX-FIX hoist
          double var31 = 0.0; // PX-FIX hoist
@@ -1286,7 +1242,6 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
              var13 = var12.next();
             llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var14 = (llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll)var13;
             boolean var15 = false;
-            var62 = ((me.octo.client.PXDyn)(Object)(Object)(IlllIIllIlIllIIllIIIIlIlIllIlIIlllIIIIlIIIIIIIIIIlIlIIlllIllIlIlIlIllIIllIIlIIlIllllI));
             if (var4 != 0) {
                break;
             }
@@ -1297,11 +1252,10 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
             }
          }
 
-         var62 = ((me.octo.client.PXDyn)(Object)(Object)(CollectionsKt.toCollection(var10, new ArrayList())));
          break;
       }
 
-      ArrayList var6 = (ArrayList)(Object)(var62);
+      ArrayList var6 = (ArrayList)CollectionsKt.toCollection(var10, new ArrayList());
       ArrayList var63 = var6;
       if (var4 == 0) {
          if (var6.isEmpty()) {
@@ -1444,7 +1398,6 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                   }
 
                   if (var10000 >= 0) {
-                     label191: {
                         Object var68 = var6.get(var8);
                         var82 = -31380;
                         var88 = 13411;
@@ -1483,20 +1436,9 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                         llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var20 = new llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll(
                            -var16.c(), 0.0, var16.a(), false, null, false, 56, null
                         );
-                        llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var69 = var19;
-                        if (var4 == 0) {
-                           if (var19.b() > 0.0) {
-                              var70 = ((me.octo.client.PXDyn)(Object)(Object)(var42.d())); // PX-FIX boolean wrap
-                              break label191;
-                           }
-
-                           var69 = ((IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll)(Object)(var42));
-                        }
-
-                        var70 = ((me.octo.client.PXDyn)(Object)(Object)(var69.d(var20.b(-var47))));
-                     }
-
-                     llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var21 = ((IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll)(Object)(var70));
+                         llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll var21 = var4 == 0 && var19.b() > 0.0
+                            ? var42.b(var47).d(var20)
+                            : var42.b(-var47).d(var20);
                      var36.add(var21);
                      break label205;
                   }
@@ -1560,7 +1502,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                      label171: {
                         if (var4 == 0) {
                            if ((var73 == 0)) {
-                              var74 = ((me.octo.client.PXDyn)(Object)(Object)(var46));
+                              var74 = var46;
                               if (var4 != 0) {
                                  break label172;
                               }
@@ -1578,7 +1520,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                         }
                      }
 
-                     var74 = ((me.octo.client.PXDyn)(Object)(Object)(var43));
+                     var74 = var43;
                   }
 
                   double var48;
@@ -1976,6 +1918,8 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
          int var12 = 0; // PX-FIX hoist
          boolean var11 = false; // PX-FIX hoist
          short var10002 = (short)0; // PX-FIX hoist
+         int var40;
+         int var41;
         
       int var10000 = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
       Double var7 = var0.lIlIIIlIlIllllIlIIllIIllIIIIllllIIlIIlllIlIIIlIIlIIIlllIlIllIIlIllllIIIlIlIllIIllIlll.get(var5.a());
@@ -2081,7 +2025,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                            }
 
                            if (var37 != null) {
-                              var41 = (Integer)var37;
+                              var41 = ((Boolean)var37).booleanValue() ? 1 : 0;
                               break label176;
                            }
 
@@ -2203,7 +2147,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
          var33 = var7;
       }
 
-      double var9 = ((me.octo.client.PXDyn)var33).doubleValue();
+      double var9 = ((Number)var33).doubleValue();
        var11 = false;
       return var9;
    }
@@ -2240,7 +2184,8 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
    ) { double var12 = 0.0; // PX-FIX hoist
          byte var11 = (byte)0; // PX-FIX hoist
          short var10002 = (short)0; // PX-FIX hoist
-         Object var18 = null; // PX-FIX hoist
+         int var16;
+         Object var18;
         
       int var10000 = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.j();
       BlockPos var10001 = var0.offset(var3, 0, var4);
@@ -2343,12 +2288,11 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
                         }
                      }
 
-                     var18 = ((me.octo.client.PXDyn)(Object)(Object)(var1.IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII.get(var11)));
-                     var10001 = (BlockPos)(Object)(var18);
+                     var18 = ((HashMap)var1.IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII).get(var11);
                   }
 
-                  Intrinsics.checkNotNull(var10001);
-                   var12 = ((Number)var18).doubleValue();
+                  Intrinsics.checkNotNull(var18);
+                  var12 = ((Number)var18).doubleValue();
                   llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var14 = new llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll(
                      var10,
                      var11,
@@ -2399,6 +2343,7 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
       BlockHitResult var31 = null; // PX-FIX hoist
       BlockHitResult var34 = null; // PX-FIX hoist
       Collection var40 = null; // PX-FIX hoist
+      int var41;
         
       int var3;
       Vec3 var10;
@@ -4186,10 +4131,6 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
    }
 
    public static final class IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI {
-   public static me.octo.client.PXDyn var11 = null; // PX-FIX missing field v2
-   
-   public static int var13 = 0; // PX-FIX (retyped int) missing field v2
-   
       @NotNull
       private final ArrayList<llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl = new ArrayList<>();
       @NotNull
@@ -4360,111 +4301,60 @@ public final class llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllII
          }
       }
 
-      private final void b(int var1) { llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var5 = null; // PX-FIX hoist
-      llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var11 = null; // PX-FIX hoist
-        
-         int var3 = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.size();
-         int var10000 = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
-         int var4 = var1;
-         Object var10001 = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(var1);
-         short var10003 = -19998;
-         short var10004 = 9632;
-         Intrinsics.checkNotNullExpressionValue(var10001, "get(...)");
-          var5 = (llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll)var10001;
-         int var2 = var10000;
+      private final void b(int startIndex) {
+         int size = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.size();
+         int gate = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.PXEvMid.k();
+         int index = startIndex;
+         Object currentValue = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(index);
+         Intrinsics.checkNotNullExpressionValue(currentValue, "get(...)");
+         var current = (IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll) currentValue;
 
-         do {
-            int var8;
-            label53: { Object var12 = null; // PX-FIX hoist
-         short var10002 = (short)0; // PX-FIX hoist
-        
-               label52: {
-                  label51: {
-                     label59: {
-                        label60: {
-                           label48: {
-                              int var6 = 2 * var4 + 1;
-                              int var7 = 2 * var4 + 2;
-                              var8 = -1;
-                              if (var6 < var3) {
-                                 var8 = var6;
-                                 var10000 = var7;
-                                 var13 = var3;
-                                 if (var2 == 0 || var2 == 0) {
-                                    break label60;
-                                 }
+         if (gate == 0) {
+            int leftChildIndex = 2 * index + 1;
+            int selectedChildIndex = leftChildIndex < size ? leftChildIndex : -1;
+            Object childValue = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(selectedChildIndex);
+            Intrinsics.checkNotNullExpressionValue(childValue, "get(...)");
+            var child = (IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll) childValue;
 
-                                 if (var7 < var3) {
-                                    double var15;
-                                    var10000 = (
-                                             var15 = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(var7).e()
-                                                - this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(var6).e()
-                                          )
-                                          == 0.0
-                                       ? 0
-                                       : (var15 < 0.0 ? -1 : 1);
-                                    if (var2 == 0) {
-                                       break label48;
-                                    }
+            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(index, child);
+            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(selectedChildIndex, current);
+            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(child.a(), index);
+            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(current.a(), selectedChildIndex);
+            return;
+         }
 
-                                    if (var10000 < 0) {
-                                       var8 = var7;
-                                    }
-                                 }
-                              }
-
-                              var10000 = var8;
-                           }
-
-                           if (var2 == 0) {
-                              break label59;
-                           }
-
-                           var13 = -1;
-                        }
-
-                        if (var10000 == var13) {
-                           break label51;
-                        }
-
-                        var11 = var5;
-                        if (var2 == 0) {
-                           break label53;
-                        }
-
-                        double var16;
-                        var10000 = (var16 = var5.e() - this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(var8).e())
-                              == 0.0
-                           ? 0
-                           : (var16 < 0.0 ? -1 : 1);
-                     }
-
-                     if (var10000 > 0) {
-                        break label52;
-                     }
-                  }
-
-                  if (var2 != 0) {
-                     break;
-                  }
+         while (true) {
+            int leftChildIndex = 2 * index + 1;
+            int rightChildIndex = 2 * index + 2;
+            int selectedChildIndex = -1;
+            if (leftChildIndex < size) {
+               selectedChildIndex = leftChildIndex;
+               if (rightChildIndex < size
+                     && this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(rightChildIndex).e()
+                           < this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(leftChildIndex).e()) {
+                  selectedChildIndex = rightChildIndex;
                }
-
-                var12 = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(var8);
-                var10002 = -19998;
-               var10003 = 9632;
-               Intrinsics.checkNotNullExpressionValue(var12, "get(...)");
-               var11 = (llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll)var12;
             }
 
-            llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var9 = ((IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll)(Object)(var11));
-            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(var4, var9);
-            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(var8, var5);
-            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(var9.a(), var4);
-            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(var5.a(), var8);
-            var4 = var8;
-         } while (var2 != 0);
-      }
+            if (selectedChildIndex == -1) {
+               return;
+            }
 
+            Object childValue = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.get(selectedChildIndex);
+            Intrinsics.checkNotNullExpressionValue(childValue, "get(...)");
+            var child = (IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll) childValue;
+            double scoreDifference = current.e() - child.e();
+            if (!Double.isNaN(scoreDifference) && scoreDifference <= 0.0) {
+               return;
+            }
+
+            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(index, child);
+            this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.set(selectedChildIndex, current);
+            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(child.a(), index);
+            this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.put(current.a(), selectedChildIndex);
+            index = selectedChildIndex;
+         }
+      }
       // $VF: Irreducible bytecode was duplicated to produce valid code
       static { String[] var5 = null; // PX-FIX hoist
          byte var10002 = (byte)0; // PX-FIX hoist

@@ -1,0 +1,74 @@
+{
+  "experiment_id": "R1949",
+  "slice_id": "PATHFINDER-CACHE-LOAD-ORIGINAL-SEMANTICS",
+  "baseline_head": "d64b1816f27894ba59b443030f95e72a595e0f65",
+  "branch": "codex/bootstrap-eclientinit-2026-11-15",
+  "owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+  "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java",
+  "source_sha256": "df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e",
+  "compiled_class_sha256": "f72c5fdc1a47d27e02bc835056a606d580ef0e7a3389b2cda35f8c8cba16434c",
+  "original_jar_path": "D:/Work/OpenPoli/.analysis/cracked.jar",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "methods": {
+    "original_n_descriptor": "()Lkotlin/Unit;",
+    "current_n_descriptor": "()Lkotlin/Unit;",
+    "original_loader_descriptor": "()Lkotlin/Unit;",
+    "current_loader_descriptor": "()Lkotlin/Unit;"
+  },
+  "artifacts_sha256": {
+    "original-n-load-wrapper.javap.txt": "2ef78d5a2476d6e649b4c5aa8eb32b1518fa9f33fb50f12634aee39d2b4e204c",
+    "current-n-load-wrapper.javap.txt": "9277e4082af209ff13deb820d74de68d98f2bc326a7005e74ec02db9ec2a59c2",
+    "original-load-helper.javap.txt": "c5ae49e1f616dac3868a0ee6dd804bde5ad9744107cfa162155b84865c15fc4d",
+    "current-load-helper.javap.txt": "e9931f9970aaa375d9b9ce139a6b3ad1567ce86af743b3ce6045d54d01652ccc",
+    "source-cache-methods.java.txt": "e0f06c5a285f1330933b2bbb1ce9a972a0b960e9c8a18ed6f9654cdc76f8774a",
+    "verify_gate_state_owner.py": "f58541b9b6b1b99994e52429d5f774a905ddf7f57fc3e3efb610a93fdea79c9c",
+    "gate-state-owner-callsite-scan.json": "e9fd932e01cd83b930e76a34ea0798a4fdc7b274a96115ce978fccabc6f876fb",
+    "gate-state-owner-semantic-review.json": "f03cda20297b21bee0d9361c8c73e93d99a9d7820bc543743f5ac6d46bd703f8"
+  },
+  "probe_state": "complete original/current bytecode captures plus full archive invokestatic owner scan (5475 classes, 0 parse failures); no runtime cache/world/client/server probe",
+  "runtime_client": false,
+  "world": false,
+  "server": false,
+  "input": "none",
+  "limitations": [
+    "No cache load run against a valid or malformed cache file has been performed."
+  ],
+  "invalid_attempts": [
+    {
+      "command": "javap -classpath ..\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+      "working_directory": "polinex-src",
+      "valid": false,
+      "reason": "The original JAR is at D:/Work/OpenPoli/.analysis/cracked.jar; the current worktree has no local copy. No class inference was made from this failed invocation."
+    }
+  ],
+  "gate_state_owner_scan": {
+    "artifact": "gate-state-owner-callsite-scan.json",
+    "scanner": "verify_gate_state_owner.py",
+    "scanner_sha256": "f58541b9b6b1b99994e52429d5f774a905ddf7f57fc3e3efb610a93fdea79c9c",
+    "archive_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "class_files_scanned": 5475,
+    "parse_failure_count": 0,
+    "invokestatic_call_count": 2,
+    "calls": [
+      {
+        "caller_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "caller_method": "<clinit>",
+        "caller_descriptor": "()V",
+        "bytecode_offset": 9,
+        "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "target_method": "b",
+        "target_descriptor": "(I)V"
+      },
+      {
+        "caller_owner": "me/octo/client/utils/player/pathfinder/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII",
+        "caller_method": "<init>",
+        "caller_descriptor": "(Ljava/util/HashMap;Ljava/util/HashMap;)V",
+        "bytecode_offset": 549,
+        "target_owner": "me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+        "target_method": "b",
+        "target_descriptor": "(I)V"
+      }
+    ],
+    "interpretation": "The two calls are the gate holder <clinit> initializing state to 0 and the cache owner constructor branch. The constructor call matches the current source-level caller and compiled bytecode; getter/setter owner and descriptors match. This closes the static ownership/callsite question only; no cache file runtime probe was run."
+  }
+}
