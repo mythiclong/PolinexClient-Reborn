@@ -1,0 +1,65 @@
+{
+  "sync_id": "SYNC-20261118-PATHFINDER-R1953",
+  "generated_utc": "2026-11-18T04:23:36Z",
+  "scope": "R1953 Pathfinder wrapper branch re-evaluation, cache exception-path review, bilingual README and concise handoff refresh",
+  "evidence": {
+    "experiment_id": "R1953",
+    "produced_against_private_commit": "66b50d82efc88231492c226bf9c28bfc7bc8011c",
+    "source_tree_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "source_java_files": 1602,
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "production_source_changed": false,
+    "static_verifier": {
+      "path": ".analysis/evidence/mining/r1953-pathfinder-wrapper-audit/verify_pathfinder_wrapper.py",
+      "exit_code": 0,
+      "branch_table": {
+        "gate_0_path_empty": "converter",
+        "gate_0_path_nonempty": "null",
+        "gate_nonzero_path_empty": "null",
+        "gate_nonzero_path_nonempty": "converter"
+      }
+    },
+    "public_copy_check": {
+      "produced_against_public_commit": "8f68520ab413730dcee02c41e294edef5d74d3ed",
+      "source_tree_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+      "static_verifier_exit_code": 0
+    },
+    "cache_exception_review": "Original helper returns the same Throwable reference; current typed IOException helper rethrows IOException unchanged. Full exception-table review and dynamic filesystem/close-failure probes remain open.",
+    "runtime_client": false,
+    "world_or_entity": false,
+    "server": false,
+    "build": "not run; production sources unchanged",
+    "screenshots": []
+  },
+  "repositories": {
+    "private_openpolinex": {
+      "url": "https://github.com/mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "snapshot_commit": "3b6f5a248452811a2cfe59387f59e01385d46405",
+      "push_exit_code": 0
+    },
+    "public_polinexclient_reborn": {
+      "canonical_url": "https://github.com/mythiclong/PolinexClient-Reborn",
+      "legacy_url_redirects_to_canonical": "https://github.com/mythiclong/Polinex-Reborn",
+      "branch": "main",
+      "snapshot_commit": "4d99cb92c71cbeb268deeff1158efe9f1a685c0b",
+      "push_exit_code": 0,
+      "additional_inputs_included": [
+        ".analysis/evidence/mining/r1950-pathfinder-native-api-callers/"
+      ]
+    }
+  },
+  "readme_and_handoff": [
+    "README.md",
+    "README_EN.md",
+    ".analysis/reports/RESUME.md"
+  ],
+  "claims_and_limits": [
+    "R1953 disproved the apparent wrapper branch mismatch; it is not a feature fix or runtime pass.",
+    "The decompiled Java files are original-source analysis evidence, not compiled substitutes; this batch added no original JAR or protected class binary.",
+    "Pathfinder route, collision, entity, and cache lifecycle in a valid Minecraft world remain unverified.",
+    "ClickGUI input/config closure, clean checkout and empty-cache release build, remaining feature restoration, and compatible-server acceptance remain open.",
+    "The sync index is committed after the two repository snapshot commits; its own commit identifiers are intentionally not embedded in this file."
+  ],
+  "next_unique_slice": "R1954: compare the full route converter a(long[], double, double, boolean): List and cache-write exception paths against original bytecode, then change only confirmed differences."
+}
