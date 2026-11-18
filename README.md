@@ -1,85 +1,57 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Minecraft-26.1.2-6A8E3A?logo=minecraft&logoColor=white" alt="Minecraft 26.1.2">
-  <img src="https://img.shields.io/badge/加载器-Fabric-C9B89A" alt="Fabric">
-  <img src="https://img.shields.io/badge/状态-持续还原-orange" alt="持续还原">
-</p>
+# Polinex Source Restoration
 
-<p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/语言-简体中文-blue?style=for-the-badge" alt="简体中文"></a>
-  <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-lightgrey?style=for-the-badge" alt="切换到英文"></a>
-</p>
+这是 Minecraft 26.1.2 Fabric 模组的托管源码重建工程。目标是恢复原有功能，让开发者能够自行构建、修改和运行。项目仍在进行中；源码库存、编译成功和静态匹配都不等于功能已经完整或行为等价。
 
-<h1 align="center">PolinexClient-Reborn</h1>
+## 当前进度（2026-11-18）
 
-<p align="center">Minecraft 26.1.2 Fabric 模组的源码重建与社区协作</p>
-<p align="center"><b>仍在还原中 · 当前优先 Pathfinder 寻路源码</b></p>
+当前唯一切片是 **R1954 Pathfinder 路线转换器与缓存写入异常路径**。
 
----
+- **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点的 gate、遍历与空值契约；R1948 修正 A* 节点分配顺序和 `Function2` 回调编译形式。既有 Temurin 25 全树编译退出码为 0。
+- **缓存加载 gate**：R1949 对照完整缓存加载器字节码，并扫描原版 JAR 的 5,475 个 class，0 个解析错误；gate setter 调用点已确认。缓存文件实际读写仍未验证。
+- **纯 Java 寻路层**：R1951 将 `NativePathFinder` 的 25 个完整方法与当前源码编译产物对照，并用隔离 classloader 比较原版和当前实现的 31 组输出及缓存副作用，全部匹配。7 个方法的字节码控制流形状不同；有限样本一致不代表全域或实机等价。
+- **实际调用点**：R1952 扫描原版 JAR 5,475 个 class 和当前编译产物 2,823 个 class，均为 0 个解析错误。确认同一事件消费者对三个 `BlockPos` API 方法有相同的直接调用目标；尚未通过游戏内正常事件验证这些分支会执行。
+- **最近复核**：R1953 按完整操作数栈重算 `a(BlockPos, BlockPos, boolean): List` 的 gate/空路径四种组合，原版和当前编译结果一致；此前看似相反的条件是对 JVM 栈顺序的误读，本批次没有修改生产源码。下一步对照路线转换器和缓存写入的完整方法及异常表。
+- **运行验收**：尚未通过有效 Minecraft 世界和玩家入口验证路线、碰撞及缓存读写，也没有真实兼容服务器验收。静态还原、样本探针和编译不能代替这些验收。
+- **ClickGUI**：已有同进程原版 Options 对照证据：键盘和滚轮有效，分类图标、Draw 控件未观察到鼠标反馈。内部 Screen 鼠标事件转发与控件命中路径仍待核对；尚未通过悬停、点击、模块开关及设置保存/重载验收。
+- **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染与网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开、重连未验证。
 
-## 项目简介
+最新 Pathfinder 证据与简短交接：
 
-本仓库保存 Polinex 的托管源码快照、源码还原进度和可复核证据，目标是恢复原有功能，并让开发者能够自行构建、修改和运行。项目没有完成；源码数量和编译结果不代表功能等价。
+- [当前交接](.analysis/reports/RESUME.md)
+- [2026-11-18 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261118-PATHFINDER-R1953.json)
+- [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
+- [R1948 A* 核心审查与全树构建](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
+- [R1949 缓存加载与 gate 调用点](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
+- [R1949 原版 JAR 调用扫描脚本](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
+- [R1951 NativePathFinder 原版对照与 golden 记录](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+- [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
+- [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-此前我因精力和 token 限制，打算把剩余工作交给社区。现在继续推进 Pathfinder 源码还原，也欢迎其他开发者接手清楚、可验证的小切片。前后累计消耗了 **30B+ DeepSeek V4.1 Flash tokens**。
-
-## 当前进度
-
-快照日期：**2026-11-18**。结论以对应证据为准，源码库存数字不代表已恢复的功能数量。
-
-| 范围 | 当前状态 |
-|---|---|
-| **Pathfinder A*** | R1947 按完整原版字节码恢复候选节点与空值契约；R1948 修正 A* 节点分配顺序和 `Function2` 回调编译形式。Temurin 25 `compileJava --rerun-tasks --no-daemon` 全树编译退出码 0。 |
-| **Pathfinder 缓存** | R1949 完整对照加载器字节码，并扫描原版 JAR 的 5,475 个 class、0 个解析错误；gate setter 的类初始化及缓存构造器调用点已确认。缓存文件实际加载尚未测试。 |
-| **Pathfinder 纯 Java 层** | R1951 对照 `NativePathFinder` 的 25 个完整方法，并以隔离 classloader 比较原版和当前源码编译产物的 31 组输出及缓存副作用，全部匹配。7 个方法存在编译后控制流形状差异；有限样本不证明全域等价。 |
-| **Pathfinder 调用点** | R1952 扫描原版 JAR 5,475 个 class、当前编译产物 2,823 个 class，均为 0 个解析错误；同一事件消费者对三个 `BlockPos` API 方法的直接调用目标一致。游戏内正常事件尚未验证。 |
-| **Pathfinder 运行验收** | 尚未通过有效客户端世界、玩家入口、碰撞/路线结果和缓存读写验收，也未在兼容服务器验证。静态还原与编译不能替代这些结果。 |
-| **ClickGUI** | 同进程原版 Options 对照记录显示键盘和滚轮有效，分类图标及 Draw 控件没有可观察的鼠标反馈。内部 Screen 事件转发、控件命中和叶子控件仍需核对；模块开关及设置保存/重载未闭环。 |
-| **其他功能** | 初始化事件、Powder Macro、Glacite Commission Macro、渲染、配置和网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开和重连未通过验收。 |
-
-源码库存：**1,602** 个 Java 文件、**1,158,787** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可运行 `python -B .analysis/stats.py` 复算；这些数字仅用于定位源码工作量。
+当前源码库存：**1,602** 个 Java 文件、**1,158,787** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 ## 构建
 
-需要 **JDK 25**。仓库包含很长的混淆类名，Windows 克隆前可启用 Git 长路径：
+需要 JDK 25。Windows 下先启用 Git 长路径，再克隆：
 
 ```powershell
 git config --global core.longpaths true
-git clone https://github.com/mythiclong/PolinexClient-Reborn.git
-cd PolinexClient-Reborn/polinex-src
+git clone https://github.com/mythiclong/openpolinex.git
+cd openpolinex/polinex-src
 .\gradlew.bat build --no-daemon --console=plain
 ```
 
-已有记录覆盖依赖缓存环境中的全树编译。干净 checkout、空缓存网络构建和正式发布构建尚未确认；首次构建需要下载 Gradle 和依赖。产物预期位于 `polinex-src/build/libs/`。
+已有记录覆盖依赖缓存环境中的全树 `compileJava`。干净 checkout、空缓存网络构建和正式发布构建仍待验证。不要把本机缓存、预存产物或手工复制环境作为构建前提。
 
-## 交接与证据
+## 还原与验收约定
 
-- [当前短交接](.analysis/reports/RESUME.md)
-- [2026-11-18 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261118-PATHFINDER-R1951-R1952.json)
-- [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
-- [R1948 A* 核心审查](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
-- [R1949 缓存加载与 gate 调用点](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
-- [R1949 可重跑的原版 JAR 调用扫描](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
-- [R1951 NativePathFinder 原版对照与 golden 探针](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
-- [R1952 实际 invoke 与 method-handle 调用扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
-- [贡献说明](CONTRIBUTING.md)
-
-## 参与还原
-
-- 按完整类名、方法名和 JVM descriptor 对照完整原版字节码，核对字段、调用目标、分支、默认参数、异常与副作用。
-- 依赖 Minecraft 世界或实体的逻辑必须通过有效游戏状态和正常入口验证。无效夹具、标记变化、启动成功或无崩溃都不能证明功能等价。
-- 每项工作留下源码内容 SHA-256、命令和退出码、输入/断言、探针状态与必要日志。注明 VOID 和未完成的验收维度。
-- 不要用原始受保护 class 或未恢复 JNI 载荷替代托管源码实现。
-
-## 说明
-
-仓库根目录包含 `rawpolinex.jar`，SHA-256 为 `D85398CFD774781E888A3F36CFBFA87A4CF04235F8459BB6A00437A5D3C48A26`，作为本地行为对照输入；它不能代替托管源码。本仓库尚无 `LICENSE`，不构成对原始 Polinex 或其二进制文件的授权声明。
+- 原版行为对照使用合法取得的原版文件；仓库内的源代码才是待构建实现。
+- 每个方法按完整类名、方法名和 JVM descriptor 对照完整字节码，核对字段、调用目标、分支、默认参数、异常和副作用。
+- 依赖 Minecraft 世界或实体的逻辑要通过有效游戏状态和正常用户入口验证；无效夹具、计数变化和“没有崩溃”不能证明功能等价。
+- 记录源码内容 SHA-256、真实命令及退出码、输入/断言和探针状态。临时探针服务于具体假设，完成后移除并用无探针构建复核。
+- 尚未添加 `LICENSE`。本仓库不声明对原始 Polinex 或其二进制文件的授权。
 
 ## 致谢
 
 感谢鲨鱼神（QQ：1127367472）破解 Polinex。感谢猪圈中转站；如果你想使用，可以用我的[邀请码注册](https://api.pigcode.org/register?invite=N9SM4PWP)。
 
-使用过的模型：DeepSeek V4 Flash、DeepSeek V4.1 Flash、DeepSeek V4 Pro、Kimi K3、Kimi K3.1 Pro、Opus 5.5、Opus 4.8、GPT-6 Luna、GPT-6 Sol、GPT-6.1 Sol、GPT-6.1 Terra。
-
----
-
-<p align="center">剩余还原工作欢迎社区接手；请从一个边界清楚、能留下行为证据的切片开始。</p>
+这一路用过的模型：DeepSeek V4 Flash、DeepSeek V4.1 Flash、DeepSeek V4 Pro、Kimi K3、Kimi K3.1 Pro、Opus 5.5、Opus 4.8、GPT-6 Luna、GPT-6 Sol、GPT-6.1 Sol、GPT-6.1 Terra。前后累计消耗 **30B+ DeepSeek V4.1 Flash tokens**。剩余工作欢迎社区接手，也欢迎继续提交可复核的源码与行为证据。

@@ -1,0 +1,107 @@
+{
+  "experiment_id": "R1950",
+  "slice_id": "PATHFINDER-NATIVE-API-CALLERS-STATIC-CAPTURE",
+  "generated_utc": "2026-11-18T02:57:19.294855+00:00",
+  "evidence_produced_against_commit": "bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71",
+  "original_jar_path": "D:\\Work\\OpenPoli\\.analysis\\cracked.jar",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+  "class_files_scanned": 5475,
+  "parse_failures": 0,
+  "disassembly_command": "javap -classpath <original JAR or compiled classes> -p -c -s <fully-qualified-owner>",
+  "classes": [
+    {
+      "role": "wrapper",
+      "owner": "me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll",
+      "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+      "source_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+      "javap": {
+        "original": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath D:\\Work\\OpenPoli\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll",
+          "exit_code": 0,
+          "file": "wrapper-original.javap.txt",
+          "sha256": "61639b7a83c2c305484867aaacc5d08773fd15094c4e3b9d3b21b2f33a0f5fe2",
+          "bytes": 67635
+        },
+        "compiled": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build\\classes\\java\\main -p -c -s me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll",
+          "exit_code": 0,
+          "file": "wrapper-compiled.javap.txt",
+          "sha256": "84c68d7cf5c335c8d4f3fe6f575d07e3b98ee7a91d46aa770b8aa8d33b79f108",
+          "bytes": 69914
+        }
+      }
+    },
+    {
+      "role": "direct_module_caller",
+      "owner": "me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+      "source_file": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+      "source_sha256": "cd9a1c128d2aa03e20ecd3b42383e5bdd9bbaf358337b13f69b97eb6185ae22f",
+      "javap": {
+        "original": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath D:\\Work\\OpenPoli\\.analysis\\cracked.jar -p -c -s me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+          "exit_code": 0,
+          "file": "direct_module_caller-original.javap.txt",
+          "sha256": "32b0ae4d6e867037f64421c7ee572ace7bf190c0bec6c3c0662b2e6d3936f398",
+          "bytes": 115531
+        },
+        "compiled": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build\\classes\\java\\main -p -c -s me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+          "exit_code": 0,
+          "file": "direct_module_caller-compiled.javap.txt",
+          "sha256": "82abae2d27d9e5fe888cf3db1ef9b8a96afc9bfe20ef3d046c5eeccc411988e7",
+          "bytes": 125668
+        }
+      }
+    },
+    {
+      "role": "cache_event_consumer",
+      "owner": "me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+      "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+      "source_sha256": "e175a445d8682b66c21bfdb0ef66ea8b185b52f9b967f469872ba3c1a0e64f43",
+      "javap": {
+        "original": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath D:\\Work\\OpenPoli\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+          "exit_code": 0,
+          "file": "cache_event_consumer-original.javap.txt",
+          "sha256": "a24d5e6e48018e30d2875310ea61e1ce4a65597f4920e9557e3c12cd70616c6f",
+          "bytes": 138879
+        },
+        "compiled": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build\\classes\\java\\main -p -c -s me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+          "exit_code": 0,
+          "file": "cache_event_consumer-compiled.javap.txt",
+          "sha256": "c9dc51568fa6ca84f1271fc5f4c5d47c708f753128413acdf8db228cb659ce47",
+          "bytes": 151554
+        }
+      }
+    },
+    {
+      "role": "etherwarp_path_filter",
+      "owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+      "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
+      "source_sha256": "14e4f370e6754a16a56834db838777446b822c502f40c32d0a7917389700e148",
+      "javap": {
+        "original": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath D:\\Work\\OpenPoli\\.analysis\\cracked.jar -p -c -s me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+          "exit_code": 0,
+          "file": "etherwarp_path_filter-original.javap.txt",
+          "sha256": "8ad122d4b0d556aba4098834ab1dbab3704b21b1f9aa476aa41e177d3de43920",
+          "bytes": 104344
+        },
+        "compiled": {
+          "command": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javap.exe -classpath build\\classes\\java\\main -p -c -s me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+          "exit_code": 0,
+          "file": "etherwarp_path_filter-compiled.javap.txt",
+          "sha256": "111f9a460f5b785a2888ed236c1ff30321dbc490bcb43915250fed541637fc29",
+          "bytes": 114357
+        }
+      }
+    }
+  ],
+  "probe_state": "full original and compiled owner disassemblies only; caller scan establishes direct references; no game/client/world/server execution",
+  "limitations": [
+    "Static class-file callers are not proof that a path is reached through normal user input.",
+    "Caller method semantics and differences remain under review."
+  ]
+}

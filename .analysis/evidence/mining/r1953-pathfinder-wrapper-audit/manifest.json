@@ -1,0 +1,111 @@
+{
+  "experiment_id": "R1953",
+  "slice_id": "PATHFINDER-WRAPPER-AND-CACHE-EXCEPTION-STATIC-REVIEW",
+  "generated_utc": "2026-11-18T04:18:00Z",
+  "evidence_produced_against_commit": "66b50d82efc88231492c226bf9c28bfc7bc8011c",
+  "source_tree": {
+    "java_file_count": 1602,
+    "aggregate_algorithm": "SHA256(UTF-8 of POSIX relative path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+    "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "production_java_changed": false
+  },
+  "original_jar": {
+    "sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "included": false
+  },
+  "scope": {
+    "wrapper_owner": "me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll",
+    "wrapper_source_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+    "cache_consumer_owner": "me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+    "cache_consumer_source_sha256": "e175a445d8682b66c21bfdb0ef66ea8b185b52f9b967f469872ba3c1a0e64f43"
+  },
+  "original_decompilation": {
+    "tool": "CFR 0.152",
+    "command": "java -jar 'D:\\Work\\OpenPoli\\.analysis\\cfr.jar' 'D:\\Work\\OpenPoli\\.analysis\\cracked.jar' --jarfilter '^me\\.octo\\.client\\.utils\\.player\\.pathfinder\\.(IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll|llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl)$' --outputdir .analysis/evidence/mining/r1953-pathfinder-wrapper-audit/original-decompiled-exact --silent true",
+    "exit_code": 0,
+    "outputs": {
+      "summary.txt": {
+        "sha256": "34bb844d8c616beeb49953b92386869efb0945da3939c26807be2ad501f2847c",
+        "bytes": 751
+      },
+      "wrapper-original-decompiled.java": {
+        "path": "original-decompiled-exact/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+        "sha256": "3e90653602490ea519f3c826c2cd9905d68c972ee115226a0f3b9b8c0f5ed751",
+        "bytes": 65285
+      },
+      "cache-consumer-original-decompiled.java": {
+        "path": "original-decompiled-exact/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+        "sha256": "836fa8acff27c95e848e9f7bddcecf68eb4519db0cf92049940a758aaae8577e",
+        "bytes": 152091
+      }
+    }
+  },
+  "wrapper_method": {
+    "name": "a",
+    "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;",
+    "original_javap": {
+      "path": ".analysis/evidence/mining/r1950-pathfinder-native-api-callers/wrapper-original.javap.txt",
+      "sha256": "61639b7a83c2c305484867aaacc5d08773fd15094c4e3b9d3b21b2f33a0f5fe2"
+    },
+    "current_javap": {
+      "path": ".analysis/evidence/mining/r1950-pathfinder-native-api-callers/wrapper-compiled.javap.txt",
+      "sha256": "84c68d7cf5c335c8d4f3fe6f575d07e3b98ee7a91d46aa770b8aa8d33b79f108"
+    },
+    "original_class_sha256": "f572ca14d4e9689ecd2132822adbbc734599734e7284ee2f3db73912f289d33a",
+    "current_compiled_class_sha256": "6d9984d8cfb201df4d03aba8d451af19c13e5f32948257fdf6626755f98bb8be",
+    "branch_outcomes": {
+      "gate_0_path_empty": "converter",
+      "gate_0_path_nonempty": "null",
+      "gate_nonzero_path_empty": "null",
+      "gate_nonzero_path_nonempty": "converter"
+    },
+    "interpretation": "The original's branch sequence and current source-compiled sequence produce the same four outcomes. An earlier interpretation that gate-nonzero with an empty result reaches the converter was incorrect because it ignored the arraylength value left on the JVM operand stack.",
+    "static_assertion": {
+      "command": "python -B .analysis/evidence/mining/r1953-pathfinder-wrapper-audit/verify_pathfinder_wrapper.py",
+      "exit_code": 0,
+      "script_sha256": "91ff2741ba761e90754493c3ac06a9c0b841dd9b3f4c60f795c6fa13a561344e",
+      "result": "PASS"
+    }
+  },
+  "cache_exception_review": {
+    "original_helper": "a(Throwable):Throwable; returns the same Throwable reference",
+    "current_helper": "rethrowIoException(IOException):RuntimeException; uses a generic unchecked rethrow and does not wrap IOException",
+    "observed_current_source_flow": "IOException from cache read/write is rethrown unchanged; other unchecked failures propagate; Java try-with-resources closes the FileChannel",
+    "result": "No confirmed source defect. Full exception-table comparison and dynamic filesystem/close-failure probes remain open."
+  },
+  "commands": [
+    {
+      "command": "java -jar 'D:\\Work\\OpenPoli\\.analysis\\cfr.jar' 'D:\\Work\\OpenPoli\\.analysis\\cracked.jar' --jarfilter '^me\\.octo\\.client\\.utils\\.player\\.pathfinder\\.(IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll|llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl)$' --outputdir .analysis/evidence/mining/r1953-pathfinder-wrapper-audit/original-decompiled-exact --silent true",
+      "exit_code": 0,
+      "assertion": "Exactly two requested Pathfinder classes were decompiled."
+    },
+    {
+      "command": "python -B .analysis/evidence/mining/r1953-pathfinder-wrapper-audit/verify_pathfinder_wrapper.py",
+      "exit_code": 0,
+      "assertion": "Source content fingerprint and branch structure/outcome table match the recorded original/current evidence."
+    },
+    {
+      "command": "python -B .analysis/stats.py",
+      "exit_code": 0,
+      "actual": "1602 Java files; 1158787 Java lines; 569 PXDyn lines / 581 occurrences; 7029 PX-FIX markers; 219 native declarations; 0 stub throws; 0 decompiler-artifact throws."
+    }
+  ],
+  "probe_state": {
+    "client": false,
+    "world_or_entity": false,
+    "server": false,
+    "mouse_or_keyboard": false,
+    "screenshot": null,
+    "build": "not run; production source unchanged"
+  },
+  "expected_vs_actual": {
+    "expected": "Read the complete original/current bytecode stack and determine whether wrapper gate/empty-route branches differ.",
+    "actual": "The branches are equivalent for all four combinations. No production source was changed."
+  },
+  "limitations": [
+    "Static wrapper bytecode does not establish execution through normal gameplay.",
+    "Entity/world collision, valid route output, cache file lifecycle, and server behavior were not exercised.",
+    "The exception-helper review does not yet include verbose exception tables or injected filesystem failures.",
+    "No feature equivalence or project completion claim is made."
+  ]
+}

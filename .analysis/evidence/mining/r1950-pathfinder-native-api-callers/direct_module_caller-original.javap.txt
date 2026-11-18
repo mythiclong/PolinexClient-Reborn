@@ -1,0 +1,2061 @@
+Compiled from "IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java"
+public final class me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll implements me.octo.client.lIllIllIIlIIlllIIIIIlIIlIlIIIIlIIlIllIIIIIIIIIlIIIIlIIlIlllIIIIIlIIIlIIIIIllIllIlIIIl {
+  private final net.minecraft.client.Minecraft IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
+    descriptor: Lnet/minecraft/client/Minecraft;
+
+  private java.util.List<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII;
+    descriptor: Ljava/util/List;
+
+  private java.util.List<me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll> IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl;
+    descriptor: Ljava/util/List;
+
+  private java.util.List<me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll> lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI;
+    descriptor: Ljava/util/List;
+
+  private java.util.List<? extends net.minecraft.core.BlockPos> IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII;
+    descriptor: Ljava/util/List;
+
+  private java.util.ArrayList<net.minecraft.world.phys.Vec3> IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+    descriptor: Ljava/util/ArrayList;
+
+  private static java.lang.String[] a;
+    descriptor: [Ljava/lang/String;
+
+  private static java.lang.String[] b;
+    descriptor: [Ljava/lang/String;
+
+  public me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll();
+    descriptor: ()V
+    Code:
+         0: aload_0
+         1: invokespecial #57                 // Method java/lang/Object."<init>":()V
+         4: nop
+         5: getstatic     #62                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+         8: getfield      #65                 // Field me/octo/client/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        11: aload_0
+        12: invokevirtual #70                 // Method me/octo/client/events/impl/base/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:(Ljava/lang/Object;)V
+        15: nop
+        16: aload_0
+        17: invokestatic  #76                 // Method net/minecraft/client/Minecraft.getInstance:()Lnet/minecraft/client/Minecraft;
+        20: dup
+        21: sipush        -32309
+        24: sipush        -19757
+        27: pop2
+        28: ldc           #78                 // String getInstance(...)
+        30: invokestatic  #84                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+        33: putfield      #86                 // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lnet/minecraft/client/Minecraft;
+        36: return
+
+  public me.octo.client.IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI a();
+    descriptor: ()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+    Code:
+         0: getstatic     #90                 // Field me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+         3: invokevirtual #93                 // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+         6: sipush        -32318
+         9: sipush        21098
+        12: pop2
+        13: ldc           #95                 // String pathfind
+        15: sipush        -32316
+        18: sipush        -3848
+        21: pop2
+        22: ldc           #97                 // String Pathfinding debug and visualization
+        24: invokevirtual #100                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Ljava/lang/String;Ljava/lang/String;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        27: getstatic     #103                // Field me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        30: invokevirtual #106                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        33: ldc           #108                // String x
+        35: invokevirtual #111                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Ljava/lang/String;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        38: getstatic     #116                // Field me/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        41: invokevirtual #119                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        44: invokevirtual #122                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;
+        47: invokevirtual #125                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        50: getstatic     #103                // Field me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        53: invokevirtual #106                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        56: ldc           #127                // String y
+        58: invokevirtual #111                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Ljava/lang/String;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        61: getstatic     #116                // Field me/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        64: invokevirtual #119                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        67: invokevirtual #122                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;
+        70: invokevirtual #125                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        73: getstatic     #103                // Field me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        76: invokevirtual #106                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        79: ldc           #129                // String z
+        81: invokevirtual #111                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Ljava/lang/String;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        84: getstatic     #116                // Field me/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        87: invokevirtual #119                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        90: invokevirtual #122                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;
+        93: invokevirtual #125                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+        96: getstatic     #103                // Field me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+        99: invokevirtual #106                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       102: sipush        -32317
+       105: sipush        6325
+       108: pop2
+       109: ldc           #131                // String option
+       111: invokevirtual #111                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Ljava/lang/String;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       114: getstatic     #133                // Field me/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       117: invokevirtual #119                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;)Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       120: invokevirtual #122                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;
+       123: invokevirtual #125                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lme/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       126: aload_0
+       127: invokedynamic #152,  0            // InvokeDynamic #0:invoke:(Lme/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll;)Lkotlin/jvm/functions/Function1;
+       132: invokevirtual #155                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:(Lkotlin/jvm/functions/Function1;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;
+       135: invokevirtual #157                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+       138: areturn
+
+  public final void a(me.octo.client.events.impl.IIllIlllIIIIIllllIlllIIllIIIlIIllIIllIIlIllIIllIIIlIllIIlIIIIIlIIIIlIlIIIIIIlIlllIllI);
+    descriptor: (Lme/octo/client/events/impl/IIllIlllIIIIIllllIlllIIllIIIlIIllIIllIIlIllIIllIIIlIllIIlIIIIIlIIIIlIlIIIIIIlIlllIllI;)V
+    Code:
+         0: invokestatic  #165                // Method me/octo/client/IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c:()[Ljava/lang/String;
+         3: aload_1
+         4: sipush        -32312
+         7: sipush        16161
+        10: pop2
+        11: ldc           #167                // String event
+        13: invokestatic  #170                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        16: astore_2
+        17: aload_2
+        18: ifnull        30
+        21: aload_1
+        22: invokevirtual #176                // Method me/octo/client/events/impl/IIllIlllIIIIIllllIlllIIllIIIlIIllIIllIIlIllIIllIIIlIllIIlIIIIIlIIIIlIlIIIIIIlIlllIllI.k:()Lnet/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext;
+        25: dup
+        26: ifnonnull     31
+        29: pop
+        30: return
+        31: astore_3
+        32: aload_2
+        33: ifnull        48
+        36: aload_0
+        37: getfield      #86                 // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lnet/minecraft/client/Minecraft;
+        40: getfield      #183                // Field net/minecraft/client/Minecraft.level:Lnet/minecraft/client/multiplayer/ClientLevel;
+        43: dup
+        44: ifnonnull     49
+        47: pop
+        48: return
+        49: astore        4
+        51: aload_0
+        52: getfield      #187                // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Ljava/util/List;
+        55: astore        5
+        57: aload         5
+        59: ifnull        254
+        62: getstatic     #193                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        65: astore        6
+        67: aload         5
+        69: checkcast     #195                // class java/lang/Iterable
+        72: astore        7
+        74: iconst_0
+        75: istore        8
+        77: aload         7
+        79: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+        84: astore        9
+        86: aload         9
+        88: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        93: ifeq          175
+        96: aload         9
+        98: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       103: astore        10
+       105: aload         10
+       107: checkcast     #25                 // class me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       110: astore        11
+       112: iconst_0
+       113: istore        12
+       115: aload         11
+       117: invokevirtual #214                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:()Lnet/minecraft/core/BlockPos;
+       120: astore        13
+       122: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       125: aload         4
+       127: aload         13
+       129: invokevirtual #222                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/AABB;
+       132: astore        14
+       134: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       137: aload_3
+       138: aload         14
+       140: aload         6
+       142: dconst_0
+       143: iconst_1
+       144: bipush        8
+       146: aconst_null
+       147: invokestatic  #225                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;Lnet/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext;Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;DZILjava/lang/Object;)V
+       150: aload         14
+       152: aload         6
+       154: ldc           #226                // float 0.3f
+       156: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       159: iconst_0
+       160: iconst_4
+       161: aconst_null
+       162: invokestatic  #234                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:(Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)V
+       165: nop
+       166: nop
+       167: aload_2
+       168: ifnull        176
+       171: aload_2
+       172: ifnonnull     86
+       175: nop
+       176: iconst_0
+       177: istore        7
+       179: aload         5
+       181: invokestatic  #240                // Method kotlin/collections/CollectionsKt.getLastIndex:(Ljava/util/List;)I
+       184: istore        8
+       186: iload         7
+       188: iload         8
+       190: if_icmpge     254
+       193: iconst_2
+       194: anewarray     #242                // class net/minecraft/world/phys/Vec3
+       197: astore        9
+       199: aload         9
+       201: iconst_0
+       202: aload         5
+       204: iload         7
+       206: invokeinterface #246,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       211: checkcast     #25                 // class me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       214: invokevirtual #249                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.b:()Lnet/minecraft/world/phys/Vec3;
+       217: aastore
+       218: aload         9
+       220: iconst_1
+       221: aload         5
+       223: iload         7
+       225: iconst_1
+       226: iadd
+       227: invokeinterface #246,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       232: checkcast     #25                 // class me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+       235: invokevirtual #249                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.b:()Lnet/minecraft/world/phys/Vec3;
+       238: aastore
+       239: aload         9
+       241: aload         6
+       243: fconst_1
+       244: invokestatic  #252                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:([Lnet/minecraft/world/phys/Vec3;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;F)V
+       247: iinc          7, 1
+       250: aload_2
+       251: ifnonnull     186
+       254: aload_0
+       255: getfield      #254                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Ljava/util/ArrayList;
+       258: astore        6
+       260: aload         6
+       262: aload_2
+       263: ifnull        343
+       266: ifnull        339
+       269: getstatic     #257                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.IIllllIllllIIIIllIIlIllIIlIllIlIlllIlIlIlIIIllIllIllIllIlIIIlllIlllIlIllllIlIIlIIllll:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       272: astore        7
+       274: iconst_0
+       275: istore        8
+       277: aload         6
+       279: checkcast     #201                // class java/util/List
+       282: invokestatic  #240                // Method kotlin/collections/CollectionsKt.getLastIndex:(Ljava/util/List;)I
+       285: istore        9
+       287: iload         8
+       289: iload         9
+       291: if_icmpge     339
+       294: iconst_2
+       295: anewarray     #242                // class net/minecraft/world/phys/Vec3
+       298: astore        10
+       300: aload         10
+       302: iconst_0
+       303: aload         6
+       305: iload         8
+       307: invokevirtual #260                // Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+       310: aastore
+       311: aload         10
+       313: iconst_1
+       314: aload         6
+       316: iload         8
+       318: iconst_1
+       319: iadd
+       320: invokevirtual #260                // Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+       323: aastore
+       324: aload         10
+       326: aload         7
+       328: fconst_1
+       329: invokestatic  #252                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:([Lnet/minecraft/world/phys/Vec3;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;F)V
+       332: iinc          8, 1
+       335: aload_2
+       336: ifnonnull     287
+       339: aload_0
+       340: getfield      #262                // Field IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Ljava/util/List;
+       343: astore        7
+       345: aload         7
+       347: aload_2
+       348: ifnull        468
+       351: ifnull        464
+       354: getstatic     #193                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       357: astore        8
+       359: aload         7
+       361: checkcast     #195                // class java/lang/Iterable
+       364: astore        9
+       366: iconst_0
+       367: istore        10
+       369: aload         9
+       371: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       376: astore        11
+       378: aload         11
+       380: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       385: ifeq          463
+       388: aload         11
+       390: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       395: astore        12
+       397: aload         12
+       399: checkcast     #264                // class net/minecraft/core/BlockPos
+       402: astore        13
+       404: iconst_0
+       405: istore        14
+       407: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       410: aload         4
+       412: aload         13
+       414: invokevirtual #222                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/AABB;
+       417: astore        15
+       419: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       422: aload_3
+       423: aload         15
+       425: aload         8
+       427: dconst_0
+       428: iconst_1
+       429: bipush        8
+       431: aconst_null
+       432: invokestatic  #225                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;Lnet/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext;Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;DZILjava/lang/Object;)V
+       435: aload         15
+       437: aload         8
+       439: ldc_w         #265                // float 0.8f
+       442: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       445: fconst_0
+       446: iconst_0
+       447: bipush        12
+       449: aconst_null
+       450: invokestatic  #268                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:(Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;FZILjava/lang/Object;)V
+       453: nop
+       454: nop
+       455: aload_2
+       456: ifnull        464
+       459: aload_2
+       460: ifnonnull     378
+       463: nop
+       464: aload_0
+       465: getfield      #270                // Field lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI:Ljava/util/List;
+       468: astore        8
+       470: aload_2
+       471: ifnull        642
+       474: aload         8
+       476: dup
+       477: ifnull        641
+       480: checkcast     #195                // class java/lang/Iterable
+       483: astore        9
+       485: iconst_0
+       486: istore        10
+       488: aload         9
+       490: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       495: astore        11
+       497: aload         11
+       499: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       504: ifeq          637
+       507: aload         11
+       509: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       514: astore        12
+       516: aload         12
+       518: checkcast     #30                 // class me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       521: astore        13
+       523: iconst_0
+       524: istore        14
+       526: aload_2
+       527: ifnull        638
+       530: aload         13
+       532: invokevirtual #273                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.c:()Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;
+       535: getstatic     #276                // Field me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I
+       538: swap
+       539: invokevirtual #280                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.ordinal:()I
+       542: iaload
+       543: tableswitch   { // 1 to 2
+                       1: 564
+                       2: 570
+                 default: 576
+            }
+       564: getstatic     #283                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       567: goto          579
+       570: getstatic     #286                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.IlIlIlIIIIIlIllllllIllIIIIllIlIIlIIIlllllIllIIlIIlIIIllIlIlIIllIlIIllIIllllIlIIllIlIl:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       573: goto          579
+       576: getstatic     #193                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       579: astore        15
+       581: aload         13
+       583: invokevirtual #287                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()Lnet/minecraft/core/BlockPos;
+       586: astore        16
+       588: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       591: aload         4
+       593: aload         16
+       595: invokevirtual #222                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/AABB;
+       598: astore        17
+       600: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       603: aload_3
+       604: aload         17
+       606: aload         15
+       608: dconst_0
+       609: iconst_1
+       610: bipush        8
+       612: aconst_null
+       613: invokestatic  #225                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;Lnet/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext;Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;DZILjava/lang/Object;)V
+       616: aload         17
+       618: aload         15
+       620: ldc           #226                // float 0.3f
+       622: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       625: iconst_0
+       626: iconst_4
+       627: aconst_null
+       628: invokestatic  #234                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:(Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;ZILjava/lang/Object;)V
+       631: nop
+       632: nop
+       633: aload_2
+       634: ifnonnull     497
+       637: nop
+       638: goto          643
+       641: pop
+       642: nop
+       643: aload_0
+       644: getfield      #289                // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Ljava/util/List;
+       647: astore        9
+       649: aload         9
+       651: aload_2
+       652: ifnull        663
+       655: ifnull        883
+       658: aload         9
+       660: checkcast     #195                // class java/lang/Iterable
+       663: astore        10
+       665: iconst_0
+       666: istore        11
+       668: aload         10
+       670: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       675: astore        12
+       677: aload         12
+       679: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       684: ifeq          778
+       687: aload         12
+       689: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       694: astore        13
+       696: aload         13
+       698: checkcast     #30                 // class me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       701: astore        14
+       703: iconst_0
+       704: istore        15
+       706: aload         14
+       708: invokevirtual #273                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.c:()Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;
+       711: invokestatic  #292                // Method a:(Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       714: astore        16
+       716: aload         14
+       718: invokevirtual #287                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.a:()Lnet/minecraft/core/BlockPos;
+       721: astore        17
+       723: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       726: aload         4
+       728: aload         17
+       730: invokevirtual #222                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/AABB;
+       733: astore        18
+       735: getstatic     #219                // Field me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;
+       738: aload_3
+       739: aload         18
+       741: aload         16
+       743: fconst_1
+       744: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       747: dconst_0
+       748: iconst_1
+       749: bipush        8
+       751: aconst_null
+       752: invokestatic  #225                // Method me/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll.a:(Lme/octo/client/utils/llIlllIIIIIlllIIlIllllIIlIllIllIIllllIIllllllIIIllIIlIIllIllIIlIlllllllIIIlIlIIIlIlll;Lnet/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext;Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;DZILjava/lang/Object;)V
+       755: aload         18
+       757: aload         16
+       759: ldc           #226                // float 0.3f
+       761: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       764: iconst_1
+       765: invokestatic  #295                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:(Lnet/minecraft/world/phys/AABB;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;Z)V
+       768: nop
+       769: nop
+       770: aload_2
+       771: ifnull        779
+       774: aload_2
+       775: ifnonnull     677
+       778: nop
+       779: iconst_0
+       780: istore        10
+       782: aload         9
+       784: invokestatic  #240                // Method kotlin/collections/CollectionsKt.getLastIndex:(Ljava/util/List;)I
+       787: istore        11
+       789: iload         10
+       791: iload         11
+       793: if_icmpge     883
+       796: aload         9
+       798: iload         10
+       800: iconst_1
+       801: iadd
+       802: invokeinterface #246,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       807: checkcast     #30                 // class me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       810: invokevirtual #273                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.c:()Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;
+       813: invokestatic  #292                // Method a:(Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       816: astore        12
+       818: iconst_2
+       819: anewarray     #242                // class net/minecraft/world/phys/Vec3
+       822: astore        13
+       824: aload         13
+       826: iconst_0
+       827: aload         9
+       829: iload         10
+       831: invokeinterface #246,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       836: checkcast     #30                 // class me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       839: invokevirtual #296                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lnet/minecraft/world/phys/Vec3;
+       842: aastore
+       843: aload         13
+       845: iconst_1
+       846: aload         9
+       848: iload         10
+       850: iconst_1
+       851: iadd
+       852: invokeinterface #246,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       857: checkcast     #30                 // class me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
+       860: invokevirtual #296                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.b:()Lnet/minecraft/world/phys/Vec3;
+       863: aastore
+       864: aload         13
+       866: aload         12
+       868: fconst_1
+       869: invokevirtual #229                // Method me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.a:(F)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+       872: fconst_1
+       873: invokestatic  #252                // Method me/octo/client/utils/lIIlllIlIlllllIlIIlIllIlIllIIlllIlIllIllIIIllllllIIIlIlllIlIllIllIllllIllIlIlIlIlIIIl.a:([Lnet/minecraft/world/phys/Vec3;Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;F)V
+       876: iinc          10, 1
+       879: aload_2
+       880: ifnonnull     789
+       883: return
+
+  private static final kotlin.Unit a(me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll, me.octo.client.llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII);
+    descriptor: (Lme/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll;Lme/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII;)Lkotlin/Unit;
+    Code:
+         0: aload_1
+         1: sipush        -32306
+         4: sipush        17350
+         7: pop2
+         8: ldc_w         #298                // String context
+        11: invokestatic  #170                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+        14: invokestatic  #165                // Method me/octo/client/IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c:()[Ljava/lang/String;
+        17: aload_1
+        18: astore        4
+        20: ldc           #108                // String x
+        22: astore        5
+        24: iconst_0
+        25: istore        6
+        27: aload         4
+        29: invokevirtual #301                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+        32: invokevirtual #304                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI.b:()Ljava/util/List;
+        35: checkcast     #195                // class java/lang/Iterable
+        38: astore        7
+        40: iconst_0
+        41: istore        8
+        43: iconst_0
+        44: istore        9
+        46: astore_2
+        47: aload         7
+        49: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+        54: astore        10
+        56: aload         10
+        58: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        63: ifeq          169
+        66: aload         10
+        68: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        73: astore        11
+        75: iload         9
+        77: iinc          9, 1
+        80: istore        12
+        82: aload_2
+        83: ifnull        170
+        86: iload         12
+        88: aload_2
+        89: ifnull        100
+        92: ifge          98
+        95: invokestatic  #309                // Method kotlin/collections/CollectionsKt.throwIndexOverflow:()V
+        98: iload         12
+       100: aload         11
+       102: checkcast     #11                 // class me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll
+       105: astore        13
+       107: istore        14
+       109: iconst_0
+       110: istore        15
+       112: aload_2
+       113: ifnull        165
+       116: aload         13
+       118: invokevirtual #312                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.a:()Ljava/lang/String;
+       121: aload         5
+       123: invokestatic  #316                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       126: ifeq          163
+       129: iload         14
+       131: aload         4
+       133: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       136: arraylength
+       137: if_icmpge     163
+       140: aload         4
+       142: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       145: iload         14
+       147: aaload
+       148: dup
+       149: instanceof    #321                // class java/lang/Integer
+       152: ifne          157
+       155: pop
+       156: aconst_null
+       157: checkcast     #321                // class java/lang/Integer
+       160: goto          171
+       163: nop
+       164: nop
+       165: aload_2
+       166: ifnonnull     56
+       169: nop
+       170: aconst_null
+       171: astore_3
+       172: aload_1
+       173: astore        5
+       175: ldc           #127                // String y
+       177: astore        6
+       179: iconst_0
+       180: istore        7
+       182: aload         5
+       184: invokevirtual #301                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+       187: invokevirtual #304                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI.b:()Ljava/util/List;
+       190: checkcast     #195                // class java/lang/Iterable
+       193: astore        8
+       195: iconst_0
+       196: istore        9
+       198: iconst_0
+       199: istore        10
+       201: aload         8
+       203: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       208: astore        11
+       210: aload         11
+       212: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       217: ifeq          323
+       220: aload         11
+       222: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       227: astore        12
+       229: iload         10
+       231: iinc          10, 1
+       234: istore        13
+       236: aload_2
+       237: ifnull        324
+       240: iload         13
+       242: aload_2
+       243: ifnull        254
+       246: ifge          252
+       249: invokestatic  #309                // Method kotlin/collections/CollectionsKt.throwIndexOverflow:()V
+       252: iload         13
+       254: aload         12
+       256: checkcast     #11                 // class me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll
+       259: astore        14
+       261: istore        15
+       263: iconst_0
+       264: istore        16
+       266: aload_2
+       267: ifnull        319
+       270: aload         14
+       272: invokevirtual #312                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.a:()Ljava/lang/String;
+       275: aload         6
+       277: invokestatic  #316                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       280: ifeq          317
+       283: iload         15
+       285: aload         5
+       287: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       290: arraylength
+       291: if_icmpge     317
+       294: aload         5
+       296: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       299: iload         15
+       301: aaload
+       302: dup
+       303: instanceof    #321                // class java/lang/Integer
+       306: ifne          311
+       309: pop
+       310: aconst_null
+       311: checkcast     #321                // class java/lang/Integer
+       314: goto          325
+       317: nop
+       318: nop
+       319: aload_2
+       320: ifnonnull     210
+       323: nop
+       324: aconst_null
+       325: astore        4
+       327: aload_1
+       328: astore        6
+       330: ldc           #129                // String z
+       332: astore        7
+       334: iconst_0
+       335: istore        8
+       337: aload         6
+       339: invokevirtual #301                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+       342: invokevirtual #304                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI.b:()Ljava/util/List;
+       345: checkcast     #195                // class java/lang/Iterable
+       348: astore        9
+       350: iconst_0
+       351: istore        10
+       353: iconst_0
+       354: istore        11
+       356: aload         9
+       358: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       363: astore        12
+       365: aload         12
+       367: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       372: ifeq          478
+       375: aload         12
+       377: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       382: astore        13
+       384: iload         11
+       386: iinc          11, 1
+       389: istore        14
+       391: aload_2
+       392: ifnull        479
+       395: iload         14
+       397: aload_2
+       398: ifnull        409
+       401: ifge          407
+       404: invokestatic  #309                // Method kotlin/collections/CollectionsKt.throwIndexOverflow:()V
+       407: iload         14
+       409: aload         13
+       411: checkcast     #11                 // class me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll
+       414: astore        15
+       416: istore        16
+       418: iconst_0
+       419: istore        17
+       421: aload_2
+       422: ifnull        474
+       425: aload         15
+       427: invokevirtual #312                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.a:()Ljava/lang/String;
+       430: aload         7
+       432: invokestatic  #316                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       435: ifeq          472
+       438: iload         16
+       440: aload         6
+       442: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       445: arraylength
+       446: if_icmpge     472
+       449: aload         6
+       451: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       454: iload         16
+       456: aaload
+       457: dup
+       458: instanceof    #321                // class java/lang/Integer
+       461: ifne          466
+       464: pop
+       465: aconst_null
+       466: checkcast     #321                // class java/lang/Integer
+       469: goto          480
+       472: nop
+       473: nop
+       474: aload_2
+       475: ifnonnull     365
+       478: nop
+       479: aconst_null
+       480: astore        5
+       482: sipush        -32305
+       485: aload_1
+       486: astore        7
+       488: sipush        -6353
+       491: pop2
+       492: ldc           #131                // String option
+       494: astore        8
+       496: iconst_0
+       497: istore        9
+       499: aload         7
+       501: invokevirtual #301                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.a:()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;
+       504: invokevirtual #304                // Method me/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI.b:()Ljava/util/List;
+       507: checkcast     #195                // class java/lang/Iterable
+       510: astore        10
+       512: iconst_0
+       513: istore        11
+       515: iconst_0
+       516: istore        12
+       518: aload         10
+       520: invokeinterface #199,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+       525: astore        13
+       527: aload         13
+       529: invokeinterface #207,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       534: ifeq          640
+       537: aload         13
+       539: invokeinterface #211,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       544: astore        14
+       546: iload         12
+       548: iinc          12, 1
+       551: istore        15
+       553: aload_2
+       554: ifnull        641
+       557: iload         15
+       559: aload_2
+       560: ifnull        571
+       563: ifge          569
+       566: invokestatic  #309                // Method kotlin/collections/CollectionsKt.throwIndexOverflow:()V
+       569: iload         15
+       571: aload         14
+       573: checkcast     #11                 // class me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll
+       576: astore        16
+       578: istore        17
+       580: iconst_0
+       581: istore        18
+       583: aload_2
+       584: ifnull        636
+       587: aload         16
+       589: invokevirtual #312                // Method me/octo/client/IlIlIlllllIIlIIIIIllllIIIIlIlIlIIIlIlllIlIlllIIllIIIlIllIllIllIlllIlIllllIIlIlIlllIll.a:()Ljava/lang/String;
+       592: aload         8
+       594: invokestatic  #316                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+       597: ifeq          634
+       600: iload         17
+       602: aload         7
+       604: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       607: arraylength
+       608: if_icmpge     634
+       611: aload         7
+       613: invokevirtual #319                // Method me/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII.b:()[Ljava/lang/Object;
+       616: iload         17
+       618: aaload
+       619: dup
+       620: instanceof    #306                // class java/lang/String
+       623: ifne          628
+       626: pop
+       627: aconst_null
+       628: checkcast     #306                // class java/lang/String
+       631: goto          642
+       634: nop
+       635: nop
+       636: aload_2
+       637: ifnonnull     527
+       640: nop
+       641: aconst_null
+       642: astore        6
+       644: aload_3
+       645: aload_2
+       646: ifnull        654
+       649: ifnull        1106
+       652: aload         4
+       654: aload_2
+       655: ifnull        663
+       658: ifnull        1106
+       661: aload         5
+       663: ifnull        1106
+       666: new           #264                // class net/minecraft/core/BlockPos
+       669: dup
+       670: aload_3
+       671: invokevirtual #324                // Method java/lang/Integer.intValue:()I
+       674: aload         4
+       676: invokevirtual #324                // Method java/lang/Integer.intValue:()I
+       679: aload         5
+       681: invokevirtual #324                // Method java/lang/Integer.intValue:()I
+       684: invokespecial #327                // Method net/minecraft/core/BlockPos."<init>":(III)V
+       687: astore        7
+       689: aload_2
+       690: ifnull        724
+       693: aload         6
+       695: dup
+       696: ifnull        723
+       699: getstatic     #333                // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       702: invokevirtual #337                // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+       705: dup
+       706: sipush        -32307
+       709: sipush        27979
+       712: pop2
+       713: ldc_w         #339                // String toLowerCase(...)
+       716: invokestatic  #84                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+       719: aload_2
+       720: ifnonnull     725
+       723: pop
+       724: aconst_null
+       725: astore        8
+       727: aload         8
+       729: aload_2
+       730: ifnull        738
+       733: ifnull        1106
+       736: aload         8
+       738: invokevirtual #342                // Method java/lang/String.hashCode:()I
+       741: aload_2
+       742: ifnull        827
+       745: lookupswitch  { // 7
+             -1052618729: 875
+             -1050168434: 896
+                 3433509: 812
+                95458899: 854
+               107947501: 833
+               747804969: 917
+              1299205405: 938
+                 default: 1106
+            }
+       812: aload         8
+       814: sipush        -32314
+       817: sipush        19023
+       820: pop2
+       821: ldc_w         #344                // String path
+       824: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       827: ifne          959
+       830: goto          1106
+       833: aload         8
+       835: sipush        -32313
+       838: sipush        22965
+       841: pop2
+       842: ldc_w         #350                // String quick
+       845: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       848: ifne          976
+       851: goto          1106
+       854: aload         8
+       856: sipush        -32320
+       859: sipush        -3089
+       862: pop2
+       863: ldc_w         #352                // String debug
+       866: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       869: ifne          1061
+       872: goto          1106
+       875: aload         8
+       877: sipush        -32315
+       880: sipush        -7060
+       883: pop2
+       884: ldc_w         #354                // String native
+       887: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       890: ifne          1028
+       893: goto          1106
+       896: aload         8
+       898: sipush        -32311
+       901: sipush        -8782
+       904: pop2
+       905: ldc_w         #356                // String etherwarp
+       908: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       911: ifne          1012
+       914: goto          1106
+       917: aload         8
+       919: sipush        -32319
+       922: sipush        18223
+       925: pop2
+       926: ldc_w         #358                // String position
+       929: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       932: ifne          993
+       935: goto          1106
+       938: aload         8
+       940: sipush        -32308
+       943: sipush        5199
+       946: pop2
+       947: ldc_w         #360                // String native-debug
+       950: invokevirtual #348                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       953: ifne          1044
+       956: goto          1106
+       959: aload_0
+       960: getstatic     #363                // Field me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+       963: aload         7
+       965: iconst_1
+       966: invokevirtual #366                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:(Ljava/lang/Object;Z)Ljava/util/List;
+       969: putfield      #187                // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Ljava/util/List;
+       972: aload_2
+       973: ifnonnull     1106
+       976: aload_0
+       977: getstatic     #371                // Field me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI;
+       980: aload         7
+       982: iconst_1
+       983: invokevirtual #374                // Method me/octo/client/utils/player/pathfinder/IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.b:(Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;
+       986: putfield      #262                // Field IIIlIlIIlIIIIIIlIllIlllIIlIllllIllIIIIIIIIIlIllllllIIllIllIllIllIIlllIlllllIlIllIlIII:Ljava/util/List;
+       989: aload_2
+       990: ifnonnull     1106
+       993: aload_0
+       994: getstatic     #379                // Field me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI;
+       997: aload         7
+       999: getstatic     #383                // Field net/minecraft/core/BlockPos.ZERO:Lnet/minecraft/core/BlockPos;
+      1002: invokevirtual #386                // Method me/octo/client/utils/player/pathfinder/IIIIIIIIlIIIIIlIlllIllllIllllIlIlllIIllIIlllIIIlIIIlllIlIlIlIIlllIIlllIIIIIlIIIlIIllI.a:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Ljava/util/ArrayList;
+      1005: putfield      #254                // Field IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Ljava/util/ArrayList;
+      1008: aload_2
+      1009: ifnonnull     1106
+      1012: aload_0
+      1013: getstatic     #389                // Field me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+      1016: aload         7
+      1018: invokevirtual #392                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.b:(Lnet/minecraft/core/BlockPos;)Ljava/util/List;
+      1021: putfield      #289                // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Ljava/util/List;
+      1024: aload_2
+      1025: ifnonnull     1106
+      1028: aload_0
+      1029: getstatic     #389                // Field me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+      1032: aload         7
+      1034: invokevirtual #394                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:(Lnet/minecraft/core/BlockPos;)Ljava/util/List;
+      1037: putfield      #289                // Field IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl:Ljava/util/List;
+      1040: aload_2
+      1041: ifnonnull     1106
+      1044: aload_0
+      1045: getstatic     #389                // Field me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;
+      1048: aload         7
+      1050: iconst_0
+      1051: invokevirtual #396                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.a:(Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;
+      1054: putfield      #270                // Field lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI:Ljava/util/List;
+      1057: aload_2
+      1058: ifnonnull     1106
+      1061: aload_0
+      1062: getstatic     #363                // Field me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      1065: aload         7
+      1067: iconst_1
+      1068: invokevirtual #366                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.a:(Ljava/lang/Object;Z)Ljava/util/List;
+      1071: putfield      #187                // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Ljava/util/List;
+      1074: aload_2
+      1075: ifnull        1105
+      1078: aload_0
+      1079: getfield      #187                // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Ljava/util/List;
+      1082: dup
+      1083: ifnull        1104
+      1086: astore        11
+      1088: iconst_0
+      1089: istore        12
+      1091: aload_0
+      1092: getstatic     #363                // Field me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI:Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;
+      1095: invokevirtual #399                // Method me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.j:()Ljava/util/List;
+      1098: putfield      #187                // Field lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII:Ljava/util/List;
+      1101: goto          1106
+      1104: pop
+      1105: nop
+      1106: getstatic     #405                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+      1109: areturn
+
+  private static final me.octo.client.utils.llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll a(me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll);
+    descriptor: (Lme/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll;)Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+    Code:
+         0: aload_0
+         1: getstatic     #276                // Field me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:[I
+         4: swap
+         5: invokevirtual #280                // Method me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll$IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.ordinal:()I
+         8: iaload
+         9: tableswitch   { // 1 to 2
+                       1: 32
+                       2: 38
+                 default: 44
+            }
+        32: getstatic     #283                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.IllIlllIlIIlIlIllIlllIlIlIIIIIIIllllllIIIIIllIIIlIlIllllIlllIllIllllIllllIlllllIllIIl:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        35: goto          47
+        38: getstatic     #286                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.IlIlIlIIIIIlIllllllIllIIIIllIlIIlIIIlllllIllIIlIIlIIIllIlIlIIllIlIIllIIllllIlIIllIlIl:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        41: goto          47
+        44: getstatic     #193                // Field me/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll.llIIllIIllIlIIlIIllllIlIlIIllIlIIIlIIlIIIIlIIIIllIllllIIlIIlllIllIllIlIllIIlllIlIlIlI:Lme/octo/client/utils/llIIIIlIIIllIIllIllIIllIlIIlIlIlllIlllIlIlIlIIlIlIIIIllllllIllIIIIlIllIllIIIlIIlIllll;
+        47: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: bipush        15
+         2: anewarray     #306                // class java/lang/String
+         5: astore        5
+         7: iconst_0
+         8: istore_3
+         9: ldc_w         #408                // String W?¡§\u0095\u007f\u0092#\u0005#\u001b\u000b\u0019l\u0014!?7?\u0083\u0011?$\u0018X?\u0007\u001d:?%M%~?\u008b\u0093\u0016??\u009a?\u008a\u0005\u0004{#\u009d?\u0004#(?j\b`H\u0094¡§\u001d9?\u0081\u0005bxS¨´?\u0006\u00930\u0011[Q@\bcu¨®?\u00045¡¤\n\u0010#\u0001G\u0087?\u0016\u008f?PUhy??4?\f\u0080?R? ?bv]?]\u0095\u0006B?+\n\u0016j\u0007\u0092\u0006?|?\f?\t \u00130¡¤¡ÂIPN?
+        12: dup
+        13: astore_2
+        14: invokevirtual #411                // Method java/lang/String.length:()I
+        17: istore        4
+        19: bipush        6
+        21: istore_1
+        22: iconst_m1
+        23: istore_0
+        24: bipush        85
+        26: iinc          0, 1
+        29: aload_2
+        30: iload_0
+        31: dup
+        32: iload_1
+        33: iadd
+        34: invokevirtual #415                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        37: iconst_m1
+        38: goto          144
+        41: aload         5
+        43: swap
+        44: iload_3
+        45: iinc          3, 1
+        48: swap
+        49: aastore
+        50: iload_0
+        51: iload_1
+        52: iadd
+        53: dup
+        54: istore_0
+        55: iload         4
+        57: if_icmpge     69
+        60: aload_2
+        61: iload_0
+        62: invokevirtual #419                // Method java/lang/String.charAt:(I)C
+        65: istore_1
+        66: goto          24
+        69: ldc_w         #421                // String xR?R\u0089\u0010;A\u0089f?ZX????^¨¹?RM
+        72: dup
+        73: astore_2
+        74: invokevirtual #411                // Method java/lang/String.length:()I
+        77: istore        4
+        79: iconst_5
+        80: istore_1
+        81: iconst_m1
+        82: istore_0
+        83: bipush        81
+        85: iinc          0, 1
+        88: aload_2
+        89: iload_0
+        90: dup
+        91: iload_1
+        92: iadd
+        93: invokevirtual #415                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        96: iconst_0
+        97: goto          144
+       100: aload         5
+       102: swap
+       103: iload_3
+       104: iinc          3, 1
+       107: swap
+       108: aastore
+       109: iload_0
+       110: iload_1
+       111: iadd
+       112: dup
+       113: istore_0
+       114: iload         4
+       116: if_icmpge     128
+       119: aload_2
+       120: iload_0
+       121: invokevirtual #419                // Method java/lang/String.charAt:(I)C
+       124: istore_1
+       125: goto          83
+       128: aload         5
+       130: putstatic     #423                // Field a:[Ljava/lang/String;
+       133: bipush        15
+       135: anewarray     #306                // class java/lang/String
+       138: putstatic     #425                // Field b:[Ljava/lang/String;
+       141: goto          300
+       144: dup_x2
+       145: pop
+       146: invokevirtual #429                // Method java/lang/String.toCharArray:()[C
+       149: dup_x1
+       150: arraylength
+       151: dup_x2
+       152: pop
+       153: iconst_0
+       154: istore        6
+       156: dup2_x1
+       157: pop2
+       158: dup_x2
+       159: iconst_1
+       160: if_icmpgt     260
+       163: dup2
+       164: swap
+       165: iload         6
+       167: dup2_x1
+       168: caload
+       169: swap
+       170: iload         6
+       172: bipush        7
+       174: irem
+       175: tableswitch   { // 0 to 5
+                       0: 212
+                       1: 217
+                       2: 222
+                       3: 227
+                       4: 232
+                       5: 237
+                 default: 242
+            }
+       212: bipush        89
+       214: goto          244
+       217: bipush        70
+       219: goto          244
+       222: bipush        65
+       224: goto          244
+       227: bipush        125
+       229: goto          244
+       232: bipush        49
+       234: goto          244
+       237: bipush        81
+       239: goto          244
+       242: bipush        42
+       244: ixor
+       245: ixor
+       246: i2c
+       247: castore
+       248: iinc          6, 1
+       251: dup
+       252: ifne          260
+       255: dup2
+       256: dup_x1
+       257: goto          167
+       260: dup2_x1
+       261: pop2
+       262: dup_x2
+       263: iload         6
+       265: if_icmpgt     163
+       268: pop
+       269: new           #306                // class java/lang/String
+       272: dup_x1
+       273: swap
+       274: invokespecial #434                // Method java/lang/String."<init>":([C)V
+       277: invokevirtual #437                // Method java/lang/String.intern:()Ljava/lang/String;
+       280: swap
+       281: pop
+       282: swap
+       283: tableswitch   { // 0 to 0
+                       0: 100
+                 default: 41
+            }
+       300: return
+
+  private static java.lang.String a(int, int);
+    descriptor: (II)Ljava/lang/String;
+    Code:
+         0: iload_0
+         1: sipush        -32315
+         4: ixor
+         5: ldc_w         #438                // int 65535
+         8: iand
+         9: istore_2
+        10: getstatic     #425                // Field b:[Ljava/lang/String;
+        13: iload_2
+        14: aaload
+        15: ifnonnull     2615
+        18: getstatic     #423                // Field a:[Ljava/lang/String;
+        21: iload_2
+        22: aaload
+        23: invokevirtual #429                // Method java/lang/String.toCharArray:()[C
+        26: astore_3
+        27: aload_3
+        28: iconst_0
+        29: caload
+        30: sipush        255
+        33: iand
+        34: tableswitch   { // 0 to 254
+                       0: 1068
+                       1: 1073
+                       2: 1079
+                       3: 1085
+                       4: 1090
+                       5: 1096
+                       6: 1102
+                       7: 1108
+                       8: 1114
+                       9: 1119
+                      10: 1125
+                      11: 1130
+                      12: 1136
+                      13: 1141
+                      14: 1146
+                      15: 1151
+                      16: 1156
+                      17: 1162
+                      18: 1167
+                      19: 1173
+                      20: 1178
+                      21: 1183
+                      22: 1188
+                      23: 1194
+                      24: 1199
+                      25: 1205
+                      26: 1210
+                      27: 1216
+                      28: 1221
+                      29: 1226
+                      30: 1231
+                      31: 1236
+                      32: 1241
+                      33: 1247
+                      34: 1253
+                      35: 1258
+                      36: 1262
+                      37: 1267
+                      38: 1272
+                      39: 1278
+                      40: 1284
+                      41: 1290
+                      42: 1296
+                      43: 1302
+                      44: 1307
+                      45: 1312
+                      46: 1318
+                      47: 1323
+                      48: 1329
+                      49: 1335
+                      50: 1340
+                      51: 1345
+                      52: 1350
+                      53: 1356
+                      54: 1362
+                      55: 1368
+                      56: 1374
+                      57: 1379
+                      58: 1383
+                      59: 1389
+                      60: 1394
+                      61: 1400
+                      62: 1406
+                      63: 1412
+                      64: 1418
+                      65: 1424
+                      66: 1430
+                      67: 1436
+                      68: 1441
+                      69: 1446
+                      70: 1452
+                      71: 1458
+                      72: 1463
+                      73: 1468
+                      74: 1474
+                      75: 1479
+                      76: 1484
+                      77: 1490
+                      78: 1495
+                      79: 1500
+                      80: 1506
+                      81: 1511
+                      82: 1516
+                      83: 1521
+                      84: 1527
+                      85: 1533
+                      86: 1539
+                      87: 1544
+                      88: 1549
+                      89: 1554
+                      90: 1558
+                      91: 1564
+                      92: 1569
+                      93: 1574
+                      94: 1580
+                      95: 1585
+                      96: 1591
+                      97: 1596
+                      98: 1601
+                      99: 1606
+                     100: 1612
+                     101: 1618
+                     102: 1624
+                     103: 1629
+                     104: 1635
+                     105: 1640
+                     106: 1646
+                     107: 1652
+                     108: 1658
+                     109: 1663
+                     110: 1669
+                     111: 1675
+                     112: 1680
+                     113: 1685
+                     114: 1691
+                     115: 1697
+                     116: 1703
+                     117: 1708
+                     118: 1713
+                     119: 1718
+                     120: 1723
+                     121: 1729
+                     122: 1735
+                     123: 1741
+                     124: 1747
+                     125: 1753
+                     126: 1758
+                     127: 1763
+                     128: 1768
+                     129: 1773
+                     130: 1779
+                     131: 1784
+                     132: 1789
+                     133: 1794
+                     134: 1799
+                     135: 1805
+                     136: 1810
+                     137: 1816
+                     138: 1820
+                     139: 1825
+                     140: 1831
+                     141: 1836
+                     142: 1841
+                     143: 1847
+                     144: 1853
+                     145: 1859
+                     146: 1864
+                     147: 1870
+                     148: 1875
+                     149: 1881
+                     150: 1886
+                     151: 1891
+                     152: 1897
+                     153: 1902
+                     154: 1908
+                     155: 1914
+                     156: 1920
+                     157: 1925
+                     158: 1930
+                     159: 1936
+                     160: 1942
+                     161: 1947
+                     162: 1953
+                     163: 1959
+                     164: 1964
+                     165: 1969
+                     166: 1974
+                     167: 1979
+                     168: 1984
+                     169: 1989
+                     170: 1995
+                     171: 2001
+                     172: 2006
+                     173: 2012
+                     174: 2017
+                     175: 2023
+                     176: 2029
+                     177: 2034
+                     178: 2039
+                     179: 2044
+                     180: 2050
+                     181: 2056
+                     182: 2062
+                     183: 2067
+                     184: 2072
+                     185: 2078
+                     186: 2084
+                     187: 2089
+                     188: 2094
+                     189: 2099
+                     190: 2105
+                     191: 2111
+                     192: 2117
+                     193: 2123
+                     194: 2129
+                     195: 2135
+                     196: 2140
+                     197: 2145
+                     198: 2150
+                     199: 2155
+                     200: 2161
+                     201: 2166
+                     202: 2171
+                     203: 2177
+                     204: 2182
+                     205: 2188
+                     206: 2193
+                     207: 2199
+                     208: 2205
+                     209: 2210
+                     210: 2215
+                     211: 2220
+                     212: 2226
+                     213: 2232
+                     214: 2238
+                     215: 2243
+                     216: 2249
+                     217: 2255
+                     218: 2261
+                     219: 2267
+                     220: 2273
+                     221: 2279
+                     222: 2285
+                     223: 2290
+                     224: 2294
+                     225: 2300
+                     226: 2306
+                     227: 2312
+                     228: 2318
+                     229: 2324
+                     230: 2329
+                     231: 2335
+                     232: 2340
+                     233: 2346
+                     234: 2351
+                     235: 2357
+                     236: 2363
+                     237: 2369
+                     238: 2374
+                     239: 2379
+                     240: 2384
+                     241: 2390
+                     242: 2395
+                     243: 2400
+                     244: 2405
+                     245: 2411
+                     246: 2417
+                     247: 2421
+                     248: 2426
+                     249: 2431
+                     250: 2436
+                     251: 2442
+                     252: 2448
+                     253: 2454
+                     254: 2460
+                 default: 2465
+            }
+      1068: bipush        68
+      1070: goto          2467
+      1073: sipush        198
+      1076: goto          2467
+      1079: sipush        185
+      1082: goto          2467
+      1085: bipush        10
+      1087: goto          2467
+      1090: sipush        186
+      1093: goto          2467
+      1096: sipush        141
+      1099: goto          2467
+      1102: sipush        234
+      1105: goto          2467
+      1108: sipush        128
+      1111: goto          2467
+      1114: bipush        60
+      1116: goto          2467
+      1119: sipush        159
+      1122: goto          2467
+      1125: bipush        103
+      1127: goto          2467
+      1130: sipush        196
+      1133: goto          2467
+      1136: bipush        45
+      1138: goto          2467
+      1141: bipush        81
+      1143: goto          2467
+      1146: bipush        102
+      1148: goto          2467
+      1151: bipush        44
+      1153: goto          2467
+      1156: sipush        146
+      1159: goto          2467
+      1162: bipush        72
+      1164: goto          2467
+      1167: sipush        130
+      1170: goto          2467
+      1173: bipush        89
+      1175: goto          2467
+      1178: bipush        29
+      1180: goto          2467
+      1183: bipush        20
+      1185: goto          2467
+      1188: sipush        216
+      1191: goto          2467
+      1194: bipush        79
+      1196: goto          2467
+      1199: sipush        151
+      1202: goto          2467
+      1205: bipush        11
+      1207: goto          2467
+      1210: sipush        194
+      1213: goto          2467
+      1216: bipush        85
+      1218: goto          2467
+      1221: bipush        47
+      1223: goto          2467
+      1226: bipush        52
+      1228: goto          2467
+      1231: bipush        104
+      1233: goto          2467
+      1236: bipush        43
+      1238: goto          2467
+      1241: sipush        153
+      1244: goto          2467
+      1247: sipush        143
+      1250: goto          2467
+      1253: bipush        112
+      1255: goto          2467
+      1258: iconst_3
+      1259: goto          2467
+      1262: bipush        83
+      1264: goto          2467
+      1267: bipush        62
+      1269: goto          2467
+      1272: sipush        136
+      1275: goto          2467
+      1278: sipush        226
+      1281: goto          2467
+      1284: sipush        147
+      1287: goto          2467
+      1290: sipush        178
+      1293: goto          2467
+      1296: sipush        208
+      1299: goto          2467
+      1302: bipush        91
+      1304: goto          2467
+      1307: bipush        105
+      1309: goto          2467
+      1312: sipush        249
+      1315: goto          2467
+      1318: bipush        38
+      1320: goto          2467
+      1323: sipush        240
+      1326: goto          2467
+      1329: sipush        238
+      1332: goto          2467
+      1335: bipush        98
+      1337: goto          2467
+      1340: bipush        96
+      1342: goto          2467
+      1345: bipush        127
+      1347: goto          2467
+      1350: sipush        228
+      1353: goto          2467
+      1356: sipush        223
+      1359: goto          2467
+      1362: sipush        163
+      1365: goto          2467
+      1368: sipush        203
+      1371: goto          2467
+      1374: bipush        64
+      1376: goto          2467
+      1379: iconst_4
+      1380: goto          2467
+      1383: sipush        184
+      1386: goto          2467
+      1389: bipush        46
+      1391: goto          2467
+      1394: sipush        205
+      1397: goto          2467
+      1400: sipush        129
+      1403: goto          2467
+      1406: sipush        204
+      1409: goto          2467
+      1412: sipush        142
+      1415: goto          2467
+      1418: sipush        131
+      1421: goto          2467
+      1424: sipush        212
+      1427: goto          2467
+      1430: sipush        195
+      1433: goto          2467
+      1436: bipush        110
+      1438: goto          2467
+      1441: bipush        30
+      1443: goto          2467
+      1446: sipush        231
+      1449: goto          2467
+      1452: sipush        190
+      1455: goto          2467
+      1458: bipush        126
+      1460: goto          2467
+      1463: bipush        87
+      1465: goto          2467
+      1468: sipush        181
+      1471: goto          2467
+      1474: bipush        76
+      1476: goto          2467
+      1479: bipush        7
+      1481: goto          2467
+      1484: sipush        214
+      1487: goto          2467
+      1490: bipush        99
+      1492: goto          2467
+      1495: bipush        14
+      1497: goto          2467
+      1500: sipush        175
+      1503: goto          2467
+      1506: bipush        107
+      1508: goto          2467
+      1511: bipush        121
+      1513: goto          2467
+      1516: bipush        119
+      1518: goto          2467
+      1521: sipush        171
+      1524: goto          2467
+      1527: sipush        152
+      1530: goto          2467
+      1533: sipush        193
+      1536: goto          2467
+      1539: bipush        93
+      1541: goto          2467
+      1544: bipush        54
+      1546: goto          2467
+      1549: bipush        22
+      1551: goto          2467
+      1554: iconst_1
+      1555: goto          2467
+      1558: sipush        237
+      1561: goto          2467
+      1564: bipush        55
+      1566: goto          2467
+      1569: bipush        124
+      1571: goto          2467
+      1574: sipush        172
+      1577: goto          2467
+      1580: bipush        56
+      1582: goto          2467
+      1585: sipush        202
+      1588: goto          2467
+      1591: bipush        16
+      1593: goto          2467
+      1596: bipush        40
+      1598: goto          2467
+      1601: bipush        101
+      1603: goto          2467
+      1606: sipush        247
+      1609: goto          2467
+      1612: sipush        180
+      1615: goto          2467
+      1618: sipush        160
+      1621: goto          2467
+      1624: bipush        82
+      1626: goto          2467
+      1629: sipush        242
+      1632: goto          2467
+      1635: bipush        34
+      1637: goto          2467
+      1640: sipush        167
+      1643: goto          2467
+      1646: sipush        177
+      1649: goto          2467
+      1652: sipush        232
+      1655: goto          2467
+      1658: bipush        19
+      1660: goto          2467
+      1663: sipush        170
+      1666: goto          2467
+      1669: sipush        229
+      1672: goto          2467
+      1675: bipush        75
+      1677: goto          2467
+      1680: bipush        12
+      1682: goto          2467
+      1685: sipush        188
+      1688: goto          2467
+      1691: sipush        253
+      1694: goto          2467
+      1697: sipush        192
+      1700: goto          2467
+      1703: bipush        31
+      1705: goto          2467
+      1708: bipush        108
+      1710: goto          2467
+      1713: bipush        58
+      1715: goto          2467
+      1718: bipush        39
+      1720: goto          2467
+      1723: sipush        251
+      1726: goto          2467
+      1729: sipush        137
+      1732: goto          2467
+      1735: sipush        162
+      1738: goto          2467
+      1741: sipush        254
+      1744: goto          2467
+      1747: sipush        206
+      1750: goto          2467
+      1753: bipush        21
+      1755: goto          2467
+      1758: bipush        80
+      1760: goto          2467
+      1763: bipush        115
+      1765: goto          2467
+      1768: bipush        90
+      1770: goto          2467
+      1773: sipush        149
+      1776: goto          2467
+      1779: bipush        86
+      1781: goto          2467
+      1784: bipush        59
+      1786: goto          2467
+      1789: bipush        6
+      1791: goto          2467
+      1794: bipush        49
+      1796: goto          2467
+      1799: sipush        209
+      1802: goto          2467
+      1805: bipush        78
+      1807: goto          2467
+      1810: sipush        139
+      1813: goto          2467
+      1816: iconst_5
+      1817: goto          2467
+      1820: bipush        77
+      1822: goto          2467
+      1825: sipush        250
+      1828: goto          2467
+      1831: bipush        109
+      1833: goto          2467
+      1836: bipush        63
+      1838: goto          2467
+      1841: sipush        134
+      1844: goto          2467
+      1847: sipush        156
+      1850: goto          2467
+      1853: sipush        230
+      1856: goto          2467
+      1859: bipush        88
+      1861: goto          2467
+      1864: sipush        219
+      1867: goto          2467
+      1870: bipush        111
+      1872: goto          2467
+      1875: sipush        220
+      1878: goto          2467
+      1881: bipush        122
+      1883: goto          2467
+      1886: bipush        25
+      1888: goto          2467
+      1891: sipush        224
+      1894: goto          2467
+      1897: bipush        51
+      1899: goto          2467
+      1902: sipush        227
+      1905: goto          2467
+      1908: sipush        239
+      1911: goto          2467
+      1914: sipush        252
+      1917: goto          2467
+      1920: bipush        26
+      1922: goto          2467
+      1925: bipush        35
+      1927: goto          2467
+      1930: sipush        201
+      1933: goto          2467
+      1936: sipush        197
+      1939: goto          2467
+      1942: bipush        106
+      1944: goto          2467
+      1947: sipush        133
+      1950: goto          2467
+      1953: sipush        165
+      1956: goto          2467
+      1959: bipush        18
+      1961: goto          2467
+      1964: bipush        15
+      1966: goto          2467
+      1969: bipush        100
+      1971: goto          2467
+      1974: bipush        113
+      1976: goto          2467
+      1979: bipush        13
+      1981: goto          2467
+      1984: bipush        67
+      1986: goto          2467
+      1989: sipush        225
+      1992: goto          2467
+      1995: sipush        221
+      1998: goto          2467
+      2001: bipush        84
+      2003: goto          2467
+      2006: sipush        215
+      2009: goto          2467
+      2012: bipush        17
+      2014: goto          2467
+      2017: sipush        213
+      2020: goto          2467
+      2023: sipush        135
+      2026: goto          2467
+      2029: bipush        37
+      2031: goto          2467
+      2034: bipush        9
+      2036: goto          2467
+      2039: bipush        97
+      2041: goto          2467
+      2044: sipush        148
+      2047: goto          2467
+      2050: sipush        174
+      2053: goto          2467
+      2056: sipush        158
+      2059: goto          2467
+      2062: bipush        65
+      2064: goto          2467
+      2067: bipush        95
+      2069: goto          2467
+      2072: sipush        243
+      2075: goto          2467
+      2078: sipush        154
+      2081: goto          2467
+      2084: bipush        53
+      2086: goto          2467
+      2089: bipush        94
+      2091: goto          2467
+      2094: bipush        117
+      2096: goto          2467
+      2099: sipush        222
+      2102: goto          2467
+      2105: sipush        236
+      2108: goto          2467
+      2111: sipush        182
+      2114: goto          2467
+      2117: sipush        248
+      2120: goto          2467
+      2123: sipush        245
+      2126: goto          2467
+      2129: sipush        155
+      2132: goto          2467
+      2135: bipush        114
+      2137: goto          2467
+      2140: bipush        116
+      2142: goto          2467
+      2145: bipush        73
+      2147: goto          2467
+      2150: bipush        28
+      2152: goto          2467
+      2155: sipush        218
+      2158: goto          2467
+      2161: bipush        27
+      2163: goto          2467
+      2166: bipush        41
+      2168: goto          2467
+      2171: sipush        166
+      2174: goto          2467
+      2177: bipush        36
+      2179: goto          2467
+      2182: sipush        199
+      2185: goto          2467
+      2188: bipush        32
+      2190: goto          2467
+      2193: sipush        241
+      2196: goto          2467
+      2199: sipush        207
+      2202: goto          2467
+      2205: bipush        61
+      2207: goto          2467
+      2210: bipush        23
+      2212: goto          2467
+      2215: bipush        24
+      2217: goto          2467
+      2220: sipush        157
+      2223: goto          2467
+      2226: sipush        244
+      2229: goto          2467
+      2232: sipush        140
+      2235: goto          2467
+      2238: bipush        69
+      2240: goto          2467
+      2243: sipush        179
+      2246: goto          2467
+      2249: sipush        164
+      2252: goto          2467
+      2255: sipush        200
+      2258: goto          2467
+      2261: sipush        189
+      2264: goto          2467
+      2267: sipush        144
+      2270: goto          2467
+      2273: sipush        233
+      2276: goto          2467
+      2279: sipush        235
+      2282: goto          2467
+      2285: bipush        8
+      2287: goto          2467
+      2290: iconst_0
+      2291: goto          2467
+      2294: sipush        191
+      2297: goto          2467
+      2300: sipush        145
+      2303: goto          2467
+      2306: sipush        217
+      2309: goto          2467
+      2312: sipush        132
+      2315: goto          2467
+      2318: sipush        161
+      2321: goto          2467
+      2324: bipush        42
+      2326: goto          2467
+      2329: sipush        211
+      2332: goto          2467
+      2335: bipush        125
+      2337: goto          2467
+      2340: sipush        183
+      2343: goto          2467
+      2346: bipush        120
+      2348: goto          2467
+      2351: sipush        173
+      2354: goto          2467
+      2357: sipush        176
+      2360: goto          2467
+      2363: sipush        168
+      2366: goto          2467
+      2369: bipush        92
+      2371: goto          2467
+      2374: bipush        48
+      2376: goto          2467
+      2379: bipush        70
+      2381: goto          2467
+      2384: sipush        255
+      2387: goto          2467
+      2390: bipush        123
+      2392: goto          2467
+      2395: bipush        50
+      2397: goto          2467
+      2400: bipush        74
+      2402: goto          2467
+      2405: sipush        187
+      2408: goto          2467
+      2411: sipush        150
+      2414: goto          2467
+      2417: iconst_2
+      2418: goto          2467
+      2421: bipush        118
+      2423: goto          2467
+      2426: bipush        33
+      2428: goto          2467
+      2431: bipush        66
+      2433: goto          2467
+      2436: sipush        210
+      2439: goto          2467
+      2442: sipush        138
+      2445: goto          2467
+      2448: sipush        169
+      2451: goto          2467
+      2454: sipush        246
+      2457: goto          2467
+      2460: bipush        71
+      2462: goto          2467
+      2465: bipush        57
+      2467: istore        4
+      2469: iload_1
+      2470: sipush        255
+      2473: iand
+      2474: iload         4
+      2476: isub
+      2477: istore        5
+      2479: iload         5
+      2481: ifge          2490
+      2484: iinc_w        5, 256
+      2490: iload_1
+      2491: ldc_w         #438                // int 65535
+      2494: iand
+      2495: bipush        8
+      2497: iushr
+      2498: iload         4
+      2500: isub
+      2501: istore        6
+      2503: iload         6
+      2505: ifge          2514
+      2508: iinc_w        6, 256
+      2514: iconst_0
+      2515: istore        7
+      2517: goto          2592
+      2520: iload         7
+      2522: iconst_2
+      2523: irem
+      2524: istore        8
+      2526: aload_3
+      2527: iload         7
+      2529: dup2
+      2530: caload
+      2531: iload         8
+      2533: ifne          2564
+      2536: iload         5
+      2538: ixor
+      2539: i2c
+      2540: castore
+      2541: iload         5
+      2543: iconst_3
+      2544: iushr
+      2545: iload         5
+      2547: iconst_5
+      2548: ishl
+      2549: ior
+      2550: aload_3
+      2551: iload         7
+      2553: caload
+      2554: ixor
+      2555: sipush        255
+      2558: iand
+      2559: istore        5
+      2561: goto          2589
+      2564: iload         6
+      2566: ixor
+      2567: i2c
+      2568: castore
+      2569: iload         6
+      2571: iconst_3
+      2572: iushr
+      2573: iload         6
+      2575: iconst_5
+      2576: ishl
+      2577: ior
+      2578: aload_3
+      2579: iload         7
+      2581: caload
+      2582: ixor
+      2583: sipush        255
+      2586: iand
+      2587: istore        6
+      2589: iinc          7, 1
+      2592: iload         7
+      2594: aload_3
+      2595: arraylength
+      2596: if_icmplt     2520
+      2599: getstatic     #425                // Field b:[Ljava/lang/String;
+      2602: iload_2
+      2603: new           #306                // class java/lang/String
+      2606: dup
+      2607: aload_3
+      2608: invokespecial #434                // Method java/lang/String."<init>":([C)V
+      2611: invokevirtual #437                // Method java/lang/String.intern:()Ljava/lang/String;
+      2614: aastore
+      2615: getstatic     #425                // Field b:[Ljava/lang/String;
+      2618: iload_2
+      2619: aaload
+      2620: areturn
+}

@@ -1,0 +1,28 @@
+Summary for D:\Work\OpenPoli\.analysis\cracked.jar
+Decompiled with CFR 0.152
+
+
+me.octo.client.utils.player.pathfinder.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
+----------------------------
+
+<clinit>()
+  Unable to fully structure code
+<clinit>()
+  Unable to fully structure code
+<clinit>()
+  Unable to fully structure code
+
+
+me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl
+----------------------------
+
+a(int int java.nio.ByteBuffer )
+  Loose catch block
+<clinit>()
+  Unable to fully structure code
+<clinit>()
+  Unable to fully structure code
+<clinit>()
+  Unable to fully structure code
+<clinit>()
+  Unable to fully structure code
