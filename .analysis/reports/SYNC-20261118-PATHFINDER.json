@@ -5,9 +5,9 @@
   "evidence_produced_against_commit": "d64b1816f27894ba59b443030f95e72a595e0f65",
   "evidence_branch": "codex/bootstrap-eclientinit-2026-11-15",
   "ingest_commits": {
-    "private_openpolinex": null,
-    "public_polinexclient_reborn": null,
-    "note": "Filled after ingestion commits; distinct from evidence baseline."
+    "private_openpolinex": "77d94d84e8f13b95de9568a6281d418775c9a05b",
+    "public_polinexclient_reborn": "701694ab4cce6661b841ef7838a332cf3387d5e7",
+    "note": "These identify the commits that introduced the source, evidence, handoff, and README snapshot. This index update is a following documentation commit. Evidence baseline remains the separate commit above."
   },
   "targets": {
     "private_repository": "https://github.com/mythiclong/openpolinex",
