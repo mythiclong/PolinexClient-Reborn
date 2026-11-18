@@ -117,6 +117,7 @@ def instruction_calls(code: bytes, cp: list) -> list[dict]:
     lengths[201] = 5
 
     calls = []
+    handle_loads = []
     p = 0
     while p < len(code):
         offset = p
@@ -145,6 +146,18 @@ def instruction_calls(code: bytes, cp: list) -> list[dict]:
             p += 1
             p += 4 if nested == 132 else 2
             continue
+        if op in (18, 19):  # ldc / ldc_w can load a MethodHandle or ConstantDynamic
+            cp_index = code[p] if op == 18 else struct.unpack_from(">H", code, p)[0]
+            item = cp[cp_index]
+            if item is not None and item[0] == 15:
+                call = {"kind": "ldc_method_handle", **cp_handle(cp, cp_index)}
+                call["bytecode_offset"] = offset
+                handle_loads.append(call)
+            elif item is not None and item[0] == 17:
+                name_type = cp[item[2]]
+                call = {"kind": "ldc_constant_dynamic", "name": cp_utf8(cp, name_type[1]), "descriptor": cp_utf8(cp, name_type[2]), "bootstrap_index": item[1]}
+                call["bytecode_offset"] = offset
+                handle_loads.append(call)
         if op in (182, 183, 184, 185, 186):
             cp_index = struct.unpack_from(">H", code, p)[0]
             if op == 186:
@@ -160,7 +173,7 @@ def instruction_calls(code: bytes, cp: list) -> list[dict]:
         p = offset + lengths[op]
         if p > len(code):
             raise ValueError(f"truncated opcode {op} at bytecode offset {offset}")
-    return calls
+    return calls, handle_loads
 
 
 def parse_class(data: bytes, origin: str) -> dict:
@@ -187,6 +200,7 @@ def parse_class(data: bytes, origin: str) -> dict:
     methods, p = u2(data, p)
     invokes = []
     indy = []
+    handle_loads = []
     for _ in range(methods):
         _, p = u2(data, p)
         name_index, p = u2(data, p)
@@ -201,10 +215,13 @@ def parse_class(data: bytes, origin: str) -> dict:
                 _, p = u2(data, p)  # max_stack
                 _, p = u2(data, p)  # max_locals
                 code_size, p = u4(data, p)
-                method_calls = instruction_calls(data[p:p + code_size], cp)
+                method_calls, method_handles = instruction_calls(data[p:p + code_size], cp)
                 for call in method_calls:
                     call.update({"caller_owner": class_name, "caller_name": method_name, "caller_descriptor": method_desc, "class_file": origin})
                     (indy if call["kind"] == "invokedynamic" else invokes).append(call)
+                for call in method_handles:
+                    call.update({"caller_owner": class_name, "caller_name": method_name, "caller_descriptor": method_desc, "class_file": origin})
+                    handle_loads.append(call)
                 p += code_size
                 exception_count, p = u2(data, p)
                 p += exception_count * 8
@@ -241,7 +258,7 @@ def parse_class(data: bytes, origin: str) -> dict:
         if p != end:
             raise ValueError(f"bad class attribute size in {origin}")
 
-    return {"owner": class_name, "invokes": invokes, "invokedynamic": indy, "bootstrap_methods": bootstrap_methods, "constant_pool": cp}
+    return {"owner": class_name, "invokes": invokes, "invokedynamic": indy, "method_handle_loads": handle_loads, "bootstrap_methods": bootstrap_methods, "constant_pool": cp}
 
 
 def class_files(path: Path):
@@ -280,6 +297,17 @@ def scan(path: Path) -> dict:
                 if targets:
                     call["bootstrap_handles_to_pathfinder"] = targets
                     rows.append(call)
+            for call in parsed["method_handle_loads"]:
+                if call["kind"] == "ldc_method_handle":
+                    if interesting(call["owner"]):
+                        rows.append(call)
+                else:
+                    bootstrap = parsed["bootstrap_methods"][call["bootstrap_index"]]
+                    handles = [bootstrap["bootstrap"], *bootstrap["arguments"]]
+                    targets = [h for h in handles if interesting(h["owner"])]
+                    if targets:
+                        call["bootstrap_handles_to_pathfinder"] = targets
+                        rows.append(call)
         except Exception as error:  # recorded per class; never hidden
             failures.append({"class_file": name, "error": f"{type(error).__name__}: {error}"})
     rows.sort(key=lambda x: (x["class_file"], x["caller_name"], x["caller_descriptor"], x["bytecode_offset"], x["kind"]))

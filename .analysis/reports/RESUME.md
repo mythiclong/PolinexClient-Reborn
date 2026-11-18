@@ -1,19 +1,22 @@
 # 当前交接
 
-> 更新：2026-11-18。证据产生基线：`d64b1816f27894ba59b443030f95e72a595e0f65`；入库提交与两个仓库的同步提交见[同步索引](SYNC-20261118-PATHFINDER.json)。当前 Java 源树 SHA-256 聚合：`a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8`（1,602 个文件，按路径及内容 SHA-256 聚合）。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`。
+> 更新：2026-11-18。代码/证据基线：`bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71`；当前 Java 源树 SHA-256 聚合：`a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8`（1,602 个文件，按 POSIX 路径和内容 SHA-256 聚合）。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`。R1951/R1952 的入库提交、README 快照和双仓同步位置见最新同步索引。
 
-## 当前唯一切片：Pathfinder A* 与有效世界调用路径
+同步索引：[SYNC-20261118-PATHFINDER-R1951-R1952.json](SYNC-20261118-PATHFINDER-R1951-R1952.json)。
 
-- **R1947**：按完整原版字节码恢复 `a(BlockPos, Direction):Node` 的 gate、候选遍历、空值契约和调用顺序；Temurin 25 全树编译退出码 0。证据：`.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/`。没有世界/实体运行验收。
-- **R1948**：修正 `a(BlockPos, BlockPos, boolean):ArrayList` 的节点分配顺序和 `Function2` 回调编译形式；完整方法对照、源码哈希和构建记录见 `.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/`。全树编译退出码 0。源树聚合旧值 `88c344…` 已独立复算并更正为 `a23ce3…`，依据见 `source-tree-fingerprint-correction.json`。
-- **R1949**：完整对照缓存加载器并扫描原版 JAR 的 5,475 个 class，0 个解析错误；gate setter 的初始化与缓存构造器调用点已确认。证据和可复跑脚本见 `.analysis/evidence/mining/r1949-pathfinder-cache-loader/`。没有有效/损坏缓存文件的运行测试。
+## 当前唯一切片：Pathfinder API 消费者、路线转换和有效世界入口
+
+- **R1947/R1948**：按完整字节码恢复候选节点 gate/空值契约和 A* 核心节点分配顺序；修正 `Function2` 回调编译形式。Temurin 25 全树编译记录退出码 0。证据：`.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/`、`.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/`。
+- **R1949**：完整对照缓存加载器；扫描原版 JAR 5,475 个 class、0 个解析错误，确认 gate setter 调用点。缓存文件实读写未验证。证据：`.analysis/evidence/mining/r1949-pathfinder-cache-loader/`。
+- **R1951**：`NativePathFinder` 原版和当前源码编译产物均含 25 个 name+descriptor 方法；18 个归一化指令序列相同，7 个方法控制流形状不同。隔离 classloader 下 31 组输出和缓存副作用全部匹配，语义断言通过。该样本集不证明所有输入或 Minecraft 实机等价。证据：`.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/`。
+- **R1952**：实际 invoke 扫描原版 JAR 5,475 个 class、当前编译产物 2,823 个 class，均 0 个解析错误。外部事件消费者 `a(Event):void` 对 `b(BlockPos):List`、`a(BlockPos):List`、`a(BlockPos, boolean):List` 的直接调用目标与原版一致；包外无 Pathfinder method-handle 入口。没有执行游戏内事件。证据与可重跑扫描器：`.analysis/evidence/mining/r1952-pathfinder-call-graph/`。
 
 ## 未验收项
 
-- Pathfinder 尚未通过有效客户端世界、玩家/实体和正常模块入口验证路线、碰撞或缓存读写；合成输入不替代实机结果。
-- ClickGUI 同进程 vanilla Options 对照显示键盘和滚轮有效，分类图标及 Draw 控件没有可观察鼠标反馈。内部 Screen 事件转发和控件命中仍需核对；模块开关及设置保存/重载未闭环。
-- 真实兼容服务器登录、交互、断开、重连，干净 checkout/空缓存发布构建，以及其他模块、native、渲染、配置和网络功能均未完整验收。
+- Pathfinder 尚未经有效客户端世界、玩家/实体和正常用户入口验证路线、碰撞、目标转换或缓存生命周期；真实兼容服务器登录、交互、断开和重连也未验证。
+- ClickGUI 原版 Options 对照下键盘/滚轮有效，分类图标和 Draw 控件没有可观察鼠标反馈；Screen 事件转发、控件命中、模块开关和设置保存/重载未闭环。
+- 干净 checkout/空缓存发布构建及其他初始化、渲染、配置、命令、网络和用户功能仍未完成逐项验收。
 
 ## 下一步
 
-从原版 JAR 的真实 invoke 调用点继续核对 Pathfinder API 消费者及 chunk/cache 事件路径的完整字节码，再设计有效游戏世界中的最小正常入口验证。遇到确定差异后按原版修复，并在切片边界做全树构建；客户端和输入保持单实例。
+完整核对 R1952 的事件消费者及三个 Pathfinder 包装方法、路线转换器和缓存消费者的原版/当前全方法字节码，重点检查字段、调用接收者、参数、分支、空值、异常和副作用。发现确定差异才修改；随后全树编译。需要 Minecraft 世界或实体的路径只排入有效客户端正常入口验证，不以合成 null/plain-object 结果代替。
