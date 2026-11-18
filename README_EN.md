@@ -30,6 +30,8 @@ Snapshot: **2026-11-18**. Each claim is limited to the evidence linked below; so
 |---|---|
 | **Pathfinder A\*** | R1947 restores candidate-node and null-contract behavior against complete original bytecode. R1948 fixes A* node-allocation order and the compiled form of its `Function2` callback. Full-tree `compileJava --rerun-tasks --no-daemon` passed with Temurin 25, exit code 0. |
 | **Pathfinder cache** | R1949 compares the complete loader bytecode and scans all 5,475 classes in the original JAR with no parse errors. The gate setter calls in class initialization and the cache-constructor branch are identified. Actual cache-file loading has not been tested. |
+| **Pathfinder pure-Java layer** | R1951 compares all 25 `NativePathFinder` methods and uses isolated classloaders to compare 31 original/current outputs and cache side effects; all matched. Seven methods have a different compiled control-flow shape, so finite samples do not establish full-domain equivalence. |
+| **Pathfinder call sites** | R1952 scans 5,475 original-JAR classes and 2,823 compiled classes with zero parse errors. The same event consumer has matching direct targets for three `BlockPos` API methods. Normal in-game event execution remains unverified. |
 | **Pathfinder runtime acceptance** | No acceptance yet for a valid client world, normal player entry point, collision/route output, or cache reads and writes. It has not been verified on a compatible server. Static restoration and compilation do not replace these checks. |
 | **ClickGUI** | A same-process vanilla Options comparison records working keyboard and scroll input, with no observable mouse response from category icons or the Draw control. Screen event forwarding, control hit-testing, and leaf controls still need inspection; module toggling and settings save/reload are open. |
 | **Other features** | Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, and networking still have incomplete restoration or acceptance. Login, interaction, disconnect, and reconnect against a real compatible server have not passed. |
@@ -52,11 +54,13 @@ Existing records include full-source compilation with dependencies cached. A cle
 ## Handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
-- [2026-11-18 Pathfinder sync record](.analysis/reports/SYNC-20261118-PATHFINDER.json)
+- [2026-11-18 latest Pathfinder sync record](.analysis/reports/SYNC-20261118-PATHFINDER-R1951-R1952.json)
 - [R1947 candidate-node and null-contract audit](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* core audit](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
 - [R1949 cache loader and gate call sites](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
 - [Reproducible original-JAR call-site scanner](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
+- [R1951 NativePathFinder original comparison and golden probe](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+- [R1952 actual invoke and method-handle call scan](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [Contribution notes](CONTRIBUTING.md)
 
 ## Contributing

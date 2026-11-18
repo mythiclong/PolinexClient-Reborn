@@ -30,6 +30,8 @@
 |---|---|
 | **Pathfinder A*** | R1947 按完整原版字节码恢复候选节点与空值契约；R1948 修正 A* 节点分配顺序和 `Function2` 回调编译形式。Temurin 25 `compileJava --rerun-tasks --no-daemon` 全树编译退出码 0。 |
 | **Pathfinder 缓存** | R1949 完整对照加载器字节码，并扫描原版 JAR 的 5,475 个 class、0 个解析错误；gate setter 的类初始化及缓存构造器调用点已确认。缓存文件实际加载尚未测试。 |
+| **Pathfinder 纯 Java 层** | R1951 对照 `NativePathFinder` 的 25 个完整方法，并以隔离 classloader 比较原版和当前源码编译产物的 31 组输出及缓存副作用，全部匹配。7 个方法存在编译后控制流形状差异；有限样本不证明全域等价。 |
+| **Pathfinder 调用点** | R1952 扫描原版 JAR 5,475 个 class、当前编译产物 2,823 个 class，均为 0 个解析错误；同一事件消费者对三个 `BlockPos` API 方法的直接调用目标一致。游戏内正常事件尚未验证。 |
 | **Pathfinder 运行验收** | 尚未通过有效客户端世界、玩家入口、碰撞/路线结果和缓存读写验收，也未在兼容服务器验证。静态还原与编译不能替代这些结果。 |
 | **ClickGUI** | 同进程原版 Options 对照记录显示键盘和滚轮有效，分类图标及 Draw 控件没有可观察的鼠标反馈。内部 Screen 事件转发、控件命中和叶子控件仍需核对；模块开关及设置保存/重载未闭环。 |
 | **其他功能** | 初始化事件、Powder Macro、Glacite Commission Macro、渲染、配置和网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开和重连未通过验收。 |
@@ -52,11 +54,13 @@ cd PolinexClient-Reborn/polinex-src
 ## 交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
-- [2026-11-18 Pathfinder 同步记录](.analysis/reports/SYNC-20261118-PATHFINDER.json)
+- [2026-11-18 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261118-PATHFINDER-R1951-R1952.json)
 - [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* 核心审查](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
 - [R1949 缓存加载与 gate 调用点](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
 - [R1949 可重跑的原版 JAR 调用扫描](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
+- [R1951 NativePathFinder 原版对照与 golden 探针](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+- [R1952 实际 invoke 与 method-handle 调用扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [贡献说明](CONTRIBUTING.md)
 
 ## 参与还原
