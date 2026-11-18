@@ -1,0 +1,60 @@
+{
+  "sync_id": "SYNC-20261118-PATHFINDER-R1951-R1952",
+  "date_utc": "2026-11-18",
+  "scope": "R1951 NativePathFinder pure-Java original/current golden comparison; R1952 executable Pathfinder invoke, invokedynamic, loaded method-handle and dynamic-constant scan; current handoff and bilingual README progress snapshot.",
+  "evidence_produced_against_commit": "bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71",
+  "source_tree": {
+    "java_file_count": 1602,
+    "aggregate_algorithm": "SHA256(UTF-8 of POSIX relative path<TAB>content-SHA256<LF> entries sorted by path)",
+    "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "source_changed_in_this_batch": false
+  },
+  "original_jar": {
+    "sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "binary_included_in_this_batch": false
+  },
+  "batch_commits": {
+    "private_openpolinex": {
+      "R1951_R1952_initial_evidence": "52073b6",
+      "R1952_handle_scan_and_run_log": "53361de",
+      "readme_and_resume_snapshot": "9e48b1d",
+      "branch": "codex/bootstrap-eclientinit-2026-11-15; push target codex/handoff-progress-2026-11-15"
+    },
+    "public_polinexclient_reborn": {
+      "R1951_R1952_initial_evidence": "053b810",
+      "README_snapshot": "fc373b0",
+      "R1952_handle_scan_and_resume": "2154d2f",
+      "branch": "codex/progress-sync-2026-11-16; push target main"
+    },
+    "note": "These commits identify the exact evidence and status snapshots; this index is a following documentation commit. Evidence baseline remains separate from ingestion commits."
+  },
+  "targets": {
+    "private_repository": "https://github.com/mythiclong/openpolinex",
+    "private_branch": "codex/handoff-progress-2026-11-15",
+    "private_pre_batch": "bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71",
+    "public_repository": "https://github.com/mythiclong/PolinexClient-Reborn",
+    "public_branch": "main",
+    "public_pre_batch": "ce861abee09fd16d2ce4f512adc49888aa242066"
+  },
+  "evidence": {
+    "R1951": {
+      "path": ".analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json",
+      "result": "All 25 methods are present in original and current disassemblies; 18 normalized instruction streams match and seven compiled control-flow shapes differ. An isolated classloader probe matched 31 output/side-effect fixtures with semantic assertions passing. No full-domain or in-game equivalence claim."
+    },
+    "R1952": {
+      "path": ".analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json",
+      "result": "Original JAR 5,475 classes and current compiled tree 2,823 classes scanned, zero parse failures. Same event consumer and three direct BlockPos API call targets in both. No external invokedynamic, ldc MethodHandle, or ConstantDynamic bootstrap edge into Pathfinder. No game event was executed."
+    }
+  },
+  "readme_snapshot": [
+    "README.md",
+    "README_EN.md"
+  ],
+  "handoff_snapshot": ".analysis/reports/RESUME.md",
+  "claims_and_limits": [
+    "R1951 is an isolated pure-Java comparison and not a valid Minecraft world probe.",
+    "R1952 establishes bytecode references and reachability only; normal user-path event execution remains open.",
+    "Pathfinder route/collision/cache runtime acceptance, ClickGUI mouse/module/config closure, clean checkout/empty-cache release build, other feature recovery, and compatible-server acceptance remain open.",
+    "No original protected class files, original JAR, or JNI payload were added by this batch."
+  ]
+}
