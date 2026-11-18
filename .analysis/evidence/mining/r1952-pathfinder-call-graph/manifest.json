@@ -1,0 +1,79 @@
+{
+  "experiment_id": "R1952",
+  "slice_id": "PATHFINDER-ACTUAL-INVOKE-GRAPH",
+  "generated_utc": "2026-11-18T03:30:46Z",
+  "evidence_produced_against_commit": "bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "scanner": {
+    "file": "scan_pathfinder_calls.py",
+    "sha256": "c09866562a7a08cb5d8ac0af582e22cf4d159d28a5f211a733854773549e3e14",
+    "command": "python -B .analysis/evidence/mining/r1952-pathfinder-call-graph/scan_pathfinder_calls.py --original <original JAR> --compiled polinex-src/build/classes/java/main --out .analysis/evidence/mining/r1952-pathfinder-call-graph/call-sites.json",
+    "implementation": "Python standard-library class-file parser; reports executable invoke bytecodes and invokedynamic BootstrapMethods handles, not constant-pool presence alone"
+  },
+  "scan_results": {
+    "original_class_files": 5475,
+    "original_parse_failures": 0,
+    "original_pathfinder_owner_invoke_sites": 1702,
+    "compiled_class_files": 2823,
+    "compiled_parse_failures": 0,
+    "compiled_pathfinder_owner_invoke_sites": 1480,
+    "external_invokedynamic_bootstrap_handles_to_pathfinder_original": 0,
+    "external_invokedynamic_bootstrap_handles_to_pathfinder_compiled": 0
+  },
+  "normal_api_consumer": {
+    "owner": "me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+    "method": "a",
+    "descriptor": "(Lme/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll;Lme/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII;)Lkotlin/Unit;",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+    "source_sha256": "cd9a1c128d2aa03e20ecd3b42383e5bdd9bbaf358337b13f69b97eb6185ae22f",
+    "strings_and_branches": [
+      "path",
+      "quick",
+      "debug",
+      "native",
+      "etherwarp",
+      "position",
+      "native-debug"
+    ],
+    "external_wrapper_calls_original": [
+      {
+        "offset": 1018,
+        "target": "b(Lnet/minecraft/core/BlockPos;)Ljava/util/List;"
+      },
+      {
+        "offset": 1034,
+        "target": "a(Lnet/minecraft/core/BlockPos;)Ljava/util/List;"
+      },
+      {
+        "offset": 1051,
+        "target": "a(Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;"
+      }
+    ],
+    "external_wrapper_calls_compiled": [
+      {
+        "offset": 1276,
+        "target": "b(Lnet/minecraft/core/BlockPos;)Ljava/util/List;"
+      },
+      {
+        "offset": 1297,
+        "target": "a(Lnet/minecraft/core/BlockPos;)Ljava/util/List;"
+      },
+      {
+        "offset": 1319,
+        "target": "a(Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;"
+      }
+    ]
+  },
+  "claims_and_limits": [
+    "Original and compiled class scans agree on the same three direct BlockPos API targets and caller method.",
+    "No invokedynamic bootstrap/method-handle target into Pathfinder originates outside the Pathfinder package in either scan.",
+    "Bytecode reachability does not prove event execution through normal play; the event entry and its branch settings remain unrun.",
+    "No valid world or server was used; no source was changed."
+  ],
+  "output": {
+    "file": "call-sites.json",
+    "sha256": "bd0aa3f19aa86bf579b82337d4e3febbfefa98f9b641200bd7f6d200427487aa",
+    "bytes": 2910077
+  }
+}

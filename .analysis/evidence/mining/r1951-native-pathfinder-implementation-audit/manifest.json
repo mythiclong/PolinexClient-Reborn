@@ -1,0 +1,93 @@
+{
+  "experiment_id": "R1951",
+  "slice_id": "PATHFINDER-NATIVE-PURE-IMPLEMENTATION-GOLDEN",
+  "generated_utc": "2026-11-18T03:30:46Z",
+  "evidence_produced_against_commit": "bbea9b6cad5bc8d1e67fbce4b4b9c8c8f4ec0c71",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+  "java_source_count": 1602,
+  "original_jar": {
+    "path": "D:\\Work\\OpenPoli\\.analysis\\cracked.jar",
+    "sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "class_entry": "me/octo/client/utils/player/pathfinder/NativePathFinder.class",
+    "class_sha256": "ed2826a8ea4040575c566912bb4b40bace3a90730df4f9337e8593af1c15663f"
+  },
+  "current_source": {
+    "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f"
+  },
+  "current_class_compiled_from_source": {
+    "path": ".analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/classes/me/octo/client/utils/player/pathfinder/NativePathFinder.class",
+    "sha256": "d041c39b7d47cdd6a3795d22371a0f8b1243c2f8b05f63fd54e67c0c518df0f3",
+    "compiler": "Temurin javac 25.0.4.1",
+    "exit_code": 0
+  },
+  "disassembly": [
+    {
+      "command": "javap -classpath <original JAR> -p -c -s me.octo.client.utils.player.pathfinder.NativePathFinder",
+      "exit_code": 0,
+      "file": "original-native-pathfinder.javap.txt",
+      "sha256": "52c31a585d4e3d287abbea1063352336e6f056f0c4ca7402954690e8e2aa75a0"
+    },
+    {
+      "command": "javap -classpath <isolated javac output> -p -c -s me.octo.client.utils.player.pathfinder.NativePathFinder",
+      "exit_code": 0,
+      "file": "compiled-native-pathfinder.javap.txt",
+      "sha256": "d3b97d362687faff54473df7dac85cdfaa491740f4a0517a51e2cb1cc635d944"
+    }
+  ],
+  "full_method_comparison": {
+    "methods": 25,
+    "same_normalized_instruction_sequence": 18,
+    "different_compiler_control_flow_shape": [
+      "processChunk(IILjava/nio/ByteBuffer;)V",
+      "loadCache([BI)V",
+      "updateChunk(III[I[BI)V",
+      "updateHeights(II[SI)V",
+      "findPath(JJFIZ)[J",
+      "isWalkable(J)Z",
+      "normalizeState(B)B"
+    ],
+    "method_presence": "all 25 name+descriptor pairs present in both; complete original/current javap captures retained; constant-pool indexes and branch offsets normalized only for the instruction-count summary"
+  },
+  "golden_probe": {
+    "source": "NativePathFinderGolden.java",
+    "source_sha256": "f658e540daff2c314461543fb9ad4755f4dd6ca40bdffb4249ee5705a72841bf",
+    "command": "java -cp <harness classes> NativePathFinderGolden <original JAR> <isolated current class directory>",
+    "harness_compile_exit_code": 0,
+    "run_exit_code": 0,
+    "fixtures": 31,
+    "all_original_vs_current_outputs": "MATCH",
+    "semantic_assertions": "PASS",
+    "log": "golden-run.log",
+    "log_sha256": "57ea959067db1815bbc2e4e27b243970c68e98211fcaa629eb28a4bab8b7199b",
+    "coverage": [
+      "coordinate pack/unpack edges (343 inputs, output digest)",
+      "state normalization",
+      "negative/positive floor boundaries",
+      "cardinal and diagonal A*",
+      "same-node route",
+      "node limit",
+      "blocked-route avoidance",
+      "walkability and etherwarp line/range behavior",
+      "cache map side effects",
+      "chunk buffer position and 65,536-cell full chunk digest",
+      "height map side effects",
+      "malformed and null cache inputs",
+      "native flag after null library path"
+    ]
+  },
+  "gradle_compile": {
+    "command": ".\\gradlew.bat --no-daemon compileJava",
+    "java": "Temurin 25.0.4.1",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; compileJava UP-TO-DATE; this invocation confirmed incremental task state, not a forced recompilation",
+    "log": "gradle-compileJava-temurin25.log",
+    "log_sha256": "eb45539b5f3ac8add38e96062c3964b8ab22ff9d4f19017ce23c5f536acf8080"
+  },
+  "probe_state": "Isolated JVM classloaders: original class loaded from original JAR and source-compiled current class loaded separately; no Minecraft client, world, server, JNI library, protected class output, or user input used.",
+  "limitations": [
+    "Pure-Java output and side-effect equality on these fixtures is not a proof over all possible inputs.",
+    "No normal Minecraft player/world call path, valid-world collision result, cache file lifecycle, GUI, or server behavior was exercised.",
+    "No production source file was changed in this slice."
+  ]
+}

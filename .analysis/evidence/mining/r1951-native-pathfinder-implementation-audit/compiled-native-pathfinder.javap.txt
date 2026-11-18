@@ -1,0 +1,1114 @@
+Compiled from "NativePathFinder.java"
+public class me.octo.client.utils.player.pathfinder.NativePathFinder {
+  public static boolean IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
+    descriptor: Z
+
+  private static final byte STATE_AIR_OR_UNKNOWN;
+    descriptor: B
+
+  private static final byte STATE_WALKABLE;
+    descriptor: B
+
+  private static final byte STATE_BLOCKED;
+    descriptor: B
+
+  private static final int DEFAULT_MAX_NODES;
+    descriptor: I
+
+  private static final java.util.concurrent.ConcurrentHashMap<java.lang.Long, java.lang.Byte> BYTE_STATES;
+    descriptor: Ljava/util/concurrent/ConcurrentHashMap;
+
+  private static final java.util.concurrent.ConcurrentHashMap<java.lang.Long, java.lang.Short> HEIGHTS;
+    descriptor: Ljava/util/concurrent/ConcurrentHashMap;
+
+  private static final int[][] CARDINAL_DIRS;
+    descriptor: [[I
+
+  private static final int[][] DIAGONAL_DIRS;
+    descriptor: [[I
+
+  public me.octo.client.utils.player.pathfinder.NativePathFinder();
+    descriptor: ()V
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public static void a(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    Code:
+         0: aload_0
+         1: ifnull        19
+         4: aload_0
+         5: invokevirtual #7                  // Method java/lang/String.isBlank:()Z
+         8: ifne          19
+        11: aload_0
+        12: invokestatic  #13                 // Method java/lang/System.load:(Ljava/lang/String;)V
+        15: goto          19
+        18: astore_1
+        19: iconst_1
+        20: putstatic     #21                 // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Z
+        23: return
+      Exception table:
+         from    to  target type
+            11    15    18   Class java/lang/Throwable
+
+  public static void processChunk(int, int, java.nio.ByteBuffer);
+    descriptor: (IILjava/nio/ByteBuffer;)V
+    Code:
+         0: aload_2
+         1: ifnull        130
+         4: aload_2
+         5: invokevirtual #27                 // Method java/nio/ByteBuffer.duplicate:()Ljava/nio/ByteBuffer;
+         8: astore_3
+         9: aload_3
+        10: invokevirtual #33                 // Method java/nio/ByteBuffer.remaining:()I
+        13: istore        4
+        15: iload         4
+        17: ifle          130
+        20: sipush        256
+        23: istore        5
+        25: iconst_1
+        26: iload         4
+        28: iload         5
+        30: idiv
+        31: invokestatic  #37                 // Method java/lang/Math.max:(II)I
+        34: istore        6
+        36: iload         4
+        38: iload         5
+        40: iload         6
+        42: imul
+        43: invokestatic  #43                 // Method java/lang/Math.min:(II)I
+        46: istore        7
+        48: iconst_0
+        49: istore        8
+        51: iload         8
+        53: iload         7
+        55: if_icmpge     130
+        58: aload_3
+        59: invokevirtual #46                 // Method java/nio/ByteBuffer.get:()B
+        62: invokestatic  #50                 // Method normalizeState:(B)B
+        65: istore        9
+        67: iload         8
+        69: iload         5
+        71: irem
+        72: istore        10
+        74: iload         8
+        76: iload         5
+        78: idiv
+        79: istore        11
+        81: iload         10
+        83: bipush        15
+        85: iand
+        86: istore        12
+        88: iload         10
+        90: iconst_4
+        91: iushr
+        92: bipush        15
+        94: iand
+        95: istore        13
+        97: iload_0
+        98: iconst_4
+        99: ishl
+       100: iload         12
+       102: iadd
+       103: istore        14
+       105: iload_1
+       106: iconst_4
+       107: ishl
+       108: iload         13
+       110: iadd
+       111: istore        15
+       113: iload         14
+       115: iload         11
+       117: iload         15
+       119: iload         9
+       121: invokestatic  #54                 // Method setState:(IIIB)V
+       124: iinc          8, 1
+       127: goto          51
+       130: return
+
+  public static void loadCache(byte[], int);
+    descriptor: ([BI)V
+    Code:
+         0: aload_0
+         1: ifnull        78
+         4: aload_0
+         5: arraylength
+         6: ifeq          78
+         9: aload_0
+        10: arraylength
+        11: bipush        9
+        13: irem
+        14: ifeq          31
+        17: aload_0
+        18: invokestatic  #58                 // Method java/nio/ByteBuffer.wrap:([B)Ljava/nio/ByteBuffer;
+        21: astore_2
+        22: iconst_0
+        23: iconst_0
+        24: aload_2
+        25: invokestatic  #62                 // Method processChunk:(IILjava/nio/ByteBuffer;)V
+        28: goto          78
+        31: aload_0
+        32: invokestatic  #58                 // Method java/nio/ByteBuffer.wrap:([B)Ljava/nio/ByteBuffer;
+        35: astore_2
+        36: aload_2
+        37: invokevirtual #33                 // Method java/nio/ByteBuffer.remaining:()I
+        40: bipush        9
+        42: if_icmplt     78
+        45: aload_2
+        46: invokevirtual #66                 // Method java/nio/ByteBuffer.getLong:()J
+        49: lstore_3
+        50: aload_2
+        51: invokevirtual #46                 // Method java/nio/ByteBuffer.get:()B
+        54: invokestatic  #50                 // Method normalizeState:(B)B
+        57: istore        5
+        59: getstatic     #70                 // Field BYTE_STATES:Ljava/util/concurrent/ConcurrentHashMap;
+        62: lload_3
+        63: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        66: iload         5
+        68: invokestatic  #80                 // Method java/lang/Byte.valueOf:(B)Ljava/lang/Byte;
+        71: invokevirtual #85                 // Method java/util/concurrent/ConcurrentHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        74: pop
+        75: goto          36
+        78: return
+
+  public static void updateChunk(int, int, int, int[], byte[], int);
+    descriptor: (III[I[BI)V
+    Code:
+         0: aload         4
+         2: ifnull        130
+         5: iload         5
+         7: ifle          130
+        10: iload         5
+        12: aload         4
+        14: arraylength
+        15: invokestatic  #43                 // Method java/lang/Math.min:(II)I
+        18: istore        6
+        20: aload_3
+        21: ifnull        33
+        24: iload         6
+        26: aload_3
+        27: arraylength
+        28: invokestatic  #43                 // Method java/lang/Math.min:(II)I
+        31: istore        6
+        33: iconst_0
+        34: istore        7
+        36: iload         7
+        38: iload         6
+        40: if_icmpge     130
+        43: aload_3
+        44: ifnull        54
+        47: aload_3
+        48: iload         7
+        50: iaload
+        51: goto          56
+        54: iload         7
+        56: istore        8
+        58: iload         8
+        60: bipush        15
+        62: iand
+        63: istore        9
+        65: iload         8
+        67: iconst_4
+        68: iushr
+        69: bipush        15
+        71: iand
+        72: istore        10
+        74: iload         8
+        76: bipush        8
+        78: iushr
+        79: sipush        4095
+        82: iand
+        83: istore        11
+        85: iload_0
+        86: iconst_4
+        87: ishl
+        88: iload         9
+        90: iadd
+        91: istore        12
+        93: iload_1
+        94: iconst_4
+        95: ishl
+        96: iload         10
+        98: iadd
+        99: istore        13
+       101: iload_2
+       102: iload         11
+       104: iadd
+       105: istore        14
+       107: iload         12
+       109: iload         14
+       111: iload         13
+       113: aload         4
+       115: iload         7
+       117: baload
+       118: invokestatic  #50                 // Method normalizeState:(B)B
+       121: invokestatic  #54                 // Method setState:(IIIB)V
+       124: iinc          7, 1
+       127: goto          36
+       130: return
+
+  public static void updateHeights(int, int, short[], int);
+    descriptor: (II[SI)V
+    Code:
+         0: aload_2
+         1: ifnull        88
+         4: iload_3
+         5: ifle          88
+         8: iload_3
+         9: aload_2
+        10: arraylength
+        11: invokestatic  #43                 // Method java/lang/Math.min:(II)I
+        14: istore        4
+        16: iconst_0
+        17: istore        5
+        19: iload         5
+        21: iload         4
+        23: if_icmpge     88
+        26: iload         5
+        28: bipush        15
+        30: iand
+        31: istore        6
+        33: iload         5
+        35: iconst_4
+        36: iushr
+        37: bipush        15
+        39: iand
+        40: istore        7
+        42: iload_0
+        43: iconst_4
+        44: ishl
+        45: iload         6
+        47: iadd
+        48: istore        8
+        50: iload_1
+        51: iconst_4
+        52: ishl
+        53: iload         7
+        55: iadd
+        56: istore        9
+        58: getstatic     #91                 // Field HEIGHTS:Ljava/util/concurrent/ConcurrentHashMap;
+        61: iload         8
+        63: iload         9
+        65: invokestatic  #94                 // Method packColumn:(II)J
+        68: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        71: aload_2
+        72: iload         5
+        74: saload
+        75: invokestatic  #98                 // Method java/lang/Short.valueOf:(S)Ljava/lang/Short;
+        78: invokevirtual #85                 // Method java/util/concurrent/ConcurrentHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        81: pop
+        82: iinc          5, 1
+        85: goto          19
+        88: return
+
+  public static void clearCache();
+    descriptor: ()V
+    Code:
+         0: getstatic     #70                 // Field BYTE_STATES:Ljava/util/concurrent/ConcurrentHashMap;
+         3: invokevirtual #103                // Method java/util/concurrent/ConcurrentHashMap.clear:()V
+         6: getstatic     #91                 // Field HEIGHTS:Ljava/util/concurrent/ConcurrentHashMap;
+         9: invokevirtual #103                // Method java/util/concurrent/ConcurrentHashMap.clear:()V
+        12: return
+
+  public static long[] findPath(long, long, float, int, boolean);
+    descriptor: (JJFIZ)[J
+    Code:
+         0: lload_0
+         1: lload_2
+         2: lcmp
+         3: ifne          14
+         6: iconst_1
+         7: newarray       long
+         9: dup
+        10: iconst_0
+        11: lload_0
+        12: lastore
+        13: areturn
+        14: iload         5
+        16: ifle          24
+        19: iload         5
+        21: goto          27
+        24: sipush        4096
+        27: istore        7
+        29: new           #106                // class java/util/PriorityQueue
+        32: dup
+        33: invokedynamic #108,  0            // InvokeDynamic #0:applyAsDouble:()Ljava/util/function/ToDoubleFunction;
+        38: invokestatic  #112                // InterfaceMethod java/util/Comparator.comparingDouble:(Ljava/util/function/ToDoubleFunction;)Ljava/util/Comparator;
+        41: invokespecial #118                // Method java/util/PriorityQueue."<init>":(Ljava/util/Comparator;)V
+        44: astore        8
+        46: new           #121                // class java/util/HashMap
+        49: dup
+        50: invokespecial #123                // Method java/util/HashMap."<init>":()V
+        53: astore        9
+        55: new           #124                // class java/util/HashSet
+        58: dup
+        59: invokespecial #126                // Method java/util/HashSet."<init>":()V
+        62: astore        10
+        64: new           #127                // class me/octo/client/utils/player/pathfinder/NativePathFinder$Node
+        67: dup
+        68: lload_0
+        69: aconst_null
+        70: dconst_0
+        71: lload_0
+        72: lload_2
+        73: invokestatic  #129                // Method heuristic:(JJ)D
+        76: invokespecial #133                // Method me/octo/client/utils/player/pathfinder/NativePathFinder$Node."<init>":(JLme/octo/client/utils/player/pathfinder/NativePathFinder$Node;DD)V
+        79: astore        11
+        81: aload         8
+        83: aload         11
+        85: invokevirtual #136                // Method java/util/PriorityQueue.add:(Ljava/lang/Object;)Z
+        88: pop
+        89: aload         9
+        91: lload_0
+        92: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        95: aload         11
+        97: invokeinterface #140,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       102: pop
+       103: iload         6
+       105: ifeq          114
+       108: getstatic     #143                // Field DIAGONAL_DIRS:[[I
+       111: goto          117
+       114: getstatic     #147                // Field CARDINAL_DIRS:[[I
+       117: astore        12
+       119: iconst_0
+       120: istore        13
+       122: aload         8
+       124: invokevirtual #150                // Method java/util/PriorityQueue.isEmpty:()Z
+       127: ifne          419
+       130: iload         13
+       132: iinc          13, 1
+       135: iload         7
+       137: if_icmpge     419
+       140: aload         8
+       142: invokevirtual #153                // Method java/util/PriorityQueue.poll:()Ljava/lang/Object;
+       145: checkcast     #127                // class me/octo/client/utils/player/pathfinder/NativePathFinder$Node
+       148: astore        14
+       150: aload         10
+       152: aload         14
+       154: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+       157: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       160: invokeinterface #161,  2          // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       165: ifeq          416
+       168: aload         14
+       170: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+       173: lload_2
+       174: lcmp
+       175: ifne          184
+       178: aload         14
+       180: invokestatic  #164                // Method buildPath:(Lme/octo/client/utils/player/pathfinder/NativePathFinder$Node;)[J
+       183: areturn
+       184: aload         14
+       186: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+       189: invokestatic  #168                // Method unpackX:(J)I
+       192: istore        15
+       194: aload         14
+       196: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+       199: invokestatic  #172                // Method unpackY:(J)I
+       202: istore        16
+       204: aload         14
+       206: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+       209: invokestatic  #175                // Method unpackZ:(J)I
+       212: istore        17
+       214: aload         12
+       216: astore        18
+       218: aload         18
+       220: arraylength
+       221: istore        19
+       223: iconst_0
+       224: istore        20
+       226: iload         20
+       228: iload         19
+       230: if_icmpge     416
+       233: aload         18
+       235: iload         20
+       237: aaload
+       238: astore        21
+       240: iload         15
+       242: aload         21
+       244: iconst_0
+       245: iaload
+       246: iadd
+       247: istore        22
+       249: iload         16
+       251: aload         21
+       253: iconst_1
+       254: iaload
+       255: iadd
+       256: istore        23
+       258: iload         17
+       260: aload         21
+       262: iconst_2
+       263: iaload
+       264: iadd
+       265: istore        24
+       267: iload         22
+       269: iload         23
+       271: iload         24
+       273: invokestatic  #178                // Method pack:(III)J
+       276: lstore        25
+       278: aload         10
+       280: lload         25
+       282: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       285: invokeinterface #182,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+       290: ifne          410
+       293: lload         25
+       295: invokestatic  #185                // Method isWalkable:(J)Z
+       298: ifeq          410
+       301: aload         14
+       303: getfield      #189                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.g:D
+       306: aload         21
+       308: iconst_0
+       309: iaload
+       310: ifeq          326
+       313: aload         21
+       315: iconst_2
+       316: iaload
+       317: ifeq          326
+       320: ldc2_w        #193                // double 1.41421356237d
+       323: goto          327
+       326: dconst_1
+       327: dadd
+       328: dstore        27
+       330: aload         9
+       332: lload         25
+       334: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       337: invokeinterface #195,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       342: checkcast     #127                // class me/octo/client/utils/player/pathfinder/NativePathFinder$Node
+       345: astore        29
+       347: aload         29
+       349: ifnull        363
+       352: dload         27
+       354: aload         29
+       356: getfield      #189                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.g:D
+       359: dcmpg
+       360: ifge          410
+       363: new           #127                // class me/octo/client/utils/player/pathfinder/NativePathFinder$Node
+       366: dup
+       367: lload         25
+       369: aload         14
+       371: dload         27
+       373: dload         27
+       375: lload         25
+       377: lload_2
+       378: invokestatic  #129                // Method heuristic:(JJ)D
+       381: dadd
+       382: invokespecial #133                // Method me/octo/client/utils/player/pathfinder/NativePathFinder$Node."<init>":(JLme/octo/client/utils/player/pathfinder/NativePathFinder$Node;DD)V
+       385: astore        30
+       387: aload         9
+       389: lload         25
+       391: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       394: aload         30
+       396: invokeinterface #140,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       401: pop
+       402: aload         8
+       404: aload         30
+       406: invokevirtual #136                // Method java/util/PriorityQueue.add:(Ljava/lang/Object;)Z
+       409: pop
+       410: iinc          20, 1
+       413: goto          226
+       416: goto          122
+       419: iconst_0
+       420: newarray       long
+       422: areturn
+
+  public static boolean canReach(long, long, float, int, boolean);
+    descriptor: (JJFIZ)Z
+    Code:
+         0: lload_0
+         1: lload_2
+         2: fload         4
+         4: iload         5
+         6: iload         6
+         8: invokestatic  #198                // Method findPath:(JJFIZ)[J
+        11: astore        7
+        13: aload         7
+        15: arraylength
+        16: ifle          36
+        19: aload         7
+        21: aload         7
+        23: arraylength
+        24: iconst_1
+        25: isub
+        26: laload
+        27: lload_2
+        28: lcmp
+        29: ifne          36
+        32: iconst_1
+        33: goto          37
+        36: iconst_0
+        37: ireturn
+
+  public static byte getByteState(int, int, int);
+    descriptor: (III)B
+    Code:
+         0: iload_0
+         1: iload_1
+         2: iload_2
+         3: invokestatic  #178                // Method pack:(III)J
+         6: invokestatic  #202                // Method getByteState:(J)B
+         9: ireturn
+
+  public static byte getByteState(long);
+    descriptor: (J)B
+    Code:
+         0: getstatic     #70                 // Field BYTE_STATES:Ljava/util/concurrent/ConcurrentHashMap;
+         3: lload_0
+         4: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+         7: invokevirtual #206                // Method java/util/concurrent/ConcurrentHashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        10: checkcast     #81                 // class java/lang/Byte
+        13: astore_2
+        14: aload_2
+        15: ifnonnull     22
+        18: iconst_0
+        19: goto          26
+        22: aload_2
+        23: invokevirtual #207                // Method java/lang/Byte.byteValue:()B
+        26: ireturn
+
+  public static boolean isWalkable(long);
+    descriptor: (J)Z
+    Code:
+         0: lload_0
+         1: invokestatic  #202                // Method getByteState:(J)B
+         4: istore_2
+         5: iload_2
+         6: iconst_2
+         7: if_icmpge     14
+        10: iconst_1
+        11: goto          15
+        14: iconst_0
+        15: ireturn
+
+  public static boolean canEtherwarpTo(double, double, double, long, double);
+    descriptor: (DDDJD)Z
+    Code:
+         0: lload         6
+         2: invokestatic  #168                // Method unpackX:(J)I
+         5: i2d
+         6: ldc2_w        #210                // double 0.5d
+         9: dadd
+        10: dstore        10
+        12: lload         6
+        14: invokestatic  #172                // Method unpackY:(J)I
+        17: i2d
+        18: ldc2_w        #210                // double 0.5d
+        21: dadd
+        22: dstore        12
+        24: lload         6
+        26: invokestatic  #175                // Method unpackZ:(J)I
+        29: i2d
+        30: ldc2_w        #210                // double 0.5d
+        33: dadd
+        34: dstore        14
+        36: dload         10
+        38: dload_0
+        39: dsub
+        40: dstore        16
+        42: dload         12
+        44: dload_2
+        45: dsub
+        46: dstore        18
+        48: dload         14
+        50: dload         4
+        52: dsub
+        53: dstore        20
+        55: dload         16
+        57: dload         16
+        59: dmul
+        60: dload         18
+        62: dload         18
+        64: dmul
+        65: dadd
+        66: dload         20
+        68: dload         20
+        70: dmul
+        71: dadd
+        72: invokestatic  #212                // Method java/lang/Math.sqrt:(D)D
+        75: dstore        22
+        77: dload         8
+        79: dconst_0
+        80: dcmpl
+        81: ifle          94
+        84: dload         22
+        86: dload         8
+        88: dcmpl
+        89: ifle          94
+        92: iconst_0
+        93: ireturn
+        94: iconst_1
+        95: dload         22
+        97: ldc2_w        #216                // double 4.0d
+       100: dmul
+       101: invokestatic  #218                // Method java/lang/Math.ceil:(D)D
+       104: d2i
+       105: invokestatic  #37                 // Method java/lang/Math.max:(II)I
+       108: istore        24
+       110: iconst_1
+       111: istore        25
+       113: iload         25
+       115: iload         24
+       117: if_icmpgt     187
+       120: iload         25
+       122: i2d
+       123: iload         24
+       125: i2d
+       126: ddiv
+       127: dstore        26
+       129: dload_0
+       130: dload         16
+       132: dload         26
+       134: dmul
+       135: dadd
+       136: invokestatic  #221                // Method floor:(D)I
+       139: istore        28
+       141: dload_2
+       142: dload         18
+       144: dload         26
+       146: dmul
+       147: dadd
+       148: invokestatic  #221                // Method floor:(D)I
+       151: istore        29
+       153: dload         4
+       155: dload         20
+       157: dload         26
+       159: dmul
+       160: dadd
+       161: invokestatic  #221                // Method floor:(D)I
+       164: istore        30
+       166: iload         28
+       168: iload         29
+       170: iload         30
+       172: invokestatic  #225                // Method getByteState:(III)B
+       175: iconst_2
+       176: if_icmplt     181
+       179: iconst_0
+       180: ireturn
+       181: iinc          25, 1
+       184: goto          113
+       187: lload         6
+       189: invokestatic  #185                // Method isWalkable:(J)Z
+       192: ireturn
+
+  private static byte normalizeState(byte);
+    descriptor: (B)B
+    Code:
+         0: iload_0
+         1: sipush        255
+         4: iand
+         5: istore_1
+         6: iload_1
+         7: ifne          12
+        10: iconst_0
+        11: ireturn
+        12: iload_1
+        13: iconst_1
+        14: if_icmpne     21
+        17: iconst_1
+        18: goto          22
+        21: iconst_2
+        22: i2b
+        23: ireturn
+
+  private static void setState(int, int, int, byte);
+    descriptor: (IIIB)V
+    Code:
+         0: getstatic     #70                 // Field BYTE_STATES:Ljava/util/concurrent/ConcurrentHashMap;
+         3: iload_0
+         4: iload_1
+         5: iload_2
+         6: invokestatic  #178                // Method pack:(III)J
+         9: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        12: iload_3
+        13: invokestatic  #80                 // Method java/lang/Byte.valueOf:(B)Ljava/lang/Byte;
+        16: invokevirtual #85                 // Method java/util/concurrent/ConcurrentHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        19: pop
+        20: return
+
+  private static long[] buildPath(me.octo.client.utils.player.pathfinder.NativePathFinder$Node);
+    descriptor: (Lme/octo/client/utils/player/pathfinder/NativePathFinder$Node;)[J
+    Code:
+         0: new           #228                // class java/util/ArrayList
+         3: dup
+         4: invokespecial #230                // Method java/util/ArrayList."<init>":()V
+         7: astore_1
+         8: aload_0
+         9: astore_2
+        10: aload_2
+        11: ifnull        34
+        14: aload_1
+        15: aload_2
+        16: getfield      #157                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.pos:J
+        19: invokestatic  #74                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        22: invokevirtual #231                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+        25: pop
+        26: aload_2
+        27: getfield      #232                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.parent:Lme/octo/client/utils/player/pathfinder/NativePathFinder$Node;
+        30: astore_2
+        31: goto          10
+        34: aload_1
+        35: invokestatic  #236                // Method java/util/Collections.reverse:(Ljava/util/List;)V
+        38: aload_1
+        39: invokevirtual #242                // Method java/util/ArrayList.size:()I
+        42: newarray       long
+        44: astore_2
+        45: iconst_0
+        46: istore_3
+        47: iload_3
+        48: aload_2
+        49: arraylength
+        50: if_icmpge     73
+        53: aload_2
+        54: iload_3
+        55: aload_1
+        56: iload_3
+        57: invokevirtual #245                // Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+        60: checkcast     #75                 // class java/lang/Long
+        63: invokevirtual #248                // Method java/lang/Long.longValue:()J
+        66: lastore
+        67: iinc          3, 1
+        70: goto          47
+        73: aload_2
+        74: areturn
+
+  private static double heuristic(long, long);
+    descriptor: (JJ)D
+    Code:
+         0: lload_0
+         1: invokestatic  #168                // Method unpackX:(J)I
+         4: lload_2
+         5: invokestatic  #168                // Method unpackX:(J)I
+         8: isub
+         9: invokestatic  #251                // Method java/lang/Math.abs:(I)I
+        12: lload_0
+        13: invokestatic  #172                // Method unpackY:(J)I
+        16: lload_2
+        17: invokestatic  #172                // Method unpackY:(J)I
+        20: isub
+        21: invokestatic  #251                // Method java/lang/Math.abs:(I)I
+        24: iadd
+        25: lload_0
+        26: invokestatic  #175                // Method unpackZ:(J)I
+        29: lload_2
+        30: invokestatic  #175                // Method unpackZ:(J)I
+        33: isub
+        34: invokestatic  #251                // Method java/lang/Math.abs:(I)I
+        37: iadd
+        38: i2d
+        39: dreturn
+
+  private static int floor(double);
+    descriptor: (D)I
+    Code:
+         0: dload_0
+         1: d2i
+         2: istore_2
+         3: dload_0
+         4: iload_2
+         5: i2d
+         6: dcmpg
+         7: ifge          16
+        10: iload_2
+        11: iconst_1
+        12: isub
+        13: goto          17
+        16: iload_2
+        17: ireturn
+
+  private static long packColumn(int, int);
+    descriptor: (II)J
+    Code:
+         0: iload_0
+         1: i2l
+         2: bipush        32
+         4: lshl
+         5: iload_1
+         6: i2l
+         7: ldc2_w        #255                // long 4294967295l
+        10: land
+        11: lxor
+        12: lreturn
+
+  private static long pack(int, int, int);
+    descriptor: (III)J
+    Code:
+         0: iload_0
+         1: i2l
+         2: ldc2_w        #257                // long 67108863l
+         5: land
+         6: bipush        38
+         8: lshl
+         9: iload_2
+        10: i2l
+        11: ldc2_w        #257                // long 67108863l
+        14: land
+        15: bipush        12
+        17: lshl
+        18: lor
+        19: iload_1
+        20: i2l
+        21: ldc2_w        #259                // long 4095l
+        24: land
+        25: lor
+        26: lreturn
+
+  private static int unpackX(long);
+    descriptor: (J)I
+    Code:
+         0: lload_0
+         1: bipush        38
+         3: lshr
+         4: l2i
+         5: bipush        26
+         7: invokestatic  #261                // Method signExtend:(II)I
+        10: ireturn
+
+  private static int unpackY(long);
+    descriptor: (J)I
+    Code:
+         0: lload_0
+         1: ldc2_w        #259                // long 4095l
+         4: land
+         5: l2i
+         6: bipush        12
+         8: invokestatic  #261                // Method signExtend:(II)I
+        11: ireturn
+
+  private static int unpackZ(long);
+    descriptor: (J)I
+    Code:
+         0: lload_0
+         1: bipush        12
+         3: lshr
+         4: ldc2_w        #257                // long 67108863l
+         7: land
+         8: l2i
+         9: bipush        26
+        11: invokestatic  #261                // Method signExtend:(II)I
+        14: ireturn
+
+  private static int signExtend(int, int);
+    descriptor: (II)I
+    Code:
+         0: bipush        32
+         2: iload_1
+         3: isub
+         4: istore_2
+         5: iload_0
+         6: iload_2
+         7: ishl
+         8: iload_2
+         9: ishr
+        10: ireturn
+
+  private static double lambda$findPath$0(me.octo.client.utils.player.pathfinder.NativePathFinder$Node);
+    descriptor: (Lme/octo/client/utils/player/pathfinder/NativePathFinder$Node;)D
+    Code:
+         0: aload_0
+         1: getfield      #264                // Field me/octo/client/utils/player/pathfinder/NativePathFinder$Node.f:D
+         4: dreturn
+
+  static {};
+    descriptor: ()V
+    Code:
+         0: iconst_0
+         1: putstatic     #21                 // Field IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl:Z
+         4: new           #86                 // class java/util/concurrent/ConcurrentHashMap
+         7: dup
+         8: invokespecial #267                // Method java/util/concurrent/ConcurrentHashMap."<init>":()V
+        11: putstatic     #70                 // Field BYTE_STATES:Ljava/util/concurrent/ConcurrentHashMap;
+        14: new           #86                 // class java/util/concurrent/ConcurrentHashMap
+        17: dup
+        18: invokespecial #267                // Method java/util/concurrent/ConcurrentHashMap."<init>":()V
+        21: putstatic     #91                 // Field HEIGHTS:Ljava/util/concurrent/ConcurrentHashMap;
+        24: bipush        6
+        26: anewarray     #268                // class "[I"
+        29: dup
+        30: iconst_0
+        31: iconst_3
+        32: newarray       int
+        34: dup
+        35: iconst_0
+        36: iconst_1
+        37: iastore
+        38: dup
+        39: iconst_1
+        40: iconst_0
+        41: iastore
+        42: dup
+        43: iconst_2
+        44: iconst_0
+        45: iastore
+        46: aastore
+        47: dup
+        48: iconst_1
+        49: iconst_3
+        50: newarray       int
+        52: dup
+        53: iconst_0
+        54: iconst_m1
+        55: iastore
+        56: dup
+        57: iconst_1
+        58: iconst_0
+        59: iastore
+        60: dup
+        61: iconst_2
+        62: iconst_0
+        63: iastore
+        64: aastore
+        65: dup
+        66: iconst_2
+        67: iconst_3
+        68: newarray       int
+        70: dup
+        71: iconst_0
+        72: iconst_0
+        73: iastore
+        74: dup
+        75: iconst_1
+        76: iconst_0
+        77: iastore
+        78: dup
+        79: iconst_2
+        80: iconst_1
+        81: iastore
+        82: aastore
+        83: dup
+        84: iconst_3
+        85: iconst_3
+        86: newarray       int
+        88: dup
+        89: iconst_0
+        90: iconst_0
+        91: iastore
+        92: dup
+        93: iconst_1
+        94: iconst_0
+        95: iastore
+        96: dup
+        97: iconst_2
+        98: iconst_m1
+        99: iastore
+       100: aastore
+       101: dup
+       102: iconst_4
+       103: iconst_3
+       104: newarray       int
+       106: dup
+       107: iconst_0
+       108: iconst_0
+       109: iastore
+       110: dup
+       111: iconst_1
+       112: iconst_1
+       113: iastore
+       114: dup
+       115: iconst_2
+       116: iconst_0
+       117: iastore
+       118: aastore
+       119: dup
+       120: iconst_5
+       121: iconst_3
+       122: newarray       int
+       124: dup
+       125: iconst_0
+       126: iconst_0
+       127: iastore
+       128: dup
+       129: iconst_1
+       130: iconst_m1
+       131: iastore
+       132: dup
+       133: iconst_2
+       134: iconst_0
+       135: iastore
+       136: aastore
+       137: putstatic     #147                // Field CARDINAL_DIRS:[[I
+       140: new           #228                // class java/util/ArrayList
+       143: dup
+       144: invokespecial #230                // Method java/util/ArrayList."<init>":()V
+       147: astore_0
+       148: aload_0
+       149: getstatic     #147                // Field CARDINAL_DIRS:[[I
+       152: invokestatic  #270                // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+       155: invokevirtual #276                // Method java/util/ArrayList.addAll:(Ljava/util/Collection;)Z
+       158: pop
+       159: aload_0
+       160: iconst_3
+       161: newarray       int
+       163: dup
+       164: iconst_0
+       165: iconst_1
+       166: iastore
+       167: dup
+       168: iconst_1
+       169: iconst_0
+       170: iastore
+       171: dup
+       172: iconst_2
+       173: iconst_1
+       174: iastore
+       175: invokevirtual #231                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       178: pop
+       179: aload_0
+       180: iconst_3
+       181: newarray       int
+       183: dup
+       184: iconst_0
+       185: iconst_1
+       186: iastore
+       187: dup
+       188: iconst_1
+       189: iconst_0
+       190: iastore
+       191: dup
+       192: iconst_2
+       193: iconst_m1
+       194: iastore
+       195: invokevirtual #231                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       198: pop
+       199: aload_0
+       200: iconst_3
+       201: newarray       int
+       203: dup
+       204: iconst_0
+       205: iconst_m1
+       206: iastore
+       207: dup
+       208: iconst_1
+       209: iconst_0
+       210: iastore
+       211: dup
+       212: iconst_2
+       213: iconst_1
+       214: iastore
+       215: invokevirtual #231                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       218: pop
+       219: aload_0
+       220: iconst_3
+       221: newarray       int
+       223: dup
+       224: iconst_0
+       225: iconst_m1
+       226: iastore
+       227: dup
+       228: iconst_1
+       229: iconst_0
+       230: iastore
+       231: dup
+       232: iconst_2
+       233: iconst_m1
+       234: iastore
+       235: invokevirtual #231                // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+       238: pop
+       239: aload_0
+       240: iconst_0
+       241: anewarray     #268                // class "[I"
+       244: invokevirtual #280                // Method java/util/ArrayList.toArray:([Ljava/lang/Object;)[Ljava/lang/Object;
+       247: checkcast     #284                // class "[[I"
+       250: putstatic     #143                // Field DIAGONAL_DIRS:[[I
+       253: return
+}
