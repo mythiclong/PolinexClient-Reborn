@@ -1,0 +1,13 @@
+R1986 full-tree build
+
+Command: `.\gradlew.bat build --rerun-tasks --no-daemon`
+Working directory: `polinex-src`
+JDK: Eclipse Temurin 25.0.4.1+1-LTS
+Started (UTC): 2026-11-19T23:20:22.1385310Z
+Finished (UTC): 2026-11-19T23:21:10.6877452Z
+Exit code: 0
+
+Result: `BUILD SUCCESSFUL` (48 seconds; 4 actionable tasks executed).
+Compilation emitted 18 existing `sun.misc.Unsafe` warnings. Test tasks were `NO-SOURCE`; no runtime test was executed.
+
+This build validates compilation/regression only. It does not establish Pathfinder runtime equivalence, a valid-world result, normal-user-path behavior, or compatible-server behavior.

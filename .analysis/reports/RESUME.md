@@ -1,21 +1,21 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 22:39 UTC。R1985 Pathfinder 静态恢复及 Temurin JDK 25 全树构建已通过；源码、证据和双语 README 已发布至私有 `openpolinex` 与公开 `PolinexClient-Reborn`，并复核远端 refs 与列出的共享文件 blobs。两个仓库保留各自历史 tree，不以共享文件一致冒充整棵 tree 相同。
+> 更新：2026-11-19 23:29 UTC。R1986 Pathfinder 有界步进调用契约静态恢复及 Temurin JDK 25 全树构建已通过；R1986 双仓发布与 blob 核验正在收尾。R1985 已同步记录见 [R1985 双仓记录](SYNC-20261119-PATHFINDER-R1985.json)。两个仓库保留各自历史 tree，不以共享文件一致冒充整棵 tree 相同。
 
 ## 当前基线
 
-- 当前源码工作分支：`codex/bootstrap-eclientinit-2026-11-15`，R1985 内容提交 `c044b8abeb808d222832675920497fa5d1e1ac9b`；该提交已发布为私有 `openpolinex/codex/handoff-progress-2026-11-15` 的远端 ref。
-- 公开 `PolinexClient-Reborn/main` 的 R1985 内容提交为 `9dba15c58f200b004b58b723607ba364e959f24d`。2026-11-19 22:39 UTC 复查时，两端远端 refs 仍分别指向上述提交。
-- 当前源码 SHA-256：`986be2d5536af63bd8152c3d85d25c98e33269ef54b87612b21fd41e08f06c77`；Git blob：`86b1697b16ed8176e3471011414029cefc4d814a`。
+- 当前工作分支：`codex/bootstrap-eclientinit-2026-11-15`，R1986 修改基于文档提交 `9797f6c4b9cb16a09af1b9873e6028dc38ae361b`；远端在本切片开始时分别为私有 `openpolinex/codex/handoff-progress-2026-11-15`=`9797f6c4b9cb16a09af1b9873e6028dc38ae361b`、公开 `PolinexClient-Reborn/main`=`a9525960807b7602ac9b525371cf5ec5dc839462`。
+- R1986 源码工作树 SHA-256：`15261162f52764653bb7a6049bd64c2ea58196c6e99ed5264aad67ea0ac283a6`；规范 Git blob：`325f035243955b3338f1a839c93b03e540b2e1cf`。双仓 R1986 发布完成后再补录内容提交和远端 blob 核验。
 
-## 当前唯一切片：R1985 Pathfinder 方向轴与步进 helper
+## 当前唯一切片：R1986 Pathfinder 有界步进默认桥调用
 
-恢复 `a([Z)D`、`b([Z)D`、`a(ID)Z`、`a(DDID)Integer` 的 gate-null/非空分支；步进 helper 还修复 `newY - oldY > 0.05` 被错误写成绝对差值，以及 gate-null 时仍可能返回索引的问题。完整核对 `c(List)` 候选方向来源和默认参数桥的 mask/参数传递；原版轴方法在 gate-null 分支只使用首轴键，helper 仍按原版顺序调用 `k()` 再检查 gate。
+按完整 descriptor 恢复 `a(DDZI)Integer` 中 `param5 && index == 1` 的原版判断、默认参数桥调用、singleton 读取顺序以及显式 `true`、mask 32 和 `0.0` 默认值；修复原源码把判断写成 `index != 1` 且改走五参数直接重载的问题。完整对照原版目标方法与 bridge；直接 caller 为 `n()Z` 和 `o()Z`，后者确实含 `true` 的 alternate-step 调用点。
 
-Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0，18 条警告、测试 `NO-SOURCE`。静态复核和构建摘要见 [R1985 manifest](../evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)、[static review](../evidence/mining/r1985-pathfinder-axis-and-step-gates/static-review.txt)、[build summary](../evidence/mining/r1985-pathfinder-axis-and-step-gates/build-summary.txt)。未做原版/编译产物运行差分、客户端、有效玩家/世界、正常寻路或兼容服务器验收；不宣称运行时等价。
+Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0，18 条警告、测试 `NO-SOURCE`。静态复核和构建摘要见 [R1986 manifest](../evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)、[static review](../evidence/mining/r1986-pathfinder-step-default-bridge/static-review.txt)、[build summary](../evidence/mining/r1986-pathfinder-step-default-bridge/build-summary.txt)。未做直接运行差分、客户端、有效玩家/世界、正常寻路或兼容服务器验收；不宣称运行时等价。
 
 ## 最近有效证据
 
+- R1986 Pathfinder 有界步进 helper 原版默认桥参数静态复核及全树构建：[manifest](../evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)。双仓发布尚在收尾。
 - R1985 源码、证据和双语 README 的双仓发布及共享文件 blob 核验：[同步记录](SYNC-20261119-PATHFINDER-R1985.json)。两端列出的源码、README、RESUME 和证据 blobs 一致；仓库完整 Git tree 不同。
 
 - R1984 `h():double`：恢复 gate-null 时按 `backward` 决定结果；静态与全树构建通过，按稳定输入快照限定结论。[manifest](../evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
@@ -31,6 +31,7 @@ Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0，18 条警告、
 
 ## 下一步
 
-1. 继续 Pathfinder：按完整 descriptor 与直接调用图挑选下一处可证明的源码差异；到达清晰切片边界后跑全树构建及相关运行验收。
-2. 按已完成的 R1985 证据格式阶段性同步进展至私有 `openpolinex` 与公开 `PolinexClient-Reborn`，更新中英文 README 和本交接，并核验远端 refs/blob；不把两个仓库描述为完整 tree 相同。
-3. 不发布受保护原始二进制、完整 javap dump、含本机路径的原始日志或构建产物；静态/构建通过不得替代用户路径或服务器验收。
+1. 完成 R1986 内容提交的双仓同步和共享文件 blob 核验，并记录实际内容提交与远端 refs。
+2. 取得有效玩家/世界后，对 R1986 alternate-step 正常路径做原版/编译产物差分；未取得有效世界前不以 null/plain-object 探针代替。
+3. 继续 Pathfinder：按完整 descriptor 与直接调用图挑选下一处可证明差异；每个边界清晰的小切片跑全树构建并阶段性更新双语 README、RESUME 与机器证据。
+4. 不发布受保护原始二进制、完整 javap dump、含本机路径的原始日志或构建产物；静态/构建通过不得替代正常用户路径或兼容服务器验收。

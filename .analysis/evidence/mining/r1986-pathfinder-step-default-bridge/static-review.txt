@@ -1,0 +1,31 @@
+R1986 — Pathfinder bounded step helper call contract
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`
+Changed method: `a(double, double, boolean, int): Integer` / `(DDZI)Ljava/lang/Integer;`
+Source: `polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java`
+
+Reference and descriptor review
+- Read the complete original and final compiled `(DDZI)Ljava/lang/Integer;` method blocks. The local class-reference archive `.analysis/me-octo-only.jar` has SHA-256 `2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230`; the referenced owner class entry hashes to `1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88`. The archive is not published.
+- Original method dump SHA-256: `22b7f96b1b983e709e3139d895901abdf235a1103b0a79a655cc2b6c74b9e822` (88 instruction rows; 10 injected `NoWhenBranchMatchedException` handlers).
+- Final compiled method dump SHA-256: `d09d495cf7a0c8d86e975560c886d227e4d3b208a66f749dc696b4e31229c114` (54 instruction rows; no exception table).
+- Also read the full original and compiled default bridge descriptor `(LManager;DDZLWaypoint;ZDILjava/lang/Object;)LWaypoint;`. Its mask bit 32 supplies `0.0` for the last double; it calls `j()` before applying mask logic and then invokes the six-argument instance helper `(DDZLWaypoint;ZD)LWaypoint;` with the original receiver and argument order. Existing R1956 evidence verifies the source-renamed `PXEvMid.j()` and original nested `j()` are the same gate-state holder.
+
+Original behavior and restored source
+- The helper reads the gate once and returns null before calling `u()` when the gate is null. Otherwise it obtains the initial movement state, then loops from index 1 through the supplied bound.
+- Each iteration reads the manager singleton before calculating the boolean argument. The original boolean is `param5 && index == 1` under the already-non-null gate guard. It invokes the static default bridge with `(manager, dx, dz, flag, currentState, true, 0.0, 32, null)`; the bridge resolves to the same six-argument instance helper. A null returned state exits with null. Otherwise `k()` is evaluated and a successful result returns the current 1-based index; the bound and null fallbacks remain in place.
+- Before R1986 the managed source used `param5 && index != 1` and called the five-argument overload `(DDWaypoint;ZD)`, which supplies a different boolean path and `1.0` to the core helper. The source now uses `param5 && index == 1`, captures the manager before that calculation, and invokes the original static bridge descriptor with the original explicit values and mask.
+- Original direct callers are `n()Z` and `o()Z` in the same owner. Their call descriptors and inputs are unchanged: `n()` and the first `o()` path pass false; `o()` also reaches the helper with true for its alternate bounded-step check. This establishes static reachability only, not a normal-user-path result.
+- The Java-compiled method has no exception table because the original injected handlers only route `NoWhenBranchMatchedException` through the previously reviewed identity rethrow helper; Java naturally propagates the same exception. The private `u()` call uses Java `invokevirtual` rather than Kotlin `invokespecial`; the target and descriptor are unchanged.
+
+Static assertions
+- Final compiled call target is the exact original static default bridge descriptor, not the five-argument direct overload.
+- Final stack arguments include the manager singleton, both doubles, `param5 && index == 1`, current state, `true`, `0.0`, mask `32`, and null marker, in that order.
+- The singleton field read precedes the local flag calculation, matching the original side-effect/read order.
+- No empty-world, null-player, string, or plain-object runtime probe was used. The method depends on valid Pathfinder manager/player/world state.
+
+Validation boundary
+- Static restoration of this call contract: PASS.
+- Temurin JDK 25 full-tree build: PASS; see `build-summary.txt`.
+- Direct original-vs-compiled runtime probe: NOT RUN.
+- Minecraft client, valid player/world, normal pathfinding entry, and compatible server: NOT RUN. Runtime equivalence is not claimed.
+- Full original/compiled `javap` dumps and protected binary are not included in this evidence directory.

@@ -1,0 +1,95 @@
+{
+  "experiment_id": "R1986-pathfinder-step-default-bridge",
+  "generated_utc": "2026-11-19T23:29:27Z",
+  "scope": "Restore the original bounded-step caller's boolean, default-argument bridge, receiver, argument order, and side-effect order.",
+  "source_baseline": {
+    "commit": "9797f6c4b9cb16a09af1b9873e6028dc38ae361b",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "86b1697b16ed8176e3471011414029cefc4d814a",
+    "baseline_git_blob_content_sha256": "7bbe0083abd3f03bf444decfaa10c1d9fd3d10456780658b75b3427d886d560d",
+    "final_git_blob": "325f035243955b3338f1a839c93b03e540b2e1cf",
+    "final_worktree_source_sha256": "15261162f52764653bb7a6049bd64c2ea58196c6e99ed5264aad67ea0ac283a6",
+    "compiled_owner_class_sha256": "11645a542bfb5bd281518a13f2baa17a26e33e8c5ff608eb160104984553bfab"
+  },
+  "original_reference": {
+    "local_class_reference_archive": ".analysis/me-octo-only.jar",
+    "archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_class_sha256": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "full_dumps_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(DDZI)Ljava/lang/Integer;",
+    "original_instruction_rows": 88,
+    "original_exception_handlers": 10,
+    "original_method_dump_sha256": "22b7f96b1b983e709e3139d895901abdf235a1103b0a79a655cc2b6c74b9e822",
+    "compiled_instruction_rows": 54,
+    "compiled_exception_handlers": 0,
+    "compiled_method_dump_sha256": "d09d495cf7a0c8d86e975560c886d227e4d3b208a66f749dc696b4e31229c114"
+  },
+  "reviewed_dependencies": [
+    {
+      "owner": "me.octo.client.utils.player.pathfinder.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "name": "a",
+      "descriptor": "(Lme/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;DDZLme/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;ZDILjava/lang/Object;)Lme/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;",
+      "mask_bit_32_default": "last double becomes 0.0",
+      "core_helper_descriptor": "(DDZLme/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;ZD)Lme/octo/client/utils/player/pathfinder/llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll$IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI;",
+      "state_holder_rename_evidence": ".analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json"
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "n",
+      "descriptor": "()Z",
+      "role": "direct caller; passes false"
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "o",
+      "descriptor": "()Z",
+      "role": "direct caller; false and true alternate-step call sites"
+    }
+  ],
+  "static_assertions": {
+    "restored_flag": "param5 && index == 1",
+    "bridge_arguments": "manager, dx, dz, restored flag, current state, true, 0.0, mask 32, null marker",
+    "call_receiver_and_target": "static default bridge descriptor restored; bridge delegates to original six-argument instance helper descriptor",
+    "read_order": "manager singleton is captured before local flag calculation",
+    "null_and_bound_paths": "initial null state and null step return null; successful k() returns 1-based index; bound remains unchanged",
+    "runtime_probe_input": "none; valid world/player required and no invalid placeholder probe used",
+    "screenshot_sha256": "NOT_APPLICABLE_STATIC_ONLY"
+  },
+  "validation": {
+    "static_review": "PASS",
+    "build_command": ".\\gradlew.bat build --rerun-tasks --no-daemon",
+    "build_working_directory": "polinex-src",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "build_started_utc": "2026-11-19T23:20:22.1385310Z",
+    "build_finished_utc": "2026-11-19T23:21:10.6877452Z",
+    "build_exit_code": 0,
+    "build_result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 warnings",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_world_and_normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN"
+  },
+  "acceptance": {
+    "static_restoration": "PASS for the reviewed bounded-step call contract",
+    "full_tree_build_regression": "PASS",
+    "original_vs_compiled_runtime_probe": "OPEN",
+    "normal_client_path": "OPEN",
+    "valid_world_pathfinding": "OPEN",
+    "compatible_server": "OPEN"
+  },
+  "evidence_files_sha256": {
+    "static-review.txt": "bef0528eed137c5dfd2883ae5ed6fc4e037407ceffee5ebc41b605bd80c30be9",
+    "build-summary.txt": "cc7bd0edbb146e5fdbb9ad8692fed180e39fe7f2e911fdb7414f2ba4e54320e6",
+    "manifest.json": "self-hash-omitted"
+  },
+  "limitations": [
+    "Static descriptor matching and a full-tree build do not establish runtime equivalence.",
+    "No client, valid player/world, normal route, screenshot, or compatible server was tested.",
+    "The original class-reference archive and full javap dumps are not published."
+  ]
+}
