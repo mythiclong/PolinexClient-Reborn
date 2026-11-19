@@ -1,0 +1,45 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1983",
+  "verified_utc": "2026-11-19T21:12:45Z",
+  "scope": "R1983 Pathfinder n():boolean source restoration, evidence, bilingual README progress, and handoff snapshot.",
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "821ff21e43fa0b32f3f9dbcfc9306d1d9654a499",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "commit": "10a4d72e94c1f04c69297d234627e32e58e16f5d",
+      "remote_ref_verified": true
+    }
+  },
+  "shared_file_blobs_at_content_push": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "b24cb6c2a73b66ac52a53be240dfcca0ce1d68ca"
+    },
+    {"path": "README.md", "blob": "54a1c1f2b02cfcdf46416b01a9adc9ecd37de9ad"},
+    {"path": "README_EN.md", "blob": "b43f18923d91ef3aa5a10a7bf670f9ea01c4216e"},
+    {"path": ".analysis/reports/RESUME.md", "blob": "106215e1309065e9d265a50bc918a1bfc18e5d53"},
+    {"path": ".analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json", "blob": "72b1485d966b9611f7166423ca1820765ccbad11"},
+    {"path": ".analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/static-review.txt", "blob": "8dc7fc36b26da4ba1c54340f4ce86073a9c5a0e3"},
+    {"path": ".analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/build-summary.txt", "blob": "bf044b1bd4a713c0aaa197edf42dc203632d25c7"}
+  ],
+  "verification": {
+    "method": "Compared live GitHub refs with the pushed commits using git ls-remote, then compared each listed path's Git blob at both pushed commits.",
+    "listed_shared_blobs_equal": true,
+    "repository_trees_identical": false,
+    "private_tree_at_content_push": "00d8fef6c1f721ddaf2ea7c303882ef4f2a3efd7",
+    "public_tree_at_content_push": "cbb265c105032de451822fb283049a6bf9f646ad",
+    "note": "The final README sync-record links and final RESUME wording are included in a follow-up documentation commit; source/evidence content remains the recorded R1983 content commit. Final remote refs and all listed blobs are rechecked after that metadata push."
+  },
+  "validation_limits": [
+    "The sync record proves publication and shared-file consistency, not runtime equivalence.",
+    "R1983 had no client, valid-player/world, normal-user-path, or compatible-server test.",
+    "The sole normal direct caller reaches n() only with a non-null gate; the null-gate branch restoration is static method fidelity, not a demonstrated ordinary game-path change.",
+    "Protected original binaries and full javap dumps are not published."
+  ]
+}

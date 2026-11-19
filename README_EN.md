@@ -55,6 +55,7 @@ R1983 completed the full descriptor review of Pathfinder's dual-input predicate 
 - [R1981 Pathfinder `o()` static review and full-tree build](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
 - [R1982 Pathfinder `p()` forward-input review and full-tree build](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1983 Pathfinder `n()` dual-input predicate review and full-tree build](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
+- [R1983 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)
 - [R1982 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
 - [R1981 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)
 - [R1966 Pathfinder tick-executor static review and full-tree build](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)

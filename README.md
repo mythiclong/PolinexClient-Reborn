@@ -55,6 +55,7 @@ R1983 完成 Pathfinder 双输入谓词 `n():boolean` 的完整 descriptor 复�
 - [R1981 Pathfinder `o()` 静态复核与全树构建](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
 - [R1982 Pathfinder `p()` 前进输入静态复核与全树构建](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1983 Pathfinder `n()` 双输入谓词静态复核与全树构建](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
+- [R1983 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)
 - [R1982 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
 - [R1981 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)
 - [R1966 Pathfinder tick 执行器静态复核与全树构建](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
