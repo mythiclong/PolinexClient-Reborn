@@ -1,0 +1,85 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1966",
+  "generated_utc": "2026-11-19T15:46:40Z",
+  "scope": "Publish R1966 Pathfinder per-tick route executor source restoration, descriptor-level static evidence, full-tree build record, and bilingual README/handoff progress.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "063fc5807d5d9e61bb4af04acb6c3f742601a724"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "13a32a9c5c43695b24a2d7a8db98c864b6fc0acb"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_FAST_FORWARD_PUSHED_REMOTE_REFS_VERIFIED",
+    "publication_method": "Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "21ec44f8ea9e0a70ef8573ac0fffa5c173b18443",
+      "remote_ref_verified_at": "2026-11-19T15:46:40Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "content_commit": "624128bad193bdb9e8c4e7fc7b424eff529f3f80",
+      "remote_ref_verified_at": "2026-11-19T15:46:40Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "note": "README and handoff metadata are linked in a following commit. The refs above identify the feature-content commits; the subsequent metadata commits may advance branch tips and are verified separately after publication."
+  },
+  "published_file_content_sha256_lf_at_content_commit": {
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-final.json": "232a75435bb1b4a200d0245904c91d83275f23407061c2e32ba156aa93f29e83",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-final.log": "ca896526a1a98e946c839d05cd92d2613b564dce9be7146c9a83616c67cc41e0",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-intermediate-list-type.json": "1af3aa8735d23c2f05bd7c23b1ddfc2a292dcca853b7018824bdf3215f60161b",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-intermediate-list-type.log": "4138f129302346222719fea454ad7ddabb898a80038a590d2c4777b45fd1b0c3",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-pre-review.json": "33a4219ec7a5080b3e6573f19a3b82efbff2ed8eb38140928d833ed9d591ddd2",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/build-jdk25-pre-review.log": "3cad166749d9a29721ac6b1039405bf3e1ccb2d65bdb1c2e1a6cc0acf61b6f0c",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/gradle-arg-tokenization-error.json": "f4d185ec119fa91bd1e4e912d7f278fd38aa2d05828fe6df2e6eb382d2803c05",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/gradle-arg-tokenization-error.log": "59fcf2e95f781e153ac200e9bb7961edb6b7dbe26f6fa3869eed769189504232",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json": "2e0d0221c3fbbbeb8b45a210a88a294236463d111c67d1b41ed31e15e2880777",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/static-review.txt": "4e6580f7e77ab7c247d657443eb14d331ee839b499ad9b32b0835cbe8434b7d0",
+    ".analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/summary.txt": "d1a2ab942ad31f227467bf248ba1114e653a0c355749e8639b035b57f78e7f26",
+    ".analysis/reports/RESUME.md": "2d0d77ad1d9266444bb1cf2ba576dd2f12bee8a8deb8fb0175871dbdebe3ae00",
+    "README.md": "961a5834488811a5b228e5671fbaa48ca4a594c374b6a5c5906649975507470e",
+    "README_EN.md": "0eeca4ff172b88110425f07100083548fc2a6902d23a8f2f7956f01b18e1ef30",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "edff274cbebe2d03598b5925bb8762ac62d56c9eb6d2101da00bd8a92f51aa8f"
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "2babbb7598b424c22a1a51fecace1253f6923f2b",
+    "published_git_blob_oid": "7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f",
+    "working_tree_sha256_at_final_build": "dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7",
+    "repository_content_sha256_lf": "dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7"
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Temurin JDK 25.0.4.1",
+    "exit_code": 0,
+    "started_utc": "2026-11-19T15:36:03.1924479Z",
+    "ended_utc": "2026-11-19T15:36:49.6518362Z",
+    "final_log_sha256": "ca896526a1a98e946c839d05cd92d2613b564dce9be7146c9a83616c67cc41e0"
+  },
+  "validation_boundary": {
+    "full_descriptor_static_review": "PASS",
+    "independent_read_only_static_review": "PASS",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "normal_pathfinder_user_path": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Compiled class files",
+    "Local Gradle caches and outputs"
+  ],
+  "source_hash_semantics": "Hashes cover Git commit blobs normalized to LF. working_tree_sha256_at_final_build covers exact local source bytes consumed by the successful build."
+}

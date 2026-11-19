@@ -1,27 +1,26 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 15:39 UTC。工作分支 `codex/bootstrap-eclientinit-2026-11-15`；R1966 证据所用源码基线为 `063fc5807d5d9e61bb4af04acb6c3f742601a724`。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，仅本地使用，不发布。
+> 更新：2026-11-19 15:49 UTC。私有 `openpolinex/codex/handoff-progress-2026-11-15` 的 R1966 内容提交为 `21ec44f8ea9e0a70ef8573ac0fffa5c173b18443`；公开 `PolinexClient-Reborn/main` 内容提交为 `624128bad193bdb9e8c4e7fc7b424eff529f3f80`，推送后 refs 均已核验。R1966 证据代码基线为 `063fc5807d5d9e61bb4af04acb6c3f742601a724`。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，仅本地使用，不发布。
 
-## 当前唯一切片：R1966 Pathfinder tick 路线执行器
+## 当前唯一切片：R1967 Pathfinder `q(): boolean` 历史输入判定
 
-恢复原来被编译为单一 `return` 的 `a(PathNode, List): void`。按原版完整 descriptor 字节码保留路线后缀筛选、sentinel gate、player-null 早退、列表 helper / 朝向调用分支、jump 清理及 option 150 对 sneak 的影响。完整原版 CFG 与当前编译产物已复核；Temurin 25 全树 Gradle `build --rerun-tasks` 对最终源码通过。原版/编译后完整 `javap` 转储只保留在本机临时目录。
+**确认的执行阻断，尚未修复：**当前源码的 `q()` 因 CFR/Vineflower switch 反编译失败而无条件抛 `IllegalStateException("Decompilation failed")`；当前编译方法确实构造并抛出该异常。正常 `@SubscribeEvent` 路线处理会调用它；原版调用偏移 590、当前偏移 306。原版完整 descriptor `()Z` 实现遍历最近八个移动记录，对记录方法 `a()`、`d()`、gate 状态分支计数并返回 boolean。必须按完整 CFG、字段与嵌套记录方法恢复，不能凭 “stuck check” 名称猜语义。
 
-## 有效证据
+## 最近完成：R1966 `a(PathNode, List): void`
 
-- [R1966 静态复核、源内容哈希、构建命令/退出码及验收边界](../evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
-- 最终本地源码 SHA-256：`dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7`；规范 LF Git blob：`7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f`。
-- 最终完整构建：Temurin 25.0.4.1，2026-11-19 15:36:03–15:36:49 UTC，退出码 0。更早两次中间构建在完整 CFG 复核发现分支/求值顺序问题后不作为最终验证；相关记录保留并标明。
-- 本切片未直接探针、未启动/操控 Minecraft、未测试正常玩家路线、有效世界或兼容服务器。编译和静态恢复不等于游戏功能验收。
+恢复此前编译为单一 `return` 的 per-tick executor。完整静态复核和独立只读复核通过；最终精确源码 Temurin 25 全树 `build --rerun-tasks` 退出码 0。最终源码 SHA-256：`dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7`；规范 LF Git blob：`7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f`。
 
-## 已排除假设
+## 有效证据与同步
 
-- R1965 `/pathfind` callback 修复仍只有静态构建证据，不能视为正常命令或寻路行为已验收。
-- R1966 原版异常表调用的 `a(Throwable):Throwable` 经完整字节码核对仅 `aload_0; areturn`；省略其无效果的捕获/原样重抛不会转换异常或产生副作用。
+- [R1966 静态复核、构建及验收边界](../evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
+- [R1966 双仓同步索引](SYNC-20261119-PATHFINDER-R1966.json)
+- 进一步确认的后续执行缺口：同 handler 中 `a(Entity, List, Vec3): void` 和 `d(List): void` 当前编译为空返回、原版有实现并被事件路径调用。应先恢复 q()，再按调用顺序继续。
+- R1966 未直接探针、未启动/操控 Minecraft、未验证正常玩家路线、有效世界或兼容服务器；源码恢复和构建不等于寻路行为验收。
 
-## 已知未关闭项
+## 仍未关闭
 
-Pathfinder 正常玩家入口、有效世界路线/碰撞、缓存生命周期、停止/取消及兼容服务器行为仍无运行证据。ClickGUI 鼠标命中/开关/设置保存重载、Powder Macro、Commission Macro，以及配置、渲染、网络和 native/JNIC 仍有开放恢复或验收项。构建使用本机缓存；空缓存网络构建与发布构建未验证。
+Pathfinder 正常命令/玩家入口、历史输入判定、实体路线处理、节点输入、有效世界路线/碰撞、缓存生命周期、停止/取消及兼容服务器行为仍需按正常入口验证。ClickGUI 鼠标命中/开关/设置保存重载、Powder Macro、Commission Macro，以及配置、渲染、网络与 native/JNIC 仍有开放恢复/验收项。当前全树构建复用本机依赖缓存；空缓存网络构建与发布构建未验证。
 
 ## 下一步
 
-继续沿 Pathfinder 正常 tick 的实际调用链，逐一对照原版与当前源码/编译类的完整 owner、方法名和 descriptor；先确认下一个具体缺口及所有相关调用/状态，再定边界。切片完成后全树构建、更新本文件与双语 README，并分别快进同步私有 `openpolinex` 和公开 `PolinexClient-Reborn`；运行验收只使用有效世界/正常入口，服务器测试仍需保留脱敏证据。
+按完整原版和当前 `q():Z` descriptor 对照字段、接收者、每个分支、数组判空、`a()`/`d()` 调用目标、计数器写入和最终比较；恢复源码后全树构建并核对编译产物。随后继续 `a(Entity, List, Vec3):void`、`d(List):void` 及实际 9-Object overload 调用点，不把初始静态发现当作验证完成。游戏内和服务器验收只用有效实体/世界与正常用户入口，服务器步骤保留脱敏证据。

@@ -1,6 +1,6 @@
 {
   "experiment_id": "R1966-pathfinder-route-executor-restore",
-  "generated_utc": "2026-11-19T15:39:05Z",
+  "generated_utc": "2026-11-19T15:49:22Z",
   "scope": "Restore the normal Pathfinder tick executor method that Vineflower emitted as an empty method, using the original complete JVM descriptor and control-flow graph.",
   "source_baseline": {
     "commit": "063fc5807d5d9e61bb4af04acb6c3f742601a724",
