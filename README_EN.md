@@ -28,7 +28,7 @@ The current slice is **R1965: Pathfinder's normal command entry and the route ex
 
 - [Current short handoff](.analysis/reports/RESUME.md)
 - [R1965 Pathfinder command executor callback repair](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
-- [R1965 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)
+- [R1965 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json): source and evidence were fast-forwarded to private `openpolinex` at `b502476` and public `PolinexClient-Reborn` at `2fff92a`; both remote refs were verified.
 - [R1962–R1963 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1963–R1964 current evidence and dual-repository sync](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json): private `67ded95` / public `6d79cfd`.
 - [R1964 normal route-consumer bytecode review and build](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)

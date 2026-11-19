@@ -28,7 +28,7 @@
 
 - [当前短交接](.analysis/reports/RESUME.md)
 - [R1965 Pathfinder 命令 executor 回调修复](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
-- [R1965 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)
+- [R1965 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)：源码与证据提交已快进同步，私有 `openpolinex` 为 `b502476`，公开 `PolinexClient-Reborn` 为 `2fff92a`，远端 refs 已核验。
 - [R1962–R1963 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1963–R1964 当前阶段证据与双仓同步](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)：私有 `67ded95` / 公开 `6d79cfd`。
 - [R1964 正常路线消费者字节码复核与构建](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)

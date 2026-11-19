@@ -1,6 +1,6 @@
 {
   "sync_id": "SYNC-20261119-PATHFINDER-R1965",
-  "generated_utc": "2026-11-19T10:53:16+00:00",
+  "generated_utc": "2026-11-19T10:58:17+00:00",
   "scope": "Restore the missing Pathfinder /pathfind command executor closure, record a final Temurin 25 full-tree build, and update both language handoffs.",
   "baseline_refs": {
     "private_openpolinex": {
@@ -15,8 +15,23 @@
     }
   },
   "publication": {
-    "status": "CONTENT_COMMIT_PENDING",
-    "note": "Target GitHub refs were read with git ls-remote before editing; content commits and fast-forward pushes are not yet recorded."
+    "status": "SOURCE_AND_EVIDENCE_FAST_FORWARD_PUSHED_REMOTE_REFS_VERIFIED",
+    "publication_method": "Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "baseline_commit": "01b05505e348e151a033f221acdf3a45dc894b7f",
+      "content_commit": "b50247621878c1249d8a7ca695e5da646a609b47",
+      "remote_ref_verified": true
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "baseline_commit": "eefa9ecf32f3acd186c09c40416d3449cee22754",
+      "content_commit": "2fff92a77840c845b5d0e96f92cf8c62f122dd64",
+      "remote_ref_verified": true
+    },
+    "note": "This follow-up metadata and README/handoff commit records the already-pushed source/evidence commits. Its own repo-specific commit IDs are verified after the follow-up pushes and are not embedded recursively."
   },
   "published_file_content_sha256_lf": {
     ".analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json": "ace0a2634d3062bdc57244376e2e90356622ab25ff1a0d1ed042c12a34616430",
@@ -26,9 +41,9 @@
     ".analysis/evidence/mining/r1965-pathfind-command-executor/build-jdk25-final.log": "4a5f9c363613a304a559b3c6b7e64eff1f96a219c0c54eef7140c0be850b4943",
     ".analysis/evidence/mining/r1965-pathfind-command-executor/failed-default-java17-run.json": "5bc7e0b13d95ed45135926fdb1b482b87519cc2846f42931f01883619fdcbb87",
     ".analysis/evidence/mining/r1965-pathfind-command-executor/failed-default-java17.log": "1edc517d9dbb2e30e3a837b2e3e1cb006304ee4837fc82c534d9caf30c54a628",
-    ".analysis/reports/RESUME.md": "5cd9dddc80a932ffc4ce7f7e11e20f72bf90f36274a3b6ccd4d7fd34e8d396d1",
-    "README.md": "c269a126a5a39ffc7928a3b16a7b1b281659adb78d0e39fd71ea05f040436cfd",
-    "README_EN.md": "b02f80fc0eb6d034f7645ef2fe894db74810852b1f8edaafc72909bc2e1f5cbe",
+    ".analysis/reports/RESUME.md": "1b017216ca027732e743c467e6881776c899d9176b7d69caa95993322d517e48",
+    "README.md": "12a3f9663d95cbe2f106d8d38e961d2aaebd34e25aaba9abba635fdcb634324a",
+    "README_EN.md": "bb927f1de0651bf8b29953e55547a638e336fb9edb8f4f847543b2de7483932f",
     "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java": "cd169b9ca344f676561a5a3a75a852921982e1cb84d59cc06544216d89723fa4"
   },
   "source_change": {
