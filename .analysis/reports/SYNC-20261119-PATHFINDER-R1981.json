@@ -1,0 +1,38 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1981",
+  "generated_utc": "2026-11-19T20:45:03Z",
+  "batch": ["R1981"],
+  "source_evidence_baseline_commit": "de2a6055d3ece3b757f7cb28f9677ceac54f5014",
+  "content_commits": {
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "d1cdb48c895f8c8ce9d8256a73150f7e6e773b1a",
+      "remote_ref_verified_utc": "2026-11-19T20:45Z"
+    },
+    "public_polinexclient_reborn": {
+      "branch": "main",
+      "commit": "8bc902f584422cbde80ef177e7e39a780e2747b8",
+      "remote_ref_verified_utc": "2026-11-19T20:45Z"
+    }
+  },
+  "shared_path_blobs_verified_equal": {
+    "README.md": "85cf41b302fc13a5ee4dbd0e1c7f0d375ac077e5",
+    "README_EN.md": "9c85776584c853294ab3f71f4fd93a0899c37e89",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "5a6a325ce33d76923e8fb6ee550ddc09d166d1be",
+    ".analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json": "f38688f5d15611c41dccfa691acd8918884dfc96",
+    ".analysis/evidence/mining/r1981-pathfinder-obstacle-check/attempts.json": "e7e47b607ee11a45d3a9c61ef319581207f7cacc",
+    ".analysis/evidence/mining/r1981-pathfinder-obstacle-check/build-jdk25-final.log": "bbb3aec99e6a60bf017ebffd9ce2ea585fcb2ee3",
+    ".analysis/evidence/mining/r1981-pathfinder-obstacle-check/static-review.txt": "25284d53435cf0548f5b32dc48513e0315309818"
+  },
+  "tree_note": "The private and public repository trees are not byte-identical; repository-specific history/content was preserved. Every listed R1981 batch file blob matches across the two content commits.",
+  "validation": {
+    "source_blob": "5a6a325ce33d76923e8fb6ee550ddc09d166d1be",
+    "source_sha256_lf": "df35bceb16519c35cc9ab516ffdc382704223b46de5e194a3ad24aa95e73bce0",
+    "full_tree_build": "PASS: Eclipse Temurin JDK 25.0.4.1+1-LTS; gradlew.bat build --rerun-tasks --no-daemon; exit 0; 18 existing warnings; tests NO-SOURCE",
+    "initial_compile_failure": "One edited field identifier typo, corrected before the final build; see evidence attempts.json.",
+    "minecraft_client_or_valid_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN"
+  },
+  "next_slice": "R1982 Pathfinder p():boolean complete-descriptor review before edits"
+}
