@@ -1,0 +1,73 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1985",
+  "verified_utc": {
+    "started": "2026-11-19T22:37:12.8172773Z",
+    "finished": "2026-11-19T22:37:16.2661639Z"
+  },
+  "scope": "R1985 Pathfinder source/evidence and bilingual README/RESUME content publication to private openpolinex and public PolinexClient-Reborn.",
+  "source": {
+    "baseline_private_commit": "d353e30ef8d11edc0292690bf0c037e4381fce68",
+    "final_git_blob": "86b1697b16ed8176e3471011414029cefc4d814a",
+    "source_sha256": "986be2d5536af63bd8152c3d85d25c98e33269ef54b87612b21fd41e08f06c77"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "d353e30ef8d11edc0292690bf0c037e4381fce68",
+      "content_commit": "c044b8abeb808d222832675920497fa5d1e1ac9b",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "788ed401d174b8560275ac0890f86fb73ccb5211",
+      "content_commit": "9dba15c58f200b004b58b723607ba364e959f24d",
+      "remote_ref_verified": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "86b1697b16ed8176e3471011414029cefc4d814a"
+    },
+    {
+      "path": "README.md",
+      "blob": "2e0f5ca9493f800623f9a3be18b0f1c489e73a90"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "646e425319f8d5d2ff7280272ba9c7f0d50cd536"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "56d67d7e7f2a805dc3634dfa19377362cc30bd78"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json",
+      "blob": "724c81040a1fdebcc236fd5873e7c344d1288af7"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/static-review.txt",
+      "blob": "3f030a9adfe0e0cbae5fa8cb09fc933b67c7c3a9"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/build-summary.txt",
+      "blob": "7a078a9b965257336f419c8c02d58abdc7614b85"
+    }
+  ],
+  "verification": {
+    "method": "Compared live GitHub refs with each content commit using git ls-remote; compared all listed shared paths by Git blob at both commits.",
+    "content_remote_refs_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "f1ac73d80b6d9aef618d4c72b634620104180d99",
+    "public_tree_at_content_commit": "ea61ff4d2da67edfd27c40a8b6123410ab0d780f",
+    "repository_trees_identical": false,
+    "note": "The two repositories retain different histories and full Git trees. This sync verifies the named source, README, RESUME, and evidence blobs only; it does not claim repository-wide tree identity."
+  },
+  "validation_limits": [
+    "The sync record proves publication and shared-file consistency, not runtime equivalence.",
+    "R1985 has static review and a JDK 25 full-tree build only; no direct probe, client, valid world/player, normal route, or compatible-server validation was run.",
+    "The protected original JAR, full javap dumps, workstation-path logs, and build outputs are not published."
+  ]
+}
