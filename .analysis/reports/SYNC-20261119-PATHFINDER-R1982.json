@@ -1,0 +1,44 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1982",
+  "verified_utc": "2026-11-19T20:58:40Z",
+  "scope": "R1982 Pathfinder p():boolean source correction, evidence, bilingual README progress, and handoff snapshot.",
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "14692da370a8a53ba43fd34629940b9917c42f58",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "commit": "b827439d0aa9416d5d4c21139c1e28d16e9f928a",
+      "remote_ref_verified": true
+    }
+  },
+  "shared_file_blobs_at_content_push": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "5e0d3aa7b7193145c7960b99a969e45d4d34f92d"
+    },
+    {"path": "README.md", "blob": "f7d2578ef622cadbcf42184b94a01d170dce4e39"},
+    {"path": "README_EN.md", "blob": "b39532e7597b7113ddf57812717341b25ccb2969"},
+    {"path": ".analysis/reports/RESUME.md", "blob": "9faf2479acfef74f40ccd5b77fede7b5846ac8c8"},
+    {"path": ".analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json", "blob": "f38df7a3ac83a63ceba6f0f806841dcc8f57fa37"},
+    {"path": ".analysis/evidence/mining/r1982-pathfinder-forward-predicate/static-review.txt", "blob": "8349d59c428ffee8fb9a717c111213c7f3f30b2a"},
+    {"path": ".analysis/evidence/mining/r1982-pathfinder-forward-predicate/build-summary.txt", "blob": "ae7759a11f78ab3cb201d86e13849b2e09c0c99a"}
+  ],
+  "verification": {
+    "method": "Compared live GitHub refs with the pushed commits using git ls-remote, then compared each listed path's Git blob at both pushed commits.",
+    "listed_shared_blobs_equal": true,
+    "repository_trees_identical": false,
+    "private_tree_at_content_push": "4f7aa4e335ecf053fb10cad72be36379b8b5606b",
+    "public_tree_at_content_push": "3b75161cc6e7e23ad4efee558f1e27f150093586",
+    "note": "The final RESUME wording and this sync index are published in a follow-up documentation commit; they do not alter the R1982 source/evidence content commit. Final remote refs and shared blobs are rechecked after that push."
+  },
+  "validation_limits": [
+    "This sync record proves publication and shared-file consistency, not runtime equivalence.",
+    "No Minecraft client, valid player/world, normal user path, or compatible-server acceptance was performed for R1982.",
+    "Protected original binaries and full javap dumps are not published."
+  ]
+}
