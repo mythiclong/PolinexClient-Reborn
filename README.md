@@ -23,7 +23,7 @@ R1984 对照 Pathfinder `h():double` 的完整原版 descriptor 与输入调用�
 
 R1985 完成 Pathfinder 方向轴与步进 helper 的 gate 分支静态恢复：修正 `a([Z)D`、`b([Z)D`、`a(ID)Z`、`a(DDID)Integer`；并恢复有符号 `newY - oldY > 0.05` 判断及 gate-null 时不返回步进索引的路径。完整核对了候选方向、直接 caller 与默认参数桥。Temurin JDK 25 全树构建 exit 0（18 条警告，测试 `NO-SOURCE`）。未做直接运行探针、客户端、有效世界/正常寻路或兼容服务器验收，不宣称运行时等价。详见 [R1985 证据](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)。
 
-R1986 对照完整原版 descriptor 恢复 Pathfinder bounded-step helper `a(DDZI)Integer` 的调用契约：将 `param5 && index != 1` 改为原版的 `param5 && index == 1`，并改回调用原版默认参数桥，保留 singleton 读取顺序、显式 `true`、mask 32 与 `0.0` 默认值。Temurin JDK 25 全树构建 exit 0（18 条警告，测试 `NO-SOURCE`）。尚未运行客户端、有效玩家/世界、正常寻路或兼容服务器；不宣称运行时等价。详见 [R1986 静态复核](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)。
+R1986 对照完整原版 descriptor 恢复 Pathfinder bounded-step helper `a(DDZI)Integer` 的调用契约：将 `param5 && index != 1` 改为原版的 `param5 && index == 1`，并改回调用原版默认参数桥，保留 singleton 读取顺序、显式 `true`、mask 32 与 `0.0` 默认值。Temurin JDK 25 全树构建 exit 0（18 条警告，测试 `NO-SOURCE`）。源码、证据和双语 README 已同步到两个仓库并核对所列共享文件 blobs；两个仓库的完整 Git tree 不同。尚未运行客户端、有效玩家/世界、正常寻路或兼容服务器；不宣称运行时等价。详见 [R1986 静态复核](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -64,6 +64,7 @@ R1986 对照完整原版 descriptor 恢复 Pathfinder bounded-step helper `a(DDZ
 - [R1984 Pathfinder `h()` gate-null 输入选择静态复核及全树构建](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
 - [R1985 Pathfinder 方向轴与步进 gate 静态复核及全树构建](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)
 - [R1986 Pathfinder bounded-step 默认桥调用静态复核及全树构建](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)
+- [R1986 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)
 - [R1985 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)
 - [R1984 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1984.json)
 - [R1983 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)

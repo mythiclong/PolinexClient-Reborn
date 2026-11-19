@@ -1,0 +1,71 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1986",
+  "scope": "R1986 Pathfinder source, evidence, handoff, and bilingual README publication.",
+  "source": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "source_sha256": "15261162f52764653bb7a6049bd64c2ea58196c6e99ed5264aad67ea0ac283a6",
+    "git_blob": "325f035243955b3338f1a839c93b03e540b2e1cf"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "9797f6c4b9cb16a09af1b9873e6028dc38ae361b",
+      "content_commit": "96c5aed9d4da0426a2f83ec2d41d87b0ef3d006e",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "a9525960807b7602ac9b525371cf5ec5dc839462",
+      "content_commit": "60e6ab10461fe02060fecb60d89fe0bbc8d28e2a",
+      "remote_ref_verified": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "325f035243955b3338f1a839c93b03e540b2e1cf"
+    },
+    {
+      "path": "README.md",
+      "blob": "c297f0e86c4a6297c59c7db28d862a517a413118"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "e922bc7e0250a1fa8ae90b4fd7dc85cdbad2000e"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "530453ae091c881adb327a18bd3eda0d52dd3648"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json",
+      "blob": "f3b97cd0d41658453333eec79114182d2e790abd"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1986-pathfinder-step-default-bridge/static-review.txt",
+      "blob": "6df3d3401f5877d83b872cffd3e3981d675a88ce"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1986-pathfinder-step-default-bridge/build-summary.txt",
+      "blob": "5117a082e366d8b718b7e2567ca71212ebf86616"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-19T23:33:55Z",
+    "method": "Compared live GitHub refs with content commits using git ls-remote, then compared each listed path by Git blob at both commits.",
+    "content_remote_refs_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "2157eb362fd7dd0049f43979702a1f3a2557236f",
+    "public_tree_at_content_commit": "e5c7f879cc04afdad5af5a2346113e9c592efc59",
+    "repository_trees_identical": false,
+    "note": "Named source, README, RESUME, and R1986 evidence files match. The repositories retain different histories and full Git trees; this record does not claim repository-wide tree identity."
+  },
+  "validation_limits": [
+    "R1986 has full-descriptor static review and a Temurin JDK 25 full-tree build only.",
+    "No direct runtime probe, Minecraft client, valid player/world, normal pathfinding path, or compatible-server validation was performed.",
+    "Static restoration and build success do not establish runtime equivalence.",
+    "The original reference archive, full javap dumps, protected binaries, local-path logs, and build outputs were not published."
+  ]
+}
