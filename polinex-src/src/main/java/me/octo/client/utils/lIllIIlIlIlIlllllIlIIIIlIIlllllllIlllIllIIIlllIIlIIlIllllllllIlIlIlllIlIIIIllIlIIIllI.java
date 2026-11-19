@@ -637,7 +637,12 @@ public final class lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllll
 
    @NotNull
    public final Vec3 g(@NotNull BlockPos param1) {
+      int var7 = llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll.d();
       Intrinsics.checkNotNullParameter(param1, "pos");
+      if (var7 != 0) {
+         return new Vec3((double)param1.getX() + 0.5D, (double)param1.getY() + 1.0D, (double)param1.getZ() + 0.5D);
+      }
+
       ClientLevel var2 = this.a().level;
       if (var2 == null) {
          return new Vec3((double)param1.getX() + 0.5D, (double)param1.getY() + 1.0D, (double)param1.getZ() + 0.5D);

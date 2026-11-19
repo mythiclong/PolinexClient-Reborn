@@ -1,18 +1,29 @@
 {
   "experiment_id": "R1955",
-  "slice_id": "PATHFINDER-ROUTE-CONVERTER-THRESHOLD-COMPARISON",
-  "generated_utc": "2026-11-19T01:37:26Z",
-  "status": "Confirmed conditional comparison mismatch repaired; one direct-helper gate remains open.",
+  "slice_id": "PATHFINDER-ROUTE-CONVERTER-AND-HEIGHT-HELPER",
+  "generated_utc": "2026-11-19T01:50:31Z",
+  "status": "Two original-bytecode-backed source differences repaired and compiled; valid-world runtime acceptance remains open.",
   "source": {
     "baseline_commit_before_edit": "d0a2cfba076c654a4dec80e86170ba921360a572",
     "baseline_java_tree_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
-    "result_java_tree_sha256": "5b100dce3522ab30f86262d3657b96bf21a4d68d87c25b16e9b2aeb795e5b3da",
+    "result_java_tree_sha256": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
     "java_file_count": 1602,
     "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
     "source_sha256_before_edit": "14e4f370e6754a16a56834db838777446b822c502f40c32d0a7917389700e148",
     "source_sha256_after_edit": "b62182caae0cd921c68cef3b9c98ad88c0cd6d60bb72e053d0d1f1df6e6f6343",
     "production_source_changed": true,
-    "change_summary": "Replaced two Kotlin-style compareTo translations of (heightDelta - 0.5625) with direct Java heightDelta > 0.5625D predicates."
+    "change_summary": "Fixed both direct 0.5625 comparisons and restored g(BlockPos) original d() gate/fallback ordering. The final source tree hash covers all 1,602 Java files.",
+    "intermediate_java_tree_sha256_after_threshold_fix": "5b100dce3522ab30f86262d3657b96bf21a4d68d87c25b16e9b2aeb795e5b3da",
+    "baseline_commits_before_gate_fix": {
+      "private": "bba186f28c0efa163d18d915ca3fe447227f8611",
+      "public": "600deb466362ad0d441f3a28a02d1fe550025933"
+    },
+    "additional_source_change": {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.java",
+      "sha256_before": "11f3e1a1468ee751c81d6152f927d486fb33c5a62e60fa6aeaeb65ab24a7da5e",
+      "sha256_after": "bd9d8dc53ffa8de0cf55fc56d8fadf341993e5e7e830981337278d8abdfb56cc",
+      "change": "Restored the original d() gate before null validation and world lookup; d()!=0 returns the centered/top fallback."
+    }
   },
   "original_behavior_source": {
     "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
@@ -20,7 +31,12 @@
     "included": false,
     "target_method_owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
     "target_method_descriptor": "([JDDLnet/minecraft/client/multiplayer/ClientLevel;)Ljava/util/List;",
-    "original_class_sha256": "b99f636784628adc8c6459fa1c8110268b65e6164e830d72ac7134be22271535"
+    "original_class_sha256": "b99f636784628adc8c6459fa1c8110268b65e6164e830d72ac7134be22271535",
+    "class_hashes": {
+      "route_converter": "b99f636784628adc8c6459fa1c8110268b65e6164e830d72ac7134be22271535",
+      "height_helper": "30eb8e05bc2770662b335fab71b3ee47f5ed3f16ac7882bdce2dfe8c45c53140",
+      "gate_owner": "8d1df5c8a3a05b5b14502e424c98172e876d67e1a111fa0546784e0b723bdd21"
+    }
   },
   "bytecode_review": {
     "toolchain": "Temurin javap 25.0.4.1",
@@ -44,7 +60,38 @@
         397
       ]
     },
-    "other_difference_not_closed": "Direct helper g(BlockPos) has an original gate/fallback path not represented in the current source. Its state reachability is unresolved; this experiment did not edit it."
+    "other_difference_not_closed": "No additional static mismatch was established in the reviewed route converter and height helper. Valid-world behavior is still untested.",
+    "route_converter_original_dump_sha256": "8f333589847dbe20acb9e090aa694d6a5a8514ad7acdf9cb62741f5db7c09c1b",
+    "route_converter_compiled_post_fix_dump_sha256": "11f7e4930c1446a48713b6acd12dbbe52f16f0153af846eae1b4d0d885336d8d",
+    "height_helper": {
+      "owner": "me.octo.client.utils.lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;",
+      "original_dump_sha256": "253c7e8608ae81eecb2a12907226cf207f8ce3bada80e79be286a1fbb1a66a56",
+      "compiled_dump_after_fix_sha256": "991b6f25081ee5a72eb55808346a8973d33732ea4d744b8158a737d311ed413d",
+      "compiled_class_sha256": "fa4ad2b2075556d9a64506fde94e49de1337ad81ced5754393b557bfac3f678c",
+      "finding": "Original calls d() before null validation and world lookup. If d()!=0 it returns (x+0.5,y+1,z+0.5); otherwise it reads level and derives top height from snow layers or the voxel shape. Current source and compiled call order now match."
+    },
+    "gate_state": {
+      "owner": "me.octo.client.utils.llIIlIllllIllllIlIIIlllIllllIlllIlIllIIIIlIlIlllIIIllIIlllIIllllIlllIIIllIlIIIIIIIlll",
+      "state_field": "IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII:I",
+      "original_owner_dump_sha256": "3b33d0c8cab24542138ec695c0c6558c0b5ee108bd9c5599f4e1276518366a7b",
+      "compiled_owner_dump_sha256": "65d4dc95b119b9c852b1a0f0d893fe564c2159f7e60839cad5d44c4efdfdc7f1",
+      "class_scan_count": 5475,
+      "initialization": "<clinit> sets 104 through b(I)V; b is the only direct putstatic; c()I reads the field; d()I returns 62 only if the field is zero, otherwise 0.",
+      "normal_internal_writes": "The only non-initialization b(I)V call is in a(AABB;DDLnet/minecraft/world/phys/Vec3;D)Ljava/util/List; at offset 589 and requires helper.f()==null. That helper initializes and returns a three-element array; no normal internal route to field value 0 was identified.",
+      "external_boundary": "b(I)V is public; external calls or dynamic reflection may set zero and were not excluded. The original fallback remains restored for that state.",
+      "other_direct_writes_or_handles": "No additional direct field writes or associated MethodHandle were found in the scan."
+    },
+    "exception_path": "Original g has five NoWhenBranchMatchedException catch entries whose helper returns the same exception. The current compiled helper rethrow method also returns its input unchanged; no outward exception transformation was identified.",
+    "local_dump_hashes": {
+      "original_gate_owner": "3b33d0c8cab24542138ec695c0c6558c0b5ee108bd9c5599f4e1276518366a7b",
+      "compiled_gate_owner": "65d4dc95b119b9c852b1a0f0d893fe564c2159f7e60839cad5d44c4efdfdc7f1",
+      "full_dumps_included": false
+    },
+    "gate_reachability": {
+      "result": "No normal internal path to zero identified; external public setter/reflection remains outside proof.",
+      "source_review": "Read-only full-bytecode scan; no source changes were made by the reviewer."
+    }
   },
   "boundary_probe": {
     "source_path": ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/ThresholdComparisonProbe.java",
@@ -80,7 +127,23 @@
     "nonfatal_output": [
       "Fabric Loom reported missing markdown metadata in mod-provided javadoc.",
       "javac reported unchecked/unsafe operations."
-    ]
+    ],
+    "final_build_after_gate_fix": {
+      "command": "cd polinex-src && .\\gradlew.bat build --no-daemon --console=plain",
+      "jdk": "Temurin 25.0.4.1",
+      "started_utc": "2026-11-19T01:45:34.1784435Z",
+      "finished_utc": "2026-11-19T01:45:57.8176988Z",
+      "exit_code": 0,
+      "compileJava": "executed successfully",
+      "jar": "executed successfully",
+      "test": "NO-SOURCE",
+      "artifact_sha256": "0358ed37e798349c3e665ecf19901c4df3a62ce6ff54f3a46dbced300f972e8b",
+      "local_log_sha256": "b11718cbf84c4dc30aea7973ef41c474dae59c9308f01d74bb91cdd8f7b8246f",
+      "nonfatal_output": [
+        "Mod-provided javadoc metadata warning",
+        "javac deprecation/unchecked warnings"
+      ]
+    }
   },
   "invalidated_attempts": [
     {
@@ -100,5 +163,14 @@
     "compatible_server": false,
     "feature_equivalence_claim": false
   },
-  "next_slice": "Resolve the direct helper g(BlockPos) gate: enumerate state initialization and all writes, then decide whether the original fallback is normally reachable. Do not claim route equivalence before that and a valid-world path test."
+  "next_slice": "Run the restored route converter and height helper through a valid Minecraft world and normal Pathfinder entry point; verify collision, stairs/snow shape handling, cache lifecycle, and any applicable server behavior.",
+  "stats": {
+    "command": "python -B .analysis/stats.py",
+    "exit_code": 0,
+    "java_files": 1602,
+    "java_lines": 1158790,
+    "native_declarations": 219,
+    "stub_throws": 0,
+    "decompiler_artifact_throws": 0
+  }
 }
