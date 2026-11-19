@@ -1,0 +1,75 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1955",
+  "generated_utc": "2026-11-19T01:40:57Z",
+  "purpose": "Publish the R1955 Pathfinder comparison repair and bilingual status snapshot to both repositories.",
+  "source_state": {
+    "java_tree_before_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "java_tree_after_sha256": "5b100dce3522ab30f86262d3657b96bf21a4d68d87c25b16e9b2aeb795e5b3da",
+    "java_file_count": 1602,
+    "changed_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
+    "changed_file_sha256": "b62182caae0cd921c68cef3b9c98ad88c0cd6d60bb72e053d0d1f1df6e6f6343"
+  },
+  "evidence": {
+    "experiment_id": "R1955",
+    "manifest_path": ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json",
+    "manifest_sha256": "47bef77bf3697a5746dda624007849ab8df3fe03ebc74c1b3c27bbaebb7959c3",
+    "boundary_probe_sha256": "6a4e2dc2602f6617bad7a958596f7ffebbd6361bf45a524ec03af71676b5a996",
+    "probe_output_sha256": "b087f3d1b2c1f0c5016c0b13998c626093b42dcaea6ed68d002bd5b1b2ab7d85",
+    "source_evidence_baselines": {
+      "private_pre_change_commit": "d0a2cfba076c654a4dec80e86170ba921360a572",
+      "public_pre_change_commit": "60993960a1585247cf35b7f19ffbcb01bde6b67f"
+    }
+  },
+  "published_snapshots": [
+    {
+      "repository": "mythiclong/openpolinex",
+      "visibility": "private",
+      "ref": "codex/handoff-progress-2026-11-15",
+      "code_and_evidence_ingest_commit": "04321a6234ebffc2448793b87dce67360cc32390",
+      "pushed": true
+    },
+    {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "visibility": "public",
+      "ref": "main",
+      "code_and_evidence_ingest_commit": "509ba11aacbdb18ecc4f2db2bb4ed184a5a828ff",
+      "pushed": true
+    }
+  ],
+  "published_files": [
+    "README.md",
+    "README_EN.md",
+    ".analysis/reports/RESUME.md",
+    "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
+    ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json",
+    ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/ThresholdComparisonProbe.java",
+    ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/threshold-probe.log"
+  ],
+  "validation": {
+    "stats_command": "python -B .analysis/stats.py",
+    "stats_exit_code": 0,
+    "java_lines": 1158785,
+    "build_command": "cd polinex-src && .\\gradlew.bat build --no-daemon --console=plain",
+    "jdk": "Temurin 25.0.4.1",
+    "build_exit_code": 0,
+    "compileJava": "executed successfully",
+    "jar": "executed successfully",
+    "test": "NO-SOURCE",
+    "built_jar_sha256": "d89f65e128f4414c79e8ed85d1c1f8839dbb3432e268a6fa056d2a00b889328b",
+    "boundary_probe_compile_exit_code": 0,
+    "boundary_probe_run_exit_code": 0,
+    "runtime_client_or_world_test": false,
+    "compatible_server_test": false
+  },
+  "open_items": [
+    "The direct helper g(BlockPos) original gate/fallback and its normal state reachability remain unresolved.",
+    "Valid-world route/collision/cache testing and compatible-server login/interaction/disconnect/reconnect remain open.",
+    "ClickGUI mouse hit-testing, module toggle, and settings persistence remain open.",
+    "This is one verified conditional comparison fix, not proof of overall Pathfinder or project equivalence."
+  ],
+  "not_published": [
+    "Original protected JAR/class files",
+    "Full javap dumps",
+    "Local Gradle build logs"
+  ]
+}

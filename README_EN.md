@@ -24,8 +24,8 @@ The current slice is **R1955: Pathfinder route conversion and its step/collision
 ## Handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
-- [Latest Pathfinder sync record (2026-11-19)](.analysis/reports/SYNC-20261119-PATHFINDER-R1954.json)
-- Published snapshots: private `openpolinex` branch `codex/handoff-progress-2026-11-15` (`bca0564`) and public `PolinexClient-Reborn` `main` (`3c36a2a`).
+- [Latest Pathfinder sync record (2026-11-19)](.analysis/reports/SYNC-20261119-PATHFINDER-R1955.json)
+- Source and evidence pushed to private `openpolinex` branch `codex/handoff-progress-2026-11-15` (`04321a6`) and public `PolinexClient-Reborn` `main` (`509ba11`).
 - [R1955 route-threshold semantic review](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
 - [R1954 route-entry and cache-write review](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1947 candidate-node audit](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
