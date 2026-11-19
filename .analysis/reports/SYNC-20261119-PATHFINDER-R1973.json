@@ -1,0 +1,119 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1973",
+  "generated_utc": "2026-11-19T18:46:41Z",
+  "scope": "Publish the R1973 Pathfinder e(Vec3,Vec3,Vec3):ArrayList source repair, review/build evidence, and bilingual README/handoff to private openpolinex and public PolinexClient-Reborn.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "ddc0f23cfb55fdb62be42546f0038fef41a3bb80"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "4b97440b4293dccfe5c579d25d7c818de2b8b2fa"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Separate content commits; fast-forward pushes only; no force-push.",
+    "private_openpolinex": {
+      "content_commit": "bba9a5c5ef101a460b1aacf4259380dbfd47d460",
+      "remote_ref_verified_at": "2026-11-19T18:44:36.9751464Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "content_commit": "365e59065a6d234edeac51dda4a6d2bab1ccae71",
+      "remote_ref_verified_at": "2026-11-19T18:44:36.9751464Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "metadata_follow_up": "This record, the final concise RESUME, and the corrected source LF-hash evidence are added in subsequent fast-forward metadata commits. Their remote refs are verified separately; the metadata commit cannot embed its own commit hash."
+  },
+  "published_file_git_blob_oids_and_sha256_lf_at_content_commits": {
+    "README.md": {
+      "git_blob_oid": "56a9fdb109f19a570165da0f4bff83f97a1cb62a",
+      "sha256_lf": "d785c16e9402faad869b7929526259c2faac89d0971e0cdfa2902ad794f70ee5"
+    },
+    "README_EN.md": {
+      "git_blob_oid": "b0bc3557c8ac0b61fa9c0b71a9a4a5fc71d7ac74",
+      "sha256_lf": "011e557a5016f8b0be5871e808558c1ba85a408ce15b3ddb6035a1846229881b"
+    },
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "628719ad08624044e55bf31f85f6a0f8d8220412",
+      "sha256_lf": "30cc3cf0c4c24c5288dcc78d056025b5f63cb2d0966a0ddfc96dcbdb71b0ac5f"
+    },
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": {
+      "git_blob_oid": "445c75fa755b91f86fe6bbb014a87c7a716a75c2",
+      "sha256_lf": "a7f906ec3082801e32c0a60e964ff446384fe0e0e87e9d3e00c9a00e596adfc5"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/manifest.json": {
+      "git_blob_oid": "abfe05c4848457c574167c09bc4ffb3e1f1e101b",
+      "sha256_lf": "e8c278d921c4924abf5971b3cba9da67c1a196279f9bb781b6989a87fb354dbf"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/static-review.txt": {
+      "git_blob_oid": "1ac61cc92c8f2513cbc0e05528e26b052b10e9d7",
+      "sha256_lf": "88111837a446b361300a6252c8fb5531b9c314c93f68b3a30836a45981fcf6b6"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/build-jdk25-final.log": {
+      "git_blob_oid": "472139e6ae03c75dd7b0deabd2e2fabeacbe781b",
+      "sha256_lf": "2ba91ecbe6eb1753bd0fe3a7e718c8897a995d331fb5d31927505d3cc89847d9"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/attempts.json": {
+      "git_blob_oid": "5a371c3d0e336ea370be54cb5761300942c5466e",
+      "sha256_lf": "15428716642f1efa16f7fc9aba840f08dbef8ded6ad2a5c34f6aafdbcb4c4118"
+    }
+  },
+  "metadata_follow_up_files": {
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "478f45ee4f71ecf3176f0006df1e6cedff6dd0d3",
+      "sha256_lf": "836147a5201a6091ac27f84c5fb38ba6442a1d2767a1c42e59c8624101f6fcc5"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/manifest.json": {
+      "git_blob_oid": "cab4439738c6c761d7c2cd4cee422cdfb42880e9",
+      "sha256_lf": "8f00f21a8408788c26c1b42075c040915b63975a72ddb00ae2daf90905d0eab0"
+    },
+    ".analysis/evidence/mining/r1973-pathfinder-direction/static-review.txt": {
+      "git_blob_oid": "f7cc71d4753e8ecf756031f754b4e774cc1ac20e",
+      "sha256_lf": "bf548bdbb169b738967f06bd5d0caac1e97e9ed8c5e273c9fe732b5abb3ec4b3"
+    }
+  },
+  "source_hash_correction": {
+    "reason": "An initial shell normalization command wrote an incorrect LF SHA-256 into the R1973 manifest/static review. The source was independently rehashed from both the exact working-tree bytes and Git-cleaned blob; evidence text was corrected in this follow-up. No Java source changed and no rebuild was needed.",
+    "incorrect_value_in_content_commits": "8530992d868db6615fc774c0c2a4f187b102945d1e33c44dba376a9659cd7ad9",
+    "verified_lf_sha256": "a7f906ec3082801e32c0a60e964ff446384fe0e0e87e9d3e00c9a00e596adfc5",
+    "verified_working_tree_sha256_at_final_build": "0cfa71f7298281f4de998dd17537156769a101a5c07bc823f76caae830e9c64e",
+    "verified_git_blob_oid": "445c75fa755b91f86fe6bbb014a87c7a716a75c2"
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "method": "e",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/ArrayList;",
+    "baseline_git_blob_oid": "6a9b7e7d6fca665ab35a132945b22bd383a8dacd",
+    "published_git_blob_oid": "445c75fa755b91f86fe6bbb014a87c7a716a75c2",
+    "changes": [
+      "restore Vec3.add Kotlin null check",
+      "single player read only after gate, preserving null player/velocity zero-speed fallback",
+      "preserve dcmpg/dcmpl direction thresholds and NaN behavior"
+    ]
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS: offsets 0-438; 11 original NoWhenBranchMatchedException handlers; 43 ordered field/call/allocation/string/double-literal events matched after filtering only verified synthetic identity-exception trampolines.",
+    "final_full_tree_build": "PASS: Temurin JDK 25.0.4.1+1-LTS; exit code 0; 18 existing Unsafe/deprecation/unchecked warnings; tests NO-SOURCE.",
+    "preliminary_build": "A successful earlier build was superseded after the NaN comparison mismatch was found and corrected; not used as final validation.",
+    "java17_attempt": "Configuration-only failure because inherited JAVA_HOME selected Java 17; source not compiled.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing local paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "The metadata follow-up corrects only the recorded LF source hash and refreshes RESUME with the verified content refs; the R1973 Java source and already successful final build are unchanged."
+}
