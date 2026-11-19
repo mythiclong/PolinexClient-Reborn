@@ -1,0 +1,14 @@
+Final R1974 full-tree build — safe summary (raw Gradle output is local only)
+
+Command from `polinex-src`:
+`gradlew.bat -Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+
+Runtime: Eclipse Temurin JDK 25.0.4.1+1-LTS.
+Started UTC: 2026-11-19T18:52:49.7361606Z
+Ended UTC: 2026-11-19T18:54:06.4786221Z
+Exit code: 0
+Result: `BUILD SUCCESSFUL`; 4 tasks executed; tests `NO-SOURCE`; 18 existing Unsafe/deprecation/unchecked warnings.
+Built mod JAR SHA-256: `64a196ac80cbc925d9d5f144657363b7042753ac7fd46e482d2d1a91cf85e233`.
+Compiled owner class SHA-256: `d2fbfd19868681c2c00c6af2682be04f7ea629ded598f97f4426b4e335867f25`.
+
+Runtime/client/world/server tests were not run. The complete machine-specific raw log is retained locally and is not published.

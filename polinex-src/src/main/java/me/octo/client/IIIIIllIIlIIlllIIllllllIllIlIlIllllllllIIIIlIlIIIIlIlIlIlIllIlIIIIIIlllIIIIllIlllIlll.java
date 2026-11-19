@@ -1309,8 +1309,10 @@ if (var6 == null) {
 if (var6.c() == me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII) {
    return null;
 }
-boolean var7 = var5 != null && me.octo.client.utils.IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.c(param4, param2) > this.f() + 0.75;
-return var7 && this.f(param2, var6.b(), param4) ? TuplesKt.to(param2, var6.b()) : null;
+double var8 = me.octo.client.utils.IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.c(param4, param2);
+double var10 = this.f() + 0.75;
+boolean var7 = var5 != null ? var8 <= var10 : var8 != var10;
+return var7 && (var5 == null || this.f(param2, var6.b(), param4)) ? TuplesKt.to(param2, var6.b()) : null;
    }
 
    private final ArrayList<String> e(Vec3 param1, Vec3 param2, Vec3 param3) {

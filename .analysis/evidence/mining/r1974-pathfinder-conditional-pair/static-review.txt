@@ -1,0 +1,29 @@
+R1974 static review — Pathfinder `a(Vec3, Vec3, List, Vec3): Pair<Vec3, Vec3>`
+
+Baseline: commit `a98b3c0cd9fbc597d8806f9a501b213c22fee025`; source blob `445c75fa755b91f86fe6bbb014a87c7a716a75c2`. Final source blob `a680810dfafd72e52504dec7f259f9d814921736`; LF SHA-256 `c699ece025cea95ce4827b4e0834143466f76d1a3cbcd18c410046468ba0846b`; exact working-tree SHA-256 at final build `0a526f3cb5dbf8c2fd816a51dd885342cb3b8a4bda407c7d7006a08a78d5f77f`.
+
+## Complete original descriptor review
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)Lkotlin/Pair;`. Original offsets 0–170 inclusive; 8 exception-table entries. The complete original and final compiled owner were read using `javap -p -c -s -v`; the protected JAR and complete dumps remain local.
+
+## Confirmed corrections
+
+- The first geometry predicate and early `Pair(from,to)` return occur only when the state gate is non-null. The method then gets list element 1 with `CollectionsKt.getOrNull`; a missing node or the sentinel enum returns null.
+- After the node/sentinel checks, the original always evaluates distance `(param4,param2)`, then `f()+0.75`, even if the state gate is null. The prior source incorrectly short-circuited these calls behind `gate != null` and used the opposite `>` comparison.
+- With a non-null gate, original `dcmpg` + `ifgt` means the candidate boolean is `distance <= f()+0.75`; NaN is false. With a null gate, the original stores the raw compare result and tests it for zero, so the candidate boolean is true exactly when the two values compare unequal, including NaN. The source now models these branches as `gate != null ? distance <= limit : distance != limit` after evaluating both operands in original order.
+- The final gate check is also significant: when gate is null and the candidate boolean is true, the original bypasses the second geometry predicate and returns `Pair(param2,node.position)`; with non-null gate it calls that predicate and returns the pair only on true. The source now preserves this. The position accessor is called at the same condition/return points.
+
+## Compiled comparison and exception boundary
+
+The ordered field/method-target stream contains 13 events in both original and final compiled methods with no unmatched target/receiver. Three call instructions change from original `invokespecial` to javac `invokevirtual` for the same private methods `f(Vec3,Vec3,Vec3):boolean` and `f():double`; the owner is final and those targets are private, so dispatch remains statically bound. The checked numeric constant is `0.75`; list index `1` and enum identity target match. Java materializes conditional booleans with additional `iconst` instructions, so the constant/opcode sequence is not byte-for-byte identical; the complete branch truth table was checked instead.
+
+All 8 original handlers catch only `kotlin.NoWhenBranchMatchedException` and route through the previously verified identity `a(Throwable):Throwable` rethrow helper. The final Java method has no catch handlers and swallows no exceptions.
+
+Static status: **PASS** for the complete descriptor/source/compiled-method review. This is not a runtime-equivalence claim.
+
+## Build and runtime boundary
+
+Final Temurin JDK `25.0.4.1+1-LTS` full-tree `build --rerun-tasks`: `2026-11-19T18:52:49.7361606Z`–`2026-11-19T18:54:06.4786221Z`, exit code 0, 18 existing Unsafe/deprecation/unchecked warnings, tests `NO-SOURCE`. See `build-jdk25-final.log`.
+
+No direct probe, Minecraft client, valid player/world, normal Pathfinder user path, desktop input, or compatible server was used. This helper's geometry predicate still requires valid in-game state for behavioral acceptance.

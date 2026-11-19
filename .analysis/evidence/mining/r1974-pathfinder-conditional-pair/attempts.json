@@ -1,0 +1,14 @@
+{
+  "attempts": [
+    {
+      "id": "R1974-final-jdk25-full-tree-build",
+      "started_utc": "2026-11-19T18:52:49.7361606Z",
+      "ended_utc": "2026-11-19T18:54:06.4786221Z",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "exit_code": 0,
+      "result": "Full-tree build succeeded for the final R1974 source. 18 existing Unsafe/deprecation/unchecked warnings; tests are NO-SOURCE.",
+      "status": "FINAL_PASS"
+    }
+  ],
+  "raw_logs": "Retained locally only; not published because they contain machine-specific paths."
+}
