@@ -1,6 +1,6 @@
 {
   "sync_id": "SYNC-20261119-PATHFINDER-R1963-R1964",
-  "generated_utc": "2026-11-19T03:52:06Z",
+  "generated_utc": "2026-11-19T03:54:47Z",
   "scope": "Correct the Pathfinder route API operand-stack interpretation; repair type guards in the normal route-event consumer; record a full-tree build; refresh Chinese and English handoffs.",
   "evidence_baselines": {
     "private_openpolinex": {
@@ -68,9 +68,9 @@
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/summary.txt": "304bcaca16adda390709523c3c7f9f9dfe0c3d34b37270dac0b568f44547e572",
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun.log": "e77440a74fb710099b745610968e91e201b9b454d890b4905fc743287c118bd1",
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun-corrected.log": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf",
-    ".analysis/reports/RESUME.md": "43119f50b24b5ec0264df5874762dc41123937bb3714b8a35e6eb877b703d4dd",
-    "README.md": "a9a9393cc79645cfada6b70ff3c4359c85c7b8b65cf219241304fa1a41a08cb9",
-    "README_EN.md": "61c50dd5bc85cb8867018063fb5535ec71b5b65a1a3b795ce0a20b05b4d85d08",
+    ".analysis/reports/RESUME.md": "dd6d65b816be7d85e0b0057b290c5346ba5bb579879d21c2e023d3532c7e6100",
+    "README.md": "5c47d0822cb2841cad53abec4bfdd90fff7f0f6ca50b3a262b7ff6546f710273",
+    "README_EN.md": "e68a823c49f773fd5ab3e31d5a1cd72244662e36d02e8a80ff2807673331cd62",
     "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a",
     "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java": "aaaa07296f1a67aa443ec8d8d22c8863e40ebc6301da7a0be47fbc5e692aa812"
   },
@@ -99,7 +99,7 @@
       "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java"
     ],
     "follow_up_index_commit": {
-      "status": "This synchronization index, canonical source-hash cross-check, and README/RESUME links are included in follow-up documentation-only commits after the verified content commits above.",
+      "status": "This index and source-hash cross-check are published in follow-up metadata/documentation-only commits after the verified source/content commits; all indexed files match byte-for-byte between both repository snapshots.",
       "files": [
         ".analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json",
         ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
