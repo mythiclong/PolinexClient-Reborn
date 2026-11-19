@@ -1,0 +1,9 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+method=processChunk(IILjava/nio/ByteBuffer;)V
+fixtures=remaining lengths 0..2048 inclusive
+input_pattern=0,1,2,3,255 repeated after a 3-byte prefix
+cursor_assertion=original and compiled buffers retain position 3 and the same limit
+state_assertion=BYTE_STATES maps exactly equal for every fixture
+fixture_count=2049
+total_input_bytes_per_implementation=2098176
+assertion=PASS

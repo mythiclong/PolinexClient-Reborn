@@ -1,0 +1,8 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+method=loadCache([BI)V
+fixtures=byte-array lengths 0..2048 inclusive; second argument cycles -3..3
+coverage=both modulo-9 record parsing and malformed-length processChunk fallback
+state_assertion=BYTE_STATES maps exactly equal; HEIGHTS remains empty
+fixture_count=2049
+total_input_bytes_per_implementation=2098176
+assertion=PASS

@@ -1,0 +1,94 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1956-R1961",
+  "generated_utc": "2026-11-19T02:23:26Z",
+  "scope": "Pathfinder collision-gate review and isolated original/current differential checks for NativePathFinder methods; bilingual README and concise handoff update.",
+  "evidence_source_baselines": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "ref": "codex/handoff-progress-2026-11-15",
+      "commit": "c213e3fdb70915b0f7827a812086dd91196c1663"
+    },
+    "public_polinex_client_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "ref": "main",
+      "commit": "497be254906ccb31460761bf89ca724d9f740862"
+    },
+    "java_source_tree_sha256_path_tab_contenthash_lf": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48"
+  },
+  "experiments": [
+    {
+      "id": "R1956",
+      "manifest": ".analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json",
+      "status": "static review; no confirmed mismatch; runtime world collision remains open"
+    },
+    {
+      "id": "R1957",
+      "manifest": ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/manifest.json",
+      "probe_source": ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/PathfinderNormalizeStateExhaustive.java",
+      "run_log": ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/run.log",
+      "result": "256/256 signed-byte inputs matched"
+    },
+    {
+      "id": "R1958",
+      "manifest": ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/manifest.json",
+      "probe_source": ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/PathfinderProcessChunkBoundaryProbe.java",
+      "run_log": ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/run.log",
+      "result": "2,049 remaining-length fixtures matched state maps and buffer cursors"
+    },
+    {
+      "id": "R1959",
+      "manifest": ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/manifest.json",
+      "probe_source": ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/PathfinderLoadCacheBoundaryProbe.java",
+      "run_log": ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/run.log",
+      "result": "2,049 byte-array-length fixtures matched cache side effects"
+    },
+    {
+      "id": "R1960",
+      "manifest": ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/manifest.json",
+      "probe_source": ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/PathfinderUpdateChunkBoundaryProbe.java",
+      "run_log": ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/run.log",
+      "result": "34,324 array/count/coordinate fixtures matched cache side effects"
+    },
+    {
+      "id": "R1961",
+      "manifest": ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/manifest.json",
+      "probe_source": ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/PathfinderHeightCacheBoundaryProbe.java",
+      "run_log": ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/run.log",
+      "result": "384 height-array/count/coordinate fixtures matched cache side effects"
+    }
+  ],
+  "production_source_changed": false,
+  "build_validation": "R1955 full Temurin 25 Gradle build reused because the Java source-tree fingerprint is unchanged; no Minecraft client/world/server run in this batch.",
+  "snapshot_files": [
+    "README.md",
+    "README_EN.md",
+    ".analysis/reports/RESUME.md",
+    ".analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json",
+    ".analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json",
+    ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/manifest.json",
+    ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/PathfinderNormalizeStateExhaustive.java",
+    ".analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/run.log",
+    ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/manifest.json",
+    ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/PathfinderProcessChunkBoundaryProbe.java",
+    ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/run.log",
+    ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/manifest.json",
+    ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/PathfinderLoadCacheBoundaryProbe.java",
+    ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/run.log",
+    ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/manifest.json",
+    ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/PathfinderUpdateChunkBoundaryProbe.java",
+    ".analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/run.log",
+    ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/manifest.json",
+    ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/PathfinderHeightCacheBoundaryProbe.java",
+    ".analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/run.log"
+  ],
+  "not_published": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Compiled probe .class files",
+    "Local Gradle build outputs and caches"
+  ],
+  "publication": {
+    "status": "prepared; push verification pending",
+    "content_ingest_commits": null
+  }
+}

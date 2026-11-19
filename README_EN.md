@@ -7,32 +7,34 @@ This repository contains the managed-source reconstruction of a Minecraft 26.1.2
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="English"></a>
 </p>
 
-## Current progress (2026-11-19)
+## Current progress (2026-11-19 UTC; Chicago local date: 2026-11-18)
 
-The current slice is **R1955: valid-world acceptance of the restored Pathfinder route and height helpers**.
+The current slice is **R1962: complete bytecode review and differential coverage for `NativePathFinder.isWalkable` and `findPath`**.
 
-- **A* search and candidate nodes:** R1947 restored the candidate-node gate, traversal, and null contract against complete original bytecode. R1948 corrected A* node-allocation order and the compiled form of its `Function2` callback. Existing full-tree compilation with Temurin 25 passed with exit code 0.
-- **Cache-loading gate:** R1949 compared the complete cache-loader bytecode and scanned all 5,475 classes in the original JAR with no parse errors. Gate-setter call sites are identified. Actual cache-file reads and writes remain unverified.
-- **Pure-Java pathfinding layer:** R1951 compared all 25 `NativePathFinder` methods with the class compiled from current source. An isolated classloader probe matched original and current outputs and cache side effects across 31 fixtures. Seven methods have a different compiled control-flow shape; finite samples do not establish full-domain or in-game equivalence.
-- **Actual call sites:** R1952 scanned 5,475 original-JAR classes and 2,823 compiled classes, with zero parse errors in either set. The same event consumer has matching direct targets for three `BlockPos` API methods. Their execution through normal in-game events has not been verified.
-- **Route entry and cache writes:** R1954 compared the complete original/current bytecode for `a(long[], double, double, boolean): List` and the cache writer `(int, int, ByteBuffer): void`. The entry gate, empty-level path, smoothing call order, cache-directory gate, data header, file options, write loop, and close path showed no confirmed mismatch. An apparent directory mismatch came from misreading the JVM operand stack; the temporary edit was reverted and the Java source fingerprint remains `a23ce38f…`. The Gradle `build` command passed under Temurin 25 with exit code 0; no production source changed.
-- **R1955 route/height-helper repairs:** Complete-descriptor reviews covered route conversion `a([JDDLClientLevel;)List` and `g(BlockPos)`. Both `0.5625` conditions now compare directly, correcting the prior Kotlin comparison translation for NaN; six boundary fixtures match the original. The helper restores the original `d()` gate, its order before null validation/world lookup, and the centered/top fallback for nonzero. A scan of all 5,475 original-JAR classes found no normal internal path that sets the gate to zero; its public setter/reflection remain external boundaries, so the fallback is retained. The final R1955 source tree passed the full Gradle build under Temurin 25.
-- **Runtime acceptance:** Routes, collisions, and cache reads/writes have not passed verification through a valid Minecraft world and normal player entry point. No compatible-server acceptance has been completed. Static restoration, sample probes, and compilation do not replace these checks.
-- **ClickGUI:** A same-process vanilla Options comparison showed working keyboard and scroll input, with no observable mouse feedback from category icons or the Draw control. Screen event forwarding, hit testing, module toggling, and settings save/reload remain open.
-- **Other features:** Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, and networking still have incomplete restoration or acceptance. Real-server login, interaction, disconnect, and reconnect remain unverified.
+- **A* search and candidate nodes:** R1947 restored the candidate-node gate, traversal, and null contract against complete original bytecode. R1948 corrected node-allocation order and the compiled `Function2` callback form.
+- **Route and collision helpers:** R1955 repaired both `0.5625`/NaN branches in route conversion and restored the gate, call order, and fallback in `g(BlockPos)`. The full-tree Gradle `build` passed under Temurin 25.
+- **R1956 collision-gate review:** The original `$llII…` and current `$PXEvMid` names refer to the same source-renamed state holder. Getter, setter, initialization, and `a(BlockPos, ClientLevel): boolean` showed no confirmed semantic mismatch. Valid-world collision behavior is still unverified.
+- **R1957–R1961 `NativePathFinder` differential checks:** Original and current compiled classes matched in isolated classloaders for all 256 inputs to `normalizeState(B)B`, 2,049 `processChunk` lengths, 2,049 `loadCache` lengths, 34,324 `updateChunk` boundary combinations, and 384 `updateHeights` boundary/signed-short fixtures. Each check compared actual cache side effects; see the manifests for precise limits.
+- **Scope of this batch:** No production Java source changed in R1956–R1961. The 1,602-file Java source fingerprint remains `e6046434…`. We reused the successful R1955 Temurin 25 full-build output; this batch did not rebuild or launch Minecraft.
+- **Open acceptance:** Pathfinder through its normal player entry point, routes/collisions in a valid world, on-disk cache lifecycle, and compatible-server behavior remain unverified. Offline comparisons do not replace in-game acceptance.
+- **ClickGUI:** A same-process vanilla Options comparison showed working keyboard and scroll input, but no observable mouse feedback from category icons or the Draw control. Event forwarding, hit testing, module toggling, and settings persistence remain open.
+- **Other features:** Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, networking, and native/JNIC still have incomplete restoration or acceptance. Real-server login, interaction, disconnect, and reconnect remain unverified.
 
-## Handoff and evidence
+### Latest handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
-- [Latest Pathfinder sync record (2026-11-19)](.analysis/reports/SYNC-20261119-PATHFINDER-R1955-GATE.json)
-- R1955 source and evidence pushed to private `openpolinex` branch `codex/handoff-progress-2026-11-15` (`980aac4`) and public `PolinexClient-Reborn` `main` (`8bd1d61`).
-- [R1955 route/height-helper review](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
-- [R1954 route-entry and cache-write review](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
-- [R1947 candidate-node audit](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
-- [R1948 A* core audit](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
-- [R1949 cache-loader audit](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
-- [R1951 NativePathFinder bytecode and golden probe](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
-- [R1952 actual invoke and method-handle scan](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
+- [R1956–R1961 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
+- [R1956 collision-gate static review](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)
+- [R1957 exhaustive `normalizeState` byte-domain comparison](.analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/manifest.json)
+- [R1958 `processChunk` boundary comparison](.analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/manifest.json)
+- [R1959 `loadCache` boundary comparison](.analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/manifest.json)
+- [R1960 `updateChunk` boundary comparison](.analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/manifest.json)
+- [R1961 `updateHeights` boundary comparison](.analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/manifest.json)
+- [R1955 route/height-helper repairs](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
+- [R1954 route entry and cache writes](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
+- [R1951 initial NativePathFinder comparison](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+
+Recalculate source inventory with `python -B .analysis/stats.py`; counts do not establish equivalence. The original JAR SHA-256 is `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; it is not published. Full `javap` dumps remain local.
 - [R1953 Pathfinder wrapper static review](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
 The current source inventory is 1,602 Java files, 1,158,790 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.

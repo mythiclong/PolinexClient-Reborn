@@ -1,0 +1,6 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+method=updateChunk(III[I[BI)V
+coverage=byte/index lengths 0..32, null indices, threshold counts, signed/extreme indices and origins
+state_assertion=BYTE_STATES maps exactly equal; HEIGHTS remains empty
+fixture_count=34324
+assertion=PASS

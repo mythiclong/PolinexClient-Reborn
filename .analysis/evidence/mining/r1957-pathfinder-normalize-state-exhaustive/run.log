@@ -1,0 +1,5 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+descriptor=(B)B
+domain=all signed byte values [-128,127]
+matches=256
+assertion=PASS

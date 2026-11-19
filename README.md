@@ -7,32 +7,34 @@
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
 </p>
 
-## 当前进度（2026-11-19）
+## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-18）
 
-当前唯一切片是 **R1955 Pathfinder 路线/高度 helper 还原后的有效世界验收**。
+当前唯一切片：**R1962：`NativePathFinder.isWalkable` 与 `findPath` 的完整字节码复核和差分覆盖**。
 
-- **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点的 gate、遍历与空值契约；R1948 修正 A* 节点分配顺序和 `Function2` 回调编译形式。既有 Temurin 25 全树编译退出码为 0。
-- **缓存加载 gate**：R1949 对照完整缓存加载器字节码，并扫描原版 JAR 的 5,475 个 class，0 个解析错误；gate setter 调用点已确认。缓存文件实际读写仍未验证。
-- **纯 Java 寻路层**：R1951 将 `NativePathFinder` 的 25 个完整方法与当前源码编译产物对照，并用隔离 classloader 比较原版和当前实现的 31 组输出及缓存副作用，全部匹配。7 个方法的字节码控制流形状不同；有限样本一致不代表全域或实机等价。
-- **实际调用点**：R1952 扫描原版 JAR 5,475 个 class 和当前编译产物 2,823 个 class，均为 0 个解析错误。确认同一事件消费者对三个 `BlockPos` API 方法有相同的直接调用目标；尚未通过游戏内正常事件验证这些分支会执行。
-- **路线入口与缓存写入**：R1954 对照 `a(long[], double, double, boolean): List` 和缓存写方法 `(int, int, ByteBuffer): void` 的完整原版/当前字节码。入口 gate、空世界、平滑调用顺序匹配；缓存目录 gate、数据头、文件选项、写循环和关闭路径未发现可确认差异。先前看似目录不匹配的判断是 JVM 操作数栈误读，临时改动已撤回，Java 源树内容指纹仍为 `a23ce38f…`。Temurin 25 下 Gradle `build` 退出码 0；本批次没有生产源码修改。
-- **R1955 路线/高度 helper 修复**：按完整 descriptor 对照路线转换器 `a([JDDLClientLevel;)List` 和 `g(BlockPos)`。两处 `0.5625` 条件改为直接比较，修复旧 Kotlin 比较翻译对 NaN 的错误分支；六个边界样本匹配原版。恢复 `g` 的 `d()` gate、在参数校验和读取世界前执行的顺序，以及 gate 非零时居中/顶面 fallback。扫描原版 5,475 个 class 未发现模组内部正常路径把 gate 改为 0；public setter/反射仍可能由外部触发，因此 fallback 按原版保留。最终 R1955 源树在 Temurin 25 下全树 `build` 通过。
-- **运行验收**：尚未通过有效 Minecraft 世界和玩家入口验证路线、碰撞及缓存读写，也没有真实兼容服务器验收。静态还原、样本探针和编译不能代替这些验收。
-- **ClickGUI**：已有同进程原版 Options 对照证据：键盘和滚轮有效，分类图标、Draw 控件未观察到鼠标反馈。内部 Screen 鼠标事件转发与控件命中路径仍待核对；尚未通过悬停、点击、模块开关及设置保存/重载验收。
-- **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染与网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开、重连未验证。
+- **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
+- **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
+- **R1956 碰撞 gate 静态复核**：确认原版 `$llII…` 与当前 `$PXEvMid` 是同一状态持有者的源码重命名；getter、setter、初始化及 `a(BlockPos, ClientLevel): boolean` 的分支语义未发现确认差异。有效世界碰撞仍未验收。
+- **R1957–R1961 `NativePathFinder` 差分**：原版与当前编译产物在隔离 classloader 中通过 `normalizeState(B)B` 的 256 个输入、`processChunk` 的 2,049 个长度、`loadCache` 的 2,049 个长度、`updateChunk` 的 34,324 组边界组合，以及 `updateHeights` 的 384 组边界/短整型样本。各测试检查真实缓存副作用；完整范围与限制见每份 manifest。
+- **本批次改动边界**：R1956–R1961 未修改生产 Java 源码；当前 1,602 个 Java 文件的内容指纹仍为 `e6046434…`。沿用 R1955 在 Temurin 25 下成功的全树构建产物，本批次没有重新构建，也没有启动 Minecraft。
+- **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
+- **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
+- **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
 
-最新 Pathfinder 证据与简短交接：
+### 最新交接与证据
 
-- [当前交接](.analysis/reports/RESUME.md)
-- [2026-11-19 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1955-GATE.json)
-- R1955 源码与证据已推送：私有 `openpolinex` 分支 `codex/handoff-progress-2026-11-15`（`980aac4`）；公开 `PolinexClient-Reborn` 的 `main`（`8bd1d61`）。
-- [R1955 路线/高度 helper 复核](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
-- [R1954 路线入口与缓存写入复核](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
-- [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
-- [R1948 A* 核心审查与全树构建](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
-- [R1949 缓存加载与 gate 调用点](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
-- [R1949 原版 JAR 调用扫描脚本](.analysis/evidence/mining/r1949-pathfinder-cache-loader/verify_gate_state_owner.py)
-- [R1951 NativePathFinder 原版对照与 golden 记录](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+- [当前短交接](.analysis/reports/RESUME.md)
+- [R1956–R1961 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
+- [R1956 碰撞 gate 静态复核](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)
+- [R1957 `normalizeState` 全 byte 域差分](.analysis/evidence/mining/r1957-pathfinder-normalize-state-exhaustive/manifest.json)
+- [R1958 `processChunk` 边界差分](.analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/manifest.json)
+- [R1959 `loadCache` 边界差分](.analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/manifest.json)
+- [R1960 `updateChunk` 边界差分](.analysis/evidence/mining/r1960-pathfinder-update-chunk-boundaries/manifest.json)
+- [R1961 `updateHeights` 边界差分](.analysis/evidence/mining/r1961-pathfinder-height-cache-boundaries/manifest.json)
+- [R1955 路线/高度 helper 修复](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
+- [R1954 路线入口与缓存写入](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
+- [R1951 NativePathFinder 初始方法对照](.analysis/evidence/mining/r1951-native-pathfinder-implementation-audit/manifest.json)
+
+源码库存可用 `python -B .analysis/stats.py` 复算；库存计数不代表功能等价。原始 JAR SHA-256 为 `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，不发布；完整 `javap` 转储留在本地分析目录。
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 

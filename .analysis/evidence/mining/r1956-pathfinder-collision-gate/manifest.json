@@ -1,0 +1,54 @@
+{
+  "experiment_id": "R1956",
+  "slice_id": "PATHFINDER-COLLISION-HELPER-GATE-SEQUENCE",
+  "generated_utc": "2026-11-19T02:14:00Z",
+  "evidence_produced_against_commit": "c213e3fdb70915b0f7827a812086dd91196c1663",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
+  "source_files": {
+    "collision_helper": {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
+      "sha256": "b62182caae0cd921c68cef3b9c98ad88c0cd6d60bb72e053d0d1f1df6e6f6343"
+    },
+    "gate_owner": {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java",
+      "sha256": "df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e"
+    },
+    "conditional_writer": {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIlllIlIIIIlIlIIIIlIIIlIIIIIIlIlIIIIlIllIllllllIlIIlIIIlllIIlllIIllIIIIllIllllIlIIII.java",
+      "sha256": "3cae4ef33c9a553c78657a6f670b5d8bfe1df1b68af385707ad0605fd08a85f8"
+    }
+  },
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "methods_reviewed": [
+    {
+      "original_owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+      "compiled_owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/client/multiplayer/ClientLevel;)Z",
+      "original_class_sha256": "b99f636784628adc8c6459fa1c8110268b65e6164e830d72ac7134be22271535",
+      "compiled_class_sha256": "3ee1baf10dc90fd1eab81f5af06b8a32b8e503e809a8704b9101867b7c0e2346",
+      "original_dump_sha256": "8ad122d4b0d556aba4098834ab1dbab3704b21b1f9aa476aa41e177d3de43920",
+      "compiled_dump_sha256": "4594373ab5747facd174268099b7c28a6d0889cb5215572d63906687ca1efab2"
+    },
+    {
+      "original_owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+      "compiled_owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$PXEvMid",
+      "methods": ["b(I)V", "j()I", "k()I", "<clinit>()V"],
+      "original_class_sha256": "3d7544ad629f8b1ae3ad1654558b8a6e2665f6a007a65974d98f06d2fbc439ee",
+      "compiled_class_sha256": "9888ee31590550ee304714b9e69fc40051c2d3eade0d8c69afde68f756ac035f",
+      "original_dump_sha256": "f9a9e1fb5a79b692141a35447a1dfdb1d3b885b7b77c0b5dd3903b60352548b9",
+      "compiled_dump_sha256": "2c87ed33768e34152b39378222ab9dd9f24d5905464be53530365411c6f6c7e6"
+    }
+  ],
+  "static_findings": [
+    "The collision helper's original owner calls the obfuscated nested gate holder j()I; the compiled owner calls its source-renamed PXEvMid.j()I. Both getters read their holder's corresponding static int field and return it.",
+    "Both holders' b(I)V methods write that field, and both class initializers call b(0). Their k()I methods have the same j()==0 ? 111 : 0 result; only compiler branch layout differs.",
+    "The collision method reads the gate before getBlockState in both versions, performs the Kotlin non-null-result check before isAir, and calls getCollisionShape(...).isEmpty() only for a non-air block when the gate is zero. The gate-nonzero return is isAir; the gate-zero return is isAir OR empty collision shape.",
+    "The apparent owner-name difference is explained by the source rename, not by a different gate object. R1949's original-JAR callsite scan covered 5,475 classes with zero parse failures and found only the holder initializer and the conditional cache-owner writer; that existing scan is reused, not rerun."
+  ],
+  "probe_state": "Static full-descriptor javap review only; no valid world, Minecraft client, server, or user input.",
+  "production_source_changed": false,
+  "build": "Not rerun: no production source changed; the source-tree fingerprint is identical to R1955's successful Temurin 25 full build.",
+  "result": "No confirmed bytecode-backed source mismatch in the reviewed gate state or collision helper. Runtime collision behavior remains open.",
+  "full_javap_dumps_published": false
+}

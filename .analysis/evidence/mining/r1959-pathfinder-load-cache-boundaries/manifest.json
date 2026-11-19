@@ -1,0 +1,37 @@
+{
+  "experiment_id": "R1959",
+  "slice_id": "PATHFINDER-LOAD-CACHE-BOUNDARIES",
+  "generated_utc": "2026-11-19T02:08:34Z",
+  "started_utc": "2026-11-19T02:08:33.5087736Z",
+  "finished_utc": "2026-11-19T02:08:34.6324802Z",
+  "evidence_produced_against_commit": "c213e3fdb70915b0f7827a812086dd91196c1663",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "method": {
+    "owner": "me.octo.client.utils.player.pathfinder.NativePathFinder",
+    "name": "loadCache",
+    "descriptor": "([BI)V",
+    "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "source_sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f",
+    "original_class_sha256": "ed2826a8ea4040575c566912bb4b40bace3a90730df4f9337e8593af1c15663f",
+    "compiled_class_sha256": "95ecaec07e995e9d7189b6cdb3c5729d1d317004232b4348c82266690e28c835"
+  },
+  "probe": {
+    "source": ".analysis/evidence/mining/r1959-pathfinder-load-cache-boundaries/PathfinderLoadCacheBoundaryProbe.java",
+    "source_sha256": "7dc8be84ef3245d91d7dd92068bd8f4c52d9dd4d63f1b5395a7428543c25941e",
+    "compile_exit_code": 0,
+    "run_exit_code": 0,
+    "fixtures": 2049,
+    "input_lengths": "Every byte-array length from 0 through 2048 inclusive",
+    "second_argument": "Cycles through -3..3",
+    "coverage": "Both modulo-9 record parsing and malformed-length processChunk fallback",
+    "assertions": "BYTE_STATES maps exactly equal for each fixture; HEIGHTS remains empty.",
+    "run_log": "run.log",
+    "run_log_sha256": "3d68c0ad6192a0cba37d4f7fdd9a6a0485e51c0d52d0568f20b62f8bc36ed9ca",
+    "run_log_line_endings": "normalized LF"
+  },
+  "probe_state": "Isolated original/current classloaders; no Minecraft client, world, server, or user input.",
+  "production_source_changed": false,
+  "result": "All tested cache parse/fallback state effects matched; actual on-disk cache lifecycle remains untested.",
+  "build_reuse": "Current class came from the unchanged R1955 full-build source tree; no build rerun in R1959."
+}

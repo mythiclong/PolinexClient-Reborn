@@ -1,0 +1,6 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+method=updateHeights(II[SI)V
+coverage=array lengths 0..33 and 255/256/257/65535/65536; count boundaries; varied signed-short patterns in long arrays; coordinate overflow edges; null arrays
+state_assertion=HEIGHTS maps exactly equal; BYTE_STATES remains empty
+fixture_count=384
+assertion=PASS

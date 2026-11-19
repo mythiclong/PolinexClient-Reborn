@@ -1,0 +1,40 @@
+{
+  "experiment_id": "R1958",
+  "slice_id": "PATHFINDER-PROCESS-CHUNK-BOUNDARIES",
+  "generated_utc": "2026-11-19T02:07:47Z",
+  "started_utc": "2026-11-19T02:07:45.8027235Z",
+  "finished_utc": "2026-11-19T02:07:47.0866657Z",
+  "evidence_produced_against_commit": "c213e3fdb70915b0f7827a812086dd91196c1663",
+  "source_tree_aggregate_sha256_path_tab_contenthash_lf": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "method": {
+    "owner": "me.octo.client.utils.player.pathfinder.NativePathFinder",
+    "name": "processChunk",
+    "descriptor": "(IILjava/nio/ByteBuffer;)V",
+    "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "source_sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f",
+    "original_class_sha256": "ed2826a8ea4040575c566912bb4b40bace3a90730df4f9337e8593af1c15663f",
+    "compiled_class_sha256": "95ecaec07e995e9d7189b6cdb3c5729d1d317004232b4348c82266690e28c835"
+  },
+  "probe": {
+    "source": ".analysis/evidence/mining/r1958-pathfinder-process-chunk-boundaries/PathfinderProcessChunkBoundaryProbe.java",
+    "source_sha256": "5c795c6fa7b0d3e20f282fb51d1bbf1546db61d585428ee6b5945ce28efbd1a0",
+    "compile_exit_code": 0,
+    "run_exit_code": 0,
+    "remaining_lengths": "Every integer from 0 through 2048 inclusive",
+    "fixtures": 2049,
+    "total_input_bytes_per_implementation": 2098176,
+    "input": "Heap ByteBuffer; three-byte prefix with position 3; remaining bytes repeat 0,1,2,3,255",
+    "assertions": [
+      "Both original and current buffers retain position 3 and limit 3+remaining.",
+      "BYTE_STATES maps are exactly equal after every fixture."
+    ],
+    "run_log": "run.log",
+    "run_log_sha256": "a2e4bb14e18b8489a7eecfdce246f924a7b3d743d92cc5ac33dee8e81ee03fb5",
+    "run_log_line_endings": "normalized LF"
+  },
+  "probe_state": "Isolated original/current classloaders; no Minecraft client, world, server, or user input. Existing R1951's 65,536-byte fixture is separate evidence.",
+  "production_source_changed": false,
+  "result": "All tested length-boundary state and buffer-cursor assertions matched; not a proof for every ByteBuffer subtype or all sizes.",
+  "build_reuse": "Current class came from the unchanged R1955 full-build source tree; no build rerun in R1958."
+}
