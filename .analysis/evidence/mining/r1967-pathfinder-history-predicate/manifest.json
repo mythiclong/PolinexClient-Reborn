@@ -1,0 +1,83 @@
+{
+  "experiment_id": "R1967-pathfinder-history-predicate",
+  "generated_utc": "2026-11-19T16:23:15Z",
+  "scope": "Restore Pathfinder owner q():boolean from the complete original CFG; validate final compiled behavior against the original in an isolated pure-method differential.",
+  "source_baseline": {
+    "commit": "fa3152eaed42b497368f781737a72c241e97a5b4",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f",
+    "baseline_content_sha256_lf": "edff274cbebe2d03598b5925bb8762ac62d56c9eb6d2101da00bd8a92f51aa8f"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "q",
+    "descriptor": "()Z",
+    "before": "Unconditional IllegalStateException(Decompilation failed); final compiled method constructed and threw that exception.",
+    "after": "Walks the last eight records, preserves guard-null behavior, classifies each a()/d() pair, counts positive/negative states and changes between prior nonzero states, then applies the original >=2 thresholds.",
+    "source_working_tree_sha256_at_final_build": "cdec84fd5c718d79bd629733a8bc18e8221389e628151fb6d88e56cf93edd944",
+    "source_content_sha256_lf": "b4e6e531b6b93533b1c0e868cb28e78de82e41e053b594560edfcf78fd94747e",
+    "source_git_blob_oid": "7ab72411167e9048292af7d61a47ebf16bef495e",
+    "compiled_owner_class_sha256": "6e628b507a809502d89570248d0f863f03f13ef59c49c35362abe1667960400c"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "original_nested_record_javap_sha256_local_only": "662078b7a93a98042619d9ab17774c23adbc2c7d223e1ca5fa10e05f14125950",
+    "compiled_owner_javap_sha256_local_only": "61454c1473a58f560ba1223f0bde7641b057f60a11cbb4f5f14f0af8bd91715f",
+    "compiled_nested_record_javap_sha256_local_only": "769cc8b74796ddc03f44cb17dbd3c40f9bb462b2e37009448acf0eb22d4b02de"
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original q():Z CFG and exception table reviewed, not only the decompiler failure comment.",
+      "Original and current guard/list fields and exact nested record type confirmed.",
+      "Nested a():Z and d():Z descriptors and field-getter bodies reviewed in original bytecode; both are final pure getters.",
+      "Original subList is not involved; loop boundaries remain size-8 through size-1 and element null-check precedes cast.",
+      "First-differential mismatch corrected from the actual previous==0 branch; final exhaustive original/compiled differential passed.",
+      "Event-handler call to q():Z confirmed (original bytecode offset 590; current compiled handler offset 306)."
+    ],
+    "static_review_artifact_sha256_lf": "716e778efaa8dc4ca2f35bbee1e7343c16ada72c88bae65faaa114a04db5bc52"
+  },
+  "build": {
+    "record": "build-jdk25-final.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Temurin JDK 25.0.4.1",
+    "started_utc": "2026-11-19T16:09:41.5963486Z",
+    "ended_utc": "2026-11-19T16:10:33.4891684Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS"
+  },
+  "direct_probe": {
+    "record": "probe-jdk25-final.json",
+    "status": "PASS",
+    "process_exit_code": 0,
+    "all_boolean_inputs": 65536,
+    "null_and_non_null_guard_length_cases": 20,
+    "mismatches": 0,
+    "minecraft_client": false,
+    "valid_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED"
+  },
+  "attempts": "attempts.json",
+  "raw_log_index": "raw-log-index.json",
+  "raw_log_index_sha256_lf": "71c26625cc2f74964dce5410663589e1dd3ea0b9dfd2c52af7eac9c088ab3ea7",
+  "next_slice": {
+    "id": "R1968",
+    "method": "a(Entity, List, Vec3):void",
+    "descriptor": "(Lnet/minecraft/world/entity/Entity;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)V",
+    "status": "Current compiled method is a single return; original has implementation and normal route-event branch calls it. d(List):void is another confirmed empty-return gap; map all callsites before choosing a joint slice."
+  },
+  "publication_exclusions": [
+    "Original protected JAR and class files",
+    "Full original/current javap dumps",
+    "Compiled class files",
+    "Gradle caches and build outputs",
+    "Raw local build/probe logs containing local machine paths"
+  ],
+  "source_hash_semantics": "The working-tree SHA-256 fingerprints exact CRLF source bytes consumed by Gradle. source_content_sha256_lf fingerprints normalized LF source bytes. source_git_blob_oid is the repository's Git blob identity; these values are not interchangeable."
+}

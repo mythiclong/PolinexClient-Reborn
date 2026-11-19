@@ -1,0 +1,29 @@
+{
+  "experiment_id": "R1967-pathfinder-history-predicate",
+  "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src",
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS; Temurin-25.0.4.1+1",
+  "started_utc": "2026-11-19T16:09:41.5963486Z",
+  "ended_utc": "2026-11-19T16:10:33.4891684Z",
+  "exit_code": 0,
+  "result": "PASS: full-tree Gradle build; compileJava, jar, assemble, and build executed; test source set is NO-SOURCE.",
+  "raw_log_sha256_local_only": "69be66faa8e3c3f9727c022b34311745026a6dfa3e964e5439fcbb1516655c1a",
+  "published_redacted_log": "build-jdk25-final.log",
+  "published_redacted_log_sha256": "2d573ae350b34bf0a671488396d231353ed1f16713ce7407e00ea16f8439e4d9",
+  "source_working_tree_sha256": "cdec84fd5c718d79bd629733a8bc18e8221389e628151fb6d88e56cf93edd944",
+  "source_content_sha256_lf": "b4e6e531b6b93533b1c0e868cb28e78de82e41e053b594560edfcf78fd94747e",
+  "compiled_owner_class_sha256": "6e628b507a809502d89570248d0f863f03f13ef59c49c35362abe1667960400c",
+  "preliminary_environment_attempt": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "java_runtime": "Microsoft OpenJDK 17.0.19 (inherited JAVA_HOME)",
+    "exit_code": 1,
+    "failure_phase": "Gradle dependency/configuration, before source compilation",
+    "cause": "Fabric Loom 1.18.0-alpha.19 requires Java 25.",
+    "timestamp_status": "UTC timestamps were not captured for this preliminary environment invocation; it is not the accepted build run."
+  },
+  "environment_note": "The explicit Temurin 25 full-tree run above is the final build result.",
+  "redactions": [
+    "Local Windows worktree paths",
+    "Local JDK path"
+  ]
+}

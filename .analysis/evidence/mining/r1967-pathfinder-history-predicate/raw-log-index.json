@@ -1,0 +1,79 @@
+[
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "69be66faa8e3c3f9727c022b34311745026a6dfa3e964e5439fcbb1516655c1a",
+    "name": "build-jdk25-final.log",
+    "published_redacted_sha256": "2d573ae350b34bf0a671488396d231353ed1f16713ce7407e00ea16f8439e4d9"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "de1c567a8e1b2af7403b76bd9ef107f96a669a7d4c1cf99f80dc45d1e968a703",
+    "name": "probe-jdk25-debug.log",
+    "published_redacted_sha256": "416f96635d06528a31abe2ef7f7e5f13703f37027c907b5f373e003997601325"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "0d4a45692ce84774a81a5d3ca6b8bbefbcfb6757647eb5204931fec4143f609d",
+    "name": "probe-jdk25-debug2.log",
+    "published_redacted_sha256": "e78b6339477a4247e57e69e8b6c71bb85840a47495b42b1137ff245c7ff338d7"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "47de1bd5d32df7904e78f9dcce6f2bd9f96cacfef30821ff3037f1fafa0a58aa",
+    "name": "probe-jdk25-diagnostic.log",
+    "published_redacted_sha256": "c0589598c09c5088b7906277cfac3f72c784b9d184007054a4f94dd7e174846c"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "a48d495ba6d9ce4d122810e9766726977d43822abb2cd56a84795f3b69833cf1",
+    "name": "probe-jdk25-diagnostic2.log",
+    "published_redacted_sha256": "4a3b8347723cd094f8d8193a94e3b93c0f4b44bcfcb64f4e5b5984c08eda3a5a"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "a91d16b570091a7af50efd0a8d4a6d9b15a4b96e8ae62b61f61c5936c2992301",
+    "name": "probe-jdk25-final.log",
+    "published_redacted_sha256": "1bf8834f503b7e02908a28e489868d600cf7dfcf53328d9cd3a7c3587a45c31f"
+  },
+  {
+    "redactions": [
+      "local worktree path",
+      "local JDK path",
+      "local original JAR path"
+    ],
+    "raw_capture": "local TEMP only, not published",
+    "raw_sha256": "6a7ef5417d56b38ad7fe26037a61333aefbe278332bc455aabe6f86fd46f8c9a",
+    "name": "probe-jdk25-initial-mismatch.log",
+    "published_redacted_sha256": "cfc41cf828ac2f61c9b5a8a393255da05984c2320819f4f7a268a0d88f9ee138"
+  }
+]

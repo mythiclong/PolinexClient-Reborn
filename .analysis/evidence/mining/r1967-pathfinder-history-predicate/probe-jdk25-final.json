@@ -1,0 +1,65 @@
+{
+  "experiment_id": "R1967-pathfinder-history-predicate-differential",
+  "command_sequence": [
+    "javac -d <TEMP_PROBE_CLASSES> .analysis/evidence/mining/r1967-pathfinder-history-predicate/R1967PathfinderQDifferential.java",
+    "Set R1967_PROBE_CLASSES=<TEMP_PROBE_CLASSES> and R1967_ORIGINAL_JAR=<local original JAR with the recorded SHA-256>",
+    ".\\gradlew.bat -I .analysis/evidence/mining/r1967-pathfinder-history-predicate/probe.init.gradle runR1967PathfinderQProbe --no-daemon --console=plain"
+  ],
+  "working_directory": "polinex-src",
+  "runtime": "Temurin JDK 25.0.4.1",
+  "started_utc": "2026-11-19T16:15:12.2751308Z",
+  "ended_utc": "2026-11-19T16:15:23.0513661Z",
+  "process_exit_code": 0,
+  "assertion_result": "PASS",
+  "class_loading": {
+    "original": "Child-first URLClassLoader from local original JAR for me.octo.client.*, parent supplies runtime dependencies.",
+    "managed": "Gradle JavaExec runtimeClasspath with compiled managed classes.",
+    "fixture": "Unsafe allocation avoids the Minecraft-bound owner constructor; list and nested records are initialized reflectively. No Minecraft client or world is started."
+  },
+  "inputs": {
+    "non_null_guard_boolean_sequences": 65536,
+    "coverage": "All 4^8 combinations for the original nested record a():Z and d():Z boolean fields across the eight sampled records, including both zero-classification boolean pairs.",
+    "non_null_guard_history_lengths": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "null_guard_history_lengths": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "assertions": {
+    "expected": "Original and managed q():Z return values or thrown exception class/message match for every input.",
+    "actual": "65,536 boolean sequences plus 20 guard/length boundary cases; zero mismatches.",
+    "true_results_original": 18468,
+    "true_results_managed": 18468,
+    "mismatches": 0
+  },
+  "harness_source_sha256": "93cfb8f4b808eefba0e2dbc88854fa8ddcc4139672986cf398346a4dc5e124f1",
+  "init_script_sha256": "50ef5c5bea94f420a8b2f842933cec16d3fa603b8cb8143cfb6942c13db47d1d",
+  "raw_log_sha256_local_only": "a91d16b570091a7af50efd0a8d4a6d9b15a4b96e8ae62b61f61c5936c2992301",
+  "published_redacted_log": "probe-jdk25-exhaustive-final.log",
+  "published_redacted_log_sha256": "1bf8834f503b7e02908a28e489868d600cf7dfcf53328d9cd3a7c3587a45c31f",
+  "minecraft_client": false,
+  "valid_world": false,
+  "normal_player_path": false,
+  "compatible_server": false,
+  "desktop_input": "NOT USED",
+  "screenshot_sha256": null
+}

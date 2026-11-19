@@ -1,0 +1,11 @@
+def probeClasses = System.getenv("R1967_PROBE_CLASSES")
+def originalJar = System.getenv("R1967_ORIGINAL_JAR")
+
+gradle.projectsEvaluated {
+    def project = gradle.rootProject
+    project.tasks.register("runR1967PathfinderQProbe", JavaExec) {
+        classpath = project.sourceSets.main.runtimeClasspath + project.files(probeClasses)
+        mainClass.set("R1967PathfinderQDifferential")
+        args(originalJar)
+    }
+}

@@ -1,0 +1,17 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :
+Fabric Loom: 1.18.0-alpha.19
+Mod-provided javadoc from mod fabric-content-registries-v0 should have the markdown metadata entry
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :runR1967PathfinderQProbe
+{"result":"FAIL","non_null_guard_direction_sequences":6561,"original_true":3468,"managed_true":4074,"null_guard_history_lengths":9,"mismatches":606,"first_mismatches":[44:1,1,0,0,-1,-1,-1,-1,:R:false/R:true, 76:0,0,1,1,-1,-1,-1,-1,:R:false/R:true, 98:1,1,0,-1,0,-1,-1,-1,:R:false/R:true, 116:1,1,-1,0,0,-1,-1,-1,:R:false/R:true, 125:1,1,0,0,0,-1,-1,-1,:R:false/R:true, 128:1,-1,1,0,0,-1,-1,-1,:R:false/R:true, 132:-1,1,1,0,0,-1,-1,-1,:R:false/R:true, 134:1,1,1,0,0,-1,-1,-1,:R:false/R:true, 184:0,0,1,-1,1,-1,-1,-1,:R:false/R:true, 220:0,0,-1,1,1,-1,-1,-1,:R:false/R:true, 226:0,-1,0,1,1,-1,-1,-1,:R:false/R:true, 228:-1,0,0,1,1,-1,-1,-1,:R:false/R:true],"original_guard_length":-1,"original_owner_code_source":"file:/<LOCAL_ORIGINAL_JAR>","minecraft_world_used":false}
+
+BUILD SUCCESSFUL in 10s
+3 actionable tasks: 1 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

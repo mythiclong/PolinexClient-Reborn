@@ -1823,25 +1823,50 @@ return param1;
    }
 
    private final boolean q() {
-        /*
-         * This method has failed to decompile.  When submitting a bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         * 
-         * org.benf.cfr.reader.util.ConfusedCFRException: Extractable last case doesn't follow previous, and can't clone.
-         *     at org.benf.cfr.reader.bytecode.analysis.opgraph.op3rewriters.SwitchReplacer.examineSwitchContiguity(SwitchReplacer.java:611)
-         *     at org.benf.cfr.reader.bytecode.analysis.opgraph.op3rewriters.SwitchReplacer.replaceRawSwitches(SwitchReplacer.java:94)
-         *     at org.benf.cfr.reader.bytecode.CodeAnalyser.getAnalysisInner(CodeAnalyser.java:517)
-         *     at org.benf.cfr.reader.bytecode.CodeAnalyser.getAnalysisOrWrapFail(CodeAnalyser.java:278)
-         *     at org.benf.cfr.reader.bytecode.CodeAnalyser.getAnalysis(CodeAnalyser.java:201)
-         *     at org.benf.cfr.reader.entities.attributes.AttributeCode.analyse(AttributeCode.java:94)
-         *     at org.benf.cfr.reader.entities.Method.analyse(Method.java:531)
-         *     at org.benf.cfr.reader.entities.ClassFile.analyseMid(ClassFile.java:1055)
-         *     at org.benf.cfr.reader.entities.ClassFile.analyseTop(ClassFile.java:942)
-         *     at org.benf.cfr.reader.Driver.doJarVersionTypes(Driver.java:257)
-         *     at org.benf.cfr.reader.Driver.doJar(Driver.java:139)
-         *     at org.benf.cfr.reader.CfrDriverImpl.analyse(CfrDriverImpl.java:76)
-         *     at org.benf.cfr.reader.Main.main(Main.java:54)
-         */
-        throw new IllegalStateException("Decompilation failed");
+      int[] guard = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      ArrayList<llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll> history =
+         this.IlllIIllIlIllIIllIIIIlIlIllIlIIlllIIIIlIIIIIIIIIIlIlIIlllIllIlIlIlIllIIllIIlIIlIllllI;
+      int initialSize = history.size();
+      if (guard != null && initialSize < 8) {
+         return false;
+      }
+
+      int positive = 0;
+      int negative = 0;
+      int directionChanges = 0;
+      int previousNonzero = 0;
+      int start = history.size() - 8;
+      int end = history.size();
+
+      for (int index = start; index < end; index++) {
+         Object entryObject = history.get(index);
+         kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(entryObject, "get(...)");
+         llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll entry =
+            (llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll)entryObject;
+         boolean firstState = entry.a();
+
+         // The original control-flow uses this shared non-null guard to select the
+         // meaningful switch arm. Its null arm exits after the first getter call.
+         if (guard == null) {
+            break;
+         }
+
+         int direction = firstState ? (entry.d() ? 0 : 1) : (entry.d() ? -1 : 0);
+         if (direction == 1) {
+            positive++;
+         } else if (direction == -1) {
+            negative++;
+         }
+
+         if (direction != 0) {
+            if (previousNonzero != 0 && direction != previousNonzero) {
+               directionChanges++;
+            }
+            previousNonzero = direction;
+         }
+      }
+
+      return positive >= 2 && negative >= 2 && directionChanges >= 2;
    }
 
    private final void r() {

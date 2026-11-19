@@ -1,0 +1,39 @@
+{
+  "experiment_id": "R1967-pathfinder-history-predicate",
+  "attempts": [
+    {
+      "attempt": "initial-original-differential",
+      "started_utc": "2026-11-19T16:02:18.9419034Z",
+      "ended_utc": "2026-11-19T16:02:31.8532277Z",
+      "process_exit_code": 1,
+      "assertion_result": "FAIL; actionable source mismatch",
+      "input": "Encoded sequence 44: a/d pairs (false,true), (false,true), (true,false), (true,false), then four (false,false) pairs.",
+      "original": "false",
+      "managed_before_correction": "true",
+      "finding": "The source model counted the initial nonzero classification against previous=0 as a direction change. Original CFG first branches on previous==0 and skips that increment. The source was corrected to require previousNonzero != 0 before counting a change.",
+      "published_redacted_log": "probe-jdk25-initial-mismatch.log",
+      "raw_log_sha256_local_only": "6a7ef5417d56b38ad7fe26037a61333aefbe278332bc455aabe6f86fd46f8c9a",
+      "published_redacted_log_sha256": "cfc41cf828ac2f61c9b5a8a393255da05984c2320819f4f7a268a0d88f9ee138",
+      "status": "Superseded by the final exhaustive differential; this failure was not dismissed as a tool issue."
+    },
+    {
+      "attempt": "tri-state-diagnostic-before-correction",
+      "process_exit_code": 0,
+      "assertion_result": "FAIL: 606 mismatches across the 6,561 trit sequences; the diagnostic harness printed result=FAIL but did not yet convert that result to a nonzero process exit.",
+      "finding": "Confirms the initial source interpretation was wrong; source CFG review isolated the missing previousNonzero != 0 gate. This run is not a passing probe.",
+      "published_redacted_log": "probe-jdk25-diagnostic.log",
+      "raw_log_sha256_local_only": "47de1bd5d32df7904e78f9dcce6f2bd9f96cacfef30821ff3037f1fafa0a58aa",
+      "published_redacted_log_sha256": "c0589598c09c5088b7906277cfac3f72c784b9d184007054a4f94dd7e174846c"
+    },
+    {
+      "attempt": "later-boundary-fixture-setup",
+      "process_exit_code": 1,
+      "assertion_result": "VOID: harness requested history length 9 while only constructing eight entries; q():Z was not invoked for that case.",
+      "published_redacted_log": "probe-jdk25-diagnostic2.log",
+      "raw_log_sha256_local_only": "a48d495ba6d9ce4d122810e9766726977d43822abb2cd56a84795f3b69833cf1",
+      "published_redacted_log_sha256": "4a3b8347723cd094f8d8193a94e3b93c0f4b44bcfcb64f4e5b5984c08eda3a5a",
+      "status": "Harness setup defect only; fixture was expanded to nine entries and the final 0–9 boundary matrix passed."
+    }
+  ],
+  "final_acceptance": "probe-jdk25-final.json"
+}

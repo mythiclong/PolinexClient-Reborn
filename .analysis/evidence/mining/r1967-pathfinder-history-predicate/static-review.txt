@@ -1,0 +1,40 @@
+R1967 — Pathfinder q():boolean
+===============================
+
+Scope
+-----
+Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Descriptor: ()Z
+Original JAR SHA-256: d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26
+Original owner dump SHA-256 (local only): 76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197
+Original nested record dump SHA-256 (local only): 662078b7a93a98042619d9ab17774c23adbc2c7d223e1ca5fa10e05f14125950
+Compiled final owner dump SHA-256 (local only): 61454c1473a58f560ba1223f0bde7641b057f60a11cbb4f5f14f0af8bd91715f
+Compiled final nested record dump SHA-256 (local only): 769cc8b74796ddc03f44cb17dbd3c40f9bb462b2e37009448acf0eb22d4b02de
+
+CFG-to-source mapping
+---------------------
+1. The original reads the shared int[] guard, then the history ArrayList and its size. Only when the guard is non-null does size < 8 return false. It then iterates indices size-8 through size-1 in ascending order.
+2. Each element is fetched, checked with Intrinsics.checkNotNullExpressionValue("get(...)"), cast to the exact nested record class, and queried through a():Z. In the original nested record, a() reads the first boolean field and d() reads the fourth; both methods are final field getters with no side effects.
+3. With a non-null guard, the branch CFG maps (a=true,d=false) to +1, (a=false,d=true) to -1, and equal pairs to 0. The original tableswitch increments the corresponding positive/negative counter.
+4. A direction change is counted only when the current classification is nonzero, the previous classification is also nonzero, and the two differ. Zero does not replace the previous nonzero classification. An initial nonzero classification is not itself a change. The original CFG's explicit previous==0 branch was rechecked after a first differential mismatch exposed the initial incorrect interpretation.
+5. The result is true iff positive, negative, and direction-change counts are each >= 2. Otherwise it is false.
+6. With a null guard, the original bypasses the minimum-size return. For size < 8 the first get(size-8) throws IndexOutOfBoundsException. For size >= 8, it fetches the first of the last eight records, calls a(), exits the loop, and returns false with zero counters. The source retains this path rather than normalizing it.
+7. The original exception-table wrappers catch NoWhenBranchMatchedException and call the same-owner a(Throwable):Throwable identity helper. The tableswitch has an explicit default target and its cases are exhaustive for the produced -1/0/+1 values; omitted wrapper code does not transform any reachable result or exception in this method.
+
+Call-site context
+-----------------
+The original normal route-event handler invokes q():Z at bytecode offset 590; the current compiled handler invokes it at offset 306. The current source previously replaced q() with an unconditional IllegalStateException("Decompilation failed"). The same handler confirms a(Entity,List,Vec3):V and d(List):V as separate empty-return methods for the next restoration slice.
+
+Differential probe
+------------------
+R1967PathfinderQDifferential.java compares the original owner loaded child-first from the local original JAR against the managed compiled class on the Gradle runtime classpath. It supplies a populated history list and invokes q() directly via reflection; Unsafe allocation avoids constructing the Minecraft-bound owner. It tests all 4^8 boolean combinations for the two sampled fields over eight records (65,536 inputs), then history lengths 0–9 with both non-null and null guards (20 boundary cases). Exit code 0; 0 mismatches. Both implementations returned true for 18,468 of the 65,536 boolean sequences.
+
+This is a direct pure-method differential, not a Minecraft client/world or normal player-path test. It does not establish route behavior, server compatibility, or entity/world-dependent behavior.
+
+Build
+-----
+Temurin JDK 25.0.4.1, full-tree Gradle build with --rerun-tasks, exit code 0. The build log's raw capture hash and published redacted hash are in build-jdk25-final.json. The first launch inherited JDK 17 and failed in Gradle configuration because Fabric Loom requires JDK 25; no Java source compilation occurred in that attempt.
+
+Evidence exclusions
+-------------------
+The original JAR, original/compiled full javap dumps, class files, Gradle caches, and raw logs with local machine paths are not published. Exact raw build/probe captures remain outside the checkout; redacted log hashes and capture hashes are indexed in raw-log-index.json.

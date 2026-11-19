@@ -1,26 +1,24 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 15:49 UTC。私有 `openpolinex/codex/handoff-progress-2026-11-15` 的 R1966 内容提交为 `21ec44f8ea9e0a70ef8573ac0fffa5c173b18443`；公开 `PolinexClient-Reborn/main` 内容提交为 `624128bad193bdb9e8c4e7fc7b424eff529f3f80`，推送后 refs 均已核验。R1966 证据代码基线为 `063fc5807d5d9e61bb4af04acb6c3f742601a724`。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，仅本地使用，不发布。
+> 更新：2026-11-19 16:23 UTC。当前工作分支 `codex/bootstrap-eclientinit-2026-11-15`，R1967 证据基线为 `fa3152eaed42b497368f781737a72c241e97a5b4`；本批次源码/证据正在准备提交并同步到私有 `openpolinex` 与公开 `PolinexClient-Reborn`。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，仅本地使用、不发布。
 
-## 当前唯一切片：R1967 Pathfinder `q(): boolean` 历史输入判定
+## 当前唯一切片：R1968 Pathfinder `a(Entity, List, Vec3): void`
 
-**确认的执行阻断，尚未修复：**当前源码的 `q()` 因 CFR/Vineflower switch 反编译失败而无条件抛 `IllegalStateException("Decompilation failed")`；当前编译方法确实构造并抛出该异常。正常 `@SubscribeEvent` 路线处理会调用它；原版调用偏移 590、当前偏移 306。原版完整 descriptor `()Z` 实现遍历最近八个移动记录，对记录方法 `a()`、`d()`、gate 状态分支计数并返回 boolean。必须按完整 CFG、字段与嵌套记录方法恢复，不能凭 “stuck check” 名称猜语义。
+R1967 已恢复 `q(): boolean`（完整 descriptor `()Z`）。原版完整 CFG 对最近八条记录计算正/负分类及非零分类之间的方向变化；gate-null、索引范围、列表空值检查和 getter 调用目标均按字节码复核。首次原版差分发现“第一条非零分类”被误算成变化；已按原版局部变量分支修正，并完成最终 65,536 组布尔输入差分及 gate-null/non-null 的 0–9 条记录边界对照，零差异。R1967 Temurin 25 全树 `build --rerun-tasks` 与直接方法差分均退出码 0。未启动 Minecraft、未调用正常玩家路线、未进入有效世界或兼容服务器。
 
-## 最近完成：R1966 `a(PathNode, List): void`
+R1967 代码内容 SHA-256（LF）：`b4e6e531b6b93533b1c0e868cb28e78de82e41e053b594560edfcf78fd94747e`；Windows 构建时的精确工作文件 SHA-256：`cdec84fd5c718d79bd629733a8bc18e8221389e628151fb6d88e56cf93edd944`。完整证据见 [R1967 manifest](../evidence/mining/r1967-pathfinder-history-predicate/manifest.json)。
 
-恢复此前编译为单一 `return` 的 per-tick executor。完整静态复核和独立只读复核通过；最终精确源码 Temurin 25 全树 `build --rerun-tasks` 退出码 0。最终源码 SHA-256：`dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7`；规范 LF Git blob：`7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f`。
+## 已确认的下一项与缺陷
 
-## 有效证据与同步
+- 正常路线事件主分支调用 `a(Entity, List, Vec3): void`；当前编译为单一 `return`，原版有实现。本切片需先按完整 descriptor 还原其字段读写、实体/世界分支、helper 接收者及副作用。
+- 同一 handler 的 `d(List): void` 也编译为空返回；原版有实现，且被多个分支调用。先映射每个 invoke 和分支，再决定与实体路线方法能否组成同一个可验证切片。
+- R1967 的独立差分是无 Minecraft 世界的纯方法输入验证，不代表正常玩家路线行为等价。Pathfinder 用户入口、有效世界路线/碰撞、缓存生命周期、停止/取消和兼容服务器验收仍开放。
 
-- [R1966 静态复核、构建及验收边界](../evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
-- [R1966 双仓同步索引](SYNC-20261119-PATHFINDER-R1966.json)
-- 进一步确认的后续执行缺口：同 handler 中 `a(Entity, List, Vec3): void` 和 `d(List): void` 当前编译为空返回、原版有实现并被事件路径调用。应先恢复 q()，再按调用顺序继续。
-- R1966 未直接探针、未启动/操控 Minecraft、未验证正常玩家路线、有效世界或兼容服务器；源码恢复和构建不等于寻路行为验收。
+## 交接与验收边界
 
-## 仍未关闭
+- R1966 已恢复 `a(PathNode, List): void`；证据见 [R1966 manifest](../evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)。
+- R1967 证据目录还保留了构建/差分日志、原版对照 SHA-256、可复运行的隔离 classloader harness 和静态复核说明；原始 JAR、完整字节码转储、编译 class 和本地缓存均不发布。
+- `python -B .analysis/stats.py` 当前统计为 1,602 个 Java 文件、1,158,700 行；库存数字不是功能完成度。空缓存网络构建、发布构建、正常游戏路径、真实兼容服务器登录/交互/断开/重连仍未验收。
+- ClickGUI 命中/开关/设置保存重载、Powder Macro、Commission Macro，以及配置、渲染、网络和 native/JNIC 仍有开放恢复/验收工作。
 
-Pathfinder 正常命令/玩家入口、历史输入判定、实体路线处理、节点输入、有效世界路线/碰撞、缓存生命周期、停止/取消及兼容服务器行为仍需按正常入口验证。ClickGUI 鼠标命中/开关/设置保存重载、Powder Macro、Commission Macro，以及配置、渲染、网络与 native/JNIC 仍有开放恢复/验收项。当前全树构建复用本机依赖缓存；空缓存网络构建与发布构建未验证。
-
-## 下一步
-
-按完整原版和当前 `q():Z` descriptor 对照字段、接收者、每个分支、数组判空、`a()`/`d()` 调用目标、计数器写入和最终比较；恢复源码后全树构建并核对编译产物。随后继续 `a(Entity, List, Vec3):void`、`d(List):void` 及实际 9-Object overload 调用点，不把初始静态发现当作验证完成。游戏内和服务器验收只用有效实体/世界与正常用户入口，服务器步骤保留脱敏证据。
+下一步：完整还原 `a(Entity, List, Vec3):void`，按同一 handler 的全部分支复核 `d(List):void` 调用顺序；完成源码改动后全树构建、编译字节码核对和对应直接探针，再同步双仓。真实世界和服务器步骤只通过有效游戏状态及正常用户入口完成并留存脱敏证据。
