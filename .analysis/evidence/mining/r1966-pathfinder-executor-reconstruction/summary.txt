@@ -1,0 +1,1 @@
+R1966 restores the previously empty Pathfinder tick executor from the original descriptor-level bytecode. Static control flow and a full Temurin 25 tree build pass. No Minecraft runtime, valid-world, normal user-path, or compatible-server verification was performed.

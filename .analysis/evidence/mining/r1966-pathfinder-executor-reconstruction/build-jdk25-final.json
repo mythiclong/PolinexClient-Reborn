@@ -1,0 +1,15 @@
+{
+  "experiment_id": "R1966-pathfinder-route-executor-restore",
+  "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src",
+  "started_utc": "2026-11-19T15:36:03.1924479Z",
+  "ended_utc": "2026-11-19T15:36:49.6518362Z",
+  "exit_code": 0,
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+  "java_home": "Temurin 25.0.4.1; local installation path redacted",
+  "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+  "source_sha256": "dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7",
+  "log": "build-jdk25-final.log",
+  "log_sha256": "ca896526a1a98e946c839d05cd92d2613b564dce9be7146c9a83616c67cc41e0",
+  "final_validation": true
+}

@@ -1116,145 +1116,31 @@ return null;
       me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll param1,
       List<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> param2
    ) {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.RuntimeException: parsing failure!
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
-      //
-      // Bytecode:
-      // 000: invokestatic me/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l ()[I
-      // 003: aload 2
-      // 004: aload 0
-      // 005: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll I
-      // 008: aload 2
-      // 009: invokeinterface java/util/List.size ()I 1
-      // 00e: invokeinterface java/util/List.subList (II)Ljava/util/List; 3
-      // 013: checkcast java/lang/Iterable
-      // 016: astore 5
-      // 018: astore 3
-      // 019: bipush 0
-      // 01a: istore 6
-      // 01c: new java/util/ArrayList
-      // 01f: dup
-      // 020: invokespecial java/util/ArrayList.<init> ()V
-      // 023: astore 7
-      // 025: aload 5
-      // 027: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
-      // 02c: astore 8
-      // 02e: aload 8
-      // 030: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 035: ifeq 080
-      // 038: aload 8
-      // 03a: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 03f: astore 9
-      // 041: aload 9
-      // 043: checkcast me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll
-      // 046: astore 10
-      // 048: bipush 0
-      // 049: istore 11
-      // 04b: aload 10
-      // 04d: invokevirtual me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.c ()Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl;
-      // 050: getstatic me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl;
-      // 053: if_acmpeq 05e
-      // 056: bipush 1
-      // 057: goto 05f
-      // 05a: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 05d: athrow
-      // 05e: bipush 0
-      // 05f: ifne 06d
-      // 062: aload 3
-      // 063: ifnonnull 080
-      // 066: goto 06d
-      // 069: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 06c: athrow
-      // 06d: aload 7
-      // 06f: aload 9
-      // 071: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 074: pop
-      // 075: aload 3
-      // 076: ifnonnull 02e
-      // 079: goto 080
-      // 07c: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 07f: athrow
-      // 080: aload 7
-      // 082: checkcast java/util/List
-      // 085: astore 4
-      // 087: aload 3
-      // 088: ifnull 0a5
-      // 08b: aload 0
-      // 08c: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI Lnet/minecraft/client/Minecraft;
-      // 08f: getfield net/minecraft/client/Minecraft.player Lnet/minecraft/client/player/LocalPlayer;
-      // 092: dup
-      // 093: ifnonnull 0a6
-      // 096: goto 09d
-      // 099: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 09c: athrow
-      // 09d: pop
-      // 09e: goto 0a5
-      // 0a1: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0a4: athrow
-      // 0a5: return
-      // 0a6: astore 5
-      // 0a8: aload 4
-      // 0aa: checkcast java/util/Collection
-      // 0ad: invokeinterface java/util/Collection.isEmpty ()Z 1
-      // 0b2: aload 3
-      // 0b3: ifnull 0c1
-      // 0b6: ifne 0c4
-      // 0b9: goto 0c0
-      // 0bc: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0bf: athrow
-      // 0c0: bipush 1
-      // 0c1: goto 0c5
-      // 0c4: bipush 0
-      // 0c5: ifeq 0da
-      // 0c8: aload 0
-      // 0c9: aload 4
-      // 0cb: bipush 0
-      // 0cc: invokespecial me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/util/List;Z)V
-      // 0cf: aload 3
-      // 0d0: ifnonnull 0ea
-      // 0d3: goto 0da
-      // 0d6: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0d9: athrow
-      // 0da: aload 0
-      // 0db: aload 1
-      // 0dc: invokevirtual me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.b ()Lnet/minecraft/world/phys/Vec3;
-      // 0df: bipush 0
-      // 0e0: invokespecial me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Lnet/minecraft/world/phys/Vec3;Z)V
-      // 0e3: goto 0ea
-      // 0e6: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0e9: athrow
-      // 0ea: getstatic me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl;
-      // 0ed: sipush -451
-      // 0f0: sipush -25960
-      // 0f3: pop2
-      // 0f4: ldc_w "jump"
-      // 0f7: bipush 0
-      // 0f8: invokevirtual me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.a (Ljava/lang/String;Z)V
-      // 0fb: getstatic me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl;
-      // 0fe: sipush -502
-      // 101: sipush -20680
-      // 104: pop2
-      // 105: ldc_w "sneak"
-      // 108: getstatic me/octo/client/utils/player/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI Lme/octo/client/utils/player/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll;
-      // 10b: invokevirtual me/octo/client/utils/player/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.g ()Lme/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI;
-      // 10e: sipush 150
-      // 111: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 114: checkcast java/lang/Number
-      // 117: invokevirtual me/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI.a (Ljava/lang/Number;)Z
-      // 11a: aload 3
-      // 11b: ifnull 129
-      // 11e: ifne 12c
-      // 121: goto 128
-      // 124: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 127: athrow
-      // 128: bipush 1
-      // 129: goto 12d
-      // 12c: bipush 0
-      // 12d: invokevirtual me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.a (Ljava/lang/String;Z)V
-      // 130: return
+      int[] var3 = me.octo.client.IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      List<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> var5 = param2.subList(this.IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll, param2.size());
+      ArrayList<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> var4 = new ArrayList<>();
+      for (me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll var10 : var5) {
+         if (var10.c() != me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII || var3 == null) {
+            var4.add(var10);
+         }
+      }
+
+      if (var3 != null && this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player == null) {
+         return;
+      }
+      Collection<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> var6 = var4;
+      boolean var7 = var6.isEmpty() == (var3 == null);
+      if (var7) {
+         this.a(var4, false);
+      }
+      if (!var7 || var3 == null) {
+         this.a(param1.b(), false);
+      }
+      me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a("jump", false);
+      me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl var8 = me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+      String var9 = "sneak";
+      boolean var10 = me.octo.client.utils.player.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.g().a((Number)Integer.valueOf(150));
+      var8.a(var9, var3 == null || !var10);
    }
 
    private final void j() {

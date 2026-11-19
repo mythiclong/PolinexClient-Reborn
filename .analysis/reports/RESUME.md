@@ -1,24 +1,27 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 UTC（芝加哥当地日期：2026-11-19）。R1965 功能内容已同步：私有 `openpolinex` 提交 `b50247621878c1249d8a7ca695e5da646a609b47`，公开 `PolinexClient-Reborn` 提交 `2fff92a77840c845b5d0e96f92cf8c62f122dd64`；两个远端 refs 均已核验。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，只在本地使用，不发布。
+> 更新：2026-11-19 15:39 UTC。工作分支 `codex/bootstrap-eclientinit-2026-11-15`；R1966 证据所用源码基线为 `063fc5807d5d9e61bb4af04acb6c3f742601a724`。原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，仅本地使用，不发布。
 
-## 当前唯一切片：R1965 Pathfinder 正常入口 → 执行状态、停止与缓存
+## 当前唯一切片：R1966 Pathfinder tick 路线执行器
 
-本批按原版完整字节码恢复了 `/pathfind` 命令配置缺失的 executor：原版在 `a(): Config` 的 offset 127 捕获 provider 并绑定现有 `a(Self, RouteContext): Unit` helper；当前源码原先传 null，原版 builder 在无 executor、无 subcommand 时会抛 `IllegalArgumentException`。现源码注册非空闭包，Java 编译器生成的 adapter 调用同一 helper。Temurin 25 全树 `build --rerun-tasks` 成功。没有执行正常命令分发或进入有效世界，不能据此宣称寻路行为验收通过。
+恢复原来被编译为单一 `return` 的 `a(PathNode, List): void`。按原版完整 descriptor 字节码保留路线后缀筛选、sentinel gate、player-null 早退、列表 helper / 朝向调用分支、jump 清理及 option 150 对 sneak 的影响。完整原版 CFG 与当前编译产物已复核；Temurin 25 全树 Gradle `build --rerun-tasks` 对最终源码通过。原版/编译后完整 `javap` 转储只保留在本机临时目录。
 
-## 最近有效证据
+## 有效证据
 
-- [R1965 `/pathfind` executor 静态复核与全树构建](../evidence/mining/r1965-pathfind-command-executor/manifest.json)：记录原版与修复后方法 descriptor、builder 契约、源码 SHA-256、编译产物 `javap` 哈希、命令/退出码及运行验收边界。首次构建误用继承的 Java 17，在 Gradle 配置阶段失败、未编译源码；显式使用 Temurin 25 后通过。
-- [R1963–R1964 双仓同步索引](SYNC-20261119-PATHFINDER-R1963-R1964.json)：R1963 gate 完整操作数栈校正；R1964 路线事件消费者类型守卫修复和 Temurin 25 全树构建。
-- [R1962 `isWalkable` / A* 有界差分](../evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json)：98,304 个有界网格/参数用例；旧记录未保留精确命令及退出码，限制不变。
-- [R1956–R1961 Pathfinder 证据索引](SYNC-20261119-PATHFINDER-R1956-R1961.json)：静态 gate 复核及缓存 helper 有界差分，限制见各 manifest。
+- [R1966 静态复核、源内容哈希、构建命令/退出码及验收边界](../evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
+- 最终本地源码 SHA-256：`dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7`；规范 LF Git blob：`7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f`。
+- 最终完整构建：Temurin 25.0.4.1，2026-11-19 15:36:03–15:36:49 UTC，退出码 0。更早两次中间构建在完整 CFG 复核发现分支/求值顺序问题后不作为最终验证；相关记录保留并标明。
+- 本切片未直接探针、未启动/操控 Minecraft、未测试正常玩家路线、有效世界或兼容服务器。编译和静态恢复不等于游戏功能验收。
 
-## 未关闭验收与已知缺陷
+## 已排除假设
 
-- Pathfinder 正常命令分发及其七种模式、有效世界路线/碰撞（障碍、楼梯、雪层）、磁盘缓存生命周期、停止/取消逻辑未做实机验收；真实兼容服务器登录、交互、断开、重连无证据。
-- ClickGUI 鼠标命中/切换、模块开关、设置保存/重载未闭环。Commission/Powder Macro、渲染、初始化、配置、命令、网络及其余 native/JNIC 仍需按功能路径恢复。
-- 干净 checkout、空缓存网络构建和正式发布构建未验证；当前全树构建使用已缓存依赖。源码计数、编译成功和静态差分不代表功能等价。
+- R1965 `/pathfind` callback 修复仍只有静态构建证据，不能视为正常命令或寻路行为已验收。
+- R1966 原版异常表调用的 `a(Throwable):Throwable` 经完整字节码核对仅 `aload_0; areturn`；省略其无效果的捕获/原样重抛不会转换异常或产生副作用。
+
+## 已知未关闭项
+
+Pathfinder 正常玩家入口、有效世界路线/碰撞、缓存生命周期、停止/取消及兼容服务器行为仍无运行证据。ClickGUI 鼠标命中/开关/设置保存重载、Powder Macro、Commission Macro，以及配置、渲染、网络和 native/JNIC 仍有开放恢复或验收项。构建使用本机缓存；空缓存网络构建与发布构建未验证。
 
 ## 下一步
 
-沿已恢复的 Pathfinder 命令入口追踪 route helper 到执行状态、停止/取消和缓存读写的完整调用链；只有新的静态证据能区分行为时才启动客户端/有效世界验收。完成边界清楚的小切片后全树构建、更新中英文 README，并把同一内容分别快进同步到私有 `openpolinex` 与公开 `PolinexClient-Reborn`。不发布原版 JAR、受保护 class 或完整 `javap` 转储。
+继续沿 Pathfinder 正常 tick 的实际调用链，逐一对照原版与当前源码/编译类的完整 owner、方法名和 descriptor；先确认下一个具体缺口及所有相关调用/状态，再定边界。切片完成后全树构建、更新本文件与双语 README，并分别快进同步私有 `openpolinex` 和公开 `PolinexClient-Reborn`；运行验收只使用有效世界/正常入口，服务器测试仍需保留脱敏证据。

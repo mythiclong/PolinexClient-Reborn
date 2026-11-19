@@ -1,0 +1,15 @@
+{
+  "experiment_id": "R1966-pathfinder-route-executor-restore",
+  "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src",
+  "started_utc": "2026-11-19T15:26:40.6610451Z",
+  "ended_utc": "2026-11-19T15:26:50.0705831Z",
+  "exit_code": 1,
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+  "java_home": "Temurin 25; local installation path redacted",
+  "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+  "source_sha256": "198425f52f470d890ad05abb0db7e816469df84fc6b390ea014b0f3dccc9e3be",
+  "log": "gradle-arg-tokenization-error.log",
+  "log_sha256": "59fcf2e95f781e153ac200e9bb7961edb6b7dbe26f6fa3869eed769189504232",
+  "attempt_class": "PowerShell native argument tokenization; Gradle treated the JVM property suffix as an unknown task; no source compilation occurred"
+}

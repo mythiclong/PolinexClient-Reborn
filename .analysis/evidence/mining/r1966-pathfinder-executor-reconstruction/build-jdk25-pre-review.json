@@ -1,0 +1,16 @@
+{
+  "experiment_id": "R1966-pathfinder-route-executor-restore",
+  "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src",
+  "started_utc": "2026-11-19T15:29:53.2096077Z",
+  "ended_utc": "2026-11-19T15:30:38.2274574Z",
+  "exit_code": 0,
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+  "java_home": "Temurin 25.0.4.1; local installation path redacted",
+  "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+  "source_sha256": "ab6922757b794c7705a8a2efb567a9c234fda29a13f7a35e1caa819c5085f769",
+  "log": "build-jdk25-pre-review.log",
+  "log_sha256": "3cad166749d9a29721ac6b1039405bf3e1ccb2d65bdb1c2e1a6cc0acf61b6f0c",
+  "final_validation": false,
+  "note": "Build succeeded for an intermediate translation. Subsequent full bytecode CFG review found ordering and gate-dependent branches that were corrected afterward; this record is retained but does not validate the final source."
+}

@@ -1,0 +1,19 @@
+R1966 — Pathfinder route executor `a(PathNode, List): void`
+
+Baseline: commit 063fc5807d5d9e61bb4af04acb6c3f742601a724. The original Vineflower output was only a decompiler-failure comment; pre-fix javap for this exact descriptor showed `0: return`. Source method and compiled final method were reviewed by exact owner/name/descriptor.
+
+Recovered behavior from the original complete javap CFG:
+1. Call the sentinel provider, then evaluate `route.subList(pathIndex, route.size())` before allocating the output `ArrayList`; preserve iteration order. Add a node when its enum type differs from the sentinel type, or when the provider returned null.
+2. If the provider returned a non-null array and `Minecraft.player` is null, return before input changes. Otherwise evaluate `filtered.isEmpty() == (provider == null)`. If true, call the existing `a(List, false)` helper.
+3. Face the supplied node's `b(): Vec3` only when the helper was not called or the provider is null. In particular, when the helper is called and the provider is non-null, skip target-facing input.
+4. Set `jump=false`; read setting 150 unconditionally; set `sneak` to `provider == null || !setting150`. The setting query precedes evaluation of the gate-dependent output value.
+
+The four list-helper / target-facing combinations are encoded in `manifest.json` under `control_flow_assertions`. These are a static CFG-derived truth table, not a runtime probe.
+
+Exception note: original exception-table handlers for `NoWhenBranchMatchedException` call the original private static `a(Throwable):Throwable`; full original bytecode is exactly `aload_0; areturn`. The rebuilt method directly lets the same throwable escape, so the removed catch/rethrow does not transform it or produce side effects. Original `sipush/pop2` junk is omitted as side-effect-free. `javac` may emit `invokevirtual` rather than original `invokespecial` for private same-class calls; the receiver and private target are unchanged.
+
+Build: final exact-source Temurin 25 full-tree Gradle build passed (`--rerun-tasks`, exit 0). A PowerShell argument-tokenization attempt failed before compile; two intermediate builds passed before final branch/order review and are retained but explicitly not used as final validation.
+
+Not tested: direct probe, normal Minecraft route execution, valid world/player, compatible server, or desktop input. Therefore this closes only static restoration and full-tree build regression for this method; it does not establish Pathfinder gameplay equivalence.
+
+Independent read-only review rechecked the corrected source and compiled-final hash `23eca6e49eb0407491da47f7f7c8add5933989efb514fb74b68fd51a033e12a2`; it confirmed the subList/allocation order, helper/gate target-facing branch, unconditional setting read on non-early-return paths, and identity exception helper.

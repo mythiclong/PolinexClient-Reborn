@@ -1,0 +1,147 @@
+{
+  "experiment_id": "R1966-pathfinder-route-executor-restore",
+  "generated_utc": "2026-11-19T15:39:05Z",
+  "scope": "Restore the normal Pathfinder tick executor method that Vineflower emitted as an empty method, using the original complete JVM descriptor and control-flow graph.",
+  "source_baseline": {
+    "commit": "063fc5807d5d9e61bb4af04acb6c3f742601a724",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "2babbb7598b424c22a1a51fecace1253f6923f2b",
+    "baseline_repository_content_sha256_lf": "40663980bbf509ce7620dd7f93548c8ac30898a10fc6636ac33eea583b597fe8"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;Ljava/util/List;)V",
+    "before": "Vineflower decompiler-failure comment only; javap of the pre-fix managed class emitted a single return instruction.",
+    "after": "Filters the remaining route suffix by node type and sentinel gate, applies the original player-null guard and gate-dependent list/target-facing calls, then resets jump and sets sneak from option 150 with the original gate rule.",
+    "working_tree_sha256_at_final_build": "dd141e4cdcfa4b7d2d60aae810e666d5c6db4b6bc1a8c57c3ab3eaa1ec24cff7",
+    "repository_content_sha256_lf": "edff274cbebe2d03598b5925bb8762ac62d56c9eb6d2101da00bd8a92f51aa8f",
+    "current_git_blob_oid": "7fb114d4a806a3f9f95bfee6bb9dca44ab7b733f"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_owner_javap_sha256": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "original_javap_location": "Local temp only; full dump not published.",
+    "compiled_final_owner_javap_sha256": "23eca6e49eb0407491da47f7f7c8add5933989efb514fb74b68fd51a033e12a2",
+    "compiled_javap_command": "javap -classpath build/classes/java/main -p -c -s -v <owner>",
+    "compiled_javap_location": "Local temp only; full dump not published."
+  },
+  "static_review": {
+    "status": "PASS",
+    "checks": [
+      "Exact owner, name, and descriptor confirmed in original and compiled-final javap.",
+      "Evaluation order preserves gate retrieval, subList(index,size) before ArrayList allocation, ordered iteration, and ArrayList.add receiver.",
+      "Original filter condition is preserved: add every non-sentinel node, and add sentinel nodes only when gate array is null.",
+      "Player null returns early only when the gate array is non-null.",
+      "The secondary list helper is called iff filtered.isEmpty() equals (gate == null). Target-facing input occurs iff that helper was not called or gate is null; therefore helper-called + non-null gate skips target-facing input.",
+      "jump=false occurs after the optional helpers; setting 150 is read before applying the gate-dependent sneak value (gate == null || !setting150).",
+      "Original NoWhenBranchMatchedException catch paths invoke a(Throwable):Throwable. The complete original helper is exactly aload_0; areturn, so omitting the redundant catch/rethrow has no observable throwable transformation or side effect.",
+      "Current javac uses invokevirtual for private same-class helper calls where original uses invokespecial; the resolved private target and receiver are the same, with no overriding dispatch."
+    ],
+    "independent_review": {
+      "status": "PASS",
+      "reviewer": "Cicero (read-only subagent)",
+      "basis": "Re-reviewed current source and compiled-final dump with SHA-256 23eca6e49eb0407491da47f7f7c8add5933989efb514fb74b68fd51a033e12a2.",
+      "findings": [
+        "subList precedes ArrayList allocation, matching exception order",
+        "helper-called plus non-null gate skips target-facing input",
+        "option 150 is read on all non-early-return paths before the final sneak value is chosen",
+        "original exception wrapper is identity and has no throwable transformation"
+      ]
+    }
+  },
+  "control_flow_assertions": {
+    "filter": [
+      {
+        "gate_nonnull": false,
+        "node_is_sentinel": false,
+        "included": true
+      },
+      {
+        "gate_nonnull": false,
+        "node_is_sentinel": true,
+        "included": true
+      },
+      {
+        "gate_nonnull": true,
+        "node_is_sentinel": false,
+        "included": true
+      },
+      {
+        "gate_nonnull": true,
+        "node_is_sentinel": true,
+        "included": false
+      }
+    ],
+    "filtered_list_behavior": [
+      {
+        "gate_nonnull": false,
+        "filtered_empty": false,
+        "call_list_helper": false,
+        "face_target": true
+      },
+      {
+        "gate_nonnull": false,
+        "filtered_empty": true,
+        "call_list_helper": true,
+        "face_target": true
+      },
+      {
+        "gate_nonnull": true,
+        "filtered_empty": false,
+        "call_list_helper": true,
+        "face_target": false
+      },
+      {
+        "gate_nonnull": true,
+        "filtered_empty": true,
+        "call_list_helper": false,
+        "face_target": true
+      }
+    ],
+    "table_scope": "Truth-table derivation from original CFG and restored expressions; not a Minecraft runtime probe."
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Temurin JDK 25.0.4.1",
+    "started_utc": "2026-11-19T15:36:03.1924479Z",
+    "ended_utc": "2026-11-19T15:36:49.6518362Z",
+    "exit_code": 0,
+    "log": "build-jdk25-final.log",
+    "log_sha256": "ca896526a1a98e946c839d05cd92d2613b564dce9be7146c9a83616c67cc41e0",
+    "record": "build-jdk25-final.json"
+  },
+  "validation": {
+    "static_method_review": "PASS",
+    "full_tree_gradle_build": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "normal_pathfinder_tick_or_command_user_path": "NOT RUN",
+    "valid_world_and_player": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null
+  },
+  "attempts": [
+    {
+      "record": "gradle-arg-tokenization-error.json",
+      "classification": "Invocation error; PowerShell split an unquoted -D property; Gradle failed before source compilation. Not a source regression."
+    },
+    {
+      "record": "build-jdk25-intermediate-list-type.json",
+      "classification": "Successful intermediate compile; later review found additional ordering/branch corrections; not final validation."
+    },
+    {
+      "record": "build-jdk25-pre-review.json",
+      "classification": "Successful pre-review compile; later CFG review found additional branch/order corrections; not final validation."
+    }
+  ],
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled class files",
+    "Local Gradle caches and outputs"
+  ],
+  "source_hash_semantics": "working_tree_sha256_at_final_build hashes exact local bytes consumed by Gradle; repository_content_sha256_lf hashes canonical LF source bytes; current_git_blob_oid is the normalized Git blob identity."
+}
