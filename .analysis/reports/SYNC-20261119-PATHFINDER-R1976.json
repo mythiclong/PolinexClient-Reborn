@@ -1,0 +1,99 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1976",
+  "generated_utc": "2026-11-19T19:25:24Z",
+  "scope": "Publish R1976 Pathfinder a(Vec3,double):boolean source restoration, static/build evidence, bilingual README, and concise handoff to private openpolinex and public PolinexClient-Reborn.",
+  "evidence_production_baseline": {
+    "commit": "418f91c1445fbd871978c42fb8c1dfe5163fee2c",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "source_git_blob_before_slice": "c52b187f7f5b4830736bbfc0cb2c0d40a6dd593d",
+    "source_git_blob_after_slice": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333"
+  },
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "418f91c1445fbd871978c42fb8c1dfe5163fee2c"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "1008d72e1693c60757f0e1b4820a0352bb1f1823"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Separate repository-native content commits; fast-forward pushes only; no force-push.",
+    "private_openpolinex": {
+      "content_commit": "5e083edcb4cb9460e7d1c351cf0e5643e5c0fa08",
+      "remote_ref_verified_at": "2026-11-19T19:25:24Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "content_commit": "d8f364ce4e7b456382b4fb10aa1393b0a00d38db",
+      "remote_ref_verified_at": "2026-11-19T19:25:24Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "metadata_follow_up": "The concise RESUME and this sync record are committed separately as fast-forward metadata updates. Their source evidence is keyed by the content commits above; a self-referential metadata commit hash is not embedded."
+  },
+  "published_file_git_blob_oids_and_sha256_lf_at_content_commits": {
+    "README.md": {
+      "git_blob_oid": "9d3f0b09d05986569b296dc9711607c7c837c6db",
+      "sha256_lf": "c01a8e1d63f4f61a1eaf69a1a91d71d86f2efd82298b0dfb6dc90a94339ab8b8"
+    },
+    "README_EN.md": {
+      "git_blob_oid": "c3aac5f8647c25806881be2ac39d94d0ee76bbb8",
+      "sha256_lf": "d915d8ea1f2bab9b16cadf2a97bd0510225c85a87e4afd6cc1f0f398c6577fa7"
+    },
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": {
+      "git_blob_oid": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333",
+      "sha256_lf": "33d79eb06d513be855da0a626169c9269d9c7af8e0ad096c687fb91e64a6d3d7"
+    },
+    ".analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json": {
+      "git_blob_oid": "b4143672a5e7463a6f41dd403ea0e6094addabe6",
+      "sha256_lf": "1bd25b3083748766778b3eb688fad1bd5e18d97442aa7e2d3e69603cceaffbf1"
+    },
+    ".analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/static-review.txt": {
+      "git_blob_oid": "3a4180a3b2ad23c6e9f3b7861d9bda8a22a4903d",
+      "sha256_lf": "bf36379af51584a77814cd4313ec03c1c6540053e91d0420f74aa597f4ec5578"
+    },
+    ".analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/build-jdk25-final.log": {
+      "git_blob_oid": "f6a8c5e0d7059ace0f91a516bca9a7cdf68b4114",
+      "sha256_lf": "01c69bcbb3c39e7acf0dbbdf84c2f44310c1a806bfdb6f5b6599a5b9b33eb863"
+    },
+    ".analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/attempts.json": {
+      "git_blob_oid": "4076c960d1d772b5e51e287f14dbc334f1ba4278",
+      "sha256_lf": "afab82e7d3096c547f2ab5a7a4bee8b4df13be5686774867d7957b465c891d49"
+    }
+  },
+  "metadata_follow_up_files": {
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "335a84a8ad8bd2a5b5ff343a1a7d37dde9572c26",
+      "sha256_lf": "11a7dd9fe129c1cd18eaf0858ca8be961602c9f4c8df3d199bf12c36dbdd0c58"
+    }
+  },
+  "source_change": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "method": "a",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;D)Z",
+    "change": "Restore Intrinsics.checkNotNullExpressionValue after ClientLevel.getBlockCollisions with original message.",
+    "source_content_sha256_lf": "33d79eb06d513be855da0a626169c9269d9c7af8e0ad096c687fb91e64a6d3d7",
+    "source_working_tree_sha256_at_final_build": "be555d7ed6631f782a54cc51c21ae285b9de05cd0484fdd634e879055c290528"
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS: original offsets 0-169; all 4 exception handlers reviewed; ordered core reference events match 18/18 after accounting for the redundant Entity checkcast; Kotlin non-null check restored.",
+    "final_full_tree_build": "PASS: Temurin JDK 25.0.4.1+1-LTS; exit code 0; tests NO-SOURCE; 18 existing Unsafe/deprecation/unchecked warnings.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing local paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "README.md and README_EN.md plus all source/evidence files have identical Git blob OIDs in both content commits. R1976 is a static/source-build slice, not a runtime or feature-equivalence claim."
+}
