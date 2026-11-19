@@ -1,0 +1,71 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1970",
+  "generated_utc": "2026-11-19T17:35:46Z",
+  "scope": "Synchronize R1970 Pathfinder b(List, boolean) source, static/build evidence, bilingual README, and concise handoff to the private and public repositories.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "099de77e7edd785bfd37fb5f5965a2e3d7e71c40"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "8638939e44a3be875dbd82c397b3c3ffb0fea7d2"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "eaca82049e9c84c79fda487db59e36b393b03327",
+      "remote_ref_verified_at": "2026-11-19T17:35:46Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "branch": "main",
+      "content_commit": "500963ee3ce6110fbd4785b3d03cfff7e6de9385",
+      "remote_ref_verified_at": "2026-11-19T17:35:46Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "note": "Both content commits contain identical Git blobs and LF-normalized content for all eight files listed below. README/RESUME links to this synchronization record are added in a subsequent metadata commit; no repository history was rewritten."
+  },
+  "published_file_content_sha256_lf_at_content_commits": {
+    "README.md": "f6ada33b5320c67f5aa139816183ac24c61ec8dcfe54b2fdbffd6a284e7f42e6",
+    "README_EN.md": "1c2443e4706068dba543db056a6a19ca3d822aaf3fdcb8e0d1603c07a1791779",
+    ".analysis/reports/RESUME.md": "2598ce9e1b9891c75dcff68c2d5240d1e9d4f0f190e6b1529642a54a0fde609a",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "8a951e59565e8ba480624ae2a4619bd59ebc2fc345b0312f08593b4ed6a14a3b",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json": "1b31ea87e8d1b3d9f97ce60800977c067d52e90c156e244f79af0fb6a773d7ca",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/static-review.txt": "5a28c5e26c8d185e571c9c89458e846af326084b344049260636c89b5675ba3f",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/build-jdk25-final.log": "c1d765c67e62d8101a44d4d33899c5681b417a489996304702612edaa705033a",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/attempts.json": "8f06a71084ffa4dce1619c901b1506ef89c2f78a184f0762e11b2677cf67af6e"
+  },
+  "published_file_git_blob_oids_at_content_commits": {
+    "README.md": "f32c88a1fd76aaef75082e52d6172d1b0bb6a577",
+    "README_EN.md": "f8aa33c9c9c7108245600a3a7e3ec2c5e857eeb1",
+    ".analysis/reports/RESUME.md": "a3325a7e8cb900daa2a1f8c70a449dd94d677056",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "5b108bbfb08d64c0e4dca16ac34713f9adaa18ad",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json": "67e0b473fd5741fb0bb9c3532cd6179e7c53507c",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/static-review.txt": "42df0e493a6f670a0526c6fefaa4a536f8afe7de",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/build-jdk25-final.log": "92121abb7778c5c710185881f5cd1856488bf866",
+    ".analysis/evidence/mining/r1970-pathfinder-route-boundary/attempts.json": "a44002ffbae3674ca98e49dc8c514cc8f2492db6"
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "method": "b(Ljava/util/List;Z)Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;",
+    "baseline_git_blob_oid": "6199f57bd677c8fcc942e4e0a2367957d81ce2c9",
+    "published_git_blob_oid": "5b108bbfb08d64c0e4dca16ac34713f9adaa18ad",
+    "source_content_sha256_lf": "8a951e59565e8ba480624ae2a4619bd59ebc2fc345b0312f08593b4ed6a14a3b",
+    "source_working_tree_sha256_at_final_build": "2b958276fb9f657985600835126458040559b64f0accfc96139b52a58215908b"
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS",
+    "final_full_tree_build": "PASS; Temurin JDK 25.0.4.1; exit code 0",
+    "direct_probe": "NOT RUN",
+    "normal_minecraft_path": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  }
+}

@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 17:33 UTC。R1970 Pathfinder `b(List, boolean)` 已按完整原版 descriptor 静态复核并修复一个循环上界差异；Temurin JDK 25 全树构建 exit code 0。此 R1970 批次尚未推送，阶段同步完成后在 [双仓记录](SYNC-20261119-PATHFINDER-R1970.json) 核验远端 refs。不要覆盖其他工作树或清理未跟踪调查工具。原版 JAR、protected class 和完整 `javap` 转储只在本机留存，不发布。
+> 更新：2026-11-19 17:35 UTC。R1970 Pathfinder `b(List, boolean)` 静态复核、全树构建及双仓阶段同步已完成：私有 `openpolinex` 内容提交 `eaca820`，公开 `PolinexClient-Reborn/main` 内容提交 `500963e`，远端 refs 已核验。源文件及证据哈希见[双仓记录](SYNC-20261119-PATHFINDER-R1970.json)。不要覆盖其他工作树或清理未跟踪调查工具。原版 JAR、protected class 和完整 `javap` 转储只在本机留存，不发布。
 
 ## 下一唯一切片：R1971 Pathfinder 距离 helper
 

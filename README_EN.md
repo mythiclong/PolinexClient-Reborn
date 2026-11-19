@@ -36,6 +36,7 @@ R1970 completed the static restoration of Pathfinder `b(List, boolean)`: the loo
 - [R1967 Pathfinder history predicate bytecode review, differential, and full-tree build](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
 - [R1969 Pathfinder `d(List)` static review and full-tree build](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
 - [R1970 Pathfinder `b(List, boolean)` static review and full-tree build](.analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json)
+- [R1970 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1970.json): private `openpolinex` content commit `eaca820`, public `PolinexClient-Reborn/main` content commit `500963e`; remote refs verified.
 - [R1968 Pathfinder entity-route static review and full-tree build](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
 - [R1969 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json): private `openpolinex` content commit `16b2a70`, public `PolinexClient-Reborn/main` content commit `b993352`; both refs verified at 2026-11-19 17:19:42 UTC.
 - [R1968 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1968.json): private `openpolinex` content commit `9f97de6`, public `PolinexClient-Reborn/main` content commit `c8647ea`; both refs verified at 2026-11-19 16:47:15 UTC.
