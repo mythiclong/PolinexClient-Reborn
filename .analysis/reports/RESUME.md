@@ -1,27 +1,29 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 20:45 UTC。R1981 源码、证据和中英文 README 已同步至两个仓库；远端 refs 与本批共享文件 blob 已复核，详见 [同步记录](SYNC-20261119-PATHFINDER-R1981.json)。两个仓库保留各自历史内容，不宣称整棵 Git tree 相同。
+> 更新：2026-11-19 20:52 UTC。R1982 Pathfinder `p():boolean` 已完成源码修复、完整 descriptor/控制流静态复核及 JDK 25 全树构建。双仓 README 已在本地更新；本批源码、证据和 README 的 GitHub 同步待完成。
 
 ## 当前基线
 
-- 私有 `openpolinex`：`codex/handoff-progress-2026-11-15`，内容提交 `d1cdb48c895f8c8ce9d8256a73150f7e6e773b1a`。
-- 公开 `PolinexClient-Reborn`：`main`，内容提交 `8bc902f584422cbde80ef177e7e39a780e2747b8`。
-- Pathfinder owner 源文件 blob：`5a6a325ce33d76923e8fb6ee550ddc09d166d1be`；LF SHA-256：`df35bceb16519c35cc9ab516ffdc382704223b46de5e194a3ad24aa95e73bce0`。
+- 私有 `openpolinex`：`codex/handoff-progress-2026-11-15`，当前远端基线 `1ffe1bfd8e121156f9e0c3fd31a602a0fa48e1ba`。
+- 公开 `PolinexClient-Reborn`：`main`，当前远端基线 `54e967e4f4ae9ee254d349103f8c2bb4c873e966`。
+- R1982 Pathfinder owner 源文件当前 Git blob：`5e0d3aa7b7193145c7960b99a969e45d4d34f92d`；工作树内容 SHA-256：`7dd09117edebe0e067056232e994763881c7f2c8b6f15ee43e3f081ef603efd7`。
 
-## 当前唯一下一切片：R1982 Pathfinder `p():boolean`
+## 当前唯一切片：R1982 Pathfinder `p():boolean`
 
-先核对原版与当前完整 descriptor/字节码、调用点、gate/player/world 读取、分支及副作用；确认差异后再改源码，并执行编译产物对照和全树构建。R1982 尚未开始，不能据方法相邻或被同一调用者使用推断存在缺陷。
+修复 `forward` 输入取反导致的 gate 非空分支反转。原版完整 descriptor 和正常调用点 `d(List)` 均已对照；JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0。机器记录：[manifest](../evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)、[静态复核](../evidence/mining/r1982-pathfinder-forward-predicate/static-review.txt)、[构建摘要](../evidence/mining/r1982-pathfinder-forward-predicate/build-summary.txt)。
+
+无 direct probe、客户端、有效玩家/世界、正常用户路径或兼容服务器验收；不得将此切片描述为运行时等价。双仓发布复核完成后，下一步继续 Pathfinder：按完整原版调用图和当前未复核方法选择一个边界明确的 descriptor 切片。
 
 ## 最近有效证据
 
-- R1979 `a(ArrayList<Vec3>,Vec3,Vec3)`：完整 descriptor 调用目标复核与 JDK 25 全树构建；[manifest](../evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
-- R1980 `b(Vec3):boolean`：恢复 gate-null 时读取 player/level 前的 false 早退；完整 descriptor 对照、JDK 25 全树构建通过；[manifest](../evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
-- R1981 `o():boolean`：恢复 gate-null 早退、Collection 空集合快路径和 `Iterable.iterator()` 接收者；17 个调用目标、6 个字段引用按序匹配；JDK 25 全树构建通过。首次编译失败的字段拼写错误已修正并记入 attempts；[manifest](../evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)。
-- 以上均未做有效 Minecraft 玩家/世界、正常用户路径或兼容服务器验收，不宣称运行时等价。
+- R1980 `b(Vec3):boolean`：恢复 gate-null 早退；完整 descriptor 对照及 JDK 25 全树构建通过；[manifest](../evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
+- R1981 `o():boolean`：恢复 gate-null 早退、空集合快路径和 `Iterable.iterator()` 接收者；完整 descriptor 对照及 JDK 25 全树构建通过；[manifest](../evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)。
+- R1982 `p():boolean`：恢复 gate 非空时 `forward` 输入为真的分支；完整 descriptor/控制流及 `d(List)` 调用点复核，全树构建通过；[manifest](../evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)。
+- R1980–R1982 均未做有效玩家/世界、正常路线或兼容服务器验收。
 
 ## 已知开放项
 
-- Pathfinder：真实玩家入口、有效世界寻路/碰撞、缓存生命周期及兼容服务器行为未验收。
-- ClickGUI：鼠标分类/Draw 命中、模块开关、设置列表和保存/重载闭环仍开放。
+- Pathfinder：真实玩家入口、有效世界寻路/碰撞、缓存生命周期和兼容服务器行为未验收；逐方法源码重建仍在继续。
+- ClickGUI：鼠标分类/Draw 命中、模块开关、设置列表及保存/重载闭环仍开放。
 - Powder Macro、Glacite Commission Macro、Route editor、渲染、配置、网络、native/JNIC 仍有恢复或验证缺口。
-- 真实兼容服务器登录、交互、断开及重连未验证；需要地址/授权账号时只挂起该验收，不停止其他恢复。
+- 真实兼容服务器登录、交互、断开及重连未验证；缺地址/授权时只挂起该项，不停止其他恢复。

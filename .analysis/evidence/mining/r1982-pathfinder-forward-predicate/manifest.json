@@ -1,0 +1,85 @@
+{
+  "experiment_id": "R1982-pathfinder-forward-predicate",
+  "generated_utc": "2026-11-19T20:52:58Z",
+  "scope": "Restore the original forward-input branch in Pathfinder p():boolean and verify its complete descriptor against the final compiled owner.",
+  "source_baseline": {
+    "commit": "1ffe1bfd8e121156f9e0c3fd31a602a0fa48e1ba",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before_slice": "5a6a325ce33d76923e8fb6ee550ddc09d166d1be"
+  },
+  "source_final_at_build": {
+    "git_blob": "5e0d3aa7b7193145c7960b99a969e45d4d34f92d",
+    "sha256_worktree_bytes": "7dd09117edebe0e067056232e994763881c7f2c8b6f15ee43e3f081ef603efd7"
+  },
+  "original_reference": {
+    "protected_original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "local_original_class_archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_dump_sha256_lf": "3c74cf717c47f54a09c5f83f88021b9ff7cef3ad56ee9463015b5a58634f4f6e",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "p",
+    "descriptor": "()Z",
+    "access": "private final",
+    "original_offsets": "0-143",
+    "original_instruction_count": 73,
+    "original_exception_handlers": 7,
+    "compiled_offsets": "0-113",
+    "compiled_instruction_count": 65,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256_lf": "0b8fa82037094e0aca68aabad0998a47f71855508bf4aab7cf5a692294b2bdf2",
+    "compiled_owner_class_sha256": "1bd2a0aa58a5a67d5898b57f02664cf881c879c4aab42d848975f55fb1061559"
+  },
+  "normal_path_callsite": {
+    "caller": "d(Ljava/util/List;)V",
+    "original_call_offset": 142,
+    "original_call_opcode": "invokespecial",
+    "compiled_call_offset": 83,
+    "compiled_call_opcode": "invokevirtual",
+    "callsite_count_in_owner": 1,
+    "source_context": "d(List) invokes p() only after the option-700 and n() predicates pass; the original and compiled call use the same owner, private target, and receiver."
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "forward_input_branch": "PASS: when the shared gate is non-null, forward=false returns false and forward=true proceeds. The source previously negated the input and was corrected. When the gate is null, the original still evaluates the input getter but bypasses this early-return condition; the source preserves that ordering and branch.",
+    "ordered_calls": "PASS: gate getter, singleton input getter a(String), static default-argument bridge a(owner, I, D, D, Z, D, I, Object), and both instance geometry helpers a(I, D, D, Z, D) remain in original order with matching targets and receiver.",
+    "ordered_fields": "PASS: all three reads of the movement-distance field remain in order and use the same owner/descriptor.",
+    "branch_review": "PASS: gate-null and gate-non-null behavior; both early returns; first geometry result returned directly under null gate; non-null-gate false first geometry result returns true; second geometry helper is called only on the remaining path and its result is negated; final return reviewed against the complete original CFG.",
+    "constants_and_side_effects": "PASS: forward key string and all behavioral constants/arguments match. Original -473 and 6500 pushes are dead obfuscation values consumed by pop2; source correctly omits them. Getter and geometry-call evaluation order is preserved.",
+    "exception_behavior": "PASS: the 7 original NoWhenBranchMatchedException handlers call the verified identity helper a(Throwable):Throwable and rethrow the same exception. The managed source has no catch that swallows or replaces exceptions.",
+    "compiler_lowering": "The compiled method has the same 48 instruction count but different offsets/local-slot allocation. The source callsite uses invokevirtual rather than Kotlin's invokespecial for the same private p() target and receiver; semantics and dispatch target are unchanged."
+  },
+  "validation": {
+    "static_review": "PASS: full original and compiled owner javap -p -c -v dumps compared for exact p() descriptor, instruction/branch flow, ordered targets, fields, constants, exception handlers, and the sole normal caller.",
+    "full_tree_build": "PASS: gradlew.bat build --rerun-tasks --no-daemon, Eclipse Temurin JDK 25.0.4.1+1-LTS, exit 0.",
+    "build_start_utc": "2026-11-19T20:48:28.8029685Z",
+    "build_end_utc": "2026-11-19T20:49:18.4767707Z",
+    "compiler_warnings": "18 existing Unsafe/deprecation/unchecked warnings.",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN: p() depends on live Pathfinder/player input state; no invalid worldless fixture was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158492,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "This is static and build evidence only. It does not establish in-game behavior, runtime equivalence, valid-world pathfinding, or server compatibility."
+}

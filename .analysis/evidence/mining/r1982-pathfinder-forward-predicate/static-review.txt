@@ -1,0 +1,26 @@
+R1982 — Pathfinder forward-input predicate
+
+Source method: private final boolean p() / ()Z
+Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Normal caller: d(Ljava/util/List;)V, one invokespecial call in the original owner at bytecode offset 142. The caller reaches p() only after option 700 and n() are true. The final Java compiler emits invokevirtual at offset 83 for the same private target/receiver.
+
+Original-reference basis
+- Local protected original JAR SHA-256: d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26.
+- Owner class archive SHA-256: 2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230.
+- Complete owner was inspected with javap -p -c -v. Raw original and compiled dumps remain local and are not published.
+
+Confirmed source defect and repair
+The original reads the shared gate and the "forward" input before branching. If the gate is non-null, a false input returns false and a true input continues into the geometry checks. If the gate is null, the input getter is still evaluated, but the gate branch bypasses this early return. The managed source had negated the input result, reversing the non-null-gate condition. R1982 removes that negation and leaves evaluation order and subsequent logic unchanged.
+
+Full method comparison
+- Exact descriptor and private/final access match.
+- Ordered calls match: gate getter; singleton input getter with String "forward"; static default-argument bridge with receiver `this`, arguments `(5, 0.0, 0.0, true, distanceField, 6, null)`; instance geometry helper with `(7, 1.0, -1.0, true, distanceField)`; and the same helper with `(7, 1.0, 1.0, true, distanceField)`.
+- The movement-distance field is read in the same three positions. Both geometry calls use `this`.
+- Branches were checked against original offsets 0–143: gate-null bypass; gate-non-null forward false early return; static-helper false early return when the gate is non-null; first geometry helper; null-gate direct return of its result; non-null-gate return true when the first result is false; otherwise the second helper and its negated result.
+- The original's `-473` and `6500` pushes are discarded by `pop2` and have no observable effect; the managed source correctly omits these obfuscation artifacts. The remaining behavior-bearing arguments and constants match.
+- Original has seven handlers for NoWhenBranchMatchedException. The original `a(Throwable):Throwable` helper is exactly `aload_0; areturn`; handlers rethrow the same exception. The managed source does not swallow exceptions.
+- Original p() has 73 instructions at offsets 0–143; compiled p() has 65 instructions at offsets 0–113. Local slots and offsets differ due Javac lowering. No other confirmed call, field, branch, constant, receiver, default-argument, or exception semantic mismatch remains in this descriptor.
+
+Validation
+- Final source content was built with `gradlew.bat build --rerun-tasks --no-daemon` under Eclipse Temurin JDK 25.0.4.1+1-LTS; exit code 0, 49.7 seconds, 18 existing Unsafe/deprecation/unchecked warnings. Gradle test task reports NO-SOURCE.
+- Direct probe, Minecraft client, valid player/world, normal-user-path, and compatible-server tests were not run. This slice is not claimed runtime-equivalent.

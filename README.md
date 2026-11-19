@@ -15,6 +15,8 @@ R1980 完成 Pathfinder 二段 AABB 碰撞谓词 `b(Vec3):boolean` 的完整原�
 
 R1981 完成 Pathfinder 障碍/前进可行性谓词 `o():boolean` 的完整 descriptor 审计（offset 0–507、25 个异常表项），恢复 gate-null 时先于 player 读取返回 false、空 Collection 的 `isEmpty()` 快路径，以及实际 `Iterable.iterator()` 调用接收者。原版与最终编译产物 17 个非异常 helper 调用和 6 个字段引用按序一致；7 个私有 helper 仅有 Kotlin/Javac invoke opcode lowering 差异，原版冗余 Iterable checkcast 被安全省略。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试 `NO-SOURCE`）。无有效玩家/世界、正常路线或兼容服务器验收，不宣称运行时等价。详见 [R1981 证据](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)。
 
+R1982 完成 Pathfinder 前进输入谓词 `p():boolean` 的完整原版 descriptor/控制流复核（原版 offset 0–143、73 条指令、7 个异常表项）。修复原源码把 `forward` 输入取反、导致 gate 非空时分支相反的问题；gate-null 分支仍按原版先读取输入、再绕过该早退。最终编译方法 65 条指令，调用目标、接收者、字段读取顺序、行为常量、分支和异常传播均已核对；`d(List)` 唯一正常调用点也完成静态核对。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试任务为 `NO-SOURCE`）。未做有效玩家/世界、正常游戏路径或兼容服务器验收，不宣称运行时等价。详见 [R1982 证据](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)。
+
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
 - **R1956 碰撞 gate 静态复核**：确认原版 `$llII…` 与当前 `$PXEvMid` 是同一状态持有者的源码重命名；getter、setter、初始化及 `a(BlockPos, ClientLevel): boolean` 的分支语义未发现确认差异。有效世界碰撞仍未验收。
@@ -49,6 +51,7 @@ R1981 完成 Pathfinder 障碍/前进可行性谓词 `o():boolean` 的完整 des
 - [当前短交接](.analysis/reports/RESUME.md)
 - [R1980 Pathfinder 二段碰撞谓词静态复核与全树构建](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
 - [R1981 Pathfinder `o()` 静态复核与全树构建](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
+- [R1982 Pathfinder `p()` 前进输入静态复核与全树构建](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1981 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)
 - [R1966 Pathfinder tick 执行器静态复核与全树构建](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
