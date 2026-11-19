@@ -1,0 +1,84 @@
+{
+  "experiment_id": "R1954",
+  "slice_id": "PATHFINDER-ROUTE-CONVERTER-AND-CACHE-WRITE-STATIC-REVIEW",
+  "generated_utc": "2026-11-19T01:12:33Z",
+  "evidence_produced_against_commit": "cd805c46ce4c16912bb12d3441ff927c06decf31",
+  "source_tree": {
+    "java_file_count": 1602,
+    "aggregate_algorithm": "SHA256(UTF-8 of POSIX relative path<TAB>content-SHA256<LF> entries sorted by POSIX relative path)",
+    "aggregate_sha256_path_tab_contenthash_lf": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "production_java_changed": false
+  },
+  "original_jar": {
+    "sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "bytes": 21739944,
+    "included": false,
+    "verified_source": "Local-only original JAR; exact path omitted. SHA-256 is recorded above."
+  },
+  "method_sources": {
+    "route_converter_owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+    "route_converter_source_sha256": "14e4f370e6754a16a56834db838777446b822c502f40c32d0a7917389700e148",
+    "cache_writer_owner": "me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+    "cache_writer_source_sha256": "e175a445d8682b66c21bfdb0ef66ea8b185b52f9b967f469872ba3c1a0e64f43"
+  },
+  "javap": {
+    "toolchain": "Temurin javap 25.0.4.1",
+    "command_template": "javap -p -c -s -v -classpath <verified input> <fully-qualified owner>",
+    "exit_code_for_all_commands": 0,
+    "outputs_local_only": true,
+    "outputs": [
+      {"path": "original-route-crackedjar-20261119.javap.txt", "sha256": "8f333589847dbe20acb9e090aa694d6a5a8514ad7acdf9cb62741f5db7c09c1b", "bytes": 181378},
+      {"path": "compiled-route-crackedjar-20261119.javap.txt", "sha256": "9253b613f8acdba2ab074585584b42506ccc81eef2ce1a0d903f90e6b9efe5a4", "bytes": 232239},
+      {"path": "original-cache-crackedjar-20261119.javap.txt", "sha256": "4ce8e3cfb8a1cb71527c2aa993baeb48763d09c0568d988969aa2b08037cdea9", "bytes": 270449},
+      {"path": "compiled-cache-crackedjar-20261119.javap.txt", "sha256": "ed855bde8d26f6183bb53c55e6b097c87452c369dfe88cbb8650968827a8baba", "bytes": 334163}
+    ],
+    "original_input_check": "The four outputs were generated after hashing the original JAR and confirming the expected d85398... baseline. An earlier attempt against me-octo-only.jar (SHA-256 2b32bb...) was invalidated and excluded."
+  },
+  "review": {
+    "route_converter": {
+      "descriptor": "([JDDZ)Ljava/util/List;",
+      "result": "No confirmed difference.",
+      "observed": [
+        "Gate-zero and missing-level paths return an empty list in both versions.",
+        "With a nonzero gate and a level, both call the same route conversion target; the smoothing flag controls the same three subsequent helper calls and order.",
+        "Private-call opcodes differ between the original Kotlin output and current Java compilation; target owner, descriptor, access, and call order match."
+      ]
+    },
+    "cache_writer": {
+      "descriptor": "(IILjava/nio/ByteBuffer;)V",
+      "result": "No confirmed difference; runtime filesystem fault behavior remains unverified.",
+      "directory_gate_table": {
+        "gate_zero": "Create/use the dimension subdirectory below pathfind-cache-v2.",
+        "gate_nonzero": "Use pathfind-cache-v2 itself; the original branch retains the root File on the operand stack and stores it as the selected directory."
+      },
+      "observed": [
+        "Both write chunk_<x>_<z>.dat with a 65,544-byte direct buffer containing x and z followed by the supplied buffer.",
+        "Both use WRITE, CREATE, and TRUNCATE_EXISTING and loop on ByteBuffer.hasRemaining().",
+        "The original uses Kotlin closeFinally; current Java output uses try-with-resources and an IOException identity rethrow. Exception-table shapes differ; no concrete outward-behavior mismatch was established by the static review."
+      ]
+    }
+  },
+  "build": {
+    "command": ".\\gradlew.bat build --no-daemon --console=plain",
+    "jdk": "Temurin 25.0.4.1",
+    "started_utc": "2026-11-19T01:12:23.0669514Z",
+    "finished_utc": "2026-11-19T01:12:33.6876113Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; compileJava and downstream tasks were UP-TO-DATE for the verified unchanged Java source tree.",
+    "artifact_sha256": "5a9681a4531b4bdddcc116958e9be0e7fd063baebff776bad884950bc59d2089"
+  },
+  "invalidated_lead": {
+    "status": "VOID",
+    "reason": "A temporary cache-directory edit came from misreading the JVM operand stack. Re-reading the full branch showed gate-nonzero retains the root File, matching the existing source ternary. The edit was reverted; the final Java source fingerprint matches the baseline.",
+    "subset_jar_attempt": "The local me-octo-only.jar has SHA-256 2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230 and is not the fixed original behavior source; its outputs were labeled VOID."
+  },
+  "runtime_and_scope": {
+    "minecraft_client": false,
+    "valid_world_or_entity": false,
+    "filesystem_fault_injection": false,
+    "compatible_server": false,
+    "screenshots": [],
+    "feature_equivalence_claim": false
+  },
+  "next_slice": "R1955: finish full original/current comparison of a(long[], double, double, ClientLevel): List and its direct step/collision helper; change source only for a confirmed difference."
+}

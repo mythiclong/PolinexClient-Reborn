@@ -2,15 +2,21 @@
 
 这是 Minecraft 26.1.2 Fabric 模组的托管源码重建工程。目标是恢复原有功能，让开发者能够自行构建、修改和运行。项目仍在进行中；源码库存、编译成功和静态匹配都不等于功能已经完整或行为等价。
 
-## 当前进度（2026-11-18）
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/语言-简体中文-lightgrey?style=for-the-badge" alt="简体中文"></a>
+  <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
+</p>
 
-当前唯一切片是 **R1954 Pathfinder 路线转换器与缓存写入异常路径**。
+## 当前进度（2026-11-19）
+
+当前唯一切片是 **R1955 Pathfinder 路线转换核心及步进/碰撞 helper**。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点的 gate、遍历与空值契约；R1948 修正 A* 节点分配顺序和 `Function2` 回调编译形式。既有 Temurin 25 全树编译退出码为 0。
 - **缓存加载 gate**：R1949 对照完整缓存加载器字节码，并扫描原版 JAR 的 5,475 个 class，0 个解析错误；gate setter 调用点已确认。缓存文件实际读写仍未验证。
 - **纯 Java 寻路层**：R1951 将 `NativePathFinder` 的 25 个完整方法与当前源码编译产物对照，并用隔离 classloader 比较原版和当前实现的 31 组输出及缓存副作用，全部匹配。7 个方法的字节码控制流形状不同；有限样本一致不代表全域或实机等价。
 - **实际调用点**：R1952 扫描原版 JAR 5,475 个 class 和当前编译产物 2,823 个 class，均为 0 个解析错误。确认同一事件消费者对三个 `BlockPos` API 方法有相同的直接调用目标；尚未通过游戏内正常事件验证这些分支会执行。
-- **最近复核**：R1953 按完整操作数栈重算 `a(BlockPos, BlockPos, boolean): List` 的 gate/空路径四种组合，原版和当前编译结果一致；此前看似相反的条件是对 JVM 栈顺序的误读，本批次没有修改生产源码。下一步对照路线转换器和缓存写入的完整方法及异常表。
+- **路线入口与缓存写入**：R1954 对照 `a(long[], double, double, boolean): List` 和缓存写方法 `(int, int, ByteBuffer): void` 的完整原版/当前字节码。入口 gate、空世界、平滑调用顺序匹配；缓存目录 gate、数据头、文件选项、写循环和关闭路径未发现可确认差异。先前看似目录不匹配的判断是 JVM 操作数栈误读，临时改动已撤回，Java 源树内容指纹仍为 `a23ce38f…`。Temurin 25 下 Gradle `build` 退出码 0；本批次没有生产源码修改。
+- **当前路线切片**：R1955 正在对照 `a(long[], double, double, ClientLevel): List` 与直接步进/碰撞 helper 的完整分支、字段、调用目标和副作用；依赖世界与实体的行为仍需有效 Minecraft 场景和正常用户入口验收。
 - **运行验收**：尚未通过有效 Minecraft 世界和玩家入口验证路线、碰撞及缓存读写，也没有真实兼容服务器验收。静态还原、样本探针和编译不能代替这些验收。
 - **ClickGUI**：已有同进程原版 Options 对照证据：键盘和滚轮有效，分类图标、Draw 控件未观察到鼠标反馈。内部 Screen 鼠标事件转发与控件命中路径仍待核对；尚未通过悬停、点击、模块开关及设置保存/重载验收。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染与网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开、重连未验证。
@@ -18,7 +24,8 @@
 最新 Pathfinder 证据与简短交接：
 
 - [当前交接](.analysis/reports/RESUME.md)
-- [2026-11-18 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261118-PATHFINDER-R1953.json)
+- [2026-11-19 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1954.json)
+- [R1954 路线入口与缓存写入复核](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* 核心审查与全树构建](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
 - [R1949 缓存加载与 gate 调用点](.analysis/evidence/mining/r1949-pathfinder-cache-loader/manifest.json)
@@ -28,6 +35,8 @@
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
 当前源码库存：**1,602** 个 Java 文件、**1,158,787** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+
+R1954 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 
 ## 构建
 
