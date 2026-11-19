@@ -89,7 +89,7 @@
   ],
   "publication": {
     "status": "both pushes verified by remote refs and sync-index blob checks",
-    "published_at_utc": "2026-11-19T02:26:41Z",
+    "published_at_utc": "2026-11-19T02:28:45Z",
     "repositories": [
       {
         "repository": "mythiclong/openpolinex",
@@ -102,13 +102,13 @@
         "repository": "mythiclong/PolinexClient-Reborn",
         "visibility": "public",
         "ref": "main",
-        "content_ingest_commit": "00e930f4a0c4a7293fa6c24559212988a18f7761",
+        "content_ingest_commit": "e55a33f22857d09431f76ed59dc01c4d5255fd7f",
         "remote_ref_verified": true
       }
     ],
     "latest_source_and_resume_snapshot": {
-      "private_commit": "030339f9c65b633b0f678ec94d4dd3dc47f52c89",
-      "public_commit": "00e930f4a0c4a7293fa6c24559212988a18f7761",
+      "private_commit": "fdd9acfc32ce68bf70a6b7d6c6e867aa2aead529",
+      "public_commit": "e55a33f22857d09431f76ed59dc01c4d5255fd7f",
       "published_files": [
         "README.md",
         "README_EN.md",
