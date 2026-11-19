@@ -1400,8 +1400,12 @@ return CollectionsKt.arrayListOf(CollectionsKt.first(param1));
       Vec3 var16 = lIIlIIlllIllIlIIIlIlIIlIlIIllllIIIIlIlIllIlllllllIIllIlllIIllIllIlIlIIllIllIlIIllIlII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a(param1, param2, param3, false);
       Vec3 var17 = new Vec3(var16.x, param3.y, var16.z);
       if (this.a(var17, var5.getBbWidth() / 2.0 - 0.03)) { return false; }
-      boolean var18 = this.a(var17.add(var12 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll, 0.0, var14 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll), var5.getBbWidth() / 2.0 - 0.03);
-      boolean var19 = this.a(var17.add(-var12 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll, 0.0, -var14 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll), var5.getBbWidth() / 2.0 - 0.03);
+      Vec3 var18Point = var17.add(var12 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll, 0.0, var14 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll);
+      Intrinsics.checkNotNullExpressionValue(var18Point, "add(...)");
+      boolean var18 = this.a(var18Point, var5.getBbWidth() / 2.0 - 0.03);
+      Vec3 var19Point = var17.add(-var12 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll, 0.0, -var14 * this.IIIllIIlIIlllllIlIlIIIIllIIIIlIlIlllIlIlIlIlIIlIIIlIIllIllIIIIIllllllIlIlIIIIIIIlllll);
+      Intrinsics.checkNotNullExpressionValue(var19Point, "add(...)");
+      boolean var19 = this.a(var19Point, var5.getBbWidth() / 2.0 - 0.03);
       return var18 && var19;
    }
 

@@ -1,0 +1,89 @@
+{
+  "experiment_id": "R1975-pathfinder-geometry-probe",
+  "generated_utc": "2026-11-19T19:14:04Z",
+  "scope": "Full-descriptor static restoration review of Pathfinder f(Vec3,Vec3,Vec3):boolean and final Temurin 25 full-tree build.",
+  "source_baseline": {
+    "commit": "23633d4d7aecaddda611489f787fb1564983a1ca",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "a680810dfafd72e52504dec7f259f9d814921736"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "f",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Z",
+    "original_offsets": "0-345 inclusive",
+    "original_exception_table_entries": 8,
+    "change_summary": [
+      "Restore Kotlin Intrinsics.checkNotNullExpressionValue(add(...)) immediately after each of the two Vec3.add calls.",
+      "Preserve the single state-gate read, early gate/player returns, horizontal normalization and epsilon check, sampler call, vertical-coordinate construction, and ordered three geometry predicates.",
+      "Preserve both offset-vector formulas, repeated LocalPlayer width reads, 0.03 inset, and short-circuit conjunction."
+    ]
+  },
+  "source_change": {
+    "changed_source_files": 1,
+    "final_git_blob_oid": "c52b187f7f5b4830736bbfc0cb2c0d40a6dd593d",
+    "source_content_sha256_lf": "b31d3d86555f294d8b0048571f7dfe084525c9e6c5b1f40ab7b7db568b409da7",
+    "source_working_tree_sha256_at_final_build": "1c75a0c509b2d0b83a8c4a213fa0b38686b00d8eaa8bda0ee58d18460878c7d2"
+  },
+  "original_reference_local_only": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_full_owner_javap_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+    "original_javap_exit_code": 0
+  },
+  "final_compiled_output": {
+    "full_owner_javap_sha256_local_only": "f7b890c0472d7413474109014300e7785cbf15e2b57d7ee2a45a87d344e2f589",
+    "compiled_javap_exit_code": 0,
+    "compiled_owner_class_sha256": "7027835fa64c0a8853e8a157e440ebb8fa7142bc632b36ae30a33548e3a4351d",
+    "built_jar_sha256": "d1aa7b0ab4c70fa84999cb8a7a6d8238dce1a1ab96c8f3752593287456895731"
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Read the complete exact original owner and final compiled owner with javap -p -c -s -v; exact descriptor confirmed; original method offsets 0-345 and all 8 exception handlers reviewed.",
+      "The ordered 29 field/method/class reference events match after excluding the original identity-rethrow calls in guarded obfuscation branches.",
+      "Both Vec3.add calls are followed by the original Intrinsics null-expression check, with the original message; the previous source omitted these two checks.",
+      "Reviewed state gate/player reads, parameter x/z field reads, 1.0E-6 threshold and dcmpg behavior, sampler receiver/arguments, Vec3 constructor argument order, all geometry-call receivers/arguments, repeated player-width reads, offset field and signs, 2.0 and 0.03 constants, and short-circuit returns.",
+      "The 8 original handlers catch NoWhenBranchMatchedException and invoke a(Throwable):Throwable; the original helper is identity. The source/compiled method catches nothing and does not swallow exceptions."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": "gradlew.bat -Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T19:04:01.6393228Z",
+    "ended_utc": "2026-11-19T19:05:22.5366137Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings"
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "minecraft_client": false,
+    "valid_player_and_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null,
+    "reason": "The geometry helper calls player/world-dependent collision predicates. No null, plain-object, or worldless fixture was used as a substitute for a valid game path."
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158472,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing local paths",
+    "Gradle caches and build outputs"
+  ],
+  "hash_semantics": "Working-tree SHA-256 is exact file bytes at final build; LF SHA-256 is normalized text; Git blob OID is the Git-cleaned text object."
+}

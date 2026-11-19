@@ -1,0 +1,31 @@
+R1975 static review — Pathfinder `f(Vec3, Vec3, Vec3): boolean`
+
+Baseline commit: `23633d4d7aecaddda611489f787fb1564983a1ca`; source blob `a680810dfafd72e52504dec7f259f9d814921736`. Final source blob `c52b187f7f5b4830736bbfc0cb2c0d40a6dd593d`; LF SHA-256 `b31d3d86555f294d8b0048571f7dfe084525c9e6c5b1f40ab7b7db568b409da7`; exact working-tree SHA-256 at final build `1c75a0c509b2d0b83a8c4a213fa0b38686b00d8eaa8bda0ee58d18460878c7d2`.
+
+## Complete descriptor review
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Z`. The complete original method spans offsets 0–345 and has 8 exception-table entries. The exact original JAR SHA-256 is `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; the original and final compiled owner were read using JDK 25 `javap -p -c -s -v` (exit 0 for both). Full dumps remain local and are not published.
+
+## Restored source behavior
+
+- The method reads the static `l()` state gate once and returns false if it is null; only then does it capture `Minecraft.player` once and return false if the player is null.
+- It reads `param2.x - param1.x` and `param2.z - param1.z`, computes horizontal distance using `sqrt(dx*dx + dz*dz)`, returns false below `1.0E-6`, then computes the normalized perpendicular components `-dz/distance` and `dx/distance`.
+- It invokes the same singleton sampler with `(param1, param2, param3, false)`, then constructs the base test point from the sampled x/z and `param3.y`.
+- It invokes the first geometry predicate with `player.getBbWidth()/2.0 - 0.03` and returns false immediately when that predicate is true.
+- It then tests the positive and negative perpendicular offset points, reading the same distance field for each component. Both `Vec3.add` results are checked with `Intrinsics.checkNotNullExpressionValue(..., "add(...)")` before the geometry call. The player width getter is invoked at each of the three original test points; the final result short-circuits as `positive && negative`.
+- Constants, field targets, sampler receiver/descriptor, `Vec3` constructor argument order, geometry predicate receiver/descriptor, call order, and early/short-circuit returns were checked against the full method. The ordered 29 field/method/class reference events match between original and final compiled method after excluding the original identity-rethrow calls described below.
+
+## Exceptions and compiled comparison
+
+All eight original exception handlers catch only `kotlin.NoWhenBranchMatchedException` and call the owner's `a(Throwable):Throwable`, whose full original method is the identity operation (`aload_0; areturn`) before the exception is rethrown. The handler-bearing branches use the same local state-gate array that the method has already established as non-null; they are guarded bytecode noise and do not change normal outcomes. The Java source and compiled method have no exception table, add no catch, and swallow no exception. Other thrown failures continue to propagate.
+
+The only source change in this slice is the restoration of the two missing Kotlin non-null expression checks immediately after the two `Vec3.add` calls. The compiled method contains both checks in the original order. This is a static/source-build result, not a runtime-equivalence claim.
+
+Static status: **PASS** for the complete descriptor/source/compiled-method review.
+
+## Build and runtime boundary
+
+Final Temurin JDK `25.0.4.1+1-LTS` full-tree `build --rerun-tasks`: `2026-11-19T19:04:01.6393228Z`–`2026-11-19T19:05:22.5366137Z`, exit code 0, 18 existing Unsafe/deprecation/unchecked warnings, tests `NO-SOURCE`. See `build-jdk25-final.log` and `attempts.json`.
+
+No direct probe, Minecraft client, valid player/world, normal Pathfinder user path, desktop input, or compatible server was used. Geometry/player/world behavior remains open for valid in-game acceptance.
