@@ -120,6 +120,8 @@
     "previously_published_claim": "The claim that every nonzero-gate route, including an empty route, reached the converter was incorrect and is withdrawn.",
     "final_source_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
     "evidence_baseline_commit": "88dfe47cd285f990da0a7c1c00599bdd4bb0fdc3",
-    "corrected_utc": "2026-11-19T03:44:13Z"
+    "corrected_utc": "2026-11-19T03:44:13Z",
+    "final_source_git_blob_sha256_published": "aaaa07296f1a67aa443ec8d8d22c8863e40ebc6301da7a0be47fbc5e692aa812",
+    "final_source_git_blob_oid_both_repositories": "abec1e5c7467547890dbe28d766d1cc37ebcadd2"
   }
 }

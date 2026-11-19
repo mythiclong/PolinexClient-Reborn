@@ -1,6 +1,6 @@
 {
   "sync_id": "SYNC-20261119-PATHFINDER-R1963-R1964",
-  "generated_utc": "2026-11-19T03:47:29Z",
+  "generated_utc": "2026-11-19T03:52:06Z",
   "scope": "Correct the Pathfinder route API operand-stack interpretation; repair type guards in the normal route-event consumer; record a full-tree build; refresh Chinese and English handoffs.",
   "evidence_baselines": {
     "private_openpolinex": {
@@ -30,11 +30,17 @@
   "production_source_changes": [
     {
       "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
-      "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+      "working_tree_sha256_at_build": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+      "repository_content_sha256": "aaaa07296f1a67aa443ec8d8d22c8863e40ebc6301da7a0be47fbc5e692aa812",
+      "git_blob_oid_both_repositories": "abec1e5c7467547890dbe28d766d1cc37ebcadd2",
+      "private_public_bytes_equal": true
     },
     {
       "path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
-      "sha256": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783"
+      "working_tree_sha256_at_build": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
+      "repository_content_sha256": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a",
+      "git_blob_oid_both_repositories": "1e81e6ded4c853426942a74b71ebb42d1ec08d22",
+      "private_public_bytes_equal": true
     }
   ],
   "java_source_inventory": {
@@ -57,16 +63,16 @@
     "log_sha256": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf"
   },
   "source_content_sha256": {
-    ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json": "0383c8993258334a603007c9d3b77c6298ef9ba81147d06554295496cb0f6310",
-    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json": "1cab7054218edba3c96eca11939bd467734882050f035b70916a7187f81cda7f",
+    ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json": "fa21e5ad19f6e74fb633f85ba890a4c9df51483fe3af5e288e898ca5d2e9457a",
+    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json": "9da62ca248445e78209e83cfc802a61a6227148b63b51ddbc8a1e95417976080",
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/summary.txt": "304bcaca16adda390709523c3c7f9f9dfe0c3d34b37270dac0b568f44547e572",
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun.log": "e77440a74fb710099b745610968e91e201b9b454d890b4905fc743287c118bd1",
     ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun-corrected.log": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf",
-    ".analysis/reports/RESUME.md": "dd6d65b816be7d85e0b0057b290c5346ba5bb579879d21c2e023d3532c7e6100",
-    "README.md": "5c47d0822cb2841cad53abec4bfdd90fff7f0f6ca50b3a262b7ff6546f710273",
-    "README_EN.md": "e68a823c49f773fd5ab3e31d5a1cd72244662e36d02e8a80ff2807673331cd62",
-    "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
-    "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+    ".analysis/reports/RESUME.md": "43119f50b24b5ec0264df5874762dc41123937bb3714b8a35e6eb877b703d4dd",
+    "README.md": "a9a9393cc79645cfada6b70ff3c4359c85c7b8b65cf219241304fa1a41a08cb9",
+    "README_EN.md": "61c50dd5bc85cb8867018063fb5535ec71b5b65a1a3b795ce0a20b05b4d85d08",
+    "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a",
+    "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java": "aaaa07296f1a67aa443ec8d8d22c8863e40ebc6301da7a0be47fbc5e692aa812"
   },
   "content_publication": {
     "status": "Fast-forward pushed and remote refs verified. The repositories have separate Git histories, so equivalent content was committed independently on each branch; no force-push.",
@@ -93,9 +99,11 @@
       "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java"
     ],
     "follow_up_index_commit": {
-      "status": "This synchronization index and its README/RESUME links are included in a follow-up documentation-only commit after the verified content commits above.",
+      "status": "This synchronization index, canonical source-hash cross-check, and README/RESUME links are included in follow-up documentation-only commits after the verified content commits above.",
       "files": [
         ".analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json",
+        ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
+        ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json",
         "README.md",
         "README_EN.md",
         ".analysis/reports/RESUME.md"
@@ -113,5 +121,6 @@
     "Full original/current javap dumps",
     "Compiled class files",
     "Local Gradle outputs and caches"
-  ]
+  ],
+  "source_hash_semantics": "source_content_sha256 fingerprints bytes in the published Git tree (canonical LF). production_source_changes.working_tree_sha256_at_build fingerprints exact Windows working-tree bytes consumed by the successful build (CRLF). Both private and public commit trees were verified byte-identical for the changed Java files."
 }

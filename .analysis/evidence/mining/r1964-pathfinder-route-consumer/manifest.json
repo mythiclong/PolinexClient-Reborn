@@ -14,7 +14,8 @@
     "original_full_class_dump_sha256_local_only": "32b0ae4d6e867037f64421c7ee572ace7bf190c0bec6c3c0662b2e6d3936f398",
     "compiled_full_class_dump_sha256_local_only": "11a40b6e7c61bc5e44196b7afc8a30442955d010db046a77cd660b7612bc42a6",
     "compiled_owner_class_sha256": "cc14bb9b0415b633a741a3a81d49d4e498e332e2f5e46677904fd03671c80901",
-    "method_exception_table": "absent in both original and current compiled method"
+    "method_exception_table": "absent in both original and current compiled method",
+    "source_git_blob_sha256_published": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a"
   },
   "confirmed_difference": {
     "summary": "The current source cast each Object[] configuration value to String[] before checking whether it was an Integer or String. The original performs instanceof on the actual Object first. Normal Integer coordinates or String mode values therefore threw ClassCastException in the previous source before reaching the intended type checks.",
@@ -95,11 +96,17 @@
   "source_changes": [
     {
       "path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
-      "sha256": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783"
+      "sha256": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
+      "working_tree_sha256_at_build": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
+      "published_git_blob_sha256": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a",
+      "published_git_blob_oid_both_repositories": "1e81e6ded4c853426942a74b71ebb42d1ec08d22"
     },
     {
       "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
-      "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+      "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+      "working_tree_sha256_at_build": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+      "published_git_blob_sha256": "aaaa07296f1a67aa443ec8d8d22c8863e40ebc6301da7a0be47fbc5e692aa812",
+      "published_git_blob_oid_both_repositories": "abec1e5c7467547890dbe28d766d1cc37ebcadd2"
     }
   ],
   "build_validation": {
@@ -145,5 +152,6 @@
       "exit_code": 0,
       "dump_sha256_local_only": "11a40b6e7c61bc5e44196b7afc8a30442955d010db046a77cd660b7612bc42a6"
     }
-  }
+  },
+  "source_hash_note": "Working-tree SHA-256 values fingerprint the exact Windows source bytes used by the successful build (CRLF). Published Git blob SHA-256/OIDs fingerprint canonical repository bytes (LF); these are separately recorded, not treated as interchangeable."
 }
