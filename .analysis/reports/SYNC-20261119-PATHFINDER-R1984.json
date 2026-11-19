@@ -1,6 +1,6 @@
 {
   "sync_id": "SYNC-20261119-PATHFINDER-R1984",
-  "verified_utc": "2026-11-19T22:00:46.7489635Z",
+  "verified_utc": "2026-11-19T22:02:56.1499893Z",
   "scope": "R1984 Pathfinder h():double source restoration, evidence, bilingual README, and handoff snapshot.",
   "source": {
     "baseline_private_commit": "3da704bde3257c6e476b7fed65c1b56282993611",
@@ -58,12 +58,30 @@
     "repository_trees_identical": false,
     "private_tree_at_content_push": "89c68b521843e07c538045d596d6fd5967586ab0",
     "public_tree_at_content_push": "4cbc856554036e888063d9c8a7762001f738d276",
-    "note": "README/RESUME sync-link wording is being updated in a documentation follow-up; content commits and source/evidence blobs are already synchronized. Final refs will be rechecked after that push."
+    "note": "README/RESUME sync links were pushed in the documentation follow-ups above. Live refs and shared README, RESUME, source, sync-record, and evidence blobs were rechecked at those commits. The final report-only follow-up changes only this sync metadata; the two repository trees remain distinct.",
+    "documentation_followup_refs_verified": true,
+    "shared_readme_resume_and_source_blobs_at_documentation_commits_equal": true,
+    "private_tree_at_documentation_commit": "29ff16e7e03460bd77713b275388365e0842c0b1",
+    "public_tree_at_documentation_commit": "5b6d00514c61b058ffb087d731dd9a9bf350d208"
   },
   "validation_limits": [
     "The sync record proves publication and shared-file consistency, not runtime equivalence.",
     "R1984 had no client, valid-player/world, normal-user-path, or compatible-server test.",
     "The stable-input truth table is statically reviewed; original repeated key-getter scheduling is not reproduced exactly.",
     "Protected original JAR/classes, full javap dumps, workstation-path logs, caches, and build outputs are not published."
-  ]
+  ],
+  "documentation_followups": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "documentation_commit": "1a555db0900b3a20808314c9a150fc5fc77c7bfd",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "documentation_commit": "24dc5d633478b455b61448d23cc944706bef056a",
+      "remote_ref_verified": true
+    }
+  }
 }
