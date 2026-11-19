@@ -1,0 +1,71 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1971",
+  "generated_utc": "2026-11-19T17:52:00Z",
+  "scope": "Synchronize R1971 Pathfinder b(List) guard-branch restoration, static/build evidence, bilingual README, and concise handoff to the private and public repositories.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "bcd81b3dd47ce29ae0059283961797ef6a33ab39"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "419640fbe973a0b820d3bc274ed0a0e32a65db67"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "fb7f979e4ded69b71e3988ecdd4b493944df1709",
+      "remote_ref_verified_at": "2026-11-19T17:52:00Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "branch": "main",
+      "content_commit": "283a0d69f39f16291c90b0c1552d53d8b061f038",
+      "remote_ref_verified_at": "2026-11-19T17:52:00Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "note": "The source/evidence content commits listed here were pushed and their remote refs verified. The bilingual README and RESUME now link to this record; this metadata update is published as a subsequent fast-forward commit."
+  },
+  "published_file_content_sha256_lf_at_content_commits": {
+    "README.md": "fbe591736cbfd0bc5dfde0c49c80819c87c29af3ba7fb2ce9cc87c8f94466693",
+    "README_EN.md": "af6fc643e1e525390c7de756294f87f3cfe7d24314e606a1e470fa828ef44417",
+    ".analysis/reports/RESUME.md": "7e3acdb5ab15e4263044d53c11508740d0c9918928ae957d669a952237ac768b",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "d91aef84f3ebee66bceae07d5d76393052ae6df6b8e60f3089c2f3d9b9bdace5",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/manifest.json": "dbc8628e7f741e7d7d8c6ab5bb42270a63c4952a1fe50a5dda892b69a6ca93df",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/static-review.txt": "3c7f96d34a292c7c10f6adaf1d8fe4cd19a5926aa786ca6313f6e0203b95f74c",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/build-jdk25-final.log": "be8467cab90db821fe4e7d5cd1219241723a8259ca29fe0facd75922acadf1c3",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/attempts.json": "1ff514002b0df970e5452d3e89955c80d32eea71ecc6a59d0ef7d39e3d6741a7"
+  },
+  "published_file_git_blob_oids_at_content_commits": {
+    "README.md": "fc3afdaa48b09f2c483207d822768b05719d1767",
+    "README_EN.md": "9b79e0f0e0f85afc7cf3e627de8db52194460f74",
+    ".analysis/reports/RESUME.md": "4df9c2c4c478637cc2d245c527c3c65136a01f52",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "874baec2161fa44a2f4580ac8b76294dcbbaf5e6",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/manifest.json": "6995a0ffc819706b5ca038120f0251f8035c3730",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/static-review.txt": "4203cc695f9beb0e572267227b68b05c16b27e7f",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/build-jdk25-final.log": "ccf4794b8d4ece22d802341786f45ed77e9a6a26",
+    ".analysis/evidence/mining/r1971-pathfinder-movement-intent/attempts.json": "21f102026159e0a174602c03c8baeb2bb808fbf1"
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "method": "b(Ljava/util/List;)Ljava/util/ArrayList;",
+    "baseline_git_blob_oid": "5b108bbfb08d64c0e4dca16ac34713f9adaa18ad",
+    "published_git_blob_oid": "874baec2161fa44a2f4580ac8b76294dcbbaf5e6",
+    "source_content_sha256_lf": "d91aef84f3ebee66bceae07d5d76393052ae6df6b8e60f3089c2f3d9b9bdace5",
+    "source_working_tree_sha256_at_final_build": "61e5dd22a2734b94ab8ed0ad2d93db67ca9fe1f43cb5c9090b62f69b6c0c29bc"
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS",
+    "final_full_tree_build": "PASS; Temurin JDK 25.0.4.1; exit code 0",
+    "direct_probe": "NOT RUN",
+    "normal_minecraft_path": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  }
+}

@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 17:49 UTC。R1970 已同步到两个 GitHub 仓库并核验 refs，记录见 [R1970 双仓同步](SYNC-20261119-PATHFINDER-R1970.json)。R1971 `b(List):ArrayList` 已完成源码修复、完整静态复核和 Temurin JDK 25 全树构建，**本批次双仓同步尚未提交**；完成后记录见 [R1971 双仓同步](SYNC-20261119-PATHFINDER-R1971.json)。不要覆盖其他工作树或清理未跟踪调查工具。受保护原版 JAR/class 与完整 `javap` dump 仅本机留存、不发布。
+> 更新：2026-11-19 18:05 UTC。R1970 与 R1971 源码/证据批次已同步至私有 `openpolinex` 和公开 `PolinexClient-Reborn` 并核验远端 refs；R1971 记录见 [R1971 双仓同步](SYNC-20261119-PATHFINDER-R1971.json)。当前唯一源码切片为 R1972 `Pathfinder c(List):ArrayList` 完整原版字节码审计。不要覆盖其他工作树或清理未跟踪调查工具。受保护原版 JAR/class 与完整 `javap` dump 仅本机留存、不发布。
 
 ## 下一唯一切片：R1972 Pathfinder `c(List):ArrayList`
 

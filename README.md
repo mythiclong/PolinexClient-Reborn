@@ -9,7 +9,7 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-R1971 已恢复 Pathfinder 移动意图 helper `b(List): ArrayList` 的 guard-null 分支：原版在读取 `Minecraft.player` 前检查 gate；gate 为空时进入无玩家 fallback，按原始迭代顺序跳过节点访问并向 smoother 传空列表。完整 descriptor（偏移 0–1230、51 个异常表项）静态复核通过，Temurin JDK 25 全树构建 exit code 0。没有执行直接探针、Minecraft 玩家/世界路径或兼容服务器验收。R1970 `b(List, boolean)` 的距离/位置 helper 也已完整静态核对，未发现确认差异。下一切片 R1972：审计直接控制生成依赖 `c(List): ArrayList`。
+R1971 已恢复 Pathfinder 移动意图 helper `b(List): ArrayList` 的 guard-null 分支：原版在读取 `Minecraft.player` 前检查 gate；gate 为空时进入无玩家 fallback，按原始迭代顺序跳过节点访问并向 smoother 传空列表。完整 descriptor（偏移 0–1230、51 个异常表项）静态复核通过，Temurin JDK 25 全树构建 exit code 0。没有执行直接探针、Minecraft 玩家/世界路径或兼容服务器验收。R1970 `b(List, boolean)` 的距离/位置 helper 也已完整静态核对，未发现确认差异。下一切片 R1972：审计直接控制生成依赖 `c(List): ArrayList`。 R1971 源码与证据已同步至私有 `openpolinex`（`fb7f979`）及公开 `PolinexClient-Reborn`（`283a0d6`），远端 refs 已核验；详见 [R1971 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1971.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -38,6 +38,7 @@ R1971 已恢复 Pathfinder 移动意图 helper `b(List): ArrayList` 的 guard-nu
 - [R1969 Pathfinder `d(List)` 静态复核与全树构建](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
 - [R1970 Pathfinder `b(List, boolean)` 静态复核与全树构建](.analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json)
 - [R1971 Pathfinder `b(List)` 静态复核与全树构建](.analysis/evidence/mining/r1971-pathfinder-movement-intent/manifest.json)
+- [R1971 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1971.json)：私有 `openpolinex` 内容提交 `fb7f979`、公开 `PolinexClient-Reborn/main` 内容提交 `283a0d6`；远端 refs 已核验。
 - [R1970 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1970.json)：私有 `openpolinex` 内容提交 `eaca820`、公开 `PolinexClient-Reborn/main` 内容提交 `500963e`；远端 refs 已核验。
 - [R1968 Pathfinder 实体路线静态复核与全树构建](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
 - [R1969 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json)：私有 `openpolinex` 内容提交 `16b2a70`、公开 `PolinexClient-Reborn/main` 内容提交 `b993352`，两端 refs 于 2026-11-19 17:19:42 UTC 核验一致。
