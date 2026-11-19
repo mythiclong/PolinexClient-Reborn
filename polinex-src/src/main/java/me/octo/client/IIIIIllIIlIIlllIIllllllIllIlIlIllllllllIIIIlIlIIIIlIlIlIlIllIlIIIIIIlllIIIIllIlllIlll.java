@@ -1874,6 +1874,10 @@ return true;
    }
 
    private final boolean o() {
+      int[] var11 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      if (var11 == null) {
+         return false;
+      }
       LocalPlayer var1 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
       if (var1 == null) {
          return false;
@@ -1894,22 +1898,24 @@ return true;
                return false;
             } else {
                int var7 = var6;
-               boolean var8 = false;
+                boolean var8 = false;
+                Iterable<boolean[]> var10 = this.IllIIlIllIIIlIllIlIIlIIIIlllIIIIIIlIllIllIllIIlIIIIIlIIIlIIlllIlllIIlllIIIlIIlIlIlIII;
+                if (!(var10 instanceof java.util.Collection<?> var13) || !var13.isEmpty()) {
+                   for (boolean[] var12 : var10) {
+                      if (var12[1]) {
+                         continue;
+                      }
 
-               for (boolean[] var12 : this.IllIIlIllIIIlIllIlIIlIIIIlllIIIIIIlIllIllIllIIlIIIIIlIIIlIIlllIlllIIlllIIIlIIlIlIlIII) {
-                  if (var12[1]) {
-                     continue;
-                  }
+                      if (!var12[2] && !var12[3]) {
+                         continue;
+                      }
 
-                  if (!var12[2] && !var12[3]) {
-                     continue;
-                  }
-
-                  if (this.a(this.a(var12), this.b(var12), false, this.llIlllIlIlllllllIlllIIlllIlIIIllllIIlIlIIIIIIIIlIIIIIIIIlIIllIIIIIIIIlIllllIlllIlllIl) == null) {
-                     var8 = true;
-                     break;
-                  }
-               }
+                      if (this.a(this.a(var12), this.b(var12), false, this.llIlllIlIlllllllIlllIIlllIlIIIllllIIlIlIIIIIIIIlIIIIIIIIlIIllIIIIIIIIlIllllIlllIlllIl) == null) {
+                         var8 = true;
+                         break;
+                      }
+                   }
+                }
 
                if (var8) {
                   return false;

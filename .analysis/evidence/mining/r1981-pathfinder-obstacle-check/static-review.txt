@@ -1,0 +1,18 @@
+R1981 — Pathfinder private final o():boolean
+Original descriptor: ()Z; complete original code offsets 0–507, 244 instructions, 25 exception-table entries.
+Final compiled code offsets 0–271, 136 instructions, no exception table.
+
+Reviewed the entire body and its sole owner call site, d(List):void. The callsite follows the caller's gate and route-result checks; it contributes to the final jump decision.
+
+Restored three source/bytecode differences:
+1. The original obtains the gate first and returns false before reading Minecraft.player when the gate is null.
+2. The original uses Collection.isEmpty() to bypass iterator creation for empty inputs. The source now preserves that branch.
+3. The original invokes Iterable.iterator(). The field is declared List, so Java's enhanced loop would otherwise target List.iterator(); an explicit Iterable<boolean[]> receiver now matches the original call owner.
+
+Reviewed player-null and movement-state early returns (onGround, water, lava), h()/i() read order, zero-vector comparison, initial route request and null result, list field evaluation, collection fast path, each boolean-array index and skip condition, per-item route query, failure short circuit, final alternate route request, nullable result and integer comparison. All 17 actual invocation targets and 6 field references match in order. Seven private helper calls differ only in Kotlin/Javac opcode lowering; target and receiver are unchanged. Javac omits the original redundant List-to-Iterable checkcast.
+
+All 25 original exception handlers only rethrow NoWhenBranchMatchedException through a(Throwable), whose body is aload_0; areturn. The managed method catches and swallows nothing.
+
+The exact final source passed the Temurin JDK 25 full-tree build. There were 18 existing compiler warnings and test sources are NO-SOURCE. No live-player probe, Minecraft client, normal user route, valid-world test, or compatible-server test was run; runtime equivalence is not claimed.
+
+The first build attempt caught one misspelled field identifier introduced in this slice and failed compilation. That identifier was corrected from the same owner field reference used at the other call sites; the full-tree final build was rerun and passed. Raw logs and full protected bytecode dumps remain local.

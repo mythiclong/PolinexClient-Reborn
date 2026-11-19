@@ -1,0 +1,43 @@
+{
+  "experiment_id": "R1981-pathfinder-obstacle-check",
+  "attempts": [
+    {
+      "attempt_id": "R1981-BUILD-INITIAL-COMPILE-FAIL",
+      "command": "gradlew.bat build --rerun-tasks --no-daemon",
+      "start_utc": "2026-11-19T20:36:11.4894252Z",
+      "end_utc": "2026-11-19T20:36:44.5673941Z",
+      "exit_code": 1,
+      "result": "SOURCE_COMPILE_FAILURE",
+      "reason": "The new loop's call to a(DDZI) referenced a misspelled obfuscated integer field. Javac reported cannot-find-symbol at the edited source line. The name was corrected to the already-used field in the same method; this attempt is not counted as validation."
+    },
+    {
+      "attempt_id": "R1981-BUILD-JDK25-FINAL",
+      "command": "gradlew.bat build --rerun-tasks --no-daemon",
+      "start_utc": "2026-11-19T20:37:25.4862558Z",
+      "end_utc": "2026-11-19T20:38:13.9506635Z",
+      "java_runtime": "Eclipse Temurin 25.0.4.1+1-LTS",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "compileJava": "EXECUTED; 18 existing Unsafe/deprecation/unchecked warnings",
+        "compileTestJava": "NO-SOURCE",
+        "test": "NO-SOURCE",
+        "jar": "EXECUTED",
+        "runtime_equivalence": "NOT TESTED"
+      }
+    },
+    {
+      "attempt_id": "R1981-FULL-DESCRIPTOR-EVENT-COMPARISON",
+      "command": "javap -classpath '.analysis/me-octo-only.jar' -p -c -s -v me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll; javap -classpath 'polinex-src/build/classes/java/main' -p -c -s -v me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll; javap -classpath 'polinex-src/build/classes/java/main' -p -c -s me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll; compare exact o() descriptor and ordered events",
+      "exit_code": 0,
+      "assertions": {
+        "descriptor": "()Z",
+        "ordered_call_targets": "17/17 match after excluding 25 identity-rethrow calls",
+        "ordered_field_references": "6/6 match",
+        "gate_and_collection_branches": "PASS",
+        "caller": "d(Ljava/util/List;)V; one o() call site in the owner"
+      },
+      "publication": "Full original and compiled dumps and local paths are excluded."
+    }
+  ]
+}

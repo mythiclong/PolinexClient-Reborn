@@ -1,0 +1,19 @@
+command=gradlew.bat build --rerun-tasks --no-daemon
+java=Eclipse Temurin 25.0.4.1+1-LTS
+start_utc=2026-11-19T20:37:25.4862558Z
+end_utc=2026-11-19T20:38:13.9506635Z
+exit_code=0
+Fabric Loom: 1.18.0-alpha.19
+Task :compileJava EXECUTED; 18 existing warnings
+Task :processResources EXECUTED
+Task :classes EXECUTED
+Task :processIncludeJars EXECUTED
+Task :compileTestJava NO-SOURCE
+Task :processTestResources NO-SOURCE
+Task :test NO-SOURCE
+Task :validateAccessWidener NO-SOURCE
+Task :jar EXECUTED
+Task :assemble EXECUTED
+Task :build EXECUTED
+BUILD SUCCESSFUL in 48s
+4 actionable tasks: 4 executed

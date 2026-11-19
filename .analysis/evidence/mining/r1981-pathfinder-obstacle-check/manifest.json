@@ -1,0 +1,80 @@
+{
+  "experiment_id": "R1981-pathfinder-obstacle-check",
+  "generated_utc": "2026-11-19T20:42:11Z",
+  "scope": "Restore the Pathfinder obstacle-check predicate's gate behavior, collection fast path, and original iterable invocation target from its complete original descriptor.",
+  "source_baseline": {
+    "commit": "de2a6055d3ece3b757f7cb28f9677ceac54f5014",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before_slice": "689f71330ff91a7b8e5d08aafe6d9bdaae63ef4c"
+  },
+  "source_final_at_build": {
+    "git_blob": "5a6a325ce33d76923e8fb6ee550ddc09d166d1be",
+    "sha256_lf": "df35bceb16519c35cc9ab516ffdc382704223b46de5e194a3ad24aa95e73bce0"
+  },
+  "original_reference": {
+    "protected_original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "local_original_class_archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_dump_sha256_lf": "3c74cf717c47f54a09c5f83f88021b9ff7cef3ad56ee9463015b5a58634f4f6e",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "o",
+    "descriptor": "()Z",
+    "access": "private final",
+    "original_offsets": "0-507",
+    "original_instruction_count": 244,
+    "original_exception_handlers": 25,
+    "compiled_offsets": "0-271",
+    "compiled_instruction_count": 136,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256_lf": "837e88d2232c509abc33fca55c482943c9d7e7d3b77bc846da6b656978e30701"
+  },
+  "normal_path_callsite": {
+    "caller": "d(Ljava/util/List;)V",
+    "original_call_offset": 174,
+    "original_call_opcode": "invokespecial",
+    "managed_source_call": "this.o() in d(List), after the caller's gate and route-result checks",
+    "callsite_count_in_owner": 1
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "gate_null_branch": "PASS: the original reads the gate before player state and returns false when null. The managed source now restores that early return.",
+    "collection_fast_path": "PASS: the original tests Collection.isEmpty() and avoids requesting an iterator for an empty collection. The source now makes the same conditional fast-path check.",
+    "iterator_receiver": "PASS: the source explicitly views the list as Iterable<boolean[]> so iterator() dispatches to Iterable.iterator(), as in the original; the original redundant widening cast to Iterable is not emitted by Javac.",
+    "ordered_invocation_targets": "PASS: all 17 invocation targets match in order after excluding the original's 25 identity-rethrow trampoline calls. Seven private-helper opcode differences (Kotlin invokespecial vs Javac invokevirtual) retain the same private target and receiver.",
+    "ordered_field_references": "PASS: all 6 field references match in order.",
+    "class_reference_delta": "The original includes a redundant checkcast to Iterable; Java safely omits it because the field is declared List. Collection checks/casts and the boolean-array cast remain.",
+    "branch_review": "PASS: player-null, grounded, water/lava, h()/i() order, both-zero short circuit, initial directional route result and null return, boolean-array indices 1/2/3 and skip order, per-entry route query and failure flag, loop exit, final alternate route query, null result handling, integer comparison, and boolean return were checked against the full original CFG and final compiled body.",
+    "exception_behavior": "All 25 original handlers catch NoWhenBranchMatchedException and delegate to a(Throwable); the helper is exactly aload_0; areturn. The managed source does not catch or swallow exceptions."
+  },
+  "validation": {
+    "full_tree_build": "PASS: gradlew.bat build --rerun-tasks --no-daemon, Eclipse Temurin JDK 25.0.4.1+1-LTS, exit 0.",
+    "compiler_warnings": "18 existing Unsafe/deprecation/unchecked warnings.",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN: the method needs the live player and Pathfinder state; no invalid object or worldless stand-in was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158492,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "This is static and build evidence only, not runtime-equivalence, in-game, or server-compatibility evidence. Evidence-production baseline and later ingestion commit are distinct."
+}
