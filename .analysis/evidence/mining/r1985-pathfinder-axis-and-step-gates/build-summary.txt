@@ -1,0 +1,15 @@
+R1985 full-tree build
+
+Command: .\gradlew.bat build --rerun-tasks --no-daemon
+Working directory: polinex-src
+JDK: Eclipse Temurin 25.0.4.1+1-LTS
+Started UTC: 2026-11-19T22:27:46.5561882Z
+Finished UTC: 2026-11-19T22:28:35.8209967Z
+Exit code: 0
+Result: BUILD SUCCESSFUL; 4 actionable tasks executed.
+Warnings: 18 existing Unsafe/deprecation/unchecked warnings.
+Tests: NO-SOURCE.
+
+An earlier unconfigured invocation at 2026-11-19T22:22:39.5812970Z–22:22:47.3250457Z exited 1 during Gradle configuration because the inherited JVM was Java 17 while Fabric Loom requires Java 25. It did not compile source. The final run explicitly selected Temurin 25 after the last source edit.
+
+No client, world, normal route, direct runtime probe, or compatible server was used for this build.

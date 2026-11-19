@@ -1,0 +1,123 @@
+{
+  "experiment_id": "R1985-pathfinder-axis-and-step-gates",
+  "generated_utc": "2026-11-19T22:28:35.8209967Z",
+  "scope": "Restore Pathfinder gate-dependent axis conversion, movement input predicate, and bounded step helper branches from original full-descriptor bytecode.",
+  "source_baseline": {
+    "commit": "d353e30ef8d11edc0292690bf0c037e4381fce68",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d",
+    "source_sha256_before": "c5d4d0a3aa0c9b2934bb95ef8b378298b84df0f4875e2e298234e35b4d0e908c",
+    "final_git_blob": "86b1697b16ed8176e3471011414029cefc4d814a",
+    "final_source_sha256": "986be2d5536af63bd8152c3d85d25c98e33269ef54b87612b21fd41e08f06c77"
+  },
+  "original_reference": {
+    "protected_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "full_original_owner_dump_sha256": "fde699fd0f379f10ca376567b7d1b665c0e50d151b6028dc4e913921306d0391",
+    "full_compiled_owner_dump_sha256": "d38f3f6750619ca2952f744fd8365454ac43c3e080e0425baf11288848edba20",
+    "full_dumps_published": false
+  },
+  "compiled_owner_class_sha256": "c513c0d7baf7f6f7c67bc6b8cc0952da454371fe14ba42e7840eee4b4dcacd3d",
+  "methods": [
+    {
+      "name": "a",
+      "descriptor": "([Z)D",
+      "original_instruction_rows": 50,
+      "original_exception_handlers": 7,
+      "compiled_instruction_rows": 32,
+      "compiled_exception_handlers": 0
+    },
+    {
+      "name": "b",
+      "descriptor": "([Z)D",
+      "original_instruction_rows": 50,
+      "original_exception_handlers": 7,
+      "compiled_instruction_rows": 32,
+      "compiled_exception_handlers": 0
+    },
+    {
+      "name": "a",
+      "descriptor": "(ID)Z",
+      "original_instruction_rows": 54,
+      "original_exception_handlers": 5,
+      "compiled_instruction_rows": 41,
+      "compiled_exception_handlers": 0
+    },
+    {
+      "name": "a",
+      "descriptor": "(DDID)Ljava/lang/Integer;",
+      "original_instruction_rows": 122,
+      "original_exception_handlers": 12,
+      "compiled_instruction_rows": 80,
+      "compiled_exception_handlers": 0
+    }
+  ],
+  "reviewed_callers": [
+    {
+      "descriptor": "(Ljava/util/List;)Ljava/util/ArrayList;",
+      "original_instruction_rows": 1040,
+      "original_exception_handlers": 84,
+      "changed": false,
+      "purpose": "Reviewed complete candidate source, movement-axis conversion inputs, helper arguments, and selection use."
+    },
+    {
+      "descriptor": "(Lme/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll;DDIDILjava/lang/Object;)Ljava/lang/Integer;",
+      "original_instruction_rows": 13,
+      "original_exception_handlers": 0,
+      "compiled_instruction_rows": 13,
+      "compiled_exception_handlers": 0,
+      "purpose": "Reviewed complete default-argument bridge; mask bit 8 defaults final double to 0.0 and forwards axis arguments unchanged."
+    }
+  ],
+  "static_assertions": {
+    "gate_nonnull_axis_a": "forward-only=+1; backward-only=-1; equal flags=0",
+    "gate_null_axis_a": "forward=true=0; forward=false=-1",
+    "gate_nonnull_axis_b": "left-only=-1; right-only=+1; equal flags=0",
+    "gate_null_axis_b": "left=true=0; left=false=+1",
+    "gate_nonnull_early_return": "both axes zero only",
+    "gate_null_early_return": "both axes nonzero only",
+    "numeric_comparison": "Java ==/!= 0.0 matches original dcmpg-to-zero tests for signed zero and NaN",
+    "signed_y_delta": "newY - previousY > 0.05; not absolute delta",
+    "step_return_gate": "k() is evaluated before the gate test; index is returned only for non-null gate, k=true and signed delta <= 0.05; null gate continues to bound and returns null",
+    "remaining_step_loop": "u() call, bounded iteration, path-step receiver/arguments, null handling and returned 1-based index retained"
+  },
+  "validation": {
+    "static_review": "PASS",
+    "build_command": ".\\gradlew.bat build --rerun-tasks --no-daemon",
+    "build_working_directory": "polinex-src",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "build_started_utc": "2026-11-19T22:27:46.5561882Z",
+    "build_finished_utc": "2026-11-19T22:28:35.8209967Z",
+    "build_exit_code": 0,
+    "build_result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 warnings",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_world_and_normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "failed_environment_attempt": {
+      "inherited_jvm": "Java 17",
+      "required_jvm": "Java 25",
+      "exit_code": 1,
+      "failure_phase": "Gradle configuration before source compilation",
+      "classification": "environment-only; successful build explicitly selected Temurin 25"
+    }
+  },
+  "acceptance": {
+    "static_restoration": "PASS",
+    "full_tree_build_regression": "PASS",
+    "original_vs_compiled_runtime_probe": "OPEN",
+    "normal_client_path": "OPEN",
+    "valid_world_pathfinding": "OPEN",
+    "compatible_server": "OPEN"
+  },
+  "evidence_files_sha256": {
+    "static-review.txt": "1e4ba4c792384c348c8939c955f1309a489f1a2987ac09da37097d1f709476b4",
+    "build-summary.txt": "94b569e8adc1f9f93c5f10595b73be1e61c152432270dc859f8b6236363ae147",
+    "manifest.json": "self-hash omitted"
+  },
+  "limitations": [
+    "Static bytecode and full-tree compilation do not establish runtime equivalence.",
+    "No Minecraft client, valid player/world, normal route, screenshot, or compatible server was tested.",
+    "The protected original JAR, full javap dumps, workstation paths, and build logs are not published."
+  ]
+}

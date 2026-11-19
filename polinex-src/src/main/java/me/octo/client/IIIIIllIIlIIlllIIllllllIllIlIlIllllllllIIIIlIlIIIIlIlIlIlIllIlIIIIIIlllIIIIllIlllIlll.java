@@ -806,11 +806,25 @@ return true;
    }
 
    private final double a(boolean[] param1) {
-      return param1[0] ? 1.0 : (param1[0] != param1[1] ? -1.0 : 0.0);
+      int[] var2 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      boolean var3 = param1[0];
+      if (var2 == null) {
+         return var3 ? 0.0 : -1.0;
+      }
+
+      boolean var4 = param1[1];
+      return var3 ? (var4 ? 0.0 : 1.0) : (var4 ? -1.0 : 0.0);
    }
 
    private final double b(boolean[] param1) {
-      return param1[2] ? -1.0 : (param1[2] != param1[3] ? 0.0 : 1.0);
+      int[] var2 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      boolean var3 = param1[2];
+      if (var2 == null) {
+         return var3 ? 0.0 : 1.0;
+      }
+
+      boolean var4 = param1[3];
+      return var3 ? (var4 ? 0.0 : -1.0) : (var4 ? 1.0 : 0.0);
    }
 
    private final double h() {
@@ -833,21 +847,30 @@ return true;
 int[] var4 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
 double var5 = this.h();
 double var7 = this.i();
-if (var5 == 0.0 || var7 == 0.0) { return false; }
+if (var4 != null) {
+  if (var5 == 0.0 && var7 == 0.0) { return false; }
+} else if (var5 != 0.0 && var7 != 0.0) {
+  return false;
+}
 return this.a(var5, var7, param1, param2) != null;
    }
 
    private final Integer a(double param1, double param3, int param5, double param6) {
 int[] var8 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
-if (param1 == 0.0 || param3 == 0.0) { return null; }
+if (var8 != null) {
+  if (param1 == 0.0 && param3 == 0.0) { return null; }
+} else if (param1 != 0.0 && param3 != 0.0) {
+  return null;
+}
 var var9 = this.u();
 if (var9 == null) { return null; }
 for (int var10 = 1; var10 <= param5; var10++) {
   double var11 = var9.a().y;
   var9 = me.octo.client.utils.player.pathfinder.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a(param1, param3, var9, true, param6);
   if (var9 == null) { return null; }
-  boolean var13 = Math.abs(var9.a().y - var11) > 0.05;
-  if (me.octo.client.utils.player.pathfinder.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.k() && !var13) { return Integer.valueOf(var10); }
+  boolean var13 = var9.a().y - var11 > 0.05;
+  boolean var14 = me.octo.client.utils.player.pathfinder.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.k();
+  if (var8 != null && var14 && !var13) { return Integer.valueOf(var10); }
 }
 return null;
    }

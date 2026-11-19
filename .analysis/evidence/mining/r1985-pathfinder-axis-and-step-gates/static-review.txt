@@ -1,0 +1,37 @@
+R1985 — Pathfinder axis conversion, movement gate, and bounded step helper
+
+Source owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Source methods changed in this slice:
+- a(boolean[]):double / ([Z)D
+- b(boolean[]):double / ([Z)D
+- a(int,double):boolean / (ID)Z
+- a(double,double,int,double):Integer / (DDID)Ljava/lang/Integer;
+
+Static evidence procedure
+- Read the complete original and final compiled owner output from `javap -p -s -c`, then read the full direct caller `c(List):ArrayList` and default-argument bridge. Full dumps remain local; only dump hashes and the reviewed findings are published.
+- Original owner dump SHA-256: fde699fd0f379f10ca376567b7d1b665c0e50d151b6028dc4e913921306d0391.
+- Final compiled owner dump SHA-256: d38f3f6750619ca2952f744fd8365454ac43c3e080e0425baf11288848edba20.
+- Original owner class methods were resolved by full descriptors, not by name-only matching. The methods changed here are the only source changes in this slice's dependency chain; `h()/i()` were already reviewed in R1984.
+
+Original control flow and restored behavior
+- `a([Z)D`, original 50 instruction rows and 7 `NoWhenBranchMatchedException` handlers: read the global `int[]` gate first, then the forward flag. With non-null gate, forward-only -> +1, backward-only -> -1, equal flags -> 0. With null gate, forward=true -> 0 and forward=false -> -1; the backward flag is not used on that arm. The source now preserves both gate branches.
+- `b([Z)D`, original 50 instruction rows and 7 handlers: read the same gate first, then left. With non-null gate, left-only -> -1, right-only -> +1, equal flags -> 0. With null gate, left=true -> 0 and left=false -> +1; the right flag is not used on that arm. The source now preserves both gate branches.
+- Original constructor descriptor `()V` initializes the candidate field read by `c(List)` with eight four-boolean vectors, in order: forward, backward, left, right, forward+left, forward+right, backward+left, backward+right. The original constructor's full initialization region and the complete `c(List)` method were reviewed; `c(List)` passes each candidate through `a([Z)D` and `b([Z)D` before calling the step helper. No zero-axis domain was inferred from only `h()/i()`.
+- `a(ID)Z`, original 54 instruction rows and 5 handlers: captures the gate before calling `h()` then `i()`. For a non-null gate it returns false early only when both axes are zero; for a null gate it returns false early only when both axes are nonzero; otherwise it invokes `a(DDID)Integer`. The source now preserves that order and branch condition.
+- `a(DDID)Integer`, original 122 instruction rows and 12 handlers: captures the gate once. For a non-null gate it returns null early only when both axes are zero; for a null gate it returns null early only when both axes are nonzero. It then calls `u()` once and retains the existing bounded loop, path-step receiver/arguments, and null returns. The original compares the signed delta `newY - previousY > 0.05`; the prior source incorrectly applied `Math.abs`, so downward movement could count as a rise. The original evaluates `k()` before checking the gate and returns the 1-based index only when the gate is non-null, `k()` is true, and the signed delta is not greater than 0.05. With a null gate it continues through the bound and returns null. The source now restores the signed comparison, gate-dependent return, and call order.
+- Java `== 0.0` / `!= 0.0` agrees with the original `dcmpg`-against-zero tests for both signed zero and NaN: NaN is nonzero in both forms.
+
+Direct-call and bridge review
+- The complete original owner call graph has three direct calls to `a(DDID)Integer`: `a(ID)Z` supplies `h()/i()` results and its caller-selected step/distance arguments; `c(List):ArrayList` supplies `a([Z)`/`b([Z)` results from the fixed candidate vectors; and the static default-argument bridge.
+- The bridge descriptor is `(LOwner;DDIDILjava/lang/Object;)Ljava/lang/Integer;`. It tests mask bit 8 and substitutes 0.0 for the final double when set, then forwards the two axis doubles, integer bound, and distance unchanged. It does not normalize arbitrary axis inputs; the restored helper therefore retains both gate cases for the full numeric domain.
+- `c(List)` is not changed. Its full original method (1,040 instruction rows; 84 handlers) and final compiled helper-call area were reviewed to establish the receiver, candidate source, helper argument order, and that helper return feeds the existing candidate-selection branch. The static default bridge body was reviewed in full (13 instruction rows, no handlers).
+
+Exception and side-effect notes
+- The original axis methods and helper contain injected handlers for `kotlin/NoWhenBranchMatchedException`; those paths rethrow through the previously verified identity `a(Throwable):Throwable` helper (see R1984 static review). The Java source does not add a catch or swallow an exception. The final compiled methods have no exception table, so this is a bytecode-shape difference, not a claim of byte-for-byte equivalence.
+- The step search remains dependent on the current Pathfinder manager/world state. No null-world, plain-object, or empty-player probe was used to infer it.
+
+Validation boundary
+- Static restoration: PASS for the four listed methods and reviewed direct-call arguments/receiver/branch ordering.
+- Full-tree JDK 25 build: PASS; see `build-summary.txt` and `manifest.json`.
+- Direct original-vs-compiled runtime probe: NOT RUN.
+- Client launch, valid world/player, normal user route, and compatible-server behavior: NOT RUN. No runtime equivalence claim is made.

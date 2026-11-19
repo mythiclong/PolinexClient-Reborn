@@ -21,6 +21,8 @@ R1983 completed the full descriptor review of Pathfinder's dual-input predicate 
 
 R1984 reviewed the complete original descriptor and input call chain for Pathfinder `h():double`, then fixed the wrong key used by its null-gate branch: the original selects 0 or -1 from `backward`, while the prior source used `forward`. Neighbor `i():double` and direct callers were also statically reviewed. Because some original branches re-read keys while managed source computes from one read of each key, this confirms the same return branches for a stable input snapshot, not identical getter-call multiplicity. A Temurin JDK 25 full-tree build exited 0 (18 warnings; tests are `NO-SOURCE`). No client, valid-world, normal-user-path, or compatible-server acceptance was run; whether an ordinary path sees a null-gate difference remains unproven. See the [R1984 evidence](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json).
 
+R1985 statically restored Pathfinder movement-axis and step-helper gate branches in `a([Z)D`, `b([Z)D`, `a(ID)Z`, and `a(DDID)Integer`. It also restores the signed `newY - oldY > 0.05` test and the null-gate path that does not return a step index. The full candidate-direction caller and default-argument bridge were reviewed. The Temurin JDK 25 full-tree build exited 0 (18 warnings; tests are `NO-SOURCE`). No direct runtime probe, client, valid-world/normal-pathfinding, or compatible-server acceptance was performed; runtime equivalence is not claimed. See the [R1985 evidence](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json).
+
 - **A* search and candidate nodes:** R1947 restored the candidate-node gate, traversal, and null contract against complete original bytecode. R1948 corrected node-allocation order and the compiled `Function2` callback form.
 - **Route and collision helpers:** R1955 repaired both `0.5625`/NaN branches in route conversion and restored the gate, call order, and fallback in `g(BlockPos)`. The full-tree Gradle `build` passed under Temurin 25.
 - **R1956 collision-gate review:** The original `$llII…` and current `$PXEvMid` names refer to the same source-renamed state holder. Getter, setter, initialization, and `a(BlockPos, ClientLevel): boolean` showed no confirmed semantic mismatch. Valid-world collision behavior is still unverified.
@@ -58,6 +60,7 @@ R1984 reviewed the complete original descriptor and input call chain for Pathfin
 - [R1982 Pathfinder `p()` forward-input review and full-tree build](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1983 Pathfinder `n()` dual-input predicate review and full-tree build](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
 - [R1984 Pathfinder `h()` null-gate input selection review and full-tree build](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
+- [R1985 Pathfinder movement-axis and step-gate static review and full-tree build](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)
 - [R1984 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1984.json)
 - [R1983 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)
 - [R1982 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
@@ -108,7 +111,7 @@ R1984 reviewed the complete original descriptor and input call chain for Pathfin
 Recalculate source inventory with `python -B .analysis/stats.py`; counts do not establish equivalence. The original JAR SHA-256 is `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; it is not published. Full `javap` dumps remain local.
 - [R1953 Pathfinder wrapper static review](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-The current source inventory is 1,602 Java files, 1,158,497 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.
+The current source inventory is 1,602 Java files, 1,158,520 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.
 
 The full R1954/R1955 `javap` dumps remain in the local analysis directory. The public snapshot contains method descriptors, the review summary, and dump SHA-256 values; it does not include the original JAR or protected class files.
 
