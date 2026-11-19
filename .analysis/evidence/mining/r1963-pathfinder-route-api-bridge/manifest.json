@@ -11,7 +11,7 @@
     {
       "name": "a",
       "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;",
-      "result": "A gate-dependent empty-route branch differed. Original bytecode sends every nonzero-gate route, including an empty route, to the converter; only gate zero plus a nonempty route returns null. Source now matches that condition."
+      "result": "Corrected after full stack simulation: the original retains arraylength while testing the gate. It returns null for (gate=0, route length>0) and (gate!=0, route length=0); the converter is invoked for the complementary two cases. The final managed source implements both branches."
     },
     {
       "name": "b",
@@ -50,27 +50,31 @@
     }
   ],
   "source_change": {
-    "summary": "Corrected the route API empty-path gate condition using the original method's complete descriptor and branch offsets.",
+    "summary": "Restored the original two-condition null/converter branch after correcting the earlier incomplete stack interpretation.",
     "production_java_files_changed": 1,
-    "normal_user_path_verified": false
+    "normal_user_path_verified": false,
+    "current_source_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+    "superseded_source_sha256": "8b35c8dcb9f3f7f70765ae4436e167cd90be9c467fdf61957847a2a6638393de"
   },
   "compiled_verification": {
-    "command": "javap -classpath build/classes/java/main -p -s -c -v <route-api-owner>",
+    "command": "javap -classpath <compiled-classes> -p -s -c <route-api-owner>",
     "exit_code": 0,
-    "compiled_owner_class_sha256": "92a22491dfe0c3fc4d27b3480feac80411386b1a073c87b90b83dce55f4fa226",
-    "post_fix_full_dump_sha256_local_only": "fa60cca336280c4a21dd0e22468b2221b0f7159a179f994cc3661a58dacc9d6c",
-    "finding": "Post-fix descriptor (BlockPos, BlockPos, boolean) has a single early-null branch iff gate == 0 and route length != 0; otherwise it invokes the converter."
+    "compiled_owner_class_sha256": "6d9984d8cfb201df4d03aba8d451af19c13e5f32948257fdf6626755f98bb8be",
+    "full_dump_sha256_local_only": "84c68d7cf5c335c8d4f3fe6f575d07e3b98ee7a91d46aa770b8aa8d33b79f108",
+    "original_method_dump_sha256_local_only": "322c9d5f7ad46aa2d622225436989f6f1f0984c47fec42ab46ca4be48412765b",
+    "finding": "Compiled branch and converter invocation match the original method: gate zero leaves route length as the null-test value; nonzero gate maps empty route to null and nonempty route to converter. Four gate/length combinations were checked.",
+    "original_full_class_dump_sha256_local_only": "61639b7a83c2c305484867aaacc5d08773fd15094c4e3b9d3b21b2f33a0f5fe2"
   },
   "build_validation": {
-    "command": ".\\gradlew.bat build --no-daemon --console=plain --rerun-tasks",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
     "working_directory": "polinex-src",
     "runtime": "Temurin 25.0.4.1",
-    "started_utc": "2026-11-19T02:46:26.5867416Z",
-    "ended_utc": "2026-11-19T02:47:28.9228879Z",
+    "started_utc": "2026-11-19T03:34:17.5558943Z",
+    "ended_utc": "2026-11-19T03:35:02.7876940Z",
     "exit_code": 0,
-    "result": "BUILD SUCCESSFUL; compileJava and build tasks executed; Gradle reported 18 warnings and no test sources.",
-    "log_sha256": "741b5721608129c6b9247198f64912ec5cee4748e689399ec57520cc52664655",
-    "published_summary": ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/build-summary.txt"
+    "result": "Full-tree build succeeded with compileJava, jar, assemble, and build tasks executed; test sources absent.",
+    "log_sha256": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf",
+    "log": ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun-corrected.log"
   },
   "environment_failure": {
     "command": ".\\gradlew.bat build --no-daemon --console=plain --rerun-tasks",
@@ -87,5 +91,35 @@
     "Original protected JAR/classes",
     "Full original/current javap dumps",
     "Compiled class files"
-  ]
+  ],
+  "correction": {
+    "status": "Supersedes the earlier R1963 branch interpretation.",
+    "reason": "The earlier reading dropped the arraylength value that remains on the JVM operand stack across the gate branch.",
+    "truth_table": [
+      {
+        "gate": 0,
+        "route_length": 0,
+        "result": "converter"
+      },
+      {
+        "gate": 0,
+        "route_length": "nonzero",
+        "result": "null"
+      },
+      {
+        "gate": "nonzero",
+        "route_length": 0,
+        "result": "null"
+      },
+      {
+        "gate": "nonzero",
+        "route_length": "nonzero",
+        "result": "converter"
+      }
+    ],
+    "previously_published_claim": "The claim that every nonzero-gate route, including an empty route, reached the converter was incorrect and is withdrawn.",
+    "final_source_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+    "evidence_baseline_commit": "88dfe47cd285f990da0a7c1c00599bdd4bb0fdc3",
+    "corrected_utc": "2026-11-19T03:44:13Z"
+  }
 }

@@ -324,15 +324,14 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
       short var10001 = -32306;
       short var10002 = 17350;
       Intrinsics.checkNotNullParameter(var1, "context");
-      String[] var10000 = IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c();
+      String[] var2 = IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c();
+      Object var10000 = null;
       llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII var4 = var1;
       String var5 = "x";
       boolean var6 = false;
       Iterable var7 = var1.a().b();
       boolean var8 = false;
       int var9 = 0;
-      String[] var2 = var10000;
-
       label273: {
          for (Object var11 : var7) {
             int var12 = var9++;
@@ -350,7 +349,7 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
                int var14 = var60;
                boolean var15 = false;
                if (var2 != null && Intrinsics.areEqual(var13.a(), var5) && var14 < var4.b().length) {
-                  var10000 = (String[])var4.b()[var14];
+                  var10000 = var4.b()[var14];
                   if (!((Object)var10000 instanceof Integer)) {
                      var10000 = null;
                   }
@@ -394,7 +393,7 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
                int var53 = var64;
                boolean var16 = false;
                if (var2 != null && Intrinsics.areEqual(var50.a(), var22) && var53 < var20.b().length) {
-                  var10000 = (String[])var20.b()[var53];
+                  var10000 = var20.b()[var53];
                   if (!((Object)var10000 instanceof Integer)) {
                      var10000 = null;
                   }
@@ -438,7 +437,7 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
                int var56 = var68;
                boolean var17 = false;
                if (var2 != null && Intrinsics.areEqual(var54.a(), var26) && var56 < var23.b().length) {
-                  var10000 = (String[])var23.b()[var56];
+                  var10000 = var23.b()[var56];
                   if (!((Object)var10000 instanceof Integer)) {
                      var10000 = null;
                   }
@@ -484,12 +483,12 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
                int var58 = var73;
                boolean var18 = false;
                if (var2 != null && Intrinsics.areEqual(var57.a(), var31) && var58 < var27.b().length) {
-                  var10000 = (String[])var27.b()[var58];
+                  var10000 = var27.b()[var58];
                   if (!((Object)var10000 instanceof String)) {
                      var10000 = null;
                   }
 
-                  var10000 = (String[])(Object)(String)(Object)var10000;
+                  var10000 = (String)var10000;
                   break label222;
                }
 
@@ -525,7 +524,7 @@ public final class IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIII
          label194: {
             var28 = new BlockPos(var3, var19, var21);
             if (var2 != null && var24 != null) {
-               var10000 = ((String[])(Object)(var24.toLowerCase(Locale.ROOT)));
+               var10000 = var24.toLowerCase(Locale.ROOT);
                var10002 = -32307;
                short var10003 = 27979;
                Intrinsics.checkNotNullExpressionValue(var10000, "toLowerCase(...)");

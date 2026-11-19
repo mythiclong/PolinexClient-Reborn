@@ -9,15 +9,16 @@ This repository contains the managed-source reconstruction of a Minecraft 26.1.2
 
 ## Current progress (2026-11-19 UTC; Chicago local date: 2026-11-18)
 
-The current slice is **R1964: trace Pathfinder route consumers, execution state, and cache writes along the normal call path**.
+The current slice is **R1965: trace Pathfinder execution state, stopping, and cache writes after the route consumer**. R1964 static type-guard repair and the full-tree build are complete; an in-game route remains unverified.
 
 - **A* search and candidate nodes:** R1947 restored the candidate-node gate, traversal, and null contract against complete original bytecode. R1948 corrected node-allocation order and the compiled `Function2` callback form.
 - **Route and collision helpers:** R1955 repaired both `0.5625`/NaN branches in route conversion and restored the gate, call order, and fallback in `g(BlockPos)`. The full-tree Gradle `build` passed under Temurin 25.
 - **R1956 collision-gate review:** The original `$llII…` and current `$PXEvMid` names refer to the same source-renamed state holder. Getter, setter, initialization, and `a(BlockPos, ClientLevel): boolean` showed no confirmed semantic mismatch. Valid-world collision behavior is still unverified.
 - **R1957–R1961 `NativePathFinder` differential checks:** Original and current compiled classes matched in isolated classloaders for all 256 inputs to `normalizeState(B)B`, 2,049 `processChunk` lengths, 2,049 `loadCache` lengths, 34,324 `updateChunk` boundary combinations, and 384 `updateHeights` boundary/signed-short fixtures. Each check compared actual cache side effects; see the manifests for precise limits.
 - **R1962 `isWalkable` / `findPath`:** Complete descriptor-level static review found no confirmed mismatch. An isolated-classloader differential covered 98,304 cases across all 512 blocked-cell masks on a bounded 3×3 grid, movement modes, 12 node limits, and 8 float arguments. The retained output says PASS, but the exact invocation and process exit code were not preserved; see the manifest for limits.
-- **R1963 route API repair:** The original full bytecode for `a(BlockPos, BlockPos, boolean)` showed a gate/empty-route condition that differed from the source. The managed source now passes an empty route to the converter whenever the original gate is nonzero. An independent static review found no confirmed mismatch in `b(Entity): BlockPos`. A full Temurin 25 `build --rerun-tasks` succeeded, followed by compiled-bytecode verification.
-- **Scope of this batch:** R1963 changed one managed Java file and rebuilt the full tree. Neither R1962 nor R1963 launched Minecraft or tested a valid world or compatible server.
+- **R1963 route API branch correction:** Full operand-stack review shows that the original retains `arraylength` across the gate branch. It returns null when `gate=0 && route.length>0` or `gate!=0 && route.length=0`; only the other two combinations invoke the converter. The earlier claim that an empty route with nonzero gate reaches the converter is withdrawn. Current source and compiled bytecode match the original branch and call behavior. Independent static review found no other confirmed mismatch in `b(Entity): BlockPos`.
+- **R1964 normal route-event consumer:** Fixed x/y/z and `option` parsing that previously cast each configuration value to `String[]` before checking its type. The current source performs the original `Integer`/`String` `instanceof` guard before casting. The seven mode branches retain their Pathfinder call targets and eight state-write targets/order. This is a static bytecode finding; the event was not exercised in-game.
+- **Scope of this batch:** One route API source and one normal route-consumer source were corrected; a full Temurin 25 `build --rerun-tasks` succeeded. No Minecraft client, valid world, or compatible server was used.
 - **Open acceptance:** Pathfinder through its normal player entry point, routes/collisions in a valid world, on-disk cache lifecycle, and compatible-server behavior remain unverified. Offline comparisons do not replace in-game acceptance.
 - **ClickGUI:** A same-process vanilla Options comparison showed working keyboard and scroll input, but no observable mouse feedback from category icons or the Draw control. Event forwarding, hit testing, module toggling, and settings persistence remain open.
 - **Other features:** Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, networking, and native/JNIC still have incomplete restoration or acceptance. Real-server login, interaction, disconnect, and reconnect remain unverified.
@@ -26,6 +27,8 @@ The current slice is **R1964: trace Pathfinder route consumers, execution state,
 
 - [Current short handoff](.analysis/reports/RESUME.md)
 - [R1962–R1963 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
+- [R1963–R1964 current evidence and dual-repository sync](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)
+- [R1964 normal route-consumer bytecode review and build](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)
 - [R1956–R1961 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
 - [R1956 collision-gate static review](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)
 - [R1962 `isWalkable` / A* bounded differential](.analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json)

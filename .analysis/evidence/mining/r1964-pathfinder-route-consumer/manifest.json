@@ -1,0 +1,149 @@
+{
+  "experiment_id": "R1964",
+  "slice_id": "PATHFINDER-NORMAL-ROUTE-EVENT-CONSUMER-TYPE-GUARDS",
+  "generated_utc": "2026-11-19T03:44:13Z",
+  "evidence_baseline_commit": "88dfe47cd285f990da0a7c1c00599bdd4bb0fdc3",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "method": {
+    "owner": "me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+    "name": "a",
+    "descriptor": "(Lme/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll;Lme/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII;)Lkotlin/Unit;",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+    "source_sha256_before": "cd9a1c128d2aa03e20ecd3b42383e5bdd9bbaf358337b13f69b97eb6185ae22f",
+    "source_sha256_after": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
+    "original_full_class_dump_sha256_local_only": "32b0ae4d6e867037f64421c7ee572ace7bf190c0bec6c3c0662b2e6d3936f398",
+    "compiled_full_class_dump_sha256_local_only": "11a40b6e7c61bc5e44196b7afc8a30442955d010db046a77cd660b7612bc42a6",
+    "compiled_owner_class_sha256": "cc14bb9b0415b633a741a3a81d49d4e498e332e2f5e46677904fd03671c80901",
+    "method_exception_table": "absent in both original and current compiled method"
+  },
+  "confirmed_difference": {
+    "summary": "The current source cast each Object[] configuration value to String[] before checking whether it was an Integer or String. The original performs instanceof on the actual Object first. Normal Integer coordinates or String mode values therefore threw ClassCastException in the previous source before reaching the intended type checks.",
+    "original_checks": [
+      {
+        "setting": "x",
+        "aaload_offset": 147,
+        "instanceof": "Integer",
+        "instanceof_offset": 149
+      },
+      {
+        "setting": "y",
+        "aaload_offset": 301,
+        "instanceof": "Integer",
+        "instanceof_offset": 303
+      },
+      {
+        "setting": "z",
+        "aaload_offset": 456,
+        "instanceof": "Integer",
+        "instanceof_offset": 458
+      },
+      {
+        "setting": "option",
+        "aaload_offset": 618,
+        "instanceof": "String",
+        "instanceof_offset": 620
+      },
+      {
+        "setting": "option lowercasing",
+        "call": "String.toLowerCase(Locale.ROOT)",
+        "offset": 702
+      }
+    ],
+    "current_compiled_checks": [
+      {
+        "setting": "x",
+        "aaload_offset": 171,
+        "instanceof": "Integer",
+        "instanceof_offset": 176,
+        "checkcast_after_type_guard": 187
+      },
+      {
+        "setting": "y",
+        "aaload_offset": 352,
+        "instanceof": "Integer",
+        "instanceof_offset": 357,
+        "checkcast_after_type_guard": 368
+      },
+      {
+        "setting": "z",
+        "aaload_offset": 530,
+        "instanceof": "Integer",
+        "instanceof_offset": 535,
+        "checkcast_after_type_guard": 546
+      },
+      {
+        "setting": "option",
+        "aaload_offset": 718,
+        "instanceof": "String",
+        "instanceof_offset": 723,
+        "checkcast_after_type_guard": 734
+      },
+      {
+        "setting": "option lowercasing",
+        "call": "String.toLowerCase(Locale.ROOT)",
+        "offset": 847
+      }
+    ],
+    "result": "Source now retains values as Object until the original instanceof guard. Invalid/missing coordinates follow the existing null/Unit early-return path; option is cast to String only after its String guard. No String[] checkcast remains in the method."
+  },
+  "call_path_review": {
+    "normal_consumer": "R1952 identified this method as an actual invoke caller, not a constant-pool-only reference.",
+    "mode_branches": "The seven path/debug/quick/position/etherwarp/native/native-debug branches retain their original Pathfinder call targets and arguments.",
+    "state_writes": "Eight existing route/state field write targets and order are unchanged by this type-guard-only patch.",
+    "review_boundary": "Complete original/current method bodies were read by full owner, name, and descriptor. Review included argument/value types, branches, casts, call targets, field writes, return and exception behavior."
+  },
+  "source_changes": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+      "sha256": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+      "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+    }
+  ],
+  "build_validation": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Temurin 25.0.4.1",
+    "started_utc": "2026-11-19T03:34:17.5558943Z",
+    "ended_utc": "2026-11-19T03:35:02.7876940Z",
+    "exit_code": 0,
+    "summary": "Full-tree compileJava, jar, assemble, and build tasks succeeded. Gradle reported 18 warnings; no test sources were present.",
+    "log": "build-jdk25-rerun-corrected.log",
+    "log_sha256": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf",
+    "log_normalization": "Published console log has LF line endings and trailing spaces stripped; executable output and exit assertion remain unchanged."
+  },
+  "failed_invocation": {
+    "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "exit_code": 1,
+    "reason": "PowerShell split the unquoted -D argument and Gradle treated .gradle.jvmargs=-Xmx2G as a task. This was a command-line quoting error, not a source/build failure; the quoted invocation above passed.",
+    "log": "build-jdk25-rerun.log",
+    "log_sha256": "e77440a74fb710099b745610968e91e201b9b454d890b4905fc743287c118bd1"
+  },
+  "runtime_acceptance": {
+    "client_started": false,
+    "valid_world_used": false,
+    "normal_route_event_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Static method comparison and full-tree build only. No user desktop/game input was used. Runtime, valid-world and server behavior remain open."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled class files",
+    "Local Gradle outputs and caches"
+  ],
+  "bytecode_commands": {
+    "original": {
+      "command": "javap -classpath <original protected JAR with recorded SHA-256> -p -s -c <consumer-owner>",
+      "exit_code": 0,
+      "dump_sha256_local_only": "32b0ae4d6e867037f64421c7ee572ace7bf190c0bec6c3c0662b2e6d3936f398"
+    },
+    "compiled": {
+      "command": "javap -classpath polinex-src/build/classes/java/main -p -s -c <consumer-owner>",
+      "exit_code": 0,
+      "dump_sha256_local_only": "11a40b6e7c61bc5e44196b7afc8a30442955d010db046a77cd660b7612bc42a6"
+    }
+  }
+}

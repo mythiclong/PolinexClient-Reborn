@@ -1,0 +1,7 @@
+R1964 — Pathfinder route consumer static repair
+
+Original and current full JVM method bodies were compared by owner, name, and descriptor. The configuration consumer checked x/y/z and option with instanceof before casting in the original; current code previously cast to String[] first, causing ClassCastException for Integer/String values. The source now preserves Object values through the guard and matches the original type-check ordering. Seven route-mode call targets and eight state writes were reviewed and remain unchanged.
+
+R1963 route wrapper branch interpretation was corrected: the original arraylength remains on the operand stack across the gate test. It returns null for gate=0 with non-empty route and gate!=0 with empty route; it invokes the converter for the other two combinations. The final source matches that branch and call behavior.
+
+Temurin 25 full-tree Gradle build --rerun-tasks: exit 0. No Minecraft client, valid world, user input, or compatible server was used. This evidence is static/build-only and does not close runtime acceptance.
