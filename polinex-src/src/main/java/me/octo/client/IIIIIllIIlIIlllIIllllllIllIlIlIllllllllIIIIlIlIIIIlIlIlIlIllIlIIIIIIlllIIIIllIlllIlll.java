@@ -817,7 +817,7 @@ return true;
       int[] var1 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
       boolean var2 = llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a("forward");
       boolean var3 = llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a("backward");
-      if (var1 == null) { return var2 ? 0.0d : -1.0d; }
+      if (var1 == null) { return var3 ? 0.0d : -1.0d; }
       return var2 ? (var3 ? 0.0d : 1.0d) : (var3 ? -1.0d : 0.0d);
    }
 

@@ -1,0 +1,89 @@
+{
+  "experiment_id": "R1984-pathfinder-forward-input-gate-null",
+  "generated_utc": "2026-11-19T21:53:53.8151819Z",
+  "scope": "Restore Pathfinder h():double's original gate-null input choice after full descriptor, input-getter, and caller-path review.",
+  "source_baseline": {
+    "commit": "3da704bde3257c6e476b7fed65c1b56282993611",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before_slice": "b24cb6c2a73b66ac52a53be240dfcca0ce1d68ca",
+    "sha256_before_slice": "b371c1dea596d86f949bbb12ee6b6dee3ee702af6495c928d52da74a7b862024",
+    "git_blob_final_at_build": "d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d",
+    "sha256_final_at_build": "a393e377de1d371992a0a321f86c3b3aa11951da3aa153136a6375a530053393"
+  },
+  "original_reference": {
+    "protected_original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "local_original_class_archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_dump_sha256_lf": "3c74cf717c47f54a09c5f83f88021b9ff7cef3ad56ee9463015b5a58634f4f6e",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "h",
+    "descriptor": "()D",
+    "access": "private final",
+    "original_offsets": "0-147",
+    "original_instruction_count": 62,
+    "original_exception_handlers": 7,
+    "compiled_offsets": "0-67",
+    "compiled_instruction_count": 32,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_class_sha256": "3d8bb2045c5a8a76c428fd5c7db90359f3ed5e99f87adf2b065ebb514e081dcd"
+  },
+  "supporting_input_method": {
+    "owner": "me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+    "method": "a(Ljava/lang/String;)Z",
+    "original_instruction_count": 160,
+    "compiled_instruction_count": 301,
+    "review": "The original and managed method dispatch named movement inputs to Minecraft Options KeyMapping.isDown() getters. Neither method body writes fields. The compiled method has more Java branch instructions than the original Kotlin output; this supporting getter was checked only for the read target and absence of local field writes, not claimed bytecode-identical."
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "confirmed_source_difference": "For a null shared gate, original h() selects its result from the backward key state (backward down -> 0.0; otherwise -1.0); prior source selected from forward. Source now uses the backward result in that branch.",
+    "branch_matrix": {
+      "gate_nonnull": "forward && backward -> 0.0; forward && !backward -> 1.0; !forward && backward -> -1.0; neither -> 0.0",
+      "gate_null": "backward -> 0.0; !backward -> -1.0; forward is read but does not determine this arm"
+    },
+    "unchanged_i_method": "i():double was checked in the same complete descriptor review; both gate branches and the left/right results match the existing source.",
+    "call_order_and_repeated_reads": "The original h() reads the gate and forward first, then branches; some non-null-gate paths re-read backward and/or forward. The managed source reads forward and backward once before selecting the gate arm. The supporting named-input getter performs KeyMapping.isDown reads and no field writes in its method body. The return truth table matches for a stable input state; exact getter-call multiplicity on the original's re-read paths is not reproduced or claimed as identical.",
+    "input_receiver_and_bindings": "Original and compiled h()/i() invoke the same input-owner instance method a(String):boolean with forward/backward/left/right names; it resolves the corresponding Minecraft Options KeyMapping and invokes isDown().",
+    "exceptions": "The original h() has seven NoWhenBranchMatchedException handlers; each invokes the previously verified identity throwable helper and rethrows. The managed source catches none. Other exceptions from the input getter propagate.",
+    "caller_review": "a(ID):boolean computes h() then i() before its zero-axis test. Its direct callers include j(), a(Entity,List,Vec3), and d(List); a(Entity,List,Vec3) returns on a null gate, and d(List) exits on its null-gate route path before the a(ID) call. j() has no explicit shared-gate check at its call and is invoked from the route event method; this leaves a possible null-gate call statically, but no ordinary runtime difference was demonstrated. n() and o() also call h()/i(); their known d(List) path is reached only after d's gate-dependent route setup. Full caller behavior was reviewed, not inferred from same-descriptor constants.",
+    "review_result": "PASS: complete original and final compiled owner dumps reviewed for h() and i(), the complete input getter descriptor was inspected for read targets/writes, and direct owner call sites/guards were checked. Original/compiled owner dumps remain local."
+  },
+  "validation": {
+    "successful_command": "gradlew.bat build --rerun-tasks --no-daemon",
+    "working_directory": "polinex-src",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "build_start_utc": "2026-11-19T21:50:33.2569948Z",
+    "build_end_utc": "2026-11-19T21:51:27.8640717Z",
+    "build_exit_code": 0,
+    "full_tree_build": "PASS: BUILD SUCCESSFUL; 4 actionable tasks executed.",
+    "compiler_warnings": "18 Unsafe/deprecation/unchecked warnings; no new warning was attributed to this source line.",
+    "tests": "NO-SOURCE",
+    "failed_environment_attempt": "The same Gradle command with JAVA_HOME pointing to JDK 17 exited 1 during plugin configuration because Fabric Loom 1.18.0-alpha.19 requires JVM 25. The successful rerun explicitly selected Temurin 25.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158497,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "Static method fidelity and a full-tree build are recorded; no runtime, client, valid-world, normal-user-path, or server equivalence is claimed. The gate-null arm's ordinary-user reachability remains unverified."
+}

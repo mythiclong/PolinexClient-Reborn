@@ -1,0 +1,32 @@
+R1984 — Pathfinder forward-axis input helper
+
+Source method: private final double h() / ()D
+Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Source baseline: private content commit 3da704bde3257c6e476b7fed65c1b56282993611
+Original reference: protected JAR SHA-256 d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26; local original class archive SHA-256 2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230.
+Full javap dumps remain local and are not published.
+
+Confirmed mismatch and repair
+- The original descriptor is private/final `h():double`, with 62 instructions at offsets 0–147 and seven exception-table entries.
+- It first reads the shared gate and the `forward` key. When the gate is null, the original takes the gate-null branch, reads `backward`, and returns 0.0 when backward is down or -1.0 otherwise. The initial `forward` result does not decide this arm.
+- The managed source previously used `forward` for the gate-null return. It now uses the already-read `backward` value. This is the only source edit in the slice.
+- With a non-null gate, the original result matrix is: forward+backward -> 0.0; forward only -> 1.0; backward only -> -1.0; neither -> 0.0. The source retains this matrix.
+- The final compiled method has 32 instructions at offsets 0–67 and no exception table. Its branch results for both gate states match the original for a stable input snapshot.
+
+Input chain and repeated calls
+- The full `a(String):boolean` input getter was inspected in the original and final compiled helper owner. For `forward`, `backward`, `left`, and `right`, it resolves the Minecraft Options `KeyMapping` and calls `KeyMapping.isDown()`; its own method body has no field writes. This supports reviewing repeated queries as reads, not mutations.
+- The original `h()` has obfuscation-shaped branches that re-read `backward` and, on some non-null-gate paths, `forward`. The managed code reads each key once before selecting the gate branch. The values/return matrix match for a stable key-state snapshot; this review does not claim identical getter-call multiplicity or test cross-thread key-state changes.
+- Neighbor `i():double` was reviewed in the complete descriptor and is unchanged: both its left/right and gate-null mapping match the original. Its original method also contains injected identity-rethrow handlers; managed code catches no exception.
+- The seven original `h()` exception handlers rethrow through the previously verified identity helper `a(Throwable):Throwable`. No exception is swallowed by the managed source.
+
+Call graph and reachability limits
+- `a(int,double):boolean` calls `h()` then `i()` before testing either axis. Direct callers include `j()`, `a(Entity,List,Vec3)`, `d(List)`, and the synthetic default-argument bridge.
+- `a(Entity,List,Vec3)` returns when the shared gate is null before calling `a(int,double)`. `d(List)` exits on its null-gate route path before the later `a(int,double)` call.
+- `j()` itself does not explicitly test the shared gate before calling `a(int,double)` and is reached from the route event method. This makes the null-gate branch statically relevant to a possible call, but does not establish that ordinary gameplay produces a null gate or an observable difference.
+- `n()` and `o()` also call `h()`/`i()`; their reviewed route caller `d(List)` is gated by the earlier gate-dependent route setup. No runtime path was exercised.
+
+Validation
+- Full-tree command: `gradlew.bat build --rerun-tasks --no-daemon`, run from `polinex-src` with Eclipse Temurin JDK 25.0.4.1+1-LTS; exit code 0, `BUILD SUCCESSFUL`, 4 actionable tasks executed.
+- Build interval: 2026-11-19 21:50:33.2569948 UTC to 2026-11-19 21:51:27.8640717 UTC. There were 18 Unsafe/deprecation/unchecked warnings. Gradle test task was `NO-SOURCE`.
+- A preflight with JAVA_HOME on JDK 17 exited 1 during plugin configuration because Fabric Loom requires JVM 25; the successful build explicitly selected Temurin 25.
+- No direct probe, client, valid-player/world, normal-user-path, screenshot, or compatible-server test was run. This is static/build evidence only, not runtime equivalence.
