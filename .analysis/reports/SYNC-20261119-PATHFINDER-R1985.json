@@ -65,6 +65,64 @@
     "repository_trees_identical": false,
     "note": "The two repositories retain different histories and full Git trees. This sync verifies the named source, README, RESUME, and evidence blobs only; it does not claim repository-wide tree identity."
   },
+  "documentation_follow_up": {
+    "scope": "Published the finalized R1985 handoff status, bilingual README links, and this sync record to both repositories.",
+    "private_openpolinex": {
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "c044b8abeb808d222832675920497fa5d1e1ac9b",
+      "content_commit": "2fad08b4426f83364e2c39c27ef6890faad84441",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "ref": "refs/heads/main",
+      "base_commit": "9dba15c58f200b004b58b723607ba364e959f24d",
+      "content_commit": "ca7b3a07d65bb73ffc6bd41ebc0f145eb00b4c79",
+      "remote_ref_verified": true
+    },
+    "shared_file_blobs_at_content_commits": [
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+        "blob": "86b1697b16ed8176e3471011414029cefc4d814a"
+      },
+      {
+        "path": "README.md",
+        "blob": "09c4d4ff7d96a99f01605e4688464e6681fbc730"
+      },
+      {
+        "path": "README_EN.md",
+        "blob": "230323c77f3906e7bff9f7d8421c6e60e599af83"
+      },
+      {
+        "path": ".analysis/reports/RESUME.md",
+        "blob": "fd3d1f317420de64ebaac50baf8fb12b07e16a0f"
+      },
+      {
+        "path": ".analysis/reports/SYNC-20261119-PATHFINDER-R1985.json",
+        "blob": "927a31f4356467d45db86b059c6e53348cb8a924"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json",
+        "blob": "724c81040a1fdebcc236fd5873e7c344d1288af7"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/static-review.txt",
+        "blob": "3f030a9adfe0e0cbae5fa8cb09fc933b67c7c3a9"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/build-summary.txt",
+        "blob": "7a078a9b965257336f419c8c02d58abdc7614b85"
+      }
+    ],
+    "verification": {
+      "checked_utc": "2026-11-19T22:41:24Z",
+      "remote_refs_verified": true,
+      "listed_shared_blobs_equal": true,
+      "private_tree_at_content_commit": "78b8733571ff292c046426190754ef022f8b1e44",
+      "public_tree_at_content_commit": "cde8f17a0122e26dcf84b973995e37e4ee98e4b4",
+      "repository_trees_identical": false,
+      "note": "Both remote refs pointed to the listed content commits during verification. Named files match by Git blob; the full repository trees remain different."
+    }
+  },
   "validation_limits": [
     "The sync record proves publication and shared-file consistency, not runtime equivalence.",
     "R1985 has static review and a JDK 25 full-tree build only; no direct probe, client, valid world/player, normal route, or compatible-server validation was run.",
