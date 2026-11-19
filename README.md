@@ -58,6 +58,7 @@ R1984 对照 Pathfinder `h():double` 的完整原版 descriptor 与输入调用�
 - [R1982 Pathfinder `p()` 前进输入静态复核与全树构建](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1983 Pathfinder `n()` 双输入谓词静态复核与全树构建](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
 - [R1984 Pathfinder `h()` gate-null 输入选择静态复核及全树构建](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
+- [R1984 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1984.json)
 - [R1983 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)
 - [R1982 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
 - [R1981 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)

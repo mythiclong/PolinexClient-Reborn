@@ -1,0 +1,69 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1984",
+  "verified_utc": "2026-11-19T22:00:46.7489635Z",
+  "scope": "R1984 Pathfinder h():double source restoration, evidence, bilingual README, and handoff snapshot.",
+  "source": {
+    "baseline_private_commit": "3da704bde3257c6e476b7fed65c1b56282993611",
+    "final_git_blob": "d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d",
+    "source_sha256": "a393e377de1d371992a0a321f86c3b3aa11951da3aa153136a6375a530053393"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "28200605e1b7b33830dd8f48b399e3024bfb747e",
+      "remote_ref_verified": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "commit": "918e8c17438e66ce1ba4ce2edfc35088a1560da1",
+      "remote_ref_verified": true
+    }
+  },
+  "shared_file_blobs_at_content_push": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d"
+    },
+    {
+      "path": "README.md",
+      "blob": "3b9279ff825f8db6119b49a134c9035f28261ecc"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "9f16dc99847942c5bbaab53c73ae4ff5169b436b"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "1d7e705ef3d4b7a88b70ff68b3736dbe74263649"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json",
+      "blob": "615502395469d523c1d4c2cba8a4c7336ebb99cc"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/static-review.txt",
+      "blob": "e06b1e878d55db357b4972ba7406465c07e07904"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/build-summary.txt",
+      "blob": "7796a5707b677e71330bbacc5b1848504b9bf474"
+    }
+  ],
+  "verification": {
+    "method": "Compared live GitHub refs with both pushed content commits using git ls-remote, then compared each listed path's Git blob at both commits.",
+    "content_remote_refs_verified": true,
+    "listed_shared_blobs_equal": true,
+    "repository_trees_identical": false,
+    "private_tree_at_content_push": "89c68b521843e07c538045d596d6fd5967586ab0",
+    "public_tree_at_content_push": "4cbc856554036e888063d9c8a7762001f738d276",
+    "note": "README/RESUME sync-link wording is being updated in a documentation follow-up; content commits and source/evidence blobs are already synchronized. Final refs will be rechecked after that push."
+  },
+  "validation_limits": [
+    "The sync record proves publication and shared-file consistency, not runtime equivalence.",
+    "R1984 had no client, valid-player/world, normal-user-path, or compatible-server test.",
+    "The stable-input truth table is statically reviewed; original repeated key-getter scheduling is not reproduced exactly.",
+    "Protected original JAR/classes, full javap dumps, workstation-path logs, caches, and build outputs are not published."
+  ]
+}

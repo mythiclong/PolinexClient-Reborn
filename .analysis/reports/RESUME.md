@@ -1,12 +1,12 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 21:54 UTC。R1984 源码、证据与双语 README 已在当前工作树完成；双仓发布尚未执行。R1982、R1983 的此前双仓发布 refs 已核验。
+> 更新：2026-11-19 22:01 UTC。R1984 源码、机器证据及中英文 README 已同步至两个仓库；内容提交 refs 和列出的共享文件 blobs 已核验。详见 [R1984 sync](SYNC-20261119-PATHFINDER-R1984.json)。两个仓库保留各自历史 tree，不声称整棵 tree 相同。
 
 ## 当前基线
 
-- 本地基线：`3da704bde3257c6e476b7fed65c1b56282993611`，私有 `openpolinex` 目标分支 `codex/handoff-progress-2026-11-15`，公开 `PolinexClient-Reborn` 目标分支 `main`。
-- 当前源文件基线 blob：R1983 `b24cb6c2a73b66ac52a53be240dfcca0ce1d68ca`；R1984 构建时 blob `d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d`，源码内容 SHA-256 `a393e377de1d371992a0a321f86c3b3aa11951da3aa153136a6375a530053393`。
-- 最新已验证双仓同步仍是 R1983：私有内容提交 `821ff21e43fa0b32f3f9dbcfc9306d1d9654a499`，公开内容提交 `10a4d72e94c1f04c69297d234627e32e58e16f5d`。详见 [R1983 sync](SYNC-20261119-PATHFINDER-R1983.json)。
+- 私有 `openpolinex`：`codex/handoff-progress-2026-11-15`，R1984 内容提交 `28200605e1b7b33830dd8f48b399e3024bfb747e`。
+- 公开 `PolinexClient-Reborn`：`main`，R1984 内容提交 `918e8c17438e66ce1ba4ce2edfc35088a1560da1`。
+- 源文件最终 blob `d40f2d2f5ee15ae32dc1081895383a55d7fb1e2d`，内容 SHA-256 `a393e377de1d371992a0a321f86c3b3aa11951da3aa153136a6375a530053393`。
 
 ## 当前唯一切片：R1984 Pathfinder `h():double`
 
@@ -30,6 +30,6 @@ JDK 25 全树 Gradle `build --rerun-tasks --no-daemon` exit 0，18 条警告，�
 
 ## 下一步
 
-1. 将 R1984 源码、机器证据和中英文 README 分别 fast-forward 同步到两个仓库，核验远端 refs 与共享文件 blobs。
-2. 继续 Pathfinder：按原版完整 descriptor 与直接调用图选一个边界清楚的方法切片；不凭相邻方法或计数推断缺陷。若同一假设/手段连续两次无新增证据，改用调用图、分支探针或可靠输入。
-3. 每个小批次继续记录静态还原、构建回归及未做的运行时/用户路径/服务器维度；发布时不上传原始受保护二进制、完整 javap dump、原始路径日志或构建产物。
+1. 继续 Pathfinder：按原版完整 descriptor 与直接调用图选一个边界清楚的方法切片；不凭相邻方法或计数推断缺陷。若同一假设/手段连续两次无新增证据，改用调用图、分支探针或可靠输入。
+2. 每个小批次记录静态还原、构建回归及未做的运行时/用户路径/服务器维度；阶段同步源码、机器证据、README 和 RESUME 到两个仓库。
+3. 不上传原始受保护二进制、完整 javap dump、含本机路径的原始日志或构建产物。

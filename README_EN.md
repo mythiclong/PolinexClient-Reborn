@@ -58,6 +58,7 @@ R1984 reviewed the complete original descriptor and input call chain for Pathfin
 - [R1982 Pathfinder `p()` forward-input review and full-tree build](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
 - [R1983 Pathfinder `n()` dual-input predicate review and full-tree build](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
 - [R1984 Pathfinder `h()` null-gate input selection review and full-tree build](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
+- [R1984 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1984.json)
 - [R1983 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1983.json)
 - [R1982 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
 - [R1981 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)
