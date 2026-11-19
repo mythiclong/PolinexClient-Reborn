@@ -1,0 +1,48 @@
+R1971 static review — Pathfinder movement-intent producer `b(List)`
+
+Source baseline: `bcd81b3dd47ce29ae0059283961797ef6a33ab39`; baseline Git blob `5b108bbfb08d64c0e4dca16ac34713f9adaa18ad`.
+Final source Git blob: `874baec2161fa44a2f4580ac8b76294dcbbaf5e6`; normalized source SHA-256 `d91aef84f3ebee66bceae07d5d76393052ae6df6b8e60f3089c2f3d9b9bdace5`; exact working-tree SHA-256 at final build `61e5dd22a2734b94ab8ed0ad2d93db67ca9fe1f43cb5c9090b62f69b6c0c29bc`.
+Original input: local-only protected JAR SHA-256 `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`.
+Original full-owner `javap -c -p -s` SHA-256 (local only): `76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197`.
+Compiled full-owner `javap -c -p -s` SHA-256 (local only): `63ac78af9d7329076a42d69dd470d66d54998671011f03e2a4d389533edad0ca`.
+
+## Target identity and full-method boundary
+
+- Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`
+- Name: `b`
+- Descriptor: `(Ljava/util/List;)Ljava/util/ArrayList;`
+- Complete original descriptor body reviewed, bytecode offsets 0–1230 inclusive; all 51 `NoWhenBranchMatchedException` exception-table entries reviewed. The final compiled owner has executable code for the same descriptor.
+
+## Confirmed mismatch and restoration
+
+The source previously fetched the guard `l():int[]` but ignored it, then read `Minecraft.player` unconditionally. The original first branches on the guard: if it is null, it skips the Minecraft/player field reads and takes the fallback route; only a non-null guard allows reading `Minecraft.player`. A null player also takes the fallback route.
+
+The original fallback builds an `ArrayList<Vec3>` sized using `collectionSizeOrDefault(list,10)`, then obtains the list iterator. For a non-null guard and null player, it reads and adds every node's `b():Vec3`. For a null guard, the original loop obtains at most the first element (`iterator.next()` and cast), checks the null guard, and exits before calling the node accessor or adding a value; the smoother is invoked with the still-empty list and mode `1`. This unusual iterator timing and empty-list result are part of the original control flow.
+
+The source now assigns `player` with a short-circuit ternary (`guard == null ? null : minecraft.player`) and checks the guard after the enhanced-for iterator has produced/cast the current element but before `node.b()` or `add`. Thus it preserves both the no-player gate branch and the original null-guard iterator/accessor behavior. It does not fabricate a player or world.
+
+## Remaining non-null-guard path mapping
+
+When the guard and player are both non-null, the source/compiled target retain the original ordered path:
+
+- Obtain current player position through `IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a(Entity):Vec3`; map the route nodes to positions; then call same-owner `c(List):ArrayList`.
+- Read the exact cached-route field and route index; select the prior point or current position; use `getOrNull(index)` and then `firstOrNull(input)` for the candidate, returning the computed control list when no candidate exists.
+- Call same-owner `a(Vec3,Vec3,List,Vec3):Pair`; on non-null, pass its first/second values and the player position to `e(Vec3,Vec3,Vec3):ArrayList` and return.
+- Otherwise evaluate the original forward predicate and movement keys in order. When the predicate fails or left/right is already active, set the steering-state integer field to zero and return the original key list. Then test the `a(7,1,-1,...)` and `a(7,1,1,...)` directions in order; if neither is available, return the original keys.
+- Compute the trajectory point with the exact geometry helper `(Vec3,Vec3,Vec3,Z):Vec3`, normalize `candidate - previous`, offset by `3.0`, and compare the original block/face helper's float result with zero. Resolve steering using the prior direction state, then collision predicate, then left/right availability; store the selected `-1/0/1` state; copy keys and append `left` for negative or `right` for positive.
+- The invoked distance helper `me.octo.client.utils.IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.c(Vec3,Vec3):double` was separately checked against its complete original and compiled descriptor. It computes horizontal x/z distance with the original non-null checks. The entity-position helper above was also compared: it checks `<this>` then constructs a `Vec3` from `Entity.getX/getY/getZ` in the original order. Neither helper source was modified in R1971.
+
+The final compiled method retains the same field reads/writes, call owners/descriptors, receiver/order, conditional route, key strings, numeric arguments, and result modes. The original 51 handlers catch only `NoWhenBranchMatchedException` and delegate to `a(Throwable):Throwable`; this helper is `aload_0; areturn` in original and compiled owner. The Java rewrite does not add a swallowing/replacement catch.
+
+Static status: **PASS** for the complete descriptor and the final compiled method. The only confirmed source difference was the guard-null/no-player fallback described above.
+
+## Build and runtime acceptance boundary
+
+- Exact-source full-tree Gradle `build --rerun-tasks`: **PASS**, Temurin JDK `25.0.4.1+1-LTS`, exit code 0.
+- One preceding build attempt selected Java 17 and failed during Gradle configuration because Fabric Loom requires JVM 25; it did not compile source. See `attempts.json`.
+- Direct probe/differential: **NOT RUN**. This method's normal branch depends on a real player, live key state, path nodes, and world/geometry helpers; no null/plain-object/worldless fixture was used.
+- Minecraft client, valid player/world, normal user path, and compatible server: **NOT RUN**. Desktop input: **NOT USED**. No screenshot.
+
+## Publication boundary
+
+Do not publish the protected original JAR, protected classes, full original/current `javap` dumps, raw Gradle logs, Gradle caches, or build outputs. Raw logs with machine paths remain local-only; only hashes and the sanitized records are published.

@@ -1,0 +1,96 @@
+{
+  "experiment_id": "R1971-pathfinder-movement-intent",
+  "generated_utc": "2026-11-19T17:47:39Z",
+  "scope": "Restore the Pathfinder b(List) movement-intent producer from the complete original descriptor, including the guard-null fallback semantics; statically verify direct geometry helpers and run an exact-source full-tree build.",
+  "source_baseline": {
+    "commit": "bcd81b3dd47ce29ae0059283961797ef6a33ab39",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "5b108bbfb08d64c0e4dca16ac34713f9adaa18ad"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "b",
+    "descriptor": "(Ljava/util/List;)Ljava/util/ArrayList;",
+    "before": "Fetched the guard array but ignored it, read Minecraft.player unconditionally, and copied every route-node position in the null-player fallback.",
+    "after": "Preserves the original short-circuit guard-before-player branch. In fallback, checks the guard only after enhanced-for has obtained/cast the current element, matching the original null-guard iterator timing and no-accessor/no-add path.",
+    "source_git_blob_oid": "874baec2161fa44a2f4580ac8b76294dcbbaf5e6",
+    "source_content_sha256_lf": "d91aef84f3ebee66bceae07d5d76393052ae6df6b8e60f3089c2f3d9b9bdace5",
+    "source_working_tree_sha256_at_final_build": "61e5dd22a2734b94ab8ed0ad2d93db67ca9fe1f43cb5c9090b62f69b6c0c29bc",
+    "compiled_owner_class_sha256": "df771f166e2c3510af280e196cad6bf633bea1c48e3308d81ae97784a5ff75b8",
+    "built_jar_sha256": "2fbaa0b68c3c94b01fe681cb3092b386d21b2a9e9688da30fc41325d1ff77abb"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "compiled_owner_javap_sha256_local_only": "63ac78af9d7329076a42d69dd470d66d54998671011f03e2a4d389533edad0ca",
+    "method_code_offsets": "0 through 1230 inclusive; all 51 exception-table entries reviewed.",
+    "identity_exception_helper": "a(Throwable):Throwable is aload_0; areturn in original and compiled owner."
+  },
+  "supporting_methods_reviewed": [
+    {
+      "owner": "me.octo.client.utils.IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl",
+      "name": "c",
+      "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)D",
+      "result": "Complete original and compiled descriptor match for null checks, x/z-only differences, multiply/add order, Math.sqrt, and return; source unchanged."
+    },
+    {
+      "owner": "me.octo.client.utils.player.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll",
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;",
+      "result": "Complete original and compiled descriptor match for <this> null check, getX/getY/getZ order, Vec3 construction, and return; source unchanged."
+    }
+  ],
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original owner dump and exact b(List):ArrayList descriptor reviewed, offsets 0-1230 and all 51 exception handlers.",
+      "Mapped guard-null branch before Minecraft.player access and null-player fallback; restored the short-circuit field-read order.",
+      "Preserved fallback allocation sizing, iterator acquisition, first next/cast under null guard, early exit before node accessor/add, and smoother call with mode 1.",
+      "Mapped the non-null guard/player path: player position, route-node position mapping, c(List), cache/index selection, pair helper, movement-key predicates, geometry calls, steering-state writes, output key order, and early returns.",
+      "Compared fields, exact invocation owners/descriptors, receivers, call order, branch/short-circuit behavior, returns, and direct side effects with the final compiled owner.",
+      "Reviewed all 51 original NoWhenBranchMatchedException handlers and identity helper; no exception is swallowed or replaced.",
+      "Re-read the final compiled owner with javap -c -p -s and confirmed executable code for the target descriptor."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T17:44:31.1145978Z",
+    "ended_utc": "2026-11-19T17:45:49.5671812Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors."
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "reason": "The normal branch depends on a valid LocalPlayer, live key state, route nodes, and world/geometry helpers. No null/plain-object/worldless fixture was used.",
+    "minecraft_client": false,
+    "valid_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158433,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR and class files",
+    "Full original/current javap dumps",
+    "Raw build logs and host crash reports containing local paths",
+    "Gradle caches and generated build outputs"
+  ],
+  "source_hash_semantics": "working-tree SHA-256 fingerprints exact CRLF bytes consumed by Gradle; LF SHA-256 fingerprints normalized text; Git blob OID identifies the repository-filtered object."
+}

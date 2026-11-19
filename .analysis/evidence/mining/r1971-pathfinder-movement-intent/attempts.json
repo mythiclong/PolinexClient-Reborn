@@ -1,0 +1,27 @@
+{
+  "experiment_id": "R1971-pathfinder-movement-intent",
+  "attempts": [
+    {
+      "attempt": "inherited-java17-configuration-failure",
+      "runtime": "Java 17 (inherited environment; exact vendor/build not used for source compilation)",
+      "started_utc": "2026-11-19T17:44:08.4264379Z",
+      "ended_utc": "2026-11-19T17:44:19.6412488Z",
+      "exit_code": 1,
+      "outcome": "CONFIGURATION_FAILURE_BEFORE_SOURCE_COMPILATION",
+      "reason": "Fabric Loom 1.18.0-alpha.19 requires JVM runtime version 25; the Gradle process selected Java 17.",
+      "raw_log": "local-only temporary log; contains host paths",
+      "raw_log_sha256_local_only": "a5aa70803f996489654b9ce21dc0c45e3ea75e483a81beed3d22bc6e3a02afc1"
+    },
+    {
+      "attempt": "final-exact-source-full-tree-build",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "started_utc": "2026-11-19T17:44:31.1145978Z",
+      "ended_utc": "2026-11-19T17:45:49.5671812Z",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "raw_log": "local-only temporary log; contains host paths",
+      "raw_log_sha256_local_only": "67364086b3d9aeb5da1b8b62f334e37a8e3286a7f9e6bdce5b069fc252fb4e1f"
+    }
+  ]
+}

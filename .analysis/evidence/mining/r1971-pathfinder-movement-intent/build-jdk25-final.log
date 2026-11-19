@@ -1,0 +1,17 @@
+R1971 final exact-source full-tree build
+
+Command:
+`.\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+
+Runtime: Eclipse Temurin JDK 25.0.4.1+1-LTS.
+JAVA_HOME was explicitly set to Temurin JDK 25 for the successful attempt.
+Started: 2026-11-19T17:44:31.1145978Z
+Ended: 2026-11-19T17:45:49.5671812Z
+Exit code: 0
+Result: BUILD SUCCESSFUL in 1m 18s.
+Final tasks included `compileJava`, `processResources`, `classes`, `processIncludeJars`, `jar`, `assemble`, and `build`.
+Tests: `NO-SOURCE` (no test suite ran).
+Warnings: 18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors.
+
+An earlier attempt at 2026-11-19T17:44:08Z–17:44:19Z used the inherited Java 17 runtime and failed during Gradle configuration before source compilation. It is recorded in `attempts.json`, not treated as a source build regression.
+The unredacted logs remain local-only because they contain machine paths; see `attempts.json` for their SHA-256 values.

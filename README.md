@@ -9,7 +9,7 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-R1970 已完成 Pathfinder `b(List, boolean)` 的静态还原：修复循环上界每轮重算的问题，改为像原版一样在循环前缓存；完整原版 descriptor（偏移 0–347、14 个异常表项）复核通过，Temurin JDK 25 全树构建 exit code 0。**没有**运行直接探针、Minecraft 玩家/世界路径或兼容服务器验收。下一切片 R1971：审计该方法使用的距离 helper `c(Vec3, Vec3): double`。
+R1971 已恢复 Pathfinder 移动意图 helper `b(List): ArrayList` 的 guard-null 分支：原版在读取 `Minecraft.player` 前检查 gate；gate 为空时进入无玩家 fallback，按原始迭代顺序跳过节点访问并向 smoother 传空列表。完整 descriptor（偏移 0–1230、51 个异常表项）静态复核通过，Temurin JDK 25 全树构建 exit code 0。没有执行直接探针、Minecraft 玩家/世界路径或兼容服务器验收。R1970 `b(List, boolean)` 的距离/位置 helper 也已完整静态核对，未发现确认差异。下一切片 R1972：审计直接控制生成依赖 `c(List): ArrayList`。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -25,6 +25,7 @@ R1970 已完成 Pathfinder `b(List, boolean)` 的静态还原：修复循环上�
 - **R1968 Pathfinder 实体路线处理**：按原版完整 descriptor/CFG 恢复 `a(Entity, List, Vec3): void` 的碰撞/卡滞计数、配置阈值与计时门控、精确路线请求 overload `(false, true)`、成功后的计时器/计数器副作用及可选 GhostPath 提示。完整 Temurin 25 `build --rerun-tasks` 成功；该方法依赖实际玩家与世界碰撞，未做无效空对象探针，也未进行客户端/正常玩家路径/服务器验收。`d(List)` 的三个 invoke 点已在原版字节码中全部映射，详见 [R1968 静态复核与构建证据](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)。
 - **R1969 Pathfinder `d(List): void`**：从完整原版 descriptor/CFG（偏移 0–410、19 个异常表项）恢复 gate/player 早退、`b(list,false)` 空结果处理、option 700 与 `e/n/p/o/a(ID)` 判定、距离阈值、friction flag 及最终 `jump` 键写入；确认异常 helper 为 identity，没有吞异常。全树 Temurin 25 构建最终以 exit code 0 通过（18 条现有 Unsafe/deprecation/unchecked warnings）。两次 C2 native-memory 失败及一次未记录退出码的成功输出均如实保留，最终成功构建使用受限 JVM 编译/GC 参数。未做直接探针、游戏内正常路径或兼容服务器验收。详见 [R1969 静态复核与构建证据](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)。
 - **R1970 Pathfinder `b(List, boolean)`**：复核完整原版 descriptor/CFG（偏移 0–347、14 个异常表项），发现原源码在循环条件中每轮重新获取列表末索引，而原版在循环前缓存一次；现已按原版调用时序恢复固定的 inclusive 上界。核对 guard/player/空列表分支、起始索引 clamp、位置及距离 helper、累计距离/垂直阈值、布尔模式、枚举身份比较、返回和异常传播；identity 异常 helper 未吞异常。Temurin JDK 25 全树 `build --rerun-tasks` exit code 0，18 条既有 Unsafe/deprecation/unchecked warnings。没有直接探针、游戏内玩家/世界路径或兼容服务器验收。详见 [R1970 静态复核与构建证据](.analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json)。
+- **R1971 Pathfinder `b(List): ArrayList`**：完整复核原版 descriptor/CFG（偏移 0–1230、51 个异常表项），发现并修复 gate array 被忽略导致的分支差异：原版 gate 为 null 时不读取 `Minecraft.player`，fallback 迭代最多消费并强转首个列表元素，但不访问节点坐标、不添加点，最后以 mode 1 调用 smoother；非空 gate 且 player-null 则映射全部节点位置。非空 gate/player 路径的路线缓存、move-key、Pair、几何调用和转向状态副作用按原版顺序保留。JDK 25 全树 `build --rerun-tasks` 最终 exit code 0；首个 Java 17 尝试只在 Gradle 配置阶段失败，未编译源码。未做游戏、有效世界、正常玩家路径或服务器验收。详见 [R1971 静态复核与构建证据](.analysis/evidence/mining/r1971-pathfinder-movement-intent/manifest.json)。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -36,6 +37,7 @@ R1970 已完成 Pathfinder `b(List, boolean)` 的静态还原：修复循环上�
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
 - [R1969 Pathfinder `d(List)` 静态复核与全树构建](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
 - [R1970 Pathfinder `b(List, boolean)` 静态复核与全树构建](.analysis/evidence/mining/r1970-pathfinder-route-boundary/manifest.json)
+- [R1971 Pathfinder `b(List)` 静态复核与全树构建](.analysis/evidence/mining/r1971-pathfinder-movement-intent/manifest.json)
 - [R1970 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1970.json)：私有 `openpolinex` 内容提交 `eaca820`、公开 `PolinexClient-Reborn/main` 内容提交 `500963e`；远端 refs 已核验。
 - [R1968 Pathfinder 实体路线静态复核与全树构建](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
 - [R1969 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json)：私有 `openpolinex` 内容提交 `16b2a70`、公开 `PolinexClient-Reborn/main` 内容提交 `b993352`，两端 refs 于 2026-11-19 17:19:42 UTC 核验一致。
@@ -63,7 +65,7 @@ R1970 已完成 Pathfinder `b(List, boolean)` 的静态还原：修复循环上�
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,428** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,433** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 
