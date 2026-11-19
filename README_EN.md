@@ -25,6 +25,7 @@ The current slice is **R1964: trace Pathfinder route consumers, execution state,
 ### Latest handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
+- [R1962–R1963 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1956–R1961 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
 - [R1956 collision-gate static review](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)
 - [R1962 `isWalkable` / A* bounded differential](.analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json)

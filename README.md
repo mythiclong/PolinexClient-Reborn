@@ -25,6 +25,7 @@
 ### 最新交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1962–R1963 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1956–R1961 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
 - [R1956 碰撞 gate 静态复核](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)
 - [R1962 `isWalkable` / A* 有界差分](.analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json)

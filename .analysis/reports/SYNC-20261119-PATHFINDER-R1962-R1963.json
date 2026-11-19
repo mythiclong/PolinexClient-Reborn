@@ -1,0 +1,110 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1962-R1963",
+  "generated_utc": "2026-11-19T03:03:10Z",
+  "scope": "Pathfinder NativePathFinder differential evidence, route API gate correction, bilingual README and handoff refresh; synchronized to private openpolinex and public PolinexClient-Reborn.",
+  "evidence_baselines": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "pre_sync_commit": "02cde705b791fd4d0d78d4e1734831d165d47f50"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "pre_sync_commit": "f5926dd3ade8cf0f92bd99b555dd9f5429f966ef"
+    },
+    "experiment_source_baseline": "02cde705b791fd4d0d78d4e1734831d165d47f50"
+  },
+  "experiments": [
+    {
+      "id": "R1962",
+      "manifest": ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json",
+      "status": "Static full-descriptor review plus isolated-classloader differential; retained output reports PASS for 98,304 fixtures.",
+      "limitations": "The original invocation and process exit code were not retained. No Minecraft client, valid world, or server run."
+    },
+    {
+      "id": "R1963",
+      "manifest": ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
+      "status": "Corrected the gate-dependent empty-route branch in a(BlockPos, BlockPos, boolean); full Temurin 25 build --rerun-tasks exited 0; compiled method bytecode was rechecked. Independent full static review of b(Entity): BlockPos found no other confirmed mismatch.",
+      "limitations": "No client, valid-world route, or compatible-server behavior tested."
+    }
+  ],
+  "production_change": {
+    "files": [
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+        "sha256_after_change": "8b35c8dcb9f3f7f70765ae4436e167cd90be9c467fdf61957847a2a6638393de",
+        "git_blob_oid_private_content_commit": "808c9493e30af496be32d7653baee9ebd26f6b03"
+      }
+    ],
+    "java_source_inventory_after_change": {
+      "command": "python -B .analysis/stats.py",
+      "java_files": 1602,
+      "java_lines": 1158787,
+      "pxdyn_lines": 569,
+      "pxdyn_occurrences": 581,
+      "pxfix_markers": 7029,
+      "native_declarations": 219,
+      "note": "Inventory counts are not a measure of functional equivalence."
+    }
+  },
+  "readmes": {
+    "language_switching": "Chinese and English remain separate pages with visible switch links; no line-by-line bilingual mixing.",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "b56faefc29964c7e53a84d75f20bb2e506a8737ab83efc2a7236ba4d14c54c56",
+        "git_blob_oid": "497036eb2ac7ad6b3467eaf0e2050e1115ac3be0"
+      },
+      {
+        "path": "README_EN.md",
+        "sha256": "e4a24b86d93100a7ec82f21590631d0bae18811b721a1a8567af78000743a43d",
+        "git_blob_oid": "a5a6b909b2bbc01a2c82ad7ec7a110d2231a40e1"
+      },
+      {
+        "path": ".analysis/reports/RESUME.md",
+        "sha256": "b109b8a088247e82ca8b68fdfb86ebb8c286e6e1f91d682a4557029c83507298",
+        "git_blob_oid": "c3265c6e5b243a36862bc2af5356876245aa4ba8"
+      }
+    ]
+  },
+  "publication": {
+    "status": "Content snapshots pushed successfully; remote refs were verified with git ls-remote. The two repository branches have separate histories, so the same content change was committed as a fast-forward on each branch rather than force-pushing one history over the other.",
+    "content_commits": {
+      "private_openpolinex": {
+        "branch": "codex/handoff-progress-2026-11-15",
+        "commit": "2415dffb5091d786e27dbd274869c05be50c8397",
+        "verified_remote_ref_at_content_push": true
+      },
+      "public_polinex_reborn": {
+        "branch": "main",
+        "commit": "d0423d57d4ddc01794cbea7db5b52a2ac5e2ad79",
+        "verified_remote_ref_at_content_push": true
+      }
+    },
+    "published_files": [
+      ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/PathfinderAStarGridDifferential.java",
+      ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/manifest.json",
+      ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/probe-run-published.log",
+      ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
+      ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/build-summary.txt",
+      ".analysis/reports/RESUME.md",
+      ".analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json",
+      "README.md",
+      "README_EN.md",
+      "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java"
+    ]
+  },
+  "not_published": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled probe/class files",
+    "Local Gradle outputs, caches, and temporary investigation artifacts"
+  ],
+  "functional_acceptance_still_open": [
+    "Pathfinder normal-player execution through a valid Minecraft world, including obstacles, steps/ladders, cache lifecycle, and stop behavior",
+    "Compatible-server login, interaction, disconnect, and reconnect",
+    "ClickGUI mouse input, module toggle, and setting persistence",
+    "Other restoration and normal-path acceptance listed in RESUME.md"
+  ]
+}
