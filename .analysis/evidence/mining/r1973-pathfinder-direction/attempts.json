@@ -1,0 +1,32 @@
+{
+  "attempts": [
+    {
+      "id": "R1973-build-java17-config-failure",
+      "started_utc": "2026-11-19T18:26:51.2665861Z",
+      "ended_utc": "2026-11-19T18:26:59.2444725Z",
+      "runtime_selected_by_gradle": "Microsoft JDK 17.0.19 via inherited JAVA_HOME",
+      "exit_code": 1,
+      "result": "Configuration failed because Fabric Loom requires JVM 25; no source compilation occurred.",
+      "status": "VOID_FOR_SOURCE_VALIDATION"
+    },
+    {
+      "id": "R1973-preliminary-jdk25-build-superseded",
+      "started_utc": "2026-11-19T18:27:16.9528479Z",
+      "ended_utc": "2026-11-19T18:28:35.8267455Z",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "exit_code": 0,
+      "result": "Build succeeded, then full original-bytecode review found the draft >80 comparison mishandled NaN as forward. Source was corrected; this build is not final validation.",
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "R1973-final-jdk25-full-tree-build",
+      "started_utc": "2026-11-19T18:30:40.9233910Z",
+      "ended_utc": "2026-11-19T18:31:58.6685529Z",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "exit_code": 0,
+      "result": "Full-tree Gradle build succeeded after the NaN comparison correction; 18 existing Unsafe/deprecation/unchecked warnings; tests are NO-SOURCE.",
+      "status": "FINAL_PASS"
+    }
+  ],
+  "raw_logs": "Retained locally only; not published because they contain machine-specific paths."
+}

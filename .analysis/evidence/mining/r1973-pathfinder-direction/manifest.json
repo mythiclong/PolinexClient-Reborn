@@ -1,0 +1,88 @@
+{
+  "experiment_id": "R1973-pathfinder-direction",
+  "generated_utc": "2026-11-19T18:32:00Z",
+  "scope": "Full-descriptor static restoration review of Pathfinder e(Vec3,Vec3,Vec3):ArrayList and final Temurin 25 full-tree build.",
+  "source_baseline": {
+    "commit": "ddc0f23cfb55fdb62be42546f0038fef41a3bb80",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "6a9b7e7d6fca665ab35a132945b22bd383a8dacd"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "e",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/ArrayList;",
+    "original_offsets": "0-438 inclusive",
+    "original_exception_table_entries": 11,
+    "change_summary": [
+      "Restore Vec3.add expression null check.",
+      "Read the player once only after the non-null state gate; preserve nullable player and delta-movement fallbacks.",
+      "Preserve original dcmpg/dcmpl direction boundaries and NaN behavior.",
+      "Keep four-way direction state reset/write and ordered output list behavior."
+    ]
+  },
+  "final_source": {
+    "git_blob_oid": "445c75fa755b91f86fe6bbb014a87c7a716a75c2",
+    "source_content_sha256_lf": "8530992d868db6615fc774c0c2a4f187b102945d1e33c44dba376a9659cd7ad9",
+    "source_working_tree_sha256_at_final_build": "0cfa71f7298281f4de998dd17537156769a101a5c07bc823f76caae830e9c64e",
+    "changed_source_files": 1
+  },
+  "original_reference_local_only": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_full_owner_javap_sha256": "8229f1336e165e807a11730d04c399821054642b322c354ab49e7778ef12896"
+  },
+  "final_compiled_output": {
+    "full_owner_javap_sha256_local_only": "5be823e77a8a37e900a41ffa3a38cc7eab712d7011d71f969e797be9ccabdc11",
+    "compiled_owner_class_sha256": "b8dbb38370ee510e4a3fbd3788dd61500cf9a214a525c2a855193409dd5704d6",
+    "built_jar_sha256": "42de0bcf2fd22fbe7d59b07753541f9a5437cb4f7db3dacb66dd43b00be2dd08"
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original and final compiled owner read with javap -p -c -s -v; exact descriptor reviewed.",
+      "Original contains 11 NoWhenBranchMatchedException handlers; their handler paths rethrow through the previously verified identity helper. Current Java rewrite adds no swallowing handler.",
+      "43 ordered field/call/allocation/string-and-double-literal events match after excluding only the synthetic identity-exception trampoline calls; receivers and operand flow manually reviewed.",
+      "The original NaN path emits neither forward nor backward. Final compiled dcmpg/dcmpl branch structure matches this; an earlier draft did not and was corrected before final build.",
+      "Gate-null return, near-zero state reset, geometry invocation/extension, nullable speed calculation, movement thresholds, ordered keys, and final four-boolean state write reviewed."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": "gradlew.bat -Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T18:30:40.9233910Z",
+    "ended_utc": "2026-11-19T18:31:58.6685529Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings"
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "minecraft_client": false,
+    "valid_player_and_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null,
+    "reason": "This geometry/angle method requires valid game state for behavioral testing; no invalid null/plain-object/worldless fixture was used."
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158466,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Raw Gradle logs containing local paths",
+    "Gradle caches and generated build outputs"
+  ],
+  "hash_semantics": "Working-tree SHA-256 is exact file bytes at final build; LF SHA-256 is normalized text; Git blob OID is the Git-cleaned text object."
+}

@@ -1,0 +1,25 @@
+R1973 static review — Pathfinder `e(Vec3, Vec3, Vec3): ArrayList<String>`
+
+Baseline: `ddc0f23cfb55fdb62be42546f0038fef41a3bb80`; source path `polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java`; prior source blob `6a9b7e7d6fca665ab35a132945b22bd383a8dacd`.
+Final source blob: `445c75fa755b91f86fe6bbb014a87c7a716a75c2`; source LF SHA-256 `8530992d868db6615fc774c0c2a4f187b102945d1e33c44dba376a9659cd7ad9`; exact working-tree SHA-256 at final build `0cfa71f7298281f4de998dd17537156769a101a5c07bc823f76caae830e9c64e`.
+
+## Complete original descriptor review
+
+Owner `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`; exact descriptor `(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/ArrayList;`. Read the full original and final compiled owner with `javap -p -c -s -v`; original method bytecode spans offsets 0–438 inclusive and has 11 exception-table entries. The protected JAR and complete dumps remain local.
+
+## Confirmed source corrections
+
+- Restored Kotlin's `Intrinsics.checkNotNullExpressionValue` immediately after `Vec3.add(...):Vec3`; a null result must throw at that expression point.
+- The original reads the gate first, returns an empty list without changing direction state when it is null, and only then reads `Minecraft.player` once. The source now follows that order and preserves null checks for both `LocalPlayer` and `getDeltaMovement()`. A null player/velocity leaves horizontal speed squared at `0.0`, as in the original.
+- Restored JVM NaN comparison semantics for direction classification. The original `dcmpg`/`dcmpl` paths produce `forward` only when `abs(angle) <= 80`, produce `backward` only when `abs(angle) >= 135` and speed squared is at most `0.0064`, and produce neither for NaN or the intermediate angle band. A preliminary successful build used `> 80` and would classify NaN as `forward`; full-bytecode review found this mismatch, the source was corrected to `<= 80` / `>= 135`, and only the subsequent full-tree build is final evidence.
+- For a non-negligible horizontal delta, the geometry helper receives `(from,to,third,false)`, its returned vector is extended by `2.0` along the normalized horizontal direction, and the angle utility reads that result. The method then writes a four-element direction array (`forward`, `backward`, `left=false`, `right=false`) and returns the corresponding ordered key list. The near-zero path resets that state to a fresh four-element array and returns empty.
+
+## Compiled-code comparison
+
+For the complete descriptor, the ordered stream of field accesses, non-synthetic method calls, allocations, and checked string/double literals has 43 events in both original and final compiled methods, with no unmatched event. Receiver/operand stack flow for the geometry singleton, `Vec3.add`, `Minecraft.player`, `LocalPlayer.getDeltaMovement`, angle helper, list mutations, and final state write was reviewed against the full disassembly. Checked constants and strings include `1.0E-6`, `2.0`, `0.0064`, `80.0`, `135.0`, `add(...)`, `forward`, and `backward`.
+
+The 11 original handlers catch only `kotlin.NoWhenBranchMatchedException` and route through the owner's previously verified identity `a(Throwable):Throwable` rethrow helper; they do not swallow application exceptions. The final Java method has no catch handlers. This static comparison is not a runtime-equivalence claim.
+
+Static status: **PASS** for source/compiled-method review. Full tree build: **PASS** on Temurin JDK 25.0.4.1+1-LTS; final build ran `2026-11-19T18:30:40.9233910Z`–`2026-11-19T18:31:58.6685529Z`, exit code 0, 18 existing Unsafe/deprecation/unchecked warnings, tests `NO-SOURCE`. See `build-jdk25-final.log` and `attempts.json`.
+
+No direct probe, Minecraft client, desktop input, valid player/world, normal Pathfinder user path, or compatible server was used. Geometry-dependent behavior still needs a live valid-world test. Do not infer feature completion from this static/build pass.

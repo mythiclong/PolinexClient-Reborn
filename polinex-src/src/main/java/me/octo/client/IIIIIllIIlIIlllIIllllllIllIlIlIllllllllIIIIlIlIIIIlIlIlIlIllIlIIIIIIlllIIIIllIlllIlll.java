@@ -1328,19 +1328,23 @@ if (var10 < 1.0E-6) {
 }
 Vec3 var12 = lIIlIIlllIllIlIIIlIlIIlIlIIllllIIIIlIlIllIlllllllIIllIlllIIllIllIlIlIIllIllIlIIllIlII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a(param1, param2, param3, false);
 Vec3 var13 = var12.add(var6 / var10 * 2.0, 0.0, var8 / var10 * 2.0);
+Intrinsics.checkNotNullExpressionValue(var13, "add(...)");
 double var14 = me.octo.client.utils.player.lIlIIIlIlIllllllIllllIIIIllIlllIIllIlllIlIIllIlllllllIllIIIIlIIIIIIIIllllIIIlllIlIlII.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.c(var13).a();
 double var15 = 0.0;
-if (this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player != null) {
-   Vec3 var18 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player.getDeltaMovement();
-   var15 = var18.x * var18.x + var18.z * var18.z;
+if (var4 != null) {
+   LocalPlayer var18 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
+   if (var18 != null) {
+      Vec3 var19 = var18.getDeltaMovement();
+      if (var19 != null) {
+         var15 = var19.x * var19.x + var19.z * var19.z;
+      }
+   }
 }
 boolean var16 = var4 != null && var15 > 0.0064;
-if (Math.abs(var14) > 80.0) {
-   if (Math.abs(var14) >= 135.0 && !var16) {
-      var5.add("backward");
-   }
-} else {
+if (Math.abs(var14) <= 80.0) {
    var5.add("forward");
+} else if (Math.abs(var14) >= 135.0 && !var16) {
+   var5.add("backward");
 }
 boolean[] var17 = new boolean[4];
 var17[0] = var5.contains("forward");
