@@ -1,0 +1,25 @@
+R1969 static review — Pathfinder d(List):void
+
+Source baseline: 15ca0569538719b9a610c36be07c8c3d5eeabc82 (method stub); baseline Git blob 3f923653f9a7909b3dd6239faab8e706dc70f36b.
+Final Git blob: 6199f57bd677c8fcc942e4e0a2367957d81ce2c9; normalized source SHA-256 67999e87e569b007a98f7c465486c6afdb6f18eb3c6bb56a278acb3ea44a7172.
+Original input: local-only JAR SHA-256 d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26.
+Original full-owner javap SHA-256 (local only): 76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197.
+Compiled full-owner javap SHA-256 (local only): f45bee88cb0fe9c42cccc8a48c5933698a141ca3a927e2db669f979d98952572.
+
+Complete original descriptor (Ljava/util/List;)V was reviewed: code offsets 0–410 and all 19 NoWhenBranchMatchedException table entries.
+Original a(Throwable):Throwable is aload_0; areturn in both original and current owner, so wrappers rethrow the identical exception; no catch is swallowed.
+
+CFG / call / side-effect mapping:
+- 0–33: obtain the gate; if gate is non-null and Minecraft.player is null, return. Source uses the same gate/player condition.
+- 33–79: call b(List,false); when gate is null, return without changing jump; with a non-null gate and null result, set jump=false and return. Source preserves this order and short circuit.
+- 80–91: call e(List), then n(), in that order.
+- 93–171: query the exact key-state singleton's option provider for option 700; combine with n() and lazily call p() only when required. Source preserves option && n && !p.
+- 173–191: call o(), then same-owner a(int,double) with the original two fields; source preserves order and descriptor.
+- 193–228: call the exact distance singleton a(Vec3,false), using result.b(), compare <= the original threshold field.
+- 230–308: compute !frictionFlag && distanceWithinThreshold && (optionPredicate || o()).
+- 310–410: query the same key-state singleton j(); compute j && !a(int,double) && (e(List) || priorPredicate); write the resulting boolean to key "jump".
+- Original exception-table catches are only NoWhenBranchMatchedException and delegate to identity helper a(Throwable); current code leaves the same exception observable.
+- Original caller inventory is complete: event-consumer offsets 1180 and 1420, plus a(List,boolean) offset 98. Target method has no other original invoke sites in this owner.
+- Compiled descriptor is still (Ljava/util/List;)V; final javap shows executable code offsets 0–213 (214 bytes), not an empty return. javac emits invokevirtual for same-owner private helpers where the original uses invokespecial; owner/name/descriptor resolve to the same target in the built class. All referenced fields and invocation descriptors resolve.
+
+Static status: PASS. No game/runtime equivalence claim.

@@ -1,0 +1,99 @@
+{
+  "experiment_id": "R1969-pathfinder-d-list",
+  "generated_utc": "2026-11-19T17:06:12.9250258Z",
+  "scope": "Restore Pathfinder d(List):void from complete original bytecode; verify fields/calls/branches/exception behavior, compiled descriptor, and full-tree build.",
+  "source_baseline": {
+    "commit": "15ca0569538719b9a610c36be07c8c3d5eeabc82",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "3f923653f9a7909b3dd6239faab8e706dc70f36b"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "d",
+    "descriptor": "(Ljava/util/List;)V",
+    "before": "Vineflower parsing failure; compiled method returned immediately.",
+    "after": "Restores gate/player guard, b(List,false) gate and null-result branches, ordered route predicates, distance threshold, friction/option predicates, and final jump-key write.",
+    "source_git_blob_oid": "6199f57bd677c8fcc942e4e0a2367957d81ce2c9",
+    "source_content_sha256_lf": "67999e87e569b007a98f7c465486c6afdb6f18eb3c6bb56a278acb3ea44a7172",
+    "source_working_tree_sha256_at_final_build": "aa69262bd5168c4524e4925fb8e919ce192203dcc72a39b365212d0bbcfb8997",
+    "compiled_owner_class_sha256": "921774e82a639e2542770159e402b5adfb922fc08637b7a8c74c35f23f56be7f",
+    "built_jar_sha256": "1f4ef92003851cb1b41cf345dace2c011ae19422d9146e63d8d87e0d9d132663"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "compiled_owner_javap_sha256_local_only": "f45bee88cb0fe9c42cccc8a48c5933698a141ca3a927e2db669f979d98952572",
+    "method_code_offsets": "0 through 410 inclusive; all 19 exception-table entries reviewed.",
+    "identity_exception_helper": "a(Throwable):Throwable is aload_0; areturn in original and current owner."
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original descriptor body and exception table reviewed.",
+      "Mapped gate, player, null handling, option 700, e/n/p/o/a(ID), distance helper, friction flag and final jump-key side effect.",
+      "Confirmed same fields, owners, descriptors, receivers, short-circuit order and three original callsites.",
+      "Confirmed exception wrappers rethrow the same NoWhenBranchMatchedException through identity helper; no exception is swallowed.",
+      "Re-read compiled owner with javap -c -p -s and verified the target descriptor is implemented."
+    ]
+  },
+  "call_graph": {
+    "route_event_owner_descriptor": "(Lme/octo/client/events/impl/llIlIIIIlIlllIIllllIIllIllIIIlIIIIIIIlIIIllIIllIllllllllllIllIIIllIlIlIlIlIIlIIIllIII;)V",
+    "d_list_call_offsets_in_route_event": [
+      1180,
+      1420
+    ],
+    "d_list_call_offset_in_a_list_boolean": 98,
+    "callsite_inventory": "Complete original owner dump; three invoke sites total."
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Temurin JDK 25.0.4.1",
+    "started_utc": "2026-11-19T17:05:10.4248682Z",
+    "ended_utc": "2026-11-19T17:06:12.9250258Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tasks": [
+      "compileJava",
+      "processResources",
+      "classes",
+      "processIncludeJars",
+      "jar",
+      "assemble",
+      "build"
+    ],
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors.",
+    "resource_note": "Two full-tree attempts crashed from HotSpot C2 native allocation pressure; final pass bounds compiler/GC threads and relocates compressed-oops heap. See attempts.json."
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "reason": "Requires a valid Minecraft player, real world/collision state, and live key state. No such controlled fixture was used; no null/plain-object/fabricated-world test.",
+    "minecraft_client": false,
+    "valid_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158427,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR and class files",
+    "Full original/current javap dumps",
+    "Raw build logs and host crash reports containing local paths",
+    "Gradle caches and generated build outputs"
+  ],
+  "source_hash_semantics": "working-tree SHA-256 fingerprints exact CRLF bytes consumed by Gradle; LF SHA-256 fingerprints normalized text; Git blob OID identifies the repository-filtered object."
+}

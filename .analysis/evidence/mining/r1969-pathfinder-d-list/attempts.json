@@ -1,0 +1,41 @@
+{
+  "experiment_id": "R1969-pathfinder-d-list",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_utc": "2026-11-19T16:58:14.0645482Z",
+      "ended_utc": "2026-11-19T16:58:34.6675022Z",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "exit_code": 1,
+      "result": "Gradle daemon crashed before compile completion",
+      "classification": "environmental native-memory allocation failure in HotSpot C2; no source diagnostic"
+    },
+    {
+      "attempt": 2,
+      "started_utc": "2026-11-19T16:59:20.6829908Z",
+      "ended_utc": "approximately 2026-11-19T17:00:14.7Z",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:ActiveProcessorCount=4 -XX:CICompilerCount=2 -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "exit_code": null,
+      "observed_result": "BUILD SUCCESSFUL in 54s in captured output",
+      "status": "observed pass, but terminal exit marker was not retained; excluded as final verification"
+    },
+    {
+      "attempt": 3,
+      "started_utc": "2026-11-19T17:03:18.9897790Z",
+      "ended_utc": "2026-11-19T17:04:09.5165932Z",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:ActiveProcessorCount=4 -XX:CICompilerCount=2 -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "exit_code": 1,
+      "result": "Gradle daemon crashed after javac warnings, before full task completion",
+      "classification": "environmental native-memory allocation failure in HotSpot C2; no source diagnostic"
+    },
+    {
+      "attempt": 4,
+      "started_utc": "2026-11-19T17:05:10.4248682Z",
+      "ended_utc": "2026-11-19T17:06:12.9250258Z",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "exit_code": 0,
+      "result": "BUILD SUCCESSFUL in 1m 2s",
+      "classification": "final full-tree verification; 18 existing Unsafe/deprecation/unchecked warnings"
+    }
+  ]
+}
