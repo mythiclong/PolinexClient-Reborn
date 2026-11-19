@@ -1,0 +1,60 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1968",
+  "generated_utc": "2026-11-19T16:47:15Z",
+  "scope": "Publish the R1968 Pathfinder entity-route restoration, descriptor-level static evidence, full-tree build record, and bilingual README/handoff update to both repositories.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "eccc98835e40bee5bfe3da44163eb9059216b548"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "73296e24601ccb5e409169c9acd53ef685d7605c"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "publication_method": "Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "9f97de64a8b8c866fe0bbf4961e54d9c907a8d57",
+      "remote_ref_verified_at": "2026-11-19T16:47:15Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "branch": "main",
+      "content_commit": "c8647eac472555189dd6729f5be07322842802d5",
+      "remote_ref_verified_at": "2026-11-19T16:47:15Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "note": "The two repositories have distinct commit/tree identities, but every R1968 changed file below has identical LF-normalized content SHA-256 at both content commits. README/RESUME links to this record are added in a following metadata commit; that commit advances each branch by fast-forward only."
+  },
+  "published_file_content_sha256_lf_at_content_commits": {
+    ".analysis/evidence/mining/r1968-pathfinder-entity-route/attempts.json": "efb29ea9d57640711a0c962262d37b624d8078b100a654f427779faf5ef141aa",
+    ".analysis/evidence/mining/r1968-pathfinder-entity-route/build-jdk25-final.json": "5c7899df63ba9425b98ce3fbe3c23a19e5d554e094fe8767e949998e212a7e67",
+    ".analysis/evidence/mining/r1968-pathfinder-entity-route/build-jdk25-final.log": "0847ce9a66175016ad652ea4ab63895c321c7fa3b0103a6411bf5964bb7e9e80",
+    ".analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json": "467c7c1d33cfbb4ce04fbc666fc1e2dc735b349645d14a05bcecf893af0498fa",
+    ".analysis/evidence/mining/r1968-pathfinder-entity-route/static-review.txt": "77fc8c69a7d15a7774c2866788365fe8084d81b66e59bf0b6daafb504d574ae4",
+    ".analysis/reports/RESUME.md": "84006f53a74dea9b6f0f0a00bef5ea039a5f3e9dc56b7e813e0b3b59141c7dc4",
+    "README.md": "9446f8865d3049594999fd1142f7ce149852f9ae0d7f36e0b4bf0e410c2ddf3b",
+    "README_EN.md": "1b013dd56014b5c6d6ad045a546bcca90a7fefdd638699b38909480cf4ef8aae",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "e560e125421867af7c5ffd89ced9d86b47f4bb11a3a56896aaefb37c4f38eab0"
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "7ab72411167e9048292af7d61a47ebf16bef495e",
+    "published_git_blob_oid": "3f923653f9a7909b3dd6239faab8e706dc70f36b",
+    "repository_content_sha256_lf": "e560e125421867af7c5ffd89ced9d86b47f4bb11a3a56896aaefb37c4f38eab0"
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN; valid Minecraft player/world collision fixture required",
+    "normal_pathfinder_user_path": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  }
+}
