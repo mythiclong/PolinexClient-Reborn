@@ -35,6 +35,7 @@ The current slice is **R1970: Pathfinder `b(List, boolean)`**. R1969 `d(List): v
 - [R1967 Pathfinder history predicate bytecode review, differential, and full-tree build](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
 - [R1969 Pathfinder `d(List)` static review and full-tree build](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
 - [R1968 Pathfinder entity-route static review and full-tree build](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
+- [R1969 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json): private `openpolinex` content commit `16b2a70`, public `PolinexClient-Reborn/main` content commit `b993352`; both refs verified at 2026-11-19 17:19:42 UTC.
 - [R1968 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1968.json): private `openpolinex` content commit `9f97de6`, public `PolinexClient-Reborn/main` content commit `c8647ea`; both refs verified at 2026-11-19 16:47:15 UTC.
 - [R1966 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1966.json): private content commit `21ec44f`, public `PolinexClient-Reborn/main` content commit `624128b`; both refs were verified after push.
 - [R1965 Pathfinder command executor callback repair](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)

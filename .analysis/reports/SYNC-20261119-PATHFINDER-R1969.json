@@ -1,0 +1,52 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1969",
+  "generated_utc": "2026-11-19T17:19:42Z",
+  "scope": "Synchronize R1969 Pathfinder d(List):void source, static/build evidence, bilingual README, and concise handoff to the private and public repositories.",
+  "baseline_refs": {
+    "private_openpolinex": {"repository":"mythiclong/openpolinex","branch":"codex/handoff-progress-2026-11-15","commit":"15ca0569538719b9a610c36be07c8c3d5eeabc82"},
+    "public_polinex_reborn": {"repository":"mythiclong/PolinexClient-Reborn","branch":"main","commit":"565b4e601a4943155eec562343f6edb05a188131"}
+  },
+  "publication": {
+    "status":"CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method":"Fast-forward pushes only; no force push.",
+    "private_openpolinex": {
+      "branch":"codex/handoff-progress-2026-11-15",
+      "content_commit":"16b2a70aabb01bd65ea6bb11547b55c887179837",
+      "remote_ref_verified_at":"2026-11-19T17:19:42Z",
+      "remote_ref_equals_content_commit":true
+    },
+    "public_polinex_reborn": {
+      "branch":"main",
+      "content_commit":"b993352c9a33d76b8f7948141e2f04f6563e82d2",
+      "remote_ref_verified_at":"2026-11-19T17:19:42Z",
+      "remote_ref_equals_content_commit":true
+    },
+    "note":"The following metadata commit adds links to this report in README.md, README_EN.md, and RESUME.md. The two content commits contain identical LF-normalized bytes for every R1969 changed file listed below."
+  },
+  "published_file_content_sha256_lf_at_content_commits": {
+    "README.md":"40e2d727f5f7fcf847e264b90b32b60d5b32f23dbcd91625ac57dc6537a1b0e1",
+    "README_EN.md":"3ed465e05bbaef00cee78118e91e5ed945583642e666815f24e2b4a320943030",
+    ".analysis/reports/RESUME.md":"49729f174dbef5035b0cd9934b703da6756c7539775398986b094821aeeebe2d",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java":"67999e87e569b007a98f7c465486c6afdb6f18eb3c6bb56a278acb3ea44a7172",
+    ".analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json":"e82b4244d742a19df1780d7c684ecebf5ec68c15941c78ba3872e3d3b6661f29",
+    ".analysis/evidence/mining/r1969-pathfinder-d-list/static-review.txt":"778d7ab496feff9e530931b2e51bae7ccb8d771dc8269e851439e19b4e20add0",
+    ".analysis/evidence/mining/r1969-pathfinder-d-list/attempts.json":"ed9ce82a300d13f1354d6b9a7258d2c87e2a304717201f8b6eb730911b465730",
+    ".analysis/evidence/mining/r1969-pathfinder-d-list/build-jdk25-final.log":"e7d6a509966ac7d52bcf2dafbe004a0d73346eb29c3570ad84fbccda7e4a4786"
+  },
+  "source_change": {
+    "path":"polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "method":"d(Ljava/util/List;)V",
+    "baseline_git_blob_oid":"3f923653f9a7909b3dd6239faab8e706dc70f36b",
+    "published_git_blob_oid":"6199f57bd677c8fcc942e4e0a2367957d81ce2c9",
+    "source_content_sha256_lf":"67999e87e569b007a98f7c465486c6afdb6f18eb3c6bb56a278acb3ea44a7172"
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review":"PASS",
+    "final_full_tree_build":"PASS; Temurin JDK 25.0.4.1; exit code 0",
+    "direct_probe":"NOT RUN",
+    "normal_minecraft_path":"NOT RUN",
+    "valid_world":"NOT RUN",
+    "compatible_server":"NOT RUN",
+    "desktop_input":"NOT USED"
+  }
+}

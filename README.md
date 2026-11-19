@@ -35,6 +35,7 @@
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
 - [R1969 Pathfinder `d(List)` 静态复核与全树构建](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
 - [R1968 Pathfinder 实体路线静态复核与全树构建](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
+- [R1969 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json)：私有 `openpolinex` 内容提交 `16b2a70`、公开 `PolinexClient-Reborn/main` 内容提交 `b993352`，两端 refs 于 2026-11-19 17:19:42 UTC 核验一致。
 - [R1968 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1968.json)：私有 `openpolinex` 内容提交 `9f97de6`、公开 `PolinexClient-Reborn/main` 内容提交 `c8647ea`，两端 refs 于 2026-11-19 16:47:15 UTC 核验一致。
 - [R1966 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1966.json)：私有分支内容提交 `21ec44f`、公开 `PolinexClient-Reborn/main` 内容提交 `624128b`，推送后远端 refs 已核验。
 - [R1965 Pathfinder 命令 executor 回调修复](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
