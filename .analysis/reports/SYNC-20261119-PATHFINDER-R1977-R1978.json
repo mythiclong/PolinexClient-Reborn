@@ -1,0 +1,123 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1977-R1978",
+  "generated_utc": "2026-11-19T19:59:11Z",
+  "scope": "Publish R1977 Pathfinder position-predicate source alignment and R1978 collision-push restoration, machine evidence, bilingual README updates, and concise handoff to private openpolinex and public PolinexClient-Reborn.",
+  "evidence_production_baseline": {
+    "commit": "a3eab621aae329b6eaa81278df5cb9509f568efb",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "source_git_blob_before_slice": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333",
+    "source_git_blob_after_slice": "713ebd60168d99c62789500e952f888ea21e4f00",
+    "source_sha256_lf_after_slice": "bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9"
+  },
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "a3eab621aae329b6eaa81278df5cb9509f568efb"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "3b38d553a7ec43adcf01e4eac67dcc00ae4c463b"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Separate repository-native content commits; fast-forward pushes only; no force-push.",
+    "remote_ref_verification_window_utc": {
+      "started": "2026-11-19T19:59:09.0828177Z",
+      "ended": "2026-11-19T19:59:11.3470568Z"
+    },
+    "private_openpolinex": {
+      "content_commit": "ba9f2a722ffb5592bfa42c30b44dd1ca261ca83a",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "content_commit": "b46a521f074b7718ccb6c2c6efe3224454334852",
+      "branch": "main",
+      "remote_ref_equals_content_commit": true
+    },
+    "identical_published_file_blobs_in_both_repositories": true,
+    "metadata_follow_up": "The concise RESUME and this sync record are committed separately as fast-forward metadata updates. Their code/evidence base is keyed by the content commits above; a self-referential metadata commit hash is not embedded."
+  },
+  "metadata_follow_up_files": {
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "5de2cd7b18fa8689af549b9fe062d5a090989850",
+      "sha256_lf": "ca7ec02dbb91eb987be2a05b4ddaf6274cc043ea5a0f7b8c9eaba6a6def0f12d"
+    }
+  },
+  "published_file_git_blob_oids_and_sha256_lf_at_content_commits": {
+    "README.md": {
+      "git_blob_oid": "3a3fad023979f7af6580c297e90203b4236e177e",
+      "sha256_lf": "9e699a607c338ae90304fb231085739b14053cd598eaf9b4a4cbe11c620baff0"
+    },
+    "README_EN.md": {
+      "git_blob_oid": "f93ee524327d1330ca69c42f3f6b40d2e3e06932",
+      "sha256_lf": "d455bc06b53b51c685dbb920b04d93ed425e0b8dc455371b7cee0692ddfee824"
+    },
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": {
+      "git_blob_oid": "713ebd60168d99c62789500e952f888ea21e4f00",
+      "sha256_lf": "bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9"
+    },
+    ".analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json": {
+      "git_blob_oid": "dea0cac7565bc1145371340b31f1ab9ed503c4e1",
+      "sha256_lf": "13890faa4d2db59a5a9cf4a353c6e3dcdcb18b62886f90ddde77c1b6f97adc08"
+    },
+    ".analysis/evidence/mining/r1977-pathfinder-position-predicate/static-review.txt": {
+      "git_blob_oid": "0249f019761ad8e2af349a56375ade2239867570",
+      "sha256_lf": "469049be31f197f3f2427d3225296deb7b80316e3d0b0aa16c164fb0c391377c"
+    },
+    ".analysis/evidence/mining/r1977-pathfinder-position-predicate/attempts.json": {
+      "git_blob_oid": "fb252102cf51723c941f7405325ff583385f23a5",
+      "sha256_lf": "9e391683634b373bdcfcd5197d0561e83a30ff3aa7ea03bf6f4c3188b737c12e"
+    },
+    ".analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json": {
+      "git_blob_oid": "6916cbf4524a564c770f7fbcb953f0ddb071e0f0",
+      "sha256_lf": "5680dd177b3ae6e357d4f812c505725a64dab40eb12f7adfd62a83a9e037d8f3"
+    },
+    ".analysis/evidence/mining/r1978-pathfinder-collision-push/static-review.txt": {
+      "git_blob_oid": "df501a50890c7f1481eff26edcdda763342898d9",
+      "sha256_lf": "7c7de245b548fc31667d23a12144c6b9a5aa95a8f9a274fa3eb404b744cdcaf9"
+    },
+    ".analysis/evidence/mining/r1978-pathfinder-collision-push/build-jdk25-final.log": {
+      "git_blob_oid": "c4bc7f088ac048a7e2f8a0daa6c4f81974532fd8",
+      "sha256_lf": "322007fbbd14dd94c319bd7f4bd5116b174063e661c2066ba31a86f0bc1dbca8"
+    },
+    ".analysis/evidence/mining/r1978-pathfinder-collision-push/attempts.json": {
+      "git_blob_oid": "50c5f28e4672070170264324cccd66e9fb847e00",
+      "sha256_lf": "e8954140f7c5cd10ba1df04a2157d18d6efd32e6ccbd5fbf90ca430815a83e48"
+    }
+  },
+  "source_changes": [
+    {
+      "method": "a",
+      "descriptor": "(Lnet/minecraft/world/phys/Vec3;)Z",
+      "change": "Align the Java size() call site to the original Collection.size()I interface owner; Java omits only the redundant widening cast.",
+      "static_evidence": ".analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json"
+    },
+    {
+      "method": "g",
+      "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;",
+      "change": "Restore the gate/null-check/radius branches and aggregate collision push before applying the final scale and cap.",
+      "static_evidence": ".analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json"
+    }
+  ],
+  "validation_boundary": {
+    "static_reviews": "PASS with the Java lowering differences explicitly recorded.",
+    "final_full_tree_build": "PASS: Temurin JDK 25.0.4.1+1-LTS, exact final source blob 713ebd60168d99c62789500e952f888ea21e4f00, exit code 0; tests NO-SOURCE; 18 existing Unsafe/deprecation/unchecked warnings.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "R1977/R1978 are source/static/build progress only. No runtime equivalence, full Pathfinder functionality, or compatible-server compatibility is claimed. README source counts are inventory only."
+}
