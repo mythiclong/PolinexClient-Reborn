@@ -1,0 +1,44 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1979-R1980",
+  "generated_utc": "2026-11-19T20:31:53Z",
+  "batch": [
+    "R1979",
+    "R1980"
+  ],
+  "source_evidence_baseline_commit": "15d57eaf41a9199c2a1adb4fd2fd197e7703dc3e",
+  "content_commits": {
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "0feaf958091239bb5dea4bfa34b20a07768aca55",
+      "remote_ref_verified": "2026-11-19T20:30Z"
+    },
+    "public_polinexclient_reborn": {
+      "branch": "main",
+      "commit": "9e6d9fac0f1484d9e5a309c304d67e9df2e3edcd",
+      "remote_ref_verified": "2026-11-19T20:30Z"
+    }
+  },
+  "shared_path_blobs_verified_equal": {
+    "README.md": "227716b07ea5287167486695e0f3cce2c8a9ded6",
+    "README_EN.md": "f1c517ac2ea5c2685aa33258c8b6287aae8a7d8d",
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": "689f71330ff91a7b8e5d08aafe6d9bdaae63ef4c",
+    ".analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json": "731c15e1ac7e5c7109a5e0c8fe469f960b567f02",
+    ".analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/attempts.json": "2f5b5ec1f2b0635521818f1fa4f9eb043c36a28c",
+    ".analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/build-jdk25-final.log": "455fc3ee8f0d2d0e626d5099d26483e8abaf7968",
+    ".analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/static-review.txt": "96b45053f1e72e8df94b310f8d2d250ea46c0b9c",
+    ".analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json": "ebbed4c6acfd37ea9171786fa321724e202c26de",
+    ".analysis/evidence/mining/r1980-pathfinder-collision-gate/attempts.json": "cba574c22370a18bf31e0c2ac099f0bed0b64c84",
+    ".analysis/evidence/mining/r1980-pathfinder-collision-gate/build-jdk25-final.log": "200d7c77a2fa1abf4aea399f313c524e7b4e3657",
+    ".analysis/evidence/mining/r1980-pathfinder-collision-gate/static-review.txt": "bad67eb08338c7c05276d8d959f7e276d50b19ea"
+  },
+  "tree_note": "The private and public repository trees are not byte-identical; repository-specific history/content was preserved. Every listed batch file blob matches across the two content commits.",
+  "validation": {
+    "source_blob": "689f71330ff91a7b8e5d08aafe6d9bdaae63ef4c",
+    "source_sha256_lf": "e8d1ee632e16d1ffc81dbf747d3e91ff4f8ca6a6fccff57382907f954073ca17",
+    "full_tree_build": "PASS: Temurin JDK 25.0.4.1+1-LTS; gradlew.bat build --rerun-tasks --no-daemon; exit 0; 18 existing warnings; tests NO-SOURCE",
+    "minecraft_client_or_valid_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN"
+  },
+  "next_slice": "R1981 Pathfinder o():boolean complete-descriptor and callsite review before edits"
+}

@@ -1,22 +1,26 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 19:59 UTC。R1977/R1978 源码、证据和中英文 README 已分别快进推送到两个仓库，且内容提交 refs 已复核。工作树基线：私有 `openpolinex` 内容提交 `ba9f2a722ffb5592bfa42c30b44dd1ca261ca83a`；公开 `PolinexClient-Reborn` 内容提交 `b46a521f074b7718ccb6c2c6efe3224454334852`。元数据（本交接和同步记录）随后单独提交。
+> 更新：2026-11-19 20:31 UTC。R1979/R1980 源码、证据和中英文 README 已分别快进同步至两个仓库；远端 refs 已复核，详见 [同步记录](SYNC-20261119-PATHFINDER-R1979-R1980.json)。两个仓库保留各自历史内容，**本批列出的共享文件 blob 一致**，不宣称整棵 Git tree 相同。
 
-## 当前唯一切片：R1979 Pathfinder 碰撞偏移路线包装器
+## 当前基线
 
-直接调用刚复核的碰撞推力 helper 的方法：`a(ArrayList<Vec3>, Vec3, Vec3): ArrayList<Vec3>`。下一步先从原始 owner 确认精确 JVM descriptor，再完整复核 gate、空/非空列表、首元素读取、`g(...)` 调用、偏移向量应用及 fallback 顺序；只按完整原版字节码修复。完成后全树构建并同步两仓。客户端正常寻路、有效玩家/世界和兼容服务器仍须另外验收。
+- 私有 `openpolinex`：`codex/handoff-progress-2026-11-15`，内容提交 `0feaf958091239bb5dea4bfa34b20a07768aca55`。
+- 公开 `PolinexClient-Reborn`：`main`，内容提交 `9e6d9fac0f1484d9e5a309c304d67e9df2e3edcd`。
+- 当前 Pathfinder owner 源文件 blob：`689f71330ff91a7b8e5d08aafe6d9bdaae63ef4c`；LF SHA-256：`e8d1ee632e16d1ffc81dbf747d3e91ff4f8ca6a6fccff57382907f954073ca17`。
 
-## 最近完成
+## 当前唯一下一切片：R1981 Pathfinder `o():boolean`
 
-- **R1978**：修复 `g(Vec3,Vec3,Vec3):Vec3` 的 gate 与 Kotlin 空值检查、半径外碰撞跳过、聚合碰撞向量后统一缩放；完整静态对照与 Temurin JDK 25 全树 `build --rerun-tasks` 通过。
-- **R1977**：完整静态审计 `a(Vec3):boolean`，将 `size()` 调用 owner 对齐原版 `Collection.size()I`；仅保留 Java 对冗余 widening cast 的编译降低差异。与 R1978 共用最终全树构建。
-- 证据：[R1977](../evidence/mining/r1977-pathfinder-position-predicate/manifest.json)、[R1978](../evidence/mining/r1978-pathfinder-collision-push/manifest.json)、[两仓同步记录](SYNC-20261119-PATHFINDER-R1977-R1978.json)。
+先读取原版与当前完整 descriptor/字节码和调用点，逐项对齐 gate、player/world 状态读取、调用顺序、分支及副作用；确认差异后再修改。随后做精确编译产物对照和全树构建。不要把构建通过当成运行等价。
 
-## 仍开放 / 禁止推断为通过
+## 本批有效证据
 
-- Pathfinder 正常玩家路线、有效世界碰撞与缓存生命周期仍未验收；R1977/R1978 均没有直接探针、客户端或真实服务器测试。
-- ClickGUI 鼠标命中、模块开关、设置列表及保存/重载闭环仍开放。
-- Powder Macro、Glacite Commission Macro、Route editor JSON 导入，以及配置、渲染、网络、native/JNIC 均仍有恢复或验收缺口。
-- 真实兼容服务器登录、交互、断开和重连未测试。无地址/授权账号时只暂停服务器验收，不代表项目完成。
+- R1979 路线包装器：完整原版 descriptor 对照与 Temurin 25 全树构建；[manifest](../evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
+- R1980 `b(Vec3):boolean`：补回 gate-null 时 player/level 读取前的 false 早退；完整 descriptor 静态对照，JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0，18 条既有警告，tests `NO-SOURCE`；[manifest](../evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
+- 上述均未做有效 Minecraft 世界/正常玩家路径或兼容服务器验收，不宣称运行时等价。
 
-不发布原始受保护 JAR/class、完整 javap dump、带本机路径的原始日志或构建缓存。源码与证据指纹对应内容提交；同步只允许 fast-forward，不 force-push。
+## 已知开放项
+
+- Pathfinder：真实玩家入口、有效世界寻路/碰撞、缓存生命周期及兼容服务器行为未验收。
+- ClickGUI：鼠标分类/Draw 命中、模块开关、设置列表和保存/重载闭环仍开放。
+- Powder Macro、Glacite Commission Macro、Route editor、渲染、配置、网络、native/JNIC 仍有恢复或验证缺口。
+- 真实兼容服务器登录、交互、断开及重连未验证；需要地址/授权账号时单独挂起该验收，不停止其他恢复。
