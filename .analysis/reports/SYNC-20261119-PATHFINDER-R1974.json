@@ -1,0 +1,104 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1974",
+  "generated_utc": "2026-11-19T19:00:40Z",
+  "scope": "Publish R1974 Pathfinder a(Vec3,Vec3,List,Vec3) source restoration, review/build evidence, bilingual README, and concise handoff to private openpolinex and public PolinexClient-Reborn.",
+  "baseline_refs": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "a98b3c0cd9fbc597d8806f9a501b213c22fee025"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "bb42ee94946c7d20d46dc4bec0bbd3b85e3ce5c9"
+    }
+  },
+  "publication": {
+    "status": "CONTENT_COMMITS_PUSHED_REMOTE_REFS_VERIFIED",
+    "method": "Separate content commits; fast-forward pushes only; no force-push.",
+    "private_openpolinex": {
+      "content_commit": "94d2b3483ac4d0daeb84c87b9ce03f06b665de1d",
+      "remote_ref_verified_at": "2026-11-19T19:00:04.1495476Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "public_polinex_reborn": {
+      "content_commit": "90729b091f0ca70d55e612debaf47b424c1053bb",
+      "remote_ref_verified_at": "2026-11-19T19:00:04.1495476Z",
+      "remote_ref_equals_content_commit": true
+    },
+    "metadata_follow_up": "The final concise RESUME and this sync record are added in subsequent fast-forward metadata commits; refs are verified separately. A metadata commit cannot embed its own hash."
+  },
+  "published_file_git_blob_oids_and_sha256_lf_at_content_commits": {
+    "README.md": {
+      "git_blob_oid": "736f429cc5cc39cc834cf8bd4feda32e56e8918d",
+      "sha256_lf": "e4924f24cd53773445b16f8ea4170b389bb5758855e6e6b50209ec46972ab381"
+    },
+    "README_EN.md": {
+      "git_blob_oid": "f7a91037afaec12eada50f4aa058f6b73e80c7a1",
+      "sha256_lf": "e6d7f1c440e95f001912972220377d75be906af3bd4b195b24f5a23bb0f92281"
+    },
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "18266e4f09abdbdfdeb05132a352249f1f80fb7d",
+      "sha256_lf": "29b3a6f256cdbe92bf8e3eefd61232bdfb9265b961cde7e994147c49c003b4fd"
+    },
+    "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java": {
+      "git_blob_oid": "a680810dfafd72e52504dec7f259f9d814921736",
+      "sha256_lf": "c699ece025cea95ce4827b4e0834143466f76d1a3cbcd18c410046468ba0846b"
+    },
+    ".analysis/evidence/mining/r1974-pathfinder-conditional-pair/manifest.json": {
+      "git_blob_oid": "f1187c5a159cd14602acb2e9f7d9696d7f911229",
+      "sha256_lf": "e002df4d51210d89cad676c3acf73f9c9d44cec835a9cffcd35d358b3b334233"
+    },
+    ".analysis/evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt": {
+      "git_blob_oid": "ac884415d585e89c42cb82d9784a3ab8a2269a42",
+      "sha256_lf": "4f049f42a48109932bd1367bfa5006281bb035cf088bf061f9b614b7736cf7ae"
+    },
+    ".analysis/evidence/mining/r1974-pathfinder-conditional-pair/build-jdk25-final.log": {
+      "git_blob_oid": "6cc332c856146d2f7c5d0cc7c75588aceb7db888",
+      "sha256_lf": "a4603fbc29dfd121c13c9b9985fc4b5dd2907e9ddfa1c32ff86093ef458b4ef9"
+    },
+    ".analysis/evidence/mining/r1974-pathfinder-conditional-pair/attempts.json": {
+      "git_blob_oid": "eb71cf6e299fa869f5bc7d7851d50cfccc389dec",
+      "sha256_lf": "c3424e69477eff4f0da0fac8c32ea2f2d7eec194869f43724b311337bc1b64bf"
+    }
+  },
+  "metadata_follow_up_files": {
+    ".analysis/reports/RESUME.md": {
+      "git_blob_oid": "c014cb9d252e4a3cb590ce4fbea4220c8bd84077",
+      "sha256_lf": "133d8a15f32bdc5e353270609100e83e9aff798b9b09b4007cfe945ed9c2c90b"
+    }
+  },
+  "source_change": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "method": "a",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)Lkotlin/Pair;",
+    "baseline_git_blob_oid": "445c75fa755b91f86fe6bbb014a87c7a716a75c2",
+    "published_git_blob_oid": "a680810dfafd72e52504dec7f259f9d814921736",
+    "source_content_sha256_lf": "c699ece025cea95ce4827b4e0834143466f76d1a3cbcd18c410046468ba0846b",
+    "source_working_tree_sha256_at_final_build": "0a526f3cb5dbf8c2fd816a51dd885342cb3b8a4bda407c7d7006a08a78d5f77f",
+    "changes": [
+      "restore gate-sensitive comparison direction and NaN behavior",
+      "evaluate distance and threshold before gate selection",
+      "preserve null-gate bypass of the secondary geometry predicate"
+    ]
+  },
+  "validation_boundary": {
+    "complete_descriptor_static_review": "PASS: offsets 0-170; all 8 original handlers reviewed; 13 ordered field/method target events matched. Three private call opcode encodings differ but target/receiver match and are statically bound.",
+    "final_full_tree_build": "PASS: Temurin JDK 25.0.4.1+1-LTS; exit code 0; 18 existing Unsafe/deprecation/unchecked warnings; tests NO-SOURCE.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing local paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "R1974 code/evidence commits include both README language versions. The metadata follow-up adds only the final RESUME and this synchronization record; no code changes occur in that follow-up."
+}

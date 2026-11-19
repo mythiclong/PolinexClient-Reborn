@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 18:56 UTC。R1974 Pathfinder 静态复核和 Temurin JDK 25 全树构建已通过；源码、证据、README 与交接正在同步到私有 `openpolinex` 和公开 `PolinexClient-Reborn`。
+> 更新：2026-11-19 19:00 UTC。R1974 源码、证据和双语 README 已分别快进推送到私有 `openpolinex` 与公开 `PolinexClient-Reborn`，内容 refs 已核验；本交接与同步记录作为元数据提交补入。
 
 ## 当前唯一切片：R1975 Pathfinder `f(Vec3,Vec3,Vec3):boolean`
 
@@ -8,9 +8,9 @@
 
 ## 最近完成：R1974 Pathfinder `a(Vec3,Vec3,List,Vec3):Pair`
 
-完整原版 descriptor offset 0–170、8 个异常表项已复核。修复了 gate 非空时 `distance <= f()+0.75`、gate 为空时 raw comparator 非零（包括 NaN）及 gate-null 绕过第二几何谓词；距离和阈值按原版在 gate 分支前求值。最终编译的字段/方法目标事件流 13 项无未匹配；3 处私有调用 opcode 因 Kotlin/Javac lowering 不同而变化，target/receiver 相同。Temurin JDK 25 全树构建 exit 0。没有直接探针、Minecraft 客户端、有效玩家/世界、正常用户路径或服务器验收。
+完整原版 descriptor offset 0–170、8 个异常表项已复核。修复 gate 非空时 `distance <= f()+0.75`、gate 为空时原始 comparator 非零（包括 NaN）及 gate-null 绕过第二几何谓词；距离和阈值按原版在 gate 分支前求值。最终编译的字段/方法目标事件流 13 项无未匹配；3 处私有调用 opcode 因 Kotlin/Javac lowering 不同而变化，target/receiver 相同。Temurin JDK 25 全树构建 exit 0。没有直接探针、Minecraft 客户端、有效玩家/世界、正常用户路径或服务器验收。
 
-证据：[R1974 manifest](../evidence/mining/r1974-pathfinder-conditional-pair/manifest.json)、[静态复核](../evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt)、[构建摘要](../evidence/mining/r1974-pathfinder-conditional-pair/build-jdk25-final.log)、[构建尝试](../evidence/mining/r1974-pathfinder-conditional-pair/attempts.json)。上一阶段 [R1973 双仓同步记录](SYNC-20261119-PATHFINDER-R1973.json)。
+证据：[R1974 manifest](../evidence/mining/r1974-pathfinder-conditional-pair/manifest.json)、[静态复核](../evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt)、[构建摘要](../evidence/mining/r1974-pathfinder-conditional-pair/build-jdk25-final.log)、[构建尝试](../evidence/mining/r1974-pathfinder-conditional-pair/attempts.json)、[双仓同步记录](SYNC-20261119-PATHFINDER-R1974.json)。
 
 ## 仍开放的用户功能 / 验收
 
@@ -21,9 +21,9 @@
 
 ## 约束与下一步
 
-- 当前 R1974 同步基线：私有目标分支 `codex/handoff-progress-2026-11-15` tip `a98b3c0`；公开 `PolinexClient-Reborn/main` tip `bb42ee9`。分别提交并只 fast-forward 推送，随后核验 refs/blob。
+- 私有目标分支 `codex/handoff-progress-2026-11-15` 的 R1974 内容提交：`94d2b3483ac4d0daeb84c87b9ce03f06b665de1d`；公开 `PolinexClient-Reborn/main` 内容提交：`90729b091f0ca70d55e612debaf47b424c1053bb`。两端只 fast-forward，无 force-push。
 - 不重做全量渲染普查、坐标倍率盲扫或无明确判定点的点击实验；已撤回假设不重新排队。
 - 不发布原始 protected JAR/class、完整 javap dump、编译产物、Gradle 缓存或含本机路径的原始日志。
-- 先完成并核验 R1974 双仓同步，再继续唯一切片 R1975。
+- 完成本次元数据同步后，继续唯一切片 R1975。
 
-当前统计：1,602 个 Java 文件、1,158,468 行（`python -B .analysis/stats.py`）；计数只描述源码库存。
+当前统计：1,602 个 Java 文件、1,158,468 行（`python -B .analysis/stats.py`）；计数仅描述源码库存。
