@@ -1,0 +1,8 @@
+owner=me.octo.client.utils.player.pathfinder.NativePathFinder
+method=findPath(JJFIZ)[J
+grid=all 512 blocked-cell masks on a bounded 3x3 XZ plane; vertical and perimeter escape cells blocked
+dimensions=cardinal/diagonal x 12 node limits x 8 float arguments
+fixture_count=98304
+assertions=exact original/current route arrays; route endpoints, adjacency, and blocked-cell validity; BYTE_STATES unchanged
+same_node_fast_path=PASS
+result=PASS

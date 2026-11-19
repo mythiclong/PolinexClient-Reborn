@@ -129,15 +129,12 @@ public final class IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIII
          .i();
       long[] var13 = NativePathFinder.findPath(var5, var7, (float)var9, (int)var11, true);
       Intrinsics.checkNotNull(var13);
-      var10000 = var13.length;
-      if (var4 != 0) {
-         var10000 = var10000 == 0 ? 1 : 0;
+      if (var4 == 0 && var13.length != 0) {
+         return null;
       }
 
-      return var10000 != 0
-         ? null
-         : llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI
-            .a(var13, var9, var11, var3);
+      return llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI
+         .a(var13, var9, var11, var3);
    }
 
    @Nullable

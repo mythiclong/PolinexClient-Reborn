@@ -1,0 +1,91 @@
+{
+  "experiment_id": "R1963",
+  "slice_id": "PATHFINDER-ROUTE-API-BRIDGE-AND-ENTITY-START-CANDIDATE",
+  "evidence_baseline_commit": "02cde705b791fd4d0d78d4e1734831d165d47f50",
+  "generated_utc": "2026-11-19T02:47:29Z",
+  "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+  "source_file": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+  "source_before_sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8",
+  "source_after_sha256": "8b35c8dcb9f3f7f70765ae4436e167cd90be9c467fdf61957847a2a6638393de",
+  "methods": [
+    {
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;",
+      "result": "A gate-dependent empty-route branch differed. Original bytecode sends every nonzero-gate route, including an empty route, to the converter; only gate zero plus a nonempty route returns null. Source now matches that condition."
+    },
+    {
+      "name": "b",
+      "descriptor": "(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/core/BlockPos;",
+      "result": "Independent static review found no confirmed difference in null/gate order, AABB corner candidates, overlap-area ranking, candidate loop, walkability/ladder checks, or return behavior."
+    },
+    {
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/world/entity/Entity;)Ljava/util/List;",
+      "result": "Gate, local-player origin, entity-derived destination, and delegation order match."
+    },
+    {
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;)Ljava/util/List;",
+      "result": "Null contract, gate, player-derived origin, and delegation match."
+    },
+    {
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;Z)Ljava/util/List;",
+      "result": "Null contract, gate, player-derived origin, boolean forwarding, and delegation match."
+    },
+    {
+      "name": "a",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Ljava/util/List;",
+      "result": "Both non-null checks and forwarding of the default boolean value match."
+    },
+    {
+      "name": "b",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;)Ljava/util/List;",
+      "result": "Null contract, gate, player-derived origin, and delegation match."
+    },
+    {
+      "name": "b",
+      "descriptor": "(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Ljava/util/List;",
+      "result": "Both non-null checks and delegation to the shared route implementation match."
+    }
+  ],
+  "source_change": {
+    "summary": "Corrected the route API empty-path gate condition using the original method's complete descriptor and branch offsets.",
+    "production_java_files_changed": 1,
+    "normal_user_path_verified": false
+  },
+  "compiled_verification": {
+    "command": "javap -classpath build/classes/java/main -p -s -c -v <route-api-owner>",
+    "exit_code": 0,
+    "compiled_owner_class_sha256": "92a22491dfe0c3fc4d27b3480feac80411386b1a073c87b90b83dce55f4fa226",
+    "post_fix_full_dump_sha256_local_only": "fa60cca336280c4a21dd0e22468b2221b0f7159a179f994cc3661a58dacc9d6c",
+    "finding": "Post-fix descriptor (BlockPos, BlockPos, boolean) has a single early-null branch iff gate == 0 and route length != 0; otherwise it invokes the converter."
+  },
+  "build_validation": {
+    "command": ".\\gradlew.bat build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Temurin 25.0.4.1",
+    "started_utc": "2026-11-19T02:46:26.5867416Z",
+    "ended_utc": "2026-11-19T02:47:28.9228879Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; compileJava and build tasks executed; Gradle reported 18 warnings and no test sources.",
+    "log_sha256": "741b5721608129c6b9247198f64912ec5cee4748e689399ec57520cc52664655",
+    "published_summary": ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/build-summary.txt"
+  },
+  "environment_failure": {
+    "command": ".\\gradlew.bat build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Default Java 17 (exact patch not retained)",
+    "started_utc": "2026-11-19T02:45:54.5104066Z",
+    "ended_utc": "2026-11-19T02:46:04.7733348Z",
+    "exit_code": 1,
+    "reason": "Fabric Loom requires Java 25; this first rerun used the default Java 17 runtime. The subsequent explicit Temurin 25 build passed.",
+    "log_sha256": "e02122ce4ddb74e7a449ed22dae0f85c8fde0b573faf5901ade3d9790f38cc78"
+  },
+  "static_review_boundary": "Full original/current javap dumps were used locally. The b(Entity) review checked the actual comparator invocation and comparator implementation; it also noted a gate-zero malformed-list branch shared by both versions, not a confirmed mismatch.",
+  "runtime_acceptance": "No Minecraft client, valid world, normal player route, or compatible server was exercised. Pathfinder runtime and server acceptance remain open.",
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled class files"
+  ]
+}

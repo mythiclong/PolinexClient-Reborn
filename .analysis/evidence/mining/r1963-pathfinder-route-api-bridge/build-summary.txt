@@ -1,0 +1,13 @@
+R1963 full-tree build record
+Command: .\gradlew.bat build --no-daemon --console=plain --rerun-tasks
+Working directory: polinex-src
+Runtime: Temurin 25.0.4.1
+Started UTC: 2026-11-19T02:46:26.5867416Z
+Ended UTC: 2026-11-19T02:47:28.9228879Z
+Exit code: 0
+Result: BUILD SUCCESSFUL in 1m 1s; 4 actionable tasks executed.
+compileJava ran. Gradle reported 18 warnings; no test sources were present.
+The complete local console log is not published; its SHA-256 is in manifest.json.
+
+Environment retry record:
+The preceding invocation with default Java 17 exited 1 during Gradle configuration because Fabric Loom requires Java 25. It did not reach source compilation. The explicit Temurin 25 invocation above passed.

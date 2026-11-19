@@ -1,0 +1,51 @@
+{
+  "experiment_id": "R1962",
+  "slice_id": "PATHFINDER-NATIVE-WALKABILITY-ASTAR-DIFFERENTIAL",
+  "evidence_baseline_commit": "02cde705b791fd4d0d78d4e1734831d165d47f50",
+  "generated_utc": "2026-11-19T02:32:44Z",
+  "methods": [
+    {
+      "owner": "me.octo.client.utils.player.pathfinder.NativePathFinder",
+      "name": "isWalkable",
+      "descriptor": "(J)Z",
+      "review": "Complete original/current bytecode comparison found no confirmed branch or call-target mismatch."
+    },
+    {
+      "owner": "me.octo.client.utils.player.pathfinder.NativePathFinder",
+      "name": "findPath",
+      "descriptor": "(JJFIZ)[J",
+      "review": "Complete original/current bytecode comparison found no confirmed mismatch in search branches, node state, calls, or route return behavior."
+    }
+  ],
+  "source_tree": {
+    "java_file_count": 1602,
+    "native_path_finder_source": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "native_path_finder_source_sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f",
+    "aggregate_sha256_from_prior_published_baseline": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
+    "note": "The production Java tree was unchanged in this experiment; the listed aggregate is inherited from the prior published manifest and was not independently recomputed in this experiment."
+  },
+  "probe": {
+    "type": "isolated-classloader differential; no Minecraft client/world/server",
+    "source": ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/PathfinderAStarGridDifferential.java",
+    "source_sha256": "69630e33d75a6cfa4d6db1716cf03e3a62ec69b224278ef738b0db2afbdcda87",
+    "retained_output": ".analysis/evidence/mining/r1962-pathfinder-walkability-astar-diff/probe-run-published.log",
+    "retained_output_sha256": "8634bcc9d716a869643f57f01f90692a12ed0bab06b3b9b5b3d21958808a6670",
+    "original_local_output_sha256": "539fb8ce571086dec140014ef523930d0b70e9e3113096f4f9af911f321dbdef",
+    "exact_invocation_and_exit_code_retained": false,
+    "result_reported_by_retained_output": "PASS",
+    "fixtures": 98304,
+    "coverage": "All 512 blocked-cell masks on a bounded 3x3 XZ plane, cardinal/diagonal movement, 12 node limits, and 8 float arguments; route arrays and selected route invariants plus BYTE_STATES equality were asserted."
+  },
+  "dump_hashes_local_only": {
+    "original_full_javap_sha256": "480dfa361d3e18687e043664780c95ee623b85fa172040035360ee81e91cd511",
+    "compiled_full_javap_sha256": "145488159cf2a9b2a6c039b89884bf8a6306477450c7996b63d38b1f02f6646d"
+  },
+  "production_source_changed": false,
+  "build": "No build was run in R1962; it reused the previously recorded R1955 build output. R1963 subsequently performed a full Temurin 25 build after its production-source fix.",
+  "runtime_acceptance": "No client, valid world, or server run. This differential does not establish normal-player-path equivalence.",
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled probe class files"
+  ]
+}
