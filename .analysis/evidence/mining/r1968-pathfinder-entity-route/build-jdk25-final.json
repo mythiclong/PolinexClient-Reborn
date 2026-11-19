@@ -1,0 +1,14 @@
+{
+  "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src/",
+  "runtime": "Temurin JDK 25.0.4.1",
+  "started_utc": "2026-11-19T16:36:42Z",
+  "ended_utc": "2026-11-19T16:37:31Z",
+  "exit_code": 0,
+  "result": "BUILD SUCCESSFUL",
+  "rerun_tasks": true,
+  "tree_build": true,
+  "tasks": ["compileJava", "processResources", "classes", "processIncludeJars", "jar", "assemble", "build"],
+  "tests": "NO-SOURCE",
+  "warnings": "18 existing Unsafe/deprecation/unchecked compiler warnings; no compilation errors."
+}

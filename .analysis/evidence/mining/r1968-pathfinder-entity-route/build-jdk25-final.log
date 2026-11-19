@@ -1,0 +1,17 @@
+Temurin JDK 25.0.4.1
+> Configure project :
+Fabric Loom: 1.18.0-alpha.19
+> Task :compileJava
+18 compiler warnings (existing Unsafe/deprecation/unchecked warnings); no errors
+> Task :processResources
+> Task :classes
+> Task :processIncludeJars
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :test NO-SOURCE
+> Task :jar
+> Task :assemble
+> Task :build
+BUILD SUCCESSFUL in 49s
+4 actionable tasks: 4 executed
+Exit code: 0

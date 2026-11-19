@@ -1,0 +1,38 @@
+R1968 — Pathfinder a(Entity, List, Vec3):void
+===============================================
+
+Original reference
+------------------
+Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Descriptor: (Lnet/minecraft/world/entity/Entity;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)V
+Original owner javap SHA-256 (local only): 76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197
+Original class/JAR SHA-256 (local only): d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26
+
+The complete original method body and exception table were reviewed. Its bytecode spans offsets 0–297. The inserted control-flow exception handlers call same-owner a(Throwable):Throwable; the complete body for that descriptor is `aload_0; areturn`, so it is an identity pass-through followed by rethrow. The edited source keeps the reachable branch, field, helper, and side-effect order without retaining opaque exception-handler scaffolding.
+
+Control-flow correspondence
+---------------------------
+1. Read the static int[] guard once. A null guard returns immediately.
+2. Read Minecraft.player once. A null player returns immediately.
+3. If the route-state boolean field is true, reset the jam counter to zero and return.
+4. Compute the collision condition as `player.horizontalCollision || a(4, configuredDouble)`. The original short-circuit means a(4,D) runs only when horizontalCollision is false.
+5. If collision is predicted, increment the previous jam counter by one; otherwise reset it to zero.
+6. Continue only when the new counter is at least the configured threshold and the stored-long timer helper `a(Number)` returns true. The source preserves the boxed Long argument and the helper receiver.
+7. Invoke the exact private overload `a(Entity,List,Vec3,boolean,boolean):boolean` with `(false,true)`. False returns without resetting the timer or counter.
+8. On true, call the same timer receiver's `f():void`, reset the jam counter, then call the same GhostPath logger with the original message only when its boolean flag is true.
+
+Read/write and invoke audit
+---------------------------
+The reviewed original fields are: static guard provider; Minecraft.player; route-state flag; jam counter; LocalPlayer.horizontalCollision; the configured double; threshold; timer receiver and timestamp; route-request overload; timer reset; GhostPath flag. The direct helper descriptors are `a(int,double):boolean`, `a(Entity,List,Vec3,boolean,boolean):boolean`, timer `a(Number):boolean`, timer `f():void`, and GhostPath `g(String):void`. The rebuilt class's `javap -c -p -s` output uses the same descriptors, operands and observable operation order. No field was guessed from a constant-pool occurrence alone.
+
+Call graph boundary for R1969
+-----------------------------
+The original event consumer `a(RouteEvent):void` invokes this method at bytecode offset 1415, then calls `d(List):void` at offset 1420. The same event consumer calls `d(List):void` earlier at offset 1180 on another branch. The private `a(List,boolean):void` helper calls `d(List):void` at offset 98 when its boolean is true. These are all three original invoke sites found in the complete owner dump. This slice deliberately did not restore `d(List)`; its implementation and all branch behavior are the next slice.
+
+Validation boundary
+-------------------
+Static descriptor/CFG review: PASS. Temurin JDK 25.0.4.1 full-tree `build --rerun-tasks`: PASS, exit code 0. The original and newly compiled method bodies were read with `javap -c -p -s`; the newly compiled method is no longer a single return. No direct runtime differential was run: the method requires an actual client player and uses collision/world-dependent route helpers, so null, plain-object, or fabricated-world probes were not used. Minecraft client, normal player route, valid-world collision, compatible server, and desktop input were not tested. Screenshot: not applicable/not captured.
+
+Hash semantics
+--------------
+The manifest distinguishes normalized-LF source content SHA-256, exact Windows working-file SHA-256 consumed by Gradle, Git blob OID, and compiled class SHA-256. They identify different byte sequences and are not interchangeable. Original JAR and full original/current javap dumps remain local and are not published.

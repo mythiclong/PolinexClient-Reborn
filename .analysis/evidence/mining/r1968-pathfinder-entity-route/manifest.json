@@ -1,0 +1,88 @@
+{
+  "experiment_id": "R1968-pathfinder-entity-route",
+  "generated_utc": "2026-11-19T16:40:39Z",
+  "scope": "Restore the normal route-handler's entity-route jam/collision branch from its complete original method CFG; map every d(List) call site for the next slice.",
+  "source_baseline": {
+    "commit": "eccc98835e40bee5bfe3da44163eb9059216b548",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "7ab72411167e9048292af7d61a47ebf16bef495e",
+    "baseline_content_sha256_lf": "b4e6e531b6b93533b1c0e868cb28e78de82e41e053b594560edfcf78fd94747e"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(Lnet/minecraft/world/entity/Entity;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;)V",
+    "before": "Current compiled method was a single return; original complete CFG had collision/jam counting, timer gate, route-request overload, timer/counter reset, and optional GhostPath log.",
+    "after": "Restores guard/player early returns, state-flag counter reset, short-circuit collision prediction, threshold/timer gates, exact private route-request overload with false/true, success-only timer reset/counter reset, and conditional original log.",
+    "source_git_blob_oid": "3f923653f9a7909b3dd6239faab8e706dc70f36b",
+    "source_content_sha256_lf": "e560e125421867af7c5ffd89ced9d86b47f4bb11a3a56896aaefb37c4f38eab0",
+    "source_working_tree_sha256_at_final_build": "a183decaaf58d6267a8b9be24ddfb9b50bbcd2a5bedbc03cb305d266ad45d8f3",
+    "compiled_owner_class_sha256": "fbcccef440ca65bd00c51ab6ecf35426e9103851b6456f664b0b4ded17c61843"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "current_owner_javap_sha256_local_only": "7f79aefd8fce2a97fa4fd55c65538426f40802109ccc033cdcdf35836c0aceb5",
+    "method_code_offsets": "0 through 297 inclusive in the original; full exception table reviewed.",
+    "identity_exception_helper": "a(Throwable):Throwable bytecode is aload_0; areturn."
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Read complete original target descriptor body and its full exception table, not only the decompiler artifact.",
+      "Mapped each original branch, field read/write, short-circuit operand, invocation descriptor, receiver, and side effect to edited source.",
+      "Confirmed original same-owner exception helper a(Throwable):Throwable is identity; no exception is swallowed or replaced.",
+      "Confirmed the exact private a(Entity,List,Vec3,boolean,boolean):boolean target and (false,true) arguments.",
+      "Mapped all three original d(List):void invoke sites: event consumer offsets 1180/1420 and a(List,boolean):void offset 98.",
+      "Compared final compiled owner and target method with javap -c -p -s; compiled target is implemented rather than return-only."
+    ],
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "compiled_owner_javap_sha256_local_only": "7f79aefd8fce2a97fa4fd55c65538426f40802109ccc033cdcdf35836c0aceb5"
+  },
+  "call_graph": {
+    "route_event_owner_descriptor": "(Lme/octo/client/events/impl/llIlIIIIlIlllIIllllIIllIllIIIlIIIIIIIlIIIllIIllIllllllllllIllIIIllIlIlIlIlIIlIIIllIII;)V",
+    "a_entity_list_vec3_call_offset": 1415,
+    "d_list_call_offsets_in_route_event": [1180, 1420],
+    "d_list_call_offset_in_a_list_boolean": 98,
+    "d_list_callsite_inventory": "Complete original owner dump search; three invoke sites total."
+  },
+  "build": {
+    "record": "build-jdk25-final.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Temurin JDK 25.0.4.1",
+    "timing_precision": "Gradle reported 49s; end cross-checked against final jar timestamp, start rounded to nearest second.",
+    "started_utc": "2026-11-19T16:36:42Z",
+    "ended_utc": "2026-11-19T16:37:31Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "final_log": "build-jdk25-final.log"
+  },
+  "direct_probe": {
+    "status": "NOT RUN",
+    "reason": "Requires an actual Minecraft client player and collision/world-dependent route helper; no valid in-game fixture was available for this slice. No null, plain-object, or fabricated-world probe was used.",
+    "minecraft_client": false,
+    "valid_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158598,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219
+  },
+  "publication_exclusions": [
+    "Original protected JAR and class files",
+    "Full original/current javap dumps",
+    "Compiled class files, local Gradle caches, and build outputs",
+    "Raw machine console captures containing local paths"
+  ],
+  "source_hash_semantics": "The working-tree SHA-256 fingerprints exact CRLF/Windows source bytes consumed by Gradle. source_content_sha256_lf fingerprints normalized LF source bytes. source_git_blob_oid identifies the Git-filtered blob. These values are not interchangeable."
+}

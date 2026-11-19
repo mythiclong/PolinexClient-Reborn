@@ -707,150 +707,48 @@ return true;
       List<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> param2,
       Vec3 param3
    ) {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.RuntimeException: parsing failure!
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
-      //
-      // Bytecode:
-      // 000: invokestatic me/octo/client/IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l ()[I
-      // 003: astore 4
-      // 005: aload 4
-      // 007: ifnull 024
-      // 00a: aload 0
-      // 00b: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI Lnet/minecraft/client/Minecraft;
-      // 00e: getfield net/minecraft/client/Minecraft.player Lnet/minecraft/client/player/LocalPlayer;
-      // 011: dup
-      // 012: ifnonnull 025
-      // 015: goto 01c
-      // 018: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 01b: athrow
-      // 01c: pop
-      // 01d: goto 024
-      // 020: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 023: athrow
-      // 024: return
-      // 025: astore 5
-      // 027: aload 0
-      // 028: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl Z
-      // 02b: aload 4
-      // 02d: ifnull 049
-      // 030: ifeq 044
-      // 033: goto 03a
-      // 036: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 039: athrow
-      // 03a: aload 0
-      // 03b: bipush 0
-      // 03c: putfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl I
-      // 03f: return
-      // 040: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 043: athrow
-      // 044: aload 5
-      // 046: getfield net/minecraft/client/player/LocalPlayer.horizontalCollision Z
-      // 049: aload 4
-      // 04b: ifnull 078
-      // 04e: ifne 077
-      // 051: goto 058
-      // 054: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 057: athrow
-      // 058: aload 0
-      // 059: bipush 4
-      // 05a: aload 0
-      // 05b: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIIIIIlIlIIIIIIlIIlIIIlIlIIIllIlIIlIlIlllIllIllIIIlIlIllIlIlIlIIIIIIIIIllIIIlIIIIllII D
-      // 05e: invokespecial me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (ID)Z
-      // 061: aload 4
-      // 063: ifnull 078
-      // 066: goto 06d
-      // 069: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 06c: athrow
-      // 06d: ifeq 07b
-      // 070: goto 077
-      // 073: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 076: athrow
-      // 077: bipush 1
-      // 078: goto 07c
-      // 07b: bipush 0
-      // 07c: istore 6
-      // 07e: aload 0
-      // 07f: iload 6
-      // 081: aload 4
-      // 083: ifnull 09d
-      // 086: ifeq 0a0
-      // 089: goto 090
-      // 08c: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 08f: athrow
-      // 090: aload 0
-      // 091: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl I
-      // 094: bipush 1
-      // 095: iadd
-      // 096: goto 09d
-      // 099: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 09c: athrow
-      // 09d: goto 0a1
-      // 0a0: bipush 0
-      // 0a1: putfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl I
-      // 0a4: aload 0
-      // 0a5: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl I
-      // 0a8: aload 4
-      // 0aa: ifnull 0d3
-      // 0ad: aload 0
-      // 0ae: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIIIIlIIIIlIIllIlIlIIlIlIlIIlIIlIllIIllllIlIllIllIIllIIIIllllllIlIlIlIIllIIlIIIlIlllI I
-      // 0b1: if_icmplt 0e2
-      // 0b4: goto 0bb
-      // 0b7: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0ba: athrow
-      // 0bb: aload 0
-      // 0bc: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI Lme/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI;
-      // 0bf: aload 0
-      // 0c0: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IIIlIIllIIlIlIlIlllIIIIlIlIIIIlIllllllIIlllIllIlllIlIllIIllllIIIllllIIlIlIllIIIIllIll J
-      // 0c3: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 0c6: checkcast java/lang/Number
-      // 0c9: invokevirtual me/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI.a (Ljava/lang/Number;)Z
-      // 0cc: goto 0d3
-      // 0cf: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0d2: athrow
-      // 0d3: aload 4
-      // 0d5: ifnull 0ec
-      // 0d8: ifne 0e3
-      // 0db: goto 0e2
-      // 0de: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0e1: athrow
-      // 0e2: return
-      // 0e3: aload 0
-      // 0e4: aload 1
-      // 0e5: aload 2
-      // 0e6: aload 3
-      // 0e7: bipush 0
-      // 0e8: bipush 1
-      // 0e9: invokespecial me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Lnet/minecraft/world/entity/Entity;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;ZZ)Z
-      // 0ec: aload 4
-      // 0ee: ifnull 112
-      // 0f1: ifeq 129
-      // 0f4: goto 0fb
-      // 0f7: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 0fa: athrow
-      // 0fb: aload 0
-      // 0fc: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI Lme/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI;
-      // 0ff: invokevirtual me/octo/client/utils/lIIllIIIlllIIIlIIIIllllllIIlllIIllllIIIllllllllIIlIIIlllIllllIlllIllIIIIIIllIIIlllIlI.f ()V
-      // 102: aload 0
-      // 103: bipush 0
-      // 104: putfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl I
-      // 107: aload 0
-      // 108: getfield me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI Z
-      // 10b: goto 112
-      // 10e: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 111: athrow
-      // 112: ifeq 129
-      // 115: sipush -480
-      // 118: sipush 13885
-      // 11b: pop2
-      // 11c: ldc_w "§e[GhostPath] Jam predicted, requesting backup repath"
-      // 11f: invokestatic me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.g (Ljava/lang/String;)V
-      // 122: goto 129
-      // 125: invokestatic me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 128: athrow
-      // 129: return
+      int[] var4 = me.octo.client.IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      if (var4 == null) {
+         return;
+      }
+
+      LocalPlayer var5 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
+      if (var5 == null) {
+         return;
+      }
+
+      if (this.lIIlIlIlIllIlIIIlllIllllIllIIlllllIlIlIIlIIlIIlIIlllIlllIIllIIlllIIIIIlIIIIIlIlllllIl) {
+         this.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl = 0;
+         return;
+      }
+
+      boolean var6 = var5.horizontalCollision || this.a(
+         4,
+         this.lIIIIIlIlIIIIIIlIIlIIIlIlIIIllIlIIlIlIlllIllIllIIIlIlIllIlIlIlIIIIIIIIIllIIIlIIIIllII
+      );
+      this.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl =
+         var6 ? this.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl + 1 : 0;
+
+      if (
+         this.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl
+            < this.lIIIIlIIIIlIIllIlIlIIlIlIlIIlIIlIllIIllllIlIllIllIIllIIIIllllllIlIlIlIIllIIlIIIlIlllI
+         || !this.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI
+            .a((Number)Long.valueOf(this.IIIlIIllIIlIlIlIlllIIIIlIlIIIIlIllllllIIlllIllIlllIlIllIIllllIIIllllIIlIlIllIIIIllIll))
+      ) {
+         return;
+      }
+
+      if (!this.a(param1, param2, param3, false, true)) {
+         return;
+      }
+
+      this.lIlIllIlIlIIlIllIlllllIlIllIlIIllIlIIIIlllIIIIlIIIIIlllIIIlIIIIlIIIIllllllIIIIllIIllI.f();
+      this.IlllllIllIlIIlIllllIlIlIIlIIllIlIIlIIllIlllllllllIlIIlIIlIlIlIIIllIlIllllIIIlIIlllIIl = 0;
+      if (this.lllIlIIIIIllIIIIlllIlllIIIlllIllllIIIlIIlIlIIlllIIIIIlIllIlIlIlllIlIIlllIIlIlIIlllIlI) {
+         me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.g(
+            "§e[GhostPath] Jam predicted, requesting backup repath"
+         );
+      }
    }
 
    private final boolean c(Vec3 param1, Vec3 param2, Vec3 param3) {

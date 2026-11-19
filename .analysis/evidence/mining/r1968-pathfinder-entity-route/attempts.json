@@ -1,0 +1,27 @@
+[
+  {
+    "attempt": 1,
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "repository root (wrapper is under polinex-src)",
+    "exit_code": 1,
+    "classification": "VOID_TOOL_SETUP",
+    "observation": "PowerShell could not resolve .\\gradlew.bat from repository root; Gradle was not started and no source conclusion follows."
+  },
+  {
+    "attempt": 2,
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src/",
+    "exit_code": 1,
+    "classification": "VOID_JAVA_HOME_CONFIGURATION",
+    "observation": "Gradle inherited JAVA_HOME pointing to Java 17 although the interactive java command resolved Temurin 25; Fabric Loom rejected the runtime during project configuration before Java compilation. The successful attempt explicitly set JAVA_HOME to Temurin 25.0.4.1."
+  },
+  {
+    "attempt": 3,
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src/",
+    "environment": "JAVA_HOME set to local Temurin JDK 25.0.4.1 installation; PATH prefixed with its bin directory",
+    "exit_code": 0,
+    "classification": "FINAL_PASS",
+    "observation": "Full-tree rerun build succeeded; exact command, runtime, output excerpt, and exit code are recorded in build-jdk25-final.json."
+  }
+]

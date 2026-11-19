@@ -9,7 +9,7 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-当前唯一切片：**R1968：Pathfinder 实体路线处理 `a(Entity, List, Vec3): void`**。已确认当前编译方法为空返回、原版有完整实现，并且正常路线处理分支会调用它；旁边的 `d(List): void` 也是已知缺口，恢复前会先核对其所有调用点及分支顺序。
+当前唯一切片：**R1969：Pathfinder `d(List): void`**。原版三个调用点已映射：路线事件方法的 offset 1180、1420，以及 `a(List, boolean): void` 的 offset 98；当前实现仍为空返回，下一步完整还原其分支和副作用。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -22,7 +22,8 @@
 - **本批次边界**：修复 1 个 Pathfinder 命令 provider 源文件；Temurin 25 全树 `build --rerun-tasks` 成功。第一次构建因继承的 `JAVA_HOME` 指向 Java 17，在 Gradle 配置阶段失败、未编译源码；显式选择 Temurin 25 后成功。未启动 Minecraft、未从正常入口分发命令、未进入有效世界或兼容服务器。
 - **R1966 Pathfinder tick 执行器**：恢复 1 个 `a(PathNode, List): void` 方法。完整原版 CFG 显示筛选节点后，满足条件时调用 `a(List,false)`；若 sentinel 非空则跳过目标朝向输入；除 player-null 早退外始终查询 option 150，再按 sentinel 决定 sneak。最终源码全树 build `--rerun-tasks` 通过。两次中间构建曾通过，但完整分支复核后发现并修正了求值顺序/门控分支，故它们不作为最终验证。未做直接探针、正常玩家路径、有效世界或兼容服务器测试。详见 [R1966 证据](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)。
 - **R1967 Pathfinder 历史输入判定 `q(): boolean`**：按完整原版 `()Z` CFG 恢复最近八条记录的分类与计数；正/负分类各至少两次，且只在已有非零分类后遇到方向变化时累加变化数，三项阈值均满足才返回 true。保留了 gate-null 的索引/早退分支、列表取值空值检查及 `a()`/`d()` getter 调用目标。首次原版差分暴露“首个非零值不算方向变化”的误读，已据原始 CFG 修正；最终隔离 classloader 对全部 **65,536** 组八条布尔记录、gate-null/非空的 0–9 条边界比较均 PASS。Temurin 25 全树 build `--rerun-tasks` 通过。此探针不使用 Minecraft 世界；正常玩家路径、有效世界和服务器仍未验收。详见 [R1967 证据](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)。
-- **R1968 当前执行缺口（未修复）**：`a(Entity, List, Vec3): void` 当前编译为单一 `return`，原版有实现；正常路线事件主分支在 `a(PathNode, List)` 后调用它，随后调用 `d(List)`。`d(List)` 也为空返回，但它还有其他调用分支；下一切片先完整还原 `a(Entity, List, Vec3)`，并依据完整调用图确定 `d(List)` 的恢复边界。
+- **R1968 Pathfinder 实体路线处理**：按原版完整 descriptor/CFG 恢复 `a(Entity, List, Vec3): void` 的碰撞/卡滞计数、配置阈值与计时门控、精确路线请求 overload `(false, true)`、成功后的计时器/计数器副作用及可选 GhostPath 提示。完整 Temurin 25 `build --rerun-tasks` 成功；该方法依赖实际玩家与世界碰撞，未做无效空对象探针，也未进行客户端/正常玩家路径/服务器验收。`d(List)` 的三个 invoke 点已在原版字节码中全部映射，详见 [R1968 静态复核与构建证据](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)。
+- **R1969 当前缺口**：`d(List): void` 当前编译为空返回、原版有完整实现；已确认路线事件 offset 1180/1420 和 `a(List, boolean):void` offset 98 共三个调用点。下一步还原该方法完整分支与状态/输入副作用，再按有效游戏路径验收。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -32,6 +33,7 @@
 - [当前短交接](.analysis/reports/RESUME.md)
 - [R1966 Pathfinder tick 执行器静态复核与全树构建](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
+- [R1968 Pathfinder 实体路线静态复核与全树构建](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
 - [R1966 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1966.json)：私有分支内容提交 `21ec44f`、公开 `PolinexClient-Reborn/main` 内容提交 `624128b`，推送后远端 refs 已核验。
 - [R1965 Pathfinder 命令 executor 回调修复](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
 - [R1965 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)：源码与证据提交已快进同步，私有 `openpolinex` 为 `b502476`，公开 `PolinexClient-Reborn` 为 `2fff92a`，远端 refs 已核验。
@@ -55,7 +57,7 @@
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,700** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,598** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 
