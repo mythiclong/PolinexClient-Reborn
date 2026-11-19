@@ -16,7 +16,7 @@ The current slice is **R1955: Pathfinder route conversion and its step/collision
 - **Pure-Java pathfinding layer:** R1951 compared all 25 `NativePathFinder` methods with the class compiled from current source. An isolated classloader probe matched original and current outputs and cache side effects across 31 fixtures. Seven methods have a different compiled control-flow shape; finite samples do not establish full-domain or in-game equivalence.
 - **Actual call sites:** R1952 scanned 5,475 original-JAR classes and 2,823 compiled classes, with zero parse errors in either set. The same event consumer has matching direct targets for three `BlockPos` API methods. Their execution through normal in-game events has not been verified.
 - **Route entry and cache writes:** R1954 compared the complete original/current bytecode for `a(long[], double, double, boolean): List` and the cache writer `(int, int, ByteBuffer): void`. The entry gate, empty-level path, smoothing call order, cache-directory gate, data header, file options, write loop, and close path showed no confirmed mismatch. An apparent directory mismatch came from misreading the JVM operand stack; the temporary edit was reverted and the Java source fingerprint remains `a23ce38f…`. The Gradle `build` command passed under Temurin 25 with exit code 0; no production source changed.
-- **Current route slice:** R1955 is comparing the complete `a(long[], double, double, ClientLevel): List` method and its direct step/collision helpers, including branches, fields, call targets, and side effects. World/entity behavior still needs a valid Minecraft scenario through a normal user entry point.
+- **R1955 route-threshold fix:** Descriptor-based review of `a(long[], double, double, ClientLevel): List` found two `0.5625` conditions where the original directly compares with `dcmpl`, while the prior source subtracted first and used Kotlin-style `Double.compareTo` semantics, sending NaN down the wrong branch. Both are now direct `heightDelta > 0.5625D` comparisons. Six boundary fixtures (including NaN and adjacent representable values) match the original comparison; the full Gradle build passed with Temurin 25.
 - **Runtime acceptance:** Routes, collisions, and cache reads/writes have not passed verification through a valid Minecraft world and normal player entry point. No compatible-server acceptance has been completed. Static restoration, sample probes, and compilation do not replace these checks.
 - **ClickGUI:** A same-process vanilla Options comparison showed working keyboard and scroll input, with no observable mouse feedback from category icons or the Draw control. Screen event forwarding, hit testing, module toggling, and settings save/reload remain open.
 - **Other features:** Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, and networking still have incomplete restoration or acceptance. Real-server login, interaction, disconnect, and reconnect remain unverified.
@@ -26,6 +26,7 @@ The current slice is **R1955: Pathfinder route conversion and its step/collision
 - [Current short handoff](.analysis/reports/RESUME.md)
 - [Latest Pathfinder sync record (2026-11-19)](.analysis/reports/SYNC-20261119-PATHFINDER-R1954.json)
 - Published snapshots: private `openpolinex` branch `codex/handoff-progress-2026-11-15` (`bca0564`) and public `PolinexClient-Reborn` `main` (`3c36a2a`).
+- [R1955 route-threshold semantic review](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
 - [R1954 route-entry and cache-write review](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1947 candidate-node audit](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* core audit](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
@@ -36,7 +37,7 @@ The current slice is **R1955: Pathfinder route conversion and its step/collision
 
 The current source inventory is 1,602 Java files, 1,158,787 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.
 
-The full R1954 `javap` dumps remain in the local analysis directory. The public snapshot contains method descriptors, the review summary, and dump SHA-256 values; it does not include the original JAR or protected class files.
+The full R1954/R1955 `javap` dumps remain in the local analysis directory. The public snapshot contains method descriptors, the review summary, and dump SHA-256 values; it does not include the original JAR or protected class files.
 
 ## Build
 

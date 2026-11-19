@@ -1,0 +1,104 @@
+{
+  "experiment_id": "R1955",
+  "slice_id": "PATHFINDER-ROUTE-CONVERTER-THRESHOLD-COMPARISON",
+  "generated_utc": "2026-11-19T01:37:26Z",
+  "status": "Confirmed conditional comparison mismatch repaired; one direct-helper gate remains open.",
+  "source": {
+    "baseline_commit_before_edit": "d0a2cfba076c654a4dec80e86170ba921360a572",
+    "baseline_java_tree_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "result_java_tree_sha256": "5b100dce3522ab30f86262d3657b96bf21a4d68d87c25b16e9b2aeb795e5b3da",
+    "java_file_count": 1602,
+    "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll.java",
+    "source_sha256_before_edit": "14e4f370e6754a16a56834db838777446b822c502f40c32d0a7917389700e148",
+    "source_sha256_after_edit": "b62182caae0cd921c68cef3b9c98ad88c0cd6d60bb72e053d0d1f1df6e6f6343",
+    "production_source_changed": true,
+    "change_summary": "Replaced two Kotlin-style compareTo translations of (heightDelta - 0.5625) with direct Java heightDelta > 0.5625D predicates."
+  },
+  "original_behavior_source": {
+    "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_bytes": 21739944,
+    "included": false,
+    "target_method_owner": "me.octo.client.utils.player.pathfinder.llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIlllIIIllIlIIlIlIIllIIIIll",
+    "target_method_descriptor": "([JDDLnet/minecraft/client/multiplayer/ClientLevel;)Ljava/util/List;",
+    "original_class_sha256": "b99f636784628adc8c6459fa1c8110268b65e6164e830d72ac7134be22271535"
+  },
+  "bytecode_review": {
+    "toolchain": "Temurin javap 25.0.4.1",
+    "command_template": "javap -p -c -s -v -classpath <verified input> <fully-qualified owner>",
+    "original_exit_code": 0,
+    "compiled_exit_code": 0,
+    "original_full_class_dump_sha256": "8f333589847dbe20acb9e090aa694d6a5a8514ad7acdf9cb62741f5db7c09c1b",
+    "post_fix_full_class_dump_sha256": "11f7e4930c1446a48713b6acd12dbbe52f16f0153af846eae1b4d0d885336d8d",
+    "post_fix_compiled_class_sha256": "3ee1baf10dc90fd1eab81f5af06b8a32b8e503e809a8704b9101867b7c0e2346",
+    "full_class_dumps_included": false,
+    "confirmed_difference_and_fix": {
+      "original": "At both 0.5625 threshold sites the original compares heightDelta directly to the constant with dcmpl; NaN therefore does not take the greater-than branch.",
+      "pre_fix_source": "Subtracting 0.5625 first and translating Kotlin Double.compareTo semantics treated a NaN difference as positive.",
+      "post_fix_compiled": "Both sites compile as a direct double comparison against 0.5625D, using dcmpl and the same greater-than branch outcome as the original for NaN and finite values.",
+      "original_bytecode_offsets": [
+        189,
+        307
+      ],
+      "post_fix_bytecode_offsets": [
+        207,
+        397
+      ]
+    },
+    "other_difference_not_closed": "Direct helper g(BlockPos) has an original gate/fallback path not represented in the current source. Its state reachability is unresolved; this experiment did not edit it."
+  },
+  "boundary_probe": {
+    "source_path": ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/ThresholdComparisonProbe.java",
+    "output_path": ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/threshold-probe.log",
+    "compile_command": "javac -encoding UTF-8 -d <evidence-dir> ThresholdComparisonProbe.java",
+    "run_command": "java -cp <evidence-dir> ThresholdComparisonProbe",
+    "compile_exit_code": 0,
+    "run_exit_code": 0,
+    "fixtures": [
+      "-Infinity",
+      "nextDown(0.5625)",
+      "0.5625",
+      "nextUp(0.5625)",
+      "+Infinity",
+      "NaN"
+    ],
+    "assertions": "Corrected predicate matches dcmpl greater-than semantics on all six fixtures; the previous translation differs for NaN.",
+    "output_sha256": "b087f3d1b2c1f0c5016c0b13998c626093b42dcaea6ed68d002bd5b1b2ab7d85"
+  },
+  "build": {
+    "command": "cd polinex-src && .\\gradlew.bat build --no-daemon --console=plain",
+    "jdk": "Temurin 25.0.4.1",
+    "started_utc": "2026-11-19T01:28:33.0173367Z",
+    "finished_utc": "2026-11-19T01:29:00.1324169Z",
+    "exit_code": 0,
+    "tasks": {
+      "compileJava": "executed successfully",
+      "jar": "executed successfully",
+      "test": "NO-SOURCE"
+    },
+    "artifact": "polinex-src/build/libs/polinex-1.0.0.jar",
+    "artifact_sha256": "d89f65e128f4414c79e8ed85d1c1f8839dbb3432e268a6fa056d2a00b889328b",
+    "nonfatal_output": [
+      "Fabric Loom reported missing markdown metadata in mod-provided javadoc.",
+      "javac reported unchecked/unsafe operations."
+    ]
+  },
+  "invalidated_attempts": [
+    {
+      "status": "VOID",
+      "reason": "The wrapper was first invoked from the repository root; gradlew.bat is under polinex-src, so no Gradle build ran."
+    },
+    {
+      "status": "VOID",
+      "reason": "A correctly located build used JAVA_HOME pointing to Java 17; Loom requires Java 25. The unchanged source then built successfully after selecting Temurin 25.0.4.1.",
+      "local_log_not_published": true
+    }
+  ],
+  "runtime_and_scope": {
+    "minecraft_client": false,
+    "valid_world_or_entity": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "feature_equivalence_claim": false
+  },
+  "next_slice": "Resolve the direct helper g(BlockPos) gate: enumerate state initialization and all writes, then decide whether the original fallback is normally reachable. Do not claim route equivalence before that and a valid-world path test."
+}

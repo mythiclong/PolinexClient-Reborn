@@ -1,0 +1,6 @@
+-Infinity original=false previous=false corrected=false
+0.5624999999999999 original=false previous=false corrected=false
+0.5625 original=false previous=false corrected=false
+0.5625000000000001 original=true previous=true corrected=true
+Infinity original=true previous=true corrected=true
+NaN original=false previous=true corrected=false

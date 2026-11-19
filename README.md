@@ -16,7 +16,7 @@
 - **纯 Java 寻路层**：R1951 将 `NativePathFinder` 的 25 个完整方法与当前源码编译产物对照，并用隔离 classloader 比较原版和当前实现的 31 组输出及缓存副作用，全部匹配。7 个方法的字节码控制流形状不同；有限样本一致不代表全域或实机等价。
 - **实际调用点**：R1952 扫描原版 JAR 5,475 个 class 和当前编译产物 2,823 个 class，均为 0 个解析错误。确认同一事件消费者对三个 `BlockPos` API 方法有相同的直接调用目标；尚未通过游戏内正常事件验证这些分支会执行。
 - **路线入口与缓存写入**：R1954 对照 `a(long[], double, double, boolean): List` 和缓存写方法 `(int, int, ByteBuffer): void` 的完整原版/当前字节码。入口 gate、空世界、平滑调用顺序匹配；缓存目录 gate、数据头、文件选项、写循环和关闭路径未发现可确认差异。先前看似目录不匹配的判断是 JVM 操作数栈误读，临时改动已撤回，Java 源树内容指纹仍为 `a23ce38f…`。Temurin 25 下 Gradle `build` 退出码 0；本批次没有生产源码修改。
-- **当前路线切片**：R1955 正在对照 `a(long[], double, double, ClientLevel): List` 与直接步进/碰撞 helper 的完整分支、字段、调用目标和副作用；依赖世界与实体的行为仍需有效 Minecraft 场景和正常用户入口验收。
+- **R1955 路线阈值修复**：按 descriptor 对照 `a(long[], double, double, ClientLevel): List`，修复两处 `0.5625` 条件：原版直接比较并使用 `dcmpl`，旧源码先相减再走 Kotlin `Double.compareTo` 形态，导致 NaN 走错分支。现在改为直接 `heightDelta > 0.5625D`。六个边界样本（含 NaN、阈值两侧相邻浮点数）与原版比较结果一致；Temurin 25 全树 `build` 退出码 0。
 - **运行验收**：尚未通过有效 Minecraft 世界和玩家入口验证路线、碰撞及缓存读写，也没有真实兼容服务器验收。静态还原、样本探针和编译不能代替这些验收。
 - **ClickGUI**：已有同进程原版 Options 对照证据：键盘和滚轮有效，分类图标、Draw 控件未观察到鼠标反馈。内部 Screen 鼠标事件转发与控件命中路径仍待核对；尚未通过悬停、点击、模块开关及设置保存/重载验收。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染与网络等仍有未恢复或未验收部分。真实服务器登录、交互、断开、重连未验证。
@@ -26,6 +26,7 @@
 - [当前交接](.analysis/reports/RESUME.md)
 - [2026-11-19 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1954.json)
 - 本次已推送：私有 `openpolinex` 分支 `codex/handoff-progress-2026-11-15`（`bca0564`）；公开 `PolinexClient-Reborn` 的 `main`（`3c36a2a`）。
+- [R1955 路线阈值语义复核](.analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
 - [R1954 路线入口与缓存写入复核](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* 核心审查与全树构建](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)
@@ -35,9 +36,9 @@
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,787** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,785** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
-R1954 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
+R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 
 ## 构建
 

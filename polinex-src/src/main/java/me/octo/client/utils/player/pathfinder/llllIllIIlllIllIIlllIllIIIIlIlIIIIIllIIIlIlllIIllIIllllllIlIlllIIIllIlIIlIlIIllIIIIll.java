@@ -762,8 +762,7 @@ public final class llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIl
                }
             } else {
                label79: {
-                  double var26;
-                  var10000 = (var26 = var14 - 0.5625) == 0.0 ? 0 : (var26 < 0.0 ? -1 : 1);
+                  var10000 = var14 > 0.5625D ? 1 : 0;
                   label67:
                   if (var7 != 0) {
                      if (var10000 > 0) {
@@ -795,8 +794,7 @@ public final class llllIllIIlllIllIIlllIllIIIIlIlIIIIIllIIIlIlllIIllIIllllllIlIl
                         }
                      }
 
-                     double var28;
-                     var10000 = (var28 = var14 - 0.5625) == 0.0 ? 0 : (var28 < 0.0 ? -1 : 1);
+                     var10000 = var14 > 0.5625D ? 1 : 0;
                   }
 
                   var23 = var10000 > 0
