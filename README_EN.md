@@ -7,9 +7,9 @@ This repository contains the managed-source reconstruction of a Minecraft 26.1.2
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="English"></a>
 </p>
 
-## Current progress (2026-11-19 UTC; Chicago local date: 2026-11-18)
+## Current progress (2026-11-19 UTC; Chicago local date: 2026-11-19)
 
-The current slice is **R1965: trace Pathfinder execution state, stopping, and cache writes after the route consumer**. R1964 static type-guard repair and the full-tree build are complete; an in-game route remains unverified.
+The current slice is **R1965: Pathfinder's normal command entry and the route execution, stop, and cache chain**. This batch restored the missing `/pathfind` executor callback and passed a Temurin 25 full-tree build; no in-game command or valid-world route was run.
 
 - **A* search and candidate nodes:** R1947 restored the candidate-node gate, traversal, and null contract against complete original bytecode. R1948 corrected node-allocation order and the compiled `Function2` callback form.
 - **Route and collision helpers:** R1955 repaired both `0.5625`/NaN branches in route conversion and restored the gate, call order, and fallback in `g(BlockPos)`. The full-tree Gradle `build` passed under Temurin 25.
@@ -18,7 +18,8 @@ The current slice is **R1965: trace Pathfinder execution state, stopping, and ca
 - **R1962 `isWalkable` / `findPath`:** Complete descriptor-level static review found no confirmed mismatch. An isolated-classloader differential covered 98,304 cases across all 512 blocked-cell masks on a bounded 3×3 grid, movement modes, 12 node limits, and 8 float arguments. The retained output says PASS, but the exact invocation and process exit code were not preserved; see the manifest for limits.
 - **R1963 route API branch correction:** Full operand-stack review shows that the original retains `arraylength` across the gate branch. It returns null when `gate=0 && route.length>0` or `gate!=0 && route.length=0`; only the other two combinations invoke the converter. The earlier claim that an empty route with nonzero gate reaches the converter is withdrawn. Current source and compiled bytecode match the original branch and call behavior. Independent static review found no other confirmed mismatch in `b(Entity): BlockPos`.
 - **R1964 normal route-event consumer:** Fixed x/y/z and `option` parsing that previously cast each configuration value to `String[]` before checking its type. The current source performs the original `Integer`/`String` `instanceof` guard before casting. The seven mode branches retain their Pathfinder call targets and eight state-write targets/order. This is a static bytecode finding; the event was not exercised in-game.
-- **Scope of this batch:** One route API source and one normal route-consumer source were corrected; a full Temurin 25 `build --rerun-tasks` succeeded. No Minecraft client, valid world, or compatible server was used.
+- **R1965 Pathfinder `/pathfind` command entry:** At offset 127 of the original provider method, the complete bytecode captures the provider and binds a `Function1` to the existing `a(Self, RouteContext): Unit` route helper. The managed source previously passed null; the original builder throws `IllegalArgumentException` when both executor and subcommands are absent. A callable closure to the same helper is now restored. The final Java class invokes it through a synthetic adapter; this is not a claim that its bootstrap shape is byte-for-byte identical to the Kotlin original. See the [R1965 static review and build evidence](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json).
+- **Scope of this batch:** One Pathfinder command-provider source was corrected; a full Temurin 25 `build --rerun-tasks` succeeded. The first attempt inherited Java 17 through `JAVA_HOME` and failed during Gradle configuration before source compilation; explicitly selecting Temurin 25 passed. No Minecraft client, normal command dispatch, valid world, or compatible server was used.
 - **Open acceptance:** Pathfinder through its normal player entry point, routes/collisions in a valid world, on-disk cache lifecycle, and compatible-server behavior remain unverified. Offline comparisons do not replace in-game acceptance.
 - **ClickGUI:** A same-process vanilla Options comparison showed working keyboard and scroll input, but no observable mouse feedback from category icons or the Draw control. Event forwarding, hit testing, module toggling, and settings persistence remain open.
 - **Other features:** Initialization, Powder Macro, Glacite Commission Macro, rendering, configuration, networking, and native/JNIC still have incomplete restoration or acceptance. Real-server login, interaction, disconnect, and reconnect remain unverified.
@@ -26,6 +27,8 @@ The current slice is **R1965: trace Pathfinder execution state, stopping, and ca
 ### Latest handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
+- [R1965 Pathfinder command executor callback repair](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
+- [R1965 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)
 - [R1962–R1963 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1963–R1964 current evidence and dual-repository sync](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json): private `67ded95` / public `6d79cfd`.
 - [R1964 normal route-consumer bytecode review and build](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)
@@ -45,7 +48,7 @@ The current slice is **R1965: trace Pathfinder execution state, stopping, and ca
 Recalculate source inventory with `python -B .analysis/stats.py`; counts do not establish equivalence. The original JAR SHA-256 is `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; it is not published. Full `javap` dumps remain local.
 - [R1953 Pathfinder wrapper static review](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-The current source inventory is 1,602 Java files, 1,158,787 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.
+The current source inventory is 1,602 Java files, 1,158,789 lines, 569 lines / 581 occurrences of `PXDyn`, 7,029 `PX-FIX` markers, and 219 native declarations. Recalculate with `python -B .analysis/stats.py`; these figures describe inventory only.
 
 The full R1954/R1955 `javap` dumps remain in the local analysis directory. The public snapshot contains method descriptors, the review summary, and dump SHA-256 values; it does not include the original JAR or protected class files.
 

@@ -1,0 +1,19 @@
+R1965 — Pathfinder command executor callback
+
+Finding
+-------
+The normal `pathfind` command factory is `IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.a():IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI`.
+
+The original class's complete method bytecode has `aload_0; invokedynamic` at offset 127, followed by the command-builder `a(Function1):Builder` and `a():Command` calls. Its `LambdaMetafactory` bootstrap captures the provider receiver and targets the private static helper `a(Self, RouteContext):kotlin.Unit`. The original builder bytecode stores the supplied Function1 as its executor; its `a():Command` validates that an executor or subcommands exist and throws `IllegalArgumentException("A command must have either an executor or subcommands")` if both are absent. The pathfind definition has arguments but no subcommands.
+
+Before this repair, the managed source supplied a null Function1. The rebuilt method therefore had `aconst_null; checkcast Function1` at that point. The source now supplies a closure calling the same existing private static helper with `this` and the typed route context. In the final Java-compiled class, the LambdaMetafactory targets a synthetic adapter; the complete adapter body casts the incoming Object to RouteContext, invokes the exact static helper descriptor, and returns its Unit result. This is a Java-source adapter shape, not a claim of byte-for-byte bootstrap identity with the original Kotlin artifact.
+
+Validation
+----------
+- Original target method, original builder, pre-fix class, and final class were inspected with `javap -p -s -c -v` / `javap -p -s -c` by owner and full descriptor.
+- The original-vs-current fact used for the repair is the missing executor callback and its exact target, not shared constant-pool strings.
+- Full Gradle `build --rerun-tasks` under Temurin 25.0.4.1 completed with exit code 0 after the final source bytes were in place.
+- A first build attempt used the inherited `JAVA_HOME` Java 17 and stopped during Gradle configuration because Fabric Loom requires Java 25. It did not compile source; the failed log and command record are retained separately.
+- No temporary runtime probe was added. No Minecraft client, command dispatch, valid-world route, server, or user desktop input was exercised. Those acceptance dimensions remain open.
+
+Local-only reference dump hashes are in `manifest.json`; the dumps and protected original JAR are not published.

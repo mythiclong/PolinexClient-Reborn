@@ -1,0 +1,108 @@
+{
+  "experiment_id": "R1965-pathfind-command-executor-callback",
+  "generated_utc": "2026-11-19T10:46:50+00:00",
+  "scope": "Restore the missing normal pathfind command executor closure to its existing route-processing helper.",
+  "source_baseline": {
+    "commit": "01b05505e348e151a033f221acdf3a45dc894b7f",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+    "baseline_repository_content_sha256": "2ac32ff11aee022ba6c0a8e90d06d679f0ec53d02bead268a93de85fc21cc17a",
+    "baseline_git_blob_oid": "1e81e6ded4c853426942a74b71ebb42d1ec08d22"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll",
+    "name": "a",
+    "descriptor": "()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+    "original_behavior": "At bytecode offset 127, captures this and creates Function1 whose bootstrap targets private static helper a(Self, RouteContext):kotlin.Unit ((Lme/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll;Lme/octo/client/llIllIllIlllllIIlIlllIlIllIllIIlllllIlIlIIlIIlllIlIIlIllIlIIIIIIlllIlIIllIIlIIllllIII;)Lkotlin/Unit;); passes it to builder a(Function1), then calls builder a().",
+    "before": "Managed source supplied null Function1. Pre-fix compiled method emitted aconst_null/checkcast before a(Function1).",
+    "after": "Managed source supplies a non-null closure passing this and the typed RouteContext to the same private static helper. Final javac adapter body casts Object to RouteContext, invokes a(Self, RouteContext):kotlin.Unit, and returns Unit."
+  },
+  "dependent_contract": {
+    "builder_owner": "me.octo.client.IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll",
+    "executor_setter_descriptor": "(Lkotlin/jvm/functions/Function1;)Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;",
+    "builder_finalizer_descriptor": "()Lme/octo/client/IllIIIIIIIlIIlIIIIlIllIIIIlIlIlIlIIIlllllIIllIIIIlIIlIIlIIIlllIlIIIIllIIlIlllllllIIlI;",
+    "verified_contract": "Original builder setter stores Function1 as executor; original finalizer throws IllegalArgumentException when executor is null and subcommands are empty. Current source exposes the same contract. pathfind defines arguments and no subcommands."
+  },
+  "assertions": [
+    {
+      "name": "Original executor binding",
+      "expected": "Callable executor captures provider this and targets a(Self, RouteContext):Unit",
+      "actual": "Confirmed in original invokedynamic bootstrap and complete method instruction sequence",
+      "result": "PASS"
+    },
+    {
+      "name": "Restored closure target",
+      "expected": "RouteContext reaches the same helper with provider receiver",
+      "actual": "Final synthetic lambda adapter casts to RouteContext and invokes the static helper descriptor",
+      "result": "PASS"
+    },
+    {
+      "name": "Build",
+      "expected": "Full-tree Gradle build exit 0 with JDK 25",
+      "actual": "exit_code=0; java_home=C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot",
+      "result": "PASS"
+    }
+  ],
+  "validation": {
+    "static_restoration": "PASS; complete target method and original builder contract reviewed by owner/name/full descriptor",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "normal_command_user_path": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "desktop_input": "NOT USED"
+  },
+  "build": {
+    "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src (repository-relative)",
+    "java_home": "Temurin JDK 25.0.4.1 (local installation path redacted)",
+    "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+    "started_utc": "2026-11-19T10:41:53.3304722Z",
+    "ended_utc": "2026-11-19T10:42:37.4891648Z",
+    "exit_code": 0,
+    "log": ".analysis/evidence/mining/r1965-pathfind-command-executor/build-jdk25-final.log",
+    "log_sha256": "4a5f9c363613a304a559b3c6b7e64eff1f96a219c0c54eef7140c0be850b4943",
+    "raw_local_log_sha256": "0c023e94068a06b30624dcd9ee134a82a45b0e086851864468d3caa980e5f77f",
+    "log_redactions": [
+      "Local worktree absolute paths"
+    ]
+  },
+  "initial_build_attempt": {
+    "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "started_utc": "2026-11-19T10:35:39.5491647Z",
+    "ended_utc": "2026-11-19T10:35:46.5767718Z",
+    "exit_code": 1,
+    "gradle_runtime": "Microsoft OpenJDK 17.0.19",
+    "result": "Environment selection failure before Java compilation; not a source regression.",
+    "log": ".analysis/evidence/mining/r1965-pathfind-command-executor/failed-default-java17.log",
+    "log_sha256": "1edc517d9dbb2e30e3a837b2e3e1cb006304ee4837fc82c534d9caf30c54a628",
+    "record": ".analysis/evidence/mining/r1965-pathfind-command-executor/failed-default-java17-run.json",
+    "record_sha256": "5bc7e0b13d95ed45135926fdb1b482b87519cc2846f42931f01883619fdcbb87",
+    "working_directory": "polinex-src (repository-relative)",
+    "raw_local_log_sha256": "12d06d64436a577f4dd0cf1735f011ae03d9029a80310eb62e82fb9769ca67e0"
+  },
+  "source_fingerprints": {
+    "working_tree_sha256_at_final_build": "426434d0c568e7a7533c2497d040988458d24710f01b30b1f91bcd3d94056020",
+    "repository_content_sha256_lf": "cd169b9ca344f676561a5a3a75a852921982e1cb84d59cc06544216d89723fa4",
+    "current_git_blob_oid": "d2d82ce81f18ccfdd29e7849e027364397721e7a"
+  },
+  "local_reference_fingerprints": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_target_javap_sha256": "8ddd3807ff80b529a79ed1522890db5a0dcc7859f1590d4167417275937f75c4",
+    "prefixed_current_javap_sha256": "8b0e169ca38c0a70b4e5b53f820107bb7c7145821d857fe9d7c6fff6078e775b",
+    "final_compiled_javap_sha256": "f511b44fe0d0352bbbf1be9620ccddab4172db36f24ab55a48086ca2ae1547bd",
+    "original_builder_javap_sha256": "2e74ab93fab413c587de3e8418700e5f69d7127ca695b85cd42c8447bd19232d",
+    "note": "Full javap dumps and original JAR remain local and are not published."
+  },
+  "runtime_acceptance": "No Minecraft client, command dispatch, valid world, compatible server, or user desktop input was exercised. These dimensions remain open.",
+  "publication_exclusions": [
+    "Original protected JAR or classes",
+    "Full javap dumps",
+    "Compiled class files",
+    "Local Gradle caches and outputs"
+  ],
+  "privacy_redaction": {
+    "published_logs": "Local Windows worktree paths redacted, line endings normalized to LF, and terminal trailing spaces removed. Exact raw captures are retained in local temp.",
+    "exact_raw_captures": "Retained outside the repository under the local temp directory."
+  }
+}

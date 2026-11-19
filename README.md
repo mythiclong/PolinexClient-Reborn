@@ -7,9 +7,9 @@
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
 </p>
 
-## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-18）
+## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-当前唯一切片：**R1965：沿 Pathfinder 路线消费者追踪执行状态、停止与缓存写入**。R1964 的类型守卫静态修复和全树构建已完成，实机路线仍未验收。
+当前唯一切片：**R1965：Pathfinder 正常命令入口及路线执行状态、停止与缓存链**。本批修复了 `/pathfind` 命令构造时缺失的 executor 回调，并完成 Temurin 25 全树构建；没有运行游戏内命令或有效世界路线。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -18,7 +18,8 @@
 - **R1962 `isWalkable` / `findPath`**：完整 descriptor 静态对照未发现确认偏差；隔离 classloader 对 3×3 网格的 512 种障碍掩码、移动类型、12 个节点上限和 8 个浮点参数完成 98,304 组差分。保存的结果日志为 PASS，但未保留精确启动命令和进程退出码；详情及限制见 manifest。
 - **R1963 路线 API gate 字节码校正**：完整操作数栈显示原版保留 `arraylength` 跨越 gate 分支；当 `gate=0 && route.length>0` 或 `gate!=0 && route.length=0` 时返回 null，其余组合才调用 converter。早先“非零 gate 的空路线会进入 converter”的说明已撤回；当前源码和编译字节码匹配原版。`b(Entity): BlockPos` 的独立静态复核未发现其他确认差异。
 - **R1964 正常路线事件消费者**：修复 x/y/z 和 `option` 配置值先强转 `String[]`、后做 `instanceof` 的异常路径；现在对 `Object` 先做原版 `Integer`/`String` 类型检查，再转换。七种模式的 Pathfinder 调用目标、八处状态写入顺序保持不变。该结论为静态字节码核对，未在游戏事件中复现。
-- **本批次边界**：校正 1 个 Pathfinder API 文件并修复 1 个正常路线消费者文件；Temurin 25 全树 `build --rerun-tasks` 成功。未启动 Minecraft、有效世界或兼容服务器。
+- **R1965 Pathfinder `/pathfind` 命令入口**：原版配置方法的完整字节码在 offset 127 捕获当前 provider，并把 `Function1` 绑定到已有的 `a(Self, RouteContext): Unit` 路线处理 helper。当前源码此前传入 null；原版 builder 会在 executor 和 subcommand 都缺失时抛 `IllegalArgumentException`。现已恢复可调用闭包。最终 Java 编译产物通过 synthetic adapter 调用同一 helper；没有宣称 bootstrap 字节码形状与 Kotlin 原版完全相同。详情见 [R1965 静态复核与构建证据](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)。
+- **本批次边界**：修复 1 个 Pathfinder 命令 provider 源文件；Temurin 25 全树 `build --rerun-tasks` 成功。第一次构建因继承的 `JAVA_HOME` 指向 Java 17，在 Gradle 配置阶段失败、未编译源码；显式选择 Temurin 25 后成功。未启动 Minecraft、未从正常入口分发命令、未进入有效世界或兼容服务器。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -26,6 +27,8 @@
 ### 最新交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1965 Pathfinder 命令 executor 回调修复](.analysis/evidence/mining/r1965-pathfind-command-executor/manifest.json)
+- [R1965 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1965.json)
 - [R1962–R1963 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
 - [R1963–R1964 当前阶段证据与双仓同步](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)：私有 `67ded95` / 公开 `6d79cfd`。
 - [R1964 正常路线消费者字节码复核与构建](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)

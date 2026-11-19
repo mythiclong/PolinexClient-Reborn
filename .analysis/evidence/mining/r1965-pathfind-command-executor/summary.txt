@@ -1,0 +1,5 @@
+R1965: restored the Pathfinder `pathfind` command's missing executor callback.
+
+Static comparison: the original provider method captures `this` and binds its existing `a(Self, RouteContext): Unit` helper. The managed source previously passed null to the command builder, whose original finalizer rejects a command with neither executor nor subcommands. The source now registers a callable closure to that helper.
+
+Validation: complete method/descriptor review plus Temurin 25.0.4.1 full-tree `build --rerun-tasks` (exit 0). A first attempt stopped at Gradle configuration under inherited Java 17 and is retained as an environment-selection failure. No client, normal command dispatch, valid world, or compatible server was exercised.

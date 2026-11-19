@@ -1,0 +1,17 @@
+{
+  "ended_utc": "2026-11-19T10:35:46.5767718Z",
+  "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src (repository-relative)",
+  "started_utc": "2026-11-19T10:35:39.5491647Z",
+  "exit_code": 1,
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS",
+  "java_version_on_path": "openjdk version \"25.0.4.1\" 2026-08-18 LTS",
+  "gradle_java_home": "Java 17 inherited from JAVA_HOME (local installation path redacted)",
+  "gradle_runtime": "Microsoft OpenJDK 17.0.19",
+  "failure_reason": "Fabric Loom 1.18.0-alpha.19 requires Java 25; Gradle used Java 17 from JAVA_HOME and stopped during project configuration before source compilation.",
+  "raw_local_capture_sha256": "63f0e459cb216688fa1ed7351a94df41a2b3046173d1ecaba6348f718b56cd5d",
+  "redactions": [
+    "Local worktree path",
+    "Local Java installation path"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-11-19T10:41:53.3304722Z",
+  "command": ".\\gradlew.bat -Dorg.gradle.jvmargs=-Xmx2G --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+  "working_directory": "polinex-src (repository-relative)",
+  "ended_utc": "2026-11-19T10:42:37.4891648Z",
+  "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+  "java_home": "Temurin JDK 25.0.4.1 (local installation path redacted)",
+  "exit_code": 0,
+  "raw_local_capture_sha256": "91cf2690030dcef4e8ac7eaa5e7e335883f507342e5bbd7546d25c1829d11332",
+  "redactions": [
+    "Local worktree path",
+    "Local JDK installation path"
+  ]
+}
