@@ -1,23 +1,23 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19 17:19 UTC。R1969 内容/证据已同步：私有 `openpolinex` 内容提交 `16b2a70`、公开 `PolinexClient-Reborn/main` 内容提交 `b993352`；远端 refs 已核验，记录见 [R1969 双仓同步](SYNC-20261119-PATHFINDER-R1969.json)。不要覆盖其他工作树或清理未跟踪调查工具。原版 JAR 和完整 `javap` 转储仅本机使用、不发布。
+> 更新：2026-11-19 17:33 UTC。R1970 Pathfinder `b(List, boolean)` 已按完整原版 descriptor 静态复核并修复一个循环上界差异；Temurin JDK 25 全树构建 exit code 0。此 R1970 批次尚未推送，阶段同步完成后在 [双仓记录](SYNC-20261119-PATHFINDER-R1970.json) 核验远端 refs。不要覆盖其他工作树或清理未跟踪调查工具。原版 JAR、protected class 和完整 `javap` 转储只在本机留存，不发布。
 
-## 当前唯一切片：R1970 Pathfinder `b(List, boolean)`
+## 下一唯一切片：R1971 Pathfinder 距离 helper
 
-直接审计 `d(List)` 的两个依赖入口：`d(List)` 调 `b(list,false)`，`e(List)` 调 `b(list,true)`。先按完整原版 descriptor 复核当前源码/编译产物的字段、接收者、分支、异常、默认值与副作用；只修有确定字节码证据的差异。
+审计 `me.octo.client.utils.IlIIIllIllIIIIIIIIllIIIIIlIlIIIlIllIlllIlIlIlIIIllIlIIIlIIlIlIllIllIIlllIlllIllllIlIl.c(Vec3, Vec3): double`，即 R1970 `b(List, boolean)` 的直接距离依赖。读取完整原版与当前 descriptor/调用点、核对字段/接收者/分支/异常/副作用；只有找到确定差异才修改，再做全树构建。不要用空世界、null 或 plain-object fixture 推断位置/碰撞行为。
 
-## 已完成且有效的本阶段证据
+## 最近已完成的有效证据
 
-- R1969 `d(List):void` 已恢复完整原版 CFG（offset 0–410，19 个异常表项），含 gate/player 早退、`b(list,false)` 空结果分支、option 700、route predicates、距离阈值/friction 条件和 `jump` 状态写入。异常 helper 是 identity。完整证据：[R1969 manifest](../evidence/mining/r1969-pathfinder-d-list/manifest.json)；静态映射：[static-review](../evidence/mining/r1969-pathfinder-d-list/static-review.txt)。
-- R1969 最终 Temurin JDK 25.0.4.1 全树 `build --rerun-tasks` exit code 0；18 条现有 Unsafe/deprecation/unchecked warnings。此前两次 HotSpot C2 native-memory 构建失败，另有一次成功输出未保留退出码；这些均列于 [attempts.json](../evidence/mining/r1969-pathfinder-d-list/attempts.json)，最终成功构建使用受限编译/GC 参数。无需重跑该已验证切片。
-- 直接探针、Minecraft 启动/有效世界、正常 Pathfinder 玩家路径、兼容服务器均未执行；不以静态恢复或构建通过代替运行验收。
-- 当前源码库存：1,602 个 Java 文件、1,158,427 行；`python -B .analysis/stats.py` 可复算。计数不等于功能完成度。
-- R1968 `a(Entity,List,Vec3):void` 静态与构建证据见 [manifest](../evidence/mining/r1968-pathfinder-entity-route/manifest.json)；世界/碰撞依赖路径仍待有效游戏验证。
+- R1970 源文件：`polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java`。唯一修改是在循环前缓存 `CollectionsKt.getLastIndex(list)`；完整原版 `b(List, boolean)` descriptor 偏移 0–347、14 个异常表项已复核，最终编译产物有可执行同 descriptor。静态复核：[manifest](../evidence/mining/r1970-pathfinder-route-boundary/manifest.json)、[static review](../evidence/mining/r1970-pathfinder-route-boundary/static-review.txt)、[构建记录](../evidence/mining/r1970-pathfinder-route-boundary/build-jdk25-final.log)。最终 Temurin 25 `build --rerun-tasks` exit code 0，18 条现存 Unsafe/deprecation/unchecked warnings。
+- R1970 源代码 Git blob `5b108bbfb08d64c0e4dca16ac34713f9adaa18ad`，LF SHA-256 `8a951e59565e8ba480624ae2a4619bd59ebc2fc345b0312f08593b4ed6a14a3b`，构建时工作树 SHA-256 `2b958276fb9f657985600835126458040559b64f0accfc96139b52a58215908b`。完整 javap 输出/raw build log 留在本机且不发布。
+- R1970 没有执行直接差分探针、Minecraft 客户端、有效玩家/世界、正常用户入口或兼容服务器验收；桌面输入未使用。
+- R1969 `d(List):void` 静态恢复/全树构建仍见 [manifest](../evidence/mining/r1969-pathfinder-d-list/manifest.json)。之前的有效证据见 README 链接和 `.analysis/evidence/mining/` 各 manifest。
 
-## 仍开放的验收与已排除
+## 仍开放的验收
 
-- Pathfinder 正常玩家路线、有效世界碰撞、缓存生命周期及兼容服务器行为仍开放；ClickGUI 鼠标命中/模块开关/设置保存重载、Powder Macro、Commission Macro、配置、渲染、网络和 native/JNIC 亦未整体验收。
-- 已排除：R1968 中 `d(List)` 的三个调用点已完整定位，当前不再重复扫描；原版输入窗口焦点故障由 vanilla Options 对照排除；不以 null/plain-object/worldless fixture 推断世界/实体逻辑。
-- 不发布原始 JAR、受保护 class、完整 javap dump、编译 class、Gradle 缓存或包含本机路径的原始构建/崩溃日志。源码 Git blob、规范化 SHA 与工作树 SHA 分开记录。
+- Pathfinder 正常玩家入口、实际路线/碰撞、磁盘缓存生命周期和真实兼容服务器行为仍未关闭。
+- ClickGUI 鼠标命中、模块开关、设置列表和保存/重载闭环，以及 Powder Macro、Commission Macro、Route editor 导入、渲染、配置、网络、native/JNIC 仍有未恢复或未验收项。
+- 真实服务器登录、交互、断开、重连未验证；缺授权账号/地址时暂停这项但继续源码工作，不得宣称项目整体完成。
+- 不发布原始 JAR、protected class、完整 javap dump、编译 class、Gradle 缓存或带本机路径的原始日志。Git blob、LF 文本 SHA 与工作树字节 SHA 分开记录。
 
-下一步只做 R1970 `b(List,boolean)` 完整静态审计；取得确定差异后先按原版修复，再全树构建。随后继续 Pathfinder 其余依赖链，并把有效客户端/服务器路径保留为独立未关闭验收。
+源码库存当前为 1,602 个 Java 文件、1,158,428 行，可用 `python -B .analysis/stats.py` 复算；计数不是功能进度或等价证明。

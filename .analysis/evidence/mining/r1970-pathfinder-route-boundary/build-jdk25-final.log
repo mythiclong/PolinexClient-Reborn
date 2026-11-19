@@ -1,0 +1,15 @@
+R1970 final full-tree build
+
+Command:
+`.\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+
+Runtime: Eclipse Temurin JDK 25.0.4.1+1-LTS (2026-08-18 build).
+Started: 2026-11-19T17:23:22.5904601Z
+Ended: 2026-11-19T17:24:11.1686291Z
+Exit code: 0
+Result: BUILD SUCCESSFUL in 48s.
+Final tasks included `compileJava`, `processResources`, `classes`, `processIncludeJars`, `jar`, `assemble`, and `build`.
+Tests: `NO-SOURCE` (no test suite ran).
+Warnings: 18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors.
+
+The exact unredacted command output is retained locally at `build-jdk25-final.raw.log`; it is excluded from publication because it contains machine-specific paths. Local raw-log SHA-256: `da0503ecc2d1421adcae898a07e9494de36e19b3223468c28f13a3149409d46e`.

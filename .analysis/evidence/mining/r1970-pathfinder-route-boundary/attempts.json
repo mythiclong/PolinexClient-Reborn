@@ -1,0 +1,16 @@
+{
+  "experiment_id": "R1970-pathfinder-route-boundary",
+  "attempts": [
+    {
+      "attempt": "final-exact-source-full-tree-build",
+      "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "started_utc": "2026-11-19T17:23:22.5904601Z",
+      "ended_utc": "2026-11-19T17:24:11.1686291Z",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "raw_log": "build-jdk25-final.raw.log (local-only; contains host paths)",
+      "raw_log_sha256_local_only": "da0503ecc2d1421adcae898a07e9494de36e19b3223468c28f13a3149409d46e"
+    }
+  ]
+}

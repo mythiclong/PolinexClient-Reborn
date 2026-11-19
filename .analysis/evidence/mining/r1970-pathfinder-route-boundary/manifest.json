@@ -1,0 +1,90 @@
+{
+  "experiment_id": "R1970-pathfinder-route-boundary",
+  "generated_utc": "2026-11-19T17:33:44Z",
+  "scope": "Review and restore Pathfinder b(List, boolean) against the complete original descriptor, then run an exact-source full-tree build.",
+  "source_baseline": {
+    "commit": "099de77e7edd785bfd37fb5f5965a2e3d7e71c40",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "6199f57bd677c8fcc942e4e0a2367957d81ce2c9"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "b",
+    "descriptor": "(Ljava/util/List;Z)Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;",
+    "before": "Loop condition called CollectionsKt.getLastIndex(list) on every iteration.",
+    "after": "Caches CollectionsKt.getLastIndex(list) immediately before traversal and compares against that fixed inclusive bound, matching original bytecode call timing.",
+    "source_git_blob_oid": "5b108bbfb08d64c0e4dca16ac34713f9adaa18ad",
+    "source_content_sha256_lf": "8a951e59565e8ba480624ae2a4619bd59ebc2fc345b0312f08593b4ed6a14a3b",
+    "source_working_tree_sha256_at_final_build": "2b958276fb9f657985600835126458040559b64f0accfc96139b52a58215908b",
+    "compiled_owner_class_sha256": "1deab9313d0fcfbba2354420576e41f25be4d343c7cd2febfab4f379992c33ef",
+    "built_jar_sha256": "0a879e880a1677eb4371e84b000b499c24a01850b888dc7adee1e13e2919dcb4"
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "original_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "compiled_owner_javap_sha256_local_only": "23ee0fa2eb9db67d14553a8d9c29285214d1ef3c571ebbc58a7eb0c40b4a8070",
+    "method_code_offsets": "0 through 347 inclusive; all 14 exception-table entries reviewed.",
+    "identity_exception_helper": "a(Throwable):Throwable is aload_0; areturn in original and compiled owner."
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original owner dump and exact target descriptor body reviewed.",
+      "Mapped guard/player early returns, empty-list branch, clamped start index, player/route position helpers, cumulative distance, vertical threshold, mode boolean, enum identity check, and inclusive traversal.",
+      "Confirmed exact original last-index caching point; final compiled target has two getLastIndex(List):int invocations (clamp and cached bound), not a per-iteration bound call.",
+      "Compared fields, invocation owners/descriptors, receivers, branch/short-circuit order, early returns, and direct side effects.",
+      "Reviewed all 14 original NoWhenBranchMatchedException handlers; the shared exception helper returns the identical object and no exception is swallowed.",
+      "Re-read final compiled owner with javap -c -p -s and confirmed the target descriptor has executable code."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T17:23:22.5904601Z",
+    "ended_utc": "2026-11-19T17:24:11.1686291Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tasks": [
+      "compileJava",
+      "processResources",
+      "classes",
+      "processIncludeJars",
+      "jar",
+      "assemble",
+      "build"
+    ],
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors."
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "reason": "The method requires a valid LocalPlayer, route-node positions, and real distance/enum dependencies; no fabricated null/plain-object/worldless fixture was used.",
+    "minecraft_client": false,
+    "valid_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158428,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR and class files",
+    "Full original/current javap dumps",
+    "Raw build log and host crash reports containing local paths",
+    "Gradle caches and generated build outputs"
+  ],
+  "source_hash_semantics": "working-tree SHA-256 fingerprints exact CRLF bytes consumed by Gradle; LF SHA-256 fingerprints normalized text; Git blob OID identifies the repository-filtered object."
+}

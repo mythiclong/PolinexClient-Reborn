@@ -1,0 +1,43 @@
+R1970 static review — Pathfinder `b(List, boolean)`
+
+Source baseline: `099de77e7edd785bfd37fb5f5965a2e3d7e71c40`; baseline Git blob `6199f57bd677c8fcc942e4e0a2367957d81ce2c9`.
+Final source Git blob: `5b108bbfb08d64c0e4dca16ac34713f9adaa18ad`; normalized source SHA-256 `8a951e59565e8ba480624ae2a4619bd59ebc2fc345b0312f08593b4ed6a14a3b`; exact working-tree SHA-256 at final build `2b958276fb9f657985600835126458040559b64f0accfc96139b52a58215908b`.
+Original input: local-only protected JAR SHA-256 `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`.
+Original full-owner `javap -c -p -s` SHA-256 (local only): `76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197`.
+Compiled full-owner `javap -c -p -s` SHA-256 (local only): `23ee0fa2eb9db67d14553a8d9c29285214d1ef3c571ebbc58a7eb0c40b4a8070`.
+
+## Target identity and reviewed boundary
+
+- Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`
+- Name: `b`
+- Descriptor: `(Ljava/util/List;Z)Lme/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI$IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll;`
+- The complete original descriptor body was reviewed, bytecode offsets 0–347 inclusive, including all 14 exception-table entries. The final compiled owner was re-read with `javap -c -p -s`; the same descriptor contains executable code.
+
+## Control flow, operations, and source mapping
+
+- The original guard-provider call `IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l():int[]` gates the method; a null guard returns null. The method then reads the same owner's Minecraft field and `Minecraft.player`; a null player returns null. The original empty-list check remains gated by the same guard value.
+- The start index is the same integer field clamped by `kotlin.ranges.RangesKt.coerceIn(III)I` to `[0, CollectionsKt.getLastIndex(list)]`. If it is positive, the anchor is the position of the preceding route node; otherwise the anchor is obtained from the current `LocalPlayer` through the original entity-position helper `IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a(Entity):Vec3`. The current player position is separately obtained for the initial distance segment.
+- The original loop caches `CollectionsKt.getLastIndex(list)` once immediately before iteration, then visits indices from the clamped start through that inclusive last index. Source previously reevaluated `getLastIndex(list)` in the `for` condition. R1970 changes it to a local cached bound, matching the original call timing and loop bound. The compiled descriptor has exactly two `getLastIndex(List):int` invokes: one for clamping and one for the cached loop bound.
+- Each node's `b():Vec3` is passed with the prior point to the same distance singleton's `c(Vec3,Vec3):double`; accumulated distance greater than the original distance field returns null. The vertical delta is `node.position.y - anchor.y`, compared with the same original double threshold field.
+- For a qualifying vertical delta, `param2 == false` returns that node immediately. If `param2 == true`, the method returns only when the node's `c(): enum` equals the exact original enum constant; otherwise it advances both anchor positions and continues. Exhausting the inclusive suffix returns null.
+- Original field reads, receivers, descriptors, branch order, short-circuit behavior, loop inclusivity, early returns, enum identity comparison, and direct side effects were checked against the compiled method. No direct field write or key-state mutation occurs in this target method.
+- The original 14 handlers catch only `kotlin/NoWhenBranchMatchedException` and rethrow through `a(Throwable):Throwable`. That helper is `aload_0; areturn` in both original and compiled owner; no exception is swallowed or replaced by the restored source. Java's source-level implementation does not reproduce the redundant catch/rethrow scaffolding.
+
+## Finding and static status
+
+The only confirmed source mismatch in this slice was recomputing the list's last index in every loop-condition evaluation rather than caching it before the loop. This is observable for a list whose size changes during traversal. The source now caches the bound at the original point. Complete descriptor review: **PASS**. This is a static restoration result, not a runtime-equivalence claim.
+
+## Validation boundary
+
+- Final exact-source full-tree Gradle `build --rerun-tasks`: **PASS**, exit code 0, Temurin JDK `25.0.4.1+1-LTS`.
+- Direct differential/probe: **NOT RUN**.
+- Minecraft client start / valid player and world / normal Pathfinder user path: **NOT RUN**.
+- Compatible-server login, interaction, disconnect, reconnect: **NOT RUN**.
+- Desktop input: **NOT USED**.
+- No screenshot was produced.
+
+The target depends on a real `LocalPlayer`, route nodes, position helpers, and distance logic; no null/plain-object/worldless fixture was used to infer runtime behavior.
+
+## Publication boundary
+
+Do not publish the original JAR, protected classes, full original or compiled `javap` dumps, the raw Gradle log, Gradle caches, or generated build outputs. The raw R1970 build log remains local-only because it contains host paths. The published evidence contains hashes and a sanitized build record only.
