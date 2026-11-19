@@ -1,0 +1,40 @@
+R1972 static review — Pathfinder `c(List):ArrayList` and `b(List)` fallback follow-up
+
+Source baseline: commit `ebc080d6715ca85afdb7bafeb7ceddfc5eb1ed72`; source blob `874baec2161fa44a2f4580ac8b76294dcbbaf5e6`.
+Final source blob `6a9b7e7d6fca665ab35a132945b22bd383a8dacd`; LF SHA-256 `7cc8e15527f447892b1900fa32b0075cb5c9a8680b5a125a47c88e1b99cbe23a`; exact CRLF SHA-256 at final build `a6e7578215271e7f849261296ba3a2fcb07ff717bbd0cd41cc7d1842455fc5b3`.
+Original protected JAR SHA-256 (local only): `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`. Original/current full-owner javap hashes (local only): `76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197` / `abb79278e439ec93e96adae415367c2f7a4f092552ecfd32846489f821294241`.
+
+## Full descriptor boundaries
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+
+- `b(Ljava/util/List;)Ljava/util/ArrayList;`: original offsets 0–1230 inclusive; all 51 `NoWhenBranchMatchedException` table entries reviewed.
+- `c(Ljava/util/List;)Ljava/util/ArrayList;`: original offsets 0–2237 inclusive; all 84 such table entries reviewed.
+
+The original full owner and exact descriptors were read from the local protected JAR; neither the JAR, classes, nor dump are published.
+
+## Confirmed differences and repairs
+
+### `c(List):ArrayList`
+The original loads the state guard, reads `Minecraft.player` only if the guard is non-null, and enters the fallback if either is null. In fallback it reads the smoother receiver before casting/iterating the input and allocates the result using `collectionSizeOrDefault(input,10)`. The iterator obtains and casts the current element before testing the guard. If the guard is null, it stops before calling the node position accessor or adding any point, then calls the smoother with mode `1` and an empty list. With non-null guard and null player, it maps all node positions.
+
+The previous source read `player` again after the condition, used an unsized result list, mapped all nodes even when the guard was null, loaded the smoother at return time, and omitted six Kotlin non-null expression checks. The source now captures the player once with guard short-circuit; captures the smoother at the original evaluation point; uses the original sizing/Iterable/Collection calls; and stops after the null-guard iterator has produced/cast at most one item, before `node.b()`/`add`. It restores checks after the three `getDeltaMovement()` calls, `Vec3.add`, iterator creation, and `Iterator.next()` at the original expression order.
+
+The full remaining CFG was reviewed: current/prior route candidate and empty fallback; Pair early return into `e(Vec3,Vec3,Vec3)`; distance/projection and clamping; path smoothing; optional second node; movement/collision predicates; speed filtering; candidate yaw calculation; geometry scoring; collision/backward/strafe/state-switch penalties; minimum and tie retention; previous-direction state write; final key order `forward`, `backward`, `left`, `right`. Call targets, numeric arguments, branches, early returns and writes match the original.
+
+### `b(List):ArrayList` follow-up
+The original smoother receiver field is evaluated before fallback sizing/iteration; the earlier R1971 source loaded it at return time. This slice moves the read to the original point and preserves the original Iterable/Collection call owners. This narrow follow-up does not undo R1971's gate-null restoration, but was not present in R1971's previously published source commit.
+
+## Final compiled-code comparison
+
+In final compiled output, the ordered field-read/write and non-identity invocation streams match the original without unmatched events: 61 events for `b(List)` and 115 for `c(List)`. The ordered float/double/string constant sequence matches (9 and 26 entries). Original exception handlers route only `NoWhenBranchMatchedException` through the previously verified identity `a(Throwable):Throwable`; the Java methods add no swallowing catch. Final compiled methods contain 2 and 6 explicit Kotlin expression null checks respectively.
+
+Static status: **PASS** for both complete descriptors and the final compiled owner. This does not establish in-game behavioral equivalence.
+
+## Build and runtime boundary
+
+Final exact-source full-tree build: Temurin JDK `25.0.4.1+1-LTS`, started `2026-11-19T18:09:17.6424268Z`, ended `2026-11-19T18:10:33.2668492Z`, exit code 0, `BUILD SUCCESSFUL`; 18 existing Unsafe/deprecation/unchecked warnings; tests `NO-SOURCE`. See `build-jdk25-final.log` and `attempts.json`.
+
+No direct probe, Minecraft client, valid player/world, normal user path, compatible server or desktop input was used. World/path/collision and real-server acceptance remain open; do not infer equivalence from this static/build pass.
+
+Do not publish protected JAR/classes, full javap dumps, raw logs with local paths, caches or build outputs.

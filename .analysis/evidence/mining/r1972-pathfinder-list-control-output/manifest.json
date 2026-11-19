@@ -1,0 +1,94 @@
+{
+  "experiment_id": "R1972-pathfinder-list-control-output",
+  "generated_utc": "2026-11-19T18:15:39Z",
+  "scope": "Full-descriptor audit of Pathfinder c(List):ArrayList and a shared-fallback evaluation-order follow-up for b(List).",
+  "source_baseline": {
+    "commit": "ebc080d6715ca85afdb7bafeb7ceddfc5eb1ed72",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "874baec2161fa44a2f4580ac8b76294dcbbaf5e6"
+  },
+  "modified_methods": [
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "b",
+      "descriptor": "(Ljava/util/List;)Ljava/util/ArrayList;",
+      "change": "Follow-up: capture smoother receiver before fallback sizing/iteration and preserve original Iterable.iterator / Collection.add call owners."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "c",
+      "descriptor": "(Ljava/util/List;)Ljava/util/ArrayList;",
+      "change": "Restore guard-before-player single capture, sized fallback and receiver/list evaluation order, null-guard iterator timing, and six Kotlin non-null checks."
+    }
+  ],
+  "final_source": {
+    "git_blob_oid": "6a9b7e7d6fca665ab35a132945b22bd383a8dacd",
+    "source_content_sha256_lf": "7cc8e15527f447892b1900fa32b0075cb5c9a8680b5a125a47c88e1b99cbe23a",
+    "source_working_tree_sha256_at_final_build": "a6e7578215271e7f849261296ba3a2fcb07ff717bbd0cd41cc7d1842455fc5b3",
+    "changed_source_files": 1
+  },
+  "original_reference": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "jar_location": "Local only; not published.",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "original_full_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "current_final_full_owner_javap_sha256_local_only": "abb79278e439ec93e96adae415367c2f7a4f092552ecfd32846489f821294241",
+    "reviewed_method_boundaries": {
+      "b(Ljava/util/List;)Ljava/util/ArrayList;": "offsets 0-1230 inclusive; 51 NoWhenBranchMatchedException handlers",
+      "c(Ljava/util/List;)Ljava/util/ArrayList;": "offsets 0-2237 inclusive; 84 NoWhenBranchMatchedException handlers"
+    }
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Complete original and final compiled owner read using javap -c -p -s; exact b/c descriptors and all 135 original exception handlers reviewed.",
+      "Ordered field read/write plus non-identity invocation stream has no unmatched event: 61 events for b(List), 115 for c(List). Owners, descriptors, receivers, ordering and direct state side effects were checked.",
+      "Ordered floating/double/string constants match: 9 for b(List), 26 for c(List). Reviewed all normal branches, list operations, geometry/collision calls, early returns, movement scoring and output key ordering.",
+      "c(List) guard-null fallback does not read Minecraft.player; smoother receiver and sized output are evaluated before the iterator; it obtains/casts at most the first input node then exits before node position access/add. Non-null guard + null player maps all positions.",
+      "b(List) receiver load timing follow-up; both methods retain original Iterable.iterator and Collection.add invocation owners.",
+      "Final bytecode has 2 and 6 Intrinsics.checkNotNullExpressionValue checks in b/c respectively. Original exception handlers only catch NoWhenBranchMatchedException and route through verified identity a(Throwable):Throwable; Java rewrite swallows no exceptions."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T18:09:17.6424268Z",
+    "ended_utc": "2026-11-19T18:10:33.2668492Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings; no source compilation errors.",
+    "built_jar_sha256": "371cf37da3f25dcf7dbf8f438083546b1cdc09a61c7220b56505f7fe63d1e3f5",
+    "compiled_owner_class_sha256": "55be9c537225f02aed4f277638e4b3d6509506afe049354c17f9723ca4ee8216"
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "minecraft_client": false,
+    "valid_player_and_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null,
+    "reason": "World/player/key/collision dependent logic needs a valid live game; no null/plain-object/worldless fixture was used. Static/build checks only."
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158462,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Raw Gradle logs containing local paths",
+    "Gradle caches and generated build outputs"
+  ],
+  "source_hash_semantics": "Working-tree SHA-256 is exact CRLF bytes consumed by Gradle; LF SHA-256 is normalized text; Git blob OID identifies the repository object."
+}

@@ -1,0 +1,27 @@
+{
+  "experiment_id": "R1972-pathfinder-list-control-output",
+  "attempts": [
+    {
+      "id": "R1972-build-intermediate",
+      "status": "PASS_INTERMEDIATE_SOURCE_NOT_FINAL_VALIDATION",
+      "started_utc": "2026-11-19T18:06:20.8366005Z",
+      "ended_utc": "2026-11-19T18:07:32.9664634Z",
+      "exit_code": 0,
+      "source_git_blob_oid": "be4ec50971ba61d2fa93963322924b24b8d2bcce",
+      "source_working_tree_sha256": "27904e979e5b7c7c7b0381e1c2d2dc758b699b9dae8772577095577fd4cb1b55",
+      "source_lf_sha256": "a6d6e43d7431e96ca8f163853dbfe5d6443e427f38678cc3a750a4881ecf6de0",
+      "note": "Later tightened Iterable/Collection call owners and Number receiver; this build is not final-source evidence."
+    },
+    {
+      "id": "R1972-build-final",
+      "status": "PASS_FINAL_SOURCE",
+      "started_utc": "2026-11-19T18:09:17.6424268Z",
+      "ended_utc": "2026-11-19T18:10:33.2668492Z",
+      "exit_code": 0,
+      "source_git_blob_oid": "6a9b7e7d6fca665ab35a132945b22bd383a8dacd",
+      "source_working_tree_sha256": "a6e7578215271e7f849261296ba3a2fcb07ff717bbd0cd41cc7d1842455fc5b3",
+      "source_lf_sha256": "7cc8e15527f447892b1900fa32b0075cb5c9a8680b5a125a47c88e1b99cbe23a",
+      "record": "build-jdk25-final.log"
+    }
+  ]
+}
