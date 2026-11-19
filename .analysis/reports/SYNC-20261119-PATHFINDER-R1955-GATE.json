@@ -1,0 +1,64 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1955-GATE",
+  "generated_utc": "2026-11-19T01:52:56Z",
+  "scope": "R1955 route-converter and height-helper source fixes, final build evidence, bilingual README, and current handoff.",
+  "evidence": {
+    "experiment_id": "R1955",
+    "final_java_tree_sha256": "e6046434ad4042f76978110757a85cdc733f80de492ce11775cc3ee11efbfb48",
+    "manifest_path": ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json",
+    "manifest_sha256": "eb9cffbc9bd70a23f168e7830b1354a06f1568158a2c766d335a2a14465d957b",
+    "evidence_baselines": {
+      "private_before_gate_fix": "bba186f28c0efa163d18d915ca3fe447227f8611",
+      "public_before_gate_fix": "600deb466362ad0d441f3a28a02d1fe550025933"
+    }
+  },
+  "published_snapshots": [
+    {
+      "repository": "mythiclong/openpolinex",
+      "visibility": "private",
+      "ref": "codex/handoff-progress-2026-11-15",
+      "code_evidence_ingest_commit": "980aac40a0b7b0068e99227de619597f8ddfeafb",
+      "pushed": true
+    },
+    {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "visibility": "public",
+      "ref": "main",
+      "code_evidence_ingest_commit": "8bd1d617d7889ba1d89623ef0ada20619a96ddb5",
+      "pushed": true
+    }
+  ],
+  "published_files": [
+    "README.md",
+    "README_EN.md",
+    ".analysis/reports/RESUME.md",
+    "polinex-src/src/main/java/me/octo/client/utils/player/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.java",
+    ".analysis/evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json"
+  ],
+  "validation": {
+    "stats_command": "python -B .analysis/stats.py",
+    "stats_exit_code": 0,
+    "java_files": 1602,
+    "java_lines": 1158790,
+    "build_command": "cd polinex-src && .\\gradlew.bat build --no-daemon --console=plain",
+    "jdk": "Temurin 25.0.4.1",
+    "build_exit_code": 0,
+    "compileJava": "executed successfully",
+    "jar": "executed successfully",
+    "test": "NO-SOURCE",
+    "artifact_sha256": "0358ed37e798349c3e665ecf19901c4df3a62ce6ff54f3a46dbced300f972e8b",
+    "threshold_probe_exit_code": 0,
+    "minecraft_or_server_run": false
+  },
+  "not_published": [
+    "Original protected JAR/class files",
+    "Full javap dumps",
+    "Local build logs"
+  ],
+  "remaining_acceptance": [
+    "Valid-world route, collision, and cache lifecycle through normal Pathfinder entry remain untested.",
+    "No compatible-server login/interaction/disconnect/reconnect evidence.",
+    "ClickGUI mouse hit-testing, module toggle, and settings persistence remain open.",
+    "The two static repairs and successful build are not full project equivalence evidence."
+  ]
+}

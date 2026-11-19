@@ -11,7 +11,7 @@
 
 ## 当前有效证据
 
-- [R1955 双仓同步索引](SYNC-20261119-PATHFINDER-R1955.json)
+- [R1955 双仓同步索引](SYNC-20261119-PATHFINDER-R1955-GATE.json)
 - [R1955 路线/高度 helper 复核](../evidence/mining/r1955-pathfinder-route-converter-nan-semantics/manifest.json)
 - [R1954 路线入口与缓存写入](../evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1953 wrapper gate/空路径复核](../evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
