@@ -1,0 +1,91 @@
+{
+  "experiment_id": "R1983-pathfinder-dual-input-predicate",
+  "generated_utc": "2026-11-19T21:11:12Z",
+  "scope": "Restore the shared-gate read and gate-dependent zero-input branch in Pathfinder n():boolean, then verify the full descriptor and its sole normal call site.",
+  "source_baseline": {
+    "commit": "323895762b59911d7a81b3568e25ff7406c7f689",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before_slice": "5e0d3aa7b7193145c7960b99a969e45d4d34f92d"
+  },
+  "source_final_at_build": {
+    "git_blob": "b24cb6c2a73b66ac52a53be240dfcca0ce1d68ca",
+    "sha256_worktree_bytes": "b371c1dea596d86f949bbb12ee6b6dee3ee702af6495c928d52da74a7b862024"
+  },
+  "original_reference": {
+    "protected_original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "local_original_class_archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_dump_sha256_lf": "3c74cf717c47f54a09c5f83f88021b9ff7cef3ad56ee9463015b5a58634f4f6e",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "n",
+    "descriptor": "()Z",
+    "access": "private final",
+    "original_offsets": "0-103",
+    "original_instruction_count": 55,
+    "original_exception_handlers": 5,
+    "compiled_offsets": "0-69",
+    "compiled_instruction_count": 42,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256_lf": "94487839bbe454f7fdda4d105eec414010689278e35b96d750b44eaa82fefb61",
+    "compiled_owner_class_sha256": "15bc90de04646fbb9f24ff4ccacc584076e9b495e2ba2ec220ec0b0119188a84"
+  },
+  "normal_path_callsite": {
+    "caller": "d(Ljava/util/List;)V",
+    "original_call_offset": 88,
+    "original_call_opcode": "invokespecial",
+    "compiled_call_offset": 54,
+    "compiled_call_opcode": "invokevirtual",
+    "callsite_count_in_owner": 1,
+    "reachability": "The sole direct caller reads the same gate and returns when it is null before invoking n(); its normal direct-call path therefore uses the non-null-gate arm. The null-gate arm is nevertheless part of n()'s original descriptor behavior and is restored."
+  },
+  "supporting_gate_owner_methods": {
+    "owner": "me.octo.client.IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll",
+    "getter": "l():()[I is exactly getstatic the gate array; areturn in both original and compiled classes.",
+    "setter": "b([I)V is exactly aload_0; putstatic the same gate field; return in both original and compiled classes.",
+    "state_initialization": "The original/current static initializer allocates a two-element int array for the gate; the public setter accepts null, so the null branch is retained rather than assumed impossible."
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "confirmed_source_difference": "The original first reads the shared int[] gate via l():()[I; the prior source omitted this call and its dependent branches.",
+    "ordered_calls": "PASS: gate getter l():()[I, private h():double, private i():double, and instance helper a(double,double,boolean,int):Integer remain in that order with matching owners, descriptors, and receiver. Supporting gate getter l() and setter b([I)V were also checked instruction-for-instruction in original and compiled classes. Javac uses invokevirtual for the same private targets where Kotlin emitted invokespecial.",
+    "ordered_fields": "PASS: the movement-mode int field is read once at the original helper-call position with the same owner and descriptor.",
+    "branch_matrix": "PASS: with a non-null gate, return false only when both input doubles equal zero; otherwise call a(x,y,false,mode). With a null gate, return false only when both input doubles are nonzero; otherwise call the same helper. If called, return whether the helper result is non-null. NaN is nonzero for these zero/equality predicates in both original and compiled forms.",
+    "branch_review": "PASS: gate read precedes both input helpers; h() precedes i(); both values are computed before branch selection; gate-null and gate-non-null branches, early returns, helper receiver/arguments, null-result test, and return were checked against the complete original CFG.",
+    "comparison_lowering": "The original uses dcmpg and the compiled Java uses dcmpl. Every consumer distinguishes only zero from nonzero, so NaN remains nonzero and both lowerings make the same branch decisions. Instruction offsets and local slots differ due to Javac lowering.",
+    "exception_behavior": "PASS: all 5 original NoWhenBranchMatchedException handlers call the verified identity helper a(Throwable):Throwable and rethrow the same exception. Managed source contains no catch that swallows or replaces exceptions."
+  },
+  "validation": {
+    "static_review": "PASS: complete original and final compiled owner javap -p -c -v dumps reviewed for the exact n() descriptor, control flow, ordered calls, field, constants, exception handlers, and sole direct caller.",
+    "full_tree_build": "PASS: gradlew.bat build --rerun-tasks --no-daemon, Eclipse Temurin JDK 25.0.4.1+1-LTS, exit 0.",
+    "build_start_utc": "2026-11-19T21:05:36.0620034Z",
+    "build_end_utc": "2026-11-19T21:06:24.2983979Z",
+    "compiler_warnings": "18 existing Unsafe/deprecation/unchecked warnings.",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN: although the predicate itself reads movement values, its direct player/pathfinding helpers depend on live game state; no worldless stand-in was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158497,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "This is static and build evidence only. The sole ordinary caller is gated to non-null input state, and no in-game, valid-world, runtime-equivalence, or server-compatibility claim is made."
+}

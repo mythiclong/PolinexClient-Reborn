@@ -1,0 +1,29 @@
+R1983 — Pathfinder dual-input predicate
+
+Source method: private final boolean n() / ()Z
+Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+Normal caller: private final d(List):void, the only direct call in the owner (original invokespecial offset 88; final Java output invokevirtual offset 54). Before reaching n(), d(List) has read the same gate and returns if it is null. Thus its ordinary direct-call path uses n()'s non-null-gate arm.
+
+Original-reference basis
+- Protected original JAR SHA-256: d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26.
+- Local original class archive SHA-256: 2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230.
+- Complete owner was inspected with javap -p -c -v. Full original and compiled dumps remain local and are not published.
+- The gate getter `l():int[]` is exactly `getstatic; areturn`, and public setter `b(int[]):void` is exactly `aload_0; putstatic; return` in both original and compiled gate-owner classes. The static initializer creates a two-element array, but the setter accepts null; the method's gate-null branch is therefore preserved rather than assumed impossible.
+
+Confirmed source difference and repair
+The original calls the gate getter before h() and i(), then branches on the resulting array. The prior source omitted the gate read and used only `if (x == 0.0 && y == 0.0) return false`, which reproduces the original non-null-gate arm but not the gate-null arm. The source now reads the gate first and returns early for `x != 0.0 && y != 0.0` when it is null.
+
+Full descriptor comparison
+- Exact `()Z`, private/final access, and sole normal caller checked.
+- Ordered non-handler calls match: gate `l():int[]`, `h():double`, `i():double`, then `a(double,double,boolean,int):Integer` on `this`. Java's invokevirtual lowering targets the same private methods/receiver as Kotlin's invokespecial.
+- The sole mode `int` field is read once at the helper-call point; helper arguments remain `(x, y, false, mode)`. The helper result is tested for null and converted to boolean as in the original.
+- Original branch truth table:
+  - gate non-null: if `x == 0.0 && y == 0.0`, return false; otherwise call the helper.
+  - gate null: if `x != 0.0 && y != 0.0`, return false; otherwise call the helper.
+- Both h()/i() calls happen before branch selection, in that order. The original uses `dcmpg`; Javac uses `dcmpl`, but all consumers distinguish only zero/nonzero, and NaN is nonzero under both.
+- Original has five NoWhenBranchMatchedException handlers; the original `a(Throwable):Throwable` helper is `aload_0; areturn`, so handlers rethrow the same exception. Managed source adds no catch and swallows none.
+- Original n() has 55 instructions at offsets 0–103 and 5 exception handlers; final compiled n() has 42 instructions at offsets 0–69 and no handlers. All branch outcomes, calls, receivers, field reads, and exception propagation were reviewed.
+
+Validation and limits
+- Final source was built with `gradlew.bat build --rerun-tasks --no-daemon` under Eclipse Temurin JDK 25.0.4.1+1-LTS; exit code 0, about 48.2 seconds, 18 existing Unsafe/deprecation/unchecked warnings. Gradle tests report NO-SOURCE.
+- No direct probe, Minecraft client, valid player/world, normal-user-path, or compatible-server test was run. This slice is not claimed runtime-equivalent.

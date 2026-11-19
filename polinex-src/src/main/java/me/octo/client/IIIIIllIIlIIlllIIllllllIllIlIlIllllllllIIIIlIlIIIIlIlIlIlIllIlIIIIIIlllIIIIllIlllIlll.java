@@ -1864,13 +1864,18 @@ return true;
    }
 
    private final boolean n() {
+      int[] var5 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
       double var1 = this.h();
       double var3 = this.i();
-      if (var1 == 0.0 && var3 == 0.0) {
+      if (var5 != null) {
+         if (var1 == 0.0 && var3 == 0.0) {
+            return false;
+         }
+      } else if (var1 != 0.0 && var3 != 0.0) {
          return false;
-      } else {
-         return this.a(var1, var3, false, this.llIlllIlIlllllllIlllIIlllIlIIIllllIIlIlIIIIIIIIlIIIIIIIIlIIllIIIIIIIIlIllllIlllIlllIl) != null;
       }
+
+      return this.a(var1, var3, false, this.llIlllIlIlllllllIlllIIlllIlIIIllllIIlIlIIIIIIIIlIIIIIIIIlIIllIIIIIIIIlIllllIlllIlllIl) != null;
    }
 
    private final boolean o() {

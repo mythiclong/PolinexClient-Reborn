@@ -17,6 +17,8 @@ R1981 完成 Pathfinder 障碍/前进可行性谓词 `o():boolean` 的完整 des
 
 R1982 完成 Pathfinder 前进输入谓词 `p():boolean` 的完整原版 descriptor/控制流复核（原版 offset 0–143、73 条指令、7 个异常表项）。修复原源码把 `forward` 输入取反、导致 gate 非空时分支相反的问题；gate-null 分支仍按原版先读取输入、再绕过该早退。最终编译方法 65 条指令，调用目标、接收者、字段读取顺序、行为常量、分支和异常传播均已核对；`d(List)` 唯一正常调用点也完成静态核对。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试任务为 `NO-SOURCE`）。未做有效玩家/世界、正常游戏路径或兼容服务器验收，不宣称运行时等价。详见 [R1982 证据](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)。
 
+R1983 完成 Pathfinder 双输入谓词 `n():boolean` 的完整 descriptor 复核（原版 offset 0–103、55 条指令、5 个异常表项）。恢复原源码遗漏的 gate 读取及 gate-null 分支；gate 非空时沿用“两输入同时为零则 false，否则调用 helper”，gate 为空时原版则是“两输入同时非零才 false”。唯一直接调用点 `d(List)` 会先在 gate-null 时返回，因此本切片没有证明常规游戏路径出现差异。最终编译产物的有序调用、receiver、字段读取、分支和异常传播与原版核对通过。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试 `NO-SOURCE`）。没有客户端、有效世界、正常用户路径或兼容服务器验收，不宣称运行时等价。详见 [R1983 证据](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)。
+
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
 - **R1956 碰撞 gate 静态复核**：确认原版 `$llII…` 与当前 `$PXEvMid` 是同一状态持有者的源码重命名；getter、setter、初始化及 `a(BlockPos, ClientLevel): boolean` 的分支语义未发现确认差异。有效世界碰撞仍未验收。
@@ -52,6 +54,8 @@ R1982 完成 Pathfinder 前进输入谓词 `p():boolean` 的完整原版 descrip
 - [R1980 Pathfinder 二段碰撞谓词静态复核与全树构建](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
 - [R1981 Pathfinder `o()` 静态复核与全树构建](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
 - [R1982 Pathfinder `p()` 前进输入静态复核与全树构建](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
+- [R1983 Pathfinder `n()` 双输入谓词静态复核与全树构建](.analysis/evidence/mining/r1983-pathfinder-dual-input-predicate/manifest.json)
+- [R1982 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1982.json)
 - [R1981 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1981.json)
 - [R1966 Pathfinder tick 执行器静态复核与全树构建](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
@@ -100,7 +104,7 @@ R1982 完成 Pathfinder 前进输入谓词 `p():boolean` 的完整原版 descrip
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,492** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,497** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 
