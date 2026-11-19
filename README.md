@@ -9,7 +9,7 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-R1975 完成 Pathfinder `f(Vec3,Vec3,Vec3):boolean` 的完整 descriptor 审计（原版 offset 0–345、8 个异常表项），补回两处 `Vec3.add` 后缺失的 Kotlin 非空表达式检查。原版与最终编译方法的有序核心字段/方法/类引用 29 项一致；复核了 gate/player 早退、水平归一化与 `1.0E-6` 门限、采样器、三次几何谓词、正负偏移、宽度/边距和短路返回。原版异常处理器调用的是已确认的 identity rethrow helper，未吞异常。Temurin JDK 25 全树构建 exit 0。尚无有效世界、正常玩家路径或服务器验收。下一切片 R1976：审计本方法直接调用的半径碰撞谓词 `a(Vec3,double):boolean`。详见 [R1975 证据](.analysis/evidence/mining/r1975-pathfinder-geometry-probe/manifest.json) 与 [双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1975.json)。
+R1976 完成 Pathfinder `a(Vec3,double):boolean` 的完整原版 descriptor 审计（offset 0–169、4 个异常表项），补回 `ClientLevel.getBlockCollisions` 后缺失的 Kotlin 非空表达式检查及原始消息。原版与最终编译方法的有序核心字段/方法/类引用 18 项一致；另核对原版 `Entity` checkcast 在 Java 中因 `LocalPlayer` 子类型而被安全省略。已复核 gate/player/level 读取顺序、最小半径、AABB 六坐标、碰撞查询与 `any` 调用。Temurin JDK 25 全树构建 exit 0。没有有效世界/玩家、正常路径或服务器验收。下一切片 R1977：完整审计当前路线位置谓词 `a(Vec3):boolean`。详见 [R1976 证据](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json) 与 [双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1976.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -30,6 +30,7 @@ R1975 完成 Pathfinder `f(Vec3,Vec3,Vec3):boolean` 的完整 descriptor 审计�
 - **R1973 Pathfinder `e(Vec3,Vec3,Vec3): ArrayList`:** 完整原版 descriptor/CFG（offset 0–438、11 个异常表项）复核后补回 `Vec3.add` 非空检查、gate 后单次 player 读取及 player/速度向量 null 回退；并修复 `NaN` 角度被错误归为 forward 的分支。最终 compiled event stream 43 项无未匹配；Temurin JDK 25 全树构建 exit 0。第一次 Java 17 尝试只在配置阶段失败；一次 JDK 25 成功构建在发现 NaN 差异后作废，修正后的全树构建才是最终通过。没有直接探针、客户端、有效世界/玩家、正常路径或服务器验收。详见 [R1973 静态复核](.analysis/evidence/mining/r1973-pathfinder-direction/static-review.txt)。
 - **R1974 Pathfinder `a(Vec3,Vec3,List,Vec3): Pair`:** 完整原版 descriptor/CFG（offset 0–170、8 个异常表项）复核后，修正原源码的比较方向和 gate-null 短路：gate 非空时为 `distance <= f()+0.75`，gate 为空时按原始 comparator 非零判定（NaN 也为真），且绕过第二几何谓词；距离和阈值无论 gate 状态均按原版先求值。最终字段/方法目标流 13 项匹配；3 处私有调用 opcode 仅因 Kotlin/Javac lowering 不同而变化，target/receiver 相同。Temurin JDK 25 全树构建 exit 0。未做直接探针、游戏或服务器验收。详见 [R1974 静态复核](.analysis/evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt)。
 - **R1975 Pathfinder `f(Vec3,Vec3,Vec3): boolean`:** 完整原版 descriptor/CFG（offset 0–345、8 个异常表项）复核后补回两处 `Vec3.add` 之后缺失的 Kotlin `Intrinsics.checkNotNullExpressionValue`。最终编译方法与原版的有序核心字段/方法/类引用 29 项一致；已复核 gate/player、水平距离门限、采样器、构造参数、三次几何谓词、两侧偏移、重复宽度读取、`2.0`/`0.03` 常量和短路返回。8 个原版异常处理器只经 identity rethrow helper 重新抛出；源码未吞异常。Temurin JDK 25 全树 build exit 0，18 条既有 Unsafe/deprecation/unchecked warnings。未做有效世界、正常玩家路径或兼容服务器验收。详见 [R1975 静态复核与构建证据](.analysis/evidence/mining/r1975-pathfinder-geometry-probe/manifest.json)。
+- **R1976 Pathfinder `a(Vec3,double): boolean`:** 完整原版 descriptor/CFG（offset 0–169、4 个异常表项）复核后补回 `ClientLevel.getBlockCollisions` 后缺失的 Kotlin `Intrinsics.checkNotNullExpressionValue` 与原始消息。最终编译方法与原版的有序核心字段/方法/类引用 18 项一致；原版 `Entity` checkcast 因 Java 中 LocalPlayer 静态子类型而安全省略。复核 gate/player/level 顺序、`RangesKt.coerceAtLeast`、AABB 六坐标、玩家高度、碰撞调用和 `CollectionsKt.any`。原版 4 个异常处理器只经 identity helper 重新抛出；源码未吞异常。Temurin JDK 25 全树 build exit 0，18 条既有 warnings。未做有效世界、正常玩家路径或兼容服务器验收。详见 [R1976 静态复核与构建证据](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json)。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -48,12 +49,15 @@ R1975 完成 Pathfinder `f(Vec3,Vec3,Vec3):boolean` 的完整 descriptor 审计�
 - [R1974 Pathfinder `a(Vec3,Vec3,List,Vec3)` 静态复核与全树构建](.analysis/evidence/mining/r1974-pathfinder-conditional-pair/manifest.json)
 - [R1974 Pathfinder 静态复核细节](.analysis/evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt)
 - [R1975 Pathfinder 静态复核细节](.analysis/evidence/mining/r1975-pathfinder-geometry-probe/static-review.txt)
+- [R1976 Pathfinder `a(Vec3,double)` 静态复核与全树构建](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json)
 - [R1975 Pathfinder `f(Vec3,Vec3,Vec3)` 静态复核与全树构建](.analysis/evidence/mining/r1975-pathfinder-geometry-probe/manifest.json)
+- [R1976 Pathfinder 静态复核细节](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/static-review.txt)
 - [R1971 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1971.json)：私有 `openpolinex` 内容提交 `fb7f979`、公开 `PolinexClient-Reborn/main` 内容提交 `283a0d6`；远端 refs 已核验。
 - [R1972 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1972.json)：含代码/evidence 内容提交、README/RESUME 元数据提交与两端 refs 校验。
 - [R1973 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1973.json)：代码/证据、README/RESUME 与双端 refs 核验。
 - [R1974 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1974.json)：代码/证据、README/RESUME 与双端 refs 核验。
 - [R1975 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1975.json)：源码/证据、README/RESUME 与两端 refs 核验。
+- [R1976 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1976.json)：源码/证据、README/RESUME 与两端 refs 核验。
 - [R1970 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1970.json)：私有 `openpolinex` 内容提交 `eaca820`、公开 `PolinexClient-Reborn/main` 内容提交 `500963e`；远端 refs 已核验。
 - [R1968 Pathfinder 实体路线静态复核与全树构建](.analysis/evidence/mining/r1968-pathfinder-entity-route/manifest.json)
 - [R1969 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1969.json)：私有 `openpolinex` 内容提交 `16b2a70`、公开 `PolinexClient-Reborn/main` 内容提交 `b993352`，两端 refs 于 2026-11-19 17:19:42 UTC 核验一致。
@@ -81,7 +85,7 @@ R1975 完成 Pathfinder `f(Vec3,Vec3,Vec3):boolean` 的完整 descriptor 审计�
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,468** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,474** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 

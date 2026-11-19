@@ -1438,7 +1438,9 @@ return CollectionsKt.arrayListOf(CollectionsKt.first(param1));
          param1.x - var7, param1.y + 0.04, param1.z - var7,
          param1.x + var7, param1.y + (double)var5.getBbHeight(), param1.z + var7
       );
-      return CollectionsKt.any(var6.getBlockCollisions((Entity)var5, var9));
+      Iterable<VoxelShape> var10 = var6.getBlockCollisions((Entity)var5, var9);
+      Intrinsics.checkNotNullExpressionValue(var10, "getBlockCollisions(...)");
+      return CollectionsKt.any(var10);
    }
 
    private final ArrayList<Vec3> a(ArrayList<Vec3> param1, Vec3 param2, Vec3 param3) {

@@ -1,0 +1,28 @@
+R1976 static review — Pathfinder `a(Vec3, double): boolean`
+
+Baseline commit: `418f91c1445fbd871978c42fb8c1dfe5163fee2c`; source blob `c52b187f7f5b4830736bbfc0cb2c0d40a6dd593d`. Final source blob `c9aabf40b11d7e61a3597a0a7f4b98a1a7655333`; LF SHA-256 `33d79eb06d513be855da0a626169c9269d9c7af8e0ad096c687fb91e64a6d3d7`; exact working-tree SHA-256 at final build `be555d7ed6631f782a54cc51c21ae285b9de05cd0484fdd634e879055c290528`.
+
+## Complete descriptor review
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Lnet/minecraft/world/phys/Vec3;D)Z`. The complete original method spans offsets 0–169 and has 4 exception-table entries. The original JAR SHA-256 is `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; the original and final compiled owner were disassembled with JDK 25 `javap -p -c -s -v` (exit 0 for both). Full dumps remain local.
+
+## Confirmed correction and preserved behavior
+
+- The method reads the state gate once and returns false when it is null; it then captures `Minecraft.player` once and returns false when absent; next it captures `Minecraft.level` once and returns false when absent. Player is obtained before level, as in the original.
+- It computes `RangesKt.coerceAtLeast(param2, 0.2)` and constructs an AABB in the original order: `x-radius`, `y+0.04`, `z-radius`, `x+radius`, `y+player.getBbHeight()`, `z+radius`.
+- It calls `ClientLevel.getBlockCollisions(player, box)` on the captured level, then checks the returned iterable with `Intrinsics.checkNotNullExpressionValue(..., "getBlockCollisions(...)")`, then returns `CollectionsKt.any(iterable)`. The previous source omitted this Kotlin non-null check; it is now restored at the original call point.
+- The original explicitly emits `checkcast Entity` for the player argument. In the Java source and compiled method the same `LocalPlayer` value is statically known to be an `Entity`, so Java lowering omits a redundant runtime checkcast; the method target, receiver, and object argument are unchanged.
+- The ordered 18 core field/method/class reference events match after excluding the original identity-rethrow calls and that redundant type check. The guard branches, radius and vertical constants (`0.2`, `0.04`), coordinate field reads, player height getter, AABB constructor descriptor, collision query target, exact Kotlin null-check message, and `any` target were all reviewed.
+
+## Exception boundary and compiled comparison
+
+All 4 original handlers catch only `kotlin.NoWhenBranchMatchedException` and call the owner's `a(Throwable):Throwable`, previously verified from the complete original owner as identity (`aload_0; areturn`) before rethrow. Their alternate branches use the same gate local after the method has already required it to be non-null. The Java source and compiled method use direct early returns, catch nothing, and swallow no exception.
+
+Static status: **PASS** for the complete descriptor/source/compiled-method review. This is not runtime-equivalence evidence.
+
+## Build and runtime boundary
+
+Final Temurin JDK `25.0.4.1+1-LTS` full-tree `build --rerun-tasks`: `2026-11-19T19:19:53.6416980Z`–`2026-11-19T19:20:55.4365738Z`, exit code 0, 18 existing Unsafe/deprecation/unchecked warnings, tests `NO-SOURCE`. See `build-jdk25-final.log` and `attempts.json`.
+
+No direct probe, Minecraft client, valid player/world, normal Pathfinder user path, desktop input, or compatible server was used. Live player/world collision behavior remains open for normal in-game acceptance.

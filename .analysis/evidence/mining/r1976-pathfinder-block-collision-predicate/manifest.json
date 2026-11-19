@@ -1,0 +1,95 @@
+{
+  "experiment_id": "R1976-pathfinder-block-collision-predicate",
+  "generated_utc": "2026-11-19T19:22:27Z",
+  "scope": "Full-descriptor static restoration review of Pathfinder a(Vec3,double):boolean and final Temurin 25 full-tree build.",
+  "source_baseline": {
+    "commit": "418f91c1445fbd871978c42fb8c1dfe5163fee2c",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob_oid": "c52b187f7f5b4830736bbfc0cb2c0d40a6dd593d"
+  },
+  "modified_method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;D)Z",
+    "original_offsets": "0-169 inclusive",
+    "original_exception_table_entries": 4,
+    "change_summary": [
+      "Restore Intrinsics.checkNotNullExpressionValue after ClientLevel.getBlockCollisions, with the original getBlockCollisions(...) message.",
+      "Preserve the guard/player/level capture order, minimum radius coercion, AABB coordinates and argument order, collision query, and CollectionsKt.any result."
+    ]
+  },
+  "source_change": {
+    "changed_source_files": 1,
+    "final_git_blob_oid": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333",
+    "source_content_sha256_lf": "33d79eb06d513be855da0a626169c9269d9c7af8e0ad096c687fb91e64a6d3d7",
+    "source_working_tree_sha256_at_final_build": "be555d7ed6631f782a54cc51c21ae285b9de05cd0484fdd634e879055c290528"
+  },
+  "original_reference_local_only": {
+    "original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "original_full_owner_javap_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+    "original_javap_exit_code": 0
+  },
+  "final_compiled_output": {
+    "full_owner_javap_sha256_local_only": "68e436e988c2f636515550f7b7bbb6e433a6b735edb1653f835b3c127d03e8e6",
+    "compiled_javap_exit_code": 0,
+    "compiled_owner_class_sha256": "074f3bd7c5c98b102dd0c1fd2531b54e4f9c74e8026aeda23d04e35ee2c6bfdb",
+    "built_jar_sha256": "73a37efe28207e9ecdd8dfaac06bab2dd8339c108b1c6aa7a43f9606d95fe6f3"
+  },
+  "static_review": {
+    "status": "PASS",
+    "record": "static-review.txt",
+    "checks": [
+      "Read the complete original and final compiled owner using JDK 25 javap -p -c -s -v; exact descriptor confirmed; original method offsets 0-169 and all 4 handlers reviewed.",
+      "The ordered 18 core field/method/class reference events match after excluding original identity-rethrow calls and the explicit LocalPlayer-to-Entity checkcast that Java's subtype typing makes unnecessary.",
+      "Restored the original Intrinsics null-expression check immediately after getBlockCollisions and before CollectionsKt.any, with the exact message string.",
+      "Reviewed single guard/player/level reads and their order, RangesKt.coerceAtLeast target and 0.2 constant, all Vec3 coordinate reads, 0.04 vertical offset, LocalPlayer.getBbHeight, AABB constructor descriptor/argument order, getBlockCollisions receiver/arguments, and any call.",
+      "The 4 original handlers catch NoWhenBranchMatchedException and route through the owner's identity a(Throwable):Throwable helper. The source and compiled method add no catch and swallow no exception."
+    ]
+  },
+  "build": {
+    "record": "build-jdk25-final.log",
+    "attempts": "attempts.json",
+    "command": "gradlew.bat \"-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k\" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-19T19:19:53.6416980Z",
+    "ended_utc": "2026-11-19T19:20:55.4365738Z",
+    "exit_code": 0,
+    "full_tree_build": "PASS",
+    "tests": "NO-SOURCE",
+    "warnings": "18 existing Unsafe/deprecation/unchecked warnings"
+  },
+  "static_disassembly": {
+    "command_template": "javap -classpath <LOCAL_ORIGINAL_JAR_OR_COMPILED_CLASSES> -p -c -s -v <exact-owner>",
+    "started_utc": "2026-11-19T19:22:24.9909417Z",
+    "ended_utc": "2026-11-19T19:22:26.5604379Z",
+    "original_javap_exit_code": 0,
+    "compiled_javap_exit_code": 0
+  },
+  "runtime_acceptance": {
+    "direct_probe": "NOT RUN",
+    "minecraft_client": false,
+    "valid_player_and_world": false,
+    "normal_user_path": false,
+    "compatible_server": false,
+    "desktop_input": "NOT USED",
+    "screenshot_sha256": null,
+    "reason": "The predicate queries ClientLevel block collisions using a live LocalPlayer. No worldless or fake-player fixture was used in place of normal in-game validation."
+  },
+  "source_inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158474,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory is not feature-completion evidence."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw build logs containing local paths",
+    "Gradle caches and build outputs"
+  ],
+  "hash_semantics": "Working-tree SHA-256 is exact file bytes at final build; LF SHA-256 is normalized text; Git blob OID is the Git-cleaned text object."
+}

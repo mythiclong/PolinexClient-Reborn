@@ -1,0 +1,43 @@
+{
+  "experiment_id": "R1976-pathfinder-block-collision-predicate",
+  "attempts": [
+    {
+      "attempt_id": "R1976-build-final-1",
+      "kind": "full-tree-gradle-build",
+      "command": "gradlew.bat \"-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k\" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "started_utc": "2026-11-19T19:19:53.6416980Z",
+      "ended_utc": "2026-11-19T19:20:55.4365738Z",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "tests": "NO-SOURCE",
+        "expected_warning_count": 18,
+        "actual_warning_count": 18
+      },
+      "log_record": "build-jdk25-final.log"
+    },
+    {
+      "attempt_id": "R1976-static-compare-1",
+      "kind": "original-and-final-owner-javap-review",
+      "command": "javap -classpath <LOCAL_ORIGINAL_JAR_OR_COMPILED_CLASSES> -p -c -s -v <exact-owner>",
+      "started_utc": "2026-11-19T19:22:24.9909417Z",
+      "ended_utc": "2026-11-19T19:22:26.5604379Z",
+      "exit_code": 0,
+      "assertions": {
+        "exact_descriptor": "PASS",
+        "original_method_offsets": "0-169",
+        "original_exception_handlers": 4,
+        "ordered_core_reference_events_original": 18,
+        "ordered_core_reference_events_compiled": 18,
+        "ordered_core_reference_events_match": true,
+        "final_source_changes_match_review": true
+      },
+      "local_dump_hashes_only": {
+        "original_full_owner_javap_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+        "compiled_full_owner_javap_sha256": "68e436e988c2f636515550f7b7bbb6e433a6b735edb1653f835b3c127d03e8e6"
+      },
+      "publication": "Full dumps and absolute local artifact paths are excluded."
+    }
+  ]
+}
