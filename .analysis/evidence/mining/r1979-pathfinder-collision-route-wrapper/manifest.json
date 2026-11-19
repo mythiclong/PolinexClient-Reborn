@@ -1,0 +1,68 @@
+{
+  "experiment_id": "R1979-pathfinder-collision-route-wrapper",
+  "generated_utc": "2026-11-19T20:06:10Z",
+  "scope": "Audit the direct Pathfinder caller of g(Vec3, Vec3, Vec3), align collection invocation owners to the original, and validate the exact final source with a full-tree build.",
+  "source_baseline": {
+    "commit": "15d57eaf41a9199c2a1adb4fd2fd197e7703dc3e",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "713ebd60168d99c62789500e952f888ea21e4f00"
+  },
+  "source_final_at_build": {
+    "git_blob": "1118a2ee5b0a33825d33342c1c1bf1ec09e9634e",
+    "sha256_lf": "9530b222e40e78f9f059ed643fe488e31faedcce7a84247d5302825df6a5235e",
+    "working_tree_sha256": "e853d8578c825b57b15c53633d462296815a13afd1e0f821681d96491f10f7eb"
+  },
+  "original_reference": {
+    "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(Ljava/util/ArrayList;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/ArrayList;",
+    "original_offsets": "0-173",
+    "original_instruction_count": 79,
+    "original_exception_handlers": 4,
+    "compiled_offsets": "0-111",
+    "compiled_instruction_count": 48,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256": "a5f6717c4423c06356d189d6447d5884fb38ad6c083a43e5eaea8e14d0495d70"
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "exception_handlers": "All 4 original handlers catch NoWhenBranchMatchedException and delegate to a(Throwable); the complete original helper is identity. The source propagates exceptions and swallows none.",
+    "ordered_invocation_targets": "PASS: all 9 actual invoke targets match in order. The only opcode delta is invokespecial -> invokevirtual for the same private final g(Vec3, Vec3, Vec3) target/receiver under Javac lowering.",
+    "ordered_reference_events": "PASS: 13/13 after omitting the original redundant widening-cast class tokens for List, Iterable, and Collection.",
+    "source_callsite_alignment": "The enhanced loop now uses an Iterable<Vec3> receiver and the output is viewed through Collection<Vec3>; the compiled calls therefore target Iterable.iterator() and Collection.add(), matching the original invoke owners. The final ArrayList cast is retained.",
+    "source_branch_review": "PASS: gate-null returns the original list; on a non-null gate, firstOrNull null and collision-offset null both return the original list; otherwise a fresh ArrayList is built in input iteration order by adding the same displacement to each Vec3. The ignored Collection.add boolean, iteration boundaries, and final return target were checked against the complete descriptor.",
+    "numeric_and_string_literals": "PASS: neither method contains behavioral numeric or string literals requiring normalization."
+  },
+  "validation": {
+    "full_tree_build": "PASS",
+    "direct_probe": "NOT RUN: the called collision helper requires a valid Minecraft player/world; no worldless substitute was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158482,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "This evidence establishes static reconstruction and compilation only. It does not establish runtime equivalence, a normal Pathfinder path, or server compatibility; the evidence-production baseline is distinct from the later ingestion commit."
+}

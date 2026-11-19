@@ -1450,11 +1450,13 @@ if (var4 != null) {
    if (var5 != null) {
       Vec3 var6 = this.g(var5, param2, param3);
       if (var6 != null) {
-         ArrayList<Vec3> var8 = new ArrayList<Vec3>();
-         for (Vec3 var12 : param1) {
-            var8.add(var12.add(var6));
-         }
-         return var8;
+          Iterable<Vec3> var7 = param1;
+          ArrayList<Vec3> var8 = new ArrayList<Vec3>();
+          java.util.Collection<Vec3> var9 = var8;
+          for (Vec3 var12 : var7) {
+             var9.add(var12.add(var6));
+          }
+          return (ArrayList<Vec3>)var9;
       }
    }
 }
@@ -1832,6 +1834,10 @@ return true;
    }
 
    private final boolean b(Vec3 param1) {
+      int[] var11 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      if (var11 == null) {
+         return false;
+      }
       LocalPlayer var1 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
       if (var1 == null) {
          return false;

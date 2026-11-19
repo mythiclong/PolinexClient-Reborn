@@ -1,0 +1,30 @@
+{
+  "experiment_id": "R1980-pathfinder-collision-gate",
+  "attempts": [
+    {
+      "attempt_id": "R1980-BUILD-JAVA17-VOID",
+      "command": "gradlew.bat build --rerun-tasks",
+      "start_utc": "2026-11-19T20:18:26.2150674Z",
+      "end_utc": "2026-11-19T20:18:33.6531071Z",
+      "exit_code": 1,
+      "result": "VOID_ENVIRONMENT",
+      "reason": "Gradle inherited JAVA_HOME selecting Java 17 while Fabric Loom 1.18.0-alpha.19 requires JVM 25. Failure occurred during project configuration before source compilation; it is not a source/build regression. The workstation path and raw log are intentionally omitted."
+    },
+    {
+      "attempt_id": "R1980-BUILD-JDK25-FINAL",
+      "command": "gradlew.bat build --rerun-tasks --no-daemon",
+      "start_utc": "2026-11-19T20:19:04.2244495Z",
+      "end_utc": "2026-11-19T20:19:55.6956201Z",
+      "java_runtime": "Eclipse Temurin 25.0.4.1+1-LTS",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "compileJava": "EXECUTED; 18 existing Unsafe/deprecation/unchecked warnings",
+        "compileTestJava": "NO-SOURCE",
+        "test": "NO-SOURCE",
+        "jar": "EXECUTED",
+        "runtime_equivalence": "NOT TESTED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+R1980 — Pathfinder private final b(Vec3):boolean
+Original descriptor: (Lnet/minecraft/world/phys/Vec3;)Z
+Original method code offsets: 0–293; 147 instructions; 5 exception-table entries.
+Final compiled method code offsets: 0–241; 124 instructions; no exception table.
+
+The original first stores the result of the gate helper and returns false when that array is null, before reading Minecraft.player or Minecraft.level. The prior managed source fetched player/level without enforcing this gate. R1980 restores the early return in the same evaluation order.
+
+Full method review covered gate/player/level null exits; width-derived first AABB radius (width / 2 - 0.02, minimum 0.2); first box coordinates including y + 0.04 and player height; first collision query and Kotlin non-null check; false short-circuit when the body box collides; width-derived support radius (width / 2 - 0.08, minimum 0.15); second box from y - 0.08 to y + 0.02; second collision query, null check, and final any(...) result.
+
+Original and compiled method event comparison:
+- 14 non-handler invocation targets, same order.
+- 16 field references, same order.
+- 9 behavioral numeric literals, same order.
+- Both getBlockCollisions(...) Kotlin null-check strings, same order.
+- Original has two Entity checkcasts before ClientLevel.getBlockCollisions; Javac safely omits them because the source receiver is statically LocalPlayer.
+- The original's five NoWhenBranchMatchedException handlers call a(Throwable); that helper's complete body is aload_0; areturn. The source propagates exceptions and swallows none.
+
+The full-tree Temurin JDK 25 build of the exact final source passed with exit code 0. The build reports 18 existing Unsafe/deprecation/unchecked warnings; test sources are NO-SOURCE. No direct world-dependent probe, Minecraft client path, normal Pathfinder input, or compatible-server test was performed. Do not infer runtime equivalence from this static/build evidence.
+
+Protected original and compiled owner dumps remain local. Only their SHA-256 values and the review summary are published.

@@ -1,0 +1,73 @@
+{
+  "experiment_id": "R1980-pathfinder-collision-gate",
+  "generated_utc": "2026-11-19T20:26:45Z",
+  "scope": "Restore the Pathfinder two-stage AABB collision predicate's missing gate-null early return, then review the exact original and compiled method and run a full-tree build.",
+  "source_baseline": {
+    "commit": "15d57eaf41a9199c2a1adb4fd2fd197e7703dc3e",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before_slice": "1118a2ee5b0a33825d33342c1c1bf1ec09e9634e"
+  },
+  "source_final_at_build": {
+    "git_blob": "689f71330ff91a7b8e5d08aafe6d9bdaae63ef4c",
+    "sha256_lf": "e8d1ee632e16d1ffc81dbf747d3e91ff4f8ca6a6fccff57382907f954073ca17"
+  },
+  "original_reference": {
+    "protected_original_jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "local_original_class_archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_dump_sha256_lf": "90876889c9ab54e93a76e18fe404e992dd007c1acc53638f575753a48948659f",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "b",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;)Z",
+    "access": "private final",
+    "original_offsets": "0-293",
+    "original_instruction_count": 147,
+    "original_exception_handlers": 5,
+    "compiled_offsets": "0-241",
+    "compiled_instruction_count": 124,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256_lf": "45859319b82fbaa8a154088a71c88b08f3a23dc3ee4de24a78793b118f527f5e"
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "gate_null_branch": "PASS: the original returns false before reading Minecraft.player or Minecraft.level when the local gate array is null. The managed source now performs that early return; this branch was absent before R1980.",
+    "ordered_invocation_targets": "PASS: all 14 non-handler helper invocation targets match in order. The 5 original exception-table trampoline calls to a(Throwable) are omitted in source because that helper is exactly aload_0; areturn and only rethrows the same throwable.",
+    "ordered_field_references": "PASS: all 16 field references match in order, including the gate, Minecraft/player/level, and both AABB coordinate sets.",
+    "casts_and_null_checks": "PASS: both original Entity checkcasts are safely omitted because the source local is LocalPlayer, a statically known Entity subtype. Both getBlockCollisions results retain the original Kotlin non-null check and message.",
+    "ordered_behavioral_numeric_literals": "PASS: 9 values match in order: 2.0, 0.02, 0.2, 0.04, 2.0, 0.08, 0.15, 0.08, 0.02. Opaque obfuscator push/pop constants are not behavioral values.",
+    "ordered_string_literals": "PASS: both getBlockCollisions(...) null-check messages match.",
+    "branch_review": "PASS: gate/player/level early returns; first AABB width-derived radius and vertical span; collision query and null check; immediate false on body obstruction; second support AABB and query; final any(...) result were checked against the complete original descriptor and final compiled method.",
+    "exception_behavior": "All 5 original handlers catch NoWhenBranchMatchedException and invoke the verified identity helper a(Throwable). The managed source does not catch or swallow exceptions."
+  },
+  "validation": {
+    "full_tree_build": "PASS: gradlew.bat build --rerun-tasks --no-daemon, Temurin JDK 25.0.4.1, exit 0.",
+    "compiler_warnings": "18 existing Unsafe/deprecation/unchecked warnings.",
+    "tests": "NO-SOURCE",
+    "direct_probe": "NOT RUN: behavior depends on a valid Minecraft player and ClientLevel; no worldless substitute was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158486,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "Evidence establishes a static restoration and compilation only. It does not establish runtime equivalence, normal Pathfinder behavior, or server compatibility. Evidence-production baseline and later ingestion commit are distinct."
+}

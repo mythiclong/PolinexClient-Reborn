@@ -1,0 +1,24 @@
+R1979 static review — Pathfinder collision-offset route wrapper
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Ljava/util/ArrayList;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/ArrayList;`.
+Baseline commit: `15d57eaf41a9199c2a1adb4fd2fd197e7703dc3e`; baseline source blob: `713ebd60168d99c62789500e952f888ea21e4f00`.
+Final source blob: `1118a2ee5b0a33825d33342c1c1bf1ec09e9634e`; normalized-LF SHA-256: `9530b222e40e78f9f059ed643fe488e31faedcce7a84247d5302825df6a5235e`.
+
+## Complete descriptor review
+
+The original method spans offsets 0–173 and has 4 exception-table entries. Each catches `kotlin.NoWhenBranchMatchedException` and rethrows through `a(Throwable): Throwable`; the owner's complete helper body is `aload_0; areturn`. The Java method uses direct control flow and does not swallow exceptions.
+
+The gate is read before any list access. If it is null, the original returns the original input list. With a non-null gate, the method calls `CollectionsKt.firstOrNull(input)` and returns the original list when that result is null. It calls the same owner's private `g(first, param2, param3)` helper; a null displacement also returns the original list. Only a non-null displacement allocates a new, empty `ArrayList`, iterates the input in iteration order, adds the displacement to each element, ignores the `Collection.add` boolean, and returns the newly allocated `ArrayList`.
+
+## Source alignment and compiled comparison
+
+The original bytecode views the input as `List` for `firstOrNull`, views it as `Iterable` for iteration, and views the output as `Collection` for `add`. The Java source now gives the loop an `Iterable<Vec3>` receiver and the output a `Collection<Vec3>` receiver, so the actual compiled calls target the same `Iterable.iterator()` and `Collection.add()` methods. Javac omits the original redundant widening-cast class tokens for `List`, `Iterable`, and `Collection`; the final narrowing cast back to `ArrayList` remains.
+
+All 9 ordered invocation targets match. Javac emits `invokevirtual` rather than the original Kotlin `invokespecial` for the call to the same `private final g(Vec3, Vec3, Vec3)` method on the same receiver. This is recorded as a compiler lowering difference, not a claim of byte-for-byte identity. After the three widening-cast class tokens are omitted, the ordered reference stream matches 13/13. The method has no behavioral numeric/string constants.
+
+Static status: **PASS WITH DECLARED JAVA CAST/PRIVATE-CALL LOWERING DIFFERENCES**. This is not runtime-equivalence evidence.
+
+## Runtime boundary
+
+No direct probe, Minecraft client, valid player/world, normal route entry path, or compatible server was used. The caller's end-to-end behavior remains open for live acceptance.

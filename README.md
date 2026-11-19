@@ -9,7 +9,9 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-R1978 完成 Pathfinder 碰撞推力 helper `g(Vec3, Vec3, Vec3): Vec3` 的完整原版 descriptor 审计（offset 0–933、18 个异常表项），修复 gate/player/level 早退、`Iterator.next()` 与 `VoxelShape.bounds()` 的 Kotlin 非空检查、半径外碰撞跳过，以及错误的逐障碍物缩放；`0.28` 与最大推力上限现只在方向聚合和投影后应用一次。R1977 同步完成 `a(Vec3): boolean` 静态审计，并将 `size()` 调用 owner 对齐到原版 `Collection.size()I`。最终编译 owner 对照两方法的有序调用/字段引用及常量通过约定的 Java 降低差异审查；Temurin JDK 25 全树 `build --rerun-tasks` exit 0。没有有效玩家/世界、正常寻路入口或兼容服务器验收，不宣称运行时等价。详见 [R1977 证据](.analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json) 与 [R1978 证据](.analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json)。
+R1979 完成 Pathfinder 碰撞位移路线包装器 `a(ArrayList<Vec3>, Vec3, Vec3):ArrayList<Vec3>` 的完整原版 descriptor 审计（offset 0–173、4 个异常表项），将迭代器与输出集合的真实调用 receiver 对齐到原版 `Iterable.iterator()` / `Collection.add()`，保留 gate、空列表、碰撞偏移为空时返回原列表及成功时新建列表的顺序。最终编译 owner 的 9 个 invoke 目标和 13 个规范化引用与原版一致；唯一已记录差异是 Java 编译器对同一 `private final g(...)` 调用使用 `invokevirtual` 而非 Kotlin 的 `invokespecial`。Temurin JDK 25 全树 `build --rerun-tasks` exit 0。未做有效世界、正常游戏路径或兼容服务器验收，不宣称运行时等价。详见 [R1979 证据](.analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
+
+R1980 完成 Pathfinder 二段 AABB 碰撞谓词 `b(Vec3):boolean` 的完整原版 descriptor 审计（offset 0–293、5 个异常表项），修复遗漏的 gate-null 早退，使其在读取 player/level 前返回 false。原版与最终编译产物的 14 个非异常 helper 调用、16 个字段引用、9 个行为数值常量和 2 个 Kotlin 空值检查消息按序一致；Java 因 `LocalPlayer` 静态子类型省略了两处冗余 `Entity` checkcast。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试任务为 `NO-SOURCE`）。未做有效世界、正常玩家路径或兼容服务器验收；不宣称运行时等价。详见 [R1980 证据](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -33,6 +35,8 @@ R1978 完成 Pathfinder 碰撞推力 helper `g(Vec3, Vec3, Vec3): Vec3` 的完�
 - **R1976 Pathfinder `a(Vec3,double): boolean`:** 完整原版 descriptor/CFG（offset 0–169、4 个异常表项）复核后补回 `ClientLevel.getBlockCollisions` 后缺失的 Kotlin `Intrinsics.checkNotNullExpressionValue` 与原始消息。最终编译方法与原版的有序核心字段/方法/类引用 18 项一致；原版 `Entity` checkcast 因 Java 中 LocalPlayer 静态子类型而安全省略。复核 gate/player/level 顺序、`RangesKt.coerceAtLeast`、AABB 六坐标、玩家高度、碰撞调用和 `CollectionsKt.any`。原版 4 个异常处理器只经 identity helper 重新抛出；源码未吞异常。Temurin JDK 25 全树 build exit 0，18 条既有 warnings。未做有效世界、正常玩家路径或兼容服务器验收。详见 [R1976 静态复核与构建证据](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json)。
 - **R1977 Pathfinder `a(Vec3): boolean`**：完整原版 descriptor（offset 0–347、17 个异常表项）审计并与最终编译 owner 对照。gate/list 空值、索引边界、当前/前一节点、`getOrNull`、枚举排除、距离阈值和几何短路均核对；将原版 `Collection.size()I` 调用目标显式对齐（Java 省略其冗余 widening cast）。24 个规范化有序引用和 `0.75` 常量一致。此为静态审计，未做正常游戏路径验收。见 [R1977 manifest](.analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json)。
 - **R1978 Pathfinder 碰撞推力 `g(Vec3,Vec3,Vec3): Vec3`**：完整原版 descriptor（offset 0–933、18 个异常表项）复核后恢复 gate/player/level 早退、`next(...)`/`bounds(...)` 非空检查、半径边界跳过，以及先聚合再投影、最后统一应用 `0.28` 与最大推力上限。最终编译方法的 73 个规范化有序引用、10 个数值常量和 3 个字符串常量与原版相符。Temurin JDK 25 全树 build exit 0；未测试有效世界、正常路线或服务器。见 [R1978 manifest](.analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json)。
+- **R1979 Pathfinder 碰撞偏移路线包装器 `a(ArrayList<Vec3>,Vec3,Vec3)`**：完整原版 descriptor（offset 0–173、4 个异常表项）复核后，将实际 iterator/add 调用 receiver 分别设为原版的 `Iterable` 和 `Collection`，并核对 gate、首点空值、`g(...)` 返回为空时原列表 fallback、成功时按迭代顺序构造新列表。9 个有序 invoke 目标及 13 个规范化引用一致；唯一编译降低差异为私有 `g(...)` 的 invokespecial/invokevirtual。Temurin JDK 25 全树 build exit 0；未做有效世界或服务器验收。见 [R1979 manifest](.analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
+- **R1980 Pathfinder `b(Vec3): boolean`**：完整原版 descriptor（offset 0–293、5 个异常表项）对照后，补回 gate-null 时在读取 player/level 前返回 false 的分支。最终编译产物的 14 个非异常 helper 调用、16 个字段引用、9 个行为数值常量和 2 个空值检查消息按序匹配；Java 安全省略两处冗余 `Entity` checkcast。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0，18 条既有警告，测试为 `NO-SOURCE`。未运行客户端、有效世界或服务器。详见 [R1980 manifest](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -40,6 +44,7 @@ R1978 完成 Pathfinder 碰撞推力 helper `g(Vec3, Vec3, Vec3): Vec3` 的完�
 ### 最新交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1980 Pathfinder 二段碰撞谓词静态复核与全树构建](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
 - [R1966 Pathfinder tick 执行器静态复核与全树构建](.analysis/evidence/mining/r1966-pathfinder-executor-reconstruction/manifest.json)
 - [R1967 Pathfinder 历史输入判定字节码复核、差分与全树构建](.analysis/evidence/mining/r1967-pathfinder-history-predicate/manifest.json)
 - [R1969 Pathfinder `d(List)` 静态复核与全树构建](.analysis/evidence/mining/r1969-pathfinder-d-list/manifest.json)
@@ -87,7 +92,7 @@ R1978 完成 Pathfinder 碰撞推力 helper `g(Vec3, Vec3, Vec3): Vec3` 的完�
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,480** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,486** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 

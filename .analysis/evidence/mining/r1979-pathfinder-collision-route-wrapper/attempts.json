@@ -1,0 +1,57 @@
+{
+  "experiment_id": "R1979-pathfinder-collision-route-wrapper",
+  "attempts": [
+    {
+      "attempt_id": "R1979-invocation-target-survey-1",
+      "kind": "complete-method-callsite-target-survey",
+      "started_utc": "2026-11-19T20:02:42.0659038Z",
+      "ended_utc": "2026-11-19T20:02:42.3467430Z",
+      "exit_code": 0,
+      "observation": "The prior source dispatched iterator() and add() through ArrayList while original bytecode invokes Iterable.iterator() and Collection.add(). Source receiver types were aligned before the final build."
+    },
+    {
+      "attempt_id": "R1979-full-tree-build-final-1",
+      "kind": "full-tree-gradle-build",
+      "command": "gradlew.bat \"-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k\" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "working_directory": "polinex-src",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "source_git_blob": "1118a2ee5b0a33825d33342c1c1bf1ec09e9634e",
+      "source_sha256_lf": "9530b222e40e78f9f059ed643fe488e31faedcce7a84247d5302825df6a5235e",
+      "started_utc": "2026-11-19T20:03:59.8211237Z",
+      "ended_utc": "2026-11-19T20:04:55.5070778Z",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "tests": "NO-SOURCE",
+        "existing_warning_count": 18
+      },
+      "log_record": "build-jdk25-final.log"
+    },
+    {
+      "attempt_id": "R1979-strict-invoke-opcode-check-1",
+      "kind": "exact-descriptor-invoke-stream-check",
+      "started_utc": "2026-11-19T20:05:21.8237006Z",
+      "ended_utc": "2026-11-19T20:05:22.9603788Z",
+      "exit_code": 2,
+      "observation": "The referenced member/receiver matched, but the strict opcode assertion rejected Javac's invokevirtual for the same private final g() target versus original Kotlin invokespecial. No behavior conclusion was drawn from opcode inequality alone."
+    },
+    {
+      "attempt_id": "R1979-final-descriptor-review-1",
+      "kind": "full-descriptor-reference-and-invoke-target-comparison",
+      "command": "javap -classpath build\\classes\\java\\main -p -c -s -v <owner>; compare the exact wrapper descriptor against the retained original owner dump by recorded SHA-256",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "original_owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+      "compiled_owner_dump_sha256": "a5f6717c4423c06356d189d6447d5884fb38ad6c083a43e5eaea8e14d0495d70",
+      "started_utc": "2026-11-19T20:06:10.3007636Z",
+      "ended_utc": "2026-11-19T20:06:10.5350700Z",
+      "exit_code": 0,
+      "assertions": {
+        "exact_descriptor": "PASS",
+        "ordered_invoke_targets": "PASS: all 9 targets match; only the private-g opcode differs under Javac lowering.",
+        "ordered_references": "PASS: 13/13 after excluding the original redundant List/Iterable/Collection widening-cast class tokens.",
+        "original_offsets_and_handlers": "PASS: 0-173; 4 handlers."
+      },
+      "publication": "Full dumps and local artifact paths are excluded."
+    }
+  ]
+}
