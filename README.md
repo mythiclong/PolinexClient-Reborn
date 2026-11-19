@@ -25,6 +25,7 @@
 
 - [当前交接](.analysis/reports/RESUME.md)
 - [2026-11-19 Pathfinder 最新同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1954.json)
+- 本次已推送：私有 `openpolinex` 分支 `codex/handoff-progress-2026-11-15`（`bca0564`）；公开 `PolinexClient-Reborn` 的 `main`（`3c36a2a`）。
 - [R1954 路线入口与缓存写入复核](.analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json)
 - [R1947 候选节点与空值契约](.analysis/evidence/mining/r1947-pathfinder-candidate-null-contract/manifest.json)
 - [R1948 A* 核心审查与全树构建](.analysis/evidence/mining/r1948-pathfinder-a-star-core-audit/manifest.json)

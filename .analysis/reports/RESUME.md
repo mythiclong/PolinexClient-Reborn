@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19。R1954 证据产生于代码提交 `cd805c46ce4c16912bb12d3441ff927c06decf31`；Java 源树内容指纹 `a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8`（1,602 个文件）。本地原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，不发布。
+> 更新：2026-11-19。R1954 证据产生于代码提交 `cd805c46ce4c16912bb12d3441ff927c06decf31`；Java 源树内容指纹 `a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8`（1,602 个文件）。本地原版 JAR SHA-256：`d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`，不发布 双仓同步索引：[SYNC-20261119-PATHFINDER-R1954.json](SYNC-20261119-PATHFINDER-R1954.json)。
 
 ## 当前唯一切片：R1955 Pathfinder 路线转换核心
 

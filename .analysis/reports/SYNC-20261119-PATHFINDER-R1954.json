@@ -1,0 +1,69 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1954",
+  "generated_utc": "2026-11-19T01:22:05Z",
+  "scope": "Pathfinder progress and evidence snapshot; documentation/evidence only, with no production Java changes.",
+  "evidence": {
+    "experiment_id": "R1954",
+    "slice_id": "PATHFINDER-ROUTE-CONVERTER-AND-CACHE-WRITE-STATIC-REVIEW",
+    "evidence_produced_against_commit": "cd805c46ce4c16912bb12d3441ff927c06decf31",
+    "java_source_tree_sha256": "a23ce38f1eb037f6042e457e2910423fd00efcc98790fe1d07e85fdf501099d8",
+    "manifest_path": ".analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json",
+    "manifest_sha256": "59604702ce585f434cb7f24386a65bc4f22a149fc8c9823e14580316ec611223"
+  },
+  "published_snapshots": [
+    {
+      "repository": "mythiclong/openpolinex",
+      "visibility": "private",
+      "ref": "codex/handoff-progress-2026-11-15",
+      "documentation_ingest_commit": "bca0564a3c1ab4943b82f85934c49bd89e098433",
+      "pushed": true
+    },
+    {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "visibility": "public",
+      "ref": "main",
+      "documentation_ingest_commit": "3c36a2a0de2ed5dc10c988d93c2f29aeb01806df",
+      "pushed": true
+    }
+  ],
+  "published_files": [
+    "README.md",
+    "README_EN.md",
+    ".analysis/reports/RESUME.md",
+    ".analysis/evidence/mining/r1954-route-converter-cache-exception/manifest.json"
+  ],
+  "checks": {
+    "stats_command": "python -B .analysis/stats.py",
+    "stats_exit_code": 0,
+    "stats": {
+      "java_files": 1602,
+      "java_lines": 1158787,
+      "pxdyn_lines": 569,
+      "pxdyn_occurrences": 581,
+      "pxfix_markers": 7029,
+      "pxfix_stub_throws": 0,
+      "decompiler_artifact_throws": 0,
+      "native_declarations": 219,
+      "native_files": 20,
+      "native_decl_like": 204
+    },
+    "build": {
+      "command": ".\\gradlew.bat build --no-daemon --console=plain",
+      "jdk": "Temurin 25.0.4.1",
+      "exit_code": 0,
+      "artifact_sha256": "5a9681a4531b4bdddcc116958e9be0e7fd063baebff776bad884950bc59d2089",
+      "limitation": "compileJava and downstream tasks were UP-TO-DATE; this is not runtime equivalence evidence."
+    }
+  },
+  "not_included": [
+    "Original protected JAR and class files",
+    "Full local javap dumps",
+    "Invalidated VOID outputs as positive evidence"
+  ],
+  "limitations": [
+    "R1954 found no confirmed source mismatch and changed no production Java.",
+    "No valid Minecraft world/client runtime or compatible-server test was performed for this snapshot.",
+    "R1955 route-converter core and direct helper review remains in progress; no result is claimed here.",
+    "ClickGUI input, module toggle, and settings persistence remain unverified."
+  ]
+}
