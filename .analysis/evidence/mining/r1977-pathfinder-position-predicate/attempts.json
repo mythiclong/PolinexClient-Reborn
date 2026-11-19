@@ -1,0 +1,50 @@
+{
+  "experiment_id": "R1977-pathfinder-position-predicate",
+  "attempts": [
+    {
+      "attempt_id": "R1977-reference-review-1",
+      "kind": "strict-original-versus-compiled-reference-sequence-check",
+      "started_utc": "2026-11-19T19:45:11.6119074Z",
+      "ended_utc": "2026-11-19T19:45:11.8526151Z",
+      "exit_code": 2,
+      "finding": "Original checkcast Collection + invokeinterface Collection.size()I differed from Java List.size()I. The source was aligned to the original invocation owner before final build."
+    },
+    {
+      "attempt_id": "R1977-reference-review-2",
+      "kind": "partial-interface-owner-normalization-check",
+      "started_utc": "2026-11-19T19:46:40.4858271Z",
+      "ended_utc": "2026-11-19T19:46:40.9899169Z",
+      "exit_code": 2,
+      "finding": "The normalization handled the invocation owner but initially retained the original redundant Collection checkcast token; no behavioral conclusion was drawn."
+    },
+    {
+      "attempt_id": "R1977-R1978-pre-cleanup-owner-review",
+      "kind": "complete-exact-descriptor-owner-comparison",
+      "command": "javap -classpath build\\classes\\java\\main -p -c -s -v <owner>; compare R1977 and R1978 descriptors to the retained original owner dump by recorded SHA-256",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "original_owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+      "compiled_owner_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d",
+      "started_utc": "2026-11-19T19:50:31.7878683Z",
+      "ended_utc": "2026-11-19T19:50:32.0468829Z",
+      "exit_code": 0,
+      "status": "SUPERSEDED by the exact-content final owner disassembly after whitespace-only cleanup.",
+      "assertions": {
+        "exact_descriptor": "PASS",
+        "ordered_references_after_only_redundant_cast_and_identity_helper_normalization": "PASS: 24/24",
+        "numeric_literal": "PASS: 0.75"
+      }
+    },
+    {
+      "attempt_id": "R1977-R1978-shared-final-build",
+      "kind": "full-tree-gradle-build",
+      "record": "../r1978-pathfinder-collision-push/attempts.json#R1977-R1978-final-build-2",
+      "exit_code": 0
+    },
+    {
+      "attempt_id": "R1977-R1978-exact-content-owner-review-final",
+      "kind": "complete-descriptor-comparison-after-final-source-build",
+      "record": "../r1978-pathfinder-collision-push/attempts.json#R1977-R1978-exact-content-owner-review-final",
+      "exit_code": 0
+    }
+  ]
+}

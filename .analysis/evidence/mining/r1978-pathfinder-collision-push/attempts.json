@@ -1,0 +1,113 @@
+{
+  "experiment_id": "R1977-R1978-pathfinder-owner-review",
+  "attempts": [
+    {
+      "attempt_id": "R1978-build-candidate-1",
+      "kind": "full-tree-gradle-build",
+      "started_utc": "2026-11-19T19:38:06.0772684Z",
+      "ended_utc": "2026-11-19T19:39:04.6932503Z",
+      "exit_code": 0,
+      "source_sha256_lf": "81cd2e663126365027cf211bc3df967b68622a673eb8a8509ad45d82cc4db843",
+      "status": "SUPERSEDED: the neighboring R1977 source call owner was subsequently aligned to the original before final validation."
+    },
+    {
+      "attempt_id": "R1978-compiled-owner-compare-candidate-1",
+      "kind": "exact-descriptor-compiled-owner-comparison",
+      "started_utc": "2026-11-19T19:43:01.7343354Z",
+      "ended_utc": "2026-11-19T19:43:03.0143771Z",
+      "exit_code": 0,
+      "compiled_owner_dump_sha256": "d164d1b664d2e82e70758d3d52733b315e390f6451dadef7d3f444adfc0dd307",
+      "status": "SUPERSEDED after the R1977 receiver-owner alignment changed the same compiled owner."
+    },
+    {
+      "attempt_id": "R1977-reference-review-1",
+      "kind": "strict-original-versus-compiled-reference-sequence-check",
+      "started_utc": "2026-11-19T19:45:11.6119074Z",
+      "ended_utc": "2026-11-19T19:45:11.8526151Z",
+      "exit_code": 2,
+      "observation": "Found the original checkcast Collection + invokeinterface Collection.size()I versus the Java List.size()I call. This was a real symbolic call-owner difference, not treated as proof of equivalence."
+    },
+    {
+      "attempt_id": "R1977-reference-review-2",
+      "kind": "partial-interface-owner-normalization-check",
+      "started_utc": "2026-11-19T19:46:40.4858271Z",
+      "ended_utc": "2026-11-19T19:46:40.9899169Z",
+      "exit_code": 2,
+      "observation": "The first normalization mapped the size invocation owner but did not account for the original redundant Collection checkcast token; no functional conclusion was drawn."
+    },
+    {
+      "attempt_id": "R1977-R1978-final-build-1",
+      "kind": "full-tree-gradle-build",
+      "command": "gradlew.bat \"-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k\" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "working_directory": "polinex-src",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "source_git_blob": "4075c0a9ba6c69f66303d567380760ce6bed8238",
+      "source_sha256_lf": "9ccacd8434fc846167e88a60b854be03dc78dfd2cbc7eaacfdd297fed8922737",
+      "started_utc": "2026-11-19T19:48:21.3575860Z",
+      "ended_utc": "2026-11-19T19:49:20.1014883Z",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "tests": "NO-SOURCE",
+        "existing_warning_count": 18
+      },
+      "status": "SUPERSEDED by the exact-content final build after whitespace-only indentation cleanup.",
+      "log_record": "build-jdk25-final.log"
+    },
+    {
+      "attempt_id": "R1977-R1978-final-build-2",
+      "kind": "full-tree-gradle-build",
+      "command": "gradlew.bat \"-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k\" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+      "working_directory": "polinex-src",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "source_git_blob": "713ebd60168d99c62789500e952f888ea21e4f00",
+      "source_sha256_lf": "bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9",
+      "started_utc": "2026-11-19T19:54:49.2915938Z",
+      "ended_utc": "2026-11-19T19:55:43.6748760Z",
+      "exit_code": 0,
+      "assertions": {
+        "full_tree_build": "PASS",
+        "tests": "NO-SOURCE",
+        "existing_warning_count": 18
+      },
+      "log_record": "build-jdk25-final.log"
+    },
+    {
+      "attempt_id": "R1977-R1978-final-owner-review-1",
+      "kind": "compiled-javap-and-normalized-reference-comparison",
+      "command": "javap -classpath build\\classes\\java\\main -p -c -s -v <owner>; compare both exact descriptors against the retained original owner dump by recorded SHA-256",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "original_owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+      "compiled_owner_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d",
+      "started_utc": "2026-11-19T19:50:31.7878683Z",
+      "ended_utc": "2026-11-19T19:50:32.0468829Z",
+      "exit_code": 0,
+      "status": "SUPERSEDED by the exact-content final disassembly after whitespace-only indentation cleanup; bytecode hash remained the same.",
+      "assertions": {
+        "R1977_exact_descriptor_and_ordered_references_after_redundant_cast_normalization": "PASS; original checkcast Collection is omitted because Java source receiver is statically List/Collection-compatible; invocation owner now matches Collection.size()I.",
+        "R1978_exact_descriptor_and_73_ordered_normalized_core_references": "PASS after excluding original identity-rethrow helper invocations and redundant Entity checkcast.",
+        "R1978_numeric_literals": "PASS: 10/10 in order.",
+        "R1978_string_literals": "PASS: next(...), bounds(...), add(...)."
+      },
+      "publication": "Full dumps and local artifact paths are excluded."
+    },
+    {
+      "attempt_id": "R1977-R1978-exact-content-owner-review-final",
+      "kind": "compiled-javap-and-normalized-reference-comparison",
+      "command": "javap -classpath build\\classes\\java\\main -p -c -s -v <owner>; compare both exact descriptors to the retained original owner dump by recorded SHA-256",
+      "runtime": "Eclipse Temurin JDK 25.0.4.1+1-LTS",
+      "original_owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+      "compiled_owner_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d",
+      "started_utc": "2026-11-19T19:56:03.6943658Z",
+      "ended_utc": "2026-11-19T19:56:04.8187754Z",
+      "exit_code": 0,
+      "assertions": {
+        "R1977_descriptor_and_ordered_references": "PASS: 24/24 after accounting for the omitted redundant Collection widening-cast class token.",
+        "R1978_descriptor_and_ordered_normalized_core_references": "PASS: 73/73 after excluding original identity-rethrow helper calls and redundant Entity checkcast.",
+        "R1978_numeric_literals": "PASS: 10/10 in order.",
+        "R1978_string_literals": "PASS: next(...), bounds(...), add(...)."
+      },
+      "publication": "Full dumps and local artifact paths are excluded."
+    }
+  ]
+}

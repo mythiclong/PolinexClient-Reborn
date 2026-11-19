@@ -1,0 +1,14 @@
+R1978 final full-tree build summary
+
+Working directory: `polinex-src`
+Command: `gradlew.bat "-Dorg.gradle.jvmargs=-Xmx1536m -XX:HeapBaseMinAddress=4G -XX:ActiveProcessorCount=2 -XX:CICompilerCount=1 -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -Xss512k" --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+Runtime: Eclipse Temurin JDK 25.0.4.1+1-LTS
+Source at final build: git blob `713ebd60168d99c62789500e952f888ea21e4f00`; normalized-LF SHA-256 `bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9`.
+Started: `2026-11-19T19:54:49.2915938Z`
+Ended: `2026-11-19T19:55:43.6748760Z`
+Exit code: `0`
+Result: `BUILD SUCCESSFUL`; compileJava, processResources, classes, jar, assemble, check, and build completed.
+Tests: `NO-SOURCE`
+Warnings: 18 existing Unsafe, deprecation, and unchecked-operation warnings.
+
+Earlier successful candidate builds at 19:38 and 19:48 UTC were superseded respectively by the R1977 `Collection.size()` receiver alignment and a whitespace-only indentation cleanup in the same owner source file. Only this build is final. The raw Gradle output is not published because it includes workstation paths. The complete final compiled owner was subsequently disassembled and compared to both reviewed original descriptors; see `manifest.json` and `static-review.txt`.

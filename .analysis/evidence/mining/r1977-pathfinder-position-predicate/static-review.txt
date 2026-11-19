@@ -1,0 +1,27 @@
+R1977 static review — Pathfinder `a(Vec3): boolean`
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Lnet/minecraft/world/phys/Vec3;)Z`.
+Original method: offsets 0–347, 168 instructions, 17 exception-table entries.
+Final compiled method: offsets 0–188, 94 instructions, no exception handlers.
+The original owner dump SHA-256 is `7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2`; the final compiled owner dump SHA-256 is `53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d`. Final source blob: `713ebd60168d99c62789500e952f888ea21e4f00`; normalized-LF SHA-256: `bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9`.
+
+## Complete descriptor review
+
+The method first reads the state gate and returns false when null, then reads the stored route list and returns false when null. It caches `size()` and the current route index and returns false unless the index is within `[0, size)`. It obtains the current node position and selects the prior node position when the index is positive, otherwise the supplied position. The first geometry predicate returns true immediately when it succeeds.
+
+On the remaining path, it obtains index + 1 with `CollectionsKt.getOrNull`; a missing node returns false. It excludes the original designated node enum before evaluating the distance/geometry condition. The final condition is short-circuited in source order: distance from the supplied point to the current position must be at most `f() + 0.75`, then the existing geometry predicate checks current/next/supplied positions.
+
+The 17 original handlers all catch `kotlin.NoWhenBranchMatchedException` and call `a(Throwable): Throwable`. In the complete original owner, that helper is exactly `aload_0; areturn`, so the source's direct branches preserve propagation and do not swallow exceptions.
+
+## Interface invocation finding and source alignment
+
+The first strict comparison exposed an actual symbolic call-site difference: the original performs a redundant `checkcast java/util/Collection` followed by `invokeinterface java/util/Collection.size:()I`; the prior Java source called `List.size:()I`. This was not dismissed based on a descriptor alone. The Java source now expresses the receiver as `((java.util.Collection<?>) var3).size()`, so the final compiled invocation owner is `Collection.size:()I`, matching the original. Javac omits the widening cast because the stored value is already statically a `List`, which is a subtype of `Collection`; this remaining class-token omission is a source-language lowering detail, not byte-for-byte identity.
+
+After removing only the original identity-rethrow helper calls and that redundant cast token, the ordered reference events match 24/24. The `0.75` constant matches. No other confirmed field, call target, ordering, branch, default, or side-effect difference was found in the complete descriptor.
+
+Static status: **PASS WITH DECLARED JAVA CAST-LOWERING DELTA**. This is not runtime-equivalence evidence.
+
+## Runtime boundary
+
+The shared full-tree build compiles the final method, but there was no direct probe, Minecraft client, valid player/world, normal Pathfinder route path, or compatible-server test. The user-facing route predicate remains open for live acceptance.

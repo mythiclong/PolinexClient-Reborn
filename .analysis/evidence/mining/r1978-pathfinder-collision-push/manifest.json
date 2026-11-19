@@ -1,0 +1,68 @@
+{
+  "experiment_id": "R1978-pathfinder-collision-push",
+  "generated_utc": "2026-11-19T19:56:04Z",
+  "scope": "Restore Pathfinder collision push helper g(Vec3, Vec3, Vec3): Vec3 from complete original bytecode and validate the managed source with a full-tree build.",
+  "source_baseline": {
+    "commit": "a3eab621aae329b6eaa81278df5cb9509f568efb",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333"
+  },
+  "source_final_at_build": {
+    "git_blob": "713ebd60168d99c62789500e952f888ea21e4f00",
+    "sha256_lf": "bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9",
+    "working_tree_sha256": "2963ed8d183155ba6f89a2d100f36a060b40051e076ddbae01a25d2d8ffbde95"
+  },
+  "original_reference": {
+    "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "g",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;",
+    "original_offsets": "0-933",
+    "original_instruction_count": 460,
+    "original_exception_handlers": 18,
+    "compiled_offsets": "0-710",
+    "compiled_instruction_count": 363,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d"
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "exception_handlers": "All 18 original handlers catch NoWhenBranchMatchedException and delegate to a(Throwable); the complete original helper body is aload_0; areturn. The managed method propagates exceptions and does not swallow them.",
+    "ordered_normalized_core_reference_events": "PASS: 73/73 equal after excluding original identity-rethrow helper calls and the redundant Entity checkcast (LocalPlayer is statically an Entity).",
+    "ordered_numeric_literals": "PASS: all 10 values match, including 1.0E-6, 0.04, -1.0, 1.0E-4, and 0.28.",
+    "ordered_string_literals": "PASS: next(...), bounds(...), add(...).",
+    "source_branch_review": "PASS: gate/player/level early returns; horizontal-length short circuit; player AABB; collision iteration and Kotlin null checks; vertical overlap; nearest-face tie order; radius skip; normalized depth accumulation; perpendicular projection; final 0.28/cap scaling; Vec3.add null check; and final walkability predicate were checked against the complete descriptor.",
+    "final_compiled_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d"
+  },
+  "validation": {
+    "full_tree_build": "PASS",
+    "direct_probe": "NOT RUN: requires a valid Minecraft player/world collision context; no worldless substitute was used.",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "inventory_after_slice": {
+    "java_files": 1602,
+    "java_lines": 1158480,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "pxfix_stub_throws": 0,
+    "decompiler_artifact_throws": 0,
+    "native_declarations": 219,
+    "native_files": 20
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Raw Gradle logs containing workstation paths",
+    "Gradle caches and build outputs"
+  ],
+  "note": "Evidence describes static reconstruction and compilation only; it is not runtime-equivalence or server-compatibility evidence. The evidence-production baseline is distinct from the later commit that ingests this record."
+}

@@ -9,7 +9,7 @@
 
 ## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
 
-R1976 完成 Pathfinder `a(Vec3,double):boolean` 的完整原版 descriptor 审计（offset 0–169、4 个异常表项），补回 `ClientLevel.getBlockCollisions` 后缺失的 Kotlin 非空表达式检查及原始消息。原版与最终编译方法的有序核心字段/方法/类引用 18 项一致；另核对原版 `Entity` checkcast 在 Java 中因 `LocalPlayer` 子类型而被安全省略。已复核 gate/player/level 读取顺序、最小半径、AABB 六坐标、碰撞查询与 `any` 调用。Temurin JDK 25 全树构建 exit 0。没有有效世界/玩家、正常路径或服务器验收。下一切片 R1977：完整审计当前路线位置谓词 `a(Vec3):boolean`。详见 [R1976 证据](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json) 与 [双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1976.json)。
+R1978 完成 Pathfinder 碰撞推力 helper `g(Vec3, Vec3, Vec3): Vec3` 的完整原版 descriptor 审计（offset 0–933、18 个异常表项），修复 gate/player/level 早退、`Iterator.next()` 与 `VoxelShape.bounds()` 的 Kotlin 非空检查、半径外碰撞跳过，以及错误的逐障碍物缩放；`0.28` 与最大推力上限现只在方向聚合和投影后应用一次。R1977 同步完成 `a(Vec3): boolean` 静态审计，并将 `size()` 调用 owner 对齐到原版 `Collection.size()I`。最终编译 owner 对照两方法的有序调用/字段引用及常量通过约定的 Java 降低差异审查；Temurin JDK 25 全树 `build --rerun-tasks` exit 0。没有有效玩家/世界、正常寻路入口或兼容服务器验收，不宣称运行时等价。详见 [R1977 证据](.analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json) 与 [R1978 证据](.analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
@@ -31,6 +31,8 @@ R1976 完成 Pathfinder `a(Vec3,double):boolean` 的完整原版 descriptor 审�
 - **R1974 Pathfinder `a(Vec3,Vec3,List,Vec3): Pair`:** 完整原版 descriptor/CFG（offset 0–170、8 个异常表项）复核后，修正原源码的比较方向和 gate-null 短路：gate 非空时为 `distance <= f()+0.75`，gate 为空时按原始 comparator 非零判定（NaN 也为真），且绕过第二几何谓词；距离和阈值无论 gate 状态均按原版先求值。最终字段/方法目标流 13 项匹配；3 处私有调用 opcode 仅因 Kotlin/Javac lowering 不同而变化，target/receiver 相同。Temurin JDK 25 全树构建 exit 0。未做直接探针、游戏或服务器验收。详见 [R1974 静态复核](.analysis/evidence/mining/r1974-pathfinder-conditional-pair/static-review.txt)。
 - **R1975 Pathfinder `f(Vec3,Vec3,Vec3): boolean`:** 完整原版 descriptor/CFG（offset 0–345、8 个异常表项）复核后补回两处 `Vec3.add` 之后缺失的 Kotlin `Intrinsics.checkNotNullExpressionValue`。最终编译方法与原版的有序核心字段/方法/类引用 29 项一致；已复核 gate/player、水平距离门限、采样器、构造参数、三次几何谓词、两侧偏移、重复宽度读取、`2.0`/`0.03` 常量和短路返回。8 个原版异常处理器只经 identity rethrow helper 重新抛出；源码未吞异常。Temurin JDK 25 全树 build exit 0，18 条既有 Unsafe/deprecation/unchecked warnings。未做有效世界、正常玩家路径或兼容服务器验收。详见 [R1975 静态复核与构建证据](.analysis/evidence/mining/r1975-pathfinder-geometry-probe/manifest.json)。
 - **R1976 Pathfinder `a(Vec3,double): boolean`:** 完整原版 descriptor/CFG（offset 0–169、4 个异常表项）复核后补回 `ClientLevel.getBlockCollisions` 后缺失的 Kotlin `Intrinsics.checkNotNullExpressionValue` 与原始消息。最终编译方法与原版的有序核心字段/方法/类引用 18 项一致；原版 `Entity` checkcast 因 Java 中 LocalPlayer 静态子类型而安全省略。复核 gate/player/level 顺序、`RangesKt.coerceAtLeast`、AABB 六坐标、玩家高度、碰撞调用和 `CollectionsKt.any`。原版 4 个异常处理器只经 identity helper 重新抛出；源码未吞异常。Temurin JDK 25 全树 build exit 0，18 条既有 warnings。未做有效世界、正常玩家路径或兼容服务器验收。详见 [R1976 静态复核与构建证据](.analysis/evidence/mining/r1976-pathfinder-block-collision-predicate/manifest.json)。
+- **R1977 Pathfinder `a(Vec3): boolean`**：完整原版 descriptor（offset 0–347、17 个异常表项）审计并与最终编译 owner 对照。gate/list 空值、索引边界、当前/前一节点、`getOrNull`、枚举排除、距离阈值和几何短路均核对；将原版 `Collection.size()I` 调用目标显式对齐（Java 省略其冗余 widening cast）。24 个规范化有序引用和 `0.75` 常量一致。此为静态审计，未做正常游戏路径验收。见 [R1977 manifest](.analysis/evidence/mining/r1977-pathfinder-position-predicate/manifest.json)。
+- **R1978 Pathfinder 碰撞推力 `g(Vec3,Vec3,Vec3): Vec3`**：完整原版 descriptor（offset 0–933、18 个异常表项）复核后恢复 gate/player/level 早退、`next(...)`/`bounds(...)` 非空检查、半径边界跳过，以及先聚合再投影、最后统一应用 `0.28` 与最大推力上限。最终编译方法的 73 个规范化有序引用、10 个数值常量和 3 个字符串常量与原版相符。Temurin JDK 25 全树 build exit 0；未测试有效世界、正常路线或服务器。见 [R1978 manifest](.analysis/evidence/mining/r1978-pathfinder-collision-push/manifest.json)。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
 - **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
@@ -85,7 +87,7 @@ R1976 完成 Pathfinder `a(Vec3,double):boolean` 的完整原版 descriptor 审�
 - [R1952 Pathfinder 实际 invoke 与 method-handle 扫描](.analysis/evidence/mining/r1952-pathfinder-call-graph/manifest.json)
 - [R1953 Pathfinder 包装层静态复核](.analysis/evidence/mining/r1953-pathfinder-wrapper-audit/manifest.json)
 
-当前源码库存：**1,602** 个 Java 文件、**1,158,474** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
+当前源码库存：**1,602** 个 Java 文件、**1,158,480** 行、**569** 行 / **581** 处 `PXDyn`、**7,029** 个 `PX-FIX` 标记、**219** 个 native 声明。可用 `python -B .analysis/stats.py` 复算；这些数值只描述源码库存，不代表恢复完成度。
 
 R1954/R1955 的完整 `javap` 转储只保留在本地分析目录；公开快照只含方法 descriptor、判定摘要和转储 SHA-256，不包含原版 JAR 或受保护 class。
 

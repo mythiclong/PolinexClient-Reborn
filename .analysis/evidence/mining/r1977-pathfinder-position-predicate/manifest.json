@@ -1,0 +1,49 @@
+{
+  "experiment_id": "R1977-pathfinder-position-predicate",
+  "generated_utc": "2026-11-19T19:56:04Z",
+  "scope": "Complete static audit of Pathfinder a(Vec3): boolean; align its Java interface invocation owner to the original bytecode and verify it in the shared R1977/R1978 final build.",
+  "source_baseline": {
+    "commit": "a3eab621aae329b6eaa81278df5cb9509f568efb",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "c9aabf40b11d7e61a3597a0a7f4b98a1a7655333"
+  },
+  "source_final_at_build": {
+    "git_blob": "713ebd60168d99c62789500e952f888ea21e4f00",
+    "sha256_lf": "bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9"
+  },
+  "original_reference": {
+    "jar_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_dump_sha256": "7cd84faa29955273f67b50f38955b9c979aeea47e7c2d47850baf094bd31adf2",
+    "full_dump_published": false
+  },
+  "method": {
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "name": "a",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;)Z",
+    "original_offsets": "0-347",
+    "original_instruction_count": 168,
+    "original_exception_handlers": 17,
+    "compiled_offsets": "0-188",
+    "compiled_instruction_count": 94,
+    "compiled_exception_handlers": 0,
+    "compiled_owner_dump_sha256": "53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d"
+  },
+  "static_comparison": {
+    "exact_descriptor": "PASS",
+    "exception_handlers": "All 17 original handlers catch NoWhenBranchMatchedException and delegate to a(Throwable); the complete helper body is aload_0; areturn. Managed source propagates exceptions and swallows none.",
+    "ordered_reference_events": "PASS: 24/24 after excluding original identity-rethrow helper calls and the redundant checkcast Collection; the original and compiled invocation target is Collection.size()I.",
+    "interface_callsite_alignment": "The source now types the receiver as Collection<?> for size(). The widening List-to-Collection cast has no runtime check; this preserves the original interface invocation owner without asserting byte-for-byte classfile identity.",
+    "numeric_literals": "PASS: the only behavioral numeric literal, 0.75, matches.",
+    "source_branch_review": "PASS: gate/list null handling; one cached list size and route index; index bounds; current/previous node positions; first geometry early return; getOrNull of the next node; enum exclusion; distance threshold; and final short-circuit geometry predicate were checked against the complete descriptor."
+  },
+  "validation": {
+    "full_tree_build": "PASS via the shared final R1977/R1978 Temurin JDK 25 build in ../r1978-pathfinder-collision-push/build-jdk25-final.log.",
+    "direct_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_player_and_world": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "screenshot": "NOT APPLICABLE; no UI experiment was performed."
+  },
+  "note": "This is a complete static review and source-level invocation alignment, not runtime-equivalence or server-compatibility evidence. The evidence-production baseline and later source/evidence ingestion commit are distinct."
+}

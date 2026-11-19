@@ -1,0 +1,36 @@
+R1978 static review — Pathfinder collision push helper
+
+Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`.
+Exact descriptor: `(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;`.
+Baseline commit: `a3eab621aae329b6eaa81278df5cb9509f568efb`; baseline source blob: `c9aabf40b11d7e61a3597a0a7f4b98a1a7655333`.
+Final source blob: `713ebd60168d99c62789500e952f888ea21e4f00`; normalized-LF SHA-256: `bfa3fe3abd5aeb7f7b21a20b882e371576ef2001c7d30afe702f093d01fb73c9`.
+
+The same owner change also aligns the neighboring R1977 `a(Vec3): boolean` call site to the original `Collection.size()I` interface owner; see the R1977 evidence. The final build below is after that owner-level edit and compiles both audited methods.
+
+## Complete descriptor review
+
+The original method spans bytecode offsets 0–933 and has 18 exception-table entries. All handlers catch `kotlin.NoWhenBranchMatchedException` and delegate to the owner's `a(Throwable): Throwable`; the complete helper is the identity (`aload_0; areturn`). The source uses direct control flow and does not swallow exceptions.
+
+The entry reads the state gate first and returns null if it is null, then captures player and level in that order with null returns. It computes horizontal displacement from `param2` to `param3` and returns null below `1.0E-6`. The player collision AABB uses the configured radius, `y + 0.04`, and player height in the original coordinate/evaluation order.
+
+For each collision shape, the source checks the iterator result before casting, then checks `bounds()` before using the returned AABB. It applies the same vertical-overlap comparisons, clamps the candidate x/z position to the obstacle bounds, computes the horizontal offset, and—when inside the obstacle—chooses the nearest face with the original minX, maxX, minZ, maxZ tie order. Obstacles whose nearest horizontal distance is greater than or equal to the configured radius are skipped. The remaining contribution is the normalized offset multiplied by the clamped penetration depth; there is no per-obstacle `0.28` scaling or per-obstacle maximum cap.
+
+After aggregating all obstacles, the method removes the component along the requested travel direction, rejects a residual push shorter than `1.0E-4`, and applies `min(pushLength * 0.28, configuredMaximum)` exactly once to the normalized aggregate. It then adds that displacement to `param1`, restores the original `Intrinsics.checkNotNullExpressionValue(..., "add(...)")`, and returns the displacement only when the existing `b(Vec3)` walkability predicate accepts the new position.
+
+## Confirmed source corrections
+
+- Restored the state-gate early return before reading player or level.
+- Restored Kotlin non-null expression checks and original messages after `Iterator.next()` and `VoxelShape.bounds()`.
+- Restored the original `distance >= radius` skip before depth calculation.
+- Removed the incorrect per-collision `min(distance * 0.28, maximum)` contribution. The `0.28` multiplier and cap are applied once after aggregate projection, matching the original order.
+- Kept the final `Vec3.add` null check and existing walkability predicate.
+
+## Compiled-method comparison
+
+The final owner was disassembled with JDK 25 `javap -p -c -s -v`; the exact descriptor matched. The original and compiled method have 73/73 identical ordered normalized field/method/class-reference events after removing the original identity-rethrow helper invocations and its redundant `checkcast Entity` (the source receiver is already typed as `LocalPlayer`). All 10 ordered numeric literals and all three ordered string literals (`next(...)`, `bounds(...)`, `add(...)`) match. The original method has offsets 0–933 / 460 instructions / 18 exception entries; the compiled method has offsets 0–710 / 363 instructions / no handlers. The final compiled owner dump SHA-256 is `53601698397e1319c1c0d38c2079a0d16ccc4a28ac6fb90520f4590575b9e17d`.
+
+Static status: **PASS** for the complete descriptor/source/compiled-method review. This is not runtime-equivalence evidence.
+
+## Runtime boundary
+
+No direct probe, Minecraft client, valid player/world, normal Pathfinder entry path, or compatible server was used. The collision and walkability path remains open for live acceptance; a null/plain-object/worldless fixture would not validate it.

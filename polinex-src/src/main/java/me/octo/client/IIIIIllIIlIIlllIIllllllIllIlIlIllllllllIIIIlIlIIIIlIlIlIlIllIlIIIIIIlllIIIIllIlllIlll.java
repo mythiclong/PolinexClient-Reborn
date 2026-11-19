@@ -1414,7 +1414,7 @@ return CollectionsKt.arrayListOf(CollectionsKt.first(param1));
       if (var2 == null) { return false; }
       List<me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll> var3 = this.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
       if (var3 == null) { return false; }
-      int var4 = var3.size();
+      int var4 = ((java.util.Collection<?>)var3).size();
       int var5 = this.IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll;
       if (var5 < 0 || var5 >= var4) { return false; }
       Vec3 var6 = var3.get(this.IIIIlIIIIlllllIlIllIllIIllIIlllllIlllIllllIlIllIIIIlIIIllIIIlIllIllIIlllIIIIIIIIlllll).b();
@@ -2128,6 +2128,10 @@ return true;
    }
 
    private final Vec3 g(Vec3 param1, Vec3 param2, Vec3 param3) {
+      int[] var4 = IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      if (var4 == null) {
+         return null;
+      }
       LocalPlayer player = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
       if (player == null) {
          return null;
@@ -2153,17 +2157,18 @@ return true;
                double pushX = 0.0;
                double pushZ = 0.0;
 
-               for (Iterator<VoxelShape> it = level.getBlockCollisions(player, playerBox).iterator(); it.hasNext(); ) {
-                  VoxelShape shape = it.next();
+               for (Iterator<?> it = level.getBlockCollisions(player, playerBox).iterator(); it.hasNext(); ) {
+                  Object nextShape = it.next();
+                  Intrinsics.checkNotNullExpressionValue(nextShape, "next(...)");
+                  VoxelShape shape = (VoxelShape)nextShape;
                   net.minecraft.world.phys.AABB bounds = shape.bounds();
+                  Intrinsics.checkNotNullExpressionValue(bounds, "bounds(...)");
 
                   // only obstacles whose top is above (feet + 0.04) and whose bottom is below (feet + height)
                   if (bounds.maxY > param1.y + 0.04 && bounds.minY < param1.y + (double)player.getBbHeight()) {
                      // distance from param1 to the closest point of the box, in the XZ plane
-                     double clampedX = RangesKt.coerceIn(param1.x, bounds.minX, bounds.maxX);
-                     double clampedZ = RangesKt.coerceIn(param1.z, bounds.minZ, bounds.maxZ);
-                     double offsetX = param1.x - clampedX;
-                     double offsetZ = param1.z - clampedZ;
+                     double offsetX = param1.x - RangesKt.coerceIn(param1.x, bounds.minX, bounds.maxX);
+                     double offsetZ = param1.z - RangesKt.coerceIn(param1.z, bounds.minZ, bounds.maxZ);
                      double offsetLength = Math.sqrt(offsetX * offsetX + offsetZ * offsetZ);
 
                      if (offsetLength < 1.0E-6) {
@@ -2193,15 +2198,16 @@ return true;
                         }
                      }
 
-                     // weight by how deep param1 sits inside the box, but never exceed the configured
-                     // limit (@Field #262, 0.34)
+                     // Only accumulate penetration while param1 remains inside the configured radius.
+                     if (offsetLength >= this.lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl) {
+                        continue;
+                     }
                      double depth = RangesKt.coerceIn(
                         (this.lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl - offsetLength) / this.lIIlIIIIIIIIIIlIlllIlIlIIlllIlIllIIIIIlllIlIlIlllIIIlIlllllllllllllllllllIIIllIIIlIIl, 0.0, 1.0
                      );
-                     double pushStrength = RangesKt.coerceAtMost(offsetLength * 0.28, this.IIllIIllIllIIlIlIlIllIlIIlIIlIIlIIIIIlIIIIIllIllIIIIIllllIIIlIIllllIIIIllIIllIllIllll);
 
-                     pushX += offsetX / RangesKt.coerceAtLeast(offsetLength, 1.0E-6) * pushStrength * depth;
-                     pushZ += offsetZ / RangesKt.coerceAtLeast(offsetLength, 1.0E-6) * pushStrength * depth;
+                     pushX += offsetX / RangesKt.coerceAtLeast(offsetLength, 1.0E-6) * depth;
+                     pushZ += offsetZ / RangesKt.coerceAtLeast(offsetLength, 1.0E-6) * depth;
                   }
                }
 
