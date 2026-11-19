@@ -27,7 +27,7 @@ The current slice is **R1965: trace Pathfinder execution state, stopping, and ca
 
 - [Current short handoff](.analysis/reports/RESUME.md)
 - [R1962–R1963 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
-- [R1963–R1964 current evidence and dual-repository sync](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)
+- [R1963–R1964 current evidence and dual-repository sync](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json): private `67ded95` / public `6d79cfd`.
 - [R1964 normal route-consumer bytecode review and build](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)
 - [R1956–R1961 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
 - [R1956 collision-gate static review](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)

@@ -27,7 +27,7 @@
 
 - [当前短交接](.analysis/reports/RESUME.md)
 - [R1962–R1963 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1962-R1963.json)
-- [R1963–R1964 当前阶段证据与双仓同步](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)
+- [R1963–R1964 当前阶段证据与双仓同步](.analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json)：私有 `67ded95` / 公开 `6d79cfd`。
 - [R1964 正常路线消费者字节码复核与构建](.analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json)
 - [R1956–R1961 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1956-R1961.json)
 - [R1956 碰撞 gate 静态复核](.analysis/evidence/mining/r1956-pathfinder-collision-gate/manifest.json)

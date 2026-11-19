@@ -1,0 +1,117 @@
+{
+  "sync_id": "SYNC-20261119-PATHFINDER-R1963-R1964",
+  "generated_utc": "2026-11-19T03:47:29Z",
+  "scope": "Correct the Pathfinder route API operand-stack interpretation; repair type guards in the normal route-event consumer; record a full-tree build; refresh Chinese and English handoffs.",
+  "evidence_baselines": {
+    "private_openpolinex": {
+      "repository": "mythiclong/openpolinex",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "commit": "88dfe47cd285f990da0a7c1c00599bdd4bb0fdc3"
+    },
+    "public_polinex_reborn": {
+      "repository": "mythiclong/PolinexClient-Reborn",
+      "branch": "main",
+      "commit": "97e5e7e69b457180614afa53680f2039ccb73174"
+    }
+  },
+  "experiments": [
+    {
+      "id": "R1963",
+      "manifest": ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
+      "result": "Full JVM operand-stack interpretation confirmed both null branches: gate=0 with non-empty route, and gate!=0 with empty route. Final compiled bytecode follows the original converter/return path for all four gate/length cases.",
+      "correction": "Supersedes the earlier published statement that every nonzero-gate route reaches the converter."
+    },
+    {
+      "id": "R1964",
+      "manifest": ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json",
+      "result": "Restored original instanceof-before-cast handling for x/y/z Integer and option String values in the actual normal route-event consumer. Seven mode call targets and eight state-write targets/order were reviewed. Static/build-only; not exercised in-game."
+    }
+  ],
+  "production_source_changes": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java",
+      "sha256": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+      "sha256": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783"
+    }
+  ],
+  "java_source_inventory": {
+    "command": "python -B .analysis/stats.py",
+    "java_files": 1602,
+    "java_lines": 1158789,
+    "pxdyn_lines": 569,
+    "pxdyn_occurrences": 581,
+    "pxfix_markers": 7029,
+    "native_declarations": 219,
+    "note": "Inventory counts are not a functional-equivalence measure."
+  },
+  "build_validation": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xmx2G' --max-workers=2 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Temurin 25.0.4.1",
+    "exit_code": 0,
+    "started_utc": "2026-11-19T03:34:17.5558943Z",
+    "ended_utc": "2026-11-19T03:35:02.7876940Z",
+    "log_sha256": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf"
+  },
+  "source_content_sha256": {
+    ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json": "0383c8993258334a603007c9d3b77c6298ef9ba81147d06554295496cb0f6310",
+    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json": "1cab7054218edba3c96eca11939bd467734882050f035b70916a7187f81cda7f",
+    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/summary.txt": "304bcaca16adda390709523c3c7f9f9dfe0c3d34b37270dac0b568f44547e572",
+    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun.log": "e77440a74fb710099b745610968e91e201b9b454d890b4905fc743287c118bd1",
+    ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun-corrected.log": "088284809abd65e6c29353c25d9bd2083cd9c59ea01679f3d6926fcea0388daf",
+    ".analysis/reports/RESUME.md": "dd6d65b816be7d85e0b0057b290c5346ba5bb579879d21c2e023d3532c7e6100",
+    "README.md": "5c47d0822cb2841cad53abec4bfdd90fff7f0f6ca50b3a262b7ff6546f710273",
+    "README_EN.md": "e68a823c49f773fd5ab3e31d5a1cd72244662e36d02e8a80ff2807673331cd62",
+    "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java": "9f4b84f7ed2c7e44e0624c18e1130ec6cc409b9c3d1b58f06ae40e7b1e33d783",
+    "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java": "56117f995b7b5e27194e172695f22290e254ec04ada1ce40449ff02bf121bbf8"
+  },
+  "content_publication": {
+    "status": "Fast-forward pushed and remote refs verified. The repositories have separate Git histories, so equivalent content was committed independently on each branch; no force-push.",
+    "private_openpolinex": {
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "67ded958cf7bc90b4cb9411db61b6b4a7ec939a7",
+      "remote_ref_verified_at_push": true
+    },
+    "public_polinex_reborn": {
+      "branch": "main",
+      "content_commit": "6d79cfde6f9da2848e162a61b2cb15689f3f977a",
+      "remote_ref_verified_at_push": true
+    },
+    "published_content_files": [
+      ".analysis/evidence/mining/r1963-pathfinder-route-api-bridge/manifest.json",
+      ".analysis/evidence/mining/r1964-pathfinder-route-consumer/manifest.json",
+      ".analysis/evidence/mining/r1964-pathfinder-route-consumer/summary.txt",
+      ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun.log",
+      ".analysis/evidence/mining/r1964-pathfinder-route-consumer/build-jdk25-rerun-corrected.log",
+      ".analysis/reports/RESUME.md",
+      "README.md",
+      "README_EN.md",
+      "polinex-src/src/main/java/me/octo/client/IlIIIlIlIIlIlllIlIIlIIllIllIlllllIIIlIllllIlIIIlIlIlllllIIIIIllIlllIlIlllllIlllIlIIll.java",
+      "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIIlIlllIlllIIIIlllIIIlIIlIlIIlIlIlIlIIIllIIIlllllllIlIlIlIIIIllllIllIllIIIlllIlIIlll.java"
+    ],
+    "follow_up_index_commit": {
+      "status": "This synchronization index and its README/RESUME links are included in a follow-up documentation-only commit after the verified content commits above.",
+      "files": [
+        ".analysis/reports/SYNC-20261119-PATHFINDER-R1963-R1964.json",
+        "README.md",
+        "README_EN.md",
+        ".analysis/reports/RESUME.md"
+      ]
+    }
+  },
+  "runtime_acceptance_open": [
+    "Minecraft launch and valid-world route through a normal player path",
+    "Pathfinding obstacles, stairs, snow-layer collision, stop behavior, disk cache lifecycle",
+    "Compatible-server login, interaction, disconnect, reconnect",
+    "ClickGUI input/module/settings persistence and remaining feature paths"
+  ],
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/current javap dumps",
+    "Compiled class files",
+    "Local Gradle outputs and caches"
+  ]
+}
