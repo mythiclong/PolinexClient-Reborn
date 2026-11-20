@@ -1,0 +1,76 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1993",
+  "scope": "Publish the R1993 Pathfinder route-entry gate source correction, minimal static/build evidence, bilingual README progress and handoff to both repositories.",
+  "source_baseline": {
+    "integration_base_commit": "3c84be1cfafa7c8e3142298620ade36f20f5e875",
+    "source_content_commit": "28be4185334d9fa3f575bd23c8f78373eed06294",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob": "4fad5524cf8b43da32fd1d0446cb0e7be569fa16",
+    "source_git_blob": "16ec8dcf9e608621df4547c69f5423c6a0b67967",
+    "source_sha256": "d86d66b455519a575e6b85b8b5ec7ff74fa0bcaacfb29338b3d2c2ef3a893f18"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "3c84be1cfafa7c8e3142298620ade36f20f5e875",
+      "content_commit": "28be4185334d9fa3f575bd23c8f78373eed06294",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "a5e2c2eedc5e7ad73d279574a766825d879ae6a6",
+      "content_commit": "e0d12070e2158fbffa7cdeb032625eda776ccbff",
+      "fast_forward": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": ".analysis/evidence/mining/r1993-pathfinder-route-entry-gate/build-summary.txt",
+      "blob": "670f7401a9cb6028d26b84836b962f2bbd59b924"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1993-pathfinder-route-entry-gate/manifest.json",
+      "blob": "ecd574494e88427059da0380ed7236e94f2d897e"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1993-pathfinder-route-entry-gate/static-review.txt",
+      "blob": "b36d38f52e5f3ca97264e411f8b7080cb3dcb2fc"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "ef729f86799fd93ff762704b17ec35a4c4f960c1"
+    },
+    {
+      "path": "README.md",
+      "blob": "8bf0083f3d591a57d08d3331c7defd5284885e50"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "2fc975da34e0791e2c5854ca947bce550a46e93e"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "16ec8dcf9e608621df4547c69f5423c6a0b67967",
+      "sha256": "d86d66b455519a575e6b85b8b5ec7ff74fa0bcaacfb29338b3d2c2ef3a893f18"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T05:39:22Z",
+    "method": "Compared both live refs after content pushes and compared each listed Git blob at both content commits.",
+    "private_content_ref_observed": "28be4185334d9fa3f575bd23c8f78373eed06294",
+    "public_content_ref_observed": "e0d12070e2158fbffa7cdeb032625eda776ccbff",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "R1993 includes complete-descriptor static comparison, actual bridge invoke-site review, and a Temurin JDK 25 full-tree build.",
+    "No Minecraft client, valid player/entity/world, normal Pathfinder route, stop/cancel/cache lifecycle, or compatible-server behavior was run.",
+    "The sync does not establish Pathfinder runtime equivalence or feature closure.",
+    "Original protected archives/classes, full javap dumps, raw logs, build outputs, and absolute machine paths were excluded."
+  ]
+}

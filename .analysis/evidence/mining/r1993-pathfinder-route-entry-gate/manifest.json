@@ -135,5 +135,5 @@
     "Compiled classes/built JAR",
     "Absolute machine paths"
   ],
-  "dual_repository_sync": "PENDING_CONTENT_PUSH_VERIFICATION"
+  "dual_repository_sync": "VERIFIED; see .analysis/reports/SYNC-20261120-PATHFINDER-R1993.json"
 }
