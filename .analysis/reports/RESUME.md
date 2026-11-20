@@ -1,28 +1,23 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-20 UTC（芝加哥当地日期 2026-11-19）。R1990 完成 Pathfinder 外层事件处理器的完整 descriptor 静态复核与 Temurin JDK 25 全树构建，并已同步到私有 `openpolinex` 和公开 `PolinexClient-Reborn`；共享文件 blobs 已核验。未做客户端、有效世界或正常寻路验收。详见 [R1990 双仓同步记录](SYNC-20261120-PATHFINDER-R1990.json)。
+> 更新：2026-11-20 UTC（芝加哥当地日期 2026-11-19）。R1991 源码、双语 README 和最小证据已同步到私有 `openpolinex` 与公开 `PolinexClient-Reborn`；两边内容提交分别为 `bc6afcdb6ee75900778a9cad4d52ac958d347d32` 与 `fea1a45f7d7be6760e14e10684815271f2f31d67`，共享文件 blobs 已核验。只通过完整 descriptor 静态复核和全树构建，未运行客户端或有效世界。详见 [R1991 双仓同步记录](SYNC-20261120-PATHFINDER-R1991.json)。
 
 ## 当前基线
 
-- 集成工作树：`C:\Users\AutoB\.codex\worktrees\bootstrap-eclientinit\OpenPoli`；分支 `codex/bootstrap-eclientinit-2026-11-15`。
-- R1990 源码基于 `6bc0d1c727016f6715439e3ccad9912b49b67eac`；目标托管源码 SHA-256：`1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22`。
-- R1990 内容提交：私有 `codex/handoff-progress-2026-11-15`=`f8a7428c7010f31eaabae15a1e72c251cc81e981`；公开 `main`=`84805699c86a5b8e3d756523734cdf27ef155c6e`。两边列出的共享文件 blobs 一致，完整仓库 tree 不同。
+- 集成分支：`codex/bootstrap-eclientinit-2026-11-15`，R1991 内容提交 `bc6afcdb6ee75900778a9cad4d52ac958d347d32`。
+- R1991 源码/README/证据内容提交（后续同步记录元数据另有快进提交）：私有 `codex/handoff-progress-2026-11-15` 的内容提交为 `bc6afcdb6ee75900778a9cad4d52ac958d347d32`；公开 `main` 的内容提交为 `fea1a45f7d7be6760e14e10684815271f2f31d67`。
+- Pathfinder 托管源码 SHA-256：`0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266`；R1991 全树构建的 owner class SHA-256：`3e0fc8421075f840dce7da4ec12ee876ecf537604601b163da0d2855ed64ae76`。
 
 ## 当前唯一切片：Pathfinder 路线生命周期
 
-- R1990 已恢复外层事件处理器 `a(event):void` 的 gate/null 分支、volatile 读取次序与空值契约。完整静态对照、限制和编译器差异见 [R1990 静态复核](../evidence/mining/r1990-pathfinder-event-handler/static-review.txt)及[机器证据](../evidence/mining/r1990-pathfinder-event-handler/manifest.json)。
-- 下一步沿真实调用链检查路线结果写入 → 执行状态 → 停止/清理 → 磁盘缓存读取/失效，先锁定有原版证据且可独立复核的方法，再修改并全树构建。
-- 不重做已排除的全量渲染普查、坐标倍率盲扫、旧 ClickGUI 无目的点按及已确认的 R1989 差异。
+- R1991 修复 `h(List):boolean` 的路线完成分支，以及 `g():void` 的 gate/null/异步待处理结果保护。完整 descriptor 对照、编译器差异与限制见 [静态复核](../evidence/mining/r1991-pathfinder-route-lifecycle/static-review.txt)、[机器证据](../evidence/mining/r1991-pathfinder-route-lifecycle/manifest.json)和[构建摘要](../evidence/mining/r1991-pathfinder-route-lifecycle/build-summary.txt)。
+- 构建通过不代表正常路线等价。下一步先确认是否已有 Minecraft 客户端在运行，再用单个受控有效世界验收正常入口、路线节点推进、碰撞、停止/取消和磁盘缓存生命周期；不要启动第二个游戏实例或干扰正在使用的客户端。
+- 不重做已排除的全量渲染普查、坐标倍率盲扫、旧 ClickGUI 无目的点按或已确认的 R1989 差异。
 
-## 有效证据与开放验收
+## 有效证据与开放缺口
 
-- [R1990 机器记录](../evidence/mining/r1990-pathfinder-event-handler/manifest.json)、[静态复核](../evidence/mining/r1990-pathfinder-event-handler/static-review.txt)、[构建摘要](../evidence/mining/r1990-pathfinder-event-handler/build-summary.txt)。完整原版/编译 javap dump、protected archive、原始构建日志与构建产物仅保留本机。
-- [R1990 双仓同步记录](SYNC-20261120-PATHFINDER-R1990.json)：两仓 content refs 已核验，共享文件 blobs 一致。
-- Pathfinder 正常玩家路径、有效世界中的路线与碰撞、停止/取消和磁盘缓存生命周期仍未验收；R1990 不能证明运行时等价或 Pathfinder 闭环。
-- ClickGUI 输入/设置持久化、Powder Macro、Glacite Commission Macro 及其他未恢复功能仍开放；真实兼容服务器登录、交互、断开和重连也未验证。
-- 编译、启动、计数、静态引用匹配均不单独作为功能等价证据。需要 MC 世界/实体的方法只用有效世界正常入口验证，不以 null 或 plain object 猜实现。
-
-## 同步纪律
-
-- 每个通过静态复核和全树构建的功能批次更新双语 README、机器证据和双仓同步记录；分别验证私有/公开 refs 与共享文件 blobs，不强推。
-- 只在本工作树提交本切片；保留其他 worktree、未跟踪调查工具和证据。目标路径的新增或未解释异常阻断通过。
+- [R1991 双仓同步记录](SYNC-20261120-PATHFINDER-R1991.json)：两个远端 refs 与共享文件 blobs 已核验。
+- Pathfinder 的 `NativePathFinder` 纯 Java 方法已有原版对照及有限 golden/cache 边界证据（R1936、R1938、R1951、R1959）；这些样本不证明全域或有效世界等价。
+- Pathfinder 正常玩家入口、有效世界寻路与碰撞、停止/取消和实际磁盘缓存读写仍未验收；R1991 不构成 Pathfinder 闭环。
+- Powder Macro、Glacite Commission Macro 的完整正常流程仍开放。ClickGUI 和兼容服务器验收不属于当前三个模块切片；全项目仍未完成。
+- 需要 MC 世界/实体的方法只用有效世界正常入口验证，不用 null/plain object 推测；构建、启动、计数或无崩溃都不单独作为功能等价证据。

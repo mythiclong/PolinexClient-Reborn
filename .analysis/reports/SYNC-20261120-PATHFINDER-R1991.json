@@ -1,0 +1,60 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1991",
+  "scope": "Publish the R1991 Pathfinder route-lifecycle corrections, bilingual README progress, static/build evidence, and handoff to private openpolinex and public PolinexClient-Reborn.",
+  "source_baseline": {
+    "integration_base_commit": "3df0e9e53b8da25c89ddabfbb6fbd75a2cca17d7",
+    "source_content_commit": "bc6afcdb6ee75900778a9cad4d52ac958d347d32",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "source_git_blob": "4fad5524cf8b43da32fd1d0446cb0e7be569fa16",
+    "source_sha256": "0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "3df0e9e53b8da25c89ddabfbb6fbd75a2cca17d7",
+      "content_commit": "bc6afcdb6ee75900778a9cad4d52ac958d347d32",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "e45c653b32c58d19e0212c5f81dc8e5c4bbeb9dc",
+      "content_commit": "fea1a45f7d7be6760e14e10684815271f2f31d67",
+      "fast_forward": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {"path": "README.md", "blob": "9d24e06d8189131396618c9e705b068d6eb9f327"},
+    {"path": "README_EN.md", "blob": "aadc9b3f1c010dc52b24b35147ad2fc3c4ce4705"},
+    {"path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java", "blob": "4fad5524cf8b43da32fd1d0446cb0e7be569fa16", "sha256": "0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266"},
+    {"path": ".analysis/evidence/mining/r1991-pathfinder-route-lifecycle/static-review.txt", "blob": "6152686744b4f5d36eb9adc574e6b1a6d3ff4a59"},
+    {"path": ".analysis/evidence/mining/r1991-pathfinder-route-lifecycle/build-summary.txt", "blob": "7879c06d94b3866447c2b1a33ddb19caa4a001d6"},
+    {"path": ".analysis/evidence/mining/r1991-pathfinder-route-lifecycle/manifest.json", "blob": "5a26fb91b83c91ecaa243d148118d1130ddff3ed"}
+  ],
+  "post_content_metadata_blobs_to_sync": [
+    {"path": "README.md", "blob": "643a427e6a60ec687bd97caee9f2822dcb505c88"},
+    {"path": "README_EN.md", "blob": "1cfaf7fc351e8300626353e20e8651028243031f"},
+    {"path": ".analysis/reports/RESUME.md", "blob": "7448806d074f9ded0f00464698cbfaa92a185a01"}
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T03:38:14Z",
+    "method": "Queried both live remote refs after content pushes, then compared the listed Git blobs at each content commit. Also confirmed the prepared final README and RESUME blobs for the metadata follow-up.",
+    "private_content_ref_observed": "bc6afcdb6ee75900778a9cad4d52ac958d347d32",
+    "public_content_ref_observed": "fea1a45f7d7be6760e14e10684815271f2f31d67",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "a425283af3e428a855604d738b1f406d1c978f82",
+    "public_tree_at_content_commit": "cb2102c0e4248be0d9746e083d0edf61c9b70952",
+    "repository_trees_identical": false,
+    "force_push_used": false
+  },
+  "validation_limits": [
+    "R1991 includes complete-descriptor static review for the corrected route-index and pending-result contracts, plus a Temurin JDK 25 full-tree build.",
+    "No direct runtime probe, Minecraft client, valid world, normal route progression, stop/cancel, disk-cache lifecycle, or compatible-server validation was performed.",
+    "The batch does not establish runtime equivalence or Pathfinder feature closure.",
+    "Protected archives/classes, full javap dumps, raw local logs, compiled classes, and built JAR were not published."
+  ]
+}
