@@ -1,0 +1,125 @@
+{
+  "experiment_id": "R1992-commission-inventory-scan-gate",
+  "generated_utc": "2026-11-20T04:39:30Z",
+  "scope": "Restore and statically verify the Glacite Commission Macro inventory completion-slot scan against complete original/source-compiled descriptors; run a pure control-helper golden and final Temurin 25 full-tree build.",
+  "source_baseline": {
+    "integration_commit_before_change": "4e5ddd23f8b948f55a9695eb4f8499ff42d2034e",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+    "git_blob_before": "b784ab54196b2b6cbcde465596455c18e8e9d996",
+    "git_blob_after": "cc4dce1960b171cd736c4de7ab22fb5b4179cae2",
+    "source_sha256_after": "746618599fdf71e847723e73587ca7e0dbebca605c498997ebee153bfae32ba9"
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner": "me.octo.client.IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll",
+    "owner_class_sha256_local_only": "38ca55b2830fbd0e860ed91f52476bedc336a6dfb8362c9dfea95ab05139f99e",
+    "full_javap_command": "javap -p -c -s -v -classpath <local-original-archive> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "4a14d8ce24303d0e4e49b41dc399d609cc32996366f4cda12f04fb3be6f2dafe"
+  },
+  "compiled_reference": {
+    "full_javap_command": "javap -p -c -s -v -classpath polinex-src/build/classes/java/main <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "d453bf93b92a7689dacb3555f07ec840edb41ecc80d92e2c810767ed608f289d",
+    "owner_class_sha256_local_only": "7fda62cfc42d3b9aa67327dc01272ac119a68a9cb5100fd56c64982f367df101",
+    "built_jar_sha256_local_only": "356dfa3bf3ba5b029c8cadba12476c39da6fc1cff4d25426c0b80b77081415cf"
+  },
+  "methods": {
+    "inventory_scan": {
+      "name": "b",
+      "descriptor": "(Lme/octo/client/events/impl/llIlIllIllIllIlIllllIIlIlllIIIlllIlIllIllIIlIIIlIIlIIllllllIIlIlIIllIIIlIlIllIIllIllI;)Ljava/lang/Integer;",
+      "original_instructions": 179,
+      "compiled_instructions": 125,
+      "original_code_instruction_sha256": "24039c226e158a7d72aa355b2cb22ae80dc23ff9dfd6dbca4ef8526f0012a7e2",
+      "compiled_code_instruction_sha256": "97da27e4962ac7befdb206b4768b535ae6721b9ab28586141675687b99ac844b",
+      "ordered_business_method_and_field_events": 26,
+      "ordered_events_match_after_documented_lowerings": true,
+      "field_references": 3,
+      "field_reference_order_match": true,
+      "original_nosuchelementexception_handler_entries": 12,
+      "compiled_handler_entries": 0,
+      "restored_contracts": [
+        "Read the nested control helper before event inventory access; call param.m() only for zero control and use the empty-list fallback whenever the selected list is null.",
+        "Retain the first-27-slot scan, Collection.isEmpty fast path, and Iterable.iterator receiver.",
+        "Preserve slot scan range 9 through 16, per-item Collection fast path, normalization, case-sensitive COMPLETED match, and selected slot-index return.",
+        "Restore both original Kotlin expression null checks and interleaved singleton-field/getter evaluation order.",
+        "Confirm the sole direct caller is a(event):void and its c() gate makes d()==0 on the direct scanner path."
+      ],
+      "documented_lowerings": [
+        "Original Kotlin StringsKt.contains$default(..., false, mask=2, null) is represented by the equivalent public explicit contains(..., false) overload because Java source cannot name the synthetic default bridge through the facade.",
+        "The 12 original NoSuchElementException handlers invoke the previously verified identity adapter and rethrow; the source propagates exceptions without handler scaffolding. Handler-table/debugger shape differs."
+      ],
+      "runtime_probe": "NOT RUN; Minecraft event/inventory objects were not fabricated."
+    },
+    "control_helper_c": {
+      "descriptor": "()I",
+      "original_gate_dump_sha256_local_only": "49712158589954c93e8a7b01084c8184f0509b322f632b7f34f853fea31f66c2",
+      "compiled_gate_dump_sha256_local_only": "2cb5c59f0c5ea7526822b0f02f116845c8fe2ad64c7aee295b82527556da0203",
+      "reviewed_contract": "Read and return the same static integer state field."
+    },
+    "control_helper_d": {
+      "descriptor": "()I",
+      "reviewed_contract": "Return 109 when c()==0; otherwise return 0. Original and compiled full helper bytecode plus golden outputs were inspected."
+    },
+    "normal_caller": {
+      "name": "a",
+      "descriptor": "(Lme/octo/client/events/impl/llIlIllIllIllIlIllllIIlIlllIIIlllIlIllIllIIlIIIlIIlIIllllllIIlIlIIllIIIlIlIllIIllIllI;)V",
+      "direct_scanner_invoke_sites_original": 1,
+      "direct_scanner_invoke_sites_compiled": 1,
+      "reviewed_contract": "The handler returns when c()==0 and reaches the scanner only when c()!=0; therefore the scanner helper d() returns 0 at this direct call site. Static path review only."
+    }
+  },
+  "golden_probe": {
+    "source": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/ModeGateGolden.java",
+    "result": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/mode-gate-golden.txt",
+    "command": "Temurin-25 javac -d <temporary-classes> ModeGateGolden.java; Temurin-25 java -cp <temporary-classes> ModeGateGolden <local-original-archive> polinex-src/build/classes/java/main",
+    "started_utc": "2026-11-20T04:38:56.0518842Z",
+    "ended_utc": "2026-11-20T04:38:56.2845803Z",
+    "compile_exit_code": 0,
+    "run_exit_code": 0,
+    "inputs": [0, 1, -1, 59, 109, -2147483648, 2147483647],
+    "assertions_passed": 7,
+    "assertions_total": 7,
+    "scope_limit": "Tests only the pure mode-gate helper; not the Commission scan or a Minecraft normal-user path."
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms256m -Xmx2G -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -XX:ReservedCodeCacheSize=128m' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T04:37:36.9377423Z",
+    "ended_utc": "2026-11-20T04:38:28.4564686Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks executed; compileTestJava/test NO-SOURCE",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "warnings": "18 existing Unsafe warnings plus deprecation/unchecked notices",
+    "raw_log_sha256_local_only": "2427134ec1a16a18c59373d35f01b2b8237d26d5a4aa8c3323ac609cba79a858",
+    "nonfinal_attempts": [
+      {
+        "started_utc": "2026-11-20T04:25:30.8348209Z",
+        "exit_code": 1,
+        "cause": "Java source could not name the synthetic contains$default bridge through StringsKt; replaced by explicit contains(..., false) overload and then reran the full final build."
+      }
+    ]
+  },
+  "validation": {
+    "complete_descriptor_static_review": "PASS",
+    "final_full_tree_build": "PASS",
+    "pure_helper_golden": "PASS (7/7)",
+    "commission_inventory_scan_runtime": "NOT RUN",
+    "commission_normal_user_path": "NOT RUN",
+    "valid_minecraft_world_or_inventory": "NOT RUN",
+    "module_feature_closure": "OPEN",
+    "runtime_equivalence": "OPEN",
+    "compatible_server": "NOT RUN"
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/compiled javap dumps",
+    "Raw build logs",
+    "Compiled classes and built JAR",
+    "Machine-specific absolute filesystem paths"
+  ],
+  "dual_repository_sync": "PENDING"
+}

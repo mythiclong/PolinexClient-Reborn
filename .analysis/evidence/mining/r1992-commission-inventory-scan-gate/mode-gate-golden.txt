@@ -1,0 +1,17 @@
+command_javac: Temurin-25 javac -d <temporary-classes> ModeGateGolden.java
+command_java: Temurin-25 java -cp <temporary-classes> ModeGateGolden <local-original-archive> polinex-src/build/classes/java/main
+started_utc: 2026-11-20T04:38:56.0518842Z
+ended_utc: 2026-11-20T04:38:56.2845803Z
+javac_exit_code: 0
+java_exit_code: 0
+original_archive_sha256_local_only: d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26
+scope: Compare only the pure nested control helper; no Minecraft classes, fake world, slots, or UI are instantiated.
+output:
+input=0 output=109 assertion=PASS
+input=1 output=0 assertion=PASS
+input=-1 output=0 assertion=PASS
+input=59 output=0 assertion=PASS
+input=109 output=0 assertion=PASS
+input=-2147483648 output=0 assertion=PASS
+input=2147483647 output=0 assertion=PASS
+cases=7 assertion=PASS

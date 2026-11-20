@@ -1,0 +1,16 @@
+R1992 final full-tree build
+
+- Working directory: `polinex-src`.
+- Command: `.\gradlew.bat '-Dorg.gradle.jvmargs=-Xms256m -Xmx2G -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -XX:ReservedCodeCacheSize=128m' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`.
+- Runtime: Eclipse Temurin 25.0.4.1+1-LTS; Gradle wrapper 9.7.1; Fabric Loom 1.18.0-alpha.19.
+- Started: `2026-11-20T04:37:36.9377423Z`; ended: `2026-11-20T04:38:28.4564686Z` (about 51.5 seconds).
+- Exit code: `0`; `BUILD SUCCESSFUL`; four actionable tasks executed.
+- Tests: `compileTestJava NO-SOURCE`, `test NO-SOURCE`.
+- Existing output: 18 `sun.misc.Unsafe` warnings and existing deprecation/unchecked notices.
+- Final owner class SHA-256: `7fda62cfc42d3b9aa67327dc01272ac119a68a9cb5100fd56c64982f367df101` (local build output).
+- Built JAR SHA-256: `356dfa3bf3ba5b029c8cadba12476c39da6fc1cff4d25426c0b80b77081415cf` (JAR not published).
+- Raw successful log SHA-256: `2427134ec1a16a18c59373d35f01b2b8237d26d5a4aa8c3323ac609cba79a858` (raw log not published).
+
+A non-final compile attempt at `2026-11-20T04:25:30.8348209Z` exited 1 after Java source attempted to name Kotlin's synthetic `StringsKt.contains$default` bridge directly. The source was changed to the public explicit `contains(..., false)` overload; complete original bytecode confirms the original default mask supplies `ignoreCase=false`. The final successful build above compiles that corrected source. No source diagnosis was inferred from the discarded attempt.
+
+Build/package success proves compilation only. No Minecraft client, valid world, Commission user path, or server was run.

@@ -3491,17 +3491,22 @@ public final class IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlI
    }
 
    private final Integer b(llIlIllIllIllIlIllllIIlIlllIIIlllIlIllIllIIlIIIlIIlIIllllllIIlIlIIllIIIlIlIllIIllIllI param1) {
-      List var3 = param1.m();
+      int control = me.octo.client.llIIllIlIIIIllIIlIIIlIllIllIllIIIllllIIlIIlIlIllIIllIIlIlIIIllllllllIIIIllIIlIIlIlIll.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.d();
+      List var3 = control == 0 ? param1.m() : null;
       if (var3 == null) {
          var3 = CollectionsKt.emptyList();
       }
-      List var4 = CollectionsKt.take((Iterable)var3, 27);
+      Iterable var4 = (Iterable)CollectionsKt.take((Iterable)var3, 27);
       boolean var5 = false;
-      for (Object var6 : var4) {
-         Slot var8 = (Slot)var6;
-         if (var8.getItem().isEmpty()) {
-            var5 = true;
-            break;
+      if (control == 0 && var4 instanceof Collection && ((Collection)var4).isEmpty()) {
+         var5 = false;
+      } else {
+         for (Object var6 : var4) {
+            Slot var8 = (Slot)var6;
+            if (var8.getItem().isEmpty()) {
+               var5 = true;
+               break;
+            }
          }
       }
       if (var5) {
@@ -3509,10 +3514,20 @@ public final class IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlI
       }
       for (int var9 = 9; var9 < 17; var9++) {
          Slot var7 = (Slot)var3.get(var9);
-         List var10 = IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.d(var7.getItem());
+         var itemDecoder = IlIllIIllIIIlllIlIIlIlIIIIIIlIIlIIlllIIIlIllIllllIlIIlIIlllIIIllIllIllIIlIIIlllllIllI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+         ItemStack item = var7.getItem();
+         Intrinsics.checkNotNullExpressionValue(item, "getItem(...)");
+         Iterable var10 = (Iterable)itemDecoder.d(item);
+         if (control == 0 && var10 instanceof Collection && ((Collection)var10).isEmpty()) {
+            continue;
+         }
          for (Object var11 : var10) {
             Component var12 = (Component)var11;
-            if (kotlin.text.StringsKt.contains(IIllIIIlIllllIlIlIIIlIIIlIIIlIIllIIllIIlIllIIIIlIlIIllIIllIIllllIlIIllIIIIIIllIllIlll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a(var12.getString()), "COMPLETED", false)) {
+            var textNormalizer = IIllIIIlIllllIlIlIIIlIIIlIIIlIIllIIllIIlIllIIIIlIlIIllIIllIIllllIlIIllIIIIIIllIllIlll.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI;
+            String text = var12.getString();
+            Intrinsics.checkNotNullExpressionValue(text, "getString(...)");
+            String normalized = textNormalizer.a(text);
+            if (kotlin.text.StringsKt.contains(normalized, "COMPLETED", false)) {
                return var7.index;
             }
          }

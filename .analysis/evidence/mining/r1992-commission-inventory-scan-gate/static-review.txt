@@ -1,0 +1,30 @@
+R1992 — Glacite Commission Macro inventory target scan
+
+## Descriptor and source basis
+
+- Owner: `me.octo.client.IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll`.
+- Corrected method: `b(Lme/octo/client/events/impl/llIlIllIllIllIlIllllIIlIlllIIIlllIlIllIllIIlIIIlIIlIIllllllIIlIlIIllIIIlIlIllIIllIllI;)Ljava/lang/Integer;`.
+- Original and source-compiled owner dumps were produced with complete `javap -p -c -s -v`; both commands exited 0. The protected original archive, class files, and full dumps remain local-only.
+- The source delta is tied to baseline Git blob `b784ab54196b2b6cbcde465596455c18e8e9d996`; final source content SHA-256 and Git blob are recorded in `manifest.json`.
+
+## Restored method behavior
+
+- Read the Powder Macro nested helper `d()I` before requesting the event inventory. Preserve `param.m()` only when the control is zero; use the original empty-list fallback whenever the selected list is null (including nonzero control). Complete helper bytecode is `d()I = c() == 0 ? 109 : 0` in both artifacts.
+- The sole direct bytecode call site is the Commission event handler `a(event):void`. Its complete descriptor reads `c()I` first and returns when it is zero; reaching the inventory scanner therefore implies nonzero `c()` and `d()==0`. This resolves the normal caller path statically; it is not a runtime test.
+- Limit the first inventory scan to 27 entries, use the original `Collection.isEmpty()` fast path and `Iterable.iterator()` receiver, and return null if a scanned slot is empty. Scan slots 9 through 16 for the first normalized description containing the case-sensitive text `COMPLETED`; return that slot's index or null.
+- Restore both Kotlin expression null checks (`getItem(...)`, `getString(...)`) and original evaluation order. In particular, each singleton/helper field read occurs before the associated Minecraft getter call, as in the original instruction stream.
+- The source invokes the explicit Kotlin `contains(CharSequence, CharSequence, false)` overload. This is the body selected by the original `contains$default(..., false, mask=2, null)` bridge; it preserves case-sensitive matching while remaining callable from Java source.
+
+## Complete bytecode comparison
+
+- Original method: 179 instructions and 12 `NoSuchElementException` handler entries. Source-compiled method: 125 instructions and no handler table.
+- After excluding the original handler-only identity-adapter invocations and normalizing the Kotlin default-argument bridge to its explicit `ignoreCase=false` overload, the ordered sequence of 26 business method/field references matches. All 3 field references also match in their interleaved order with calls.
+- The original handlers invoke the owner's `a(NoSuchElementException):NoSuchElementException` identity helper and rethrow. That helper was fully reviewed in R1988; it returns the same throwable and does not suppress or transform it. The source has no corresponding catch/rethrow scaffolding. Exception type/object propagation is retained, while bytecode handler layout and debugger/stack-frame shape differ.
+- The original and compiled control helper dumps confirm `c()I` reads the same state field and `d()I` maps zero to 109 and nonzero to 0. A Java isolated-classloader golden probe exercised zero, representative nonzero values, and integer extremes against both artifacts; all 7 assertions passed. It creates no Minecraft objects and does not validate the inventory scan itself.
+
+## Validation boundary
+
+- Complete-descriptor static review: PASS for gate placement, call/field evaluation order, iteration fast paths/receivers, null contracts, slot bounds, string matching, return paths, caller gate, and exception behavior.
+- Temurin JDK 25 full-tree Gradle build: PASS; see `build-summary.txt`.
+- Helper golden probe: PASS, 7/7 inputs; see `mode-gate-golden.txt`.
+- Minecraft client, valid inventory/world, Commission normal-user flow, server, and macro start/stop lifecycle: NOT RUN. This slice restores and statically verifies one inventory-scan method; it does not establish Commission Macro feature closure or runtime equivalence.

@@ -9,6 +9,8 @@
 
 ## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-19）
 
+R1992 完成 Glacite Commission Macro 库存目标扫描 `b(event):Integer` 的一处源码恢复：按原版先读取 Powder Macro 控制门，再访问事件背包；恢复两处 `Collection.isEmpty()` 快路径、`Iterable.iterator()` receiver、两个 Kotlin 空值检查和 singleton/getter 的求值顺序，按槽位 9–16 查找大小写敏感的 `COMPLETED` 描述并返回槽位索引。原版 179 条指令、12 个 identity 异常 handler 与最终编译方法做完整 descriptor 对照；排除只原样重抛的 handler、将 Kotlin `contains$default` mask=2 归一为显式 `ignoreCase=false` 后，26 个有序方法/字段事件一致。控制 helper 隔离 golden 7/7 通过；Temurin JDK 25 全树构建 exit 0（18 条既有 `Unsafe` 警告，测试 `NO-SOURCE`）。这是静态和 helper 级证据，不是有效库存、Commission 正常流程或完整宏验收；未运行客户端/服务器，不宣称功能等价。详见 [R1992 静态复核](.analysis/evidence/mining/r1992-commission-inventory-scan-gate/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1992-commission-inventory-scan-gate/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1992-commission-inventory-scan-gate/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261120-COMMISSION-R1992.json)。
+
 R1991 沿 Pathfinder 路线生命周期修复两个有原版字节码依据的控制流缺口：`h(List):boolean` 递增路线索引后仅在完成谓词为 true 时停止，避免有效节点被提前终止或完成时访问越界；`g():void` 先检查共享 gate 与待处理路线列表，再读取目标和清理 volatile 状态，保留异步结果尚未完整发布时的原版状态。最终编译方法的字段读写顺序与原版一致，支撑的停止/清理方法也完成完整 descriptor 复核。Temurin JDK 25 全树构建 exit 0（主机内存不足的前三次尝试未产生源码诊断，降低并行度后通过；18 条既有 `Unsafe` 警告，测试 `NO-SOURCE`）。目前只有静态复核与构建证据；未运行客户端、有效世界、正常路线、停止/取消或磁盘缓存，不宣称运行时等价或 Pathfinder 闭环。详见 [R1991 静态复核](.analysis/evidence/mining/r1991-pathfinder-route-lifecycle/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1991-pathfinder-route-lifecycle/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1991-pathfinder-route-lifecycle/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1991.json)。
 
 R1990 按完整原版 descriptor 恢复 Pathfinder 外层事件处理器 `a(event):void` 遗漏的 gate/null 分支、volatile 读取次序及三个 Kotlin 空值契约；同时把可变实体 ID 与目标方块位置各读取一次。原版 768 条指令、77 个 identity 异常表项与最终编译方法完成对照：91 个有序调用目标、50 个有序字段引用和归一化后的 39 个行为常量一致；30 处差异仅是同一 `private final` 调用的 Kotlin/Javac opcode lowering。Temurin JDK 25 全树 `build --rerun-tasks` exit 0（18 条既有 `Unsafe` 警告，测试 `NO-SOURCE`）。仅静态复核与构建通过；没有运行客户端、有效世界、正常寻路事件或服务器，不宣称运行时等价/Pathfinder 闭环。详见 [R1990 静态复核](.analysis/evidence/mining/r1990-pathfinder-event-handler/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1990-pathfinder-event-handler/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1990-pathfinder-event-handler/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1990.json)。
@@ -62,11 +64,13 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 - **R1981 Pathfinder `o(): boolean`**：完整原版 descriptor（offset 0–507、25 个异常表项）复核后恢复 gate-null 早退、空集合快路径及 `Iterable.iterator()` 接收者。17 个非异常 helper 调用和 6 个字段引用按序匹配；7 个私有调用仅有 Javac lowering opcode 差异，25 个异常 handler 均通过 identity helper 原样重抛。Temurin JDK 25 全树 build exit 0；未做有效玩家/世界、正常路线或服务器测试。见 [R1981 manifest](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)。
 - **尚未通过的验收**：Pathfinder 正常玩家入口、有效世界路线/碰撞、磁盘缓存生命周期及兼容服务器行为仍开放。离线差分不能替代游戏内验证。
 - **ClickGUI**：同进程原版 Options 对照显示键盘和滚轮有效，但分类图标与 Draw 控件无可观察鼠标反馈；事件转发、命中、模块开关及设置保存/重载仍未闭环。
-- **其他功能**：初始化事件、Glacite Commission Macro、Powder Macro、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
+- **其他功能**：Glacite Commission Macro 目前只新增了 R1992 库存扫描方法的静态恢复，完整启停/事件流程仍未闭环；Powder Macro、初始化事件、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
 
 ### 最新交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1992 Glacite Commission Macro 库存扫描静态复核、控制 helper golden 与全树构建](.analysis/evidence/mining/r1992-commission-inventory-scan-gate/manifest.json)
+- [R1992 双仓同步记录](.analysis/reports/SYNC-20261120-COMMISSION-R1992.json)
 - [R1989 Pathfinder 玩家路径/输入辅助方法静态复核与全树构建](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json)
 - [R1989 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1989.json)
 - [R1980 Pathfinder 二段碰撞谓词静态复核与全树构建](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
