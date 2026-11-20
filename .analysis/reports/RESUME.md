@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-20 UTC。R1994 Pathfinder 预计算路线入口已完成完整 JVM descriptor 静态复核、真实 `bG()` 调用点复核、离线断言及 Temurin JDK 25 全树 Gradle 构建（exit 0）。源码、机器证据、双语 README 和本交接已推送：私有 `openpolinex/codex/handoff-progress-2026-11-15` 内容提交 `2ebdca1e2a8600daa0b1e428f0155b1bc59ab609`，公开 `PolinexClient-Reborn/main` 内容提交 `15f660df21e8ba98d3a43e69eddcf69be8cc9e55`；两端 refs 及 8 个共享文件 blobs 已核验。正在补入双仓同步机器记录。没有运行客户端、有效玩家/世界、路线或兼容服务器；不宣称运行时等价或 Pathfinder 闭环。
+> 更新：2026-11-20 UTC。R1994 Pathfinder 预计算路线入口已完成完整 JVM descriptor 静态复核、真实 `bG()` 调用点复核、离线断言及 Temurin JDK 25 全树 Gradle 构建（exit 0）。源码、机器证据、双语 README、交接及双仓同步机器记录均已同步到私有 `openpolinex/codex/handoff-progress-2026-11-15` 与公开 `PolinexClient-Reborn/main`；内容提交、文档提交、源文件 SHA-256、共享 blobs 和远端 refs 见 `.analysis/reports/SYNC-20261120-PATHFINDER-R1994.json`。之后只做了此交接的刷新。未运行客户端、有效玩家/世界、正常路线或兼容服务器；不宣称运行时等价或 Pathfinder 闭环。
 
 ## 当前基线
 
@@ -18,8 +18,8 @@
 
 ## 下一步与开放项
 
-1. 沿 `bG()` 预计算路线调用点追踪异步请求和结果写入、pending route/target、路线接管及 `bG`/事件执行，再核对完成、失败、取消和缓存失效；基于完整 descriptor 找到确定偏差后再修复。打通可运行构建后集中安排有效世界正常入口验收。
+1. 已定位预计算路径的实际链条：`a(BlockPos)` 发起带 generation/target 的异步请求，静态完成回调校验 generation/target 后发布或清除路线，`bG()` 再把路线传给 Pathfinder 入口；`bH()`递增 generation 并清除 pending/target/route。当前只完成定向字节码阅读，未作运行时闭环结论。下一步核对起点选择 helper `b(BlockPos)` 的完整 descriptor，并继续 central route executor、完成/失败/取消和缓存失效路径；确认偏差后再修复并跑全树构建，有效世界验收留待合适客户端窗口。
 2. 继续 Powder Macro 与 Glacite Commission Macro 的真实启停/事件/配置/清理链；R1992 只恢复了一个 Commission 库存目标扫描方法，不代表完整宏流程通过。
 3. 按已具备条件继续客户端 GUI/输入/配置/native 等其他开放功能；不要把静态匹配、计数或构建成功等同功能等价。真实兼容服务器登录、交互、断开/重连仍需独立验收。
 
-双仓阶段同步目标：私有 `openpolinex` 的 `codex/handoff-progress-2026-11-15` 与公开 `PolinexClient-Reborn` 的 `main`；本轮内容已快进发布并核验，R1994 机器同步记录随后补入。不要对 `D:\Work\OpenPoli` 做 pull/reset/清理；其修改不属于本工作树。
+双仓阶段同步目标：私有 `openpolinex` 的 `codex/handoff-progress-2026-11-15` 与公开 `PolinexClient-Reborn` 的 `main`；R1994 代码、证据、README 和交接机器记录均已快进发布并核验。不要对 `D:\Work\OpenPoli` 做 pull/reset/清理；其修改不属于本工作树。
