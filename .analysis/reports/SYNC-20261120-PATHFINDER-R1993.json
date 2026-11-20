@@ -72,5 +72,49 @@
     "No Minecraft client, valid player/entity/world, normal Pathfinder route, stop/cancel/cache lifecycle, or compatible-server behavior was run.",
     "The sync does not establish Pathfinder runtime equivalence or feature closure.",
     "Original protected archives/classes, full javap dumps, raw logs, build outputs, and absolute machine paths were excluded."
-  ]
+  ],
+  "metadata_followup": {
+    "scope": "Publish the updated current-progress summary, bilingual READMEs, RESUME handoff, and manifest sync status after the R1993 source/evidence content pushes.",
+    "repositories": {
+      "private_openpolinex": {
+        "remote": "https://github.com/mythiclong/openpolinex.git",
+        "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+        "documentation_commit": "25c0e89232f92e17776e2ec1a511d8a81cdb55cc",
+        "fast_forward": true
+      },
+      "public_polinexclient_reborn": {
+        "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+        "ref": "refs/heads/main",
+        "documentation_commit": "0a06f97b64a03cb0791aad4099e96e4c62de05c8",
+        "fast_forward": true
+      }
+    },
+    "shared_progress_file_blobs_at_documentation_commits": [
+      {
+        "path": ".analysis/evidence/mining/r1993-pathfinder-route-entry-gate/manifest.json",
+        "blob": "ed84c240c48d7744c48e14b495d55843adc00784"
+      },
+      {
+        "path": ".analysis/reports/RESUME.md",
+        "blob": "6a4ea4d4193679603c610537a8b088f291018730"
+      },
+      {
+        "path": "README.md",
+        "blob": "435e7049d2383b7a4e06716d2e11a84c62065f20"
+      },
+      {
+        "path": "README_EN.md",
+        "blob": "466747466e2ecaf77f135a4289c2e8c2bad0a12b"
+      }
+    ],
+    "verification": {
+      "checked_utc": "2026-11-20T05:43:09Z",
+      "method": "Compared both remote refs and the Git blobs for all listed progress files at the documentation commits.",
+      "private_remote_ref_observed": "25c0e89232f92e17776e2ec1a511d8a81cdb55cc",
+      "public_remote_ref_observed": "0a06f97b64a03cb0791aad4099e96e4c62de05c8",
+      "private_remote_ref_verified": true,
+      "public_remote_ref_verified": true,
+      "listed_shared_blobs_equal": true
+    }
+  }
 }
