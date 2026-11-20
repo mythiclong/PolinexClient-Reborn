@@ -22,6 +22,53 @@
       "content_commit": "d17a6ac9e6b1c3dcbcae343c7f0286e3bb08ad37"
     }
   },
+  "documentation_followup": {
+    "checked_utc": "2026-11-20T01:07:03Z",
+    "private_openpolinex": {
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "affd2de253839ae92d0dc53646511ad221f0cd55"
+    },
+    "public_polinexclient_reborn": {
+      "ref": "refs/heads/main",
+      "commit": "4644e0a2e9cb1fcc8970d05b6c50228f154ca142"
+    },
+    "shared_file_blobs": [
+      {
+        "path": ".analysis/reports/RESUME.md",
+        "blob": "992e15d9e6697190f6a0c702ec9bd940f322bd69"
+      },
+      {
+        "path": "README.md",
+        "blob": "f0be2365f84334b67a7f334fef8d76ba6a11f685"
+      },
+      {
+        "path": "README_EN.md",
+        "blob": "8276b5498aacad521a433d4d6da016c43cb4d9f3"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+        "blob": "b784ab54196b2b6cbcde465596455c18e8e9d996",
+        "sha256": "7dde59201a836a1c8523fbef454ed2d78cf29bd03c96b54ea5e4bdd2dd37e467"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json",
+        "blob": "cdc4486aba35bf2428079cd48b0d5cb6660ae5d1"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/static-review.txt",
+        "blob": "359ba924fca7b69fab0b5202dba2870132e7d76d"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/build-summary.txt",
+        "blob": "bc82d4794b5e3eb833e8c2572176fd04c25b54e8"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/build-run.json",
+        "blob": "4f0facae00c59cdc36da8f58f67231f7d9cc2ed5"
+      }
+    ],
+    "remote_refs_verified": true
+  },
   "shared_file_blobs_at_content_commits": [
     {
       "path": ".analysis/reports/RESUME.md",
