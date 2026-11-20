@@ -1,0 +1,87 @@
+{
+  "experiment_id": "R1990-pathfinder-event-handler-gate",
+  "generated_utc": "2026-11-20T02:22:47.8763786Z",
+  "scope": "Restore the missing original event-gate and null contracts in the Pathfinder outer event handler, compare the complete JVM descriptor against the protected archive, and run a Temurin JDK 25 full-tree build.",
+  "source_baseline": {
+    "commit": "6bc0d1c727016f6715439e3ccad9912b49b67eac",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob": "325f035243955b3338f1a839c93b03e540b2e1cf",
+    "final_git_blob_before_documentation": "a80a2a614a1308d5c896f2d81b80dbc0273c8de0",
+    "final_source_sha256": "1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22"
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "owner_class_sha256_local_only": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "full_javap_command": "javap -p -c -s -v -classpath <original archive> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "ed7df0d675e41fc338697057c60b65e11994dc0ec8186d093007abdc04962b8a"
+  },
+  "method": {
+    "name": "a",
+    "descriptor": "(Lme/octo/client/events/impl/llIlIIIIlIlllIIllllIIllIllIIIlIIIIIIIlIIIllIIllIllllllllllIllIIIllIlIlIlIlIIlIIIllIII;)V",
+    "original_method_block_sha256_local_only": "6d8f772a3f29e8ea3bfaab2a3ca1f3e58ee5be7604b7cb6f43faedb0e19c7b85",
+    "compiled_method_block_sha256_local_only": "adc735a76e2dd7ca156385e8b852e4c2955510a6643fe1a5969fa830bfe67971",
+    "original_instructions": 768,
+    "compiled_instructions": 442,
+    "original_exception_table_entries": 77,
+    "compiled_exception_table_entries": 0,
+    "original_non_obfuscation_invocation_targets": 91,
+    "compiled_non_obfuscation_invocation_targets": 91,
+    "ordered_invocation_targets_match": true,
+    "ordered_field_references": 50,
+    "ordered_field_references_match": true,
+    "normalized_behavioral_constants": 39,
+    "normalized_behavioral_constants_match": true,
+    "constant_normalization": "Discarded adjacent obfuscation-only sipush/sipush/pop2 sequences, three unused Kotlin inline-temporary zero initializers (original offsets 280, 347, 427), and one duplicated aconst_null on the nullable entity lookup branch (original offset 323; Java source retains the same initially-null entity state).",
+    "private_call_opcode_deltas": 30,
+    "private_call_opcode_delta": "Kotlin invokespecial to Javac invokevirtual for identical private final owner methods and descriptors; the owner class is final. All other ordered invocation targets/descriptors match.",
+    "exception_semantics": "The 77 original handlers catch only kotlin.NoWhenBranchMatchedException and invoke the owner's a(Throwable):Throwable helper, whose complete body is aload_0; areturn. The helper is identity and the source does not swallow or wrap the exception; the compiled structured method therefore propagates the same throwable directly.",
+    "restored_contracts": [
+      "Read l():int[] before the event parameter null check.",
+      "Read the volatile pending-refresh flag in the original order even when the gate is null, but clear it and call s() only for a non-null gate with the flag set.",
+      "Preserve the single volatile stop-flag read and distinct null/non-null gate branch behavior, including g() followed by an early return before route-list access when the gate is null.",
+      "Snapshot the nullable entity id and target BlockPos once; preserve Number.intValue() receiver and lookup ordering.",
+      "Restore both getDeltaMovement() expression null checks at their original short-circuit points and the Vec3.add(...) result null check before dispatch."
+    ],
+    "original_full_javap_sha256_local_only": "ed7df0d675e41fc338697057c60b65e11994dc0ec8186d093007abdc04962b8a",
+    "compiled_full_javap_sha256_local_only": "a8dbf1c785ad6ee9ba391e448414ea6e05850f04891aed18ccbad8b22517a31e",
+    "compiled_owner_class_sha256": "36686a05eae88c4ec65c5ae7c29d03079f42297a532a0dd4bc959522d02772da"
+  },
+  "build": {
+    "command": "JAVA_HOME=<Temurin 25>; .\\gradlew.bat build --rerun-tasks --no-daemon --console=plain",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T02:21:15.3343380Z",
+    "finished_utc": "2026-11-20T02:22:06.1146379Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 existing Unsafe warnings; tests NO-SOURCE",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "compiled_owner_class_sha256": "36686a05eae88c4ec65c5ae7c29d03079f42297a532a0dd4bc959522d02772da",
+    "built_jar_sha256_not_published": "51d470d096d654b12b1ca584efa7b542d984b8a1ecf2e4af4a1838660d9ecce8",
+    "build_log_sha256_local_only": "8ba68131f3ae0977b8d92078ee11354c7f548858c06ee88edd2dcf1b8bbc2d3f",
+    "environment_retry": "An initial build attempt exited 1 because JAVA_HOME selected JDK 17 although java on PATH was JDK 25; the Fabric Loom plugin requires a JDK 25 runtime. The recorded successful attempt explicitly set JAVA_HOME to Temurin 25. This was environment configuration, not a source compilation failure."
+  },
+  "static_review": {
+    "started_utc": "2026-11-20T02:22:45.8859804Z",
+    "finished_utc": "2026-11-20T02:22:47.8763786Z",
+    "original_full_descriptor_review": "PASS",
+    "compiled_full_descriptor_review": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "normal_pathfinder_event_route": "NOT RUN",
+    "stop_cancel_cache_lifecycle": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "runtime_or_feature_equivalence": "OPEN",
+    "screenshot": "NOT APPLICABLE; static bytecode and build slice only"
+  },
+  "publication_exclusions": [
+    "Original archive or protected class files",
+    "Full original/current javap dumps",
+    "Raw local build log",
+    "Compiled classes and built JAR"
+  ]
+}

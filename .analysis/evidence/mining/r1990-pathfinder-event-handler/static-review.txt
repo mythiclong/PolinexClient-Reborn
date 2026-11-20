@@ -1,0 +1,27 @@
+R1990 — Pathfinder outer event-handler gate
+
+Target
+- Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+- Method: a
+- JVM descriptor: (Lme/octo/client/events/impl/llIlIIIIlIlllIIllllIIllIllIIIlIIIIIIIlIIIllIIllIllllllllllIllIIIllIlIlIlIlIIlIIIllIII;)V
+- Original archive SHA-256: 2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230
+- Source baseline: 6bc0d1c727016f6715439e3ccad9912b49b67eac; baseline Git blob 325f035243955b3338f1a839c93b03e540b2e1cf.
+- Final source SHA-256: 1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22.
+
+Static reconstruction
+- The complete original descriptor was disassembled with `javap -p -c -s -v`; the final class came from the successful full Gradle build, not the isolated compiler output.
+- Original entry order is `l():int[]` → event `checkNotNullParameter` → volatile refresh read → gate-dependent refresh action → one volatile stop-flag read. A null gate bypasses refresh mutation, then selects `s()` versus `g()` from the stop flag and returns before route-list access. A non-null gate follows the stop/m/enabled/n checks. The source now preserves these branches and read order.
+- The nullable entity-id and target-BlockPos fields are each read once. The entity id retains the original `Number.intValue()` target and lookup order.
+- Both `LocalPlayer.getDeltaMovement()` calls retain separate null checks at their original short-circuit points. The later call remains inside the two-node classification condition. The `Vec3.add(...)` result is checked before the pathfinder receiver call.
+- The original contains 768 instructions and 77 `NoWhenBranchMatchedException` handlers; the compiled Java method contains 442 instructions and no exception table. All 77 original handlers call the owner's identity helper `a(Throwable):Throwable` (`aload_0; areturn`) and rethrow the same exception. No exception is swallowed or wrapped by the restored source.
+- After excluding only the injected identity-helper references, the original and compiled methods have the same 91 ordered invocation targets/descriptors. Thirty `invokespecial` → `invokevirtual` differences are limited to calls to identical `private final` methods on this final owner; the remaining invocation opcodes agree.
+- All 50 ordered field references match. The 39-value normalized behavioral constant sequence matches after excluding obfuscation-only `sipush/sipush/pop2`, three unused Kotlin inline-temporary zero initializers at original offsets 280/347/427, and one redundant null push on the nullable entity branch at original offset 323. The Java method starts the entity local as null and preserves the same null result when either the id or level is absent.
+- Full original javap SHA-256 (local-only): `ed7df0d675e41fc338697057c60b65e11994dc0ec8186d093007abdc04962b8a`.
+- Full compiled javap SHA-256 (local-only): `a8dbf1c785ad6ee9ba391e448414ea6e05850f04891aed18ccbad8b22517a31e`.
+- Compiled owner SHA-256: `36686a05eae88c4ec65c5ae7c29d03079f42297a532a0dd4bc959522d02772da`.
+
+Outcome and limits
+- Complete-descriptor static review: PASS.
+- Temurin JDK 25 full-tree Gradle build: PASS; see `build-summary.txt`.
+- No client, valid world, normal Pathfinder event route, cancellation/cache lifecycle, or compatible-server run was performed. This slice does not establish runtime behavior or Pathfinder feature closure.
+- Protected archive/class files, full javap dumps, raw logs, and compiled artifacts remain local and are not published.
