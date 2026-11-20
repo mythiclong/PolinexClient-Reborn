@@ -1,0 +1,103 @@
+{
+  "experiment_id": "R1994-pathfinder-prefetched-route-contract",
+  "generated_utc": "2026-11-20T05:58:28Z",
+  "scope": "Restore the original gate, null-parameter, target-dispatch, and invalid-prefetched-route contracts for the Pathfinder prefetched-route entry; compare the complete JVM descriptor and actual bG caller, then run a Temurin JDK 25 full-tree build.",
+  "source_baseline": {
+    "integration_commit_before_change": "804e361798ca86bccfba4b2419aa2e1b4f6315a5",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "source_git_blob_before": "16ec8dcf9e608621df4547c69f5423c6a0b67967",
+    "source_git_blob_after": "efd51a79e1802a46260c8540a637b6fd0babf98f",
+    "source_sha256_after": "17cd21d24cb4bffcb5563e793716d86c07e7947fa2131061ef30c1d9c4c3db8e",
+    "changed_production_files": 1
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "owner_class_sha256_local_only": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "full_owner_javap_command": "javap -p -c -s -classpath <local original owner/archive> <owner>",
+    "full_owner_javap_exit_code": 0,
+    "full_owner_javap_sha256_local_only": "76f756a6a0e9717517a6082674cbfb69a23bd2657a5ab7d5ea9a00bc60672197",
+    "method_block_sha256_local_only": "a796fb31bd4432a89c3bbd08daa776f1dfea1b6452df2e9fab8a5bb214a3682b"
+  },
+  "compiled_reference": {
+    "full_owner_javap_command": "javap -p -c -s -classpath polinex-src/build/classes/java/main <owner>",
+    "full_owner_javap_exit_code": 0,
+    "full_owner_javap_sha256_local_only": "a97f66546b6a25f7052f209d42ed19507c116efe7f3282af8c1035a500e22864",
+    "owner_class_sha256_local_only": "2b5d2928df11b615ed4d45fd9771d40ef11f4e9c11add4f69791e3c117cbc845",
+    "method_block_sha256_local_only": "848b348ec6e0a600d213d4bad419fb93ace3d9ba81bb55263dc6ad31730b71f8"
+  },
+  "method": {
+    "name": "a",
+    "descriptor": "(Ljava/lang/Object;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;ZZ)Z",
+    "original_instructions": 211,
+    "compiled_instructions": 191,
+    "ordered_field_references": 28,
+    "ordered_field_references_match": true,
+    "original_ordered_method_references": 28,
+    "original_identity_throwable_relay_references": 11,
+    "compiled_ordered_method_references_after_relay_lowering": 17,
+    "ordered_business_calls_match": true,
+    "behavioral_string_constants": [
+      "prefetchedPath",
+      "ZERO",
+      "Invalid prefetched path target"
+    ],
+    "behavioral_string_constants_match": true,
+    "original_exception_table_entries": 13,
+    "original_identity_NoWhenBranchMatchedException_entries": 11,
+    "original_monitor_cleanup_entries": 2,
+    "compiled_monitor_cleanup_entries": 2,
+    "exception_lowering": "The 11 original catches invoke a(Throwable):Throwable, whose complete helper is an identity return; current Java propagates the same throwable directly. Both monitor-cleanup entries remain."
+  },
+  "actual_caller": {
+    "owner": "me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl",
+    "method": "bG",
+    "descriptor": "()V",
+    "original_invoke_offset": 429,
+    "compiled_invoke_offset": 839,
+    "bridge_descriptor": "(Lme/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll;Ljava/lang/Object;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;ZZILjava/lang/Object;)Z",
+    "present_in_original_and_compiled": true,
+    "argument_contract": "BlockPos target local, prefetched List local, null Vec3, false first boolean, config al() boolean, default-argument mask 12, null marker.",
+    "preinvoke_argument_producer_opcodes_match_after_local_slot_and_constant_pool_normalization": true,
+    "review_boundary": "Static reachability only; this does not prove that bG is a completed normal in-game route or that the target was invoked at runtime."
+  },
+  "offline_assertions": {
+    "record": "offline-assertions.json",
+    "status": "PASS",
+    "assertions": [
+      "Complete owner/method/descriptor found in both original and final compiled javap.",
+      "All 28 ordered field references match.",
+      "All 17 ordered non-identity method references match after removing only 11 original identity throwable relays.",
+      "All three behavioral strings match in order.",
+      "Original exception table has 11 identity relays and two monitor cleanups; compiled method retains both monitor cleanups.",
+      "Original and compiled bG()V each contain the same synthetic bridge invocation with matching normalized argument producers."
+    ]
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "started_utc": "2026-11-20T05:57:42.9259328Z",
+    "ended_utc": "2026-11-20T05:58:28.0635582Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks; compileTestJava and test NO-SOURCE; 18 existing Unsafe warnings plus deprecation/unchecked notices.",
+    "log_sha256_local_only": "cb772068188de41acf81ecf8bc1220e424a0b22dae6ac4ea596be9f0f0d48e56"
+  },
+  "runtime_acceptance": {
+    "client_started": false,
+    "valid_player_world_used": false,
+    "prefetched_route_normal_user_path_exercised": false,
+    "stop_cancel_cache_lifecycle_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Static descriptor review, offline assertions, actual bytecode caller review, and full-tree build only. Runtime/pathfinder closure remains OPEN."
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/current javap output",
+    "Compiled classes and JAR",
+    "Raw build output log",
+    "Absolute machine paths"
+  ],
+  "dual_repository_sync": "PENDING_CONTENT_PUSH_VERIFICATION"
+}

@@ -1,0 +1,36 @@
+# R1994 — Pathfinder prefetched-route entry contract
+
+## Target and source
+
+- Owner: me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll
+- Method: a(Ljava/lang/Object;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;ZZ)Z
+- Baseline integration HEAD: 804e361798ca86bccfba4b2419aa2e1b4f6315a5; source blob 16ec8dcf9e608621df4547c69f5423c6a0b67967.
+- Corrected source blob efd51a79e1802a46260c8540a637b6fd0babf98f; source SHA-256 17cd21d24cb4bffcb5563e793716d86c07e7947fa2131061ef30c1d9c4c3db8e.
+- Original archive and owner fingerprints are in manifest.json; full dumps and protected bytes remain local-only.
+
+## Confirmed differences restored
+
+1. Original calls the global gate, then checks prefetchedPath with Kotlin checkNotNullParameter, before the first controller-state write. The prior source mutated the path index/flags before a null list failed later. The check now occurs at the original point.
+2. Player/position reads occur only when the captured gate is non-null. A missing player/position, or a null gate, follows the original Vec3.ZERO fallback and its ZERO expression check. The prior source read Minecraft.player regardless of gate and omitted the fallback check.
+3. Target type dispatch is gate-dependent. With a non-null gate, entities set the entity ID and query the synchronized target cache; BlockPos is accepted directly; other values resolve to null. The original null-gate branch is unusual but explicit: the entity path reaches a BlockPos checkcast, while non-entity inputs resolve to null. This behavior was preserved rather than simplified.
+4. Validation preserves the separate target-null and non-null/list-empty paths. For a null gate, target-null returns param5 after the earlier original state updates without logging/stopping; a non-null target returns List.isEmpty(). With a non-null gate, invalid target or empty route optionally logs, calls v(), and returns false. A valid non-empty route follows the original target/start/settings/flag/list/index write order.
+
+## Complete-descriptor static comparison
+
+- Original/final compiled instruction counts: 211 / 191.
+- All 28 ordered field references match.
+- All 17 ordered business method references match after removing only the original's 11 identity a(Throwable):Throwable exception relays.
+- Behavioral strings prefetchedPath, ZERO, and Invalid prefetched path target match in order.
+- Original exception table: 13 entries (11 identity relays, two monitor cleanups); compiled Java retains both monitor cleanups. The original identity helper is an identity return; no exception is swallowed or wrapped.
+- Full original/final owner and method-block hashes are recorded in manifest.json.
+
+## Actual caller and build
+
+- Original and final compiled caller owner both contain a bG()V call to the same synthetic bridge descriptor (Controller,Object,List,Vec3,ZZ,int,Object):boolean; pre-invoke producers match after local-slot/constant-pool normalization. It supplies a target BlockPos, a prefetched List, null start, false, a config boolean, mask 12, and a null marker. This is static reachability, not a runtime invocation.
+- Temurin JDK 25 full-tree Gradle build: PASS, exit 0; four actionable tasks. Tests are NO-SOURCE; 18 existing Unsafe warnings and existing deprecation/unchecked notices. See build-summary.txt.
+
+## Validation limits
+
+- No client, valid player/world, normal prefetched route, stop/cancel/cache lifecycle, or compatible server was run.
+- This slice does not establish in-game equivalence or Pathfinder closure.
+- Original archive/class files, full javap dumps, built artifacts, raw logs, and absolute paths are not published.

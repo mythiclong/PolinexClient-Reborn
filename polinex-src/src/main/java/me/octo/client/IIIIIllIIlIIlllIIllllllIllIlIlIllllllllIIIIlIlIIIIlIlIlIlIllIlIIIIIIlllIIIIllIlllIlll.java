@@ -2458,18 +2458,25 @@ return true;
       boolean param5
    ) {
       int[] var6 = me.octo.client.IllIllllIlIllIIIlIlIlIllllllllIlIlIIllIIIIIllllIIlllIllIlIlIIIIIlIlllIlllIllIIlllllll.l();
+      Intrinsics.checkNotNullParameter(param2, "prefetchedPath");
       int var7 = this.IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl;
       this.IIllIlIIIIlIllllllllllIlIIllIIIIllIlIllIlllIIlIIlIIIIIlIlIIlIlIIlIllIllIIIIIllllIlIIl = var7 + 1;
       this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl = false;
       this.IllllIlIIIlIlIIlIlIIIlIlIllllIIIlIllIIIIlllllIlIIIlIIlllIIIIlIIllIlIIlIlllIlIIIlIlIIl = false;
       this.IlIlIlIIIIIlIllllllIllIIIIllIlIIlIIIlllllIllIIlIIlIIIllIlIlIIllIlIIllIIllllIlIIllIlIl = true;
-      Vec3 var17 = Vec3.ZERO;
-      LocalPlayer var18 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
-      if (var18 != null) {
-         Vec3 var19 = me.octo.client.utils.player.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a((Entity)var18);
-         if (var19 != null) {
-            var17 = var19;
+      Vec3 var17 = null;
+      if (var6 != null) {
+         LocalPlayer var18 = this.lIIIlIIlIIIllIIIlIlllIIlllIlIlIIlIIlIIIllIlIlIIlIllIIllIlIlIIIlllIlIIIIIlIlIlIIlIlIlI.player;
+         if (var18 != null) {
+            Vec3 var19 = me.octo.client.utils.player.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a((Entity)var18);
+            if (var19 != null) {
+               var17 = var19;
+            }
          }
+      }
+      if (var17 == null) {
+         var17 = Vec3.ZERO;
+         Intrinsics.checkNotNullExpressionValue(var17, "ZERO");
       }
       this.IIIlIIIIIlIllIIllIlIIllIIllIlllIllIIIllIlIlIlIIIIIllIIIIlIlllIIIIIllIIlIIlIllIllIIIll.f();
       this.IIIlllIIIIlIIllIlIIIllIIIllllllIIIIIIlIIIlllllIIIlllllIIIIIlIIlIIlIIIIIIIIlIlllIIlIlI.f();
@@ -2479,17 +2486,32 @@ return true;
       this.IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII = null;
       Object var9 = param1;
       BlockPos var8;
-      if (var9 instanceof Entity) {
+      boolean var10 = var9 instanceof Entity;
+      if (var10 && var6 != null) {
          this.IlIIlllIllIIlIlllIlIIlIIlIIIlllIIIllIlIllllllIlllIIIIIIlIlIIIIllIIlllIIlIlIIIIlllllII = ((Entity)param1).getId();
          synchronized (me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI) {
             var8 = me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.IIIIlIlllllIlIlIIIlllIlIIIllIlIIIIlIllllIlllIIlllIlllllIIIlIlIllllIlllllIllIlIIlllllI.a((Entity)param1);
          }
+      } else if (var6 == null) {
+         var8 = var10 ? (BlockPos)param1 : null;
       } else if (var9 instanceof BlockPos) {
          var8 = (BlockPos)param1;
       } else {
          var8 = null;
       }
-      if (var8 == null || param2.isEmpty()) {
+      boolean var11;
+      if (var8 == null) {
+         if (var6 == null) {
+            return param5;
+         }
+         var11 = true;
+      } else {
+         var11 = param2.isEmpty();
+         if (var6 == null) {
+            return var11;
+         }
+      }
+      if (var11) {
          if (param5) {
             me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c("Invalid prefetched path target");
          }

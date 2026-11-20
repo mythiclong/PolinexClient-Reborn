@@ -1,0 +1,43 @@
+{
+  "experiment_id": "R1994-pathfinder-prefetched-route-contract",
+  "status": "PASS",
+  "method_descriptor": "(Ljava/lang/Object;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;ZZ)Z",
+  "method_static_checks": {
+    "original_instructions": 211,
+    "compiled_instructions": 191,
+    "field_references": 28,
+    "ordered_fields_equal": true,
+    "original_method_references": 28,
+    "excluded_identity_throwable_relays": 11,
+    "compiled_business_method_references": 17,
+    "ordered_business_method_references_equal": true,
+    "ordered_strings": [
+      "prefetchedPath",
+      "ZERO",
+      "Invalid prefetched path target"
+    ],
+    "ordered_strings_equal": true,
+    "original_exception_entries": 13,
+    "identity_exception_relays": 11,
+    "monitor_cleanup_entries_original": 2,
+    "monitor_cleanup_entries_compiled": 2
+  },
+  "branch_contracts_reviewed": [
+    "parameter null-check before first state field write",
+    "gate-null skips Minecraft.player/position access and selects ZERO fallback",
+    "gate-dependent entity/BlockPos target dispatch preserved, including original null-gate cast behavior",
+    "target-null branch short-circuits List.isEmpty",
+    "null-gate returns param5 for null target and List.isEmpty for non-null target",
+    "non-null-gate invalid target/empty route optionally logs, stops, and returns false",
+    "successful route target/start/options/flags/list/index write order reviewed"
+  ],
+  "actual_caller": {
+    "method": "bG()V",
+    "bridge_site_original_offset": 429,
+    "bridge_site_compiled_offset": 839,
+    "same_bridge_descriptor": true,
+    "normalized_argument_producers_match": true,
+    "arguments": "BlockPos target; prefetched List; null Vec3; false; config al() boolean; mask 12; null marker"
+  },
+  "boundary": "Static bytecode/offline assertions only; no runtime was used."
+}
