@@ -1,0 +1,52 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1990",
+  "scope": "Publish the R1990 Pathfinder event-handler source correction, static/build evidence, current handoff, and bilingual README progress to private openpolinex and public PolinexClient-Reborn.",
+  "source_baseline": {
+    "commit": "6bc0d1c727016f6715439e3ccad9912b49b67eac",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob": "325f035243955b3338f1a839c93b03e540b2e1cf",
+    "source_sha256": "1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "6bc0d1c727016f6715439e3ccad9912b49b67eac",
+      "content_commit": "f8a7428c7010f31eaabae15a1e72c251cc81e981"
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "0df3382d7049427eae421d335f30216be1bfdc29",
+      "content_commit": "84805699c86a5b8e3d756523734cdf27ef155c6e"
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {"path": ".analysis/reports/RESUME.md", "blob": "bb06b427bc34fd0a220709d7a166c8e65ad2456c"},
+    {"path": "README.md", "blob": "4b64650e19dd5e0cce51fc077d3444c0b8aa3b43"},
+    {"path": "README_EN.md", "blob": "1d292f04fce34a695861e26a8832e8ab09706ef6"},
+    {"path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java", "blob": "a80a2a614a1308d5c896f2d81b80dbc0273c8de0", "sha256": "1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22"},
+    {"path": ".analysis/evidence/mining/r1990-pathfinder-event-handler/manifest.json", "blob": "1cc422cd55cb6069921b959a4fb1d3fd65e946e3"},
+    {"path": ".analysis/evidence/mining/r1990-pathfinder-event-handler/static-review.txt", "blob": "e47de1412bb8ed1cb63c272c3e02d7fb4b35ff56"},
+    {"path": ".analysis/evidence/mining/r1990-pathfinder-event-handler/build-summary.txt", "blob": "d56d9d4b5d62b2b5d67a3366fff30435df8c6ea1"}
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T02:38:48Z",
+    "method": "Compared live refs after both content pushes, then compared the listed Git blobs at each content commit.",
+    "private_content_ref_observed": "f8a7428c7010f31eaabae15a1e72c251cc81e981",
+    "public_content_ref_observed": "84805699c86a5b8e3d756523734cdf27ef155c6e",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "4cfb146aa1a0eea47abb45700a2f15d2360268be",
+    "public_tree_at_content_commit": "acb5dc96f082e373a97dad472c768d417a7663d7",
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "R1990 includes a complete original-descriptor static comparison and a Temurin JDK 25 full-tree build.",
+    "No direct runtime probe, Minecraft client, valid world, normal Pathfinder event route, stop/cancel/cache lifecycle, or compatible-server validation was performed.",
+    "The sync does not establish runtime equivalence or Pathfinder feature closure.",
+    "Protected archive/class files, full javap dumps, raw build log, compiled classes, and built JAR were excluded."
+  ]
+}
