@@ -1,0 +1,100 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1995",
+  "scope": "Publish the R1995 Pathfinder candidate-scoring correction, minimal static/offline/build evidence, bilingual README progress, and current handoff to private openpolinex and public PolinexClient-Reborn.",
+  "source_baseline": {
+    "integration_base_commit": "07db084512a3b5ab5ecc0ce1f88d91217ea225c8",
+    "integration_branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "public_base_commit": "a6209a78712445b349b6ad7413bb3f5bf5771d2e",
+    "source_path": "polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java",
+    "source_git_blob": "5cc747b66c0e37b95af281d6e93f692cd874e9b0",
+    "source_sha256": "ac059acf5b0f01188b4f4081c9f952b47f4dd5add44f8e3b80f02f11524927f1"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "07db084512a3b5ab5ecc0ce1f88d91217ea225c8",
+      "content_commit": "49f77acc0bc5c6078aa333c954971fe2a4ee7a4e",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "a6209a78712445b349b6ad7413bb3f5bf5771d2e",
+      "content_commit": "2eb5e88c5ed0800401b5388359a670a6e9c017bb",
+      "fast_forward": true
+    }
+  },
+  "documentation_pushes": {
+    "private_openpolinex": {
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "30b673b87cc55e6f1e1a34e33bef61b17d3b2912",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "ref": "refs/heads/main",
+      "commit": "892bde551213b6d732432c4431ab04f11b26ce6b",
+      "fast_forward": true
+    }
+  },
+  "shared_file_blobs_at_documentation_commits": [
+    {
+      "path": "README.md",
+      "blob": "d3159c361f5cec5539fe3a03d853e7c999094b77"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "569f06f2fd86101bd171c98c1554afd1c1f2fed2"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "2b7f628d1665470080c73f74eb8b6ae1e1d637d3"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java",
+      "blob": "5cc747b66c0e37b95af281d6e93f692cd874e9b0"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/build-summary.txt",
+      "blob": "a811c245ac81216eafea5e47063c153746d7bde8"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/manifest.json",
+      "blob": "d2a84dc1f11a1b6277a1a317c002c5d718ce5bad"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/offline-assertions.json",
+      "blob": "fdcf23d3516d46cb0464f74e59b3071605c7691d"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/static-review.txt",
+      "blob": "4dd9c1823b0c239144c2c19c9a8036345c68dffb"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T07:15:57Z",
+    "private_remote_content_and_docs_ref_observed": "30b673b87cc55e6f1e1a34e33bef61b17d3b2912",
+    "public_remote_content_and_docs_ref_observed": "892bde551213b6d732432c4431ab04f11b26ce6b",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "shared_listed_blobs_equal": true,
+    "method": "After both pushes, compared live git ls-remote refs to the documentation commits and compared the eight listed Git blobs in the private and public commit trees."
+  },
+  "validation_limits": {
+    "client_started": false,
+    "valid_player_world_used": false,
+    "normal_pathfinder_entry_exercised": false,
+    "powder_macro_entry_exercised": false,
+    "commission_macro_entry_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Static descriptor/bridge review, 21 offline assertions, and full-tree build only; runtime and normal-user-path acceptance remain open."
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/compiled javap dumps",
+    "Built JAR/classes",
+    "Raw build log",
+    "Absolute local machine paths"
+  ],
+  "sync_record_publication": "This record is committed as a follow-up fast-forward on both refs. The record blob is identical on both sides; the post-push audit also verifies the final refs."
+}
