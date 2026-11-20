@@ -88,5 +88,56 @@
     "The sync does not establish in-game equivalence or Pathfinder closure.",
     "Original protected archives/classes, full javap dumps, built artifacts, raw logs, and absolute machine paths were excluded."
   ],
-  "sync_record_publication": "The sync record itself is committed separately after the content and documentation commits; its identical blob is verified in both repositories."
+  "sync_record_publication": "The sync record itself is committed separately after the content and documentation commits; its identical blob is verified in both repositories.",
+  "post_sync_handoff_refresh": {
+    "private_commit": "46f1f36d9621d625e264b0242b8a2d26d3039a5d",
+    "private_ref": "refs/heads/codex/handoff-progress-2026-11-15",
+    "public_commit": "9e24e54bdd4d24124fc937e8cae9acc4b61643a6",
+    "public_ref": "refs/heads/main",
+    "resume_blob": "4624815cce3e9b0c68a3a05017c87fdbe392d87f",
+    "checked_utc": "2026-11-20T06:32:51Z",
+    "remote_refs_verified": true
+  },
+  "latest_shared_file_blobs_at_handoff_commits": [
+    {
+      "path": "README.md",
+      "blob": "9fff993e6539634de863094914665658f1f3715c"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "17fffcd5f21305e72185e24366d204f3cf491587"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "4624815cce3e9b0c68a3a05017c87fdbe392d87f"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+      "blob": "efd51a79e1802a46260c8540a637b6fd0babf98f"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/build-summary.txt",
+      "blob": "1818962096b3650c891280cff04e3ecaa6266e7f"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/manifest.json",
+      "blob": "8a934229703321cfb4419c91df46a62a54eef161"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/offline-assertions.json",
+      "blob": "9f8cc8ab1366bc396599d13c35cbfa9a673e6ad4"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/static-review.txt",
+      "blob": "93aaf4204f8097241f6647ba700ed90737413c81"
+    }
+  ],
+  "latest_snapshot_verification": {
+    "checked_utc": "2026-11-20T06:32:51Z",
+    "private_ref_observed": "46f1f36d9621d625e264b0242b8a2d26d3039a5d",
+    "public_ref_observed": "9e24e54bdd4d24124fc937e8cae9acc4b61643a6",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "all_eight_shared_blobs_equal": true
+  }
 }
