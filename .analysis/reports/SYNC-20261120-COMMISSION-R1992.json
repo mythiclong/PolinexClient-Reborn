@@ -1,0 +1,84 @@
+{
+  "sync_id": "SYNC-20261120-COMMISSION-R1992",
+  "scope": "Publish the R1992 Glacite Commission Macro inventory scan correction, minimal static/build/golden evidence, bilingual README progress, and current handoff to both repositories.",
+  "source_baseline": {
+    "integration_base_commit": "4e5ddd23f8b948f55a9695eb4f8499ff42d2034e",
+    "source_content_commit": "220f2c093f7b0b3c8bc5d5f2b1dfdee3183d5864",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+    "baseline_git_blob": "b784ab54196b2b6cbcde465596455c18e8e9d996",
+    "source_git_blob": "cc4dce1960b171cd736c4de7ab22fb5b4179cae2",
+    "source_sha256": "746618599fdf71e847723e73587ca7e0dbebca605c498997ebee153bfae32ba9"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "4e5ddd23f8b948f55a9695eb4f8499ff42d2034e",
+      "content_commit": "220f2c093f7b0b3c8bc5d5f2b1dfdee3183d5864",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "d3e2128f5c1ab6511e3a824fd431aa92fa36d54b",
+      "content_commit": "946bdd54af0c091a5d937aae3df08eb5fce2c50a",
+      "fast_forward": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/ModeGateGolden.java",
+      "blob": "149b0f631018285b8b5d4e518ff156914945e9cc"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/build-summary.txt",
+      "blob": "90e9db453d1d65ba66c97b5c57d5a5be0411dd45"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/manifest.json",
+      "blob": "ee31c74d2cc873f40cc844fdad6d53dc0c235042"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/mode-gate-golden.txt",
+      "blob": "00de3ed0a08e93c55f8dfa398fd4e40f5e081532"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1992-commission-inventory-scan-gate/static-review.txt",
+      "blob": "ef76a1e4846197119d8600e7b0048c04d7bcc04b"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "f55b96576efd7ebb6793682227c7fe3997a7d627"
+    },
+    {
+      "path": "README.md",
+      "blob": "2d169bcb2caea9965f6075b3fd88bedf1d75039f"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "dde380f6f12999d9e2a59b46413bb6ca78b1722b"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+      "blob": "cc4dce1960b171cd736c4de7ab22fb5b4179cae2",
+      "sha256": "746618599fdf71e847723e73587ca7e0dbebca605c498997ebee153bfae32ba9"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T05:06:02Z",
+    "method": "Compared the live remote refs after content pushes and compared each listed Git blob at both content commits.",
+    "private_content_ref_observed": "220f2c093f7b0b3c8bc5d5f2b1dfdee3183d5864",
+    "public_content_ref_observed": "946bdd54af0c091a5d937aae3df08eb5fce2c50a",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "R1992 covers a complete-descriptor static review of the Commission inventory scan, a pure control-helper golden (7/7), and a Temurin JDK 25 full-tree build.",
+    "No Minecraft client, valid inventory/world, normal Commission user flow, or compatible-server validation was performed.",
+    "The sync does not establish Commission Macro feature closure or runtime equivalence.",
+    "Original protected archive/classes, full javap dumps, raw logs, build outputs, and machine-specific absolute paths were excluded."
+  ]
+}

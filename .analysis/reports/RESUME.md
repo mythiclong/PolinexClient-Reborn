@@ -1,12 +1,12 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-20 UTC（芝加哥日期 2026-11-19）。R1992 Commission 库存扫描切片已完成静态复核、helper golden 和最终全树构建；README 已更新，双仓同步待提交/推送后核验。项目未完成，不宣称模块或运行时等价。
+> 更新：2026-11-20 UTC（芝加哥日期 2026-11-19）。R1992 Commission 库存扫描切片已完成静态复核、helper golden 和最终全树构建；源码、证据和双语 README 已推送并核验至私有 openpolinex 进度分支（220f2c0）及公开 PolinexClient-Reborn/main（946bdd5）；同步记录见 SYNC-20261120-COMMISSION-R1992.json。项目未完成，不宣称模块或运行时等价。
 
 ## 当前基线
 
 - 集成分支：`codex/bootstrap-eclientinit-2026-11-15`；R1992 开始基线 `4e5ddd23f8b948f55a9695eb4f8499ff42d2034e`。
 - 唯一托管源码改动：Glacite Commission Macro 所在 owner 的 `b(event):Integer`，SHA-256 `746618599fdf71e847723e73587ca7e0dbebca605c498997ebee153bfae32ba9`（Git blob `cc4dce1960b171cd736c4de7ab22fb5b4179cae2`）。本批证据位于 `.analysis/evidence/mining/r1992-commission-inventory-scan-gate/`。
-- 最近已同步版本是 R1991：私有 `openpolinex` 进度分支 `bc6afcdb6ee75900778a9cad4d52ac958d347d32`，公开 `PolinexClient-Reborn/main` `fea1a45f7d7be6760e14e10684815271f2f31d67`；后续元数据提交分别为 `a6a7ab7b45def15df392166aa1624eeb77587529`、`e6be402899ab923e168ef55fd7c88c4a924fcfd2`。
+- 最近同步内容是 R1992：私有 `openpolinex` 进度分支内容提交 `220f2c093f7b0b3c8bc5d5f2b1dfdee3183d5864`，公开 `PolinexClient-Reborn/main` 内容提交 `946bdd54af0c091a5d937aae3df08eb5fce2c50a`；两个远端 ref 及 9 个共享文件 blob 已核验。
 
 ## 当前切片 R1992
 
@@ -23,5 +23,5 @@
 
 ## 双仓阶段同步
 
-- 本次 README 中文/英文与最小证据已准备；R1992 远端 refs、两个独立提交及共享文件 blobs 尚待核验，完成后写入 `.analysis/reports/SYNC-20261120-COMMISSION-R1992.json`。
+- R1992 内容已快进推送：私有 `openpolinex` `codex/handoff-progress-2026-11-15` 为 `220f2c093f7b0b3c8bc5d5f2b1dfdee3183d5864`；公开 `PolinexClient-Reborn/main` 为 `946bdd54af0c091a5d937aae3df08eb5fce2c50a`。两个远端 ref 与 9 个共享文件 blob 已核验一致；完整记录见 `.analysis/reports/SYNC-20261120-COMMISSION-R1992.json`。
 - 只同步源码、双语 README、RESUME、最小静态/构建/golden 证据；不上传原始 JAR/native 载荷、full javap、raw log、编译产物或机器绝对路径。

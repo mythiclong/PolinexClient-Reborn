@@ -78,7 +78,15 @@
     "ended_utc": "2026-11-20T04:38:56.2845803Z",
     "compile_exit_code": 0,
     "run_exit_code": 0,
-    "inputs": [0, 1, -1, 59, 109, -2147483648, 2147483647],
+    "inputs": [
+      0,
+      1,
+      -1,
+      59,
+      109,
+      -2147483648,
+      2147483647
+    ],
     "assertions_passed": 7,
     "assertions_total": 7,
     "scope_limit": "Tests only the pure mode-gate helper; not the Commission scan or a Minecraft normal-user path."
@@ -121,5 +129,5 @@
     "Compiled classes and built JAR",
     "Machine-specific absolute filesystem paths"
   ],
-  "dual_repository_sync": "PENDING"
+  "dual_repository_sync": "VERIFIED; see .analysis/reports/SYNC-20261120-COMMISSION-R1992.json"
 }
