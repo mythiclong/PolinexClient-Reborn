@@ -1,0 +1,95 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1997",
+  "scope": "Publish R1997 expanded NativePathFinder headless differential evidence, bilingual README progress, and refreshed handoff to private openpolinex and public PolinexClient-Reborn.",
+  "production_source_baseline": {
+    "integration_commit": "74918b54125a42da3d6d5d3d5e76ed840b3cb441",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "changed_in_slice": false,
+    "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "git_blob": "75e7f746ee0ebe6af726a4f65021af54ae3d40ca",
+    "sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "74918b54125a42da3d6d5d3d5e76ed840b3cb441",
+      "content_commit": "f7dad656e419b121f9ec355c52fb088181b1cc18",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "611f94923b0e9753c994be57f22ae08dff02c983",
+      "content_commit": "36b9d990d689d3d117d6888535b7ad1cfd51ea84",
+      "fast_forward": true
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": "README.md",
+      "blob": "4805c01534f4e35b235574a2e051aa99079a7677"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "485064b99e98c71de67b411c6f2f2da95ffc7d61"
+    },
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "a09645e749d7718728eb76a61002d0d57043e3b3"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/NativePathfinderExtendedGolden.java",
+      "blob": "11c778d39f4105c00463d7e690e4bb354bdad7bb"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/manifest.json",
+      "blob": "7ef93b05d94187de9b15b1fa524a7f7cb515647d"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/run.stdout.txt",
+      "blob": "a6de2c9afafd8c90cecf201ff70a4ed70bdf7ef1"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/run.stderr.txt",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T08:40:22Z",
+    "private_remote_content_ref_observed": "f7dad656e419b121f9ec355c52fb088181b1cc18",
+    "public_remote_content_ref_observed": "36b9d990d689d3d117d6888535b7ad1cfd51ea84",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "all_seven_shared_blobs_equal": true,
+    "method": "Checked live ls-remote refs after content pushes, compared all seven listed Git blobs in both trees, and validated the JSON evidence manifest. The sync record is then fast-forward published to both refs; final refs and the sync-record blob are checked after both record pushes."
+  },
+  "probe_result": {
+    "original_archive_sha256_local_only": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "assertions": 705,
+    "original_trace_sha256": "38c7e1ccf9bf281339e9027c1a748a3f40ba9a876d1a13814cae296563b08552",
+    "current_trace_sha256": "38c7e1ccf9bf281339e9027c1a748a3f40ba9a876d1a13814cae296563b08552",
+    "javac_exit_code": 0,
+    "java_exit_code": 0
+  },
+  "validation_limits": {
+    "production_source_changed": false,
+    "full_tree_build_in_this_slice": false,
+    "client_started": false,
+    "valid_player_world_used": false,
+    "normal_pathfinder_entry_or_execution_exercised": false,
+    "disk_cache_event_or_file_lifecycle_exercised": false,
+    "powder_macro_entry_exercised": false,
+    "commission_macro_entry_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Expanded direct differential evidence for world-independent helper cases only; it does not establish Minecraft collision, normal route execution, cache integration, macro behavior, or server compatibility."
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/compiled javap dumps",
+    "Compiled harness classes",
+    "Temporary classloader output directory",
+    "Absolute machine paths"
+  ],
+  "sync_record_publication": "The identical record file is committed separately to both target refs with fast-forward pushes only. Final remote refs and the record blob are verified after both pushes."
+}
