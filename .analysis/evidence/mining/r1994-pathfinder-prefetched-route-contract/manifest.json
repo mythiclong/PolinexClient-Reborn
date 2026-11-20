@@ -99,5 +99,5 @@
     "Raw build output log",
     "Absolute machine paths"
   ],
-  "dual_repository_sync": "PENDING_CONTENT_PUSH_VERIFICATION"
+  "dual_repository_sync": "CONTENT_AND_BILINGUAL_PROGRESS_DOCS_PUSHED_TO_BOTH_TARGETS; remote refs and all eight shared file blobs verified; see .analysis/reports/SYNC-20261120-PATHFINDER-R1994.json"
 }
