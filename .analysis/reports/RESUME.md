@@ -1,6 +1,6 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-20 UTC。R1995 Pathfinder 候选评分切片已提交 `49f77acc0bc5c6078aa333c954971fe2a4ee7a4e`，完成原版/编译 descriptor 静态复核、21 条离线断言和 Temurin JDK 25 全树构建（exit 0）。双仓 README/交接及推送核验仍待本次同步完成；未做客户端/有效世界验收。
+> 更新：2026-11-20 UTC。R1995 Pathfinder 候选评分切片已提交 `49f77acc0bc5c6078aa333c954971fe2a4ee7a4e`，完成原版/编译 descriptor 静态复核、21 条离线断言和 Temurin JDK 25 全树构建（exit 0）。源码、证据、中英文 README、交接及双仓同步记录已快进发布至私有 `openpolinex` 与公开 `PolinexClient-Reborn`，远端 refs 和共享 blobs 已核验，见 [R1995 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1995.json)。未做客户端/有效世界验收。
 
 ## 当前基线
 
