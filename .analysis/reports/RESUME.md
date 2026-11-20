@@ -5,7 +5,7 @@
 ## 当前基线
 
 - 集成分支：`codex/bootstrap-eclientinit-2026-11-15`，R1991 内容提交 `bc6afcdb6ee75900778a9cad4d52ac958d347d32`。
-- R1991 源码/README/证据内容提交（后续同步记录元数据另有快进提交）：私有 `codex/handoff-progress-2026-11-15` 的内容提交为 `bc6afcdb6ee75900778a9cad4d52ac958d347d32`；公开 `main` 的内容提交为 `fea1a45f7d7be6760e14e10684815271f2f31d67`。
+- R1991 源码/README/证据内容提交：私有 `codex/handoff-progress-2026-11-15`=`bc6afcdb6ee75900778a9cad4d52ac958d347d32`；公开 `main`=`fea1a45f7d7be6760e14e10684815271f2f31d67`。后续交接/同步元数据快进提交：私有 `a6a7ab7b45def15df392166aa1624eeb77587529`；公开 `e6be402899ab923e168ef55fd7c88c4a924fcfd2`。两端 README、英文 README、交接文件和 R1991 同步记录的文件 blobs 相同。
 - Pathfinder 托管源码 SHA-256：`0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266`；R1991 全树构建的 owner class SHA-256：`3e0fc8421075f840dce7da4ec12ee876ecf537604601b163da0d2855ed64ae76`。
 
 ## 当前唯一切片：Pathfinder 路线生命周期

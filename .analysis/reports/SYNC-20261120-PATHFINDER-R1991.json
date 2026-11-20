@@ -33,19 +33,36 @@
     {"path": ".analysis/evidence/mining/r1991-pathfinder-route-lifecycle/build-summary.txt", "blob": "7879c06d94b3866447c2b1a33ddb19caa4a001d6"},
     {"path": ".analysis/evidence/mining/r1991-pathfinder-route-lifecycle/manifest.json", "blob": "5a26fb91b83c91ecaa243d148118d1130ddff3ed"}
   ],
-  "post_content_metadata_blobs_to_sync": [
+  "metadata_blobs_at_sync_commits": [
     {"path": "README.md", "blob": "643a427e6a60ec687bd97caee9f2822dcb505c88"},
     {"path": "README_EN.md", "blob": "1cfaf7fc351e8300626353e20e8651028243031f"},
-    {"path": ".analysis/reports/RESUME.md", "blob": "7448806d074f9ded0f00464698cbfaa92a185a01"}
+    {"path": ".analysis/reports/RESUME.md", "blob": "7448806d074f9ded0f00464698cbfaa92a185a01"},
+    {"path": ".analysis/reports/SYNC-20261120-PATHFINDER-R1991.json", "blob": "b5e54106d74eff2bfc50eacd8a59c62f336f3d8b"}
   ],
+  "metadata_sync_commits": {
+    "private_openpolinex": {
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "commit": "a6a7ab7b45def15df392166aa1624eeb77587529",
+      "fast_forward": true
+    },
+    "public_polinexclient_reborn": {
+      "ref": "refs/heads/main",
+      "commit": "e6be402899ab923e168ef55fd7c88c4a924fcfd2",
+      "fast_forward": true
+    }
+  },
   "verification": {
-    "checked_utc": "2026-11-20T03:38:14Z",
-    "method": "Queried both live remote refs after content pushes, then compared the listed Git blobs at each content commit. Also confirmed the prepared final README and RESUME blobs for the metadata follow-up.",
+    "checked_utc": "2026-11-20T03:50:12Z",
+    "method": "Queried both live remote refs after the content and metadata pushes, then compared the shared file blobs in both clean checkouts.",
     "private_content_ref_observed": "bc6afcdb6ee75900778a9cad4d52ac958d347d32",
     "public_content_ref_observed": "fea1a45f7d7be6760e14e10684815271f2f31d67",
     "private_remote_ref_verified": true,
     "public_remote_ref_verified": true,
     "listed_shared_blobs_equal": true,
+    "private_metadata_ref_observed": "a6a7ab7b45def15df392166aa1624eeb77587529",
+    "public_metadata_ref_observed": "e6be402899ab923e168ef55fd7c88c4a924fcfd2",
+    "metadata_remote_refs_verified": true,
+    "metadata_shared_blobs_equal": true,
     "private_tree_at_content_commit": "a425283af3e428a855604d738b1f406d1c978f82",
     "public_tree_at_content_commit": "cb2102c0e4248be0d9746e083d0edf61c9b70952",
     "repository_trees_identical": false,
