@@ -1,13 +1,13 @@
 # OpenPolinex 当前交接
 
-> 更新：2026-11-19（America/Chicago；2026-11-20 UTC）。R1989 修复 Pathfinder 所用玩家路径/输入辅助方法 `a(Vec3,Vec3,boolean,double):void` 的两个原版控制流偏差；完整 descriptor 静态复核及 Temurin JDK 25 全树构建通过。客户端、有效世界与正常寻路尚未验收，不代表 Pathfinder 闭环。
+> 更新：2026-11-19（America/Chicago；2026-11-20 UTC）。R1989 修复 Pathfinder 所用玩家路径/输入辅助方法 `a(Vec3,Vec3,boolean,double):void` 的两个原版控制流偏差；完整 descriptor 静态复核及 Temurin JDK 25 全树构建通过。代码、证据及双语 README 已同步到两个仓库，详见 [R1989 同步记录](SYNC-20261120-PATHFINDER-R1989.json)。客户端、有效世界与正常寻路尚未验收，不代表 Pathfinder 闭环。
 
 ## 当前基线
 
 - 工作树：`C:\Users\AutoB\.codex\worktrees\bootstrap-eclientinit\OpenPoli`
-- 分支：`codex/bootstrap-eclientinit-2026-11-15`；R1989 内容基于 `13ddb50abb5404c01cf4ef96457a5f736d873b08`。
+- 集成分支：`codex/bootstrap-eclientinit-2026-11-15`；R1989 私有内容提交 `41a9d50507f7afabfda2cc20253fda3226787056`，公开 `main` 内容提交 `b2f160e7186b79df9e020af850ab6f8a42760137`。
 - 双仓目标：私有 `openpolinex` 的 `codex/handoff-progress-2026-11-15`；公开 `PolinexClient-Reborn` 的 `main`。
-- R1989 本地内容正在整理并准备阶段性同步；同步完成后以机器记录中的远端 refs 与 blobs 为准。
+- 两个远端 refs 与 R1989 共享文件 Git blobs 已核验；完整仓库 tree 不同。同步记录标明证据生成基线与入库提交。
 
 ## 当前唯一切片：Pathfinder 路线生命周期
 
@@ -24,6 +24,6 @@
 
 ## 下一步与同步纪律
 
-- 先完成 R1989 阶段性同步：更新双语 README、提交源码/证据/交接到两个目标 refs，核对远端 refs 及共享文件 Git blobs，并保存同步机器记录。
-- 随后继续唯一 Pathfinder 路线生命周期切片。只按明确源码或字节码证据修复；一个依赖闭合的小切片后做全树构建和相关运行验收。
+- 继续唯一 Pathfinder 路线生命周期切片：追踪真实路线结果写入 → 执行状态 → 停止/清理 → 缓存读取/失效，锁定下一个有证据的方法，再做有界源码恢复和全树构建。
+- 每个通过检查的功能批次更新双语 README、机器证据与双仓同步记录；只按明确源码或字节码证据修复。
 - 不覆盖或清理其他 worktree 的源码、调查脚本和证据；不强推；README 与本交接须随每个同步批次更新。

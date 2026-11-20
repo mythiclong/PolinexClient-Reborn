@@ -1,0 +1,53 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1989",
+  "scope": "Publish the R1989 Pathfinder player route/input helper correction, minimal static/build evidence, bilingual README progress, and handoff to both repositories.",
+  "source_baseline": {
+    "commit": "13ddb50abb5404c01cf4ef96457a5f736d873b08",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+    "baseline_git_blob": "33d8eb38a7fbc465752bb2db246c7cef3606b325",
+    "final_git_blob": "f0ff3c5afe4e88bd84bfb1f1cf1f65ce95aeb43e",
+    "source_sha256": "d8cb64dc0a2ed1cd8c0be2feab58a48cc7a2f19137f011e464be480925595394"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "13ddb50abb5404c01cf4ef96457a5f736d873b08",
+      "content_commit": "41a9d50507f7afabfda2cc20253fda3226787056"
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "ac366acf69f11d8dd706d328a43f18b37813fc17",
+      "content_commit": "b2f160e7186b79df9e020af850ab6f8a42760137"
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {"path": ".analysis/reports/RESUME.md", "blob": "8cfbc04134cf65689c2d3a0406fbb100639bfb6b"},
+    {"path": "README.md", "blob": "6d900b089da972816c668cd3b3e159423cc3771b"},
+    {"path": "README_EN.md", "blob": "0067c672b6b98ce493afc4152f990f520fb99473"},
+    {"path": "polinex-src/src/main/java/me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java", "blob": "f0ff3c5afe4e88bd84bfb1f1cf1f65ce95aeb43e", "sha256": "d8cb64dc0a2ed1cd8c0be2feab58a48cc7a2f19137f011e464be480925595394"},
+    {"path": ".analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json", "blob": "f6e24832ae828d92ba59cd466e5dc27ca2e27526"},
+    {"path": ".analysis/evidence/mining/r1989-pathfinder-player-input-helper/static-review.txt", "blob": "b100cb36c78491d37d77f635e920c9e256617858"},
+    {"path": ".analysis/evidence/mining/r1989-pathfinder-player-input-helper/build-summary.txt", "blob": "0caf4f8613b0fce7f34b57ce17aaac05fc78015c"}
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T01:41:10.909Z",
+    "method": "Compared live refs after both content pushes, then compared each listed file's Git blob at the two content commits.",
+    "private_content_ref_observed": "41a9d50507f7afabfda2cc20253fda3226787056",
+    "public_content_ref_observed": "b2f160e7186b79df9e020af850ab6f8a42760137",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "3c5fd901e1a0a8bce2d149acbe0fb405b543fc93",
+    "public_tree_at_content_commit": "f064d38309f554f10be48c9ee011ed24caa64694",
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "R1989 evidence covers a full-descriptor static review of two control-flow corrections and a Temurin JDK 25 full-tree build.",
+    "No direct runtime probe, Minecraft client, valid world, normal Pathfinder route, stop/cancel/cache-lifecycle, or server validation was performed.",
+    "This sync does not establish Pathfinder feature closure or runtime equivalence.",
+    "Original archive/class files, complete javap dumps, raw logs, and built artifacts were excluded."
+  ]
+}
