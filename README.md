@@ -9,6 +9,8 @@
 
 ## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-20）
 
+R1998 修复 Pathfinder chunk-capture worker 的中断异常语义。按完整原版 descriptor 对照，原版 worker 调用 `Thread.sleep(J)V`，没有异常表处理或 `RuntimeException` 包装；重建源码之前把 Java 必须捕获的 `InterruptedException` 包成了新的 `RuntimeException`。现改为泛型异常转发，编译字节码从 catch 分支把同一个异常对象直接 `athrow`。原版/当前字节码契约验证通过，Temurin JDK 25 强制全树 Gradle build exit 0（4 个任务执行，测试 `NO-SOURCE`）。没有运行客户端、世界或中断时序探针；这不等于 chunk worker、缓存生命周期或 Pathfinder 的运行时验收。证据：[静态复核](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/static-review.txt)、[字节码契约验证](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/contract-verification.json)、[构建摘要](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)、[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)。
+
 R1997 扩展 Pathfinder 的 `NativePathFinder` 纯 Java 助手差分测试：分别隔离加载原版归档类与当前构建类，705 条断言/轨迹覆盖坐标打包、全部 byte 状态归一化、chunk/cache 边界、高度缓存清除、72 个确定性随机 3D 障碍图的寻路与可达性，以及 Etherwarp 射线。两侧轨迹 SHA-256 完全一致；运行器 `javac` 与 Java 进程退出码均为 0。此切片没有修改生产源码，也没有重新构建全树；不覆盖 Minecraft 世界碰撞、正常请求/执行入口、磁盘缓存事件或宏行为，不代表 Pathfinder 功能闭环。证据见 [R1997 运行输出](.analysis/evidence/mining/r1997-native-pathfinder-extended-golden/run.stdout.txt)、[运行器源码](.analysis/evidence/mining/r1997-native-pathfinder-extended-golden/NativePathfinderExtendedGolden.java)和[机器记录](.analysis/evidence/mining/r1997-native-pathfinder-extended-golden/manifest.json)；双仓核验见 [R1997 同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1997.json)。
 
 R1996 沿 Pathfinder 路线完成/停止链修复两处由完整原版字节码确认的偏差：`g(List):boolean` 改为仅在全局 gate 存在时比较活动路线游标与 `List.size()`，不再用另一条 look-ahead 缓存游标判定完成；`d(boolean):void` 现在始终重置原版第四个停止计时器，而前三个仍只在 gate 存在且参数为 true 时重置。核对了 `h(List)` 的“游标递增→完成判断→停止”、`v()` 到 `d(false)`/路线清理/输入清理的顺序。六个完整 descriptor 的原版/编译指令数分别为 19/13、47/38、76/70、25/25、7/7、5/5；52 条离线源码契约/建模断言通过，Temurin JDK 25 全树构建 exit 0。此批仅有静态、离线和构建证据；没有启动客户端或有效世界，真实寻路、停止/取消、磁盘缓存读写失效、Powder Macro 与 Commission Macro 正常入口仍开放，不宣称运行时等价或 Pathfinder 闭环。详见 [R1996 静态复核](.analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/static-review.txt)、[离线断言](.analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/offline-assertions.json)、[构建摘要](.analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/manifest.json)；本批双仓同步核验见 [R1996 同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1996.json)。
@@ -76,6 +78,9 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 - **其他功能**：Glacite Commission Macro 目前只新增了 R1992 库存扫描方法的静态恢复，完整启停/事件流程仍未闭环；Powder Macro、初始化事件、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
 
 ### 最新交接与证据
+
+- [R1998 Pathfinder worker interruption 静态复核、契约验证与全树构建](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)
+- [R1998 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)
 
 - [R1993 Pathfinder 路线入口 gate 静态复核](.analysis/evidence/mining/r1993-pathfinder-route-entry-gate/static-review.txt)
 - [R1993 全树构建摘要](.analysis/evidence/mining/r1993-pathfinder-route-entry-gate/build-summary.txt)

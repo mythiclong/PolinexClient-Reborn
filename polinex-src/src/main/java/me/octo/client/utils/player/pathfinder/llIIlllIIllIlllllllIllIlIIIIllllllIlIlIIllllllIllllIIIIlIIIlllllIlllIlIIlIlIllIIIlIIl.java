@@ -688,6 +688,11 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
       throw (T)exception;
    }
 
+   @SuppressWarnings("unchecked")
+   private static <T extends Throwable> RuntimeException rethrowInterruptedException(InterruptedException exception) throws T {
+      throw (T)exception;
+   }
+
    private final byte a(BlockState var1, BlockPos var2, BlockGetter var3) {
       Object var9 = null; // PX-FIX
       Object IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll = null; // PX-FIX
@@ -900,7 +905,7 @@ public final class llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIll
                Thread.sleep(1L);
             }
             catch (InterruptedException exception) {
-               throw new RuntimeException(exception);
+               throw rethrowInterruptedException(exception);
             }
             if (var1 == 0) {
                break;

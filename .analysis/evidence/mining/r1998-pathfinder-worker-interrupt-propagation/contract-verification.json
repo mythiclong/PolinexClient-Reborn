@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "owner": "me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+  "worker_descriptor": "(Lme/octo/client/events/impl/IlIIlllIlIIllIIIlIIlIIIlIIllllIllIllllIllIIllIIllIlIllIIIIIlllllIlllIlIllIIIIlIIlIlIl;)V",
+  "original": {
+    "archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "class_sha256": "6d7caf3f46da0b575a0ead8b523ab04f6f33545af1c42f25852af3238c7486d0",
+    "sleep_call": "Thread.sleep(J)V",
+    "interrupted_exception_handler": false,
+    "runtime_exception_wrapper": false,
+    "semantics": "InterruptedException escapes directly from the worker."
+  },
+  "compiled": {
+    "class_sha256": "7c2010b6667a92f8e429fe434f145b5fda73bc0b7bf67c9956ef60fe1af32a77",
+    "source_sha256": "a01fd36b515aae057c6c354dd0bf860a9242ab877dcf978a1c270c5a391b7a37",
+    "handler": "InterruptedException is caught only to satisfy Java checked-exception rules, then the same object is rethrown.",
+    "relay_descriptor": "(Ljava/lang/InterruptedException;)Ljava/lang/RuntimeException;",
+    "relay_bytecode": [
+      "aload_0",
+      "athrow"
+    ],
+    "runtime_exception_wrapper": false
+  },
+  "scope": "Static original/current bytecode contract and source check; no client, world, or server runtime."
+}

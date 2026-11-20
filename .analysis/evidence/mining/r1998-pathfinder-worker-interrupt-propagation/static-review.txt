@@ -1,0 +1,9 @@
+# R1998 static bytecode review — Pathfinder chunk-worker interruption
+
+The targeted production method is `me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.b(Lme/octo/client/events/impl/IlIIlllIlIIllIIIlIIlIIIlIIllllIllIllllIllIIllIIllIlIllIIIIIlllllIlllIlIllIIIIlIIlIlIl;)V`.
+
+Full-descriptor `javap -p -s -c` inspection of the original archived class found `Thread.sleep(J)V` in this worker and no exception-table handler or `RuntimeException` construction in that method. Thus an interrupt escapes as the original `InterruptedException`. The Java reconstruction must catch the checked exception to compile; the previous code changed behavior by wrapping it in `RuntimeException`.
+
+The repair replaces that wrapper with a generic throwable relay. The rebuilt worker catches only `InterruptedException`, invokes the relay, and executes `athrow`. The relay's complete compiled body is `aload_0; athrow`, so the exact exception object/type propagates; it does not construct a wrapper. The rest of the cache worker loop and its counters were not changed. A repeatable verifier and concise machine result are included alongside this review.
+
+**Validation:** original/current full-descriptor static contract check passed; forced Temurin JDK 25 Gradle full-tree build exited 0. This does not exercise a live chunk worker, cancellation/interruption timing, cache files, a Minecraft client/world, macros, or a server. No runtime-equivalence claim is made.

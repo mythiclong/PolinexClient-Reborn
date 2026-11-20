@@ -1,0 +1,79 @@
+{
+  "experiment_id": "R1998-pathfinder-worker-interrupt-propagation",
+  "generated_utc": "2026-11-20T09:17:11Z",
+  "scope": "Restore original InterruptedException propagation in the Pathfinder chunk-capture worker; document a forced full-tree build and keep runtime acceptance explicitly open.",
+  "source_baseline": {
+    "integration_commit": "d0e4ff8e71e34dd42b0c0efe50f38754f378b661",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+    "baseline_git_blob": "1e3be2400125de5727ce76ca5f2325b55a0b3ee1",
+    "baseline_content_sha256": "72ce617b4a7a2b70c95380f05dd0aafbc0ad3c551b7440fb7347536a202ba06c",
+    "final_git_blob_before_commit": "9989ed50cfe1c566c3bbde02d76633252f2474c0",
+    "final_content_sha256": "a01fd36b515aae057c6c354dd0bf860a9242ab877dcf978a1c270c5a391b7a37",
+    "changed_production_files": 1
+  },
+  "original_reference_local_only": {
+    "archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "class_entry": "me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.class",
+    "class_sha256": "6d7caf3f46da0b575a0ead8b523ab04f6f33545af1c42f25852af3238c7486d0",
+    "publication": "Original archive and raw disassembly are not included."
+  },
+  "method": {
+    "owner": "me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+    "name": "b",
+    "descriptor": "(Lme/octo/client/events/impl/IlIIlllIlIIllIIIlIIlIIIlIIllllIllIllllIllIIllIIllIlIllIIIIIlllllIlllIlIllIIIIlIIlIlIl;)V",
+    "change": "Replace RuntimeException wrapping with a generic throwable relay that rethrows the same InterruptedException instance.",
+    "compiled_class_sha256": "7c2010b6667a92f8e429fe434f145b5fda73bc0b7bf67c9956ef60fe1af32a77",
+    "relay_descriptor": "(Ljava/lang/InterruptedException;)Ljava/lang/RuntimeException;",
+    "relay_bytecode": "aload_0; athrow"
+  },
+  "static_verification": {
+    "command": "python -B verify_interrupted_exception_contract.py <original_archive> <compiled_classes> <source_file> --javap <JDK25_javap>",
+    "exit_code": 0,
+    "result": "PASS",
+    "facts": [
+      "Original worker calls Thread.sleep(J)V and has no exception-table handler or RuntimeException wrapper.",
+      "Compiled worker catches InterruptedException and relays it to athrow.",
+      "Compiled relay bytecode loads the same argument and throws it directly; no wrapper is constructed."
+    ],
+    "evidence": "contract-verification.json"
+  },
+  "build": {
+    "command": ".\\gradlew.bat <bounded single-worker JVM settings> --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "started_utc": "2026-11-20T09:12:32.7364351Z",
+    "finished_utc": "2026-11-20T09:13:34.0355612Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks executed; test task NO-SOURCE",
+    "artifact_sha256_local_only": "dc7ef167f1f45c120b37620227f80bfdb59129c9891bbdf1c4f7c26457af5cc2",
+    "raw_log_sha256": "500943b3094c505afd81fa5bd6532315887a4581552d62ff10e8f2d8f0f04d0a"
+  },
+  "acceptance": {
+    "original_full_descriptor_static_review": true,
+    "contract_verifier_passed": true,
+    "full_tree_build": true,
+    "worker_interruption_runtime_probe": false,
+    "client_started": false,
+    "valid_world_used": false,
+    "cache_lifecycle_tested": false,
+    "pathfinder_normal_entry_tested": false,
+    "powder_macro_tested": false,
+    "commission_macro_tested": false,
+    "compatible_server_tested": false,
+    "status": "Static behavior restoration and build regression only; runtime and feature equivalence remain open."
+  },
+  "evidence_files_sha256": {
+    "build-summary.txt": "4f7d97adb24c281951c74751f566f3919170a78c312d8f3fd3d3dbe4a2b6cd8a",
+    "contract-verification.json": "5c0d6476485f98ebab567f98a4836b6c8a8859eb5e89f38f2baa460122d3b8e4",
+    "static-review.txt": "fc5cdec4a93fd061b4c5bee2fe7c53f9a260b749b4ef39d8d8cee847c0918151",
+    "verify_interrupted_exception_contract.py": "0885017c79c7f502b9d8aef58cc909d7d710d6b56b296ae8e7ccd57048e0bd94"
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/current javap dumps",
+    "Raw build log",
+    "Built JAR/classes",
+    "Absolute local paths"
+  ]
+}

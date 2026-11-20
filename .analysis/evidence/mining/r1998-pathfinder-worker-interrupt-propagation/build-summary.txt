@@ -1,0 +1,11 @@
+# R1998 full-tree build summary
+
+- Command: `gradlew.bat <bounded single-worker JVM settings> --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+- Runtime: Eclipse Temurin 25.0.4.1+1-LTS; Gradle Wrapper 9.7.1.
+- Started: `2026-11-20T09:12:32.7364351Z`; finished: `2026-11-20T09:13:34.0355612Z`.
+- Exit code: `0`; result: `BUILD SUCCESSFUL`; four actionable tasks executed; tests are `NO-SOURCE`.
+- Warnings: 18 existing `Unsafe` warnings plus existing deprecation/unchecked notices; no new source diagnostic.
+- Built artifact SHA-256 (local verification only): `dc7ef167f1f45c120b37620227f80bfdb59129c9891bbdf1c4f7c26457af5cc2`.
+- Raw log SHA-256: `500943b3094c505afd81fa5bd6532315887a4581552d62ff10e8f2d8f0f04d0a` (the displayed hash is normalized without spaces in the manifest). Raw log is retained outside the repository and is not published.
+
+Build success validates compilation/package tasks only. No client or world was started.
