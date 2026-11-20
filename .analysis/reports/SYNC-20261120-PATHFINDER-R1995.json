@@ -96,5 +96,51 @@
     "Raw build log",
     "Absolute local machine paths"
   ],
-  "sync_record_publication": "This record is committed as a follow-up fast-forward on both refs. The record blob is identical on both sides; the post-push audit also verifies the final refs."
+  "sync_record_publication": "The R1995 sync record and handoff refresh were committed as follow-up fast-forwards on both target refs. The record blob and listed shared file blobs were compared across the two trees; final record refs are verified after push.",
+  "handoff_refresh": {
+    "private_commit": "a6d30059c6f65311ea9713642f682b91f8a39f5e",
+    "private_ref": "refs/heads/codex/handoff-progress-2026-11-15",
+    "public_commit": "83c760e65e09dac92ff88aab6478c69a406d05c0",
+    "public_ref": "refs/heads/main",
+    "checked_utc": "2026-11-20T07:21:10Z",
+    "private_remote_ref_observed": "a6d30059c6f65311ea9713642f682b91f8a39f5e",
+    "public_remote_ref_observed": "83c760e65e09dac92ff88aab6478c69a406d05c0",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "all_listed_handoff_blobs_equal": true,
+    "shared_file_blobs": [
+      {
+        "path": "README.md",
+        "blob": "d3159c361f5cec5539fe3a03d853e7c999094b77"
+      },
+      {
+        "path": "README_EN.md",
+        "blob": "569f06f2fd86101bd171c98c1554afd1c1f2fed2"
+      },
+      {
+        "path": ".analysis/reports/RESUME.md",
+        "blob": "f1ac508b6d750df8be49b9aced9e64c4225a3189"
+      },
+      {
+        "path": "polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java",
+        "blob": "5cc747b66c0e37b95af281d6e93f692cd874e9b0"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/build-summary.txt",
+        "blob": "a811c245ac81216eafea5e47063c153746d7bde8"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/manifest.json",
+        "blob": "d2a84dc1f11a1b6277a1a317c002c5d718ce5bad"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/offline-assertions.json",
+        "blob": "fdcf23d3516d46cb0464f74e59b3071605c7691d"
+      },
+      {
+        "path": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/static-review.txt",
+        "blob": "4dd9c1823b0c239144c2c19c9a8036345c68dffb"
+      }
+    ]
+  }
 }
