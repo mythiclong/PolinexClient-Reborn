@@ -1,0 +1,26 @@
+# R1995 — Pathfinder candidate scoring and collision-call contract
+
+## Scope and source
+
+- Owner: `me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl`
+- Method: `b(BlockPos):BlockPos`
+- JVM descriptor: `(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;`
+- Source: `polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java`
+- Integration baseline: `07db084512a3b5ab5ecc0ce1f88d91217ea225c8`; baseline source blob `b3b72e1ed3a186bb1779cb1b100e45a225e100ee`.
+- Updated source blob: `5cc747b66c0e37b95af281d6e93f692cd874e9b0`; SHA-256 `ac059acf5b0f01188b4f4081c9f952b47f4dd5add44f8e3b80f02f11524927f1`.
+- Read the complete original descriptor and final compiled descriptor (443 and 278 bytecode instructions). The original archive and complete original/compiled dumps remain local-only; the evidence manifest records only hashes.
+
+## Confirmed contract differences restored
+
+1. **Gate before player access.** The original invokes its gate getter and returns null on a null result before reading `Minecraft.player`. The source now has the same early return ahead of the player access.
+2. **Candidate scoring origin.** When the requested `BlockPos` is non-null, the original converts that position to a `Vec3` and uses it as the scoring origin. If the target is null or conversion returns null, it falls back to the player's position. The source now preserves this order and fallback rather than always starting at the player.
+3. **Inclusive range and NaN behavior.** The original separately rejects `distance < min` and `distance > max`; equality at either boundary remains eligible, and NaN passes both comparisons. The prior negated inclusive-range expression rejected NaN. The source now uses the original independent rejection predicate.
+4. **Kotlin default bridge is state-dependent.** The original collision call uses the static default bridge descriptor ending in `(…IZDZZDILjava/lang/Object;)Z`, with mask `368` and a literal scale placeholder `0.0`. The full bridge reads the same utility `c()I` gate. When that value is zero, the bridge skips default substitution and the effective scale stays `0.0`; when non-zero, mask bit `32` substitutes `1.0`. The other masked values resolve to the call site's already matching `false`/`0.0`, while the unmasked boolean remains `true`. Source now calls the same `c()I` getter for each eligible candidate and selects `1.0` or `0.0` accordingly before invoking the same core helper descriptor. This preserves both gate states instead of assuming the default branch is always active.
+
+## Checks and limits
+
+- Original and compiled method descriptors were checked in full. The exact original bridge descriptor, call-site mask/placeholder, bridge mask branches, and core helper descriptor were read from the original class file. The original and compiled `c()I` getters both return the same static gate field.
+- The offline assertions cover null-gate ordering, target-origin fallback, inclusive limits, NaN and infinities, and collision argument tuples for zero and non-zero gate values. They are static/truth-table checks, not a Minecraft-world execution.
+- Temurin JDK 25 full-tree Gradle build: PASS, exit 0; tests are `NO-SOURCE`. See `build-summary.txt`.
+- No client, valid player/world, actual candidate generation, normal Pathfinder route, macro entry, or server was run. This slice is not a claim of runtime equivalence or Pathfinder closure. Remaining work includes the normal route/executor/cache lifecycle and both macro flows.
+- Original protected archive, class files, full `javap` dumps, built artifact, and raw build log are not included in this evidence directory.

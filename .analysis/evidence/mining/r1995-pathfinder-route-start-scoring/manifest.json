@@ -1,0 +1,87 @@
+{
+  "experiment_id": "R1995-pathfinder-route-start-scoring",
+  "generated_utc": "2026-11-20T06:57:09Z",
+  "scope": "Restore the Pathfinder candidate-score start, global-gate short circuit, NaN-preserving inclusive range predicate, and state-dependent Kotlin default-bridge argument semantics; validate with complete-descriptor static review, offline assertions, and a Temurin JDK 25 full-tree build.",
+  "source": {
+    "integration_baseline_commit": "07db084512a3b5ab5ecc0ce1f88d91217ea225c8",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java",
+    "baseline_git_blob": "b3b72e1ed3a186bb1779cb1b100e45a225e100ee",
+    "final_git_blob_before_commit": "5cc747b66c0e37b95af281d6e93f692cd874e9b0",
+    "final_sha256": "ac059acf5b0f01188b4f4081c9f952b47f4dd5add44f8e3b80f02f11524927f1",
+    "changed_production_files": 1
+  },
+  "original_reference_local_only": {
+    "archive_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_class_sha256": "2c29a7a5f40f3a3c4907a195211da10e856a3af5b6cb022fed852a47032d3f33",
+    "full_method_dump_sha256_local_only": "1bec225126eb2eca2c17b5bee16d26a427bbb43c99f4663a1e52228b7a1a1708",
+    "full_dump_exit_code": 0,
+    "default_bridge_dump_sha256_local_only": "5398243d3b1c234e5235d789a4d9622d11db04a7daebe6bb2a5e4935817c59df",
+    "compiled_method_dump_sha256_local_only": "cef56a3ea40a1a2b2a585f8de4d298fdec6388dd28ac2f7baefcad060142bf1f"
+  },
+  "method": {
+    "owner": "me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl",
+    "name": "b",
+    "descriptor": "(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;",
+    "original_instructions": 443,
+    "compiled_instructions": 278,
+    "reviewed_contracts": [
+      "global gate null short-circuits before Minecraft.player access",
+      "target BlockPos conversion is the preferred scoring origin with player-position fallback",
+      "independent less-than/greater-than range rejections preserve inclusive boundaries and NaN behavior",
+      "collision Kotlin default bridge mask 368 is conditional on c()I; source preserves both zero and non-zero gate states"
+    ]
+  },
+  "offline_assertions": {
+    "file": ".analysis/evidence/mining/r1995-pathfinder-route-start-scoring/offline-assertions.json",
+    "status": "PASS",
+    "assertion_count": 21,
+    "boundary_samples": [
+      "below min",
+      "min",
+      "inside",
+      "max",
+      "above max",
+      "negative infinity",
+      "positive infinity",
+      "NaN"
+    ],
+    "collision_gate_samples": [
+      0,
+      1,
+      -1,
+      368,
+      -2147483648
+    ],
+    "scope": "Static dump/source checks and modeled argument/range truth tables only; no client or world runtime."
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "started_utc": "2026-11-20T06:56:07.6383031Z",
+    "ended_utc": "2026-11-20T06:57:09.3881849Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks; compileTestJava/test NO-SOURCE; 18 existing Unsafe warnings plus deprecation/unchecked notices.",
+    "compiled_owner_class_sha256": "4523f362da0f70fbdb55e3a93e8245063aa7820da8a368deab5c14db9ec2ab80",
+    "built_jar_sha256": "2697296825ef1054750e2c0aca9bf0f7728d7e930a1ec88fa3a496af8eaebe6b",
+    "raw_log_sha256_local_only": "64c99638546399d1b68642018719e077d543295b9ea7cdc94aa8ce0de1780024"
+  },
+  "runtime_acceptance": {
+    "client_started": false,
+    "valid_player_world_used": false,
+    "normal_pathfinder_entry_exercised": false,
+    "powder_macro_entry_exercised": false,
+    "commission_macro_entry_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Static descriptor/bridge review, 21 offline assertions, and full-tree build only; runtime and normal-user-path acceptance remain open."
+  },
+  "publication_exclusions": [
+    "Original protected archive/classes",
+    "Full original/compiled javap dumps",
+    "Built JAR/classes",
+    "Raw build log",
+    "Absolute local machine paths"
+  ]
+}

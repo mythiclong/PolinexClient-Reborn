@@ -1,0 +1,14 @@
+R1995 full-tree build
+
+- Working directory: `polinex-src`
+- Command: `.\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks`
+- Runtime: Eclipse Temurin 25.0.4.1+1-LTS; Gradle Wrapper 9.7.1.
+- Started UTC: `2026-11-20T06:56:07.6383031Z`; ended UTC: `2026-11-20T06:57:09.3881849Z`.
+- Exit code: `0`; result: `BUILD SUCCESSFUL`; four actionable tasks executed.
+- Tests: `compileTestJava NO-SOURCE`, `test NO-SOURCE`.
+- Warnings: 18 existing `Unsafe` warnings plus existing deprecation/unchecked notices.
+- Final compiled owner SHA-256: `4523f362da0f70fbdb55e3a93e8245063aa7820da8a368deab5c14db9ec2ab80`.
+- Built JAR SHA-256: `2697296825ef1054750e2c0aca9bf0f7728d7e930a1ec88fa3a496af8eaebe6b`.
+- Raw successful build log SHA-256 (local-only): `64c99638546399d1b68642018719e077d543295b9ea7cdc94aa8ce0de1780024`.
+
+Build/package success proves compilation only. No Minecraft client or gameplay path was run.

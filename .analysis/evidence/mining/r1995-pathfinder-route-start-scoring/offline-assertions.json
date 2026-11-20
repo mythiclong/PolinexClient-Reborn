@@ -1,0 +1,130 @@
+{
+  "experiment_id": "R1995-pathfinder-route-start-scoring",
+  "method": {
+    "owner": "me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl",
+    "name": "b",
+    "descriptor": "(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;",
+    "original_instruction_count": 443,
+    "compiled_instruction_count": 278
+  },
+  "source": {
+    "path": "polinex-src/src/main/java/me/octo/client/llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl.java",
+    "baseline_blob": "b3b72e1ed3a186bb1779cb1b100e45a225e100ee",
+    "working_blob": "5cc747b66c0e37b95af281d6e93f692cd874e9b0",
+    "sha256": "ac059acf5b0f01188b4f4081c9f952b47f4dd5add44f8e3b80f02f11524927f1"
+  },
+  "original_reference_local_only": {
+    "archive_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_class_sha256": "2c29a7a5f40f3a3c4907a195211da10e856a3af5b6cb022fed852a47032d3f33",
+    "full_dumps_stored_outside_repository": true
+  },
+  "checks": [
+    {
+      "name": "original_descriptor",
+      "passed": true,
+      "detail": "Original b(BlockPos) descriptor is present in the complete method dump."
+    },
+    {
+      "name": "compiled_descriptor",
+      "passed": true,
+      "detail": "Post-build compiled b(BlockPos) descriptor is present in the complete method dump."
+    },
+    {
+      "name": "gate_precedes_player",
+      "passed": true,
+      "detail": "Both original control flow and current source return on null global gate before player lookup."
+    },
+    {
+      "name": "candidate_start_and_fallback",
+      "passed": true,
+      "detail": "Original target-position conversion is restored; null target or null converted vector falls back to player position."
+    },
+    {
+      "name": "range_nan_semantics",
+      "passed": true,
+      "detail": "Original independent less-than/greater-than rejection branches match source; NaN passes both comparisons as in the original."
+    },
+    {
+      "name": "original_masked_call",
+      "passed": true,
+      "detail": "Original collision call supplies mask 368 and placeholder scale 0.0 to the exact static default bridge descriptor."
+    },
+    {
+      "name": "bridge_defaults_and_gate",
+      "passed": true,
+      "detail": "Complete original bridge reads c() once; mask 32 defaults scale to 1.0, mask 256 defaults final double to 0.0, and it delegates to the core descriptor; c()==0 skips all defaults."
+    },
+    {
+      "name": "source_preserves_dynamic_default_gate",
+      "passed": true,
+      "detail": "Reconstructed call queries the same dynamic c() gate per accepted candidate and selects 1.0 or the original 0.0 argument before calling the same core helper."
+    },
+    {
+      "name": "bridge_tuple_c_0",
+      "passed": true,
+      "detail": "Effective collision arguments match for c()=0: (120, False, 0.0, False, True, 0.0)"
+    },
+    {
+      "name": "bridge_tuple_c_1",
+      "passed": true,
+      "detail": "Effective collision arguments match for c()=1: (120, False, 1.0, False, True, 0.0)"
+    },
+    {
+      "name": "bridge_tuple_c_-1",
+      "passed": true,
+      "detail": "Effective collision arguments match for c()=-1: (120, False, 1.0, False, True, 0.0)"
+    },
+    {
+      "name": "bridge_tuple_c_368",
+      "passed": true,
+      "detail": "Effective collision arguments match for c()=368: (120, False, 1.0, False, True, 0.0)"
+    },
+    {
+      "name": "bridge_tuple_c_-2147483648",
+      "passed": true,
+      "detail": "Effective collision arguments match for c()=-2147483648: (120, False, 1.0, False, True, 0.0)"
+    },
+    {
+      "name": "range_below",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for below: expected=False, original=False, source=False."
+    },
+    {
+      "name": "range_min",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for min: expected=True, original=True, source=True."
+    },
+    {
+      "name": "range_inside",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for inside: expected=True, original=True, source=True."
+    },
+    {
+      "name": "range_max",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for max: expected=True, original=True, source=True."
+    },
+    {
+      "name": "range_above",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for above: expected=False, original=False, source=False."
+    },
+    {
+      "name": "range_neg_inf",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for neg_inf: expected=False, original=False, source=False."
+    },
+    {
+      "name": "range_pos_inf",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for pos_inf: expected=False, original=False, source=False."
+    },
+    {
+      "name": "range_nan",
+      "passed": true,
+      "detail": "Original-vs-source comparison model for nan: expected=True, original=True, source=True."
+    }
+  ],
+  "status": "PASS",
+  "runtime_boundary": "Static descriptor/branch review plus offline truth-table assertions only; no client, valid world/player, normal route, macro path, or server run."
+}
