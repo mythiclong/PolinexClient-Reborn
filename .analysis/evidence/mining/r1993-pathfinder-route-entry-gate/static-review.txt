@@ -1,0 +1,31 @@
+# R1993 Pathfinder route-entry gate review
+
+## Target and exact reference
+
+- Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`
+- Method: `a(Ljava/lang/Object;Lnet/minecraft/world/phys/Vec3;ZZ)Z`
+- Baseline commit/blob: `3c84be1cfafa7c8e3142298620ade36f20f5e875` / `4fad5524cf8b43da32fd1d0446cb0e7be569fa16`; corrected source SHA-256/blob: `d86d66b455519a575e6b85b8b5ec7ff74fa0bcaacfb29338b3d2c2ef3a893f18` / `16ec8dcf9e608621df4547c69f5423c6a0b67967`.
+- Original JAR SHA-256 (local-only): `2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230`; original owner-class SHA-256: `1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88`. This matches the R1991 original-class fingerprint.
+- Full original/current javap commands and output hashes are recorded in `manifest.json`; dumps remain local-only.
+
+## Confirmed mismatch and correction
+
+The complete original descriptor has two meaningful branches controlled by `IllIll...l():int[]`. First, after route-index snapshot/increment and flag resets, it reads `Minecraft.player` and invokes the player-position helper only when the gate is non-null. If no position is obtained—including when the gate is null—it uses `Vec3.ZERO` and performs Kotlin `Intrinsics.checkNotNullExpressionValue(..., "ZERO")` on the fallback. The previous Java source read `Minecraft.player` regardless of the gate and omitted the fallback assertion.
+
+Second, original invalid-target handling and target/start-field writes are both behind the same `gate != null` branch. With a null gate it skips validation/logging/stop and those writes, then continues the original mode/flag setup and `a(BlockPos, boolean)` call. The previous source performed them unconditionally. Source now restores both gates and the fallback check without changing subsequent operations.
+
+## Complete-descriptor comparison
+
+- Original/compiled instruction counts: `184` / `145`.
+- All `22` ordered field references match; all `14` ordered business calls match after excluding the 11 original identity exception-relay calls.
+- Original exception table: 13 entries (11 `NoWhenBranchMatchedException` identity relays plus two monitor-cleanup entries). Compiled Java retains both monitor-cleanup entries; helper `a(Throwable):Throwable` is `aload_0; areturn`.
+- Javac uses `invokevirtual` for the same private-final `d(Z)V` and `a(BlockPos,Z)V` calls emitted as `invokespecial` by Kotlin. Owner is final; target descriptors and event order match.
+- Actual caller: owner `me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl` contains three `invokestatic` calls to bridge `(Lme/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll;Ljava/lang/Object;Lnet/minecraft/world/phys/Vec3;ZZILjava/lang/Object;)Z` in both original and compiled bytecode, from the same method descriptors. Representative `b(LivingEntity):boolean` passes an entity target, null start, false boolean, config boolean, mask 6 and null marker. This is static reachability only.
+
+## Validation boundary
+
+- Complete-descriptor static review: PASS.
+- Temurin JDK 25 full-tree Gradle build: PASS, exit 0; four actionable tasks, tests `NO-SOURCE`, 18 existing `Unsafe` warnings plus deprecation/unchecked notices.
+- Previous JDK 17 attempt was rejected before compilation; a 2 GiB C2 attempt failed native allocation without a source diagnostic. Successful retry used SerialGC, one active processor, C1-only compilation, 1.5 GiB heap and one worker.
+- A post-build Gradle single-use-daemon shutdown log recorded `IllegalStateException: Cannot start managing file contention because this handler has been closed`; command exit remained 0 and build reported success. Recorded as teardown noise, not target-path failure.
+- Direct method probe, client, valid entity/world, normal route, stop/cancel/cache lifecycle, and compatible server: NOT RUN. No invalid null/plain-object substitute was used. Runtime equivalence and Pathfinder closure remain OPEN.

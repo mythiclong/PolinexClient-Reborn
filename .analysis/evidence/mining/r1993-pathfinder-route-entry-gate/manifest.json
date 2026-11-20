@@ -1,0 +1,139 @@
+{
+  "experiment_id": "R1993-pathfinder-route-entry-gate",
+  "generated_utc": "2026-11-20T05:35:36.147Z",
+  "scope": "Restore original global-gate behavior in Pathfinder route-entry method; full-descriptor and actual caller comparison plus Temurin 25 full-tree build.",
+  "source_baseline": {
+    "integration_commit_before_change": "3c84be1cfafa7c8e3142298620ade36f20f5e875",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob_before": "4fad5524cf8b43da32fd1d0446cb0e7be569fa16",
+    "git_blob_after": "16ec8dcf9e608621df4547c69f5423c6a0b67967",
+    "source_sha256_after": "d86d66b455519a575e6b85b8b5ec7ff74fa0bcaacfb29338b3d2c2ef3a893f18"
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "owner_class_sha256_local_only": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "javap_command": "javap -p -c -s -v -classpath <local-original-archive> <owner>",
+    "exit_code": 0,
+    "full_javap_sha256_local_only": "5532071cef3dc475505d785689d15f4bc517696834f4442afa469075b434e9fc"
+  },
+  "compiled_reference": {
+    "javap_command": "javap -p -c -s -v -classpath polinex-src/build/classes/java/main <owner>",
+    "exit_code": 0,
+    "full_javap_sha256_local_only": "2fc5aac018be56d9924059285fdabf6e8ab5b8b926cf05a53ceee92dfa880cf8",
+    "owner_class_sha256_local_only": "23f0ff2511628df3f7bd401b3fb3ecd98b74529becdc50e5b2d2d88245018471",
+    "built_jar_sha256_local_only": "e0c0a1b338e3dc12dccce20ea7e75ab37494f64018ed6470c99e56e401c04581"
+  },
+  "method": {
+    "name": "a",
+    "descriptor": "(Ljava/lang/Object;Lnet/minecraft/world/phys/Vec3;ZZ)Z",
+    "original_method_block_sha256_local_only": "8116e8dfb74171469b98bef67bfd01bc9ce2e68b6b54e4b57247154ee8e95163",
+    "compiled_method_block_sha256_local_only": "f16f87413fa212d834d05a0f9db513e5c5e7c5575f28f10999b1aaf1213bdffc",
+    "original_instructions": 184,
+    "compiled_instructions": 145,
+    "ordered_field_references": 22,
+    "ordered_field_references_match": true,
+    "ordered_business_calls_after_identity_relay_lowering": 14,
+    "ordered_business_calls_match": true,
+    "original_exception_table_entries": 13,
+    "original_identity_NoWhenBranchMatchedException_entries": 11,
+    "original_monitor_cleanup_entries": 2,
+    "compiled_monitor_cleanup_entries": 2,
+    "restored_contracts": [
+      "Only non-null global.l() gate permits Minecraft.player/position reads.",
+      "ZERO fallback and Kotlin ZERO expression null check occur only on fallback.",
+      "Target validation and target/start writes are gated by the same non-null gate.",
+      "Downstream target-id/cache/mode/flag/helper order is preserved."
+    ],
+    "lowerings": [
+      "Private-final d(Z)V and a(BlockPos,Z)V use invokevirtual in javac versus invokespecial in Kotlin; same targets/order, final owner.",
+      "11 original NoWhenBranchMatchedException handlers relay via identity a(Throwable):Throwable; Java structured flow propagates directly and retains both monitor cleanup entries."
+    ]
+  },
+  "normal_caller_static_review": {
+    "owner": "me.octo.client.llllIIIIlllIlllllIllIIlIIIIIIllllIllIllIlIlIlIIIIlIlIllIllIIIIIllllIlIllllIIlIIllIlIl",
+    "owner_class_sha256_original_local_only": "2c29a7a5f40f3a3c4907a195211da10e856a3af5b6cb022fed852a47032d3f33",
+    "owner_class_sha256_compiled_local_only": "2f75da48bd38de6e155920c6b0b486f589d21d618431f5e8e5641e438ec8af16",
+    "actual_invokestatic_bridge_descriptor": "(Lme/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll;Ljava/lang/Object;Lnet/minecraft/world/phys/Vec3;ZZILjava/lang/Object;)Z",
+    "invoke_sites_original": 3,
+    "invoke_sites_compiled": 3,
+    "sites_match": true,
+    "sites": [
+      {
+        "method": "private final boolean b(net.minecraft.world.entity.LivingEntity);",
+        "descriptor": "(Lnet/minecraft/world/entity/LivingEntity;)Z"
+      },
+      {
+        "method": "private final void bE();",
+        "descriptor": "()V"
+      },
+      {
+        "method": "private final void bG();",
+        "descriptor": "()V"
+      }
+    ],
+    "representative": "b(LivingEntity;)Z passes entity, null start, false boolean, config boolean, mask 6 and null marker; bytecode path only."
+  },
+  "static_experiment": {
+    "started_utc": "2026-11-20T05:35:33.027Z",
+    "ended_utc": "2026-11-20T05:35:36.147Z",
+    "commands": [
+      "javap -p -c -s -v -classpath .analysis/me-octo-only.jar me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "javap -p -c -s -v -classpath polinex-src/build/classes/java/main me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "same original/compiled javap command for caller owner"
+    ],
+    "exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "assertions": [
+      "Full descriptor matched.",
+      "22 ordered field references and 14 business calls match after documented identity relays.",
+      "13 original exception handlers comprise 11 identity relays plus two monitor handlers; compiled keeps both monitor handlers.",
+      "Three actual bridge invokestatic sites match in original and compiled callers."
+    ]
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T05:25:34Z",
+    "ended_utc": "2026-11-20T05:26:26Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks; compileTestJava/test NO-SOURCE",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "warnings": "18 existing Unsafe warnings plus deprecation/unchecked notices",
+    "prior_attempts_summary": [
+      "JDK 17 rejected by Loom before compile.",
+      "Temurin 25/2 GiB C2 attempt ended in native-memory allocation failure without source diagnostic."
+    ]
+  },
+  "post_build_environment_noise": {
+    "signature": "java.lang.IllegalStateException: Cannot start managing file contention because this handler has been closed",
+    "context": "Gradle 9.7.1 single-use daemon shutdown log after successful build; exit 0 and BUILD SUCCESSFUL. Not emitted by source compile/Pathfinder method."
+  },
+  "validation": {
+    "complete_descriptor_static_review": "PASS",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN; no fake Minecraft objects",
+    "minecraft_client": "NOT RUN",
+    "valid_entity_or_world": "NOT RUN",
+    "normal_pathfinder_route": "NOT RUN",
+    "stop_cancel_cache_lifecycle": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "runtime_or_feature_equivalence": "OPEN"
+  },
+  "screenshots": [],
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full javap dumps",
+    "Raw daemon/crash logs",
+    "Compiled classes/built JAR",
+    "Absolute machine paths"
+  ],
+  "dual_repository_sync": "PENDING_CONTENT_PUSH_VERIFICATION"
+}
