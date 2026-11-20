@@ -1,0 +1,73 @@
+{
+  "experiment_id": "R1997-native-pathfinder-extended-golden",
+  "generated_utc": "2026-11-20T08:13:44.327Z",
+  "scope": "Extend the bounded headless original-vs-managed differential probe for the world-independent NativePathFinder dependency. No production source changed in this slice.",
+  "baseline": {
+    "integration_commit": "74918b54125a42da3d6d5d3d5e76ed840b3cb441",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "original_archive_sha256_local_only": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/NativePathFinder.java",
+    "source_git_blob": "75e7f746ee0ebe6af726a4f65021af54ae3d40ca",
+    "source_sha256": "b0ae100d8ca2a393a2fb3519b9d73e1fc0fced6b8af83f00f79e94c93f1b887f",
+    "compiled_class_sha256": "95ecaec07e995e9d7189b6cdb3c5729d1d317004232b4348c82266690e28c835"
+  },
+  "probe": {
+    "harness": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/NativePathfinderExtendedGolden.java",
+    "harness_sha256": "095299fa7ddd7e5ae66d43493e49fbc3df9d5f5af6c1897c67604745230ec688",
+    "start_utc": "2026-11-20T08:13:43.167Z",
+    "end_utc": "2026-11-20T08:13:44.327Z",
+    "mode": "Headless Java reflection probe. Original JAR and managed classes were loaded through separate URLClassLoaders with the platform class loader as parent.",
+    "commands": [
+      {
+        "command": "javac -d <temporary-harness-classes> .analysis/evidence/mining/r1997-native-pathfinder-extended-golden/NativePathfinderExtendedGolden.java",
+        "exit_code": 0
+      },
+      {
+        "command": "java -cp <temporary-harness-classes> NativePathfinderExtendedGolden <local-original-archive> polinex-src/build/classes/java/main",
+        "exit_code": 0
+      }
+    ],
+    "assertions": 705,
+    "seed": "0x4e41544956455046",
+    "covered_behavior": [
+      "256 signed-coordinate pack/unpack round trips",
+      "all 256 byte values through state normalization",
+      "updateChunk count, null-index, coordinate, and normalization boundaries",
+      "processChunk remaining lengths 0, 1, 8, 9, 10, 17, 18, 19, 71, 72, 73, 255, 256, 257, 511, 512, and 513; caller ByteBuffer position/limit preservation",
+      "loadCache record and legacy-buffer length boundaries with varied count arguments",
+      "updateHeights count boundaries and clearCache clearing both native-helper maps",
+      "72 deterministic randomized blocked 3D grids across cardinal/diagonal movement and node budgets -1, 0, 1, 8, 64, and 4096; findPath/canReach consistency",
+      "same-position path when the position is marked blocked",
+      "five Etherwarp ray/distance cases"
+    ],
+    "comparison": {
+      "original_assertions_and_trace_sha256": "705:38c7e1ccf9bf281339e9027c1a748a3f40ba9a876d1a13814cae296563b08552",
+      "current_assertions_and_trace_sha256": "705:38c7e1ccf9bf281339e9027c1a748a3f40ba9a876d1a13814cae296563b08552",
+      "exact_trace_match": true,
+      "run_stdout": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/run.stdout.txt",
+      "run_stdout_sha256": "81ecabd0dedcee51268d9ea1da870ae5262930c7419a6a310e4d228ad366f53e",
+      "run_stderr": ".analysis/evidence/mining/r1997-native-pathfinder-extended-golden/run.stderr.txt",
+      "run_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_stdout_line_endings_normalized": "Captured Windows CRLF converted to LF for the committed evidence file; output text is unchanged."
+    }
+  },
+  "validation_limits": {
+    "production_source_changed": false,
+    "full_tree_build_run_in_this_slice": false,
+    "minecraft_client_started": false,
+    "valid_player_world_used": false,
+    "normal_pathfinder_request_or_execution_exercised": false,
+    "disk_cache_event_or_file_lifecycle_exercised": false,
+    "powder_macro_entry_exercised": false,
+    "commission_macro_entry_exercised": false,
+    "compatible_server_tested": false,
+    "status": "This is expanded differential evidence for world-independent helper behavior only. It does not establish all helper inputs, world collision behavior, normal Pathfinder entry/execution, disk event integration, macro behavior, or server compatibility."
+  },
+  "publication_exclusions": [
+    "Original protected JAR/classes",
+    "Full original/compiled javap dumps",
+    "Compiled harness class files",
+    "Temporary classloader output directory",
+    "Absolute machine paths"
+  ]
+}
