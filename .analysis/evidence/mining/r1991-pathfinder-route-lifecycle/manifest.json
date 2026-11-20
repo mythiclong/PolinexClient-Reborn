@@ -1,0 +1,102 @@
+{
+  "experiment_id": "R1991-pathfinder-route-lifecycle",
+  "generated_utc": "2026-11-20T03:24:29Z",
+  "scope": "Restore the original Pathfinder route-index completion branch and pending-result gate/null guards, compare complete descriptors, and perform a Temurin JDK 25 full-tree build.",
+  "source_baseline": {
+    "commit": "3df0e9e53b8da25c89ddabfbb6fbd75a2cca17d7",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob": "a80a2a614a1308d5c896f2d81b80dbc0273c8de0",
+    "baseline_source_sha256": "1abd41550641105bad39b7f7c0cc50e58ba50c38739607a0f9cce0a74b1e1b22",
+    "final_git_blob": "4fad5524cf8b43da32fd1d0446cb0e7be569fa16",
+    "final_source_sha256": "0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266"
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+    "owner_class_sha256_local_only": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "full_javap_command": "javap -p -c -s -v -classpath <original archive> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "ed7df0d675e41fc338697057c60b65e11994dc0ec8186d093007abdc04962b8a"
+  },
+  "modified_methods": [
+    {
+      "name": "g",
+      "descriptor": "()V",
+      "original_method_block_sha256_local_only": "2d29a90d8be03657627938400313cb7ad8ea506389a4e294c1f286d1d4b9b52a",
+      "compiled_method_block_sha256_local_only": "d95f1a02dcf531f18f491f0acba0cc74116ac6825fefb7d0a1539f170e9bbcac",
+      "original_instructions": 160,
+      "compiled_instructions": 88,
+      "ordered_field_references": 22,
+      "ordered_field_references_match": true,
+      "restored_contracts": [
+        "Read and check the shared gate before accessing pending-route state.",
+        "Read and null-check the pending list before reading the target or clearing either pending field.",
+        "Preserve target snapshot, pending-list clear, target clear, then target/stop/enabled/empty checks."
+      ],
+      "runtime_probe": "NOT RUN"
+    },
+    {
+      "name": "h",
+      "descriptor": "(Ljava/util/List;)Z",
+      "original_method_block_sha256_local_only": "84f558666821089331982a610710a5a2f0a0d63c603123e18b197971a90abd75",
+      "compiled_method_block_sha256_local_only": "f1cf84ddf40a79e70fdff673916a8274eb74a0db6320e14cef925f034c15396d",
+      "original_instructions": 47,
+      "compiled_instructions": 38,
+      "ordered_field_references": 5,
+      "ordered_field_references_match": true,
+      "ordered_invocation_targets_and_descriptors": 7,
+      "ordered_invocation_targets_and_descriptors_match": true,
+      "restored_contract": "After incrementing the route index, stop via v() only when the non-null-gate completion predicate g(List) returns true; otherwise proceed to the node at the new index.",
+      "runtime_probe": "NOT RUN"
+    }
+  ],
+  "supporting_method_review": {
+    "complete_descriptors_reviewed": ["d(Z)V", "t()V", "s()V", "g(Ljava/util/List;)Z"],
+    "mismatch_found": false,
+    "methods_changed": false
+  },
+  "compiled_reference": {
+    "command": "javap -p -c -s -v -classpath polinex-src/build/classes/java/main <owner>",
+    "exit_code": 0,
+    "full_javap_sha256_local_only": "5ed80d098510290339c50b390f1c6a314f3a6990451c1ee9be903c39c1d67165",
+    "owner_class_sha256": "3e0fc8421075f840dce7da4ec12ee876ecf537604601b163da0d2855ed64ae76"
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms256m -Xmx2G -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -XX:ReservedCodeCacheSize=128m' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T03:15:24.418Z",
+    "finished_log_write_utc": "2026-11-20T03:16:16.3195590Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; 4 actionable tasks executed; tests NO-SOURCE",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "warnings": "18 existing Unsafe warnings plus deprecation/unchecked notices",
+    "built_jar_sha256_local_only": "6e66b0c1f96f5fd4b651b41dbc42dfaa9e66fbfa7a401c70a0798d4abaf62bb4",
+    "raw_success_log_sha256_local_only": "851851b5ea8e7673d527595a175a7c26e8ac8f2c1f09fc101c8c1a5a50c053cb",
+    "environment_failures_before_success": [
+      "Default 4 GiB G1 daemon failed to reserve host commit memory; exit 1.",
+      "2 GiB G1 daemon failed to reserve host commit memory; exit 1.",
+      "1 GiB SerialGC daemon reached compileJava then exhausted native memory in the compiler; exit 1."
+    ]
+  },
+  "validation": {
+    "full_descriptor_static_review": "PASS",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "normal_pathfinder_start_and_progression": "NOT RUN",
+    "stop_cancel_cache_lifecycle": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "runtime_or_feature_equivalence": "OPEN",
+    "screenshots": []
+  },
+  "publication_exclusions": [
+    "Original protected archives/classes",
+    "Full javap dumps",
+    "Raw local build and JVM crash logs",
+    "Compiled classes and built JAR"
+  ]
+}

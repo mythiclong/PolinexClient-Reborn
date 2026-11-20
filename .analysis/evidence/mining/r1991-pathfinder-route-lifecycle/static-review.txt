@@ -1,0 +1,38 @@
+# R1991 — Pathfinder route lifecycle guards
+
+## Target and source
+
+- Owner: `me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll`
+- Original archive SHA-256: `2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230`
+- Owner class SHA-256: `1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88`
+- Baseline source blob: `a80a2a614a1308d5c896f2d81b80dbc0273c8de0`; final source SHA-256: `0703e1b3d0323ec856ab88ce97ec252f7e1e8712343fc674f19cc64475869266`.
+- Original and final compiled owner were read with complete `javap -p -c -s -v` output and matched by owner, method name, and JVM descriptor. Full dumps are local-only.
+
+## Confirmed source mismatches and corrections
+
+### `h(Ljava/util/List;)Z`
+
+The original increments the active route index first. When the shared gate is non-null it calls `g(List)`. Original `ifeq 45` skips stopping when `g(List)` is false; when true it invokes `v()`, returns false, and does not access the list at the completed index. The source had `!g(List)`, reversing those outcomes. The negation was removed. Final compiled bytecode now branches on the same predicate with `ifeq 34`; the ordered field references and invocation targets/descriptors match the original. Javac uses `invokevirtual` instead of Kotlin's `invokespecial` for private-final `g(List)` and `s()` calls; the owner is final.
+
+### `g()V`
+
+The original first reads the shared gate and returns on null before reading pending-route state. It then reads the volatile pending list and returns on null before reading the target or clearing either pending field. Only after both guards does it snapshot the target and clear pending list, then target, in that order. It next preserves the target/stop/enabled/empty-list checks before adopting the route. The source previously snapshotted and cleared both volatile fields before these guards. The method now restores the gate and pending-list guards before any target read or clear; the final compiled method preserves all 22 ordered field references.
+
+The asynchronous result writer stores the target first and pending list second. Keeping the original null-list early return prevents a partially published result from being cleared or passed to `List.isEmpty()` before the route arrives. This ordering/race analysis is static; no runtime reproduction was performed.
+
+## Supporting review and compiler deltas
+
+- Complete-descriptor review found no discrepancy in the connected `d(Z)V`, `t()V`, `s()V`, or `g(Ljava/util/List;)Z` methods; they were not changed.
+- `g()V`: original/final compiled instruction counts are 160/88; all 22 ordered field references match. The Java source retains the original `Vec3.ZERO` fallback; Javac does not emit Kotlin's redundant `Intrinsics.checkNotNullExpressionValue` after that non-null fallback. Javac also lowers the same string concatenation to a different `makeConcatWithConstants` recipe and uses `invokevirtual` for the same private-final `a(I)V` call. No source catch, swallow, or wrapper was added.
+- `h(List)Z`: original/final compiled instruction counts are 47/38; all 5 ordered field references and 7 ordered invocation targets/descriptors match. The original's three exception-table handlers only relay through the owner's identity throwable helper, as verified in the prior complete-owner review; the Java structured method propagates the same failures directly.
+- Original full javap SHA-256 (local-only): `ed7df0d675e41fc338697057c60b65e11994dc0ec8186d093007abdc04962b8a`.
+- Final compiled full javap SHA-256 (local-only): `5ed80d098510290339c50b390f1c6a314f3a6990451c1ee9be903c39c1d67165`.
+- `g()V` method-block SHA-256 original/final: `2d29a90d8be03657627938400313cb7ad8ea506389a4e294c1f286d1d4b9b52a` / `d95f1a02dcf531f18f491f0acba0cc74116ac6825fefb7d0a1539f170e9bbcac`.
+- `h(List)Z` method-block SHA-256 original/final: `84f558666821089331982a610710a5a2f0a0d63c603123e18b197971a90abd75` / `f1cf84ddf40a79e70fdff673916a8274eb74a0db6320e14cef925f034c15396d`.
+
+## Validation boundary
+
+- Complete original-descriptor static review: PASS.
+- Temurin JDK 25 full-tree Gradle build: PASS; see `build-summary.txt` and `manifest.json`.
+- Client, valid world, normal route start/progression, stop/cancel, and disk-cache lifecycle: NOT RUN.
+- Runtime equivalence and Pathfinder feature closure remain OPEN. This evidence does not establish in-game behavior.
