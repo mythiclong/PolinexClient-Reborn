@@ -1,0 +1,33 @@
+R1989 — Pathfinder player route/input helper
+
+## Exact source and original basis
+
+- Owner: `me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl`
+- Method: `a:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;ZD)V`
+- Source: `polinex-src/src/main/java/me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java`
+- Baseline: `13ddb50abb5404c01cf4ef96457a5f736d873b08`; baseline Git blob `33d8eb38a7fbc465752bb2db246c7cef3606b325`.
+- Original archive SHA-256 (local reference only): `2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230`.
+- Original owner class SHA-256: `c8b165aa0ae98d42ea1920040015f2bafcc1ace7b2e4709eb9c05f11edc1fef0`.
+- Full original and compiled `javap -p -c -s -v` dumps were read locally; dump SHA-256 values are recorded in `manifest.json`. Dumps and protected binaries are not published.
+
+## Restored branches
+
+The original calls the option object as `a(Number):boolean` with option 100. The baseline source instead wrapped the void `a(int):void` setter in a `Supplier` that returned null, then attempted to use that result as a Boolean. The restored source directly consumes the Boolean result. With the original shared array/gate null, that result is written to the global flag; with a non-null gate, the original `result || previousFlag` condition controls whether the start vector is updated and the flag cleared. The compiled method calls the same `a(Number):boolean` target.
+
+The original direction gate is `param3 && (sharedArray == null || option.c(3))`. The baseline source represented this branch through Object/Boolean/Integer values and cast the result to Byte, which is not the original contract and can fail before the direction loop. The restored source uses primitive boolean conditions; the compiled method invokes the same `c(int):boolean` target. The null-array branch remains present.
+
+## Complete-method comparison notes
+
+- Original and final compiled descriptors are identical; the complete target method contains 333 and 444 decoded instructions respectively.
+- All 36 ordered invocation targets and invoke opcodes match. Both methods have no exception-table entries.
+- The linear field-access sequence is not identical: original has 19 operations and the Java-compiled method has 20. The additional operation is a `putstatic` emitted on the null-gate branch, rather than the original merged store. The two changed state branches were checked path by path: null-gate assigns the option result; non-null gate updates the start vector only when the option result or previous flag is true, then clears the flag. This compiler/control-flow difference is recorded rather than hidden.
+- The compiled target contains no `invokedynamic` Supplier and no `checkcast java/lang/Byte`.
+- The full original descriptor and method body were inspected. This is a targeted static restoration, not proof that the whole Pathfinder feature or every caller is runtime-equivalent.
+
+## Acceptance boundary
+
+- Static original-descriptor review for the two restored branches: **PASS**.
+- Temurin JDK 25 full-tree build for the final source: **PASS**, exit 0.
+- Direct runtime probe: **NOT RUN**; no invalid player/world substitutes were used.
+- Minecraft client, valid world, normal Pathfinder entry, stop/cancel/cache lifecycle, compatible server: **NOT RUN**.
+- Runtime/feature equivalence: **OPEN**.

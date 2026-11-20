@@ -9,6 +9,8 @@ This repository contains the managed-source reconstruction of a Minecraft 26.1.2
 
 ## Current progress (2026-11-20 UTC; Chicago local date: 2026-11-19)
 
+R1989 restores the Pathfinder-used player route/input helper `a(Vec3, Vec3, boolean, double):void` against its complete original descriptor: option 100 now directly uses `a(Number):boolean` with the original gate-null global-state branch, and the direction gate is primitive boolean rather than invalid Boolean/Integer-to-Byte casts. The 36 ordered invocation targets match; both modified branches and their state writes were checked path by path. Javac emits a separate write on the null branch instead of the original merged store, so the linear field-access count is 19 vs. 20; this compiler/control-flow shape difference is documented. The Temurin JDK 25 full-tree build exited 0 (18 existing `Unsafe` warnings; tests are `NO-SOURCE`). Static review and build only: no client, valid world, normal route, stop/cache-lifecycle, or compatible-server run was performed. This does not establish Pathfinder closure or runtime equivalence. See the [R1989 static review](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/static-review.txt), [build summary](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/build-summary.txt), and [machine manifest](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json).
+
 R1979 completed the full original-descriptor audit of the Pathfinder collision-offset route wrapper `a(ArrayList<Vec3>, Vec3, Vec3):ArrayList<Vec3>` (offsets 0–173; 4 exception-table entries). Its actual iterator and output collection receivers now match the original `Iterable.iterator()` / `Collection.add()` calls, while preserving gate, empty-input, null-offset fallback, and fresh-list ordering. The final compiled owner matches all 9 invoke targets and 13 normalized references; the only recorded delta is Javac's `invokevirtual` for the same `private final g(...)` call where Kotlin emitted `invokespecial`. Temurin JDK 25 full-tree `build --rerun-tasks` exited 0. No valid-world, normal in-game path, or compatible-server test was run; runtime equivalence is not claimed. See the [R1979 evidence](.analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json).
 
 
@@ -61,6 +63,8 @@ R1988 restores Glacite Commission Macro `aC()V` and `bs()V` against their comple
 ### Latest handoff and evidence
 
 - [Current short handoff](.analysis/reports/RESUME.md)
+- [R1989 Pathfinder player route/input helper static review and full-tree build](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json)
+- [R1989 dual-repository sync record](.analysis/reports/SYNC-20261120-PATHFINDER-R1989.json)
 - [R1980 Pathfinder two-stage collision predicate static review and full-tree build](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
 - [R1981 Pathfinder `o()` static review and full-tree build](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
 - [R1982 Pathfinder `p()` forward-input review and full-tree build](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)

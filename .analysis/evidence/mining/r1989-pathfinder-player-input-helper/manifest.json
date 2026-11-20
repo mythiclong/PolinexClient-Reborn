@@ -1,0 +1,74 @@
+{
+  "experiment_id": "R1989-pathfinder-player-route-input-helper",
+  "generated_utc": "2026-11-20T01:33:34Z",
+  "scope": "Restore two source-level control-flow mismatches in the Pathfinder-used player route/input helper and verify the full descriptor plus a Temurin JDK 25 full-tree build.",
+  "source_baseline": {
+    "commit": "13ddb50abb5404c01cf4ef96457a5f736d873b08",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/utils/player/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java",
+    "baseline_git_blob": "33d8eb38a7fbc465752bb2db246c7cef3606b325",
+    "final_git_blob": "f0ff3c5afe4e88bd84bfb1f1cf1f65ce95aeb43e",
+    "final_source_sha256": "d8cb64dc0a2ed1cd8c0be2feab58a48cc7a2f19137f011e464be480925595394"
+  },
+  "original_reference": {
+    "archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner": "me.octo.client.utils.player.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl",
+    "owner_class_sha256": "c8b165aa0ae98d42ea1920040015f2bafcc1ace7b2e4709eb9c05f11edc1fef0",
+    "full_javap_command": "javap -p -c -s -v -classpath <original archive> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "daa23dd25db4b6db2c7e2ef22d8e0b8d98e4949ab6bb1ab60707608dcca9eafd"
+  },
+  "method": {
+    "name": "a",
+    "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;ZD)V",
+    "original_method_block_sha256": "c8bd493a5be1c939fd1277535c47959b1d34ca471a15382dc1b130635e7ae32c",
+    "compiled_method_block_sha256": "ea3b0e041d5a6645ebdc632a584ffc6af8b815e11816692d0e2e4e63b12168aa",
+    "original_instructions": 333,
+    "compiled_instructions": 444,
+    "original_invocation_count": 36,
+    "compiled_invocation_count": 36,
+    "ordered_invocation_targets_and_opcodes_match": true,
+    "original_field_access_count": 19,
+    "compiled_field_access_count": 20,
+    "field_access_difference": "The Java-compiled null-gate branch emits a separate putstatic for the option result instead of the original merged store; the analyzed per-branch state updates match.",
+    "original_exception_table_entries": 0,
+    "compiled_exception_table_entries": 0,
+    "compiled_owner_class_sha256": "fdec7f904d17ae21933843d82b851cfd75c7f29ed75e099766fc349b2004f06a",
+    "compiled_full_javap_sha256_local_only": "e1d570db1f60de6df8190eab7737d36fc6d60e039f39a2abd4f1f6cebccaf7fa",
+    "compiled_shapes_absent": [
+      "invokedynamic Supplier for option 100",
+      "checkcast java/lang/Byte in the direction gate"
+    ]
+  },
+  "build": {
+    "command": "& .\\gradlew.bat build --rerun-tasks --no-daemon --console=plain",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T01:27:35.6960727Z",
+    "finished_utc": "2026-11-20T01:28:12.3127714Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 existing Unsafe warnings; tests NO-SOURCE",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "compiled_owner_class_sha256": "fdec7f904d17ae21933843d82b851cfd75c7f29ed75e099766fc349b2004f06a",
+    "built_jar_sha256_not_published": "c0ed984faf576a857287a3ae345d97079e478ea2ac521d0f0139c32171673d7b"
+  },
+  "validation": {
+    "static_full_descriptor_review_for_restored_branches": "PASS",
+    "full_tree_build": "PASS",
+    "direct_runtime_probe": "NOT RUN",
+    "minecraft_client": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "normal_pathfinder_entry": "NOT RUN",
+    "stop_cancel_cache_lifecycle": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "runtime_or_feature_equivalence": "OPEN",
+    "screenshot": "NOT APPLICABLE; this was a static/build slice, not a visual experiment"
+  },
+  "publication_exclusions": [
+    "Original archive or protected class files",
+    "Full original/current javap dumps",
+    "Raw local build logs",
+    "Compiled classes and built JAR"
+  ]
+}

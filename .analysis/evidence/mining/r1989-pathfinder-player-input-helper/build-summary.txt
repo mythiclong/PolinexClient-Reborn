@@ -1,0 +1,16 @@
+R1989 Temurin JDK 25 full-tree build
+
+Command: `& .\gradlew.bat build --rerun-tasks --no-daemon --console=plain`
+Working directory: `polinex-src`
+Runtime: Eclipse Temurin 25.0.4.1+1-LTS (`C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot`); Gradle wrapper 9.7.1; Fabric Loom 1.18.0-alpha.19
+Started (UTC): `2026-11-20T01:27:35.6960727Z`
+Finished (UTC): `2026-11-20T01:28:12.3127714Z`
+Exit code: `0`
+Result: `BUILD SUCCESSFUL` (4 actionable tasks executed)
+Warnings: 18 existing `sun.misc.Unsafe` warnings. Test tasks: `NO-SOURCE`.
+
+Final source SHA-256: `d8cb64dc0a2ed1cd8c0be2feab58a48cc7a2f19137f011e464be480925595394`
+Compiled owner class SHA-256: `fdec7f904d17ae21933843d82b851cfd75c7f29ed75e099766fc349b2004f06a`
+Built JAR SHA-256 (not published): `c0ed984faf576a857287a3ae345d97079e478ea2ac521d0f0139c32171673d7b`
+
+The build verifies compilation/package regression only. It does not verify client startup, a valid world, normal route behavior, or server compatibility.

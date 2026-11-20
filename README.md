@@ -9,6 +9,8 @@
 
 ## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-19）
 
+R1989 按原版完整 descriptor 修复 Pathfinder 使用的玩家路径/输入辅助方法 `a(Vec3, Vec3, boolean, double):void`：设置 100 现在直接走 `a(Number):boolean` 并保留 gate-null 的全局状态分支；方向开关条件恢复为 primitive boolean，不再把 Boolean/Integer 强转 Byte。原版与编译产物的 36 个有序调用目标一致；两处分支副作用已逐路径核对。Java 编译器将原版一次汇合写入改为 null 分支独立写入，行为路径一致但线性字段访问数为 19/20，已在证据中注明。Temurin JDK 25 全树构建 exit 0（18 条既有 `Unsafe` 警告，测试 `NO-SOURCE`）。仅静态复核与构建通过；未运行客户端、有效世界、正常寻路、停止/缓存生命周期或兼容服务器，不宣称 Pathfinder 功能闭环或运行时等价。详见 [R1989 静态复核](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json)。
+
 R1979 完成 Pathfinder 碰撞位移路线包装器 `a(ArrayList<Vec3>, Vec3, Vec3):ArrayList<Vec3>` 的完整原版 descriptor 审计（offset 0–173、4 个异常表项），将迭代器与输出集合的真实调用 receiver 对齐到原版 `Iterable.iterator()` / `Collection.add()`，保留 gate、空列表、碰撞偏移为空时返回原列表及成功时新建列表的顺序。最终编译 owner 的 9 个 invoke 目标和 13 个规范化引用与原版一致；唯一已记录差异是 Java 编译器对同一 `private final g(...)` 调用使用 `invokevirtual` 而非 Kotlin 的 `invokespecial`。Temurin JDK 25 全树 `build --rerun-tasks` exit 0。未做有效世界、正常游戏路径或兼容服务器验收，不宣称运行时等价。详见 [R1979 证据](.analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
 
 R1980 完成 Pathfinder 二段 AABB 碰撞谓词 `b(Vec3):boolean` 的完整原版 descriptor 审计（offset 0–293、5 个异常表项），修复遗漏的 gate-null 早退，使其在读取 player/level 前返回 false。原版与最终编译产物的 14 个非异常 helper 调用、16 个字段引用、9 个行为数值常量和 2 个 Kotlin 空值检查消息按序一致；Java 因 `LocalPlayer` 静态子类型省略了两处冗余 `Entity` checkcast。Temurin JDK 25 全树 `build --rerun-tasks --no-daemon` exit 0（18 条既有警告，测试任务为 `NO-SOURCE`）。未做有效世界、正常玩家路径或兼容服务器验收；不宣称运行时等价。详见 [R1980 证据](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)。
@@ -61,6 +63,8 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 ### 最新交接与证据
 
 - [当前短交接](.analysis/reports/RESUME.md)
+- [R1989 Pathfinder 玩家路径/输入辅助方法静态复核与全树构建](.analysis/evidence/mining/r1989-pathfinder-player-input-helper/manifest.json)
+- [R1989 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1989.json)
 - [R1980 Pathfinder 二段碰撞谓词静态复核与全树构建](.analysis/evidence/mining/r1980-pathfinder-collision-gate/manifest.json)
 - [R1981 Pathfinder `o()` 静态复核与全树构建](.analysis/evidence/mining/r1981-pathfinder-obstacle-check/manifest.json)
 - [R1982 Pathfinder `p()` 前进输入静态复核与全树构建](.analysis/evidence/mining/r1982-pathfinder-forward-predicate/manifest.json)
