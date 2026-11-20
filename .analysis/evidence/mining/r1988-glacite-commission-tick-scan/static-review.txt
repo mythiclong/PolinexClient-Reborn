@@ -1,0 +1,23 @@
+R1988 — Glacite Commission Macro tick and target-scan restoration
+
+## Complete descriptors and source basis
+
+- Owner: `me.octo.client.IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll`
+- Methods reviewed from the original archive and current source-compiled owner: `aC:()V` and `bs:()V`.
+- Original archive SHA-256: `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`; original owner class SHA-256: `38ca55b2830fbd0e860ed91f52476bedc336a6dfb8362c9dfea95ab05139f99e`.
+- The integration baseline file Git blob was `a0ecabe492cafc01fc92882d4144ce04459d3ec1`; the exact post-change Windows source SHA-256 is `7dde59201a836a1c8523fbef454ed2d78cf29bd03c96b54ea5e4bdd2dd37e467`.
+- Full original and compiled owner dumps were generated with `javap -p -c -s -v`; exit code 0 for both. Dumps are local-only, with SHA-256 values recorded in `manifest.json`; they are not published.
+
+## `aC()V`
+
+The original 772-instruction method routes enum branches through two nested `$SwitchMap` integer arrays. The prior managed source switched on raw enum ordinals and used the wrong case labels. The restored source indexes both original mapping arrays, restores the `Number.intValue()` value flow, and preserves the original field-write sequence. All non-handler business/member references match the reviewed original; the sole counted reference delta is the identity exception adapter, because javac emits one shared handler rather than one invocation per original handler.
+
+## `bs()V`
+
+The original method's control value is read before the initial state gate. Complete callsite/method review resolves the control method `d()I` to `{0, 109}`. The original offset-61 return is preserved: the reset path remains reachable under the original branch, and the remainder is unreachable in the nonzero control case. All 40 local-1 conditional edges were resolved; field-access multisets and non-handler member references match. `Iterable.iterator()` and `Collection.isEmpty()` receiver types are made explicit where needed for javac to emit the original interface calls.
+
+## Exception semantics and validation boundary
+
+The original exception tables contain 89 entries in `aC` and 43 in `bs`, all catching `java/util/NoSuchElementException`; the compiled tables contain 15 and 4 entries. Every original and compiled handler invokes `a(NoSuchElementException):NoSuchElementException`, whose complete method is exactly `aload_0; areturn`, then rethrows the same object. The table layout differs, but the handlers do not suppress, transform, or side-effect on the caught throwable; this is recorded as a compiler-shape difference, not an exception-swallowing fix.
+
+The Temurin JDK 25 full-tree Gradle build passed with exit code 0 (18 existing `Unsafe` warnings; tests are `NO-SOURCE`). No Minecraft client, valid world, Commission normal-user flow, or compatible server was exercised. This closes only the reviewed static method contracts and build regression; the macro is not declared functionally complete or runtime-equivalent.

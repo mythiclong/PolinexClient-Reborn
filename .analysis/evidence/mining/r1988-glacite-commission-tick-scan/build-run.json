@@ -1,0 +1,9 @@
+{
+  "command": "Temurin-25 java -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build --rerun-tasks --no-daemon --console=plain",
+  "working_directory": "polinex-src",
+  "started_utc": "2026-11-20T00:55:00.748Z",
+  "finished_utc": "2026-11-20T00:56:00.495Z",
+  "duration_ms": 59740,
+  "exit_code": 0,
+  "log": "build-jdk25-final.log"
+}

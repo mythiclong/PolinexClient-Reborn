@@ -1,0 +1,13 @@
+R1988 exact-source full-tree build
+
+Command: `java.exe -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build --rerun-tasks --no-daemon --console=plain`
+Working directory: `polinex-src`
+Runtime: Eclipse Temurin JDK 25.0.4.1+1-LTS; Gradle wrapper 9.7.1; Fabric Loom 1.18.0-alpha.19
+Started (UTC): 2026-11-20T00:55:00.748Z
+Finished (UTC): 2026-11-20T00:56:00.495Z
+Exit code: 0
+Result: `BUILD SUCCESSFUL`; 4 actionable tasks executed; 18 existing `sun.misc.Unsafe` warnings; test tasks `NO-SOURCE`.
+Final source-compiled owner class SHA-256: `279e43901fb6e4a629d979e447834db0c7f6ccb3170b52cdf4eccb3056e5e0bd`
+Built JAR SHA-256 (not published): `ff0da9a398795c7462d63d12df8a52df7dcb09b700b28e63e7e0e8a62e2232fd`
+
+This is a source/build regression check only, not a Minecraft runtime or normal-user-path test.

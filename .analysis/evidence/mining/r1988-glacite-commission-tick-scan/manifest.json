@@ -1,0 +1,91 @@
+{
+  "experiment_id": "R1988-glacite-commission-tick-and-scan",
+  "generated_utc": "2026-11-20T00:56:44Z",
+  "scope": "Restore Glacite Commission Macro aC()V enum-dispatch/value semantics and bs()V control gate/target scan against the original full descriptors.",
+  "source_baseline": {
+    "commit": "b55ea5da771bfbe37796d52b8437282b365d8881",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+    "baseline_git_blob": "a0ecabe492cafc01fc92882d4144ce04459d3ec1",
+    "source_sha256_at_final_build": "7dde59201a836a1c8523fbef454ed2d78cf29bd03c96b54ea5e4bdd2dd37e467",
+    "source_git_blob_after": "b784ab54196b2b6cbcde465596455c18e8e9d996"
+  },
+  "original_reference": {
+    "archive_sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner": "me.octo.client.IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll",
+    "owner_class_sha256": "38ca55b2830fbd0e860ed91f52476bedc336a6dfb8362c9dfea95ab05139f99e",
+    "full_javap_command": "javap -p -c -s -v -classpath <original archive> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "f08513542e97cbd6a885b1cd18f0188e6920ba66cc208e9f826f351a4522ad0a"
+  },
+  "compiled_reference": {
+    "source_compiled_owner_class_sha256": "279e43901fb6e4a629d979e447834db0c7f6ccb3170b52cdf4eccb3056e5e0bd",
+    "full_javap_command": "javap -p -c -s -v -classpath <compiled classes and dependency JAR> <owner>",
+    "full_javap_exit_code": 0,
+    "full_javap_sha256_local_only": "0eb628c282e69748ad8bd9aea494a537efc987adc4f0c47435cf3a972145ab28"
+  },
+  "methods": {
+    "aC": {
+      "descriptor": "()V",
+      "original_instruction_count": 772,
+      "original_instruction_stream_sha256": "f28bd83283cf95b5128fa5feafb4064944c256c480b13e4f890a988e59fdfd3d",
+      "compiled_instruction_stream_sha256": "62d4a205a3df175298b60661d40c885c2c61c4855ea6a94fe3be750d3e307da8",
+      "original_exception_entries": 89,
+      "compiled_exception_entries": 15,
+      "confirmed_restoration": [
+        "Both Kotlin enum switch-map array reads and their mapped case labels are restored; direct raw-ordinal switching is removed.",
+        "Number.intValue() value flow is restored.",
+        "Original field-write sequence and all non-handler business/member references match."
+      ]
+    },
+    "bs": {
+      "descriptor": "()V",
+      "original_instruction_count": 866,
+      "original_instruction_stream_sha256": "d0658452b0f1a780ea126c7aa1457f6b5f76e7951085ca9cd3da794b57ea93c0",
+      "compiled_instruction_stream_sha256": "a0d8107bd8974a2f18e8b0c16850217f1405d79b3b84206447b98a8865f8acfc",
+      "original_exception_entries": 43,
+      "compiled_exception_entries": 4,
+      "confirmed_restoration": [
+        "Control value is read before initial-state gating and the original offset-61 return is retained.",
+        "All 40 local-1 conditional edges are resolved against d()I return domain {0,109}.",
+        "Field-access multisets and all non-handler member references match; required Iterable/Collection invocation receiver types are explicit."
+      ]
+    }
+  },
+  "exception_semantics": {
+    "caught_type_in_all_original_and_compiled_entries": "java/util/NoSuchElementException",
+    "identity_adapter_descriptor": "(Ljava/util/NoSuchElementException;)Ljava/util/NoSuchElementException;",
+    "identity_adapter_body": "aload_0; areturn",
+    "all_original_and_compiled_targets_invoke_identity_then_athrow": true,
+    "interpretation": "The table layout/counts differ, but each handler is an identity pass-through with no suppressed or transformed throwable."
+  },
+  "build": {
+    "command": "Temurin-25 java -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build --rerun-tasks --no-daemon --console=plain",
+    "working_directory": "polinex-src",
+    "started_utc": "2026-11-20T00:55:00.748Z",
+    "finished_utc": "2026-11-20T00:56:00.495Z",
+    "duration_ms": 59740,
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 existing Unsafe warnings; tests NO-SOURCE",
+    "built_jar_sha256_not_published": "ff0da9a398795c7462d63d12df8a52df7dcb09b700b28e63e7e0e8a62e2232fd",
+    "raw_build_log_local_only": true
+  },
+  "validation": {
+    "full_descriptor_static_review": "PASS for branch, mapped enum dispatch, call/value flow, field writes, target-scan control gate, and identity exception pass-through",
+    "full_tree_build": "PASS",
+    "minecraft_client": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "commission_normal_user_path": "NOT RUN",
+    "compatible_server": "NOT RUN",
+    "module_runtime_equivalence": "OPEN"
+  },
+  "publication_exclusions": [
+    "Original protected archive or class files",
+    "Full javap dumps",
+    "Raw build log",
+    "Built JAR, compiled classes, and Gradle outputs"
+  ]
+}

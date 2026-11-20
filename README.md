@@ -27,6 +27,8 @@ R1986 对照完整原版 descriptor 恢复 Pathfinder bounded-step helper `a(DDZ
 
 R1987 按完整原版 descriptor 恢复 Pathfinder trajectory-check helper `a(Vec3,Vec3,Vec3,IZDZZD):boolean` 的状态构造、包含上限的步进循环、guard/`k()`/碰撞与垂直阈值分支；并修复真实路线键调用者 `a(List,int)` 调用到返回 null 的泛型 Object 占位重载，恢复 typed default bridge 和 mask 508。Temurin JDK 25 全树构建 exit 0（18 条既有警告，测试 `NO-SOURCE`）。源码、证据和双语 README 已阶段性同步到两个仓库，所列共享文件 blobs 与远端 refs 已核验。没有离线有效世界探针、客户端、正常寻路入口或停止/缓存生命周期验收，不宣称 Pathfinder 闭环或运行时等价。详见 [R1987 静态复核](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1987.json)。
 
+R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 与 `bs()V`：恢复 Kotlin enum switch-map 分派及 `Number.intValue()` 数据流，保留 `d()I` 控制值为 109 时的原版早退/状态清理顺序，并核对目标扫描分支、字段写入和异常 identity pass-through。Temurin JDK 25 全树构建 exit 0（18 条既有 `Unsafe` 警告，测试 `NO-SOURCE`）。异常表布局仍与 Kotlin 原始字节码不同，但所有 `NoSuchElementException` handler 均只原样重抛；未做客户端、有效世界、Commission 正常用户路径或兼容服务器验收，不宣称宏功能等价。详见 [R1988 静态复核](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json)。
+
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。
 - **R1956 碰撞 gate 静态复核**：确认原版 `$llII…` 与当前 `$PXEvMid` 是同一状态持有者的源码重命名；getter、setter、初始化及 `a(BlockPos, ClientLevel): boolean` 的分支语义未发现确认差异。有效世界碰撞仍未验收。
@@ -66,6 +68,7 @@ R1987 按完整原版 descriptor 恢复 Pathfinder trajectory-check helper `a(Ve
 - [R1984 Pathfinder `h()` gate-null 输入选择静态复核及全树构建](.analysis/evidence/mining/r1984-pathfinder-forward-input-gate-null/manifest.json)
 - [R1985 Pathfinder 方向轴与步进 gate 静态复核及全树构建](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)
 - [R1986 Pathfinder bounded-step 默认桥调用静态复核及全树构建](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)
+- [R1988 Glacite Commission Macro tick/target-scan 静态复核及全树构建](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json)
 - [R1986 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)
 - [R1987 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1987.json)
 - [R1985 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)
