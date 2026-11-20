@@ -7,7 +7,9 @@
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
 </p>
 
-## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-19）
+## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-20）
+
+R1995 复核 Pathfinder 候选评分 `b(BlockPos):BlockPos`，依据完整原版 descriptor 恢复四项契约：全局 gate 为空时先返回；非空目标优先转换为候选评分起点，转换失败或目标为空时才回退玩家位置；范围按独立的 `distance < min || distance > max` 拒绝条件处理（边界包含、NaN 行为与原版一致）；碰撞默认桥 mask=368 的 double 参数根据原版 `c()I` 状态在 0.0/1.0 间选择，不再假设默认分支总会生效。完整原版/编译方法分别为 443/278 条指令，默认桥完整 descriptor 已复核；21 条静态及离线断言通过，Temurin JDK 25 全树构建 exit 0。没有启动客户端或运行有效世界：正常 Pathfinder 路线、碰撞执行、停止/取消/缓存生命周期，以及 Powder Macro 与 Glacite Commission Macro 入口仍未验收；本切片不宣称运行时等价或功能闭环。详见 [R1995 静态复核](.analysis/evidence/mining/r1995-pathfinder-route-start-scoring/static-review.txt)、[离线断言](.analysis/evidence/mining/r1995-pathfinder-route-start-scoring/offline-assertions.json)、[构建摘要](.analysis/evidence/mining/r1995-pathfinder-route-start-scoring/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1995-pathfinder-route-start-scoring/manifest.json)，双仓提交核验见[同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1995.json)。
 
 R1994 恢复 Pathfinder 预计算路线入口 `a(Object, List, Vec3, boolean, boolean):boolean` 的原版契约：在任何控制器状态写入前检查 `prefetchedPath` 非空；仅当捕获的全局 gate 非空时读取玩家位置、解析目标类型及执行对应的目标/路线验证；保留 gate 为空时原版不寻常的 `Entity`→`BlockPos` cast 分支、`Vec3.ZERO` 回退和不同返回路径。完整 descriptor 对照中，28 个有序字段引用、排除 11 个 identity throwable relay 后的 17 个业务调用及 3 个行为字符串按序一致；原版两处 monitor cleanup 在编译版保留。Temurin JDK 25 全树 Gradle 构建 exit 0，4 个 actionable tasks；测试为 `NO-SOURCE`，有 18 条既有 `Unsafe` 警告及既有 deprecation/unchecked 提示。静态调用者 `bG()` 的 bridge 实参生产路径已核对，但这不代表运行时调用。未启动客户端、未使用有效世界/玩家、未走预计算路线或停止/缓存生命周期，也未测试兼容服务器；不宣称运行时等价或 Pathfinder 闭环。详见 [R1994 静态复核](.analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1994-pathfinder-prefetched-route-contract/manifest.json)及[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1994.json)。
 
