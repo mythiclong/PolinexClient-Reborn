@@ -69,6 +69,7 @@ R1988 restores Glacite Commission Macro `aC()V` and `bs()V` against their comple
 - [R1985 Pathfinder movement-axis and step-gate static review and full-tree build](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)
 - [R1986 Pathfinder bounded-step default-bridge call review and full-tree build](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)
 - [R1988 Glacite Commission Macro tick/target-scan review and full-tree build](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json)
+- [R1988 dual-repository sync record](.analysis/reports/SYNC-20261120-COMMISSION-R1988.json)
 - [R1986 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)
 - [R1987 dual-repository sync record](.analysis/reports/SYNC-20261120-PATHFINDER-R1987.json)
 - [R1985 dual-repository sync record](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)

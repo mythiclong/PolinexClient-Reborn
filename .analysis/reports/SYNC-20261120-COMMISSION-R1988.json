@@ -1,0 +1,76 @@
+{
+  "sync_id": "SYNC-20261120-COMMISSION-R1988",
+  "scope": "Publish the R1988 Glacite Commission Macro source slice, bilingual progress notes, and minimal evidence to both repositories.",
+  "source_baseline": {
+    "commit": "b55ea5da771bfbe37796d52b8437282b365d8881",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "source_path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+    "source_sha256_at_build": "7dde59201a836a1c8523fbef454ed2d78cf29bd03c96b54ea5e4bdd2dd37e467",
+    "source_git_blob": "b784ab54196b2b6cbcde465596455c18e8e9d996"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "b55ea5da771bfbe37796d52b8437282b365d8881",
+      "content_commit": "4c90664d3400f16f8c63a3b326a6d0a3e67f6608"
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "2e79f45d6862b2859da51a240b7789f16574f961",
+      "content_commit": "d17a6ac9e6b1c3dcbcae343c7f0286e3bb08ad37"
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "279d778ba6591f4997061c07011aea16d37926a1"
+    },
+    {
+      "path": "README.md",
+      "blob": "53f758086ddde82bf58cac9d3f1dcea4fd3f260a"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "a1cd1ccd32e54f39782231329badb6fdc1f32ac3"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/IIIlllIlIIlIlllIIIIIIIllIIlllIIlllIIIlIlIlIIlIllIIIlIlIIllIlIIllIIIllIIIIlIllIIIlIlll.java",
+      "blob": "b784ab54196b2b6cbcde465596455c18e8e9d996",
+      "sha256": "7dde59201a836a1c8523fbef454ed2d78cf29bd03c96b54ea5e4bdd2dd37e467"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json",
+      "blob": "cdc4486aba35bf2428079cd48b0d5cb6660ae5d1"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/static-review.txt",
+      "blob": "359ba924fca7b69fab0b5202dba2870132e7d76d"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/build-summary.txt",
+      "blob": "bc82d4794b5e3eb833e8c2572176fd04c25b54e8"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1988-glacite-commission-tick-scan/build-run.json",
+      "blob": "4f0facae00c59cdc36da8f58f67231f7d9cc2ed5"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T01:02:05Z",
+    "method": "Compared live GitHub refs with both content commits and compared every listed shared path by Git blob across the two repository histories.",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "6aaaaaec8d8cf38f92127887d73f80451eb87cab",
+    "public_tree_at_content_commit": "507b06c064b21cd7de733c5d2e364e87c3709d5a",
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "Static restoration covers aC()V and bs()V, followed by a Temurin JDK 25 full-tree build only.",
+    "No Minecraft client, valid world, normal Commission flow, or compatible-server run was performed.",
+    "Glacite Commission Macro runtime equivalence and full feature closure remain open.",
+    "Original protected archive/classes, full javap dumps, raw local logs, compiled classes, and the built JAR were not published."
+  ]
+}

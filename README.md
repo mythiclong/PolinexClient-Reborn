@@ -69,6 +69,7 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 - [R1985 Pathfinder 方向轴与步进 gate 静态复核及全树构建](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)
 - [R1986 Pathfinder bounded-step 默认桥调用静态复核及全树构建](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)
 - [R1988 Glacite Commission Macro tick/target-scan 静态复核及全树构建](.analysis/evidence/mining/r1988-glacite-commission-tick-scan/manifest.json)
+- [R1988 双仓同步记录](.analysis/reports/SYNC-20261120-COMMISSION-R1988.json)
 - [R1986 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)
 - [R1987 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1987.json)
 - [R1985 双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)
