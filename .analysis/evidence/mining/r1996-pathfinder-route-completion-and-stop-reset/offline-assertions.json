@@ -1,0 +1,426 @@
+{
+  "experiment_id": "R1996-pathfinder-route-completion-and-stop-reset",
+  "generated_utc": "2026-11-20T07:45:08.728963Z",
+  "source": {
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "git_blob": "07d6d10931b76b2f2b6cf8a91dc4d3fe6559e550",
+    "sha256": "92ce44439be95a75c1b0ebb624bffbc231d4beeb1dac7db16b54014541cd4cee"
+  },
+  "status": "PASS",
+  "assertion_count": 52,
+  "scope": "Source-contract assertions and modeled gate/cursor/stop-flag truth tables; not a live client or world test.",
+  "checks": [
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": -1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": -1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 0,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 0,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": -1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": -1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 0,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 0,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 0,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": -1,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": -1,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 1,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 1,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 2,
+      "path_size": 1,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 2,
+      "path_size": 1,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": -1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": -1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 2,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 2,
+      "path_size": 2,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 3,
+      "path_size": 2,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 3,
+      "path_size": 2,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": -1,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": -1,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 0,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 0,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 1,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 1,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 4,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 4,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 5,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 5,
+      "path_size": 5,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": false,
+      "route_cursor": 6,
+      "path_size": 5,
+      "expected_complete": false,
+      "actual_complete": false
+    },
+    {
+      "contract": "completion_gate_and_route_cursor",
+      "gate_present": true,
+      "route_cursor": 6,
+      "path_size": 5,
+      "expected_complete": true,
+      "actual_complete": true
+    },
+    {
+      "contract": "stop_timer_reset_gate_and_flag",
+      "gate_present": false,
+      "requested_full_reset": false,
+      "first_three_reset": false,
+      "fourth_reset": true
+    },
+    {
+      "contract": "stop_timer_reset_gate_and_flag",
+      "gate_present": false,
+      "requested_full_reset": true,
+      "first_three_reset": false,
+      "fourth_reset": true
+    },
+    {
+      "contract": "stop_timer_reset_gate_and_flag",
+      "gate_present": true,
+      "requested_full_reset": false,
+      "first_three_reset": false,
+      "fourth_reset": true
+    },
+    {
+      "contract": "stop_timer_reset_gate_and_flag",
+      "gate_present": true,
+      "requested_full_reset": true,
+      "first_three_reset": true,
+      "fourth_reset": true
+    }
+  ]
+}

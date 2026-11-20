@@ -1,0 +1,17 @@
+R1996 full-tree build
+=====================
+
+Working directory: polinex-src
+Command: .\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks
+Runtime: Eclipse Temurin 25.0.4.1+1-LTS
+Gradle Wrapper: 9.7.1
+Fabric Loom: 1.18.0-alpha.19
+Started UTC: 2026-11-20T07:41:24.6949249Z
+Ended UTC: 2026-11-20T07:42:33.2458556Z
+Exit code: 0
+Result: BUILD SUCCESSFUL; 4 actionable tasks executed.
+Tests: compileTestJava/test are NO-SOURCE.
+Warnings: 18 existing sun.misc.Unsafe warnings, plus existing deprecation/unchecked notices.
+Built JAR SHA-256: 123cf8674ffa8098f272d2fabe55cf7f377c90a3d383c85eccadb7097918cb8b
+
+This verifies source compilation/package assembly only. It is not a client launch, valid-world route, normal module entry, or behavior-equivalence test.

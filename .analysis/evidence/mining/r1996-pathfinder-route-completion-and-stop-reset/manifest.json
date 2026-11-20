@@ -1,0 +1,115 @@
+{
+  "experiment_id": "R1996-pathfinder-route-completion-and-stop-reset",
+  "generated_utc": "2026-11-20T07:45:08.728963Z",
+  "scope": "Restore the bytecode-confirmed active-route completion predicate and unconditional terminal-timer reset on the Pathfinder stop path.",
+  "source": {
+    "integration_baseline_commit": "b0fd057c6c07d27b985584c7ef19a41891528699",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "path": "polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java",
+    "baseline_git_blob": "efd51a79e1802a46260c8540a637b6fd0babf98f",
+    "baseline_sha256": "17cd21d24cb4bffcb5563e793716d86c07e7947fa2131061ef30c1d9c4c3db8e",
+    "final_git_blob": "07d6d10931b76b2f2b6cf8a91dc4d3fe6559e550",
+    "final_sha256": "92ce44439be95a75c1b0ebb624bffbc231d4beeb1dac7db16b54014541cd4cee",
+    "changed_production_files": 1
+  },
+  "original_reference_local_only": {
+    "archive_sha256": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "owner_class_sha256": "1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88",
+    "full_javap_dump_sha256_local_only": "fde699fd0f379f10ca376567b7d1b665c0e50d151b6028dc4e913921306d0391"
+  },
+  "compiled_reference": {
+    "owner_class_sha256": "2b446fab8877fa8f4532449065e4c6d279608f2dda2677b3da45734726ad8110",
+    "full_javap_dump_sha256_local_only": "36c1ea278046f4d59409e7d78cf9eb35e350362fda2655a40a63fb89a69597e7",
+    "built_jar_sha256": "123cf8674ffa8098f272d2fabe55cf7f377c90a3d383c85eccadb7097918cb8b"
+  },
+  "methods": [
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "g",
+      "descriptor": "(Ljava/util/List;)Z",
+      "original_instructions": 19,
+      "compiled_instructions": 13,
+      "restored_contract": "A null global gate returns false; otherwise completion compares the active route cursor to List.size(), not the unrelated look-ahead cursor memo."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "h",
+      "descriptor": "(Ljava/util/List;)Z",
+      "original_instructions": 47,
+      "compiled_instructions": 38,
+      "reviewed_contract": "Increment active route cursor, gate completion check, stop and return before node access when complete."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "d",
+      "descriptor": "(Z)V",
+      "original_instructions": 76,
+      "compiled_instructions": 70,
+      "restored_contract": "First three timer resets require non-null global gate and true argument; fourth timer reset always occurs after the branch."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "v",
+      "descriptor": "()V",
+      "original_instructions": 25,
+      "compiled_instructions": 25,
+      "reviewed_contract": "Stop flags/generation, d(false), active route/target clearing, then steering/input cleanup."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "t",
+      "descriptor": "()V",
+      "original_instructions": 7,
+      "compiled_instructions": 7,
+      "reviewed_contract": "Clear active target and route list."
+    },
+    {
+      "owner": "me.octo.client.IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll",
+      "name": "s",
+      "descriptor": "()V",
+      "original_instructions": 5,
+      "compiled_instructions": 5,
+      "reviewed_contract": "Reset route-steering helper, then delegate player input release."
+    }
+  ],
+  "offline_assertions": {
+    "file": ".analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/offline-assertions.json",
+    "script": ".analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/verify_offline_contract.py",
+    "command": "python -B .analysis/evidence/mining/r1996-pathfinder-route-completion-and-stop-reset/verify_offline_contract.py",
+    "status": "PASS",
+    "assertion_count": 52,
+    "scope": "Source-contract checks plus modeled route-cursor/gate and stop-reset truth tables; no live invocation."
+  },
+  "build": {
+    "command": ".\\gradlew.bat '-Dorg.gradle.jvmargs=-Xms128m -Xmx1536m -Xss512k -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -XX:ReservedCodeCacheSize=96m -XX:TieredStopAtLevel=1 -XX:CICompilerCount=1' --max-workers=1 --no-parallel build --no-daemon --console=plain --rerun-tasks",
+    "working_directory": "polinex-src",
+    "runtime": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "fabric_loom": "1.18.0-alpha.19",
+    "started_utc": "2026-11-20T07:41:24.6949249Z",
+    "ended_utc": "2026-11-20T07:42:33.2458556Z",
+    "exit_code": 0,
+    "result": "BUILD SUCCESSFUL; four actionable tasks executed; tests NO-SOURCE; 18 existing Unsafe warnings plus existing deprecation/unchecked notices."
+  },
+  "acceptance": {
+    "static_descriptor_review": true,
+    "offline_source_contract_assertions": true,
+    "full_tree_build": true,
+    "client_started": false,
+    "valid_player_world_used": false,
+    "normal_pathfinder_route_exercised": false,
+    "stop_cancel_flow_exercised": false,
+    "disk_cache_read_or_invalidation_exercised": false,
+    "powder_macro_entry_exercised": false,
+    "commission_macro_entry_exercised": false,
+    "compatible_server_tested": false,
+    "status": "Static source restoration, offline checks, and full-tree build only. Live behavior, normal entries, disk-cache lifecycle, and module closure remain open."
+  },
+  "publication_exclusions": [
+    "Original protected archive and classes",
+    "Full original/compiled javap dumps",
+    "Built JAR/classes",
+    "Raw build log",
+    "Absolute machine paths"
+  ]
+}

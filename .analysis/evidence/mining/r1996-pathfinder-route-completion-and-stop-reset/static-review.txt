@@ -1,0 +1,22 @@
+# R1996 — Pathfinder completion predicate and stop-state reset
+
+## Scope and source baseline
+
+- Integration baseline: `b0fd057c6c07d27b985584c7ef19a41891528699` (`codex/bootstrap-eclientinit-2026-11-15`).
+- Modified production source: `polinex-src/src/main/java/me/octo/client/IIIIIllIIlIIlllIIllllllIllIlIlIllllllllIIIIlIlIIIIlIlIlIlIllIlIIIIIIlllIIIIllIlllIlll.java`.
+- Final source Git blob: `07d6d10931b76b2f2b6cf8a91dc4d3fe6559e550`; content SHA-256: `92ce44439be95a75c1b0ebb624bffbc231d4beeb1dac7db16b54014541cd4cee`.
+- Oracle was the local protected archive, owner class SHA-256 `1c09c86c2495899d5c66da124f441d9e7bce61cebf71513733a0248a50a29f88`. The archive, class, and complete `javap` dumps are intentionally not published.
+
+## Complete-descriptor findings
+
+1. **`g(Ljava/util/List;)Z` — route completion.** The original first reads `global.l():[I`, reads the active route cursor field `IIIIlIIII...`, then returns false for a null gate and otherwise returns `cursor >= list.size()`. The previous managed source instead read `IIllll...`, a separate memoized cursor used by the look-ahead/route-position cache, and returned that memo's non-zero state when the gate was null. The final source now uses the original gate and active route cursor. Its direct caller `h(Ljava/util/List;)Z` increments the active cursor before checking completion; when the gate is present and the predicate is true it calls `v()V` and returns false before reading a node. The remaining node and bridge branches are retained.
+2. **`d(Z)V` — stop/reset timers.** The original clears active request/target/repath state and four timer helpers. Only the first three timer resets are conditional on both a non-null `global.l():[I` result and the boolean argument; the fourth timer reset is always reached. The previous source put the fourth reset only in the gate-null or `argument == true` branches, omitting it when the gate was present and the argument false. The final source conditions the first three calls and performs the fourth reset afterward unconditionally. `v()V` calls `d(false)`, so this omission affected the ordinary stop path under a non-null gate.
+3. **Stop chain.** Full descriptors for `v()V`, `t()V`, and `s()V` were reviewed with the caller. `v()` sets stop/running flags, advances the generation field, then calls `d(false)`, clears the active target and route through `t()`, and invokes `s()`. `t()` nulls the target and active route. `s()` resets the route-steering helper and delegates held-input release to the player helper. This does **not** establish disk path-cache invalidation or runtime cleanup.
+
+The original/final compiled instruction counts are: `g(List)` 19/13, `h(List)` 47/38, `d(Z)` 76/70, `v()` 25/25, `s()` 5/5, and `t()` 7/7. Differences in instruction count are compiler/control-flow lowering; the reviewed branch outcomes, state fields, and ordered helper calls are recorded above. Complete original and final compiled descriptor dumps were hashed locally (full-dump SHA-256 `fde699fd0f379f10ca376567b7d1b665c0e50d151b6028dc4e913921306d0391` and `36c1ea278046f4d59409e7d78cf9eb35e350362fda2655a40a63fb89a69597e7`).
+
+## Verification limits
+
+- `verify_offline_contract.py`: 52/52 source-contract and modeled gate/cursor/stop-flag assertions passed. This is not an invocation of the mod's private methods.
+- Temurin JDK 25 full-tree Gradle build: exit 0; tests are `NO-SOURCE`.
+- No client, player, valid world, normal Pathfinder route, collision traversal, stop/cancel user flow, disk-cache read/invalidation, Powder Macro entry, Commission Macro entry, or server was exercised. Runtime equivalence and Pathfinder/module closure are not claimed.
