@@ -1,0 +1,29 @@
+R1987 — Pathfinder trajectory-check helper restoration
+
+Source baseline: `c744fcc55e1c558d3b3b7bfd2bca1226c2618a1c` (`codex/bootstrap-eclientinit-2026-11-15`). The two modified worktree source files were read after the R1987 edits; no other source or evidence files were modified before this review.
+
+## Complete descriptors and original basis
+
+- Restored owner: `me.octo.client.utils.lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI`
+- Restored method: `a:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZD)Z`
+- Real caller: `me.octo.client.utils.player.pathfinder.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.a:(Ljava/util/List;I)Ljava/util/ArrayList;`
+- Default bridge: `(Lme/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZDILjava/lang/Object;)Z`
+- Local original class-reference archive SHA-256: `2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230`; the archive and full dumps are not published.
+- The original complete target method dump contains 144 lines and 11 `NoWhenBranchMatchedException` handlers (method-block SHA-256 `d73b5e92e3719c3aaa3972fce69b83a3a3db9f18d8c47996e94d67ed0334e63b`). The source previously compiled this target as an immediate `IllegalStateException("Decompilation failed")`.
+
+## Restored behavior and call contract
+
+The source now follows the original order: null-check `from`, null-check `to`, read the integer branch guard, then null-check `velocity`; derive movement angles from `a(from,to)`; create the Pathfinder state from `from`, `velocity`, the derived angles, and `true`; then iterate with a zero-based counter and an inclusive `counter <= param4` condition.
+
+When the guard is nonzero, each iteration calls the Pathfinder singleton's exact `a(1.0, 0.0, state, param9, param10)` target. A null state continues the loop. For a non-null state, the original branch returns false when `!param5 && singleton.k()`; then it checks `this.a(to, state.position, 0.5)`. With a zero guard that collision boolean is returned directly. With a nonzero guard, a collision returns true when `abs(state.y - to.y) < param6` or `param8`; otherwise iteration continues. Exhaustion returns false.
+
+The route-key caller now invokes the typed default bridge rather than the generic `a(Object,...)` placeholder. Its receiver, two required vectors, placeholder/default values, mask, and marker are in original order: `(manager, from, pathNode, null, 0, false, 0.0, false, false, 0.0, 508, null)`. Mask `508` restores `Vec3.ZERO`, `100`, `false`, `1.0`, `false`, `false`, and `0.0` for the seven defaulted parameters. Post-build `javap` confirms the compiled call target is the exact typed bridge descriptor above, not the generic overload.
+
+The original 11 handlers only route `NoWhenBranchMatchedException` through the identity helper. Its complete original and compiled descriptor `(Lkotlin/NoWhenBranchMatchedException;)Lkotlin/NoWhenBranchMatchedException;` is `aload_0; areturn`; the Java implementation does not catch or replace exceptions. Original/final compiled method-block SHA-256 values are `d73b5e92e3719c3aaa3972fce69b83a3a3db9f18d8c47996e94d67ed0334e63b` and `6d8a736ae438476a77ff2091fd637f80a43d3dfcf9ef61459a9210cac349b3de`. Caller block hashes are `cabf5004bdc31a421f10e5d0714de945c788658e3fe6dd71da8faa9f6d2e7ea8` (original) and `40d0759d2aad1db6502e5a2d32bed86d40b60612a829995e871e5505af1872fe` (compiled).
+
+## Validation boundary
+
+- Static descriptor/control-flow review: **PASS** for this helper and its direct typed-bridge call.
+- Temurin JDK 25 full-tree Gradle build from the final source: **PASS**, exit 0; details and artifact hash are in `build-summary.txt`.
+- Offline differential: **NOT RUN**. The helper advances Pathfinder state and checks world-dependent collision behavior; null/plain-object substitutes would be invalid.
+- Client, valid player/world, normal route/trajectory entry, stop/cancel/cache lifecycle: **NOT RUN**. No feature-equivalence claim is made.

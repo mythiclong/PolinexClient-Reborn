@@ -1,13 +1,13 @@
 # Polinex Source Restoration
 
-这是 Minecraft 26.1.2 Fabric 模组的托管源码重建工程。目标是恢复原有功能，让开发者能够自行构建、修改和运行。项目仍在进行中；源码库存、编译成功和静态匹配都不等于功能已经完整或行为等价。
+这是 Minecraft 26.1.2 Fabric 模组的托管源码重建工程。目标是恢复原有功能，让开发者能够自行构建、修改和运行。当前阶段集中恢复 Pathfinder、Powder Macro、Glacite Commission Macro 及其必需依赖。项目仍在进行中；源码库存、编译成功和静态匹配都不等于功能已经完整或行为等价。
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/语言-简体中文-lightgrey?style=for-the-badge" alt="简体中文"></a>
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
 </p>
 
-## 当前进度（2026-11-19 UTC；芝加哥当地日期为 2026-11-19）
+## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-19）
 
 R1979 完成 Pathfinder 碰撞位移路线包装器 `a(ArrayList<Vec3>, Vec3, Vec3):ArrayList<Vec3>` 的完整原版 descriptor 审计（offset 0–173、4 个异常表项），将迭代器与输出集合的真实调用 receiver 对齐到原版 `Iterable.iterator()` / `Collection.add()`，保留 gate、空列表、碰撞偏移为空时返回原列表及成功时新建列表的顺序。最终编译 owner 的 9 个 invoke 目标和 13 个规范化引用与原版一致；唯一已记录差异是 Java 编译器对同一 `private final g(...)` 调用使用 `invokevirtual` 而非 Kotlin 的 `invokespecial`。Temurin JDK 25 全树 `build --rerun-tasks` exit 0。未做有效世界、正常游戏路径或兼容服务器验收，不宣称运行时等价。详见 [R1979 证据](.analysis/evidence/mining/r1979-pathfinder-collision-route-wrapper/manifest.json)。
 
@@ -24,6 +24,8 @@ R1984 对照 Pathfinder `h():double` 的完整原版 descriptor 与输入调用�
 R1985 完成 Pathfinder 方向轴与步进 helper 的 gate 分支静态恢复：修正 `a([Z)D`、`b([Z)D`、`a(ID)Z`、`a(DDID)Integer`；并恢复有符号 `newY - oldY > 0.05` 判断及 gate-null 时不返回步进索引的路径。完整核对了候选方向、直接 caller 与默认参数桥。Temurin JDK 25 全树构建 exit 0（18 条警告，测试 `NO-SOURCE`）。未做直接运行探针、客户端、有效世界/正常寻路或兼容服务器验收，不宣称运行时等价。详见 [R1985 证据](.analysis/evidence/mining/r1985-pathfinder-axis-and-step-gates/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1985.json)。
 
 R1986 对照完整原版 descriptor 恢复 Pathfinder bounded-step helper `a(DDZI)Integer` 的调用契约：将 `param5 && index != 1` 改为原版的 `param5 && index == 1`，并改回调用原版默认参数桥，保留 singleton 读取顺序、显式 `true`、mask 32 与 `0.0` 默认值。Temurin JDK 25 全树构建 exit 0（18 条警告，测试 `NO-SOURCE`）。源码、证据和双语 README 已同步到两个仓库并核对所列共享文件 blobs；两个仓库的完整 Git tree 不同。尚未运行客户端、有效玩家/世界、正常寻路或兼容服务器；不宣称运行时等价。详见 [R1986 静态复核](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1986-pathfinder-step-default-bridge/manifest.json)和[双仓同步记录](.analysis/reports/SYNC-20261119-PATHFINDER-R1986.json)。
+
+R1987 按完整原版 descriptor 恢复 Pathfinder trajectory-check helper `a(Vec3,Vec3,Vec3,IZDZZD):boolean` 的状态构造、包含上限的步进循环、guard/`k()`/碰撞与垂直阈值分支；并修复真实路线键调用者 `a(List,int)` 调用到返回 null 的泛型 Object 占位重载，恢复 typed default bridge 和 mask 508。Temurin JDK 25 全树构建 exit 0（18 条既有警告，测试 `NO-SOURCE`）。没有离线有效世界探针、客户端、正常寻路入口或停止/缓存生命周期验收，不宣称 Pathfinder 闭环或运行时等价。详见 [R1987 静态复核](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/static-review.txt)、[构建摘要](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/build-summary.txt)和[机器记录](.analysis/evidence/mining/r1987-pathfinder-trajectory-helper/manifest.json)。
 
 - **A* 主搜索与候选节点**：R1947 按完整原版字节码恢复候选节点 gate、遍历及空值契约；R1948 修正节点分配顺序和 `Function2` 回调编译形式。
 - **路线与碰撞 helper**：R1955 修复路线转换器两处 `0.5625`/NaN 分支，并恢复 `g(BlockPos)` 的 gate、调用顺序及 fallback；Temurin 25 全树 Gradle `build` 通过。

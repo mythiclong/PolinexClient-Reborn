@@ -1,0 +1,89 @@
+{
+  "experiment_id": "R1987-pathfinder-trajectory-helper",
+  "generated_utc": "2026-11-20T00:32:03Z",
+  "scope": "Restore the Pathfinder trajectory-check helper and its route-key caller's Kotlin default-argument bridge invocation.",
+  "source_baseline": {
+    "commit": "c744fcc55e1c558d3b3b7bfd2bca1226c2618a1c",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "private_remote_ref_before": "refs/heads/codex/handoff-progress-2026-11-15",
+    "public_remote_ref_before": "PolinexClient-Reborn/main@ff8af33b16f651b5f96446cc64792f3bce396195",
+    "private_remote_ref_before_verified": true,
+    "public_remote_ref_before_verified": true
+  },
+  "original_reference": {
+    "class_reference_archive_sha256_local_only": "2b32bb78447d3a5fd35a6d5ec3f8ea340d8ac489a232ac5b05d38fdf351f1230",
+    "full_javap_dumps_published": false
+  },
+  "modified_sources": [
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.java",
+      "baseline_git_blob": "afaa29527bd74ee739d310a53fb37110bdf13434",
+      "final_git_blob_at_review": "9609913250568bc815e38fc559fe87213e727ca8",
+      "final_worktree_sha256": "63048d0a74b7d298311599b66b5df75e81f04eb7af162a0bb800f17141f08361",
+      "compiled_owner_class_sha256": "cd1157b0c068474b3137070fe60e79ad89b6d639670f477c716d15b9ffa1ba34",
+      "method": {
+        "owner": "me.octo.client.utils.lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI",
+        "name": "a",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;IZDZZD)Z",
+        "original_method_dump_sha256": "d73b5e92e3719c3aaa3972fce69b83a3a3db9f18d8c47996e94d67ed0334e63b",
+        "compiled_method_dump_sha256": "6d8a736ae438476a77ff2091fd637f80a43d3dfcf9ef61459a9210cac349b3de",
+        "original_exception_handlers": 11,
+        "compiled_exception_handlers": 0,
+        "identity_exception_helper_descriptor": "(Lkotlin/NoWhenBranchMatchedException;)Lkotlin/NoWhenBranchMatchedException;",
+        "identity_exception_helper_original_and_compiled": "aload_0; areturn"
+      }
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java",
+      "baseline_git_blob": "b3b06af3bb3a0f09f868dc801fb6701610c74ffe",
+      "final_git_blob_at_review": "c4307ffef5e7052a6e2ceba5ea85c24c0c0569a9",
+      "final_worktree_sha256": "bb26e29a3b918112d82a9b8cd94045f03452c1c2d7aa23c408854a9f4be85d98",
+      "compiled_owner_class_sha256": "051b98b7355485cac92ddbaa33888fdda0422a8a6146b5fe994bd29f0d1167e1",
+      "method": {
+        "owner": "me.octo.client.utils.player.pathfinder.IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll",
+        "name": "a",
+        "descriptor": "(Ljava/util/List;I)Ljava/util/ArrayList;",
+        "original_method_dump_sha256": "cabf5004bdc31a421f10e5d0714de945c788658e3fe6dd71da8faa9f6d2e7ea8",
+        "compiled_method_dump_sha256": "40d0759d2aad1db6502e5a2d32bed86d40b60612a829995e871e5505af1872fe",
+        "compiled_target_call": "typed static default bridge descriptor (Lhelper;LVec3;LVec3;LVec3;IZDZZDILjava/lang/Object;)Z",
+        "mask": 508,
+        "marker": null,
+        "generic_object_overload_targeted": false
+      }
+    }
+  ],
+  "validation": {
+    "complete_descriptor_static_review": "PASS",
+    "post_build_javap_target_and_callsite_review": "PASS",
+    "build_command": "Temurin-25 java -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build --rerun-tasks --no-daemon --console=plain",
+    "build_working_directory": "polinex-src",
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "build_started_utc": "2026-11-20T00:29:01Z",
+    "build_finished_utc": "2026-11-20T00:32:03Z",
+    "build_exit_code": 0,
+    "build_result": "BUILD SUCCESSFUL; 4 actionable tasks executed; 18 existing Unsafe warnings",
+    "tests": "NO-SOURCE",
+    "built_jar_sha256_not_published": "d2ddc7489c811c1022cd770957f1053923a3d0322fb82346334fa77e43e8e70d",
+    "offline_behavior_probe": "NOT RUN; valid Pathfinder/player/world state required",
+    "minecraft_client": "NOT RUN",
+    "normal_user_path": "NOT RUN",
+    "valid_world": "NOT RUN",
+    "stop_cancel_cache_lifecycle": "NOT RUN",
+    "compatible_server": "NOT REQUIRED for this goal and NOT RUN"
+  },
+  "acceptance": {
+    "static_restoration_for_this_method_and_call_contract": "PASS",
+    "full_tree_reproducible_build_for_this_worktree_state": "PASS",
+    "pathfinder_module_source_closure": "OPEN",
+    "normal_path_and_valid_world_behavior": "OPEN",
+    "powder_macro": "OPEN",
+    "commission_macro": "OPEN"
+  },
+  "publication_exclusions": [
+    "Original JAR or protected class files",
+    "Full original/current javap dumps",
+    "Built JAR and Gradle outputs",
+    "Raw logs containing local paths or user state"
+  ]
+}

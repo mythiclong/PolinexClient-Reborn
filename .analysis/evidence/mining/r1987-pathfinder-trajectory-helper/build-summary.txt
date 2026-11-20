@@ -1,0 +1,16 @@
+R1987 full-tree build
+
+Command: `& 'C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin\java.exe' -classpath 'gradle\wrapper\gradle-wrapper.jar' org.gradle.wrapper.GradleWrapperMain build --rerun-tasks --no-daemon --console=plain`
+Working directory: `polinex-src`
+Runtime: Eclipse Temurin 25.0.4.1+1-LTS; Gradle wrapper 9.7.1
+Started (UTC): 2026-11-20 00:29:01 UTC
+Finished (UTC): 2026-11-20 00:32:03 UTC
+Exit code: 0
+Result: `BUILD SUCCESSFUL` (54 seconds reported by Gradle; 4 actionable tasks executed)
+Compiler warnings: 18 existing `sun.misc.Unsafe` warnings. Test tasks: `NO-SOURCE`.
+
+Built JAR SHA-256 (not published): `d2ddc7489c811c1022cd770957f1053923a3d0322fb82346334fa77e43e8e70d`
+Restored helper compiled-class SHA-256: `cd1157b0c068474b3137070fe60e79ad89b6d639670f477c716d15b9ffa1ba34`
+Route-key caller compiled-class SHA-256: `051b98b7355485cac92ddbaa33888fdda0422a8a6146b5fe994bd29f0d1167e1`
+
+This is a reproducible compilation/regression result for the source state recorded in the R1987 manifest. It is not a runtime or normal-user-path test.
