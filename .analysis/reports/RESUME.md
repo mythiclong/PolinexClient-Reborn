@@ -11,7 +11,7 @@
 ## 当前唯一切片：Pathfinder 路线生命周期
 
 - R1991 修复 `h(List):boolean` 的路线完成分支，以及 `g():void` 的 gate/null/异步待处理结果保护。完整 descriptor 对照、编译器差异与限制见 [静态复核](../evidence/mining/r1991-pathfinder-route-lifecycle/static-review.txt)、[机器证据](../evidence/mining/r1991-pathfinder-route-lifecycle/manifest.json)和[构建摘要](../evidence/mining/r1991-pathfinder-route-lifecycle/build-summary.txt)。
-- 构建通过不代表正常路线等价。下一步先确认是否已有 Minecraft 客户端在运行，再用单个受控有效世界验收正常入口、路线节点推进、碰撞、停止/取消和磁盘缓存生命周期；不要启动第二个游戏实例或干扰正在使用的客户端。
+- 构建通过不代表正常路线等价。已观察到现有 Minecraft 1.8.9 多人游戏进程；未置前窗口、未发送键鼠/游戏输入，也未启动第二客户端。它不是受控的 26.1.2 验收实例，因此 R1991 运行时仍未测试。继续静态源码还原；待获得不干扰现有游戏的受控客户端与有效世界后，验收正常入口、路线节点推进、碰撞、停止/取消和磁盘缓存生命周期。
 - 不重做已排除的全量渲染普查、坐标倍率盲扫、旧 ClickGUI 无目的点按或已确认的 R1989 差异。
 
 ## 有效证据与开放缺口
