@@ -1,0 +1,75 @@
+{
+  "sync_id": "SYNC-20261120-PATHFINDER-R1987",
+  "scope": "Publish the R1987 Pathfinder trajectory-check restoration, machine evidence, and bilingual progress documentation to both repositories.",
+  "source_baseline": {
+    "commit": "c744fcc55e1c558d3b3b7bfd2bca1226c2618a1c",
+    "branch": "codex/bootstrap-eclientinit-2026-11-15",
+    "source_content_commit": "3671f5e3b8079e5fd700e34a8c57c1b5293076eb"
+  },
+  "content_pushes": {
+    "private_openpolinex": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "ref": "refs/heads/codex/handoff-progress-2026-11-15",
+      "base_commit": "c744fcc55e1c558d3b3b7bfd2bca1226c2618a1c",
+      "content_commit": "3671f5e3b8079e5fd700e34a8c57c1b5293076eb"
+    },
+    "public_polinexclient_reborn": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "ref": "refs/heads/main",
+      "base_commit": "ff8af33b16f651b5f96446cc64792f3bce396195",
+      "content_commit": "52610dde1819b37781cfba2ab26079a621e1b7dd"
+    }
+  },
+  "shared_file_blobs_at_content_commits": [
+    {
+      "path": ".analysis/reports/RESUME.md",
+      "blob": "31249520af097e0c933f608fe1ce6a7564643b13"
+    },
+    {
+      "path": "README.md",
+      "blob": "6916d29731826afd8621442082a82b06103c816a"
+    },
+    {
+      "path": "README_EN.md",
+      "blob": "c377929600bed75c4e29c67ec61ef50c63712488"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/lIllIIlIlIlIlllllIlIIIIlIIlllllllIlllIllIIIlllIIlIIlIllllllllIlIlIlllIlIIIIllIlIIIllI.java",
+      "blob": "9609913250568bc815e38fc559fe87213e727ca8",
+      "sha256": "63048d0a74b7d298311599b66b5df75e81f04eb7af162a0bb800f17141f08361"
+    },
+    {
+      "path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IIlllIlIIIlllllllIIlllllIIIlIIllIIlllIlllllIIlIllllIIlllIIllllIIlIlIllllIllIlllllIlll.java",
+      "blob": "c4307ffef5e7052a6e2ceba5ea85c24c0c0569a9",
+      "sha256": "bb26e29a3b918112d82a9b8cd94045f03452c1c2d7aa23c408854a9f4be85d98"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1987-pathfinder-trajectory-helper/manifest.json",
+      "blob": "f33294472e0bc44e20898e725c9d9a4855fb9385"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1987-pathfinder-trajectory-helper/static-review.txt",
+      "blob": "cd3552e79f6f97f7c7b3c06f804958f5944b0898"
+    },
+    {
+      "path": ".analysis/evidence/mining/r1987-pathfinder-trajectory-helper/build-summary.txt",
+      "blob": "066b28f67e5ed249f5a362088c73e90c3fbadc97"
+    }
+  ],
+  "verification": {
+    "checked_utc": "2026-11-20T00:42:46Z",
+    "method": "Compared live GitHub refs with the content commits, then compared every listed shared path by Git blob across both repositories.",
+    "private_remote_ref_verified": true,
+    "public_remote_ref_verified": true,
+    "listed_shared_blobs_equal": true,
+    "private_tree_at_content_commit": "12d118d823231d3376fd911f8be542e49d3b70d7",
+    "public_tree_at_content_commit": "6eb48ba22803590bbf53dbc66a1afcef6933bbea",
+    "repository_trees_identical": false
+  },
+  "validation_limits": [
+    "R1987 has complete-descriptor static review, post-build call-target review, and a Temurin JDK 25 full-tree build only.",
+    "No valid-world differential, Minecraft client, normal pathfinding path, stop/cancel/cache-lifecycle test, or compatible-server validation was run.",
+    "This publication does not claim Pathfinder flow closure or runtime equivalence.",
+    "The original archive, protected binaries, full javap dumps, build outputs, and raw local-path logs were not published."
+  ]
+}
