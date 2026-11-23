@@ -1,0 +1,52 @@
+{
+  "sync_id": "SYNC-20261123-PATHFINDER-R2001",
+  "generated_utc": "2026-11-23T07:23:26Z",
+  "scope": "Publish the R2001 Pathfinder v2 cache-generation and sparse-merge source, bilingual progress, handoff, and minimal reproducibility evidence to private openpolinex and public PolinexClient-Reborn.",
+  "evidence_generation": {
+    "head": "438ebdba2cffd1e971c52c05b527bc8fbbd043d4",
+    "branch": "codex/pathfinder-cache-lifecycle",
+    "production_source_sha256": "987cfd06a75cf98473a381c306ffe20eecb43d5a1728efad980563bcb8dadfea"
+  },
+  "repositories": {
+    "private": {
+      "remote": "https://github.com/mythiclong/openpolinex.git",
+      "branch": "codex/handoff-progress-2026-11-15",
+      "content_commit": "c7ce9ce2264094d315524a13733d72277235c15b",
+      "verified_remote_head_after_content_push": "c7ce9ce2264094d315524a13733d72277235c15b"
+    },
+    "public": {
+      "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+      "branch": "main",
+      "content_commit": "bbcc1da899d987490089533174ce70e8650206fb",
+      "verified_remote_head_after_content_push": "bbcc1da899d987490089533174ce70e8650206fb"
+    }
+  },
+  "immutable_content_file_sha256": {
+    "polinex-src/src/main/java/me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.java": "987cfd06a75cf98473a381c306ffe20eecb43d5a1728efad980563bcb8dadfea",
+    ".analysis/reports/R2001-v2-generator-original.javap.txt": "6bbaa44cf55ed22883bded61ded2fbbd9de243bab4934613e0197fe6885bf5ee",
+    ".analysis/reports/R2001-v2-generator-compiled-final.javap.txt": "6913caa331f01c3779bef3c3f77fb8e27812cf4ef843c0114b6f3b4aa1829b60",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/PathfinderCacheGeneratorProbe.java": "b695ffc1613bc3c59ef89de0cb9dde6c24ee89143579febd78852b69b94f1f28",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/PathfinderChunkMergeDifferentialProbe.java": "db3e9cb9d553bc8aa619ee6d63abb75942a8b7709a6a6ba381b7bdba5b3a08d7",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-src/me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java": "2339ceb0e1af94ce1e9ecc9acad4beef71092925253a88c14dba906f67498a01",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-src/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java": "e2c4d62b26773c2b24043fa4354529304c903e45a45ceb6f7e06032fdb6cd757",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/manifest.json": "da801b258f37e4e796c15da006856ebd91ec8f01d40c874b2c02997f67452a39",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/merge-probe.init.gradle": "bebd179cd3c37468d1bee0c241eb88804458ff37e34c7786ddf7a6ac759ea3e4",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/run-r2001-combined.log": "212930fdc0509c69a27aaef410dd7fb17eae886a10c0914858b73631d3cd0000",
+    ".analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/static-review.txt": "ab7047898ed5a23c84ff95b5dd91305964dc3399e44d1e1e69076fece40e27ed"
+  },
+  "checks": {
+    "eleven_source_and_evidence_hashes_match_between_worktrees": true,
+    "both_content_pushes_were_non_force_fast_forward": true,
+    "remote_refs_verified_with_ls_remote_after_content_push": true,
+    "temurin_25_full_compile_and_offline_probes_exit_code": 0,
+    "original_vs_compiled_zero_and_sparse_merge_results_match": true,
+    "client_or_valid_world_tested": false,
+    "normal_cache_consumer_tested": false,
+    "compatible_server_tested": false
+  },
+  "limitations": [
+    "The probes use test-only coordinate-index and logging shims; they do not test a real Minecraft client, valid world, or normal cache consumer.",
+    "The original protected archive is not published. The offline differential harness requires a separately authorized local archive; no archive payload is included.",
+    "Pathfinder request/execution/lifecycle, Powder Macro, and Commission Macro remain open."
+  ]
+}

@@ -14,7 +14,7 @@
 - 未启动客户端或有效世界；未验收真实 cache consumer 的读取/切换/失效、worker 生命周期、路线结果→执行→停止/清理闭环。
 - Pathfinder 正常请求与路线执行仍开放；Powder Macro、Glacite Commission Macro 正常入口/状态机未闭合。
 - 兼容服务器登录、交互、断开、重连未验收。
-- R2001 双仓 README/证据同步尚待完成；原始 JAR/native、凭据及游戏日志不发布。
+- R2001 内容与证据已同步至私有 openpolinex 进度分支和公开 PolinexClient-Reborn/main；远端提交及 11 个源码/证据文件哈希见 [.analysis/reports/SYNC-20261123-PATHFINDER-R2001.json](.analysis/reports/SYNC-20261123-PATHFINDER-R2001.json)。原始 JAR/native、凭据及游戏日志不发布。
 
 ## 下一步
 

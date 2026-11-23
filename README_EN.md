@@ -84,6 +84,7 @@ R1988 restores Glacite Commission Macro `aC()V` and `bs()V` against their comple
 
 ### Latest handoff and evidence
 - [R2001 Pathfinder v2 cache generation manifest, static review, and integrated build/probe output](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/manifest.json)
+- [R2001 dual-repository sync record](.analysis/reports/SYNC-20261123-PATHFINDER-R2001.json)
 
 - [R1999 Pathfinder cache-file validator differential probe and machine manifest](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)
 - [R1999 run output](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)

@@ -84,6 +84,7 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 
 ### 最新交接与证据
 - [R2001 Pathfinder v2 cache generation manifest, static review, and integrated build/probe output](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/manifest.json)
+- [R2001 双仓同步记录](.analysis/reports/SYNC-20261123-PATHFINDER-R2001.json)
 
 - [R1999 Pathfinder cache-file validator 差分和机器证据](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)
 - [R1999 运行输出](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)
