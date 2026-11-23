@@ -1,0 +1,39 @@
+{
+  "sync_id": "SYNC-20261123-PATHFINDER-R1999",
+  "generated_utc": "2026-11-23T03:24:20.860Z",
+  "scope": "Publish the R1999 Pathfinder cache-file validator differential evidence, bilingual README progress, and current handoff to private openpolinex and public PolinexClient-Reborn.",
+  "private_repository": {
+    "remote": "https://github.com/mythiclong/openpolinex.git",
+    "branch": "codex/handoff-progress-2026-11-15",
+    "content_commit": "7926d1c421b4bef48b9932d0d16cb01a6094302a",
+    "verified_remote_head_after_content_push": "7926d1c421b4bef48b9932d0d16cb01a6094302a"
+  },
+  "public_repository": {
+    "remote": "https://github.com/mythiclong/PolinexClient-Reborn.git",
+    "branch": "main",
+    "content_commit": "a3cebb4fd2720ac09fc6c2933520ac6a8164bf59",
+    "verified_remote_head_after_content_push": "a3cebb4fd2720ac09fc6c2933520ac6a8164bf59"
+  },
+  "published_files_sha256": {
+    "README.md": "892579d09de171c8e1fc55fa4190ae115349fc8889413b3e27f5e66cd0562350",
+    "README_EN.md": "7430e29fa9b79cd57d42ca50e9fed9e7a107ef0b334bdf4572224f3324f5fc21",
+    ".analysis/reports/RESUME.md": "34ff3148f182773275b35b63f271e6217f6620e7a1386ebd2bd6b4d176d0695c",
+    ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/CacheFileValidatorProbe.java": "cd414678352844f53a61738e8c9197803ba79f602c6644c80469d056154fc2dd",
+    ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/static-review.txt": "d1894c72ca60501a37f69ec9338ccada7111bd328302988434f047f00f4296e5",
+    ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt": "87b715e757e5321992fd78c50c0ee2991370e78aff41f3e615ddd7808acc61b9",
+    ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log": "b0244962e196190a4acc50ec2209e94247b6ea24ad642289efef60493c0fe11a",
+    ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json": "b37ad4556c2ad76e31308f4b198cc80eb37dd28aa6ceb5ab8d0b6cfc7d41a125"
+  },
+  "checks": {
+    "all_eight_published_file_hashes_match_between_repositories": true,
+    "public_and_private_remote_heads_verified_with_ls_remote": true,
+    "production_source_changed": false,
+    "client_or_valid_world_tested": false,
+    "compatible_server_tested": false
+  },
+  "limitations": [
+    "R1999 covers only the bounded file-input behavior of polinex$validPathfinderCache(File):boolean.",
+    "It does not establish real cache lifecycle behavior or Pathfinder feature equivalence.",
+    "A separate attempted HTTPS sparse clone failed during TLS handshake; publishing succeeded from the already-verified public commit object in the D-drive repository."
+  ]
+}
