@@ -1,6 +1,7 @@
 package me.octo.client;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
@@ -30,11 +31,6 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
    
    
    
-   // PX-FIX missing no-arg method
-   public static <T> T impl() {
-      return null;
-   }
-
    @NotNull
    private final List<Pair<Integer, Integer>> IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
    @NotNull
@@ -72,324 +68,82 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
    }
 
    private final void b() {
-      // $VF: Couldn't be decompiled
-      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.RuntimeException: parsing failure!
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:211)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:166)
-      //
-      // Bytecode:
-      // 000: invokestatic me/octo/client/IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c ()[Ljava/lang/String;
-      // 003: new java/io/File
-      // 006: dup
-      // 007: getstatic me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl Lme/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl;
-      // 00a: invokevirtual me/octo/client/llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.a ()Ljava/lang/String;
-      // 00d: sipush -26738
-      // 010: sipush -3281
-      // 013: pop2
-      // 014: ldc "pathfind-cache-v2"
-      // 016: invokespecial java/io/File.<init> (Ljava/lang/String;Ljava/lang/String;)V
-      // 019: astore 2
-      // 01a: astore 1
-      // 01b: aload 2
-      // 01c: aload 1
-      // 01d: ifnull 033
-      // 020: invokevirtual java/io/File.exists ()Z
-      // 023: ifne 032
-      // 026: goto 02d
-      // 029: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 02c: athrow
-      // 02d: return
-      // 02e: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 031: athrow
-      // 032: aload 2
-      // 033: invokedynamic accept ()Ljava/io/FileFilter; bsm=java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[ (Ljava/io/File;)Z, me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.b (Ljava/io/File;)Z, (Ljava/io/File;)Z ]
-      // 038: invokevirtual java/io/File.listFiles (Ljava/io/FileFilter;)[Ljava/io/File;
-      // 03b: astore 4
-      // 03d: aload 4
-      // 03f: aload 1
-      // 040: ifnull 04f
-      // 043: ifnull 0ae
-      // 046: goto 04d
-      // 049: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 04c: athrow
-      // 04d: aload 4
-      // 04f: astore 6
-      // 051: nop
-      // 052: bipush 0
-      // 053: istore 7
-      // 055: aload 6
-      // 057: astore 8
-      // 059: new java/util/ArrayList
-      // 05c: dup
-      // 05d: aload 6
-      // 05f: arraylength
-      // 060: invokespecial java/util/ArrayList.<init> (I)V
-      // 063: checkcast java/util/Collection
-      // 066: astore 9
-      // 068: bipush 0
-      // 069: istore 10
-      // 06b: bipush 0
-      // 06c: istore 11
-      // 06e: aload 8
-      // 070: arraylength
-      // 071: istore 12
-      // 073: iload 11
-      // 075: iload 12
-      // 077: if_icmpge 0a5
-      // 07a: aload 8
-      // 07c: iload 11
-      // 07e: aaload
-      // 07f: astore 13
-      // 081: aload 9
-      // 083: aload 13
-      // 085: astore 14
-      // 087: aload 1
-      // 088: ifnull 0a7
-      // 08b: astore 16
-      // 08d: bipush 0
-      // 08e: istore 15
-      // 090: aload 14
-      // 092: invokevirtual java/io/File.getName ()Ljava/lang/String;
-      // 095: aload 16
-      // 097: swap
-      // 098: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
-      // 09d: pop
-      // 09e: iinc 11 1
-      // 0a1: aload 1
-      // 0a2: ifnonnull 073
-      // 0a5: aload 9
-      // 0a7: checkcast java/util/List
-      // 0aa: nop
-      // 0ab: goto 0b1
-      // 0ae: invokestatic kotlin/collections/CollectionsKt.emptyList ()Ljava/util/List;
-      // 0b1: astore 3
-      // 0b2: aload 3
-      // 0b3: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
-      // 0b8: astore 4
-      // 0ba: aload 4
-      // 0bc: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 0c1: ifeq 2ca
-      // 0c4: aload 4
-      // 0c6: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 0cb: checkcast java/lang/String
-      // 0ce: astore 5
-      // 0d0: new java/io/File
-      // 0d3: dup
-      // 0d4: aload 2
-      // 0d5: aload 5
-      // 0d7: invokespecial java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V
-      // 0da: astore 6
-      // 0dc: aload 6
-      // 0de: invokedynamic accept ()Ljava/io/FileFilter; bsm=java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; args=[ (Ljava/io/File;)Z, me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.c (Ljava/io/File;)Z, (Ljava/io/File;)Z ]
-      // 0e3: invokevirtual java/io/File.listFiles (Ljava/io/FileFilter;)[Ljava/io/File;
-      // 0e6: astore 8
-      // 0e8: aload 8
-      // 0ea: aload 1
-      // 0eb: ifnull 0f3
-      // 0ee: ifnull 10d
-      // 0f1: aload 8
-      // 0f3: invokestatic kotlin/collections/ArraysKt.toList ([Ljava/lang/Object;)Ljava/util/List;
-      // 0f6: astore 9
-      // 0f8: aload 9
-      // 0fa: aload 1
-      // 0fb: ifnull 10a
-      // 0fe: ifnull 10d
-      // 101: goto 108
-      // 104: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 107: athrow
-      // 108: aload 9
-      // 10a: goto 110
-      // 10d: goto 0ba
-      // 110: astore 7
-      // 112: aload 0
-      // 113: getfield me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII Ljava/util/HashMap;
-      // 116: invokevirtual java/util/HashMap.clear ()V
-      // 119: aload 7
-      // 11b: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
-      // 120: astore 8
-      // 122: aload 8
-      // 124: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 129: ifeq 14b
-      // 12c: aload 8
-      // 12e: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 133: checkcast java/io/File
-      // 136: astore 9
-      // 138: aload 0
-      // 139: aload 9
-      // 13b: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 13e: aload 9
-      // 140: invokespecial me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/io/File;)V
-      // 143: aload 1
-      // 144: ifnull 0ba
-      // 147: aload 1
-      // 148: ifnonnull 122
-      // 14b: new java/util/ArrayList
-      // 14e: dup
-      // 14f: invokespecial java/util/ArrayList.<init> ()V
-      // 152: astore 8
-      // 154: aload 0
-      // 155: getfield me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII Ljava/util/HashMap;
-      // 158: checkcast java/util/Map
-      // 15b: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
-      // 160: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 165: astore 9
-      // 167: aload 9
-      // 169: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 16e: ifeq 1c9
-      // 171: aload 9
-      // 173: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 178: checkcast java/util/Map$Entry
-      // 17b: astore 10
-      // 17d: aload 10
-      // 17f: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 184: checkcast me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll
-      // 187: astore 11
-      // 189: aload 10
-      // 18b: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
-      // 190: checkcast java/nio/ByteBuffer
-      // 193: astore 12
-      // 195: aload 1
-      // 196: ifnull 1b8
-      // 199: aload 0
-      // 19a: aload 11
-      // 19c: aload 12
-      // 19e: invokespecial me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Lme/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII$llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll;Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-      // 1a1: aload 1
-      // 1a2: ifnull 0cb
-      // 1a5: goto 1ac
-      // 1a8: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1ab: athrow
-      // 1ac: dup
-      // 1ad: ifnonnull 1bb
-      // 1b0: pop
-      // 1b1: goto 1b8
-      // 1b4: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 1b7: athrow
-      // 1b8: goto 167
-      // 1bb: astore 13
-      // 1bd: aload 8
-      // 1bf: aload 13
-      // 1c1: invokevirtual java/util/ArrayList.add (Ljava/lang/Object;)Z
-      // 1c4: pop
-      // 1c5: aload 1
-      // 1c6: ifnonnull 167
-      // 1c9: aload 8
-      // 1cb: invokevirtual java/util/ArrayList.isEmpty ()Z
-      // 1ce: aload 1
-      // 1cf: ifnull 0c1
-      // 1d2: ifne 0ba
-      // 1d5: new java/io/File
-      // 1d8: dup
-      // 1d9: aload 2
-      // 1da: aload 5
-      // 1dc: sipush -26746
-      // 1df: sipush 29159
-      // 1e2: pop2
-      // 1e3: ldc ".dat"
-      // 1e5: invokedynamic makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; bsm=java/lang/invoke/StringConcatFactory.makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; args=[ "\u0001\u0001" ]
-      // 1ea: invokespecial java/io/File.<init> (Ljava/io/File;Ljava/lang/String;)V
-      // 1ed: astore 9
-      // 1ef: aload 9
-      // 1f1: invokevirtual java/io/File.toPath ()Ljava/nio/file/Path;
-      // 1f4: bipush 3
-      // 1f5: anewarray 262
-      // 1f8: astore 10
-      // 1fa: aload 10
-      // 1fc: bipush 0
-      // 1fd: getstatic java/nio/file/StandardOpenOption.CREATE Ljava/nio/file/StandardOpenOption;
-      // 200: aastore
-      // 201: aload 10
-      // 203: bipush 1
-      // 204: getstatic java/nio/file/StandardOpenOption.WRITE Ljava/nio/file/StandardOpenOption;
-      // 207: aastore
-      // 208: aload 10
-      // 20a: bipush 2
-      // 20b: getstatic java/nio/file/StandardOpenOption.TRUNCATE_EXISTING Ljava/nio/file/StandardOpenOption;
-      // 20e: aastore
-      // 20f: aload 10
-      // 211: invokestatic java/nio/channels/FileChannel.open (Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/nio/channels/FileChannel;
-      // 214: checkcast java/io/Closeable
-      // 217: astore 10
-      // 219: aconst_null
-      // 21a: astore 11
-      // 21c: nop
-      // 21d: aload 10
-      // 21f: checkcast java/nio/channels/FileChannel
-      // 222: astore 12
-      // 224: bipush 0
-      // 225: istore 13
-      // 227: aload 8
-      // 229: invokevirtual java/util/ArrayList.iterator ()Ljava/util/Iterator;
-      // 22c: dup
-      // 22d: sipush -26748
-      // 230: sipush 14159
-      // 233: pop2
-      // 234: ldc_w "iterator(...)"
-      // 237: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 23a: astore 14
-      // 23c: aload 14
-      // 23e: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 243: ifeq 283
-      // 246: aload 14
-      // 248: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 24d: dup
-      // 24e: sipush -26745
-      // 251: sipush 11548
-      // 254: pop2
-      // 255: ldc_w "next(...)"
-      // 258: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 25b: checkcast java/nio/ByteBuffer
-      // 25e: astore 15
-      // 260: aload 15
-      // 262: invokevirtual java/nio/ByteBuffer.hasRemaining ()Z
-      // 265: ifeq 23c
-      // 268: aload 12
-      // 26a: aload 15
-      // 26c: invokevirtual java/nio/channels/FileChannel.write (Ljava/nio/ByteBuffer;)I
-      // 26f: pop
-      // 270: aload 1
-      // 271: ifnull 260
-      // 274: aload 1
-      // 275: ifnull 284
-      // 278: aload 1
-      // 279: ifnonnull 260
-      // 27c: goto 283
-      // 27f: invokestatic me/octo/client/llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.a (Ljava/lang/Throwable;)Ljava/lang/Throwable;
-      // 282: athrow
-      // 283: nop
-      // 284: getstatic kotlin/Unit.INSTANCE Lkotlin/Unit;
-      // 287: astore 12
-      // 289: aload 10
-      // 28b: aload 11
-      // 28d: invokestatic kotlin/io/CloseableKt.closeFinally (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 290: goto 2a8
-      // 293: astore 13
-      // 295: aload 13
-      // 297: astore 11
-      // 299: aload 13
-      // 29b: athrow
-      // 29c: astore 13
-      // 29e: aload 10
-      // 2a0: aload 11
-      // 2a2: invokestatic kotlin/io/CloseableKt.closeFinally (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 2a5: aload 13
-      // 2a7: athrow
-      // 2a8: aload 5
-      // 2aa: sipush -26743
-      // 2ad: sipush -29102
-      // 2b0: pop2
-      // 2b1: ldc_w "Generated: "
-      // 2b4: swap
-      // 2b5: sipush -26747
-      // 2b8: sipush 14433
-      // 2bb: pop2
-      // 2bc: ldc ".dat"
-      // 2be: invokedynamic makeConcatWithConstants (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; bsm=java/lang/invoke/StringConcatFactory.makeConcatWithConstants (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite; args=[ "\u0001\u0001\u0001" ]
-      // 2c3: invokestatic me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c (Ljava/lang/String;)V
-      // 2c6: aload 1
-      // 2c7: ifnonnull 0ba
-      // 2ca: return
+      String[] guard = IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c();
+      File cacheRoot = new File(
+         me.octo.client.llIllIIllIlIlIIIIllllIlIIIlIllllIlIIIIIIlIllIIIIIllIIlllIIlIlIlIIlllIIIIIIIllIIllIIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl.a(),
+         "pathfind-cache-v2"
+      );
+      this.polinex$generateCacheFiles(cacheRoot, guard);
+   }
+
+   private final void polinex$generateCacheFiles(File cacheRoot, String[] guard) {
+      if (guard != null && !cacheRoot.exists()) {
+         return;
+      }
+
+      File[] dimensionDirectories = cacheRoot.listFiles(llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII::b);
+      if (dimensionDirectories == null && guard == null) {
+         int ignored = dimensionDirectories.length;
+      }
+      List<String> dimensionNames;
+      if (dimensionDirectories == null) {
+         dimensionNames = CollectionsKt.emptyList();
+      } else {
+         ArrayList<String> names = new ArrayList<>(dimensionDirectories.length);
+         for (File directory : dimensionDirectories) {
+            names.add(directory.getName());
+         }
+         dimensionNames = names;
+      }
+
+      for (String dimensionName : dimensionNames) {
+         File dimensionDirectory = new File(cacheRoot, dimensionName);
+         File[] chunkFiles = dimensionDirectory.listFiles(llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII::c);
+         if (chunkFiles == null && guard != null) {
+            continue;
+         }
+
+         this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.clear();
+         for (File chunkFile : chunkFiles) {
+            Intrinsics.checkNotNull(chunkFile);
+            this.a(chunkFile);
+         }
+
+         ArrayList<ByteBuffer> mergedChunks = new ArrayList<>();
+         for (var entry : this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.entrySet()) {
+            if (guard == null) {
+               continue;
+            }
+            ByteBuffer merged = this.a(entry.getKey(), entry.getValue());
+            if (merged != null) {
+               mergedChunks.add(merged);
+            }
+         }
+
+         if (mergedChunks.isEmpty()) {
+            continue;
+         }
+
+         File aggregateCache = new File(cacheRoot, dimensionName + ".dat");
+         try (FileChannel channel = FileChannel.open(
+            aggregateCache.toPath(),
+            StandardOpenOption.CREATE,
+            StandardOpenOption.WRITE,
+            StandardOpenOption.TRUNCATE_EXISTING
+         )) {
+            for (ByteBuffer merged : mergedChunks) {
+               while (merged.hasRemaining()) {
+                  channel.write(merged);
+               }
+            }
+         } catch (IOException exception) {
+            rethrowIoException(exception);
+         }
+
+         me.octo.client.utils.player.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.c(
+            "Generated: " + dimensionName + ".dat"
+         );
+      }
    }
 
    private final void a(File var1) {
@@ -451,192 +205,57 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
    }
 
    private final ByteBuffer a(
-      llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll var1,
-      ByteBuffer var2
+      llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll chunk,
+      ByteBuffer states
    ) {
-      Object var22 = null; // PX-FIX
-      String[] var3;
-      boolean var23;
-      label140: {
-         String[] var10000 = IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c();
-         var var4 = this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl;
-         var3 = var10000;
-         boolean var5 = false;
-         var22 = var4;
-         label136:
-         if (var3 != null) {
-            if (var4 instanceof Collection) {
-               var22 = (Collection)var4;
-               if (var3 == null) {
-                  break label136;
-               }
-
-               if (((java.util.Collection)var22).isEmpty()) {
-                  var23 =( 0 != 0);
-                  break label140;
-               }
-            }
-
-            var22 = var4;
+      String[] guard = IIlIIIlllIIlIllIIlIIIlIlllIIllIlIIIllIlIllIIIIIllIIlIlIIIlllllllllIlllIlIIIlIIIllIllI.c();
+      for (
+         Pair<Integer, Integer> offset : this.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl
+      ) {
+         int x = chunk.a() + ((Number)offset.getFirst()).intValue();
+         int z = chunk.b() + ((Number)offset.getSecond()).intValue();
+         if (!this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII.containsKey(
+            new llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll(x, z)
+         )) {
+            return null;
          }
+      }
 
-         Iterator var6 = ((java.util.Collection)var22).iterator();
-
-         label127:
-         while (true) {
-            if (!var6.hasNext()) {
-               var23 =( 0 != 0);
-               break;
-            }
-
-            Object var7 = var6.next();
-            Pair var8 = (Pair)var7;
-            boolean var9 = false;
-            var23 = this.lIIIIIllIIlIlllIllIIIllllIIIIIlIlllllllIIIlIIIIllIlIllIlIIlIIllllIIlIlIIlIIlIIlIlIIII
-               .containsKey(
-                  new llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll(
-                     var1.a() + ((Number)var8.getFirst()).intValue(), var1.b() + ((Number)var8.getSecond()).intValue()
-                  )
-               );
-
-            while (true) {
-               if (var3 != null) {
-                  var23 = !var23;
+      ArrayList<Pair> activeStates = new ArrayList<>();
+      int stateIndex = 0;
+      for (int y = 0; y < 256; y++) {
+         for (int z = 0; z < 16; z++) {
+            for (int x = 0; x < 16; x++) {
+               byte state = states.get(stateIndex);
+               if (state != 0 && this.a(chunk, states, x, y, z)) {
+                  activeStates.add(
+                     TuplesKt.to(
+                        me.octo.client.utils.PXInlineClasses.boxUShort((short)stateIndex),
+                        me.octo.client.utils.PXInlineClasses.boxUByte(state)
+                     )
+                  );
                }
-
-               if (!var23) {
-                  break;
-               }
-
-               var23 =( 1 != 0);
-               if (var3 != null) {
-                  break label127;
-               }
+               stateIndex++;
             }
          }
       }
 
-      if (var23) {
+      if (guard != null && activeStates.isEmpty()) {
          return null;
-      } else {
-         ArrayList var11 = new ArrayList();
-         int var12 = 0;
-         int var13 = 0;
-
-         label114:
-         while (true) {
-            var23 =( var13 != 0);
-
-            label111:
-            while ((var23 ? 1 : 0) < 256) {
-               var23 =( 0 != 0);
-               if (var3 == null) {
-                  break label114;
-               }
-
-               int var15 = 0;
-
-               label108:
-               while (true) {
-                  var23 =( var15 != 0);
-
-                  label106:
-                  while (true) {
-                     if ((var23 ? 1 : 0) >= 16) {
-                        break label108;
-                     }
-
-                     var23 =( 0 != 0);
-                     if (var3 == null) {
-                        continue label111;
-                     }
-
-                     int var17 = 0;
-
-                     while (var17 < 16) {
-                        int var19 = var12++;
-                        byte var10 = var2.get(var19);
-                        if (var3 != null) {
-                           var23 =( var10 != 0);
-                           if (var3 == null) {
-                              continue label106;
-                           }
-
-                           if (var10 != 0 && var3 != null && this.a(var1, var2, var17, var13, var15)) {
-                              var11.add(TuplesKt.to(me.octo.client.utils.PXInlineClasses.boxUShort((short)var19), me.octo.client.utils.PXInlineClasses.boxUByte(var10)));
-                           }
-
-                           var17++;
-                        }
-
-                        if (var3 == null) {
-                           break;
-                        }
-                     }
-
-                     var15++;
-                     if (var3 == null) {
-                        break label108;
-                     }
-                     break;
-                  }
-               }
-
-               var13++;
-               if (var3 != null) {
-                  continue label114;
-               }
-               break;
-            }
-
-            var23 = var11.isEmpty();
-            break;
-         }
-
-         if (var3 != null) {
-            if (!var23) {
-               return null;
-            }
-
-         }
-
-         ByteBuffer var14 = ByteBuffer.allocateDirect(12 + var11.size() * 3);
-         var14.order(ByteOrder.nativeOrder());
-         var14.putInt(var1.a());
-         var14.putInt(var1.b());
-         var14.putInt(var11.size());
-         Iterator var28 = var11.iterator();
-         short var10002 = -26750;
-         short var10003 = 31075;
-         Intrinsics.checkNotNullExpressionValue(var28, "iterator(...)");
-         Iterator var16 = var28;
-
-         while (true) {
-            if (var16.hasNext()) {
-               Object var29 = var16.next();
-               var10002 = -26740;
-               var10003 = -16838;
-               Intrinsics.checkNotNullExpressionValue(var29, "next(...)");
-               Pair var18 = (Pair)var29;
-               short var20 = me.octo.client.utils.PXInlineClasses.unboxUShort((UShort)var18.component1());
-               byte var21 = me.octo.client.utils.PXInlineClasses.unboxUByte((UByte)var18.component2());
-               var14.putShort(var20);
-               var14.put(var21);
-               if (var3 == null) {
-                  break;
-               }
-
-               if (var3 != null) {
-                  continue;
-               }
-            }
-
-            var14.flip();
-            break;
-         }
-
-         return var14;
       }
+
+      ByteBuffer result = ByteBuffer.allocateDirect(12 + activeStates.size() * 3).order(ByteOrder.nativeOrder());
+      result.putInt(chunk.a());
+      result.putInt(chunk.b());
+      result.putInt(activeStates.size());
+      for (Pair activeState : activeStates) {
+         short index = me.octo.client.utils.PXInlineClasses.unboxUShort((UShort)activeState.getFirst());
+         byte state = me.octo.client.utils.PXInlineClasses.unboxUByte((UByte)activeState.getSecond());
+         result.putShort(index);
+         result.put(state);
+      }
+      result.flip();
+      return result;
    }
 
    private final boolean a(
@@ -854,7 +473,7 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
       return ((ByteBuffer)var14)
          .get(
             me.octo.client.utils.player.pathfinder.llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.IIIIIIIIIllIlIllIIllIlIIIllIllIlIlIIIllllIlllIIlIllIIlllIIIIIIllIIlllIIIIlIIllIIlllIl
-               .a(var9, var4, var10)
+                  .a(var9, var4, var10)
          );
    }
 
@@ -925,6 +544,11 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
       }
 
       return var1 == null ? var10000 : var10000;
+   }
+
+   @SuppressWarnings("unchecked")
+   private static <T extends Throwable> void rethrowIoException(IOException exception) throws T {
+      throw (T)exception;
    }
 
    private static Throwable a(Throwable var0) {
@@ -1795,8 +1419,5 @@ public final class llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllll
          return b[var2];
       }
    
-public static me.octo.client.llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll a(me.octo.client.llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll p0, int p1, int p2, int p3, java.lang.Object p4) {
-         return (me.octo.client.llIIlIlllIllIlIlIIIIIIIlIlIIIIIIIIlIlIllIlIIIIlIIIllllIIlllllIIlIIIlIlIIIIllIIlllllII.llIIllllIllIIlIllIIIIIlllIIIIIIllIIlllIIlIllIIIlIlIIIlIlIIlIlIIIIlllIIlIIllIlIlIlIIll) null;
-      }
 }
 }

@@ -9,6 +9,9 @@
 
 ## 当前进度（2026-11-23 UTC）
 
+R2001 恢复了 Pathfinder v2 缓存生成器的文件枚举、chunk 读取、合并与聚合写出路径，并按完整原版 descriptor 修正非空 chunk 合并循环。Temurin JDK 25 强制全树编译和两个离线探针均 exit 0：原版/当前编译类对 9-chunk 零值与稀疏夹具结果一致；稀疏合并记录 SHA-256 为 `9280978275a7f4584556dee1d876c55ca411312c6bfc47abbaceada7a738f514`。生成器夹具读入 18 个文件，零值维度按原版行为不产出聚合文件；稀疏维度产出 5 个状态、27 字节记录并捕获一次 `Generated` 消息。离线隔离时用仅用于测试的 shim 替代需要 Minecraft 单例初始化的坐标索引宿主，并捕获聊天日志；这不等于客户端、有效世界或真实 cache consumer 验收。Pathfinder 正常请求/路线执行、缓存加载与失效生命周期、Powder Macro 和 Commission Macro 仍未闭环。见 [R2001 机器记录](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/manifest.json)、[静态复核](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/static-review.txt)、[实际构建与探针输出](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/run-r2001-combined.log)。
+
+
 R1999 对 Pathfinder 磁盘缓存文件校验 helper `polinex$validPathfinderCache(File):boolean` 做原版归档类与当前编译类的隔离差分。15 个具名边界/损坏样本、4,096 个固定种子随机字节文件、目录和 null 输入共 8,226 条断言全部一致；Temurin JDK 25 `compileJava --rerun-tasks` exit 0。此切片没有生产源码改动，只关闭被测 helper 的有界文件输入行为；没有运行真实 cache loader 生命周期、Minecraft 客户端/有效世界或服务器，不代表 Pathfinder 功能等价。证据：[静态复核](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/static-review.txt)、[机器记录](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)、[运行输出](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)、[构建摘要](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt)。
 
 R1998 修复 Pathfinder chunk-capture worker 的中断异常语义。按完整原版 descriptor 对照，原版 worker 调用 `Thread.sleep(J)V`，没有异常表处理或 `RuntimeException` 包装；重建源码之前把 Java 必须捕获的 `InterruptedException` 包成了新的 `RuntimeException`。现改为泛型异常转发，编译字节码从 catch 分支把同一个异常对象直接 `athrow`。原版/当前字节码契约验证通过，Temurin JDK 25 强制全树 Gradle build exit 0（4 个任务执行，测试 `NO-SOURCE`）。没有运行客户端、世界或中断时序探针；这不等于 chunk worker、缓存生命周期或 Pathfinder 的运行时验收。证据：[静态复核](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/static-review.txt)、[字节码契约验证](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/contract-verification.json)、[构建摘要](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)、[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)。
@@ -80,6 +83,7 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 - **其他功能**：Glacite Commission Macro 目前只新增了 R1992 库存扫描方法的静态恢复，完整启停/事件流程仍未闭环；Powder Macro、初始化事件、渲染、配置、网络和 native/JNIC 仍有未恢复或未验收项。真实服务器登录、交互、断开、重连未验证。
 
 ### 最新交接与证据
+- [R2001 Pathfinder v2 cache generation manifest, static review, and integrated build/probe output](.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/manifest.json)
 
 - [R1999 Pathfinder cache-file validator 差分和机器证据](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)
 - [R1999 运行输出](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)

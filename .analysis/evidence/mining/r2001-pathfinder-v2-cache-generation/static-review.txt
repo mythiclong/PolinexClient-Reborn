@@ -1,0 +1,21 @@
+R2001 — Pathfinder v2 cache generation and chunk merge
+
+Baseline
+- Worktree branch: codex/pathfinder-cache-lifecycle
+- Evidence-generation HEAD: 438ebdba2cffd1e971c52c05b527bc8fbbd043d4
+- Production source SHA-256 is recorded in manifest.json; no original archive is included.
+
+Static reconstruction
+- Compared the complete original JVM descriptors and bodies for generator b()V, chunk reader a(File)V, merge a(ChunkKey,ByteBuffer):ByteBuffer, active-state predicate a(ChunkKey,ByteBuffer,III):boolean, and cross-chunk lookup b(ChunkKey,ByteBuffer,III):byte.
+- Replaced the decompiler-artifact body of b()V with dimension enumeration, chunk loading, merge collection, aggregate output and the original generated-message call; extracted only the path-parameterized body into polinex$generateCacheFiles(File,String[]) for isolated fixtures.
+- Reconstructed the merge iteration and output encoding from the original complete descriptor. Removed two current-source placeholders absent from the original class: an impl() returning null and a synthetic-looking key/int bridge returning null.
+- Re-generated the compiled-class javap after the source stabilized; original and compiled full-class listings are retained beside this review.
+
+Build and offline behavior
+- The integrated Gradle run used Temurin JDK 25 and reran the full compileJava task before running both probes; exact command, output, and process exit code are in run-r2001-combined.log.
+- Isolated original/current differential: both zero-state and sparse fixtures load all 9 chunks without exceptions. Zero fixture emits no merge record. Sparse fixture emits exactly one record per side with matching SHA-256 9280978275a7f4584556dee1d876c55ca411312c6bfc47abbaceada7a738f514.
+- Aggregate-generation fixture: 18 input files; the all-zero dimension correctly creates no aggregate; the sparse dimension writes a 27-byte center record with 5 active states and captures one `Generated: fixture_sparse.dat` message. Aggregate SHA-256: 1a730df114f6a7aaec4e568eafe7d50c88198da2241584b3c5ad6fe05d8269f3.
+- Test boundary is explicit: the original coordinate-index method a(III)I is replaced in the isolated test class loader by a source shim implementing its exact 10-instruction formula, because the containing class initializer requires a running Minecraft singleton; the cache message sink c(String)V is captured by a test shim to avoid initializing the client chat stack. Production code is not replaced by these shims.
+
+Not established
+- No Minecraft client, valid world, normal cache request, cache invalidation/worker lifecycle, route consumer, macro entry, or compatible server was exercised. Synthetic byte fixtures do not establish real-world cache semantics. Continue with the actual cache consumer chain and reserve world-dependent checks for a valid game session.

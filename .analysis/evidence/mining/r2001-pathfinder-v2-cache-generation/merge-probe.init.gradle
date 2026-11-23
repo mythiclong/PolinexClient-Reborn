@@ -1,0 +1,43 @@
+allprojects {
+    afterEvaluate {
+        tasks.register('compilePathfinderIndexShim', JavaCompile) {
+            source = files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-src/me/octo/client/utils/player/pathfinder/llIIlllIIllIlllllllIllIlIIIIllllllIlIlIIllllllIllllIIIIlIIIlllllIlllIlIIlIlIllIIIlIIl.java'), rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-src/me/octo/client/utils/player/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java'))
+            destinationDirectory = rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-classes')
+            classpath = files()
+            options.release = 25
+            options.encoding = 'UTF-8'
+        }
+        tasks.register('compilePathfinderMergeProbe', JavaCompile) {
+            dependsOn tasks.named('compileJava'), tasks.named('compilePathfinderIndexShim')
+            source = files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/PathfinderChunkMergeDifferentialProbe.java'))
+            destinationDirectory = rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/merge-probe-classes')
+            classpath = sourceSets.main.runtimeClasspath
+            options.release = 25
+            options.encoding = 'UTF-8'
+        }
+        tasks.register('runPathfinderMergeProbe', JavaExec) {
+            dependsOn tasks.named('compilePathfinderMergeProbe')
+            classpath = files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-classes')) + sourceSets.main.runtimeClasspath + files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/merge-probe-classes'))
+            mainClass = 'PathfinderChunkMergeDifferentialProbe'
+            args new File(rootProject.projectDir, '../../../.analysis/cracked.jar').canonicalPath,
+                 rootProject.file('build/classes/java/main').absolutePath,
+                 rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/fixtures').absolutePath,
+                 rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-classes').absolutePath
+        }
+        tasks.register('compilePathfinderCacheGeneratorProbe', JavaCompile) {
+            dependsOn tasks.named('compileJava'), tasks.named('compilePathfinderIndexShim')
+            source = files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/PathfinderCacheGeneratorProbe.java'))
+            destinationDirectory = rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/generator-probe-classes')
+            classpath = sourceSets.main.runtimeClasspath
+            options.release = 25
+            options.encoding = 'UTF-8'
+        }
+        tasks.register('runPathfinderCacheGeneratorProbe', JavaExec) {
+            dependsOn tasks.named('compilePathfinderCacheGeneratorProbe')
+            classpath = files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/index-shim-classes')) + sourceSets.main.runtimeClasspath + files(rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/generator-probe-classes'))
+            mainClass = 'me.octo.client.PathfinderCacheGeneratorProbe'
+            args rootProject.file('../.analysis/evidence/mining/r2001-pathfinder-v2-cache-generation/fixtures').absolutePath,
+                 rootProject.projectDir.parentFile.absolutePath
+        }
+    }
+}
