@@ -1,0 +1,74 @@
+{
+  "experiment_id": "R1999",
+  "slice_id": "PATHFINDER-CACHE-FILE-VALIDATOR",
+  "started_utc": "2026-11-23T03:24:16.790Z",
+  "finished_utc": "2026-11-23T03:24:20.860Z",
+  "evidence_produced_against_commit": "eaafb58a440254b987fd15818b28c3497eb6a29f",
+  "branch": "codex/pathfinder-cache-lifecycle",
+  "workspace_root": "D:/Work/OpenPoli",
+  "source_tree_changed_for_slice": false,
+  "original_archive": {
+    "local_path": "D:/Work/OpenPoli/.analysis/cracked.jar",
+    "sha256": "d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26",
+    "owner_class_sha256": "e803a50eff9d47b423bbf4fd4de23cc152300b4968b0b41508c5a76854d3cedc",
+    "published": false
+  },
+  "method": {
+    "owner": "me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI",
+    "name": "polinex$validPathfinderCache",
+    "descriptor": "(Ljava/io/File;)Z",
+    "source_path": "polinex-src/src/main/java/me/octo/client/utils/player/pathfinder/IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.java",
+    "source_sha256": "df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e",
+    "compiled_owner_sha256": "f72c5fdc1a47d27e02bc835056a606d580ef0e7a3389b2cda35f8c8cba16434c"
+  },
+  "tooling": {
+    "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+    "gradle_wrapper": "9.7.1",
+    "asm": "9.10.1",
+    "production_build_command": "gradlew.bat -Dorg.gradle.jvmargs=-Xms256m -Xmx2G -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -XX:ReservedCodeCacheSize=128m --max-workers=1 --no-parallel compileJava --no-daemon --console=plain --rerun-tasks",
+    "production_build_exit_code": 0,
+    "production_build_tasks": 1,
+    "probe_compile_command": "javac -cp <ASM 9.10.1 asm + asm-tree> -d <D-drive temporary classes> CacheFileValidatorProbe.java",
+    "probe_compile_exit_code": 0,
+    "probe_command": "java -cp <probe classes + ASM 9.10.1 asm + asm-tree> CacheFileValidatorProbe D:/Work/OpenPoli/.analysis/cracked.jar <compiled owner class> <D-drive fixtures> <current source>",
+    "probe_exit_code": 0
+  },
+  "probe": {
+    "source_path": ".analysis/evidence/mining/r1999-pathfinder-cache-file-validator/CacheFileValidatorProbe.java",
+    "source_sha256": "cd414678352844f53a61738e8c9197803ba79f602c6644c80469d056154fc2dd",
+    "class_extraction": "ASM extracted only the target static method; verified no field references and no non-JDK method calls; original and compiled methods loaded in isolated class loaders.",
+    "named_boundary_and_malformed_fixtures": 15,
+    "deterministic_random_fixtures": 4096,
+    "random_seed_hex": "0x5041544846494E44",
+    "random_byte_array_lengths": "0 through 256 inclusive",
+    "additional_inputs": ["directory", "null"],
+    "paired_assertions": 8226,
+    "result": "PASS; original and compiled outcomes identical for every tested input",
+    "log_path": "run-randomized-v2.log",
+    "log_sha256": "b0244962e196190a4acc50ec2209e94247b6ea24ad642289efef60493c0fe11a"
+  },
+  "evidence_sha256": {
+    "static-review.txt": "d1894c72ca60501a37f69ec9338ccada7111bd328302988434f047f00f4296e5",
+    "build-summary.txt": "87b715e757e5321992fd78c50c0ee2991370e78aff41f3e615ddd7808acc61b9"
+  },
+  "invalid_attempts": [
+    {
+      "attempt": "Initial isolated probe using the pre-existing ASM 9.7.1 jars",
+      "exit_code": 1,
+      "reason": "ASM 9.7.1 rejected class-file major version 69. This was a probe-tool compatibility failure, not a code result; rerun with the build-cached ASM 9.10.1 and corrected D-drive temporary path passed."
+    }
+  ],
+  "runtime_acceptance": {
+    "client": false,
+    "valid_world": false,
+    "real_cache_file_lifecycle": false,
+    "compatible_server": false,
+    "feature_equivalence": "OPEN"
+  },
+  "publication_exclusions": [
+    "Original archive and protected class files",
+    "Raw original/current javap dumps",
+    "Compiled class files and built mod artifact",
+    "Generated binary fixture files"
+  ]
+}

@@ -7,7 +7,9 @@
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="切换至英文"></a>
 </p>
 
-## 当前进度（2026-11-20 UTC；芝加哥当地日期为 2026-11-20）
+## 当前进度（2026-11-23 UTC）
+
+R1999 对 Pathfinder 磁盘缓存文件校验 helper `polinex$validPathfinderCache(File):boolean` 做原版归档类与当前编译类的隔离差分。15 个具名边界/损坏样本、4,096 个固定种子随机字节文件、目录和 null 输入共 8,226 条断言全部一致；Temurin JDK 25 `compileJava --rerun-tasks` exit 0。此切片没有生产源码改动，只关闭被测 helper 的有界文件输入行为；没有运行真实 cache loader 生命周期、Minecraft 客户端/有效世界或服务器，不代表 Pathfinder 功能等价。证据：[静态复核](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/static-review.txt)、[机器记录](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)、[运行输出](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)、[构建摘要](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt)。
 
 R1998 修复 Pathfinder chunk-capture worker 的中断异常语义。按完整原版 descriptor 对照，原版 worker 调用 `Thread.sleep(J)V`，没有异常表处理或 `RuntimeException` 包装；重建源码之前把 Java 必须捕获的 `InterruptedException` 包成了新的 `RuntimeException`。现改为泛型异常转发，编译字节码从 catch 分支把同一个异常对象直接 `athrow`。原版/当前字节码契约验证通过，Temurin JDK 25 强制全树 Gradle build exit 0（4 个任务执行，测试 `NO-SOURCE`）。没有运行客户端、世界或中断时序探针；这不等于 chunk worker、缓存生命周期或 Pathfinder 的运行时验收。证据：[静态复核](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/static-review.txt)、[字节码契约验证](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/contract-verification.json)、[构建摘要](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/build-summary.txt)、[机器记录](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)、[双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)。
 
@@ -79,6 +81,9 @@ R1988 对照完整原版 descriptor 修复 Glacite Commission Macro 的 `aC()V` 
 
 ### 最新交接与证据
 
+- [R1999 Pathfinder cache-file validator 差分和机器证据](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)
+- [R1999 运行输出](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)
+- [R1999 构建摘要](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt)
 - [R1998 Pathfinder worker interruption 静态复核、契约验证与全树构建](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)
 - [R1998 双仓同步记录](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)
 

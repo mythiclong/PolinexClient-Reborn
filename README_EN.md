@@ -7,7 +7,9 @@ This repository contains the managed-source reconstruction of a Minecraft 26.1.2
   <a href="README_EN.md"><img src="https://img.shields.io/badge/Language-English-blue?style=for-the-badge" alt="English"></a>
 </p>
 
-## Current progress (2026-11-20 UTC; Chicago local date: 2026-11-20)
+## Current progress (2026-11-23 UTC)
+
+R1999 differentially tested the Pathfinder disk-cache validator `polinex$validPathfinderCache(File):boolean` by extracting the method from the original archived class and the current compiled class into isolated class loaders. All 8,226 assertions matched across 15 named boundary/malformed fixtures, 4,096 fixed-seed random byte arrays, directory input, and null input. Temurin JDK 25 `compileJava --rerun-tasks` exited 0. This slice made no production-source change and closes only the bounded file-input behavior of this helper. The real cache-loader lifecycle, Minecraft client/valid-world behavior, and server behavior were not tested; Pathfinder feature equivalence is not claimed. See the [static review](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/static-review.txt), [machine manifest](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json), [probe output](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log), and [build summary](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt).
 
 R1998 restores interruption semantics in the Pathfinder chunk-capture worker. A complete original-descriptor comparison found that the original worker calls `Thread.sleep(J)V` with no exception-table handler or `RuntimeException` wrapper; the reconstruction had wrapped Java's checked `InterruptedException` in a new `RuntimeException`. The code now uses a generic throwable relay, and compiled bytecode directly `athrow`s the same exception object from the catch path. The original/current bytecode contract verifier passed, and a forced Temurin JDK 25 full-tree Gradle build exited 0 (four tasks executed; tests are `NO-SOURCE`). No client, world, or interruption-timing probe was run; this does not establish worker, cache-lifecycle, or Pathfinder runtime acceptance. See the [static review](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/static-review.txt), [bytecode-contract verification](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/contract-verification.json), [build summary](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/build-summary.txt), [machine manifest](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json), and [dual-repository sync record](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json).
 
@@ -79,6 +81,9 @@ R1988 restores Glacite Commission Macro `aC()V` and `bs()V` against their comple
 
 ### Latest handoff and evidence
 
+- [R1999 Pathfinder cache-file validator differential probe and machine manifest](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/manifest.json)
+- [R1999 run output](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/run-randomized-v2.log)
+- [R1999 build summary](.analysis/evidence/mining/r1999-pathfinder-cache-file-validator/build-summary.txt)
 - [R1998 Pathfinder worker interruption review, contract verification, and full-tree build](.analysis/evidence/mining/r1998-pathfinder-worker-interrupt-propagation/manifest.json)
 - [R1998 dual-repository sync record](.analysis/reports/SYNC-20261120-PATHFINDER-R1998.json)
 

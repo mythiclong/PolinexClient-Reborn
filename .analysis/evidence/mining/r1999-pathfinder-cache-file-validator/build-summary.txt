@@ -1,0 +1,13 @@
+# R1999 compile and probe summary
+
+- Production source changed: no.
+- Baseline: `eaafb58a440254b987fd15818b28c3497eb6a29f` on `codex/pathfinder-cache-lifecycle`.
+- Runtime: Eclipse Temurin `25.0.4.1+1-LTS`; Gradle Wrapper `9.7.1`.
+- Build command: `gradlew.bat -Dorg.gradle.jvmargs=-Xms256m -Xmx2G -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -XX:ReservedCodeCacheSize=128m --max-workers=1 --no-parallel compileJava --no-daemon --console=plain --rerun-tasks`.
+- Build result: exit `0`, `BUILD SUCCESSFUL`, one `compileJava` task executed; 18 existing `Unsafe` warnings plus existing deprecation/unchecked notices.
+- Probe compile: `javac` against ASM/ASM-tree `9.10.1`, exit `0`.
+- Probe run: exit `0`; 4,111 file fixtures plus directory and null inputs, 8,226 paired assertions; result `PASS`.
+- Probe timestamps: `2026-11-23T03:17:08.341Z` to `2026-11-23T03:17:13.145Z`.
+- No Minecraft client, world, or server was started. The probe output is not a full cache lifecycle test.
+
+The Gradle cache, compiler output, generated fixture files, and Java temporary directory were confined to this D-drive worktree. No built mod artifact is published as feature evidence.

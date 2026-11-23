@@ -1,0 +1,11 @@
+# R1999 Pathfinder cache-file validator
+
+Target: `me.octo.client.utils.player.pathfinder.IllllIIlllIIIllIlIllIIIIllllllIIIllllllIlIIlllIllIIllIIIIIIIIllIlIIlIlllIlIlIlIIIlIlI.polinex$validPathfinderCache(Ljava/io/File;)Z`.
+
+The original class was read from the local archive identified by SHA-256 `d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26`. Its class-entry SHA-256 is `e803a50eff9d47b423bbf4fd4de23cc152300b4968b0b41508c5a76854d3cedc`. The current production source SHA-256 is `df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e`; the freshly compiled owner class SHA-256 is `f72c5fdc1a47d27e02bc835056a606d580ef0e7a3389b2cda35f8c8cba16434c`, matching the recorded R1949 build.
+
+The complete original and compiled method descriptors were inspected with `javap -p -c -s -v`. Both implementations reject null/non-file inputs, read bytes, require a 4-byte record count, reject negative or impossible record/payload counts, advance by five bytes per entry, require exact end-of-file, and return false for thrown failures. The original has one broad exception handler; javac splits the same guarded source region into ranges around early returns. No production source difference was found or made.
+
+The temporary probe used ASM 9.10.1 to extract only this static method into isolated classes, after verifying there are no field references and no non-JDK method calls. The original archive class and current compiled class were loaded in separate class loaders. Fifteen named boundary/malformed fixtures and 4,096 deterministic random byte arrays (seed `0x5041544846494E44`, lengths 0-256), plus directory and null inputs, produced 8,226 original/current assertions with identical results. `javac` and the probe both exited 0. Full input/output details and timestamps are in `run-randomized.log`.
+
+This closes only the bounded, file-level validator differential for the tested fixtures. It does not test the complete loader's active configuration branches, actual user cache files, cache writes/invalidation across a Minecraft session, worker lifecycle, a valid world, normal Pathfinder entry, macros, client UX, or a compatible server. No runtime-equivalence or Pathfinder-completion claim is made.

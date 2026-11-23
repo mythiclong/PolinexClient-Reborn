@@ -1,0 +1,12 @@
+started_utc=2026-11-23T03:24:16.790Z
+finished_utc=2026-11-23T03:24:20.860Z
+javac_exit=0
+probe_exit=0
+Picked up JAVA_TOOL_OPTIONS: -Djava.io.tmpdir=D:\Work\OpenPoli\.codex-worktrees\pathfinder-cache-lifecycle\polinex-src\.tmp
+method=polinex$validPathfinderCache(Ljava/io/File;)Z
+fixtures=4111 random_fixtures=4096 assertions=8226
+archive_sha256=d85398cfd774781e888a3f36cfbfa87a4cf04235f8459bb6a00437a5d3c48a26
+original_owner_sha256=e803a50eff9d47b423bbf4fd4de23cc152300b4968b0b41508c5a76854d3cedc
+compiled_owner_sha256=f72c5fdc1a47d27e02bc835056a606d580ef0e7a3389b2cda35f8c8cba16434c
+current_source_sha256=df01857cbb27bf41a7e9576ae589e116a66032af55c6998fc2d76db382adb11e
+result=PASS
